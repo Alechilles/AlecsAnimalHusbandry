@@ -1,0 +1,87 @@
+{
+  "Enabled": false,
+  "Priority": 100,
+  "RoleIds": [
+    "Bison",
+    "Bison_Calf",
+    "Chicken",
+    "Chicken_Chick",
+    "Chicken_Desert",
+    "Chicken_Desert_Chick",
+    "Cow",
+    "Cow_Calf",
+    "Pig",
+    "Pig_Piglet",
+    "Pig_Wild",
+    "Pig_Wild_Piglet",
+    "Sheep",
+    "Sheep_Lamb",
+    "Mouflon",
+    "Mouflon_Lamb",
+    "Turkey",
+    "Turkey_Chick",
+    "Goat",
+    "Goat_Kid",
+    "Rabbit",
+    "Camel",
+    "Camel_Calf",
+    "Deer_Stag",
+    "Deer_Doe"
+  ],
+  "Happiness": {
+    "Threshold": 70.0
+  },
+  "Eligibility": {
+    "RequireTamed": true,
+    "RequireAdult": true,
+    "RequireNotInCombat": true,
+    "RequireNotSleeping": true
+  },
+  "Pairing": {
+    "BreedRadius": 15.0,
+    "RequireWanderMode": false,
+    "RequireSameOwner": false,
+    "MaxNearbySameType": 8,
+    "RequireSameRoleId": true
+  },
+  "Cooldowns": {
+    "BaseCooldownSeconds": 1440,
+    "MinDelaySeconds": 0,
+    "MaxDelaySeconds": 300
+  },
+  "PassiveBreeding": {
+    "Enabled": true,
+    "SweepIntervalSeconds": 30,
+    "Basis": "REAL_TIME"
+  },
+  "Timing": {
+    "Basis": "WORLD_TIME_SCALED"
+  },
+  "Inheritance": {
+    "InheritOwner": true,
+    "InheritTamed": true,
+    "InheritAttachments": true,
+    "InheritTraits": true,
+    "AttachmentInheritance": {
+      "ParentWeight": 1.0,
+      "RandomWeight": 0.0,
+      "MutationChance": 0.0
+    }
+  },
+  "OffspringLifecycle": {
+    "Enabled": false,
+    "DefaultTimeToFullGrownSeconds": 420,
+    "DefaultBabyStartScale": 0.55,
+    "DefaultAdolescentStartScale": 0.8,
+    "DefaultAdultStartScale": 0.8,
+    "DefaultAdolescentSwitchScale": 1.0,
+    "DefaultAdultSwitchScale": 1.0,
+    "Families": [
+      {
+        "AdultRoleId": "Cow",
+        "BabyRoleId": "Cow_Calf",
+        "TimeToFullGrownSeconds": 2880
+      }
+    ]
+  }
+}
