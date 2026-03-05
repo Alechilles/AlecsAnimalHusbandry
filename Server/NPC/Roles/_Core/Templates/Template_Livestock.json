@@ -434,6 +434,20 @@
   },
   "Instructions": [
     {
+      "$Comment": "Validation-only state setters (disabled).",
+      "Enabled": false,
+      "Actions": [
+        {
+          "Type": "State",
+          "State": "Follow"
+        },
+        {
+          "Type": "State",
+          "State": "Hold"
+        }
+      ]
+    },
+    {
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script",
       "Continue": true,
       "Instructions": [
