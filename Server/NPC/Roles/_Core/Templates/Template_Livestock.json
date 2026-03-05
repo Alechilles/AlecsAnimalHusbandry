@@ -350,7 +350,7 @@
       "States": [
         {
           "From": [ "Sleep" ],
-          "To": [ "Alerted", "Flee", "Idle", "Follow", "Hold", "CommandMove" ]
+          "To": [ "Alerted", "Flee", "Idle", "Follow", "Hold", "Defend", "CommandMove" ]
         }
       ],
       "Actions": {
@@ -358,11 +358,11 @@
       }
     },
     {
-      "$Comment": "Always clear animation when moving from Alerted, Flee, or Hold state.",
+      "$Comment": "Always clear animation when moving from Alerted, Flee, Hold, or Defend state.",
       "States": [
         {
           "To": [ ],
-          "From": [ "Alerted", "Flee", "Hold" ]
+          "From": [ "Alerted", "Flee", "Hold", "Defend" ]
         }
       ],
       "Actions": [
@@ -471,6 +471,10 @@
         {
           "Type": "State",
           "State": "CommandMove"
+        },
+        {
+          "Type": "State",
+          "State": "Defend"
         }
       ]
     },
@@ -1281,6 +1285,27 @@
               "Reference": "Component_Tamework_Instruction_Hold",
               "Modify": {
                 "_ExportStates": [ "Sleep" ]
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Defend state used by command attack-target actions.",
+          "Sensor": {
+            "Type": "State",
+            "State": "Defend"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Defend",
+              "Modify": {
+                "AlertedRange": { "Compute": "AlertedRange" },
+                "ViewSector": { "Compute": "ViewSector" },
+                "HearingRange": { "Compute": "HearingRange" },
+                "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                "ViewRange": { "Compute": "ViewRange" },
+                "Attack": { "Compute": "Attack" },
+                "AttackDistance": { "Compute": "AttackRange" }
               }
             }
           ]
