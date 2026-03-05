@@ -21,20 +21,8 @@
     "AlertedActionRange": 3.5,
     "AbsoluteDetectionRange": 1.5,
     "IsMemory": true,
-    "InteractionConfigId": { "Compute": "InteractionConfigId" },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
     "MemoriesNameOverride": "Cow_Calf",
-    "NameTranslationKey": {
-      "Compute": "NameTranslationKey"
-    }
-  },
-  "Parameters": {
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Cow_Calf.name",
-      "Description": "Translation key for NPC name display"
-    },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry",
-      "Description": "Routes tame/feed/harvest/mount/breed interactions through Alec's Animal Husbandry Tamework config."
-    }
+    "NameTranslationKey": "server.npcRoles.Cow_Calf.name"
   }
 }

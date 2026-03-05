@@ -24,6 +24,9 @@
     "AttackWhenStartled": true,
     "Attack": "Root_NPC_Attack_Melee",
     "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1.3,
+    "MountAnchorZ": 0,
     "ProduceItem": "Ingredient_Poop",
     "IsHarvestable": true,
     "HarvestDropList": "Drop_Cow_Harvest",
@@ -38,11 +41,9 @@
     "HarvestAddItemBucket": "*Container_Bucket_State_Filled_Milk",
     "HarvestAddItemDecoBucket": "*Deco_Bucket_State_Filled_Milk",
     "IsMemory": true,
-    "InteractionConfigId": { "Compute": "InteractionConfigId" },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
     "MemoriesNameOverride": "Cow",
-    "NameTranslationKey": {
-      "Compute": "NameTranslationKey"
-    },
+    "NameTranslationKey": "server.npcRoles.Cow.name",
     "_InteractionVars": {
       "Melee_Start": {
         "Interactions": [
@@ -124,16 +125,6 @@
           }
         ]
       }
-    }
-  },
-  "Parameters": {
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Cow.name",
-      "Description": "Translation key for NPC name display"
-    },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry",
-      "Description": "Routes tame/feed/harvest/mount/breed interactions through Alec's Animal Husbandry Tamework config."
     }
   }
 }
