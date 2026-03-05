@@ -1234,9 +1234,11 @@
           },
           "Instructions": [
             {
-              "Reference": "Component_Tamework_Instruction_Follow_Simple_TP",
+              "Reference": "Component_AnimalHusbandry_Instruction_Follow_Simple_TP",
               "Modify": {
-                "MasterTargetSlot": "MasterTarget"
+                "MasterTargetSlot": "MasterTarget",
+                "FollowLockOnRange": 128,
+                "FollowSeekRange": 15
               }
             }
           ]
