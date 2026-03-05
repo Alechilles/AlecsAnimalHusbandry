@@ -95,6 +95,11 @@
       "Value": [ "Tool_Feedbag" ],
       "Description": "The list of items that are deemed attractive (there's a chance targets holding them will be followed)."
     },
+    "FoodItemIDs": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional food item ids used for needs-seek food consumption. If empty, TwNeedsConfig container food ids are used."
+    },
     "FoodBlockSet": {
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
@@ -496,6 +501,85 @@
       }
     },
     {
+      "$Comment": "Bridge needs-seek sensor pass while in Idle state.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "Idle"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource_Sensor",
+          "Modify": {
+            "NeedsSeekFoodItemIds": {
+              "Compute": "FoodItemIDs"
+            },
+            "_ExportStates": [
+              "NeedsSeekWater",
+              "NeedsSeekFood"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "Needs-seek water movement runtime while in NeedsSeekWater state.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "NeedsSeekWater"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
+          "Modify": {
+            "NeedsSeekResourceType": "Water",
+            "_ExportStates": [
+              "Idle"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "Needs-seek food movement runtime while in NeedsSeekFood state.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "NeedsSeekFood"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
+          "Modify": {
+            "NeedsSeekResourceType": "FoodContainer",
+            "NeedsSeekFoodItemIDs": {
+              "Compute": "FoodItemIDs"
+            },
+            "_ExportStates": [
+              "Idle"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "No-op branch to pair the NeedsSeekWater state with a state sensor.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "NeedsSeekWater"
+      }
+    },
+    {
+      "$Comment": "No-op branch to pair the NeedsSeekFood state with a state sensor.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "NeedsSeekFood"
+      }
+    },
+    {
       "$Comment": "Bridge breeding pair hooks into dedicated pair movement.",
       "Enabled": { "Compute": "CanBreedPair" },
       "Continue": true,
@@ -535,6 +619,14 @@
         {
           "Type": "State",
           "State": "CommandMove"
+        },
+        {
+          "Type": "State",
+          "State": "NeedsSeekWater"
+        },
+        {
+          "Type": "State",
+          "State": "NeedsSeekFood"
         },
         {
           "Type": "State",

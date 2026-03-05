@@ -1,0 +1,51 @@
+{
+  "Enabled": true,
+  "Priority": 100,
+  "RoleIds": [
+    "Tamed_Cow",
+    "Tamed_Cow_Calf"
+  ],
+  "Values": {
+    "HungerDefault": 100.0,
+    "HungerMin": 0.0,
+    "HungerMax": 100.0,
+    "ThirstDefault": 100.0,
+    "ThirstMin": 0.0,
+    "ThirstMax": 100.0
+  },
+  "Decay": {
+    "HungerPerMinute": 1.0,
+    "ThirstPerMinute": 1.3
+  },
+  "HappinessImpact": {
+    "HungerPenaltyAtMin": 20.0,
+    "ThirstPenaltyAtMin": 30.0,
+    "PenaltyCurvePower": 1.15
+  },
+  "PassiveRefill": {
+    "SweepIntervalSeconds": 15,
+    "NearbyContainerFeedEnabled": true,
+    "ContainerSearchRadius": 8.0,
+    "ContainerConsumeRadius": 1.5,
+    "ContainerFoodItemIds": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "HungerGainPerConsumedItem": 25.0,
+    "MaxContainerItemsConsumedPerSweep": 1,
+    "NearbyWaterDrinkEnabled": true,
+    "WaterSearchRadius": 4.0,
+    "WaterConsumeRadius": 1.5,
+    "ThirstGainPerSweepNearWater": 20.0
+  },
+  "ManualRefill": {
+    "HungerGainOnFeedInteraction": 20.0,
+    "ThirstGainOnWaterBucket": 30.0,
+    "WaterBucketItemIds": [
+      "Container_Bucket",
+      "Deco_Bucket"
+    ]
+  },
+  "Timing": {
+    "Basis": "REAL_TIME"
+  }
+}
