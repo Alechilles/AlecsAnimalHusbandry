@@ -338,7 +338,7 @@
     {
       "States": [
         {
-          "From": [ "Idle" ],
+          "From": [ "Idle", "Follow", "Hold" ],
           "To": [ "Sleep" ]
         }
       ],
@@ -350,7 +350,7 @@
       "States": [
         {
           "From": [ "Sleep" ],
-          "To": [ "Alerted", "Flee", "Idle" ]
+          "To": [ "Alerted", "Flee", "Idle", "Follow", "Hold" ]
         }
       ],
       "Actions": {
@@ -358,11 +358,11 @@
       }
     },
     {
-      "$Comment": "Always clear animation when moving from Alerted or Flee state.",
+      "$Comment": "Always clear animation when moving from Alerted, Flee, or Hold state.",
       "States": [
         {
           "To": [ ],
-          "From": [ "Alerted", "Flee" ]
+          "From": [ "Alerted", "Flee", "Hold" ]
         }
       ],
       "Actions": [
@@ -1209,6 +1209,36 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Command follow state used by Tamework mode cycle.",
+          "Sensor": {
+            "Type": "State",
+            "State": "Follow"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Follow_Advanced",
+              "Modify": {
+                "MasterTargetSlot": "MasterTarget"
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Command hold state used by Tamework mode cycle.",
+          "Sensor": {
+            "Type": "State",
+            "State": "Hold"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Hold",
+              "Modify": {
+                "_ExportStates": [ "Sleep" ]
+              }
             }
           ]
         },

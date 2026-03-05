@@ -36,6 +36,25 @@
     {
       "Type": "Mount",
       "Enabled": true
+    },
+    {
+      "Type": "ModeCycle",
+      "Enabled": true,
+      "Cycle": [
+        {
+          "State": "Follow",
+          "Message": "Following"
+        },
+        {
+          "State": "Hold",
+          "Message": "Staying"
+        },
+        {
+          "State": "Idle",
+          "Message": "Wandering"
+        }
+      ],
+      "ShowFloatingText": true
     }
   ]
 }
