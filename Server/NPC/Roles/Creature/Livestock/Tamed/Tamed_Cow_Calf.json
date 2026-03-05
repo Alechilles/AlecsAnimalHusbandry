@@ -1,0 +1,40 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Calf",
+    "FlockArray": [
+      "Cow_Calf",
+      "Cow"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "FollowItemDistance": [ 1.5, 2.5 ],
+    "DropList": "Drop_Calf",
+    "MaxHealth": 60,
+    "ViewRange": 12,
+    "ViewSector": 320,
+    "HearingRange": 7,
+    "AlertedRange": 13,
+    "AlertedActionRange": 3.5,
+    "AbsoluteDetectionRange": 1.5,
+    "IsMemory": true,
+    "InteractionConfigId": { "Compute": "InteractionConfigId" },
+    "MemoriesNameOverride": "Cow_Calf",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Cow_Calf.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry",
+      "Description": "Routes tame/feed/harvest/mount/breed interactions through Alec's Animal Husbandry Tamework config."
+    }
+  }
+}

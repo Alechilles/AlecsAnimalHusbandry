@@ -1,0 +1,29 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Calf",
+    "FlockArray": [
+      "Cow_Calf",
+      "Cow"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Lettuce",
+    "DropList": "Drop_Calf",
+    "MaxHealth": 60,
+    "ViewRange": 12,
+    "ViewSector": 320,
+    "HearingRange": 7,
+    "AlertedRange": 13,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 1.5,
+    "IsTameable": true,
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "TameRoleChange": "Tamed_Cow_Calf",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Cow_Calf",
+    "NameTranslationKey": "server.npcRoles.Cow_Calf.name"
+  }
+}

@@ -4,7 +4,10 @@ A player-facing livestock mod that brings Alec's Tamework taming, breeding, and 
 
 ## Status
 - Scaffold started.
-- Initial Tamework config files are present but intentionally disabled (`"Enabled": false`) until per-species tuning is complete.
+- Core integration kickoff complete:
+  - Base `AnimalHusbandry` Tamework configs are enabled.
+  - Pilot scope is currently limited to the tamed Cow family roles (`Tamed_Cow`, `Tamed_Cow_Calf`).
+  - `Template_Livestock` now includes additive `TameworkInteractPrompt` + `TameworkInteract` hook points while vanilla interaction branches remain for fallback/parity migration.
 
 ## Version 1 Scope
 V1 targets the full vanilla Livestock template set:
@@ -22,16 +25,17 @@ V1 targets the full vanilla Livestock template set:
 - Deer family (`Deer_Stag`, `Deer_Doe`)
 
 ## Requirements
-- Alec's Tamework! `2.1.x`
+- Alec's Tamework! `2.2.x`
 
 ## Initial Layout
 - `Server/Tamework/Interactions/AnimalHusbandry/`
 - `Server/Tamework/Happiness/AnimalHusbandry/`
 - `Server/Tamework/Breeding/AnimalHusbandry/`
-- `Server/Tamework\Traits/AnimalHusbandry/`
+- `Server/Tamework/Traits/AnimalHusbandry/`
 - `Server/Languages/en-US/`
 
 ## Next Steps
-1. Implement and enable the Cow pilot interactions/config set.
-2. Validate full tame/feed/breed/raise loop with persistence.
-3. Generalize to the rest of the V1 livestock families.
+1. Validate Cow pilot parity for tame/feed/harvest/mount plus progression persistence.
+2. Migrate overlapping vanilla interaction branches incrementally (feed -> harvest -> mount) once parity is confirmed.
+3. Expand base `AnimalHusbandry` role coverage to the full V1 livestock set.
+4. Add species-specific child config assets (`..._AnimalHusbandry_<MobName>`) only when per-mob overrides are needed.

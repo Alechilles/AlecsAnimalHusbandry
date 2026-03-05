@@ -1,0 +1,139 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Cow",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Cow",
+      "Cow_Calf"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "FollowItemDistance": [ 2.5, 3 ],
+    "DropList": "Drop_Cow",
+    "MaxHealth": 103,
+    "ViewRange": 15,
+    "ViewSector": 340,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "AttackWhenStartled": true,
+    "Attack": "Root_NPC_Attack_Melee",
+    "IsMountable": true,
+    "ProduceItem": "Ingredient_Poop",
+    "IsHarvestable": true,
+    "HarvestDropList": "Drop_Cow_Harvest",
+    "HarvestInteractionContext": "Milk",
+    "HarvestInteractionRequiredItems": [ "Container_Bucket", "Deco_Bucket" ],
+    "HarvestParticles": "Block_Break_Snow",
+    "HarvestSound": "SFX_Water_MoveOut",
+    "HarvestTimeout": [
+      "PT11H",
+      "PT14H"
+    ],
+    "HarvestAddItemBucket": "*Container_Bucket_State_Filled_Milk",
+    "HarvestAddItemDecoBucket": "*Deco_Bucket_State_Filled_Milk",
+    "IsMemory": true,
+    "InteractionConfigId": { "Compute": "InteractionConfigId" },
+    "MemoriesNameOverride": "Cow",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "_InteractionVars": {
+      "Melee_Start": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Simple",
+            "$Comment": "Sets animations and delay before hit",
+            "Effects": {
+              "ItemPlayerAnimationsId": "Cow_Default",
+              "ItemAnimationId": "Kick"
+            },
+            "RunTime": 0.167
+          }
+        ]
+      },
+      "Melee_Selector": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Selector_Left",
+            "$Comment": "Sets Hit shape and padding to allow effect to play and wait till animation is over",
+            "RunTime": 0.083,
+            "Selector": {
+              "Id": "Stab",
+              "TestLineOfSight": true,
+              "ExtendTop": 0,
+              "ExtendBottom": 1,
+              "ExtendLeft": 0.5,
+              "ExtendRight": 0.5,
+              "StartDistance": 0.25,
+              "EndDistance": 2,
+              "YawOffset": 180
+            },
+            "Next": {
+              "Type": "Simple",
+              "$Comment": "Pad the interaction length",
+              "RunTime": 0.167
+            }
+          }
+        ]
+      },
+      "Melee_Damage": {
+        "Interactions": [
+          {
+            "$Comment": "When NPC overrides the InteractionVars, this info in Template not applicable anymore",
+            "Parent": "NPC_Livestock_Kick_Damage",
+            "DamageCalculator": {
+              "Type": "Absolute",
+              "BaseDamage": {
+                "Physical": 20
+              },
+              "RandomPercentageModifier": 0.1
+            },
+            "DamageEffects": {
+              "Knockback": {
+                "Type": "Force",
+                "VelocityConfig": {
+                  "AirResistance": 0.97,
+                  "AirResistanceMax": 0.96,
+                  "GroundResistance": 0.94,
+                  "GroundResistanceMax": 0.3,
+                  "Threshold": 3,
+                  "Style": "Exp"
+                },
+                "Direction": {
+                  "X": 0,
+                  "Y": 1,
+                  "Z": 2
+                },
+                "Force": 10,
+                "VelocityType": "Set"
+              },
+              "WorldSoundEventId": "SFX_Unarmed_Impact",
+              "LocalSoundEventId": "SFX_Unarmed_Impact",
+              "WorldParticles": [
+                {
+                  "SystemId": "Impact_Sword_Basic"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Cow.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry",
+      "Description": "Routes tame/feed/harvest/mount/breed interactions through Alec's Animal Husbandry Tamework config."
+    }
+  }
+}
