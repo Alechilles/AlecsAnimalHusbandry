@@ -199,6 +199,10 @@
       "Value": false,
       "Description": "Whether Set Home should be considered available for this role (consumed by command config/UI gating)."
     },
+    "CanBreedPair": {
+      "Value": false,
+      "Description": "Whether breeding pair approach behavior is enabled for this role."
+    },
     "HarvestInteractionContext": {
       "Value": "",
       "Description": "The interaction context of the harvest tool. If empty, no tool is needed to harvest the NPC."
@@ -491,6 +495,31 @@
       }
     },
     {
+      "$Comment": "Bridge breeding pair hooks into dedicated pair movement.",
+      "Enabled": { "Compute": "CanBreedPair" },
+      "Continue": true,
+      "Sensor": {
+        "Type": "Any"
+      },
+      "Instructions": [
+        {
+          "Reference": "Component_Tamework_Instruction_Breeding_Pair",
+          "Modify": {
+            "_ExportStates": [ "BreedPair", "Idle" ]
+          }
+        }
+      ]
+    },
+    {
+      "$Comment": "No-op branch to pair the BreedPair state with a state sensor.",
+      "Enabled": { "Compute": "CanBreedPair" },
+      "Continue": true,
+      "Sensor": {
+        "Type": "State",
+        "State": "BreedPair"
+      }
+    },
+    {
       "$Comment": "Validation-only state setters (disabled).",
       "Enabled": false,
       "Actions": [
@@ -509,6 +538,10 @@
         {
           "Type": "State",
           "State": "Defend"
+        },
+        {
+          "Type": "State",
+          "State": "BreedPair"
         }
       ]
     },
