@@ -1,0 +1,41 @@
+{
+  "Enabled": true,
+  "Priority": 100,
+  "RoleIds": [
+    "Cow",
+    "Cow_Calf",
+    "Tamed_Cow",
+    "Tamed_Cow_Calf"
+  ],
+  "Interactions": [
+    {
+      "Type": "Tame",
+      "ItemsParam": "AttractiveItemSet",
+      "RoleParam": "TameRoleChange"
+    },
+    {
+      "Type": "Feed",
+      "Enabled": true,
+      "ItemsParam": "AttractiveItemSet"
+    },
+    {
+      "Type": "Harvest",
+      "Enabled": true,
+      "RequireHarvestInteractionContext": false,
+      "RequireHarvestAlarmReady": true,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "HarvestInteractionRequiredItems"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Type": "Mount",
+      "Enabled": true
+    }
+  ]
+}
