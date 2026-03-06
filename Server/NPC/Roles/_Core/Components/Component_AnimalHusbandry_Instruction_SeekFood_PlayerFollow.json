@@ -1,9 +1,10 @@
 {
-  "$Comment": "Stable SeekFood flow for Animal Husbandry. Keeps attractive-item follow behavior without the vanilla GiveUp churn.",
+  "$Comment": "SeekFood follow helper for Animal Husbandry. Handles attractive-item follow and exits cleanly back to parent.",
   "Type": "Component",
   "Class": "Instruction",
   "Interface": "AnimalHusbandry.Instruction.SeekFood.PlayerFollow",
   "Parameters": {
+    "_ImportStates": [ "Complete" ],
     "AlertedRange": {
       "Value": 18,
       "Description": "Range used to keep watching/following the current target while in SeekFood."
@@ -21,22 +22,6 @@
     "FollowItemDistance": {
       "Value": [ 2, 2.5 ],
       "Description": "Desired maintain-distance range while following an attractive item."
-    },
-    "EatTimeout": {
-      "Value": [ "PT8H", "PT12H" ],
-      "Description": "Cooldown applied after feeding."
-    },
-    "GreetTimeout": {
-      "Value": [ "PT2H", "PT12H" ],
-      "Description": "Cooldown applied to greeting after feeding."
-    },
-    "MaxHealth": {
-      "Value": 100,
-      "Description": "Health value restored after feeding."
-    },
-    "ParticleOffset": {
-      "Value": [ 0, 1, 0 ],
-      "Description": "Particle offset used by shared damage-check branch."
     }
   },
   "Content": {
@@ -45,66 +30,6 @@
       "Type": "Any"
     },
     "Instructions": [
-      {
-        "Reference": "Component_Instruction_Damage_Check",
-        "Modify": {
-          "_ExportStates": [ "Flee.Switch", "Panic" ],
-          "AlertedRange": { "Compute": "AlertedRange" }
-        }
-      },
-      {
-        "Sensor": {
-          "Type": "State",
-          "State": ".Ate"
-        },
-        "Instructions": [
-          {
-            "Continue": true,
-            "Sensor": {
-              "Type": "Target",
-              "TargetSlot": "LockedTarget",
-              "Range": { "Compute": "AlertedRange" },
-              "Filters": [
-                {
-                  "Type": "LineOfSight"
-                }
-              ]
-            },
-            "HeadMotion": {
-              "Type": "Watch"
-            }
-          },
-          {
-            "ActionsBlocking": true,
-            "Actions": [
-              {
-                "Type": "SetAlarm",
-                "Name": "Eat_Ready",
-                "DurationRange": { "Compute": "EatTimeout" }
-              },
-              {
-                "$Comment": "No need to greet another player after being fed.",
-                "Type": "SetAlarm",
-                "Name": "Greet_Ready",
-                "DurationRange": { "Compute": "GreetTimeout" }
-              },
-              {
-                "Type": "SetStat",
-                "Stat": "Health",
-                "Value": { "Compute": "MaxHealth" }
-              },
-              {
-                "Type": "Timeout",
-                "Delay": [ 3, 5 ]
-              },
-              {
-                "Type": "State",
-                "State": "Idle"
-              }
-            ]
-          }
-        ]
-      },
       {
         "Continue": true,
         "Sensor": {
@@ -184,19 +109,27 @@
             "TargetSlot": "LockedTarget"
           },
           {
-            "Type": "State",
-            "State": "Idle"
+            "Type": "ParentState",
+            "State": "Complete"
           }
         ]
       },
       {
+        "$Comment": "If we have no target, finish SeekFood.",
+        "Sensor": {
+          "Type": "Not",
+          "Sensor": {
+            "Type": "Target",
+            "TargetSlot": "LockedTarget"
+          }
+        },
         "Actions": [
           {
             "Type": "Timeout",
             "Delay": [ 2, 3 ],
             "Action": {
-              "Type": "State",
-              "State": "Idle"
+              "Type": "ParentState",
+              "State": "Complete"
             }
           }
         ]

@@ -1727,15 +1727,72 @@
           },
           "Instructions": [
             {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [ "Flee.Switch", "Panic" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "State",
+                "State": ".Ate"
+              },
+              "Instructions": [
+                {
+                  "Continue": true,
+                  "Sensor": {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget",
+                    "Range": { "Compute": "AlertedRange" },
+                    "Filters": [
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  "HeadMotion": {
+                    "Type": "Watch"
+                  }
+                },
+                {
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "SetAlarm",
+                      "Name": "Eat_Ready",
+                      "DurationRange": { "Compute": "EatTimeout" }
+                    },
+                    {
+                      "$Comment": "No need to greet another player after being fed",
+                      "Type": "SetAlarm",
+                      "Name": "Greet_Ready",
+                      "DurationRange": { "Compute": "GreetTimeout" }
+                    },
+                    {
+                      "Type": "SetStat",
+                      "Stat": "Health",
+                      "Value": { "Compute": "MaxHealth" }
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [ 3, 5 ]
+                    },
+                    {
+                      "Type": "State",
+                      "State": "Idle"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "Reference": "Component_AnimalHusbandry_Instruction_SeekFood_PlayerFollow",
               "Modify": {
+                "_ExportStates": [ "Idle" ],
                 "AlertedRange": { "Compute": "AlertedRange" },
                 "AttractiveItemSet": { "Compute": "AttractiveItemSet" },
-                "FollowItemDistance": { "Compute": "FollowItemDistance" },
-                "EatTimeout": { "Compute": "EatTimeout" },
-                "GreetTimeout": { "Compute": "GreetTimeout" },
-                "MaxHealth": { "Compute": "MaxHealth" },
-                "ParticleOffset": { "Compute": "ParticleOffset" }
+                "FollowItemDistance": { "Compute": "FollowItemDistance" }
               }
             }
           ]
