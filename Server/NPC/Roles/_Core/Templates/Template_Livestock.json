@@ -921,7 +921,8 @@
                       "ViewSector": { "Compute": "ViewSector" },
                       "HearingRange": { "Compute": "SmellingRange" },
                       "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
-                      "Attitudes": [ "Revered", "Friendly" ]
+                      "Attitudes": [ "Revered", "Friendly" ],
+                      "GetNPCs": false
                     }
                   }
                 ]
