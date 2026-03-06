@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Skrill",
+    "FlockArray": [
+      "Skrill",
+      "Skrill_Chick"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Chilli_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Chilli",
+    "DropList": "Drop_Skrill",
+    "MaxHealth": 30,
+    "MaxSpeed": 6,
+    "ViewRange": 14,
+    "ViewSector": 270,
+    "HearingRange": 8,
+    "AlertedRange": 16,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2.5,
+    "Timid": true,
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Skrill",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Skrill",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Skrill.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Chick",
+    "FlockArray": [
+      "Chicken_Chick",
+      "Chicken"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Corn_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Corn",
+    "DropList": "Drop_Chick",
+    "MaxHealth": 7,
+    "MaxSpeed": 3,
+    "ViewRange": 6,
+    "ViewSector": 300,
+    "HearingRange": 4,
+    "AlertedRange": 8,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 0.5,
+    "Timid": true,
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Chicken_Chick",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Chicken_Chick",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Chicken_Chick.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

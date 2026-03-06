@@ -1,0 +1,50 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Chick_Desert",
+    "FlockArray": [
+      "Chicken_Desert_Chick",
+      "Chicken_Desert"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Cotton_Item"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Chick_Desert",
+    "MaxHealth": 8,
+    "MaxSpeed": 3,
+    "ViewRange": 8,
+    "ViewSector": 300,
+    "HearingRange": 6,
+    "AlertedRange": 12,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 1,
+    "Timid": true,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Chicken_Desert_Chick",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Chicken_Desert_Chick.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

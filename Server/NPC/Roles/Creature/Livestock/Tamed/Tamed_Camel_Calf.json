@@ -1,0 +1,47 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Camel_Calf",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Camel",
+      "Camel_Calf"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Tomato_Item"
+    ],
+    "DropList": "Drop_Camel_Calf",
+    "MaxHealth": 94,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "AttackWhenStartled": true,
+    "Attack": "Root_NPC_Attack_Melee",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Camel_Calf",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Camel_Calf.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

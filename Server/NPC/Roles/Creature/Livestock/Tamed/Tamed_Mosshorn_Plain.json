@@ -1,0 +1,81 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Mosshorn_Plain",
+    "AttitudeGroup": "PreyBig",
+    "AttractiveItemSet": [
+      "Plant_Crop_Potato_Item"
+    ],
+    "DropList": "Drop_Mosshorn",
+    "Attack": "Root_NPC_Attack_Melee",
+    "MaxHealth": 124,
+    "IsMemory": true,
+    "MemoriesCategory": "Livestock",
+    "MemoriesNameOverride": "Mosshorn",
+    "IsHarvestable": true,
+    "HarvestDropList": "Drop_Mosshorn_Poop",
+    "HarvestInteractionContext": "Milk",
+    "HarvestInteractionRequiredItems": [
+      "Container_Bucket",
+      "Deco_Bucket"
+    ],
+    "HarvestParticles": "Block_Break_Snow",
+    "HarvestSound": "SFX_Water_MoveOut",
+    "HarvestTimeout": [
+      "PT11H",
+      "PT14H"
+    ],
+    "HarvestAddItemBucket": "*Container_Bucket_State_Filled_Mosshorn_Milk",
+    "HarvestAddItemDecoBucket": "*Deco_Bucket_State_Filled_Mosshorn_Milk",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "_InteractionVars": {
+      "Melee_Start": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Simple",
+            "$Comment": "Sets animations and delay before hit",
+            "Effects": {
+              "ItemPlayerAnimationsId": "Crocodile_Default",
+              "ItemAnimationId": "Bite"
+            },
+            "RunTime": 0.333
+          }
+        ]
+      },
+      "Melee_Damage": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Damage",
+            "$Comment": "Sets damage and onhit effects",
+            "DamageCalculator": {
+              "Type": "Absolute",
+              "BaseDamage": {
+                "Physical": 12
+              },
+              "RandomPercentageModifier": 0.1
+            }
+          }
+        ]
+      }
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Mosshorn_Plain.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

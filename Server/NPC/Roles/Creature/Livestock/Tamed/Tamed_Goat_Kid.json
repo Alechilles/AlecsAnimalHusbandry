@@ -1,0 +1,48 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Goat_Kid",
+    "FlockArray": [
+      "Goat_Kid",
+      "Goat"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Fruit_Apple"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2.5
+    ],
+    "DropList": "Drop_Goat_Kid",
+    "MaxHealth": 36,
+    "ViewRange": 10,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 3,
+    "AbsoluteDetectionRange": 1,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Goat_Kid",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goat_Kid.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

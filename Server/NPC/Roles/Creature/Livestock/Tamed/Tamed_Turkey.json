@@ -1,0 +1,46 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Turkey",
+    "FlockArray": [
+      "Turkey",
+      "Turkey_Chick"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Corn_Item"
+    ],
+    "DropList": "Drop_Turkey",
+    "MaxHealth": 38,
+    "MaxSpeed": 5,
+    "ViewRange": 18,
+    "ViewSector": 300,
+    "HearingRange": 10,
+    "AlertedRange": 20,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2.5,
+    "Timid": true,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Turkey",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Turkey.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -2,63 +2,32 @@
   "Type": "Variant",
   "Reference": "Template_Livestock",
   "Modify": {
-    "Appearance": "Cow",
-    "AttitudeGroup": "PreyBig",
+    "Appearance": "Boar",
     "FlockArray": [
-      "Tamed_Cow",
-      "Tamed_Cow_Calf"
+      "Boar",
+      "Boar_Piglet"
     ],
     "AttractiveItemSet": [
       "Tool_Feedbag",
-      "Plant_Crop_Lettuce_Item"
+      "Plant_Crop_Pumpkin_Item"
     ],
     "FollowItemDistance": [
-      2.5,
-      3
+      1.5,
+      2
     ],
-    "DropList": "Drop_Cow",
-    "MaxHealth": 103,
+    "DropList": "Drop_Boar",
+    "MaxHealth": 81,
     "ViewRange": 15,
-    "ViewSector": 340,
+    "ViewSector": 300,
     "HearingRange": 9,
     "AlertedRange": 17,
     "AlertedActionRange": 4,
     "AbsoluteDetectionRange": 2,
     "AttackWhenStartled": true,
     "Attack": "Root_NPC_Attack_Melee",
-    "IsMountable": true,
-    "MountAnchorX": 0,
-    "MountAnchorY": 1.6,
-    "MountAnchorZ": 0,
     "ProduceItem": "Ingredient_Poop",
-    "IsHarvestable": true,
-    "HarvestDropList": "Drop_Cow_Harvest",
-    "HarvestInteractionContext": "Milk",
-    "HarvestInteractionRequiredItems": [
-      "Container_Bucket",
-      "Deco_Bucket"
-    ],
-    "HarvestParticles": "Block_Break_Snow",
-    "HarvestSound": "SFX_Water_MoveOut",
-    "HarvestTimeout": [
-      "PT11H",
-      "PT14H"
-    ],
-    "HarvestAddItemBucket": "*Container_Bucket_State_Filled_Milk",
-    "HarvestAddItemDecoBucket": "*Deco_Bucket_State_Filled_Milk",
     "IsMemory": true,
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
-    "CanFollow": true,
-    "CanHold": true,
-    "CanDefend": false,
-    "CanAttackTarget": false,
-    "CanMoveToLocation": true,
-    "CanReturnHome": true,
-    "CanRecall": true,
-    "CanSetHome": true,
-    "CanBreedPair": true,
-    "MemoriesNameOverride": "Cow",
-    "NameTranslationKey": "server.npcRoles.Cow.name",
+    "MemoriesNameOverride": "Boar",
     "_InteractionVars": {
       "Melee_Start": {
         "Interactions": [
@@ -87,7 +56,7 @@
               "ExtendLeft": 0.5,
               "ExtendRight": 0.5,
               "StartDistance": 0.25,
-              "EndDistance": 2,
+              "EndDistance": 1.5,
               "YawOffset": 180
             },
             "Next": {
@@ -106,7 +75,7 @@
             "DamageCalculator": {
               "Type": "Absolute",
               "BaseDamage": {
-                "Physical": 20
+                "Physical": 10
               },
               "RandomPercentageModifier": 0.1
             },
@@ -126,7 +95,7 @@
                   "Y": 1,
                   "Z": 2
                 },
-                "Force": 10,
+                "Force": 7,
                 "VelocityType": "Set"
               },
               "WorldSoundEventId": "SFX_Unarmed_Impact",
@@ -140,6 +109,25 @@
           }
         ]
       }
+    },
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Boar.name",
+      "Description": "Translation key for NPC name display"
     }
   }
 }

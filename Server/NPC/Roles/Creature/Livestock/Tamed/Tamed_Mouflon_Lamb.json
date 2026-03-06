@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Mouflon_Lamb",
+    "FlockArray": [
+      "Mouflon_Lamb",
+      "Mouflon"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Fruit_Apple"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Mouflon_Lamb",
+    "MaxHealth": 49,
+    "ViewRange": 10,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 3.5,
+    "AbsoluteDetectionRange": 1.5,
+    "ProduceItem": "Ingredient_Poop",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Mouflon_Lamb",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Mouflon_Lamb.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

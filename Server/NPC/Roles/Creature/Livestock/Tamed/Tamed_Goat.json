@@ -1,0 +1,66 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Goat",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Goat",
+      "Goat_Kid"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Fruit_Apple"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Goat",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 340,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "AttackWhenStartled": true,
+    "Attack": "Root_NPC_Attack_Melee",
+    "ProduceItem": "Ingredient_Poop",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Goat",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "_InteractionVars": {
+      "Melee_Damage": {
+        "Interactions": [
+          {
+            "Parent": "NPC_Attack_Melee_Damage",
+            "DamageCalculator": {
+              "BaseDamage": {
+                "Physical": 7
+              }
+            }
+          }
+        ]
+      }
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goat.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

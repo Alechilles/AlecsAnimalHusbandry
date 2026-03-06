@@ -1,0 +1,40 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Sheep",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Sheep",
+      "Sheep_Lamb"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Lettuce",
+    "DropList": "Drop_Sheep",
+    "MaxHealth": 81,
+    "MaxSpeed": 6,
+    "ViewRange": 15,
+    "ViewSector": 340,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 7,
+    "AbsoluteDetectionRange": 2,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Sheep",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Sheep",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Sheep.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

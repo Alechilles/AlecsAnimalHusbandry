@@ -1,0 +1,38 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Warthog_Piglet",
+    "FlockArray": [
+      "Warthog_Piglet",
+      "Warthog"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Onion_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Onion",
+    "DropList": "Drop_Warthog_Piglet",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 13,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Warthog_Piglet",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Warthog_Piglet",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Warthog_Piglet.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

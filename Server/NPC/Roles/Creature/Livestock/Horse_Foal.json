@@ -1,0 +1,40 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Horse_Foal",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Horse_Foal",
+      "Horse"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Carrot_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Carrot",
+    "DropList": "Drop_Horse_Foal",
+    "MaxHealth": 49,
+    "MaxSpeed": 8,
+    "ViewRange": 12,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 13,
+    "AlertedActionRange": 8,
+    "AbsoluteDetectionRange": 1.5,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Horse_Foal",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Horse_Foal",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Horse_Foal.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

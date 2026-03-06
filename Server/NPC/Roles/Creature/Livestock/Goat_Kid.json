@@ -1,0 +1,37 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Goat_Kid",
+    "FlockArray": [
+      "Goat_Kid",
+      "Goat"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Fruit_Apple"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Apple",
+    "DropList": "Drop_Goat_Kid",
+    "MaxHealth": 36,
+    "ViewRange": 10,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 1,
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Goat_Kid",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Goat_Kid",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Goat_Kid.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

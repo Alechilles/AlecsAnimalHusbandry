@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Mouflon",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Mouflon",
+      "Mouflon_Lamb"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Fruit_Apple"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Apple",
+    "DropList": "Drop_Mouflon",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 340,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Mouflon",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Mouflon",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Mouflon.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

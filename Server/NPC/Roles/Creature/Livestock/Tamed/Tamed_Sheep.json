@@ -1,0 +1,62 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Sheep",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Sheep",
+      "Sheep_Lamb"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "DropList": "Drop_Sheep",
+    "MaxHealth": 81,
+    "MaxSpeed": 6,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 3,
+    "AbsoluteDetectionRange": 1,
+    "ProduceItem": "Ingredient_Poop",
+    "IsHarvestable": true,
+    "HarvestDropList": "Drop_Sheep_Harvest",
+    "HarvestInteractionContext": "Shear",
+    "HarvestInteractionRequiredItems": [
+      "Tool_Shears_Basic"
+    ],
+    "HarvestModelSlot": "Fleece",
+    "HarvestModelAttachmentHarvestable": "Wool",
+    "HarvestModelAttachmentHarvested": "",
+    "HarvestTimeout": [
+      "PT11H",
+      "PT14H"
+    ],
+    "HarvestParticles": "Sheep_Wool_Shear",
+    "HarvestSound": "SFX_Sheep_Sheared",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Sheep",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Sheep.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

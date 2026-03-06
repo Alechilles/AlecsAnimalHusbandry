@@ -1,0 +1,47 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Horse_Foal",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Horse_Foal",
+      "Horse"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Carrot_Item"
+    ],
+    "DropList": "Drop_Horse_Foal",
+    "MaxHealth": 49,
+    "MaxSpeed": 8,
+    "ViewRange": 12,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 13,
+    "AlertedActionRange": 3.5,
+    "AbsoluteDetectionRange": 1.5,
+    "ProduceItem": "Ingredient_Poop",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Horse_Foal",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Horse_Foal.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

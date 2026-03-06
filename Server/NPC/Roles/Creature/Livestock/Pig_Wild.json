@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Pig_Wild",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Pig_Wild",
+      "Pig_Wild_Piglet"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Aubergine_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Aubergine",
+    "DropList": "Drop_Pig",
+    "MaxHealth": 74,
+    "ViewRange": 15,
+    "ViewSector": 300,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Pig_Wild",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Pig_Wild",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Pig_Wild.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

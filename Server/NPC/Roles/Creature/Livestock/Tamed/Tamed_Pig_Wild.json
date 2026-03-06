@@ -1,0 +1,50 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Pig_Wild",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Pig_Wild",
+      "Pig_Wild_Piglet"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Aubergine_Item"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Pig",
+    "MaxHealth": 74,
+    "ViewRange": 15,
+    "ViewSector": 300,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "IsHarvestable": false,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Pig_Wild",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Pig_Wild.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

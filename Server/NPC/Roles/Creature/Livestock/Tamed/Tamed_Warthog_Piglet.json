@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Warthog_Piglet",
+    "FlockArray": [
+      "Warthog_Piglet",
+      "Warthog"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Onion_Item"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Warthog_Piglet",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 13,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "IsHarvestable": false,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Warthog_Piglet",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Warthog_Piglet.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

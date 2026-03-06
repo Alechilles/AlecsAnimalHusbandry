@@ -2,63 +2,36 @@
   "Type": "Variant",
   "Reference": "Template_Livestock",
   "Modify": {
-    "Appearance": "Cow",
+    "Appearance": "Ram",
     "AttitudeGroup": "PreyBig",
     "FlockArray": [
-      "Tamed_Cow",
-      "Tamed_Cow_Calf"
+      "Ram",
+      "Ram_Lamb"
     ],
     "AttractiveItemSet": [
       "Tool_Feedbag",
-      "Plant_Crop_Lettuce_Item"
+      "Plant_Fruit_Apple"
     ],
-    "FollowItemDistance": [
-      2.5,
-      3
-    ],
-    "DropList": "Drop_Cow",
-    "MaxHealth": 103,
+    "DropList": "Drop_Ram",
+    "MaxHealth": 124,
     "ViewRange": 15,
-    "ViewSector": 340,
-    "HearingRange": 9,
-    "AlertedRange": 17,
-    "AlertedActionRange": 4,
-    "AbsoluteDetectionRange": 2,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 3,
+    "AbsoluteDetectionRange": 1,
     "AttackWhenStartled": true,
     "Attack": "Root_NPC_Attack_Melee",
+    "ProduceItem": "Ingredient_Poop",
+    "IsMemory": true,
     "IsMountable": true,
     "MountAnchorX": 0,
-    "MountAnchorY": 1.6,
+    "MountAnchorY": 1.3,
     "MountAnchorZ": 0,
-    "ProduceItem": "Ingredient_Poop",
-    "IsHarvestable": true,
-    "HarvestDropList": "Drop_Cow_Harvest",
-    "HarvestInteractionContext": "Milk",
-    "HarvestInteractionRequiredItems": [
-      "Container_Bucket",
-      "Deco_Bucket"
-    ],
-    "HarvestParticles": "Block_Break_Snow",
-    "HarvestSound": "SFX_Water_MoveOut",
-    "HarvestTimeout": [
-      "PT11H",
-      "PT14H"
-    ],
-    "HarvestAddItemBucket": "*Container_Bucket_State_Filled_Milk",
-    "HarvestAddItemDecoBucket": "*Deco_Bucket_State_Filled_Milk",
-    "IsMemory": true,
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
-    "CanFollow": true,
-    "CanHold": true,
-    "CanDefend": false,
-    "CanAttackTarget": false,
-    "CanMoveToLocation": true,
-    "CanReturnHome": true,
-    "CanRecall": true,
-    "CanSetHome": true,
-    "CanBreedPair": true,
-    "MemoriesNameOverride": "Cow",
-    "NameTranslationKey": "server.npcRoles.Cow.name",
+    "MemoriesNameOverride": "Ram",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
     "_InteractionVars": {
       "Melee_Start": {
         "Interactions": [
@@ -106,7 +79,7 @@
             "DamageCalculator": {
               "Type": "Absolute",
               "BaseDamage": {
-                "Physical": 20
+                "Physical": 15
               },
               "RandomPercentageModifier": 0.1
             },
@@ -126,7 +99,7 @@
                   "Y": 1,
                   "Z": 2
                 },
-                "Force": 10,
+                "Force": 8,
                 "VelocityType": "Set"
               },
               "WorldSoundEventId": "SFX_Unarmed_Impact",
@@ -140,6 +113,22 @@
           }
         ]
       }
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Ram.name",
+      "Description": "Translation key for NPC name display"
     }
   }
 }

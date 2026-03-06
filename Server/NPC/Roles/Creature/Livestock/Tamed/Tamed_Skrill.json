@@ -1,0 +1,59 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Skrill",
+    "FlockArray": [
+      "Skrill",
+      "Skrill_Chick"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Chilli_Item"
+    ],
+    "FollowItemDistance": [
+      1.7,
+      2
+    ],
+    "DropList": "Drop_Skrill",
+    "MaxHealth": 30,
+    "MaxSpeed": 6,
+    "ViewRange": 14,
+    "ViewSector": 270,
+    "HearingRange": 8,
+    "AlertedRange": 16,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 2.5,
+    "Timid": true,
+    "IsHarvestable": true,
+    "HarvestDropList": "Drop_Skrill_Harvest",
+    "HarvestInteractionContext": "Shear",
+    "HarvestParticles": "Impact_Feathers_Black",
+    "HarvestSound": "SFX_Chicken_Alerted",
+    "HarvestTimeout": [
+      "PT11H",
+      "PT14H"
+    ],
+    "IsMemory": true,
+    "MemoriesNameOverride": "Skrill",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Skrill.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

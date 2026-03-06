@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Chick_Desert",
+    "FlockArray": [
+      "Chicken_Desert_Chick",
+      "Chicken_Desert"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Crop_Cotton_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Cotton",
+    "DropList": "Drop_Chick_Desert",
+    "MaxHealth": 8,
+    "MaxSpeed": 3,
+    "ViewRange": 8,
+    "ViewSector": 300,
+    "HearingRange": 6,
+    "AlertedRange": 12,
+    "AlertedActionRange": 5,
+    "AbsoluteDetectionRange": 1,
+    "Timid": true,
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Chicken_Desert_Chick",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Chicken_Desert_Chick",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Chicken_Desert_Chick.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

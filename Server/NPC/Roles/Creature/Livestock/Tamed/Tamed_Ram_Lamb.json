@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Ram_Lamb",
+    "FlockArray": [
+      "Ram_Lamb",
+      "Ram"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Fruit_Apple"
+    ],
+    "FollowItemDistance": [
+      1.75,
+      2
+    ],
+    "DropList": "Drop_Ram_Lamb",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 6,
+    "AlertedRange": 11,
+    "AlertedActionRange": 3,
+    "AbsoluteDetectionRange": 1,
+    "ProduceItem": "Ingredient_Poop",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Ram_Lamb",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Ram_Lamb.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

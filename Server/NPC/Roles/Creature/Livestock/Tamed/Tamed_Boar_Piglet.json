@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Boar_Piglet",
+    "SeparationDistance": 0.2,
+    "FlockArray": [
+      "Boar",
+      "Boar_Piglet"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Pumpkin_Item"
+    ],
+    "FollowItemDistance": [
+      1.5,
+      2
+    ],
+    "DropList": "Drop_Boar_Piglet",
+    "MaxHealth": 29,
+    "ViewRange": 12,
+    "ViewSector": 300,
+    "HearingRange": 7,
+    "AlertedRange": 13,
+    "AlertedActionRange": 3.5,
+    "AbsoluteDetectionRange": 1.5,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Boar_Piglet",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Boar_Piglet.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Bunny",
+    "FlockArray": [
+      "Bunny",
+      "Rabbit"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Carrot_Item"
+    ],
+    "DropList": "Drop_Bunny",
+    "MaxHealth": 25,
+    "MaxSpeed": 5,
+    "ViewRange": 18,
+    "ViewSector": 350,
+    "HearingRange": 12,
+    "AlertedRange": 20,
+    "AlertedActionRange": 6,
+    "AbsoluteDetectionRange": 3,
+    "Timid": true,
+    "IsMemory": true,
+    "MemoriesNameOverride": "Bunny",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Bunny.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

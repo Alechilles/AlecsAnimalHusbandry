@@ -1,0 +1,68 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Chicken",
+    "SeparationDistance": 0.6,
+    "FlockArray": [
+      "Chicken",
+      "Chicken_Chick"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Corn_Item"
+    ],
+    "FollowItemDistance": [
+      1.7,
+      2
+    ],
+    "DropList": "Drop_Chicken",
+    "MaxHealth": 29,
+    "MaxSpeed": 5,
+    "ViewRange": 8,
+    "ViewSector": 300,
+    "HearingRange": 4,
+    "AlertedRange": 12,
+    "AlertedActionRange": 5,
+    "AbsoluteDetectionRange": 1.5,
+    "Timid": true,
+    "IsHarvestable": true,
+    "HarvestDropList": "Drop_Chicken_Harvest",
+    "HarvestInteractionContext": "Shear",
+    "HarvestInteractionRequiredItems": [
+      "Tool_Shears_Basic"
+    ],
+    "HarvestParticles": "Impact_Feathers_Black",
+    "HarvestSound": "SFX_Chicken_Alerted",
+    "HarvestTimeout": [
+      "PT11H",
+      "PT14H"
+    ],
+    "ProduceItem": "Food_Egg",
+    "ProduceTimeout": [
+      "PT18H",
+      "PT48H"
+    ],
+    "IsMemory": true,
+    "MemoriesNameOverride": "Chicken",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Chicken.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

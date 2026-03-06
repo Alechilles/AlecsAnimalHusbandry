@@ -1,0 +1,46 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Livestock",
+  "Modify": {
+    "Appearance": "Bison_Calf",
+    "AttitudeGroup": "PreyBig",
+    "FlockArray": [
+      "Bison",
+      "Bison_Calf"
+    ],
+    "AttractiveItemSet": [
+      "Tool_Feedbag",
+      "Plant_Crop_Cauliflower_Item"
+    ],
+    "DropList": "Drop_Bison_Calf",
+    "MaxHealth": 94,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 10,
+    "AlertedRange": 18,
+    "AlertedActionRange": 4,
+    "AbsoluteDetectionRange": 2,
+    "IsMemory": true,
+    "PetAnimation": "Moo",
+    "MemoriesNameOverride": "Bison_Calf",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Bison_Calf.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

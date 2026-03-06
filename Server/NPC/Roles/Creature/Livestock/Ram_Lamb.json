@@ -1,0 +1,38 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Ram_Lamb",
+    "FlockArray": [
+      "Ram_Lamb",
+      "Ram"
+    ],
+    "AttractiveItemSet": [
+      "Plant_Fruit_Apple"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Apple",
+    "DropList": "Drop_Ram_Lamb",
+    "MaxHealth": 81,
+    "ViewRange": 15,
+    "ViewSector": 320,
+    "HearingRange": 9,
+    "AlertedRange": 17,
+    "AlertedActionRange": 8,
+    "AbsoluteDetectionRange": 2,
+    "ProduceItem": "Ingredient_Poop",
+    "IsTameable": true,
+    "TameRoleChange": "Tamed_Ram_Lamb",
+    "IsMemory": true,
+    "MemoriesNameOverride": "Ram_Lamb",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Ram_Lamb.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
