@@ -1905,16 +1905,7 @@
             {
               "$Comment": "Target is no longer holding an item, give up and go back to idle",
               "Sensor": {
-                "Type": "Target",
-                "Filters": [
-                  {
-                    "Type": "Not",
-                    "Filter": {
-                      "Type": "ItemInHand",
-                      "Items": { "Compute": "AttractiveItemSet" }
-                    }
-                  }
-                ]
+                "Type": "Target"
               },
               "ActionsBlocking": true,
               "ActionsAtomic": true,
