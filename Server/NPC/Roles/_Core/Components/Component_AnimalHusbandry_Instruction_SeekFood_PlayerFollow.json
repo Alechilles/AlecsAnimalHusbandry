@@ -31,6 +31,32 @@
     },
     "Instructions": [
       {
+        "$Comment": "Re-lock player targets holding attractive items so flock/other targeting does not steal LockedTarget.",
+        "Continue": true,
+        "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+        "Sensor": {
+          "Type": "Mob",
+          "Range": { "Compute": "AlertedRange" },
+          "LockOnTarget": true,
+          "GetPlayers": true,
+          "GetNPCs": false,
+          "Filters": [
+            {
+              "Type": "ItemInHand",
+              "Items": { "Compute": "AttractiveItemSet" }
+            },
+            {
+              "Type": "Attitude",
+              "Attitudes": { "Compute": "FollowItemAttitudes" }
+            }
+          ],
+          "Prioritiser": {
+            "Type": "Attitude",
+            "AttitudesByPriority": { "Compute": "FollowItemAttitudes" }
+          }
+        }
+      },
+      {
         "Continue": true,
         "Sensor": {
           "Type": "Target",
