@@ -931,6 +931,7 @@
                 {
                   "Sensor": {
                     "Type": "Target",
+                    "TargetSlot": "LockedTarget",
                     "Filters": [
                       {
                         "Type": "ItemInHand",
@@ -938,7 +939,7 @@
                       },
                       {
                         "Type": "Attitude",
-                        "Attitudes": [ "Revered", "Friendly" ]
+                        "Attitudes": [ "Revered", "Friendly", "Ignore" ]
                       }
                     ]
                   },
@@ -948,7 +949,8 @@
                     {
                       "Weight": { "Compute": "WeightFollowItem" },
                       "Sensor": {
-                        "Type": "Target"
+                        "Type": "Target",
+                        "TargetSlot": "LockedTarget"
                       },
                       "HeadMotion": {
                         "Type": "Watch"
@@ -983,7 +985,8 @@
                       "Enabled": { "Compute": "WeightFollowItem < 100" },
                       "Weight": { "Compute": "100 - WeightFollowItem" },
                       "Sensor": {
-                        "Type": "Target"
+                        "Type": "Target",
+                        "TargetSlot": "LockedTarget"
                       },
                       "ActionsBlocking": true,
                       "Actions": [
@@ -1648,7 +1651,7 @@
                       },
                       {
                         "Type": "Attitude",
-                        "Attitudes": [ "Revered", "Friendly" ]
+                        "Attitudes": [ "Revered", "Friendly", "Ignore" ]
                       }
                     ]
                   }
@@ -1734,7 +1737,8 @@
               "Enabled": { "Compute": "FollowItemTimeoutEnabled" },
               "Continue": true,
               "Sensor": {
-                "Type": "Target"
+                "Type": "Target",
+                "TargetSlot": "LockedTarget"
               },
               "ActionsBlocking": true,
               "Actions": [
@@ -1758,6 +1762,7 @@
                   "Continue": true,
                   "Sensor": {
                     "Type": "Target",
+                    "TargetSlot": "LockedTarget",
                     "Range": { "Compute": "AlertedRange" },
                     "Filters": [
                       {
@@ -1805,6 +1810,7 @@
               "Continue": true,
               "Sensor": {
                 "Type": "Target",
+                "TargetSlot": "LockedTarget",
                 "Range": { "Compute": "AlertedRange" }
               },
               "HeadMotion": {
@@ -1823,6 +1829,7 @@
                     "Sensors": [
                       {
                         "Type": "Target",
+                        "TargetSlot": "LockedTarget",
                         "Range": { "Compute": "AlertedRange" }
                       },
                       {
@@ -1878,6 +1885,7 @@
               "$Comment": "If the target is holding a liked item, follow it",
               "Sensor": {
                 "Type": "Target",
+                "TargetSlot": "LockedTarget",
                 "Filters": [
                   {
                     "Type": "ItemInHand",
@@ -1885,7 +1893,7 @@
                   },
                   {
                     "Type": "Attitude",
-                    "Attitudes": [ "Revered", "Friendly" ]
+                    "Attitudes": [ "Revered", "Friendly", "Ignore" ]
                   }
                 ]
               },
@@ -1906,7 +1914,8 @@
             {
               "$Comment": "Target is no longer holding an item, give up and go back to idle",
               "Sensor": {
-                "Type": "Target"
+                "Type": "Target",
+                "TargetSlot": "LockedTarget"
               },
               "ActionsBlocking": true,
               "ActionsAtomic": true,
