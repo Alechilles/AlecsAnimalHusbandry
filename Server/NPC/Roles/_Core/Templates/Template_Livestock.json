@@ -2188,6 +2188,7 @@
           ]
         },
         {
+          "Enabled": { "Compute": "isEmpty(InteractionConfigId)" },
           "Sensor": {
             "Type": "State",
             "State": "$Tamed",
