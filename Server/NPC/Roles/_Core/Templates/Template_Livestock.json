@@ -534,6 +534,7 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "Water",
+            "NeedsSeekStopDistance": 1,
             "_ExportStates": [
               "Idle"
             ]
@@ -553,6 +554,7 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "FoodContainer",
+            "NeedsSeekStopDistance": 1,
             "NeedsSeekFoodItemIDs": {
               "Compute": "FoodItemIDs"
             },
@@ -1903,7 +1905,16 @@
             {
               "$Comment": "Target is no longer holding an item, give up and go back to idle",
               "Sensor": {
-                "Type": "Target"
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "Not",
+                    "Filter": {
+                      "Type": "ItemInHand",
+                      "Items": { "Compute": "AttractiveItemSet" }
+                    }
+                  }
+                ]
               },
               "ActionsBlocking": true,
               "ActionsAtomic": true,
