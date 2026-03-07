@@ -25,7 +25,7 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 - Parent and offspring behavior supports more natural herd and flock development.
 
 ### Full Life Stage Progression
-- Young animals stay young and grow through life stages over time.
+- Young animals start as babies and grow through life stages over time.
 - Baby-to-adult progression is integrated into the companion system.
 - Raising animals from early life to maturity is a core gameplay loop.
 

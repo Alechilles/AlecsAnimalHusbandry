@@ -1,6 +1,6 @@
 {
   "Enabled": true,
-  "Priority": 100,
+  "Priority": 1,
   "RoleIds": [
     "Bison",
     "Bison_Calf",
@@ -77,12 +77,44 @@
     {
       "Type": "Tame",
       "ItemsParam": "AttractiveItemSet",
-      "RoleParam": "TameRoleChange"
+      "RoleParam": "TameRoleChange",
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ]
+        }
+      }
     },
     {
       "Type": "Feed",
       "Enabled": true,
-      "ItemsParam": "AttractiveItemSet"
+      "ItemsParam": "AttractiveItemSet",
+      "Heal": 25,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Pet_Heal",
+          "Color": "#fe6969",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ]
+        }
+      }
     },
     {
       "Type": "Harvest",
@@ -148,7 +180,12 @@
           "Message": "Wandering"
         }
       ],
-      "ShowFloatingText": true
+      "ShowFloatingText": true,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Creative_Play_Selection_Widget"
+        }
+      }
     }
   ]
 }
