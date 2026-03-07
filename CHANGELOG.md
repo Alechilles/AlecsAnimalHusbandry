@@ -14,7 +14,7 @@
 - `Template_Animal_Neutral` and `Template_Livestock` now use interaction-config-first behavior for overlapping interaction pathways.
 - `Template_Livestock` command/needs/breeding/flock bridge behavior aligned to the current Tamework-based V1 design.
 - Tamed livestock role arrays normalized for tamed-family flock membership behavior.
-- `Coop_Chicken` override now accepts tamed chicken-family role variants and disables wild auto-capture.
+- `Coop_Chicken` override now accepts tamed chicken-family role variants while keeping vanilla wild auto-capture parity.
 
 ### Fixed
 - Follow teleport reliability and seekfood player-follow stability through finalized component wiring.
