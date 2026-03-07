@@ -62,19 +62,17 @@
     "ContainerSearchRadius": 8.0,
     "ContainerConsumeRadius": 3.0,
     "ContainerVerticalScanRadius": 2,
-    "ContainerFoodItemIds": [
-      "Plant_Crop_Lettuce_Item"
-    ],
+    "ContainerFoodItemIds": [],
     "HungerGainPerConsumedItem": 25.0,
     "MaxContainerItemsConsumedPerSweep": 1,
     "NearbyWaterDrinkEnabled": true,
     "WaterSearchRadius": 8.0,
     "WaterConsumeRadius": 3.0,
     "WaterVerticalScanRadius": 2,
-    "ThirstGainPerSweepNearWater": 20.0
+    "ThirstGainPerSweepNearWater": 25.0
   },
   "ManualRefill": {
-    "HungerGainOnFeedInteraction": 20.0,
+    "HungerGainOnFeedInteraction": 25.0,
     "ThirstGainOnWaterBucket": 30.0,
     "WaterBucketItemIds": [
       "Container_Bucket",

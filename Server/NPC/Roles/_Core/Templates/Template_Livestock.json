@@ -512,7 +512,7 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource_Sensor",
           "Modify": {
             "NeedsSeekFoodItemIds": {
-              "Compute": "FoodItemIDs"
+              "Compute": "AttractiveItemSet"
             },
             "_ExportStates": [
               "NeedsSeekWater",
@@ -534,7 +534,16 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "Water",
-            "NeedsSeekStopDistance": 1,
+            "NeedsSeekConsumeMaintainMinDistance": 1,
+            "NeedsSeekConsumeMaintainMaxDistance": 2,
+            "NeedsSeekConsumeMaintainDistanceRange": [
+              1,
+              2
+            ],
+            "NeedsSeekFailedCooldownRange": [
+              1.8,
+              1.8
+            ],
             "_ExportStates": [
               "Idle"
             ]
@@ -554,9 +563,12 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "FoodContainer",
-            "NeedsSeekStopDistance": 1,
+            "NeedsSeekConsumeMaintainMinDistance": 1,
+            "NeedsSeekConsumeMaintainMaxDistance": 2,
+            "NeedsSeekConsumeMaintainDistanceRange": [1,2],
+            "NeedsSeekFailedCooldownRange": [1.8,1.8],
             "NeedsSeekFoodItemIDs": {
-              "Compute": "FoodItemIDs"
+              "Compute": "AttractiveItemSet"
             },
             "_ExportStates": [
               "Idle"
@@ -746,6 +758,45 @@
               "Type": "ModelAttachment",
               "Slot": { "Compute": "HarvestModelSlot" },
               "Attachment": { "Compute": "HarvestModelAttachmentHarvestable" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Apply pet effects when a pet interaction emits TwHook_Pet.",
+      "Enabled": { "Compute": "IsPettable" },
+      "Continue": true,
+      "Sensor": {
+        "Type": "TameworkHook",
+        "HookId": "TwHook_Pet",
+        "Consume": true
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Not",
+            "Sensor": {
+              "Type": "State",
+              "State": "Sleep"
+            }
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": { "Compute": "PetAnimation" }
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Hearts_Subtle",
+              "Offset": { "Compute": "ParticleOffset" },
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "SetAlarm",
+              "Name": "Pet_Ready",
+              "DurationRange": { "Compute": "PetTimeout" }
             }
           ]
         }
@@ -2340,6 +2391,10 @@
             "TargetSlot": "InteractionTarget"
           },
           {
+            "Type": "LockOnInteractionTarget",
+            "TargetSlot": "MasterTarget"
+          },
+          {
             "Type": "TameworkInteract",
             "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
@@ -2362,109 +2417,16 @@
             "TargetSlot": "InteractionTarget"
           },
           {
+            "Type": "LockOnInteractionTarget",
+            "TargetSlot": "MasterTarget"
+          },
+          {
             "Type": "TameworkInteract",
             "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
             "IsMountable": { "Compute": "IsMountable" },
             "HarvestInteractionContext": { "Compute": "HarvestInteractionContext" }
-          }
-        ]
-      },
-      {
-        "Enabled": { "Compute": "IsPettable" },
-        "TreeMode": true,
-        "Instructions": [
-          {
-            "InvertTreeModeResult": true,
-            "Sensor": {
-              "$Comment": "Check the negative first so we can exit early and avoid the rest of the logic",
-              "Type": "Not",
-              "Sensor": {
-                "Type": "And",
-                "Sensors": [
-                  {
-                    "Type": "Alarm",
-                    "Name": "Pet_Ready",
-                    "State": "Unset"
-                  },
-                  {
-                    "Type": "Not",
-                    "Sensor": {
-                      "Type": "State",
-                      "State": "Sleep"
-                    }
-                  },
-                  {
-                    "Type": "CanInteract",
-                    "Attitudes": { "Compute": "PetRequiredAttitudes" }
-                  },
-                  {
-                    "Type": "Target",
-                    "TargetSlot": "InteractionTarget",
-                    "Filters": [
-                      {
-                        "Type": "Not",
-                        "Filter": {
-                          "Type": "ItemInHand",
-                          "Hand": "Main",
-                          "Items": [ "*" ]
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            "Actions": [
-              {
-                "Type": "Nothing"
-              }
-            ]
-          },
-          {
-            "InvertTreeModeResult": true,
-            "Continue": true,
-            "Sensor": {
-              "Type": "Any"
-            },
-            "Actions": [
-              {
-                "Type": "SetInteractable",
-                "Interactable": true,
-                "Hint": "server.interactionHints.pet"
-              }
-            ]
-          },
-          {
-            "Sensor": {
-              "Type": "HasInteracted"
-            },
-            "Instructions": [
-              {
-                "Sensor": {
-                  "Type": "Target"
-                },
-                "Actions": [
-                  {
-                    "Type": "PlayAnimation",
-                    "Slot": "Status",
-                    "Animation": { "Compute": "PetAnimation" }
-                  },
-                  {
-                    "Type": "SpawnParticles",
-                    "ParticleSystem": "Hearts_Subtle",
-                    "Offset": { "Compute": "ParticleOffset" },
-                    "TargetNodeName": "Head"
-                  },
-                  {
-                    "Type": "SetAlarm",
-                    "Name": "Pet_Ready",
-                    "DurationRange": { "Compute": "PetTimeout" }
-                  }
-                ]
-              }
-            ]
           }
         ]
       },
