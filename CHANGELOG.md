@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2026-03-07
+### Fixed
+- Added missing files for `AnimalHusbandry_Command_Item`.
+
 ## 1.0.0 - 2026-03-07
 ### Added
 - Full livestock integration baseline for Animal Husbandry role coverage.
