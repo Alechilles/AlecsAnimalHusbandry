@@ -1,5 +1,6 @@
 # Alec's Animal Husbandry!
-![Discord_fmDfU2t9ju](https://github.com/user-attachments/assets/2e740257-74e1-4f73-ab4b-d0a4743930d3)
+![Alec&#39;s Animal Husbandry! Banner](https://github.com/user-attachments/assets/271f1ff0-b865-4631-848e-e43fed26a0c8)
+
 
 
 Livestock in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla livestock into a deep companion and farm-management experience where taming, raising, and breeding all matter.
