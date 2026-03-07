@@ -8,16 +8,20 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Leather_Light",
-        "Quantity": 2
-      },
-      {
         "ItemId": "Plant_Crop_Wheat_Item",
-        "Quantity": 8
+        "Quantity": 10
       },
       {
-        "ItemId": "Plant_Crop_Lettuce_Item",
-        "Quantity": 8
+        "ResourceTypeId": "Vegetables",
+        "Quantity": 5
+      },
+      {
+        "ResourceTypeId": "Fruits",
+        "Quantity": 5
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 10
       }
     ],
     "Output": [
@@ -29,15 +33,14 @@
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Id": "Workbench",
-        "RequiredTierLevel": 2,
+        "Id": "Farmingbench",
         "Categories": [
-          "Workbench_Tinkering"
+          "Farming"
         ]
       }
     ],
     "OutputQuantity": 1,
-    "TimeSeconds": 3
+    "TimeSeconds": 4
   },
   "MaxStack": 1,
   "Model": "Items/Tools/Feedbag/Feedbag.blockymodel",
