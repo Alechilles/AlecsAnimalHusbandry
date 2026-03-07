@@ -1,27 +1,66 @@
 # Alec's Animal Husbandry!
 
-A livestock-focused gameplay overhaul built for players who want animals to feel like real companions, not just background farm props.
+Livestock in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla livestock into a deep companion and farm-management experience where taming, raising, and breeding all matter.
 
-## What This Mod Adds
-- Tameable livestock across the V1 animal set that can become part of your day-to-day adventure.
-- Better companion behavior, including commandable follow, hold, and idle modes.
-- Home-style utility commands so your animals can be sent out, called back, or recalled quickly.
-- Deeper raising loop with feeding, needs, happiness, breeding, life stages, and trait variation.
-- Parent-offspring behavior that supports more natural herd life as you grow your farm.
-- Coop integration for livestock management with companion-aware intake rules.
+## Core Features
 
-## V1 Focus
-Version `1.0.0` focuses on all animals in the vanilla Livestock template and turns them into a full husbandry experience.
+### Real Taming and Ownership
+- Tame livestock and make them part of your homestead, not just passive farm drops.
+- Ownership is persistent and respected across companion interactions.
+- Tamed variants are integrated into the broader husbandry progression loop.
 
-## Player Experience Goals
-- Livestock you can build a bond with.
-- A stronger "raise from young to adult" loop.
-- More control when managing multiple animals.
-- Systems that reward care and planning without getting in your way.
+### Commandable Companions
+- Direct behavior control with command modes like `Follow`, `Hold`, and `Idle`.
+- Utility command flow for `Set Home`, `Return Home`, `Recall`, and move-to-location control.
+- Combat-oriented options (`Defend`, `Attack Target`) are available on species that are configured to support them.
+
+### Needs and Happiness That Actually Matter
+- Livestock run on active needs and happiness systems instead of shallow one-off interactions.
+- Feeding, care timing, and overall management quality influence outcomes.
+- Good husbandry habits are consistently rewarded over time.
+
+### Breeding, Traits, and Bloodlines
+- Breed compatible livestock pairs and grow long-term lines.
+- Offspring roll and inherit traits, creating real variation between animals.
+- Parent and offspring behavior supports more natural herd and flock development.
+
+### Full Life Stage Progression
+- Young animals stay young and grow through life stages over time.
+- Baby-to-adult progression is integrated into the companion system.
+- Raising animals from early life to maturity is a core gameplay loop.
+
+### Expanded Livestock Interactions
+- Tamework-powered interaction paths are integrated for key livestock actions (feeding, harvesting, petting, mounting, and command control where supported).
+- Interaction behavior is consistent with the rest of the companion systems instead of being split across disconnected pathways.
+
+### Coop Integration (V1 Baseline)
+- Chicken coop integration is in place with Tamework intake policy handling.
+- V1 intentionally keeps vanilla coop rhythm and behavior parity.
+- Companion-aware coop intake rules are applied for chicken-family livestock.
+
+## V1 Species Scope
+Version `1.0.0` covers the full vanilla `Template_Livestock` family, including:
+- Bison
+- Boar / Pig / Warthog lines
+- Camel
+- Chicken / Desert Chicken
+- Cow
+- Goat
+- Horse
+- Mouflon / Sheep / Ram lines
+- Rabbit / Bunny
+- Skrill
+- Turkey
+
+## Why It Feels Different
+- Farm animals feel like companions with history, not disposable resources.
+- Daily care decisions have long-term impact on breeding quality and herd growth.
+- Managing a stable, herd, or flock becomes a meaningful gameplay loop.
 
 ## Compatibility
 - Requires Alec's Tamework! `2.2.x`
 
 ## Coming After V1
-- More coop variants and species-specific coop tuning.
-- Expanded species tuning and more per-animal depth.
+- More coop variants and deeper coop control.
+- Expanded per-species tuning and behavior identity.
+- Continued rollout to additional mob families beyond livestock.
