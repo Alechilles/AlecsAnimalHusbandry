@@ -1,0 +1,209 @@
+{
+  "Enabled": true,
+  "ItemIds": [
+    "AnimalHusbandry_Command_Item"
+  ],
+  "Radius": -1,
+  "MembershipMode": "LinkedOnly",
+  "LinkEnabled": true,
+  "LinkUseTogglesMembership": true,
+  "RequireTamed": true,
+  "RequireOwner": true,
+  "MaxTargets": 25,
+  "CooldownSeconds": 0,
+  "RequireLineOfSight": false,
+  "AllowedRoles": {
+    "Mode": "Allowlist",
+    "Allowlist": [
+      "Tamed_Bison",
+      "Tamed_Bison_Calf",
+      "Tamed_Boar",
+      "Tamed_Boar_Piglet",
+      "Tamed_Bunny",
+      "Tamed_Camel",
+      "Tamed_Camel_Calf",
+      "Tamed_Chicken",
+      "Tamed_Chicken_Chick",
+      "Tamed_Chicken_Desert",
+      "Tamed_Chicken_Desert_Chick",
+      "Tamed_Cow",
+      "Tamed_Cow_Calf",
+      "Tamed_Goat",
+      "Tamed_Goat_Kid",
+      "Tamed_Horse",
+      "Tamed_Horse_Foal",
+      "Tamed_Mosshorn",
+      "Tamed_Mosshorn_Plain",
+      "Tamed_Mouflon",
+      "Tamed_Mouflon_Lamb",
+      "Tamed_Pig",
+      "Tamed_Pig_Piglet",
+      "Tamed_Pig_Wild",
+      "Tamed_Pig_Wild_Piglet",
+      "Tamed_Rabbit",
+      "Tamed_Ram",
+      "Tamed_Ram_Lamb",
+      "Tamed_Sheep",
+      "Tamed_Sheep_Lamb",
+      "Tamed_Skrill",
+      "Tamed_Skrill_Chick",
+      "Tamed_Turkey",
+      "Tamed_Turkey_Chick",
+      "Tamed_Warthog",
+      "Tamed_Warthog_Piglet"
+    ]
+  },
+  "CommandList": [
+    {
+      "Id": "Follow",
+      "DisplayName": "Follow",
+      "Default": true,
+      "Feedback": {
+        "HudMessage": "Follow: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Follow"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Follow"
+        },
+        {
+          "Type": "SetTarget",
+          "TargetSlot": "MasterTarget",
+          "Source": "OwnerPlayer"
+        }
+      ]
+    },
+    {
+      "Id": "Hold",
+      "DisplayName": "Hold",
+      "Feedback": {
+        "HudMessage": "Hold: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Hold"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Hold"
+        }
+      ]
+    },
+    {
+      "Id": "Recall",
+      "DisplayName": "Recall",
+      "Feedback": {
+        "HudMessage": "Recall: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Poof_Small"
+      },
+      "Steps": [
+        {
+          "Type": "ClearCombat",
+          "State": "Follow",
+          "TargetSlots": [
+            "LockedTarget"
+          ],
+          "AssignOwnerAsMasterTarget": true
+        }
+      ]
+    },
+    {
+      "Id": "MoveToPing",
+      "DisplayName": "Move To Ping",
+      "Feedback": {
+        "HudMessage": "Move To Ping: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Alerted"
+      },
+      "Steps": [
+        {
+          "Type": "MoveToPosition",
+          "Source": "RaycastHit"
+        }
+      ]
+    },
+    {
+      "Id": "SetHome",
+      "DisplayName": "Set Home",
+      "Feedback": {
+        "ChatMessage": "Home set for this command bag.",
+        "HudMessage": "Home Set",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Poof_Small"
+      },
+      "Steps": [
+        {
+          "Type": "StoreHome",
+          "Source": "RaycastHit",
+          "FailurePolicy": "AbortAll"
+        }
+      ]
+    },
+    {
+      "Id": "ReturnHome",
+      "DisplayName": "Return Home",
+      "Feedback": {
+        "HudMessage": "Return Home: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Follow"
+      },
+      "Steps": [
+        {
+          "Type": "MoveToPosition",
+          "Source": "StoredHome",
+          "FailurePolicy": "AbortCommandForNpc"
+        }
+      ]
+    },
+    {
+      "Id": "AttackTarget",
+      "DisplayName": "Attack Target",
+      "Feedback": {
+        "HudMessage": "Attack Target: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Defend"
+      },
+      "Steps": [
+        {
+          "Type": "SetTarget",
+          "TargetSlot": "LockedTarget",
+          "Source": "CrosshairTarget",
+          "FailurePolicy": "AbortCommandForNpc"
+        },
+        {
+          "Type": "SetState",
+          "State": "Defend"
+        }
+      ]
+    },
+    {
+      "Id": "Idle",
+      "DisplayName": "Idle",
+      "Feedback": {
+        "HudMessage": "Idle: {count}",
+        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "ParticleSystem": "Idle"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Idle"
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 - Traits config coverage for wild + tamed livestock role ids.
 - Pet custom interaction bridge via `TriggerNpcHook` (`TwHook_Pet`) with hook-driven NPC effects in `Template_Livestock`.
 - Tamework coop integration config for `Coop_Chicken` with companion-aware intake policy.
+- Dedicated Animal Husbandry command bag item + recipe with a livestock role allowlist command config.
 - Release prep docs: final-state integration reference + V1 test checklist.
 
 ### Changed
