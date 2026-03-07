@@ -81,7 +81,7 @@
   },
   "OffspringLifecycle": {
     "Enabled": true,
-    "DefaultTimeToFullGrownSeconds": 7200,
+    "DefaultTimeToFullGrownSeconds": 5400,
     "DefaultBabyStartScale": 0.55,
     "DefaultAdolescentStartScale": 0.8,
     "DefaultAdultStartScale": 0.8,
@@ -91,27 +91,27 @@
       {
         "AdultRoleId": "Tamed_Bison",
         "BabyRoleId": "Tamed_Bison_Calf",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 9000
       },
       {
         "AdultRoleId": "Tamed_Boar",
         "BabyRoleId": "Tamed_Boar_Piglet",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Camel",
         "BabyRoleId": "Tamed_Camel_Calf",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 8100
       },
       {
         "AdultRoleId": "Tamed_Chicken",
         "BabyRoleId": "Tamed_Chicken_Chick",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 3600
       },
       {
         "AdultRoleId": "Tamed_Chicken_Desert",
         "BabyRoleId": "Tamed_Chicken_Desert_Chick",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 3600
       },
       {
         "AdultRoleId": "Tamed_Cow",
@@ -121,52 +121,52 @@
       {
         "AdultRoleId": "Tamed_Goat",
         "BabyRoleId": "Tamed_Goat_Kid",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Horse",
         "BabyRoleId": "Tamed_Horse_Foal",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 9000
       },
       {
         "AdultRoleId": "Tamed_Mouflon",
         "BabyRoleId": "Tamed_Mouflon_Lamb",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Pig",
         "BabyRoleId": "Tamed_Pig_Piglet",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Pig_Wild",
         "BabyRoleId": "Tamed_Pig_Wild_Piglet",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Ram",
         "BabyRoleId": "Tamed_Ram_Lamb",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Sheep",
         "BabyRoleId": "Tamed_Sheep_Lamb",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       },
       {
         "AdultRoleId": "Tamed_Skrill",
         "BabyRoleId": "Tamed_Skrill_Chick",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 4500
       },
       {
         "AdultRoleId": "Tamed_Turkey",
         "BabyRoleId": "Tamed_Turkey_Chick",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 4800
       },
       {
         "AdultRoleId": "Tamed_Warthog",
         "BabyRoleId": "Tamed_Warthog_Piglet",
-        "TimeToFullGrownSeconds": 7200
+        "TimeToFullGrownSeconds": 5400
       }
     ]
   }
