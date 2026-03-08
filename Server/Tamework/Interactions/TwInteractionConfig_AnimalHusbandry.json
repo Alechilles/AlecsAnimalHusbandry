@@ -80,7 +80,7 @@
       "RoleParam": "TameRoleChange",
       "Requires": {
         "All": {
-          "NotTamed": true
+          "IsNotTamed": true
         }
       },
       "Effects": {
@@ -104,7 +104,7 @@
       "Type": "Custom",
       "Requires": {
         "All": {
-          "NotTamed": true,
+          "IsNotTamed": true,
           "ItemsInHand": [
             {
               "ItemsParam": "AttractiveItemSet",
