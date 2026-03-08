@@ -7,27 +7,27 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 
 ## Getting Started
 
-1. **Install requirements:**
+**1. Install requirements:**
 - Alec's Animal Husbandry!
 - Alec's Tamework! `v2.2.x`
 - Alec's Nametags!
 
-2. **Tame your first livestock:**
+**2. Tame your first livestock:**
 - Approach with valid taming food and interact with the Animal.
 - Once tamed, the animal becomes part of your companion system and can be directed.
 - Press F with an empty hand or just anything other than food to command them to follow, stay, or wander.
 
-3. **Create a good environment for your companions:**
+**3. Create a good environment for your companions:**
 - Build a safe enclosure with room for movement.
 - Keep an accessible water source in the enclosure.
 - Keep your companions' preferred food type in a chest in the enclosure.
 - Your animals will automatically eat and drink when they are hungry or thirsty.
 
-4. **Craft your command item:**
+**4. Craft your command item:**
 - Craft the Animal Husbandry Command Bag at the Farmer's Workbench.
   - 10x Wheat, 5x Any Vegetable, 5x Any Fruit, 10x Essence of Life
 
-5. **Bind and command:**
+**5. Bind and command:**
 - Use the command bag to link your tamed livestock.
 - Right-click with the command bag. 
 - From here you can: 
