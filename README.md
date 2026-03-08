@@ -5,6 +5,39 @@
 
 Livestock in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla livestock into a deep companion and farm-management experience where taming, raising, and breeding all matter.
 
+## Getting Started (5-Minute Setup)
+
+1. Install requirements:
+- Alec's Animal Husbandry
+- Alec's Tamework `2.2.x`
+
+2. Start with a small pen and water access:
+- Build a safe enclosure with room for movement.
+- Keep a water source nearby so needs behavior can resolve naturally.
+
+3. Craft your command item:
+- Craft the Animal Husbandry command bag at the Farmer's Workbench.
+- Recipe theme matches the Feed Bag style so it fits naturally into early farm progression.
+
+4. Tame your first livestock:
+- Approach with valid taming food and complete the tame interaction.
+- Once tamed, the animal becomes part of your companion system and can be directed.
+
+5. Bind and command:
+- Use the command bag to link your tamed livestock.
+- Start with `Follow`, `Hold`, and `Idle`, then expand into utility/combat commands for species that support them.
+
+## Core Gameplay Flow
+
+The intended loop is:
+1. Tame livestock you care about.
+2. Keep them fed, watered, and happy.
+3. Breed strong pairs to build better bloodlines.
+4. Raise offspring through full life stages.
+5. Harvest from healthier, happier, better-bred animals.
+
+Animals are meant to feel like long-term farm companions, not disposable resource drops.
+
 ## Core Features
 
 ### Real Taming and Ownership
@@ -55,6 +88,19 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 
 ### Coop Integration
 - Chicken coops maintain the animal's traits, attachments, and other metadata instead of getting reset on respawn.
+
+## Tips For Best Results
+
+- Keep food storage and water practical and accessible to reduce failed need-seeking.
+- Avoid overcrowding if you want reliable passive breeding.
+- Use command modes deliberately: `Hold` for structure, `Follow` for movement, `Idle` for free behavior.
+- Breed for consistency, not just quantity; inheritance matters over time.
+
+## Mid-Playthrough Worlds
+
+Adding the mod to an existing world is supported.
+- Pre-existing tamed livestock can be bridged into Tamework ownership on first successful interaction/link.
+- If an old tamed animal is not responding to owner-restricted actions, interact/link it once to migrate it.
 
 ## V1 Species Scope
 Version `1.0.0` covers the full vanilla `Template_Livestock` family, including:
