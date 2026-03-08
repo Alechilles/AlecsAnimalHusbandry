@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+### Added
+- New "no-correct-food" tame hint interaction that shows preferred-food thought-bubble particles (`AttractiveItemSetParticles`) instead of silently failing.
+- Added Animal Husbandry-themed command item art/model assets.
+
+### Changed
+- Animal Husbandry command bag recipe moved to the Farmer's Workbench and aligned to feed-bag-style ingredient expectations.
+- README onboarding and feature sections expanded for clearer player-facing setup and gameplay flow.
+
+### Fixed
+- Tame interaction gating now correctly applies untamed-only checks (`IsNotTamed`), so already-tamed livestock no longer show unusable tame prompts.
+
 ## 1.0.1 - 2026-03-07
 ### Fixed
 - Added missing files for `AnimalHusbandry_Command_Item`.
