@@ -78,6 +78,11 @@
       "Type": "Tame",
       "ItemsParam": "AttractiveItemSet",
       "RoleParam": "TameRoleChange",
+      "Requires": {
+        "All": {
+          "NotTamed": true
+        }
+      },
       "Effects": {
         "PlaySound": {
           "SoundEvent": "SFX_Fen_Stalker_Eat",
@@ -90,7 +95,8 @@
             0,
             0.6,
             0
-          ]
+          ],
+          "AttachTarget": "Entity"
         }
       }
     },
@@ -111,7 +117,9 @@
         "SpawnParticles": {
           "ParticleSystemParam": "AttractiveItemSetParticles",
           "AttachTarget": "Node",
-          "AttachNode": "Head"
+          "AttachNode": "Head",
+          "OffsetParam": "ParticleOffset",
+          "PlayerOnly": false
         }
       },
       "PromptHint": "server.interactionHints.tame"
@@ -134,7 +142,10 @@
             0,
             0.6,
             0
-          ]
+          ],
+          "AttachTarget": "Node",
+          "AttachNode": "Body",
+          "OffsetParam": "ParticleOffset"
         }
       }
     },
