@@ -95,6 +95,28 @@
       }
     },
     {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "NotTamed": true,
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet",
+              "Operator": "NoneOf"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "SpawnParticles": {
+          "ParticleSystemParam": "AttractiveItemSetParticles",
+          "AttachTarget": "Node",
+          "AttachNode": "Head"
+        }
+      },
+      "PromptHint": "server.interactionHints.tame"
+    },
+    {
       "Type": "Feed",
       "Enabled": true,
       "ItemsParam": "AttractiveItemSet",
