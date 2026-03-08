@@ -5,27 +5,36 @@
 
 Livestock in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla livestock into a deep companion and farm-management experience where taming, raising, and breeding all matter.
 
-## Getting Started (5-Minute Setup)
+## Getting Started
 
-1. Install requirements:
-- Alec's Animal Husbandry
-- Alec's Tamework `2.2.x`
+1. **Install requirements:**
+- Alec's Animal Husbandry!
+- Alec's Tamework! `v2.2.x`
+- Alec's Nametags!
 
-2. Start with a small pen and water access:
-- Build a safe enclosure with room for movement.
-- Keep a water source nearby so needs behavior can resolve naturally.
-
-3. Craft your command item:
-- Craft the Animal Husbandry command bag at the Farmer's Workbench.
-- Recipe theme matches the Feed Bag style so it fits naturally into early farm progression.
-
-4. Tame your first livestock:
-- Approach with valid taming food and complete the tame interaction.
+2. **Tame your first livestock:**
+- Approach with valid taming food and interact with the Animal.
 - Once tamed, the animal becomes part of your companion system and can be directed.
+- Press F with an empty hand or just anything other than food to command them to follow, stay, or wander.
 
-5. Bind and command:
+3. **Create a good environment for your companions:**
+- Build a safe enclosure with room for movement.
+- Keep an accessible water source in the enclosure.
+- Keep your companions' preferred food type in a chest in the enclosure.
+- Your animals will automatically eat and drink when they are hungry or thirsty.
+
+4. **Craft your command item:**
+- Craft the Animal Husbandry Command Bag at the Farmer's Workbench.
+  - 10x Wheat, 5x Any Vegetable, 5x Any Fruit, 10x Essence of Life
+
+5. **Bind and command:**
 - Use the command bag to link your tamed livestock.
-- Start with `Follow`, `Hold`, and `Idle`, then expand into utility/combat commands for species that support them.
+- Right-click with the command bag. 
+- From here you can: 
+  - View your animal's stats such as happiness, hunger, thirst, traits and more.
+  - Issue commands to all linked animals simultaneously.
+  - Revive deceased companions.
+  - Set homes and command to return to home or recall to you.
 
 ## Core Gameplay Flow
 
