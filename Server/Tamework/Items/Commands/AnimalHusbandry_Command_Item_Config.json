@@ -166,27 +166,6 @@
       ]
     },
     {
-      "Id": "AttackTarget",
-      "DisplayName": "Attack Target",
-      "Feedback": {
-        "HudMessage": "Attack Target: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
-        "ParticleSystem": "Defend"
-      },
-      "Steps": [
-        {
-          "Type": "SetTarget",
-          "TargetSlot": "LockedTarget",
-          "Source": "CrosshairTarget",
-          "FailurePolicy": "AbortCommandForNpc"
-        },
-        {
-          "Type": "SetState",
-          "State": "Defend"
-        }
-      ]
-    },
-    {
       "Id": "Idle",
       "DisplayName": "Idle",
       "Feedback": {
