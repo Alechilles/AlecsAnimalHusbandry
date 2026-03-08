@@ -1,6 +1,7 @@
 {
   "Enabled": true,
-  "Priority": 100,
+  "Parent": "TwCompanionConfig_Default",
+  "Priority": 1,
   "RoleIds": [
     "Tamed_Bison",
     "Tamed_Bison_Calf",
@@ -40,24 +41,9 @@
     "Tamed_Warthog_Piglet"
   ],
   "OwnershipProtection": {
-    "BlockOwnerDamage": true,
-    "BlockAllPlayerDamageIfOwned": false,
-    "InvulnerableIfOwned": false
+    "BlockOwnerDamage": false
   },
   "Command": {
-    "ReturnHomeTeleportDistance": 96.0,
-    "ReturnHomePathDistanceBeforeTeleport": 24.0,
-    "ReturnHomeTeleportDelayMs": 2500,
-    "RecallSafeSpawnDistance": 20.0,
-    "RecallForceRelocateDistance": 80.0,
-    "DeadRespawnEnabled": true,
-    "DeadRespawnCooldownMs": 10000,
-    "DeadRespawnFollowRetryDelayMs": 1250,
-    "DeadRespawnDistanceClose": 5.0,
-    "DeadRespawnDistanceNear": 8.0,
-    "DeadRespawnDistanceMid": 12.0,
-    "DeadRespawnDistanceFar": 16.0,
-    "PlacementMinRelativeY": -2.0,
-    "PlacementMaxRelativeY": 4.0
+    "DeadRespawnCooldownMins": 10
   }
 }
