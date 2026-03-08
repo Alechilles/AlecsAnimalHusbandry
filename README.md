@@ -49,6 +49,8 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 - Mobs may be sent home and recalled from anywhere in the same world, **even if they are currently unloaded**.
 
 ### Nametags
+<img width="536" height="268" alt="image" src="https://github.com/user-attachments/assets/2311dbe5-02f0-4c93-8b58-d14ba60b7aa3" />
+
 - Craft a (custom modeled and textured) Nametag item that can be used to name any tamed/owned NPC.
 
 ### Coop Integration
