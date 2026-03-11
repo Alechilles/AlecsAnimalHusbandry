@@ -11,6 +11,8 @@
 - Added a `Template_Predator` override with Tamework interaction support so predator tame flows can execute at template level.
 - Added missing predator/command parameter definitions to `Template_Predator_Tamed` so tamed predator role fields (for example `Tamed_Wolf_Black`) resolve cleanly.
 - Added `TargetRange` and `CombatFleeIfTooCloseDistance` parameter definitions to `Template_Predator_Tamed` to fix runtime parameter-resolution errors (for example `Tamed_Bear_Grizzly`).
+- Added dedicated predator interaction config `TwInteractionConfig_AnimalHusbandry_Predator` and wired predator roles to it.
+- Predator taming now requires the target NPC to be below 20% health (`NpcHealthPercent` with `LessThan 20.0`).
 - Updated Animal Husbandry interaction and command-role allowlists to include the new predator role variants.
 - Added tamed predator role coverage to `Needs`, `Happiness`, `Breeding`, and `Companion` config role-id lists.
 - `Template_Livestock` sleep wake routing now preserves sleep origin: wake returns to `Idle` when sleep started from idle/follow, and returns to `Hold` when sleep started from hold.

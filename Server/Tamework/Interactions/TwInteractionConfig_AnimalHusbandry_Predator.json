@@ -1,0 +1,284 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Bison",
+    "Bison_Calf",
+    "Boar",
+    "Boar_Piglet",
+    "Bunny",
+    "Camel",
+    "Camel_Calf",
+    "Chicken",
+    "Chicken_Chick",
+    "Chicken_Desert",
+    "Chicken_Desert_Chick",
+    "Cow",
+    "Cow_Calf",
+    "Goat",
+    "Goat_Kid",
+    "Horse",
+    "Horse_Foal",
+    "Mouflon",
+    "Mouflon_Lamb",
+    "Pig",
+    "Pig_Piglet",
+    "Pig_Wild",
+    "Pig_Wild_Piglet",
+    "Rabbit",
+    "Ram",
+    "Ram_Lamb",
+    "Sheep",
+    "Sheep_Lamb",
+    "Skrill",
+    "Skrill_Chick",
+    "Turkey",
+    "Turkey_Chick",
+    "Warthog",
+    "Warthog_Piglet",
+    "Tamed_Bison",
+    "Tamed_Bison_Calf",
+    "Tamed_Boar",
+    "Tamed_Boar_Piglet",
+    "Tamed_Bunny",
+    "Tamed_Camel",
+    "Tamed_Camel_Calf",
+    "Tamed_Chicken",
+    "Tamed_Chicken_Chick",
+    "Tamed_Chicken_Desert",
+    "Tamed_Chicken_Desert_Chick",
+    "Tamed_Cow",
+    "Tamed_Cow_Calf",
+    "Tamed_Goat",
+    "Tamed_Goat_Kid",
+    "Tamed_Horse",
+    "Tamed_Horse_Foal",
+    "Tamed_Mosshorn",
+    "Tamed_Mosshorn_Plain",
+    "Tamed_Mouflon",
+    "Tamed_Mouflon_Lamb",
+    "Tamed_Pig",
+    "Tamed_Pig_Piglet",
+    "Tamed_Pig_Wild",
+    "Tamed_Pig_Wild_Piglet",
+    "Tamed_Rabbit",
+    "Tamed_Ram",
+    "Tamed_Ram_Lamb",
+    "Tamed_Sheep",
+    "Tamed_Sheep_Lamb",
+    "Tamed_Skrill",
+    "Tamed_Skrill_Chick",
+    "Tamed_Turkey",
+    "Tamed_Turkey_Chick",
+    "Tamed_Warthog",
+    "Tamed_Warthog_Piglet",
+    "Bear_Grizzly",
+    "Bear_Polar",
+    "Crocodile",
+    "Emberwulf",
+    "Fen_Stalker",
+    "Fox",
+    "Hyena",
+    "Larva_Silk",
+    "Leopard_Snow",
+    "Molerat",
+    "Raptor_Cave",
+    "Rat",
+    "Rex_Cave",
+    "Scorpion",
+    "Slug_Magma",
+    "Snake_Cobra",
+    "Snake_Marsh",
+    "Snake_Rattle",
+    "Snapdragon",
+    "Spider",
+    "Spider_Cave",
+    "Tiger_Sabertooth",
+    "Toad_Rhino",
+    "Toad_Rhino_Magma",
+    "Wolf_Black",
+    "Wolf_White",
+    "Yeti",
+    "Tamed_Bear_Grizzly",
+    "Tamed_Bear_Polar",
+    "Tamed_Crocodile",
+    "Tamed_Emberwulf",
+    "Tamed_Fen_Stalker",
+    "Tamed_Fox",
+    "Tamed_Hyena",
+    "Tamed_Larva_Silk",
+    "Tamed_Leopard_Snow",
+    "Tamed_Molerat",
+    "Tamed_Raptor_Cave",
+    "Tamed_Rat",
+    "Tamed_Rex_Cave",
+    "Tamed_Scorpion",
+    "Tamed_Slug_Magma",
+    "Tamed_Snake_Cobra",
+    "Tamed_Snake_Marsh",
+    "Tamed_Snake_Rattle",
+    "Tamed_Snapdragon",
+    "Tamed_Spider",
+    "Tamed_Spider_Cave",
+    "Tamed_Tiger_Sabertooth",
+    "Tamed_Toad_Rhino",
+    "Tamed_Toad_Rhino_Magma",
+    "Tamed_Wolf_Black",
+    "Tamed_Wolf_White",
+    "Tamed_Yeti"
+  ],
+  "Interactions": [
+    {
+      "Type": "Tame",
+      "ItemsParam": "AttractiveItemSet",
+      "RoleParam": "TameRoleChange",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "NpcHealthPercent": [
+            {
+              "Operator": "LessThan",
+              "Value": 20.0
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Entity"
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet",
+              "Operator": "NoneOf"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "SpawnParticles": {
+          "ParticleSystemParam": "AttractiveItemSetParticles",
+          "AttachTarget": "Node",
+          "AttachNode": "Head",
+          "OffsetParam": "ParticleOffset",
+          "PlayerOnly": false
+        }
+      },
+      "PromptHint": "server.interactionHints.tame"
+    },
+    {
+      "Type": "Feed",
+      "Enabled": true,
+      "ItemsParam": "AttractiveItemSet",
+      "Heal": 25,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Pet_Heal",
+          "Color": "#fe6969",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Node",
+          "AttachNode": "Body",
+          "OffsetParam": "ParticleOffset"
+        }
+      }
+    },
+    {
+      "Type": "Harvest",
+      "Enabled": true,
+      "RequireHarvestInteractionContext": false,
+      "RequireHarvestAlarmReady": true,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "HarvestInteractionRequiredItems"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Type": "Mount",
+      "Enabled": true
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "AlarmState": [
+            {
+              "Name": "Pet_Ready",
+              "State": "unset"
+            }
+          ],
+          "PlayerHandEmpty": true,
+          "Parameter": [
+            {
+              "Name": "IsPettable",
+              "Value": "true",
+              "Operator": "Equals"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "TriggerNpcHook": {
+          "HookId": "TwHook_Pet",
+          "Consume": true
+        }
+      },
+      "PromptHint": "server.interactionHints.pet"
+    },
+    {
+      "Type": "ModeCycle",
+      "Enabled": true,
+      "Cycle": [
+        {
+          "State": "Follow",
+          "Message": "Following"
+        },
+        {
+          "State": "Hold",
+          "Message": "Staying"
+        },
+        {
+          "State": "Idle",
+          "Message": "Wandering"
+        }
+      ],
+      "ShowFloatingText": true,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Creative_Play_Selection_Widget"
+        }
+      }
+    }
+  ]
+}
