@@ -20,6 +20,7 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 - Approach with valid taming food and interact with the Animal.
 - Once tamed, the animal becomes part of your companion system and can be directed.
 - Press F with an empty hand or just anything other than food to command them to follow, stay, or wander.
+- For mountable animals such as horses, hold Crouch and press F to mount!
 
 **3. Create a good environment for your companions:**
 - Build a safe enclosure with room for movement.
