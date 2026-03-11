@@ -1,6 +1,19 @@
 # Changelog
 
 ## Unreleased
+### Added
+- Added first-pass predator role coverage by overriding all vanilla predator roles (`Template_Predator` lineage) in Animal Husbandry.
+- Added `Tamed_` predator role variants for all supported predator roles, currently wired to `Template_Predator_Tamed`.
+- Added `Template_Predator_Tamed` by copying `Template_Cat_Pet` from Alec's Cats for predator-tamed behavior.
+
+### Changed
+- Wild predator role overrides now include taming + interaction wiring (`IsTameable`, `TameRoleChange`, `InteractionConfigId`).
+- Added a `Template_Predator` override with Tamework interaction support so predator tame flows can execute at template level.
+- Added missing predator/command parameter definitions to `Template_Predator_Tamed` so tamed predator role fields (for example `Tamed_Wolf_Black`) resolve cleanly.
+- Added `TargetRange` and `CombatFleeIfTooCloseDistance` parameter definitions to `Template_Predator_Tamed` to fix runtime parameter-resolution errors (for example `Tamed_Bear_Grizzly`).
+- Updated Animal Husbandry interaction and command-role allowlists to include the new predator role variants.
+- Added tamed predator role coverage to `Needs`, `Happiness`, `Breeding`, and `Companion` config role-id lists.
+- `Template_Livestock` sleep wake routing now preserves sleep origin: wake returns to `Idle` when sleep started from idle/follow, and returns to `Hold` when sleep started from hold.
 
 ## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
 ### Added

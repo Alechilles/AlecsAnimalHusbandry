@@ -389,10 +389,42 @@
       }
     },
     {
+      "$Comment": "Record sleep origin when entering sleep from Hold so wake can return to Hold.",
+      "States": [
+        {
+          "From": [ "Hold" ],
+          "To": [ "Sleep" ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "Sleep_ReturnToHold",
+          "SetTo": true
+        }
+      ]
+    },
+    {
+      "$Comment": "Record sleep origin when entering sleep from Idle/Follow so wake returns to Idle.",
+      "States": [
+        {
+          "From": [ "Idle", "Follow" ],
+          "To": [ "Sleep" ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "Sleep_ReturnToHold",
+          "SetTo": false
+        }
+      ]
+    },
+    {
       "States": [
         {
           "From": [ "Sleep" ],
-          "To": [ "Alerted", "Flee", "Idle", "Follow", "Hold", "Defend", "CommandMove" ]
+          "To": [ "Alerted", "Flee", "SleepWakeResolve", "Idle", "Follow", "Hold", "Defend", "CommandMove" ]
         }
       ],
       "Actions": {
@@ -649,6 +681,10 @@
         {
           "Type": "State",
           "State": "BreedPair"
+        },
+        {
+          "Type": "State",
+          "State": "SleepWakeResolve"
         }
       ]
     },
@@ -1451,7 +1487,7 @@
                 {
                   "Reference": "Component_Instruction_Wild_Sleep_State",
                   "Modify": {
-                    "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "Idle" ],
+                    "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "SleepWakeResolve" ],
                     "HearingRange": { "Compute": "HearingRange" },
                     "Attitudes": [ "Hostile", "Neutral" ],
                     "WakeupSensor": "Component_Sensor_Timed_Nap"
@@ -1465,11 +1501,55 @@
                 {
                   "Reference": "Component_Instruction_Wild_Sleep_State",
                   "Modify": {
-                    "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "Idle" ],
+                    "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "SleepWakeResolve" ],
                     "HearingRange": { "Compute": "HearingRange" },
                     "Attitudes": [ "Hostile", "Neutral" ],
                     "DayTimePeriod": { "Compute": "DayTimePeriod" }
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Resolve wake destination based on the state that initiated sleep.",
+          "Sensor": {
+            "Type": "State",
+            "State": "SleepWakeResolve"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Flag",
+                "Name": "Sleep_ReturnToHold"
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "Sleep_ReturnToHold",
+                  "SetTo": false
+                },
+                {
+                  "Type": "State",
+                  "State": "Hold"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Flag",
+                "Name": "Sleep_ReturnToHold",
+                "Set": false
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "Sleep_ReturnToHold",
+                  "SetTo": false
+                },
+                {
+                  "Type": "State",
+                  "State": "Idle"
                 }
               ]
             }
