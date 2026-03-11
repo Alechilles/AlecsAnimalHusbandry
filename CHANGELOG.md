@@ -17,6 +17,7 @@
 - Added tamed predator role coverage to `Needs`, `Happiness`, `Breeding`, and `Companion` config role-id lists.
 - `Template_Livestock` sleep wake routing now preserves sleep origin: wake returns to `Idle` when sleep started from idle/follow, and returns to `Hold` when sleep started from hold.
 - Exposed `IsTameable`, `TameRoleChange`, and `InteractionConfigId` as parameters in chained predator base roles (`Bear_Grizzly`, `Snake_Marsh`, `Spider`) so child variants can override tame settings without parameter visibility errors.
+- `TwInteractionConfig_AnimalHusbandry_Predator` role allowlist now contains only predator and tamed-predator roles (livestock role IDs removed).
 
 ## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
 ### Added
