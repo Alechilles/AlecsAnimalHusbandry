@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
+### Added
+- Added CurseForge update-check metadata in `manifest.json` (`UpdateChecker.CurseForge = 1480275`) so supported clients can detect newer versions.
+
+### Changed
+- Updated `manifest.json` version to `1.0.3`.
+- Refreshed README shields/badges and added a Hytame recommendation section in the docs.
+- Updated `Common/Items/AnimalHusbandry/Shakuhachi.bbmodel` with the latest in-progress model changes.
+
 ## 1.0.2 - 2026-03-08
 ### Added
 - New "no-correct-food" tame hint interaction that shows preferred-food thought-bubble particles (`AttractiveItemSetParticles`) instead of silently failing.
@@ -50,3 +59,4 @@
 - Starter documentation (`README.md`, `CHANGELOG.md`).
 - Starter language pack scaffold (`Server/Languages/en-US/server.lang`).
 - Disabled starter Tamework config stubs for livestock interactions, happiness, breeding, and traits.
+

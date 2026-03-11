@@ -147,3 +147,6 @@ Version `1.0.0` covers the full vanilla `Template_Livestock` family, including:
   - Unlock stat increases, new behaviors, and new abilities as the companion levels up.
 - Integrate with more animal types outside of Livestock.
 
+## Hytame Shoutout
+
+If you're looking for a simpler, more Minecraft-like taming and breeding experience, I highly recommend checking out [Hytame - Animal Breeding](https://www.curseforge.com/hytale/mods/hytame) by my friend Lait!
