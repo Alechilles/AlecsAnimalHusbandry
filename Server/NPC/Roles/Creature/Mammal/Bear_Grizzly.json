@@ -41,6 +41,18 @@
     "NameTranslationKey": {
       "Value": "server.npcRoles.Bear_Grizzly.name",
       "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Bear_Grizzly",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Predator",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
     }
   },
   "Modify": {
@@ -192,8 +204,14 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "IsTameable": true,
-    "TameRoleChange": "Tamed_Bear_Grizzly",
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
   }
 }

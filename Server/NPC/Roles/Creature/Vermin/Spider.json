@@ -29,6 +29,18 @@
     "NameTranslationKey": {
       "Value": "server.npcRoles.Spider.name",
       "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Spider",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Predator",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
     }
   },
   "Modify": {
@@ -202,8 +214,14 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "IsTameable": true,
-    "TameRoleChange": "Tamed_Spider",
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
   }
 }
