@@ -21,6 +21,7 @@
 - `TwInteractionConfig_AnimalHusbandry` role allowlist now excludes predator and tamed-predator roles so predator handling is isolated to the dedicated predator interaction config.
 - Predator taming now additionally requires `Sleep.Tranquilized`; `Template_Predator` now forces tranquilized predators into `Sleep.Tranquilized` while `Tw_Status_Tranquilized` is active and wakes them when the effect ends.
 - Added `TranquilizerSleepThresholdSeconds` to `Template_Predator` so per-role tuning can require longer remaining tranquilizer duration (supporting higher-hit tranquilizer thresholds through effect-duration stacking).
+- Added `TranquilizerSleepHealthRange` to `Template_Predator` and gated tranquilizer-forced sleep by health ratio (default `[0, 0.2]`, so predators only fall asleep at 20% health or lower unless overridden per role).
 
 ## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
 ### Added
