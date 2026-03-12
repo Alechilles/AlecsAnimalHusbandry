@@ -542,24 +542,11 @@
       "States": [
         {
           "From": [
-            "Idle"
+            "Idle",
+            "Combat"
           ],
           "To": [
             "Sleep"
-          ]
-        }
-      ],
-      "Actions": {
-        "Reference": "Component_ActionList_Sleep"
-      }
-    },
-    {
-      "$Comment": "Play laydown before entering tranquilized sleep.",
-      "States": [
-        {
-          "From": [],
-          "To": [
-            "Sleep.Tranquilized"
           ]
         }
       ],
