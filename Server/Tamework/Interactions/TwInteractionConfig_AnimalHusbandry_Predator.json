@@ -65,6 +65,12 @@
       "Requires": {
         "All": {
           "IsNotTamed": true,
+          "NpcState": [
+            {
+              "State": "Sleep",
+              "SubState": "Tranquilized"
+            }
+          ],
           "NpcHealthPercent": [
             {
               "Operator": "LessThan",

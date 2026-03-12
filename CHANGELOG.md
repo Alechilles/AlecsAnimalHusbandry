@@ -19,6 +19,8 @@
 - Exposed `IsTameable`, `TameRoleChange`, and `InteractionConfigId` as parameters in chained predator base roles (`Bear_Grizzly`, `Snake_Marsh`, `Spider`) so child variants can override tame settings without parameter visibility errors.
 - `TwInteractionConfig_AnimalHusbandry_Predator` role allowlist now contains only predator and tamed-predator roles (livestock role IDs removed).
 - `TwInteractionConfig_AnimalHusbandry` role allowlist now excludes predator and tamed-predator roles so predator handling is isolated to the dedicated predator interaction config.
+- Predator taming now additionally requires `Sleep.Tranquilized`; `Template_Predator` now forces tranquilized predators into `Sleep.Tranquilized` while `Tw_Status_Tranquilized` is active and wakes them when the effect ends.
+- Added `TranquilizerSleepThresholdSeconds` to `Template_Predator` so per-role tuning can require longer remaining tranquilizer duration (supporting higher-hit tranquilizer thresholds through effect-duration stacking).
 
 ## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
 ### Added
