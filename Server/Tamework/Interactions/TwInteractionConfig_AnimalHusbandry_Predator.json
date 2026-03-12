@@ -73,7 +73,7 @@
           ],
           "NpcHealthPercent": [
             {
-              "Operator": "LessThan",
+              "Operator": "LessThanOrEqual",
               "Value": 20.0
             }
           ]
@@ -105,6 +105,17 @@
             {
               "ItemsParam": "AttractiveItemSet",
               "Operator": "NoneOf"
+            }
+          ],
+          "NpcHealthPercent": [
+            {
+              "Value": 20
+            }
+          ],
+          "NpcState": [
+            {
+              "State": "Sleep",
+              "SubState": "Tranquilized"
             }
           ]
         }

@@ -421,7 +421,7 @@
       "Description": "The offset of any spawned particle systems."
     },
     "AttractiveItemSet": {
-      "Value": [],
+      "Value": ["Food_Wildmeat_Raw"],
       "TypeHint": "String",
       "Description": "The list of items that are deemed attractive for tame/feeding interactions."
     },
@@ -438,7 +438,7 @@
       "Description": "The role the NPC will change into when it's tamed."
     },
     "TranquilizerSleepThresholdSeconds": {
-      "Value": 30,
+      "Value": 50,
       "Description": "Minimum remaining tranquilizer duration required to force Sleep.Tranquilized. Raise this to require multiple tranquilizer hits (duration stacking)."
     },
     "TranquilizerSleepHealthRange": {
