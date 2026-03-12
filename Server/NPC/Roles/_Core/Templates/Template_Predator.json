@@ -554,6 +554,20 @@
       }
     },
     {
+      "$Comment": "Play laydown before entering tranquilized sleep.",
+      "States": [
+        {
+          "From": [],
+          "To": [
+            "Sleep.Tranquilized"
+          ]
+        }
+      ],
+      "Actions": {
+        "Reference": "Component_ActionList_Sleep"
+      }
+    },
+    {
       "States": [
         {
           "From": [

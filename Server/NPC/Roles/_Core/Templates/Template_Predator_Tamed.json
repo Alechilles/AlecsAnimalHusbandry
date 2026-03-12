@@ -533,9 +533,21 @@
       "Value": 0,
       "Description": "In combat, if the target gets within this distance for a certain amount of time, the NPC will attempt to flee to a safe distance instead of simply backing away. Set to 0 to disable behavior."
     },
-    "IsMountable":{
+    "IsMountable": {
       "Value": false,
-      "Description": "Whether the NPC can be mounted or not"
+      "Description": "Whether this NPC can be mounted."
+    },
+    "MountAnchorX": {
+      "Value": 0
+    },
+    "MountAnchorY": {
+      "Value": 0
+    },
+    "MountAnchorZ": {
+      "Value": 0
+    },
+    "MountMovementConfig": {
+      "Value": "Mount"
     }
   },
   "IsMemory": {
