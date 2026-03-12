@@ -154,7 +154,7 @@
       "Description": "How long to wait after Wander settle-exit animation before movement resumes."
     },
     "NightFlavorAnimation": {
-      "Value": "Idle",
+      "Value": "",
       "Description": "A flavor animation to play at night. Ignored if null or empty."
     },
     "NightFlavorAnimationAfter": {
@@ -205,30 +205,10 @@
     },
     "AttractiveItemSet": {
       "Value": [
-        "Food_Fish_Raw"
+        "Food_Wildmeat_Raw"
       ],
       "TypeHint": "String",
       "Description": "Food item IDs accepted for feeding."
-    },
-    "InteractSoundHold": {
-      "Value": "SFX_Torch_Swing_Right_Local",
-      "Description": "Sound to play when switching to Hold."
-    },
-    "InteractSoundFollow": {
-      "Value": "SFX_Torch_Swing_Right_Local",
-      "Description": "Sound to play when switching to Follow."
-    },
-    "InteractSoundDefend": {
-      "Value": "SFX_Torch_Swing_Right_Local",
-      "Description": "Sound to play when switching to Defend."
-    },
-    "InteractSoundFeed": {
-      "Value": "SFX_Torch_Swing_Right_Local",
-      "Description": "Sound to play when feeding."
-    },
-    "InteractSoundPickUp": {
-      "Value": "SFX_Torch_Swing_Right_Local",
-      "Description": "Sound to play when picking up the cat."
     },
     "AttackPauseRange": {
       "Value": [
