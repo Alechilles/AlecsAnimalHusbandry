@@ -554,6 +554,20 @@
       }
     },
     {
+      "$Comment": "Play laydown before entering tranquilized sleep.",
+      "States": [
+        {
+          "From": [],
+          "To": [
+            "Sleep.Tranquilized"
+          ]
+        }
+      ],
+      "Actions": {
+        "Reference": "Component_ActionList_Sleep"
+      }
+    },
+    {
       "States": [
         {
           "From": [
@@ -758,6 +772,16 @@
           }
         ]
       },
+      "Actions": [
+        {
+          "Type": "State",
+          "State": "Sleep.Tranquilized"
+        }
+      ]
+    },
+    {
+      "$Comment": "Validation-only state setters (disabled).",
+      "Enabled": false,
       "Actions": [
         {
           "Type": "State",
@@ -1307,48 +1331,10 @@
           },
           "Instructions": [
             {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "SetFlag",
-                  "Name": "TranquilizedSleepAnimationReady",
-                  "SetTo": false
-                },
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Status",
-                  "Animation": "Laydown"
-                },
-                {
-                  "Type": "Timeout",
-                  "Delay": [
-                    0.83,
-                    0.83
-                  ]
-                },
-                {
-                  "Type": "SetFlag",
-                  "Name": "TranquilizedSleepAnimationReady",
-                  "SetTo": true
-                }
-              ]
-            },
-            {
-              "Sensor": {
-                "Type": "Flag",
-                "Name": "TranquilizedSleepAnimationReady"
-              },
-              "Actions": [
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Status",
-                  "Animation": "Sleep"
-                }
-              ]
+              "Reference": "Component_Instruction_Play_Animation",
+              "Modify": {
+                "Animation": "Sleep"
+              }
             },
             {
               "Sensor": {
@@ -1359,11 +1345,6 @@
                 }
               },
               "Actions": [
-                {
-                  "Type": "SetFlag",
-                  "Name": "TranquilizedSleepAnimationReady",
-                  "SetTo": false
-                },
                 {
                   "Type": "State",
                   "State": "Idle"
