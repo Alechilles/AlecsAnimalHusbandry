@@ -745,17 +745,54 @@
       ]
     },
     {
-      "$Comment": "Force tranquilized sleep only when tranquilizer duration meets threshold and current health is in the configured range.",
+      "$Comment": "Latch tranquilizer sleep eligibility once remaining duration reaches threshold.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "TameworkEffectActive",
+        "EffectId": "Tw_Status_Tranquilized",
+        "MinRemainingSeconds": {
+          "Compute": "TranquilizerSleepThresholdSeconds"
+        }
+      },
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "TranquilizerSleepEligible",
+          "SetTo": true
+        }
+      ]
+    },
+    {
+      "$Comment": "Clear tranquilizer sleep eligibility when tranquilizer effect ends.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "Not",
+        "Sensor": {
+          "Type": "TameworkEffectActive",
+          "EffectId": "Tw_Status_Tranquilized"
+        }
+      },
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "TranquilizerSleepEligible",
+          "SetTo": false
+        }
+      ]
+    },
+    {
+      "$Comment": "Force tranquilized sleep when effect is active, eligibility is latched, and current health is in the configured range.",
       "Continue": true,
       "Sensor": {
         "Type": "And",
         "Sensors": [
           {
             "Type": "TameworkEffectActive",
-            "EffectId": "Tw_Status_Tranquilized",
-            "MinRemainingSeconds": {
-              "Compute": "TranquilizerSleepThresholdSeconds"
-            }
+            "EffectId": "Tw_Status_Tranquilized"
+          },
+          {
+            "Type": "Flag",
+            "Name": "TranquilizerSleepEligible"
           },
           {
             "Type": "Not",
