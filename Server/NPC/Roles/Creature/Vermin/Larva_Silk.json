@@ -55,6 +55,9 @@
     },
     "IsTameable": true,
     "TameRoleChange": "Tamed_Larva_Silk",
+    "AttractiveItemSet": ["Food_Egg"],
+    "TranquilizerSleepThresholdSeconds": 20,
+    "AttractiveItemSetParticles": "Want_Food_Egg",
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
   },
   "Parameters": {

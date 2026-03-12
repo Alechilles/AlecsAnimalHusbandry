@@ -87,6 +87,9 @@
     },
     "IsTameable": true,
     "TameRoleChange": "Tamed_Fox",
+    "AttractiveItemSet": ["Food_Chicken_Raw"],
+    "TranquilizerSleepThresholdSeconds": 50,
+    "AttractiveItemSetParticles": "Want_Food_Chicken_Raw",
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
   },
   "Parameters": {

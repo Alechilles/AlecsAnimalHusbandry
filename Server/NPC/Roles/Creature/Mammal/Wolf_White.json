@@ -1,12 +1,49 @@
 {
   "Type": "Variant",
   "Reference": "Template_Predator",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Wolf_White",
+      "Description": "Model to be used."
+    },
+    "DropList": {
+      "Value": "Drop_Wolf_White",
+      "Description": "Drop Items."
+    },
+    "MaxHealth": {
+      "Value": 70,
+      "Description": "Max health for the NPC"
+    },
+    "FlockArray": {
+      "Value": [
+        "Wolf_White"
+      ],
+      "Description": "The NPC's flock array"
+    },
+    "HardLeashDistance": {
+      "Value": 80,
+      "Description": "An absolute maximum from the the leash position the NPC can go before turning back."
+    },
+    "MemoriesNameOverride": {
+      "Value": "Wolf_White",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Wolf_White.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
   "Modify": {
-    "Appearance": "Hyena",
-    "FlockArray": [
-      "Hyena"
-    ],
-    "DropList": "Drop_Hyena",
+    "Appearance": {
+      "Compute": "Appearance"
+    },
+    "FlockArray": {
+      "Compute": "FlockArray"
+    },
+    "AttitudeGroup": "PredatorsBig",
+    "DropList": {
+      "Compute": "DropList"
+    },
     "MaxHealth": 103,
     "MaxSpeed": 10,
     "WanderRadius": 15,
@@ -17,14 +54,24 @@
     "ChanceToBeAlertedWhenFlockAlerted": 70,
     "IsMemory": true,
     "MemoriesCategory": "Predator",
+    "MemoriesNameOverride": {
+      "Compute": "MemoriesNameOverride"
+    },
     "AlertedTime": [
+      3,
+      3
+    ],
+    "MaintainDistanceWhileAlerted": false,
+    "ThreatenDelayRange": [
       2,
       2
     ],
-    "MaintainDistanceWhileAlerted": false,
+    "ThreatenAnimation": "Howl",
     "FleeIfNotThreatened": false,
     "FleeRange": 11,
-    "HardLeashDistance": 60,
+    "HardLeashDistance": {
+      "Compute": "HardLeashDistance"
+    },
     "LeashDistance": 30,
     "LeashMinPlayerDistance": 7,
     "LeashTimer": [
@@ -39,10 +86,12 @@
       3,
       5
     ],
-    "Attack": "Root_NPC_Hyena_Attack",
+    "Attack": "Root_NPC_Wolf_Attack",
     "AttackDistance": 2.5,
     "ChaseRelativeSpeed": 0.6,
-    "AlwaysSleepAtNight": true,
+    "CombatMovingRelativeSpeed": 0.6,
+    "AlwaysSleepAtNight": false,
+    "NightFlavorAnimation": "Howl",
     "DayTimeNapWeight": 4,
     "DayTimeNapTimeRange": [
       10,
@@ -53,10 +102,10 @@
       "Melee_Start": {
         "Interactions": [
           {
-            "Parent": "Hyena_Bite",
+            "Parent": "Wolf_Bite",
             "$Comment": "Sets animations and delay before hit",
             "Effects": {
-              "ItemPlayerAnimationsId": "Hyena_Default",
+              "ItemPlayerAnimationsId": "Wolf_Black_Default",
               "ItemAnimationId": "Bite"
             },
             "RunTime": 0.167
@@ -66,7 +115,7 @@
       "Bite_Damage": {
         "Interactions": [
           {
-            "Parent": "Hyena_Bite_Damage",
+            "Parent": "Wolf_Bite_Damage",
             "DamageCalculator": {
               "Type": "Absolute",
               "BaseDamage": {
@@ -76,7 +125,7 @@
             },
             "DamageEffects": {
               "Knockback": {
-                "Force": 0.5
+                "Force": 1
               }
             }
           }
@@ -87,16 +136,10 @@
       "Compute": "NameTranslationKey"
     },
     "IsTameable": true,
-    "TameRoleChange": "Tamed_Hyena",
+    "TameRoleChange": "Tamed_Wolf_White",
     "AttractiveItemSet": ["Food_Wildmeat_Raw"],
     "TranquilizerSleepThresholdSeconds": 80,
     "AttractiveItemSetParticles": "Want_Food_Wildmeat_Raw",
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
-  },
-  "Parameters": {
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Hyena.name",
-      "Description": "Translation key for NPC name display"
-    }
   }
 }

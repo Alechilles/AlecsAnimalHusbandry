@@ -41,6 +41,19 @@
     "InteractionConfigId": {
       "Value": "TwInteractionConfig_AnimalHusbandry_Predator",
       "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
+    },
+    "AttractiveItemSet": {
+      "Value": ["Food_Chicken_Raw"],
+      "TypeHint": "String",
+      "Description": "The list of items that are deemed attractive for tame/feeding interactions."
+    },
+    "AttractiveItemSetParticles": {
+      "Value": "Want_Food_Chicken_Raw",
+      "Description": "The particle system that spawns to indicate the NPC's liked item(s)."
+    },
+    "TranquilizerSleepThresholdSeconds": {
+      "Value": 50,
+      "Description": "Minimum remaining tranquilizer duration required to force Sleep.Tranquilized. Raise this to require multiple tranquilizer hits (duration stacking)."
     }
   },
   "Modify": {
@@ -219,6 +232,15 @@
     },
     "TameRoleChange": {
       "Compute": "TameRoleChange"
+    },
+    "AttractiveItemSet": {
+      "Compute": "AttractiveItemSet"
+    },
+    "AttractiveItemSetParticles": {
+      "Compute": "AttractiveItemSetParticles"
+    },
+    "TranquilizerSleepThresholdSeconds": {
+      "Compute": "TranquilizerSleepThresholdSeconds"
     },
     "InteractionConfigId": {
       "Compute": "InteractionConfigId"

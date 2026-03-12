@@ -83,6 +83,9 @@
     },
     "IsTameable": true,
     "TameRoleChange": "Tamed_Fen_Stalker",
+    "AttractiveItemSet": ["Food_Fish_Raw"],
+    "TranquilizerSleepThresholdSeconds": 80,
+    "AttractiveItemSetParticles": "Want_Food_Fish_Raw",
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator"
   },
   "Parameters": {

@@ -135,6 +135,7 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
+    "AttractiveItemSet": ["Food_Wildmeat_Raw"],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -145,6 +146,9 @@
     "CanRecall": true,
     "CanSetHome": true,
     "CanBreedPair": true,
-    "IsMountable": true
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1,
+    "MountAnchorZ": 0
   }
 }
