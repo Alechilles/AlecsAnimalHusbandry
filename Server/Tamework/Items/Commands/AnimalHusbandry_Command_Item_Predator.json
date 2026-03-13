@@ -1,0 +1,200 @@
+{
+  "Enabled": true,
+  "ItemIds": [
+    "AnimalHusbandry_Command_Item_Shakuhachi"
+  ],
+  "Radius": -1,
+  "MembershipMode": "LinkedOnly",
+  "LinkEnabled": true,
+  "LinkUseTogglesMembership": true,
+  "RequireTamed": true,
+  "RequireOwner": true,
+  "MaxTargets": 25,
+  "CooldownSeconds": 0,
+  "RequireLineOfSight": false,
+  "AllowedRoles": {
+    "Mode": "Allowlist",
+    "Allowlist": [
+      "Tamed_Bear_Grizzly",
+      "Tamed_Bear_Polar",
+      "Tamed_Crocodile",
+      "Tamed_Emberwulf",
+      "Tamed_Fen_Stalker",
+      "Tamed_Fox",
+      "Tamed_Hyena",
+      "Tamed_Larva_Silk",
+      "Tamed_Leopard_Snow",
+      "Tamed_Molerat",
+      "Tamed_Raptor_Cave",
+      "Tamed_Rat",
+      "Tamed_Rex_Cave",
+      "Tamed_Scorpion",
+      "Tamed_Slug_Magma",
+      "Tamed_Snake_Cobra",
+      "Tamed_Snake_Marsh",
+      "Tamed_Snake_Rattle",
+      "Tamed_Snapdragon",
+      "Tamed_Spider",
+      "Tamed_Spider_Cave",
+      "Tamed_Tiger_Sabertooth",
+      "Tamed_Toad_Rhino",
+      "Tamed_Toad_Rhino_Magma",
+      "Tamed_Wolf_Black",
+      "Tamed_Wolf_White",
+      "Tamed_Yeti"
+    ]
+  },
+  "CommandList": [
+    {
+      "Id": "Follow",
+      "DisplayName": "Follow",
+      "Default": true,
+      "Feedback": {
+        "HudMessage": "Follow: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_01",
+        "ParticleSystem": "Follow"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Follow"
+        },
+        {
+          "Type": "SetTarget",
+          "TargetSlot": "MasterTarget",
+          "Source": "OwnerPlayer"
+        }
+      ]
+    },
+    {
+      "Id": "Hold",
+      "DisplayName": "Hold",
+      "Feedback": {
+        "HudMessage": "Hold: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_09",
+        "ParticleSystem": "Hold"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Hold"
+        }
+      ]
+    },
+    {
+      "Id": "Recall",
+      "DisplayName": "Recall",
+      "Feedback": {
+        "HudMessage": "Recall: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_17",
+        "ParticleSystem": "Poof_Small"
+      },
+      "Steps": [
+        {
+          "Type": "ClearCombat",
+          "State": "Follow",
+          "TargetSlots": [
+            "LockedTarget"
+          ],
+          "AssignOwnerAsMasterTarget": true
+        }
+      ]
+    },
+    {
+      "Id": "MoveToPing",
+      "DisplayName": "Move To Ping",
+      "Feedback": {
+        "HudMessage": "Move To Ping: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_04",
+        "ParticleSystem": "Alerted"
+      },
+      "Steps": [
+        {
+          "Type": "MoveToPosition",
+          "Source": "RaycastHit"
+        }
+      ]
+    },
+    {
+      "Id": "SetHome",
+      "DisplayName": "Set Home",
+      "Feedback": {
+        "ChatMessage": "Home set for this command bag.",
+        "HudMessage": "Home Set",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_05",
+        "ParticleSystem": "Poof_Small"
+      },
+      "Steps": [
+        {
+          "Type": "StoreHome",
+          "Source": "RaycastHit",
+          "FailurePolicy": "AbortAll"
+        }
+      ]
+    },
+    {
+      "Id": "ReturnHome",
+      "DisplayName": "Return Home",
+      "Feedback": {
+        "HudMessage": "Return Home: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_06",
+        "ParticleSystem": "Follow"
+      },
+      "Steps": [
+        {
+          "Type": "MoveToPosition",
+          "Source": "StoredHome",
+          "FailurePolicy": "AbortCommandForNpc"
+        }
+      ]
+    },
+    {
+      "Id": "Idle",
+      "DisplayName": "Idle",
+      "Feedback": {
+        "HudMessage": "Idle: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_09",
+        "ParticleSystem": "Idle"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "Idle"
+        }
+      ]
+    },
+    {
+      "Id": "AttackTarget",
+      "DisplayName": "Attack Target",
+      "Feedback": {
+        "HudMessage": "Attack Target: {count}",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_22",
+        "ParticleSystem": "Defend"
+      },
+      "Steps": [
+        {
+          "Type": "SetTarget",
+          "TargetSlot": "LockedTarget",
+          "Source": "CrosshairTarget",
+          "FailurePolicy": "AbortCommandForNpc"
+        },
+        {
+          "Type": "SetState",
+          "State": "Defend"
+        }
+      ]
+    }
+  ]
+}
