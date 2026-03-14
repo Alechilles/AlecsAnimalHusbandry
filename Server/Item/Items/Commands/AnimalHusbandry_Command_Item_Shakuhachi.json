@@ -1,12 +1,13 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.AnimalHusbandry_Command_Item.name",
-    "Description": "server.items.AnimalHusbandry_Command_Item.description"
+    "Name": "server.items.AnimalHusbandry_Command_Item_Shakuhachi.name",
+    "Description": "server.items.AnimalHusbandry_Command_Item_Shakuhachi.description"
   },
-  "Quality": "Tool",
+  "Quality": "Rare",
   "PlayerAnimationsId": "Item",
   "Interactions": {
     "Primary": {
+      "RequireNewClick": true,
       "Interactions": [
         {
           "Type": "TameworkCommand"

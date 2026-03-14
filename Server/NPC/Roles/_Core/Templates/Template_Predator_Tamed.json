@@ -481,6 +481,10 @@
       "Value": false,
       "Description": "Whether Defend state behavior is enabled for this role."
     },
+    "CanAggressive": {
+      "Value": false,
+      "Description": "Whether Defend state behavior is enabled for this role."
+    },
     "CanAttackTarget": {
       "Value": false,
       "Description": "Whether Attack Target commands are allowed to drive this role into Defend behavior."
@@ -694,7 +698,8 @@
             "Follow",
             "Hold",
             "Defend",
-            "CommandMove"
+            "CommandMove",
+            "Aggressive"
           ]
         }
       ],
@@ -712,7 +717,8 @@
             "Idle",
             "Follow",
             "Defend",
-            "CommandMove"
+            "CommandMove",
+            "Aggressive"
           ]
         }
       ],
@@ -735,7 +741,8 @@
             "Idle",
             "Follow",
             "Defend",
-            "CommandMove"
+            "CommandMove",
+            "Aggressive"
           ]
         }
       ],
@@ -821,6 +828,10 @@
         {
           "Type": "State",
           "State": "Defend"
+        },
+        {
+          "Type": "State",
+          "State": "Aggressive"
         },
         {
           "Type": "State",
@@ -1082,6 +1093,98 @@
           "Instructions": [
             {
               "Reference": "Component_Tamework_Instruction_Defend",
+              "Modify": {
+                "HardLeashDistance": {
+                  "Compute": "HardLeashDistance"
+                },
+                "AlertedRange": {
+                  "Compute": "AlertedRange"
+                },
+                "ViewSector": {
+                  "Compute": "ViewSector"
+                },
+                "HearingRange": {
+                  "Compute": "HearingRange"
+                },
+                "AbsoluteDetectionRange": {
+                  "Compute": "AbsoluteDetectionRange"
+                },
+                "ViewRange": {
+                  "Compute": "ViewRange"
+                },
+                "Attack": {
+                  "Compute": "Attack"
+                },
+                "AttackDistance": {
+                  "Compute": "AttackDistance"
+                },
+                "AttackPauseRange": {
+                  "Compute": "AttackPauseRange"
+                },
+                "CombatAttackPreDelay": {
+                  "Compute": "CombatAttackPreDelay"
+                },
+                "CombatAttackPostDelay": {
+                  "Compute": "CombatAttackPostDelay"
+                },
+                "CombatBackOffAfterAttack": {
+                  "Compute": "CombatBackOffAfterAttack"
+                },
+                "CombatBackOffDistanceRange": {
+                  "Compute": "CombatBackOffDistanceRange"
+                },
+                "CombatBackOffDurationRange": {
+                  "Compute": "CombatBackOffDurationRange"
+                },
+                "BlockAbility": {
+                  "Compute": "BlockAbility"
+                },
+                "BlockProbability": {
+                  "Compute": "BlockProbability"
+                },
+                "CombatStrafingDurationRange": {
+                  "Compute": "CombatStrafingDurationRange"
+                },
+                "CombatStrafingFrequencyRange": {
+                  "Compute": "CombatStrafingFrequencyRange"
+                },
+                "CombatBehaviorDistance": {
+                  "Compute": "CombatBehaviorDistance"
+                },
+                "CombatMovingRelativeSpeed": {
+                  "Compute": "CombatMovingRelativeSpeed"
+                },
+                "CombatStrafeWeight": {
+                  "Compute": "CombatStrafeWeight"
+                },
+                "CombatDirectWeight": {
+                  "Compute": "CombatDirectWeight"
+                },
+                "CombatAlwaysMovingWeight": {
+                  "Compute": "CombatAlwaysMovingWeight"
+                },
+                "CombatRelativeTurnSpeed": {
+                  "Compute": "CombatRelativeTurnSpeed"
+                },
+                "ChaseRelativeSpeed": {
+                  "Compute": "ChaseRelativeSpeed"
+                },
+                "AdditionalCombatBehaviorMacroElement": {
+                  "Compute": "AdditionalCombatBehaviorMacroElement"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Aggressive State: Mob will attack nearby threats to it's owner.",
+          "Sensor": {
+            "Type": "State",
+            "State": "Aggressive"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Aggressive",
               "Modify": {
                 "HardLeashDistance": {
                   "Compute": "HardLeashDistance"

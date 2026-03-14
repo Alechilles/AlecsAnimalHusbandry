@@ -13,7 +13,7 @@ Livestock in Hytale should feel alive, personal, and worth caring for. Alec's An
 
 **1. Install requirements:**
 - Alec's Animal Husbandry!
-- Alec's Tamework! `v2.2.x`
+- Alec's Tamework! `v2.3.x`
 - Alec's Nametags!
 
 **2. Tame your first livestock:**
