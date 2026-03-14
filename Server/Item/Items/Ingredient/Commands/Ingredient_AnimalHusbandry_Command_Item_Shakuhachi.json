@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AnimalHusbandry_Command_Item_Shakuhachi.name",
+    "Description": "server.items.AnimalHusbandry_Command_Item_Shakuhachi.description"
+  },
+  "Variant": true,
+  "Icon": "Icons/ItemsGenerated/AnimalHusbandry_Command_Item_Shakuhachi.png",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "AnimalHusbandry_Command_Item",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Wood_Bamboo_Trunk",
+        "Quantity": 12
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ingredient_Leather_Heavy",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Fabric_Scrap_Shadoweave",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 6
+      }
+    ],
+    "Output": [
+      {
+        "ItemId": "AnimalHusbandry_Command_Item_Shakuhachi",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Weapon_Bench",
+        "Categories": [
+          "Weapon_Bow"
+        ],
+        "RequiredTierLevel": 2
+      },
+      {
+        "Type": "DiagramCrafting",
+        "Id": "Armory",
+        "Categories": [
+          "Weapons.Bow"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 5
+  },
+  "MaxStack": 1,
+  "Model": "Items/AnimalHusbandry/Shakuhachi.blockymodel",
+  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png"
+}
