@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+
+## 1.0.4 - Beast Taming Expansion + Command Flute - 2026-03-14
 ### Added
 - Added first-pass Beast role coverage by overriding all vanilla Beast roles (`Template_Predator` lineage) in Animal Husbandry.
 - Added `Tamed_` Beast role variants for all supported Beast roles, currently wired to `Template_Predator_Tamed`.

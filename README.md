@@ -158,7 +158,7 @@ Beast support is currently focused on command/combat companion behavior and will
 V1 also includes separate trait tuning profiles for Livestock and Beasts.
 
 ## Compatibility
-- Requires Alec's Tamework! `2.2.x`
+- Requires Alec's Tamework! `2.3.x`
 - Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
 
 ## Coming After V1
