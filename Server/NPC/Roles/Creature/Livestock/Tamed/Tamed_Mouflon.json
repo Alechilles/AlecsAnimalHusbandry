@@ -1,9 +1,9 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Livestock",
+  "Reference": "Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Mouflon",
-    "AttitudeGroup": "PreyBig",
+    "AttitudeGroup": "AH_Livestock_Tamed",
     "FlockArray": [
       "Tamed_Mouflon",
       "Tamed_Mouflon_Lamb"
@@ -44,3 +44,4 @@
     }
   }
 }
+

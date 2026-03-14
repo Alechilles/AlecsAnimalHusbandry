@@ -1,10 +1,10 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Livestock",
+  "Reference": "Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Mosshorn",
     "SeparationDistance": 2,
-    "AttitudeGroup": "PreyBig",
+    "AttitudeGroup": "AH_Livestock_Tamed",
     "AttractiveItemSet": [
       "Plant_Crop_Potato_Item"
     ],
@@ -80,3 +80,4 @@
     }
   }
 }
+

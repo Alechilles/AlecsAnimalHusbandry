@@ -1,9 +1,9 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Livestock",
+  "Reference": "Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Pig",
-    "AttitudeGroup": "PreyBig",
+    "AttitudeGroup": "AH_Livestock_Tamed",
     "FlockArray": [
       "Tamed_Pig",
       "Tamed_Pig_Piglet"
@@ -48,3 +48,4 @@
     }
   }
 }
+

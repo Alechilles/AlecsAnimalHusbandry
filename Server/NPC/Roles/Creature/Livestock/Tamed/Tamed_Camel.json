@@ -1,9 +1,9 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Livestock",
+  "Reference": "Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Camel",
-    "AttitudeGroup": "PreyBig",
+    "AttitudeGroup": "AH_Livestock_Tamed",
     "FlockArray": [
       "Tamed_Camel",
       "Tamed_Camel_Calf"
@@ -136,3 +136,4 @@
     }
   }
 }
+
