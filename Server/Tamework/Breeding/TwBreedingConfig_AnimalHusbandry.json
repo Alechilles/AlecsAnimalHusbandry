@@ -2,8 +2,6 @@
   "Enabled": true,
   "Priority": 100,
   "RoleIds": [
-    "Tamed_Bear_Grizzly",
-    "Tamed_Bear_Polar",
     "Tamed_Bison",
     "Tamed_Bison_Calf",
     "Tamed_Boar",
@@ -17,18 +15,10 @@
     "Tamed_Chicken_Desert_Chick",
     "Tamed_Cow",
     "Tamed_Cow_Calf",
-    "Tamed_Crocodile",
-    "Tamed_Emberwulf",
-    "Tamed_Fen_Stalker",
-    "Tamed_Fox",
     "Tamed_Goat",
     "Tamed_Goat_Kid",
     "Tamed_Horse",
     "Tamed_Horse_Foal",
-    "Tamed_Hyena",
-    "Tamed_Larva_Silk",
-    "Tamed_Leopard_Snow",
-    "Tamed_Molerat",
     "Tamed_Mosshorn",
     "Tamed_Mosshorn_Plain",
     "Tamed_Mouflon",
@@ -40,31 +30,14 @@
     "Tamed_Rabbit",
     "Tamed_Ram",
     "Tamed_Ram_Lamb",
-    "Tamed_Raptor_Cave",
-    "Tamed_Rat",
-    "Tamed_Rex_Cave",
-    "Tamed_Scorpion",
     "Tamed_Sheep",
     "Tamed_Sheep_Lamb",
     "Tamed_Skrill",
     "Tamed_Skrill_Chick",
-    "Tamed_Slug_Magma",
-    "Tamed_Snake_Cobra",
-    "Tamed_Snake_Marsh",
-    "Tamed_Snake_Rattle",
-    "Tamed_Snapdragon",
-    "Tamed_Spider",
-    "Tamed_Spider_Cave",
-    "Tamed_Tiger_Sabertooth",
-    "Tamed_Toad_Rhino",
-    "Tamed_Toad_Rhino_Magma",
     "Tamed_Turkey",
     "Tamed_Turkey_Chick",
     "Tamed_Warthog",
-    "Tamed_Warthog_Piglet",
-    "Tamed_Wolf_Black",
-    "Tamed_Wolf_White",
-    "Tamed_Yeti"
+    "Tamed_Warthog_Piglet"
   ],
   "Happiness": {
     "Threshold": 70.0
@@ -83,7 +56,7 @@
     "RequireSameRoleId": true
   },
   "Cooldowns": {
-    "BaseCooldownSeconds": 2700,
+    "BaseCooldownMinutes": 45,
     "MinDelaySeconds": 0,
     "MaxDelaySeconds": 300
   },
@@ -108,93 +81,366 @@
   },
   "OffspringLifecycle": {
     "Enabled": true,
-    "DefaultTimeToFullGrownSeconds": 5400,
-    "DefaultBabyStartScale": 0.55,
-    "DefaultAdolescentStartScale": 0.8,
-    "DefaultAdultStartScale": 0.8,
-    "DefaultAdolescentSwitchScale": 1.0,
-    "DefaultAdultSwitchScale": 1.0,
-    "Families": [
-      {
-        "AdultRoleId": "Tamed_Bison",
-        "BabyRoleId": "Tamed_Bison_Calf",
-        "TimeToFullGrownSeconds": 9000
-      },
-      {
-        "AdultRoleId": "Tamed_Boar",
-        "BabyRoleId": "Tamed_Boar_Piglet",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Camel",
-        "BabyRoleId": "Tamed_Camel_Calf",
-        "TimeToFullGrownSeconds": 8100
-      },
-      {
-        "AdultRoleId": "Tamed_Chicken",
-        "BabyRoleId": "Tamed_Chicken_Chick",
-        "TimeToFullGrownSeconds": 3600
-      },
-      {
-        "AdultRoleId": "Tamed_Chicken_Desert",
-        "BabyRoleId": "Tamed_Chicken_Desert_Chick",
-        "TimeToFullGrownSeconds": 3600
-      },
-      {
-        "AdultRoleId": "Tamed_Cow",
-        "BabyRoleId": "Tamed_Cow_Calf",
-        "TimeToFullGrownSeconds": 7200
-      },
-      {
-        "AdultRoleId": "Tamed_Goat",
-        "BabyRoleId": "Tamed_Goat_Kid",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Horse",
-        "BabyRoleId": "Tamed_Horse_Foal",
-        "TimeToFullGrownSeconds": 9000
-      },
-      {
-        "AdultRoleId": "Tamed_Mouflon",
-        "BabyRoleId": "Tamed_Mouflon_Lamb",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Pig",
-        "BabyRoleId": "Tamed_Pig_Piglet",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Pig_Wild",
-        "BabyRoleId": "Tamed_Pig_Wild_Piglet",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Ram",
-        "BabyRoleId": "Tamed_Ram_Lamb",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Sheep",
-        "BabyRoleId": "Tamed_Sheep_Lamb",
-        "TimeToFullGrownSeconds": 5400
-      },
-      {
-        "AdultRoleId": "Tamed_Skrill",
-        "BabyRoleId": "Tamed_Skrill_Chick",
-        "TimeToFullGrownSeconds": 4500
-      },
-      {
-        "AdultRoleId": "Tamed_Turkey",
-        "BabyRoleId": "Tamed_Turkey_Chick",
-        "TimeToFullGrownSeconds": 4800
-      },
-      {
-        "AdultRoleId": "Tamed_Warthog",
-        "BabyRoleId": "Tamed_Warthog_Piglet",
-        "TimeToFullGrownSeconds": 5400
+    "TimeToFullGrownMinutes": 90,
+    "BabyStartScale": 0.55,
+    "AdolescentStartScale": 0.8,
+    "AdultStartScale": 0.8,
+    "AdolescentSwitchScale": 1.0,
+    "AdultSwitchScale": 1.0
+  },
+  "RoleOverrides": {
+    "Tamed_Bison": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Bison",
+            "BabyRoleId": "Tamed_Bison_Calf",
+            "TimeToFullGrownMinutes": 150
+          }
+        ]
       }
-    ]
+    },
+    "Tamed_Bison_Calf": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Bison",
+            "BabyRoleId": "Tamed_Bison_Calf",
+            "TimeToFullGrownMinutes": 150
+          }
+        ]
+      }
+    },
+    "Tamed_Boar": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Boar",
+            "BabyRoleId": "Tamed_Boar_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Boar_Piglet": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Boar",
+            "BabyRoleId": "Tamed_Boar_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Camel": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Camel",
+            "BabyRoleId": "Tamed_Camel_Calf",
+            "TimeToFullGrownMinutes": 135
+          }
+        ]
+      }
+    },
+    "Tamed_Camel_Calf": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Camel",
+            "BabyRoleId": "Tamed_Camel_Calf",
+            "TimeToFullGrownMinutes": 135
+          }
+        ]
+      }
+    },
+    "Tamed_Chicken": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Chicken",
+            "BabyRoleId": "Tamed_Chicken_Chick",
+            "TimeToFullGrownMinutes": 60
+          }
+        ]
+      }
+    },
+    "Tamed_Chicken_Chick": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Chicken",
+            "BabyRoleId": "Tamed_Chicken_Chick",
+            "TimeToFullGrownMinutes": 60
+          }
+        ]
+      }
+    },
+    "Tamed_Chicken_Desert": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Chicken_Desert",
+            "BabyRoleId": "Tamed_Chicken_Desert_Chick",
+            "TimeToFullGrownMinutes": 60
+          }
+        ]
+      }
+    },
+    "Tamed_Chicken_Desert_Chick": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Chicken_Desert",
+            "BabyRoleId": "Tamed_Chicken_Desert_Chick",
+            "TimeToFullGrownMinutes": 60
+          }
+        ]
+      }
+    },
+    "Tamed_Cow": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Cow",
+            "BabyRoleId": "Tamed_Cow_Calf",
+            "TimeToFullGrownMinutes": 120
+          }
+        ]
+      }
+    },
+    "Tamed_Cow_Calf": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Cow",
+            "BabyRoleId": "Tamed_Cow_Calf",
+            "TimeToFullGrownMinutes": 120
+          }
+        ]
+      }
+    },
+    "Tamed_Goat": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Goat",
+            "BabyRoleId": "Tamed_Goat_Kid",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Goat_Kid": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Goat",
+            "BabyRoleId": "Tamed_Goat_Kid",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Horse": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Horse",
+            "BabyRoleId": "Tamed_Horse_Foal",
+            "TimeToFullGrownMinutes": 150
+          }
+        ]
+      }
+    },
+    "Tamed_Horse_Foal": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Horse",
+            "BabyRoleId": "Tamed_Horse_Foal",
+            "TimeToFullGrownMinutes": 150
+          }
+        ]
+      }
+    },
+    "Tamed_Mouflon": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Mouflon",
+            "BabyRoleId": "Tamed_Mouflon_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Mouflon_Lamb": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Mouflon",
+            "BabyRoleId": "Tamed_Mouflon_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Pig": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Pig",
+            "BabyRoleId": "Tamed_Pig_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Pig_Piglet": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Pig",
+            "BabyRoleId": "Tamed_Pig_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Pig_Wild": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Pig_Wild",
+            "BabyRoleId": "Tamed_Pig_Wild_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Pig_Wild_Piglet": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Pig_Wild",
+            "BabyRoleId": "Tamed_Pig_Wild_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Ram": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Ram",
+            "BabyRoleId": "Tamed_Ram_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Ram_Lamb": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Ram",
+            "BabyRoleId": "Tamed_Ram_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Sheep": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Sheep",
+            "BabyRoleId": "Tamed_Sheep_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Sheep_Lamb": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Sheep",
+            "BabyRoleId": "Tamed_Sheep_Lamb",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Skrill": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Skrill",
+            "BabyRoleId": "Tamed_Skrill_Chick",
+            "TimeToFullGrownMinutes": 75
+          }
+        ]
+      }
+    },
+    "Tamed_Skrill_Chick": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Skrill",
+            "BabyRoleId": "Tamed_Skrill_Chick",
+            "TimeToFullGrownMinutes": 75
+          }
+        ]
+      }
+    },
+    "Tamed_Turkey": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Turkey",
+            "BabyRoleId": "Tamed_Turkey_Chick",
+            "TimeToFullGrownMinutes": 80
+          }
+        ]
+      }
+    },
+    "Tamed_Turkey_Chick": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Turkey",
+            "BabyRoleId": "Tamed_Turkey_Chick",
+            "TimeToFullGrownMinutes": 80
+          }
+        ]
+      }
+    },
+    "Tamed_Warthog": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Warthog",
+            "BabyRoleId": "Tamed_Warthog_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Warthog_Piglet": {
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoleId": "Tamed_Warthog",
+            "BabyRoleId": "Tamed_Warthog_Piglet",
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    }
   }
 }
+

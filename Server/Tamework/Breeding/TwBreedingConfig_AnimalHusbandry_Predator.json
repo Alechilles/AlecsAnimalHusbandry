@@ -1,0 +1,436 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Bear_Grizzly",
+    "Tamed_Bear_Polar",
+    "Tamed_Crocodile",
+    "Tamed_Emberwulf",
+    "Tamed_Fen_Stalker",
+    "Tamed_Fox",
+    "Tamed_Hyena",
+    "Tamed_Larva_Silk",
+    "Tamed_Leopard_Snow",
+    "Tamed_Molerat",
+    "Tamed_Raptor_Cave",
+    "Tamed_Rat",
+    "Tamed_Rex_Cave",
+    "Tamed_Scorpion",
+    "Tamed_Slug_Magma",
+    "Tamed_Snake_Cobra",
+    "Tamed_Snake_Marsh",
+    "Tamed_Snake_Rattle",
+    "Tamed_Snapdragon",
+    "Tamed_Spider",
+    "Tamed_Spider_Cave",
+    "Tamed_Tiger_Sabertooth",
+    "Tamed_Toad_Rhino",
+    "Tamed_Toad_Rhino_Magma",
+    "Tamed_Wolf_Black",
+    "Tamed_Wolf_White",
+    "Tamed_Yeti"
+  ],
+  "Happiness": {
+    "Threshold": 70.0
+  },
+  "Eligibility": {
+    "RequireTamed": true,
+    "RequireAdult": true,
+    "RequireNotInCombat": true,
+    "RequireNotSleeping": true
+  },
+  "Pairing": {
+    "BreedRadius": 15.0,
+    "RequireWanderMode": false,
+    "RequireSameOwner": false,
+    "MaxNearbySameType": 8,
+    "RequireSameRoleId": true
+  },
+  "Cooldowns": {
+    "BaseCooldownMinutes": 45,
+    "MinDelaySeconds": 0,
+    "MaxDelaySeconds": 300
+  },
+  "PassiveBreeding": {
+    "Enabled": true,
+    "SweepIntervalSeconds": 30,
+    "Basis": "REAL_TIME"
+  },
+  "Timing": {
+    "Basis": "WORLD_TIME_SCALED"
+  },
+  "Inheritance": {
+    "InheritOwner": true,
+    "InheritTamed": true,
+    "InheritAttachments": true,
+    "InheritTraits": true,
+    "AttachmentInheritance": {
+      "ParentWeight": 0.95,
+      "RandomWeight": 0.0,
+      "MutationChance": 0.05
+    }
+  },
+  "OffspringLifecycle": {
+    "Enabled": true,
+    "TimeToFullGrownMinutes": 120,
+    "BabyStartScale": 0.6,
+    "AdolescentStartScale": 0.82,
+    "AdultStartScale": 0.82,
+    "AdolescentSwitchScale": 1.0,
+    "AdultSwitchScale": 1.0
+  },
+  "RoleOverrides": {
+    "Tamed_Bear_Grizzly": {
+      "Pairing": {
+        "MaxNearbySameType": 3
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 90,
+        "MinDelaySeconds": 270,
+        "MaxDelaySeconds": 810
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 180
+      }
+    },
+    "Tamed_Bear_Polar": {
+      "Pairing": {
+        "MaxNearbySameType": 3
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 90,
+        "MinDelaySeconds": 270,
+        "MaxDelaySeconds": 810
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 180
+      }
+    },
+    "Tamed_Crocodile": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 100,
+        "MinDelaySeconds": 300,
+        "MaxDelaySeconds": 900
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 200
+      }
+    },
+    "Tamed_Emberwulf": {
+      "Pairing": {
+        "MaxNearbySameType": 2
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 85,
+        "MinDelaySeconds": 255,
+        "MaxDelaySeconds": 765
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 220
+      }
+    },
+    "Tamed_Fen_Stalker": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 95,
+        "MinDelaySeconds": 285,
+        "MaxDelaySeconds": 855
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 170
+      }
+    },
+    "Tamed_Fox": {
+      "Pairing": {
+        "MaxNearbySameType": 6
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 60,
+        "MinDelaySeconds": 180,
+        "MaxDelaySeconds": 540
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 90
+      }
+    },
+    "Tamed_Hyena": {
+      "Pairing": {
+        "MaxNearbySameType": 5
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 75,
+        "MinDelaySeconds": 225,
+        "MaxDelaySeconds": 675
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 120
+      }
+    },
+    "Tamed_Larva_Silk": {
+      "Pairing": {
+        "MaxNearbySameType": 8
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 50,
+        "MinDelaySeconds": 150,
+        "MaxDelaySeconds": 450
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 60
+      }
+    },
+    "Tamed_Leopard_Snow": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 85,
+        "MinDelaySeconds": 255,
+        "MaxDelaySeconds": 765
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 140
+      }
+    },
+    "Tamed_Molerat": {
+      "Pairing": {
+        "MaxNearbySameType": 7
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 55,
+        "MinDelaySeconds": 165,
+        "MaxDelaySeconds": 495
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 80
+      }
+    },
+    "Tamed_Raptor_Cave": {
+      "Pairing": {
+        "MaxNearbySameType": 5
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 80,
+        "MinDelaySeconds": 240,
+        "MaxDelaySeconds": 720
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 130
+      }
+    },
+    "Tamed_Rat": {
+      "Pairing": {
+        "MaxNearbySameType": 10
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 45,
+        "MinDelaySeconds": 135,
+        "MaxDelaySeconds": 405
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 50
+      }
+    },
+    "Tamed_Rex_Cave": {
+      "Pairing": {
+        "MaxNearbySameType": 2
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 110,
+        "MinDelaySeconds": 330,
+        "MaxDelaySeconds": 990
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 210
+      }
+    },
+    "Tamed_Scorpion": {
+      "Pairing": {
+        "MaxNearbySameType": 6
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 70,
+        "MinDelaySeconds": 210,
+        "MaxDelaySeconds": 630
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 100
+      }
+    },
+    "Tamed_Slug_Magma": {
+      "Pairing": {
+        "MaxNearbySameType": 8
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 50,
+        "MinDelaySeconds": 150,
+        "MaxDelaySeconds": 450
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 60
+      }
+    },
+    "Tamed_Snake_Cobra": {
+      "Pairing": {
+        "MaxNearbySameType": 7
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 60,
+        "MinDelaySeconds": 180,
+        "MaxDelaySeconds": 540
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 90
+      }
+    },
+    "Tamed_Snake_Marsh": {
+      "Pairing": {
+        "MaxNearbySameType": 7
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 55,
+        "MinDelaySeconds": 165,
+        "MaxDelaySeconds": 495
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 80
+      }
+    },
+    "Tamed_Snake_Rattle": {
+      "Pairing": {
+        "MaxNearbySameType": 7
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 60,
+        "MinDelaySeconds": 180,
+        "MaxDelaySeconds": 540
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 90
+      }
+    },
+    "Tamed_Snapdragon": {
+      "Pairing": {
+        "MaxNearbySameType": 3
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 100,
+        "MinDelaySeconds": 300,
+        "MaxDelaySeconds": 900
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 190
+      }
+    },
+    "Tamed_Spider": {
+      "Pairing": {
+        "MaxNearbySameType": 6
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 65,
+        "MinDelaySeconds": 195,
+        "MaxDelaySeconds": 585
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 90
+      }
+    },
+    "Tamed_Spider_Cave": {
+      "Pairing": {
+        "MaxNearbySameType": 6
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 70,
+        "MinDelaySeconds": 210,
+        "MaxDelaySeconds": 630
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 100
+      }
+    },
+    "Tamed_Tiger_Sabertooth": {
+      "Pairing": {
+        "MaxNearbySameType": 3
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 90,
+        "MinDelaySeconds": 270,
+        "MaxDelaySeconds": 810
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 160
+      }
+    },
+    "Tamed_Toad_Rhino": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 80,
+        "MinDelaySeconds": 240,
+        "MaxDelaySeconds": 720
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 130
+      }
+    },
+    "Tamed_Toad_Rhino_Magma": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 85,
+        "MinDelaySeconds": 255,
+        "MaxDelaySeconds": 765
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 140
+      }
+    },
+    "Tamed_Wolf_Black": {
+      "Pairing": {
+        "MaxNearbySameType": 5
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 70,
+        "MinDelaySeconds": 210,
+        "MaxDelaySeconds": 630
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 120
+      }
+    },
+    "Tamed_Wolf_White": {
+      "Pairing": {
+        "MaxNearbySameType": 5
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 70,
+        "MinDelaySeconds": 210,
+        "MaxDelaySeconds": 630
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 120
+      }
+    },
+    "Tamed_Yeti": {
+      "Pairing": {
+        "MaxNearbySameType": 2
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 120,
+        "MinDelaySeconds": 360,
+        "MaxDelaySeconds": 1080
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 220
+      }
+    }
+  }
+}
+
