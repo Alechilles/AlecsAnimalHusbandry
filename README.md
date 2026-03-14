@@ -28,7 +28,7 @@ Trait systems are also split by category, with dedicated trait configs for Lives
 
 **1. Install requirements:**
 - Alec's Animal Husbandry!
-- Alec's Tamework! `v2.3.x`
+- Alec's Tamework! `v2.4.x`
 - Alec's Nametags!
 
 **2. Tame your first animal companion:**
@@ -158,7 +158,7 @@ Beast support is currently focused on command/combat companion behavior and will
 V1 also includes separate trait tuning profiles for Livestock and Beasts.
 
 ## Compatibility
-- Requires Alec's Tamework! `2.3.x`
+- Requires Alec's Tamework! `2.4.x`
 - Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
 
 ## Coming After V1
