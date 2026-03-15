@@ -23,6 +23,7 @@ Use this page as the top-level map for the wiki hierarchy.
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 - [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+- [Nametag](/mod/alecs-animal-husbandry/nametag)
 
 ## 4) Reference Library
 - [Reference Library Index](/mod/alecs-animal-husbandry/reference-library)

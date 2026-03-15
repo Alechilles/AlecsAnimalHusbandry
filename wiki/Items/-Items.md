@@ -22,6 +22,14 @@ These items are provided by Alec's Tamework and are required for Beast progressi
 | [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows) | Applies tranquilizer pressure during combat |
 | [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) | Delivers tranquilizer arrows during Beast hunts |
 
+## Companion Utility
+
+This item is provided by Alec's Nametags and is useful for both livestock and Beast management.
+
+| Item | Use |
+|---|---|
+| [Nametag](/mod/alecs-animal-husbandry/nametag) | Names tamed companions for easier command/control management |
+
 ## Reference Tables
 
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
