@@ -8,14 +8,14 @@
 # Alec's Animal Husbandry!
 
 ## Wiki
-- [Home](wiki/Home.md)
-- [Start Here Index](wiki/Start-Here/-Start-Here.md)
-- [Installation and Dependencies](wiki/Start-Here/Installation-and-Dependencies.md)
-- [Getting Started Guide](wiki/Start-Here/Getting-Started-Guide.md)
-- [Items Index](wiki/Items/-Items.md)
-- [Gameplay Guides Index](wiki/Gameplay-Guides/-Gameplay-Guides.md)
-- [Reference Library Index](wiki/Reference-Library/-Reference-Library.md)
-- [Advanced Index](wiki/Advanced/-Advanced.md)
+- [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/home)
+- [Start Here Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/start-here)
+- [Installation and Dependencies](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/installation-and-dependencies)
+- [Getting Started Guide](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/getting-started-guide)
+- [Items Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items)
+- [Gameplay Guides Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides)
+- [Reference Library Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library)
+- [Advanced Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced)
 
 Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
 

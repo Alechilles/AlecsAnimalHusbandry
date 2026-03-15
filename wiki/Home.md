@@ -20,6 +20,7 @@ Use this page as the top-level map for the wiki hierarchy.
 - [Items Index](/mod/alecs-animal-husbandry/items)
 - [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
 - [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern)
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 - [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)

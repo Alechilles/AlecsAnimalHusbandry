@@ -2,7 +2,6 @@
 
 Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/readme)
 
-Use this page as your item hub.
 Each item has its own page with recipe, bench requirements, and practical use notes.
 
 ## Command Items
@@ -24,10 +23,11 @@ These items are provided by Alec's Tamework and are required for Beast progressi
 
 ## Companion Utility
 
-This item is provided by Alec's Nametags and is useful for both livestock and Beast management.
+These items are useful for both livestock and Beast management.
 
 | Item | Use |
 |---|---|
+| [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern) | Captures and re-places a tamed livestock animal or Beast companion |
 | [Nametag](/mod/alecs-animal-husbandry/nametag) | Names tamed companions for easier command/control management |
 
 ## Reference Tables
@@ -39,5 +39,6 @@ This item is provided by Alec's Nametags and is useful for both livestock and Be
 1. Craft the Livestock Command Bag and start building your first stable.
 2. Move into Beast taming by crafting tranquilizer gear.
 3. Craft the Beast Command Flute once you are ready to manage Beast companions.
+4. Craft a Soul Lantern when you need to transport or reorganize valuable companions.
 
 > [Screenshot Placeholder: Item progression row (bag -> tranquilizer kit -> flute)]
