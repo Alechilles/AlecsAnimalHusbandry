@@ -1,5 +1,7 @@
 # Systems Overview
 
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
+
 ## Core Loop
 1. Tame a supported animal.
 2. Keep food/water available so needs are met.

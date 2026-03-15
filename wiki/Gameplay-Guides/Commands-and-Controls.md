@@ -1,11 +1,14 @@
 # Commands and Controls
 
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
+
 ## Primary Input Behavior
 - **Left-click (Primary):** link/unlink or issue selected command.
 - **Right-click (Secondary):** open command selection menu.
+- **F (Interact):** quick-toggle simple companion modes on both livestock and Beasts (`Follow`, `Hold`, `Idle`).
 
 ## Livestock Command Bag Commands
-Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/items-livestock-command-bag)
+Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
 
 - Follow
 - Hold
@@ -16,7 +19,7 @@ Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/items-livestock-c
 - Idle
 
 ## Beast Command Flute Commands
-Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/items-beast-command-flute)
+Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
 
 - Follow
 - Hold
@@ -26,12 +29,6 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/items-beast-command
 - Aggressive
 - Attack Target
 - Idle
-
-## Best Practices
-1. Use Hold to keep breeders in controlled zones.
-2. Use Set Home before taking companions far from base.
-3. Use Recall when pathing fails or companions are scattered.
-4. For Beasts, use Attack Target only when your crosshair target is deliberate.
 
 ## Limits and Gating
 - Membership mode is linked-only.

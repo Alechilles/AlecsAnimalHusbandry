@@ -2,7 +2,9 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
-The Tranquilizer Shortbow is the delivery weapon for tranquilizer arrows.
+## What It Is Used For
+- Applies tranquilizer effects with [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- Used to set up Beast taming opportunities
 
 ## Recipe
 - 1x Cobalt Shortbow
@@ -20,10 +22,6 @@ The Tranquilizer Shortbow is the delivery weapon for tranquilizer arrows.
 
 ## Output
 - 1
-
-## What It Is Used For
-- Applies tranquilizer effects with [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items-tranquilizer-arrows)
-- Used to set up Beast taming opportunities
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)

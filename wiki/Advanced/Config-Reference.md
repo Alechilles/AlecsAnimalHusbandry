@@ -1,5 +1,7 @@
 # Config Reference (Advanced)
 
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/readme)
+
 This page is optional for players who want to tune behavior.
 If you only want to play, use the main guides instead.
 

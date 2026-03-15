@@ -1,30 +1,35 @@
 # Beast Taming Reference
 
-Back to: [Items Index](/mod/alecs-animal-husbandry/items)
+Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library) | [Home](/mod/alecs-animal-husbandry/readme)
+Related hub: [Items Index](/mod/alecs-animal-husbandry/items)
 
 This page is a practical quick-reference for Beast taming.
 
 ## Required Items
-1. [Tranquilizer Potion](/mod/alecs-animal-husbandry/items-tranquilizer-potion)
-2. [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items-tranquilizer-arrows)
-3. [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items-tranquilizer-shortbow)
-4. [Beast Command Flute](/mod/alecs-animal-husbandry/items-beast-command-flute) (post-tame command control)
+1. [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
+2. [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+3. [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+4. [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute) (post-tame command control)
+5. Preferred food (see table below).
 
 ## Beast Taming Flow
-1. Brew Tranquilizer Potion.
-2. Craft Tranquilizer Arrows.
-3. Craft Tranquilizer Shortbow.
+1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion).
+2. Craft [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows).
+3. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
 4. Use tranquilizer shots while managing the Beast's health carefully.
-5. Beast sleep only triggers when role-specific tranquilizer conditions are met (sleep threshold plus health range).
-6. Once tamed, switch to the Beast Command Flute for command control.
+5. Tranquilizer requires the target to be at **20% HP or lower** to take effect.
+    - It doesn't matter if you build the tranquilizer stacks or get it below 20% first.
+6. Once the Beast is asleep, you can feed it it's preferred food to tame it.
+7. You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
+8. Left-click with your [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute) to link it for more advanced control.
 
 ## Tranquilizer Shot Math
-- Base tranquilized duration per hit: **30 seconds**
+- Tranquilizer duration per hit: **30 seconds**
 - Hits stack duration
 - Shots needed: **ceiling(tranquilizer threshold / 30)**
 - Values below assume steady hit pressure without long gaps
 
-## Beast Taming Table
+## Beast Taming and Feeding Table
 | Beast | Preferred Food | Threshold (seconds) | Shots Needed |
 |---|---|---:|---:|
 | Larva Silk | Egg | 20 | 1 |

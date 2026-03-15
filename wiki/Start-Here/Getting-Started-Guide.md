@@ -1,23 +1,31 @@
 # Getting Started Guide
 
-## Goal of the Mod
-Animal Husbandry is designed around long-term companion progression.
-You are rewarded for care quality and line management, not disposable mob farming.
+Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/readme)
 
-## Step 1: Tame Your First Companion
-1. Choose your first path: Livestock (simpler first tame flow) or Beast (requires tranquilizer setup first).
-2. Find a supported animal species.
-3. Use valid taming interaction flow.
-4. Confirm it has become your tamed companion.
+## Step 1: Choose Your Starting Path
+Pick your first route:
+- **Livestock** for the fastest first taming loop.
+- **Beast** if you want the tranquilizer/combat tame flow.
+
+## Step 2A: Livestock First (Recommended)
+1. Find a supported livestock species.
+2. Complete the tame interaction.
+3. Craft a [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag).
+4. Link your companion and test `Follow`, `Hold`, and `Recall`.
+
+Preferred foods and livestock taming details:
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 
 > [Screenshot Placeholder: Taming interaction prompt and successful tame state]
 
-## Step 2 (Beast Path): Prepare Tranquilizer Gear
-If you are taming Beasts, do this before engaging:
+## Step 2B: Beast First
+Before taming, prepare tranquilizer gear:
 1. Craft Tranquilizer Potion at the Alchemy Bench (Tier 2).
 2. Craft Tranquilizer Arrows at the Weapon Bench (Tier 2).
 3. Craft the Tranquilizer Shortbow at the Weapon Bench (Tier 2) with Armory access.
-4. Carry spare arrows and potions so a failed attempt does not waste a trip.
+4. Use tranquilizer pressure and health control until tame conditions are met.
+5. Keep the Beast at **20% HP or lower**, otherwise tranquilizer sleep will not trigger.
+6. After taming, craft/use the [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute).
 
 Detailed recipes and per-species tranquilizer shot counts:
 - [Items Index](/mod/alecs-animal-husbandry/items)
@@ -25,7 +33,7 @@ Detailed recipes and per-species tranquilizer shot counts:
 
 > [Screenshot Placeholder: Beast taming loadout in inventory]
 
-## Step 3: Build a Functional Enclosure
+## Step 3: Build A Stable Enclosure (Both Paths)
 1. Give enough room for movement.
 2. Add safe access to water.
 3. Place nearby storage with suitable food items.
@@ -33,16 +41,16 @@ Detailed recipes and per-species tranquilizer shot counts:
 
 Why this matters:
 - Hunger and thirst decay over time.
-- Animals can passively refill from nearby resources when configured.
+- Animals will automatically seek out food and water from nearby storage and water sources.
 
 > [Screenshot Placeholder: Example enclosure layout with food chest + water source]
 
-## Step 4: Keep Needs and Happiness Stable
+## Step 4: Stabilize Needs And Happiness
 Default decay rates:
 - Hunger: **1 per minute**
 - Thirst: **1.3 per minute**
 
-Breeding readiness depends heavily on happiness and eligibility gates.
+Breeding readiness depends on happiness plus eligibility gates.
 
 > [Screenshot Placeholder: Companion stats panel showing hunger/thirst/happiness]
 
@@ -60,5 +68,6 @@ Use command items to control multiple companions efficiently:
 - Positioning (Follow, Hold, Move To Ping)
 - Recovery (Recall, Return Home)
 - Beast combat behavior (flute command set)
+- Quick mode toggle: press `F` on a tamed companion to cycle simple modes (`Follow`, `Hold`, `Idle`).
 
 > [Screenshot Placeholder: Multiple companions executing a command at once]

@@ -1,5 +1,7 @@
 # Installation and Dependencies
 
+Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/readme)
+
 ## Required Mods
 - Alec's Animal Husbandry!
 - Alec's Tamework! (match the version listed in this mod's README)

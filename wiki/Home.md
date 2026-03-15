@@ -1,27 +1,34 @@
 # Animal Husbandry Wiki
 
-Last updated: 2026-03-14
+Use this page as the top-level map for the wiki hierarchy.
 
-This wiki is written for players first.
-It explains how to use the mod in actual gameplay, not just how the files are structured.
+## 1) Start Here
+- [Start Here](/mod/alecs-animal-husbandry/start-here)
+- [Installation and Dependencies](/mod/alecs-animal-husbandry/installation-and-dependencies)
+- [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
-## Recommended Reading Order
-1. [Installation and Dependencies](/mod/alecs-animal-husbandry/installation-and-dependencies)
-2. [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
-3. [Items Index](/mod/alecs-animal-husbandry/items)
-4. [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
-5. [Systems Overview](/mod/alecs-animal-husbandry/systems-overview)
-6. [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
-7. [Traits and Stats Guide](/mod/alecs-animal-husbandry/traits-and-stats-guide)
-8. [Species and Scope](/mod/alecs-animal-husbandry/species-and-scope)
-9. [Troubleshooting](/mod/alecs-animal-husbandry/troubleshooting)
-10. [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference)
+## 2) Gameplay Guides
+- [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides)
+- [Systems Overview](/mod/alecs-animal-husbandry/systems-overview)
+- [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
+- [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
+- [Traits and Stats Guide](/mod/alecs-animal-husbandry/traits-and-stats-guide)
+- [Troubleshooting](/mod/alecs-animal-husbandry/troubleshooting)
 
-## Quick Facts
-- Core gameplay is husbandry-focused: tame, care, breed, improve bloodlines.
-- Livestock progression is currently the most complete.
-- Beast companions are supported with dedicated command and trait tuning.
-- Beast taming relies on tranquilizer gear from Alec's Tamework (potion, arrows, bow).
-- Current default breeding happiness threshold: **70**.
+## 3) Items and Crafting
+- [Items Index](/mod/alecs-animal-husbandry/items)
+- [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
+- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
+- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+
+## 4) Reference Library
+- [Reference Library Index](/mod/alecs-animal-husbandry/reference-library)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+
+## 5) Advanced
+- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference)
 
 > [Screenshot Placeholder: Main companion command panel with multiple linked animals]

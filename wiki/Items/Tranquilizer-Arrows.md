@@ -2,7 +2,8 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
-Tranquilizer Arrows apply tranquilizer pressure when fired into Beasts.
+## Used For
+- Fired from the [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) to tranquilize Beasts for taming.
 
 ## Recipe
 - 6x Crude Arrows
@@ -17,9 +18,6 @@ Tranquilizer Arrows apply tranquilizer pressure when fired into Beasts.
 
 ## Output
 - 6
-
-## What It Is Used For
-- Fired from the [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items-tranquilizer-shortbow) during Beast hunts.
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)

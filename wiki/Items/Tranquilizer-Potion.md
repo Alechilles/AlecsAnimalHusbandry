@@ -2,7 +2,9 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
-This is the starter sedative item in the Beast tranquilizer crafting chain.
+## Used For
+- Crafting [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- Crafting [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 
 ## Recipe
 - 1x Empty Potion
@@ -19,9 +21,7 @@ This is the starter sedative item in the Beast tranquilizer crafting chain.
 ## Output
 - 1
 
-## What It Is Used For
-- Crafting [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items-tranquilizer-arrows)
-- Crafting [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items-tranquilizer-shortbow)
+
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)

@@ -25,7 +25,7 @@ The Livestock Command Bag is your core management tool for livestock companions.
 See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 ## Related Pages
-- [Livestock Feeding Reference](/mod/alecs-animal-husbandry/livestock-feeding-reference)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 - [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
 > [Screenshot Placeholder: Livestock Command Bag icon and in-hand view]

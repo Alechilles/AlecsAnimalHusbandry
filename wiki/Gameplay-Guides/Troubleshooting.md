@@ -1,5 +1,7 @@
 # Troubleshooting
 
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
+
 ## "My animals won't breed"
 Check these first:
 1. They are tamed and adult.
@@ -33,7 +35,7 @@ Check:
 3. Alec's Tamework is installed and loaded correctly.
 
 Recipe details:
-- [Beast Command Flute](/mod/alecs-animal-husbandry/items-beast-command-flute)
+- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
 
 ## "I can't craft tranquilizer bow/arrows/potion"
 Check:
@@ -44,9 +46,9 @@ Check:
 5. Logs do not show missing-asset validation errors.
 
 Recipe details:
-- [Tranquilizer Potion](/mod/alecs-animal-husbandry/items-tranquilizer-potion)
-- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items-tranquilizer-arrows)
-- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items-tranquilizer-shortbow)
+- [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
+- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 
 ## Recovery Workflow
 1. Revert last config edit.
