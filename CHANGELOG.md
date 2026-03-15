@@ -7,6 +7,8 @@
 - Added first-pass Beast role coverage by overriding all vanilla Beast roles (`Template_Predator` lineage) in Animal Husbandry.
 - Added `Tamed_` Beast role variants for all supported Beast roles, currently wired to `Template_Predator_Tamed`.
 - Added `Template_Predator_Tamed` by copying `Template_Cat_Pet` from Alec's Cats for Beast-tamed behavior.
+- Added Beast-compatible Soul Lantern spawner support (`AnimalHusbandry_Soul_Lantern` + filled variant + spawner config) with Animal Husbandry-specific localization and icon.
+- Added a new Animal Husbandry wiki item page for Nametag usage and integration context.
 
 ### Changed
 - Wild Beast role overrides now include taming + interaction wiring (`IsTameable`, `TameRoleChange`, `InteractionConfigId`).
@@ -25,6 +27,9 @@
 - Added `TranquilizerSleepThresholdSeconds` to `Template_Predator` so per-role tuning can require longer remaining tranquilizer duration (supporting higher-hit tranquilizer thresholds through effect-duration stacking).
 - Added `TranquilizerSleepHealthRange` to `Template_Predator` and gated tranquilizer-forced sleep by health ratio (default `[0, 0.2]`, so Beasts only fall asleep at 20% health or lower unless overridden per role).
 - Tranquilizer sleep threshold behavior in `Template_Predator` now latches eligibility while the effect is active: once the duration threshold is met, dropping health into `TranquilizerSleepHealthRange` will trigger sleep without requiring an additional tranquilizer hit.
+- Updated Beast tamed template spawner item bindings to use Animal Husbandry Soul Lantern IDs instead of cat-specific spawner IDs.
+- Updated command-item crafting quality/bench presentation for command bag and Beast command flute (`Uncommon`/`Rare`, Farmer's Workbench tier 2 for flute recipe).
+- Expanded wiki index pages to include Nametag under companion utility and item navigation.
 
 ## 1.0.3 - UpdateChecker + Art/Docs Refresh - 2026-03-11
 ### Added

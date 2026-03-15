@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AnimalHusbandry_Soul_Lantern.name",
+    "Description": "server.items.AnimalHusbandry_Soul_Lantern.description"
+  },
+  "Quality": "Rare",
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "TameworkSpawn"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "TameworkSpawn"
+        }
+      ]
+    }
+  },
+  "Model": "Items/Tamework/Lantern/Tamework_Soul_Lantern.blockymodel",
+  "Texture": "Items/Tamework/Lantern/Tamework_Soul_Lantern_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Tamework_Soul_Lantern_Empty.png",
+  "IconProperties": {
+    "Scale": 0.7,
+    "Rotation": [
+      184,
+      213,
+      202
+    ],
+    "Translation": [
+      5,
+      -15
+    ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ResourceTypeId": "Wood_All",
+        "Quantity": 6
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 2
+      }
+    ],
+    "Output": [
+      {
+        "ItemId": "AnimalHusbandry_Soul_Lantern",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Farmingbench",
+        "RequiredTierLevel": 2,
+        "Categories": [
+          "Farming"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 3
+  },
+  "MaxStack": 1
+}

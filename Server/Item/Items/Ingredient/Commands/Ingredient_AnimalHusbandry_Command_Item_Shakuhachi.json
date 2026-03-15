@@ -41,18 +41,11 @@
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Id": "Weapon_Bench",
+        "Id": "Farmingbench",
         "Categories": [
-          "Weapon_Bow"
+          "Farming"
         ],
         "RequiredTierLevel": 2
-      },
-      {
-        "Type": "DiagramCrafting",
-        "Id": "Armory",
-        "Categories": [
-          "Weapons.Bow"
-        ]
       }
     ],
     "OutputQuantity": 1,
@@ -60,5 +53,6 @@
   },
   "MaxStack": 1,
   "Model": "Items/AnimalHusbandry/Shakuhachi.blockymodel",
-  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png"
+  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png",
+  "Quality": "Rare"
 }
