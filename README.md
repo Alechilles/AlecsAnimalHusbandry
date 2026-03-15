@@ -9,15 +9,13 @@
 
 ## Wiki
 - [Home](wiki/Home.md)
-- [Installation and Dependencies](wiki/Installation-and-Dependencies.md)
-- [Getting Started Guide](wiki/Getting-Started-Guide.md)
-- [Crafting and Items](wiki/Crafting-and-Items.md)
-- [Commands and Controls](wiki/Commands-and-Controls.md)
-- [Breeding and Growth Guide](wiki/Breeding-and-Growth-Guide.md)
-- [Traits and Stats Guide](wiki/Traits-and-Stats-Guide.md)
-- [Species and Scope](wiki/Species-and-Scope.md)
-- [Config Reference](wiki/Config-Reference.md)
-- [Troubleshooting](wiki/Troubleshooting.md)
+- [Start Here Index](wiki/Start-Here/-Start-Here.md)
+- [Installation and Dependencies](wiki/Start-Here/Installation-and-Dependencies.md)
+- [Getting Started Guide](wiki/Start-Here/Getting-Started-Guide.md)
+- [Items Index](wiki/Items/-Items.md)
+- [Gameplay Guides Index](wiki/Gameplay-Guides/-Gameplay-Guides.md)
+- [Reference Library Index](wiki/Reference-Library/-Reference-Library.md)
+- [Advanced Index](wiki/Advanced/-Advanced.md)
 
 Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, breeding, and commanding all matter.
 
@@ -55,6 +53,16 @@ Trait systems are also split by category, with dedicated trait configs for Lives
   - Issue commands to all linked animals simultaneously.
   - Revive deceased companions.
   - Set homes and command to return to home or recall to you.
+
+**6. Beast progression path:**
+- Craft tranquilizer gear (Tranquilizer Potion + Tranquilizer Arrows + Tranquilizer Shortbow).
+- Bring a Beast to **20% HP or lower**, then apply tranquilizer to force sleep.
+- Tame with the Beast's preferred food.
+- Upgrade to the **Beast Command Flute** for Beast-focused command handling.
+
+**7. Companion transport:**
+- Craft a **Soul Lantern** at Farmingbench Tier 2 (6x any wood, 2x void essence).
+- Use it to capture/release your tamed Livestock and Beasts.
 
 ## Core Gameplay Flow
 
@@ -140,8 +148,8 @@ Adding the mod to an existing world is supported.
 - Pre-existing tamed animals can be bridged into Tamework ownership on first successful interaction/link.
 - If an old tamed animal is not responding to owner-restricted actions, interact/link it once to migrate it.
 
-## V1 Species Scope
-Version `1.0.0` covers the full vanilla `Template_Livestock` family, including:
+## Species Scope
+Core Livestock coverage includes the full vanilla `Template_Livestock` family:
 - Bison
 - Boar / Pig / Warthog lines
 - Camel
@@ -154,16 +162,13 @@ Version `1.0.0` covers the full vanilla `Template_Livestock` family, including:
 - Skrill
 - Turkey
 
-Beast support is currently focused on command/combat companion behavior and will continue to expand in future updates.
-V1 also includes separate trait tuning profiles for Livestock and Beasts.
+Current Beast support includes broad tame-role coverage for vanilla predator/beast families, with dedicated Beast command/taming flow and Beast-specific trait tuning.
 
 ## Compatibility
 - Requires Alec's Tamework! `2.4.x`
 - Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
 
-## Coming After V1
-- Capture/Spawn items for all supported mobs (very soon).
-- Replace placeholder command item with Shakuhashi flute including command sound effects played by a **real traditional Japanese musician**.
+## Planned Next
 - Easier configuration for non-modders.
   - In-game configuration UI.
 - Expanded per-species tuning and behavior identity.
