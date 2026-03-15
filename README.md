@@ -1,7 +1,7 @@
 [![Cats](https://img.shields.io/curseforge/dt/1432112?label=Cats&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-cats)
 [![Tamework](https://img.shields.io/curseforge/dt/1447962?label=Tamework&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-tamework)
 [![Nametags](https://img.shields.io/curseforge/dt/1464844?label=Nametags&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-nametags)
-[![Animal Husbandry](https://img.shields.io/curseforge/dt/1480275?label=Animal%20Husbandry&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://legacy.curseforge.com/hytale/mods/alecs-animal-husbandry)
+[![Animal Husbandry](https://img.shields.io/curseforge/dt/1480275?label=Animal%20Husbandry&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
 
 [![Discord](https://img.shields.io/discord/1468261809739005996?style=for-the-badge&logo=discord&logoColor=white&label=Join%20Discord&color=rgb(88,101,242))](https://discord.gg/E8n8RgTTdq)
 
@@ -9,13 +9,13 @@
 
 ## Wiki
 - [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/home)
-- [Start Here Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/start-here)
+- [Start Here](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/start-here)
 - [Installation and Dependencies](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/installation-and-dependencies)
 - [Getting Started Guide](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/getting-started-guide)
-- [Items Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items)
-- [Gameplay Guides Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides)
-- [Reference Library Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library)
-- [Advanced Index](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced)
+- [Items](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items)
+- [Gameplay Guides](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides)
+- [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library)
+- [Advanced](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced)
 
 Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
 

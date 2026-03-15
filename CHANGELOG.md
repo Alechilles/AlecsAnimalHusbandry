@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 1.1.1 - Tranquilizer Asset Sets Hotfix - 2026-03-15
+### Added
+- Added `TwGlobalConfig_AnimalHusbandry` to explicitly enable Alec's Tamework tranquilizer asset sets so the tranquilizer potion, arrows, and shortbow are available when Animal Husbandry is installed.
+
+### Changed
+- Refreshed README links to use the current CurseForge URL and cleaner wiki index labels.
+
 ## 1.1.0 - Beast Taming Expansion + Command Flute - 2026-03-14
 ### Added
 - Added first-pass Beast role coverage by overriding all vanilla Beast roles (`Template_Predator` lineage) in Animal Husbandry.
