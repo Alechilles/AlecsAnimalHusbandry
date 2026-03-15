@@ -17,10 +17,9 @@
 - [Reference Library Index](wiki/Reference-Library/-Reference-Library.md)
 - [Advanced Index](wiki/Advanced/-Advanced.md)
 
-Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, breeding, and commanding all matter.
+Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
 
-Current gameplay emphasis is strongest for **Livestock**, with growing support for **Beasts** through command and combat companion systems.
-Trait systems are also split by category, with dedicated trait configs for Livestock and Beasts.
+Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through command and combat companion systems.
 
 ## Getting Started
 
