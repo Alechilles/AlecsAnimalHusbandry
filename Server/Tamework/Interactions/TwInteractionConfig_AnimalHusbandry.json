@@ -125,6 +125,36 @@
       "PromptHint": "server.interactionHints.tame"
     },
     {
+      "Type": "Breed",
+      "MinHappiness": 70,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet"
+            }
+          ],
+          "PlayerMovementState": [
+            {
+              "State": "Crouching"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "RemoveItemsHand": {
+          "Quantity": 1,
+          "ItemsParam": "AttractiveItemSet"
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts_Subtle",
+          "OffsetParam": "ParticleOffset",
+          "AttachTarget": "Node",
+          "AttachNode": "Head"
+        }
+      }
+    },
+    {
       "Type": "Feed",
       "Enabled": true,
       "ItemsParam": "AttractiveItemSet",
@@ -147,6 +177,9 @@
           "AttachNode": "Body",
           "OffsetParam": "ParticleOffset"
         }
+      },
+      "Requires": {
+        "All": {}
       }
     },
     {
