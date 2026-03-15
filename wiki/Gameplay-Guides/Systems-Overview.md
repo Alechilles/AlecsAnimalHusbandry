@@ -30,6 +30,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 ## Needs and Happiness
 - Animals seek food and water when configured to do so.
 - Happiness influences breeding eligibility and long-term productivity.
+- Practical care loop details: [Happiness and Needs Guide](/mod/alecs-animal-husbandry/happiness-and-needs-guide)
 
 ## Breeding and Lifecycle
 - Breeding uses compatibility rules + cooldown + happiness gates.
