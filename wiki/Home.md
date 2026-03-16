@@ -31,6 +31,7 @@ Use this page as the top-level map for the wiki hierarchy.
 - [Reference Library Index](/mod/alecs-animal-husbandry/reference-library)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
 
 ## 5) Advanced
 - [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference)

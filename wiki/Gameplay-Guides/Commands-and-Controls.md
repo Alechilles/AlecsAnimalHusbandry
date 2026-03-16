@@ -38,6 +38,7 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute
 ## Related Pages
 - [Items Index](/mod/alecs-animal-husbandry/items)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
 
 > [Screenshot Placeholder: Command radial/menu with highlighted options]
 > [Screenshot Placeholder: Attack Target use on a selected hostile]
