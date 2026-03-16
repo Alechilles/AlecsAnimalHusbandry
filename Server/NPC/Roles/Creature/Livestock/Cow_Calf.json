@@ -19,11 +19,31 @@
     "AlertedRange": 13,
     "AlertedActionRange": 6,
     "AbsoluteDetectionRange": 1.5,
-    "IsTameable": true,
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
-    "TameRoleChange": "Tamed_Cow_Calf",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
     "IsMemory": true,
     "MemoriesNameOverride": "Cow_Calf",
     "NameTranslationKey": "server.npcRoles.Cow_Calf.name"
+  },
+  "Parameters": {
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Cow_Calf",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
   }
 }

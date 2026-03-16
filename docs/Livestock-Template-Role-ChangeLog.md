@@ -59,6 +59,9 @@ Use this as the implementation reference when redoing this work with Hytalor pat
 - Removed redundant parameter definitions from tamed cow role files.
 - Kept role-specific values in `Modify` blocks.
 - Added explicit mount-anchor modifies on `Tamed_Cow`.
+- Current-build compatibility note:
+- Wild livestock roles that inherit `Template_Animal_Neutral` now also carry local `Parameters` entries for `IsTameable`, `TameRoleChange`, and `InteractionConfigId`, with `Modify` computing from those values.
+- This avoids current Hytale build validation failures where those tame fields can resolve as private/non-existent during child-role spawning validation.
 - All livestock roles (base and tamed) now set:
 - `InteractionConfigId: TwInteractionConfig_AnimalHusbandry`
 - Tamed livestock flock arrays are normalized to tamed role IDs (no untamed role IDs in tamed flock arrays).

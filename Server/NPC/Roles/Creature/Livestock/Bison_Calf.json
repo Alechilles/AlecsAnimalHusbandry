@@ -20,19 +20,37 @@
     "AlertedRange": 18,
     "AlertedActionRange": 8,
     "AbsoluteDetectionRange": 2,
-    "IsTameable": true,
-    "TameRoleChange": "Tamed_Bison_Calf",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
     "IsMemory": true,
     "MemoriesNameOverride": "Bison_Calf",
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry"
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
   },
   "Parameters": {
     "NameTranslationKey": {
       "Value": "server.npcRoles.Bison_Calf.name",
       "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Bison_Calf",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
     }
   }
 }

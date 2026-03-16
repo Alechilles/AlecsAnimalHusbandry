@@ -23,9 +23,15 @@
     "AttackWhenStartled": true,
     "Attack": "Root_NPC_Attack_Melee",
     "ProduceItem": "Ingredient_Poop",
-    "IsTameable": true,
-    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry",
-    "TameRoleChange": "Tamed_Cow",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
     "IsMemory": true,
     "MemoriesNameOverride": "Cow",
     "NameTranslationKey": "server.npcRoles.Cow.name",
@@ -110,6 +116,20 @@
           }
         ]
       }
+    }
+  },
+  "Parameters": {
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Cow",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
     }
   }
 }

@@ -4,6 +4,17 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 
 This page is your practical timing reference for line planning.
 
+## How Breeding Starts
+Breeding is **passive by default**.
+When two compatible companions meet the normal breeding requirements, they can breed on their own over time.
+
+You can also trigger breeding manually by **crouching and interacting with the animal while holding its preferred food**.
+
+This is useful when:
+- You want to confirm a specific pair immediately.
+- You do not want to wait for passive breeding timing.
+- You have disabled passive breeding.
+
 ## How Breeding Is Gated
 Your companion must pass all of these checks:
 - Tamed
@@ -13,6 +24,9 @@ Your companion must pass all of these checks:
 - Happiness above 70
 - Not on cooldown
 - Not overcrowded
+
+Manual breeding still respects these gates.
+If crouch-feeding does not start breeding, the animal is usually blocked by one of the checks above.
 
 ## Livestock Breeding and Growth Reference
 Default livestock pairing/cooldown profile:

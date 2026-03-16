@@ -59,6 +59,7 @@ Breeding readiness depends on happiness plus eligibility gates.
 2. Avoid overcrowding.
 3. Maintain high care quality.
 4. Track growth cycles so you can plan your next generation.
+5. If you want to trigger breeding manually, **crouch and interact while holding the animal's preferred food**.
 
 Use the detailed timings here:
 - [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)

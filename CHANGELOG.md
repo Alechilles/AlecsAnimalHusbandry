@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 1.1.2 - Livestock Spawn Compatibility Hotfix - 2026-03-16
+### Fixed
+- Added missing NPC group assets for `AH_Livestock_Tamed` and `AH_Predator_Tamed` so custom attitude groups resolve during startup on current builds.
+- Updated `AH_Predator_Tamed` to use wildcard predator role patterns so current builds resolve the tamed predator group without TagSet member warnings.
+- Updated wild livestock role overrides to expose tame parameters locally (`IsTameable`, `TameRoleChange`, `InteractionConfigId`) so `Template_Animal_Neutral` children no longer fail asset validation with private-parameter errors.
+- Added explicit wild `Mosshorn` and `Mosshorn_Plain` role overrides with local tame parameters so those base-game livestock roles follow the same current-build compatibility rules.
+
+### Changed
+- Clarified wiki guidance for manual breeding so players know crouch-feeding with preferred food can trigger breeding immediately when normal breeding gates are met.
+
 ## 1.1.1 - Tranquilizer Asset Sets Hotfix - 2026-03-15
 ### Added
 - Added `TwGlobalConfig_AnimalHusbandry` to explicitly enable Alec's Tamework tranquilizer asset sets so the tranquilizer potion, arrows, and shortbow are available when Animal Husbandry is installed.
