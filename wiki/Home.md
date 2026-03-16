@@ -1,5 +1,6 @@
 # Animal Husbandry Wiki
 
+![Animal Husbandry Banner Image](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/c7629674-2475-4286-8864-77bcf042ff43.jpg)
 Use this page as the top-level map for the wiki hierarchy.
 
 ## 1) Start Here

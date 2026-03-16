@@ -330,7 +330,7 @@
       "Value": "Mount"
     },
     "BreathesInWater": {
-      "Value": false,
+      "Value": true,
       "Description": "Whether this NPC can breathe underwater."
     },
     "NameTranslationKey": {
@@ -984,7 +984,7 @@
               },
               "Actions": [
                 {
-                  "Type": "DropItem",
+                  "Type": "TameworkHarvestDrop",
                   "Item": { "Compute": "ProduceItem" },
                   "Distance": [ 0.8, 0.8 ],
                   "DropSector": [ 170, 190 ],
@@ -2296,7 +2296,7 @@
               },
               "Actions": [
                 {
-                  "Type": "DropItem",
+                  "Type": "TameworkHarvestDrop",
                   "DropList": { "Compute": "HarvestDropList" },
                   "Distance": [ 0.2, 0.5 ],
                   "Delay": [ 0, 0 ],
@@ -2480,6 +2480,7 @@
           },
           {
             "Type": "TameworkInteract",
+            "TriggerSource": "HasInteracted",
             "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
@@ -2506,6 +2507,7 @@
           },
           {
             "Type": "TameworkInteract",
+            "TriggerSource": "InteractionContext",
             "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
