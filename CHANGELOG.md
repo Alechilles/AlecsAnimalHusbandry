@@ -1,6 +1,15 @@
 # Changelog
 
 ## Unreleased
+### Added
+- Added mounting support for selected larger tamed companions, including bison, mosshorns, white wolves, grizzly and polar bears, sabertooths, snow leopards, cave raptors, and cave rexes.
+
+### Changed
+- Tuned mount anchors for the new companion mounts after in-game fit checks and left mouflon, emberwulf, and rhino toad variants non-mountable in the final pass.
+
+### Fixed
+- Fixed `Template_Predator_Tamed` so predator interaction prompts/actions forward the configured Tamework interaction inputs, restoring crouch-mount prompts and mount execution for predator companions marked as mountable.
+- Restored livestock harvest interactions to require configured harvest interaction context in the shared Animal Husbandry Tamework interaction config.
 
 ## 1.1.2 - Livestock Spawn Compatibility Hotfix - 2026-03-16
 ### Fixed

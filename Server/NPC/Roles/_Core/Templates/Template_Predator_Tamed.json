@@ -1427,7 +1427,10 @@
         },
         "Actions": [
           {
-            "Type": "TameworkInteractPrompt"
+            "Type": "TameworkInteractPrompt",
+            "ConfigId": { "Compute": "InteractionConfigId" },
+            "LovedItems": { "Compute": "AttractiveItemSet" },
+            "IsMountable": { "Compute": "IsMountable" }
           }
         ]
       },
@@ -1438,10 +1441,17 @@
         "Actions": [
           {
             "Type": "LockOnInteractionTarget",
+            "TargetSlot": "InteractionTarget"
+          },
+          {
+            "Type": "LockOnInteractionTarget",
             "TargetSlot": "MasterTarget"
           },
           {
-            "Type": "TameworkInteract"
+            "Type": "TameworkInteract",
+            "ConfigId": { "Compute": "InteractionConfigId" },
+            "LovedItems": { "Compute": "AttractiveItemSet" },
+            "IsMountable": { "Compute": "IsMountable" }
           }
         ]
       }
