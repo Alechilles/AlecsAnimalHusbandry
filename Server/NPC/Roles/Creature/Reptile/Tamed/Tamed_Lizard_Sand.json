@@ -1,0 +1,38 @@
+{
+  "Modify": {
+    "DropList": "Drop_Lizard_Sand",
+    "Appearance": "Lizard_Sand",
+    "MaxHealth": 103,
+    "IsMemory": true,
+    "MemoriesCategory": "Reptile",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "FlockArray": [
+      "Tamed_Lizard_Sand"
+    ],
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Lizard_Sand.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

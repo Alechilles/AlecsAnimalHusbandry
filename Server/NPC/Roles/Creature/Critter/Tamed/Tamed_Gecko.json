@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Gecko",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Gecko"
+    ],
+    "DropList": "Drop_Gecko",
+    "MaxHealth": 25,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Gecko.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

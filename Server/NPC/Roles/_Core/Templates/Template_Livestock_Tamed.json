@@ -95,6 +95,10 @@
       "Value": [ "Tool_Feedbag" ],
       "Description": "The list of items that are deemed attractive (there's a chance targets holding them will be followed)."
     },
+    "AttractiveItemSetParticles": {
+      "Value": "Want_Food_Carrot",
+      "Description": "The particle system that spawns to indicate the NPC's liked item(s)."
+    },
     "FoodItemIDs": {
       "Value": [],
       "TypeHint": "String",

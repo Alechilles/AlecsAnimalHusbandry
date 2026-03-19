@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Mouse",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Mouse"
+    ],
+    "DropList": "Drop_Mouse",
+    "MaxHealth": 15,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Corn_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Corn",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Mouse.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

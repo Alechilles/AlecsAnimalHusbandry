@@ -1,0 +1,38 @@
+{
+  "Modify": {
+    "Appearance": "Lobster",
+    "FlockArray": [
+      "Tamed_Lobster"
+    ],
+    "DropList": "Drop_Lobster",
+    "MaxHealth": 61,
+    "IsMemory": true,
+    "MemoriesCategory": "Freshwater",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Fish_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Fish_Raw",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Lobster.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

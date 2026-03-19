@@ -1,0 +1,45 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Spark_Living",
+    "DropList": "Drop_Spark_Living",
+    "MaxHealth": 61,
+    "IsMemory": true,
+    "MemoriesCategory": "Elemental",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Ingredient_Charcoal"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Charcoal",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Spark_Living.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Spark_Living",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Neutral",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
+  }
+}

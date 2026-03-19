@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Neutral",
+  "Modify": {
+    "Appearance": "Flamingo",
+    "FlockArray": [
+      "Flamingo"
+    ],
+    "DropList": "Drop_Flamingo",
+    "MaxHealth": 49,
+    "WanderRadius": 15,
+    "IsMemory": true,
+    "MemoriesCategory": "Avian",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Fish_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Fish_Raw",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Flamingo.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Flamingo",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Neutral",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Modify": {
+    "Appearance": "Spark_Living",
+    "DropList": "Drop_Spark_Living",
+    "MaxHealth": 61,
+    "IsMemory": true,
+    "MemoriesCategory": "Elemental",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Ingredient_Charcoal"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Charcoal",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "FlockArray": [
+      "Tamed_Spark_Living"
+    ],
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Spark_Living.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "Enabled": true,
+  "Priority": 100,
+  "RoleIds": [
+    "Tamed_Antelope",
+    "Tamed_Armadillo",
+    "Tamed_Crab",
+    "Tamed_Deer_Doe",
+    "Tamed_Deer_Stag",
+    "Tamed_Flamingo",
+    "Tamed_Hatworm",
+    "Tamed_Horse_Skeleton",
+    "Tamed_Horse_Skeleton_Armored",
+    "Tamed_Lizard_Sand",
+    "Tamed_Lobster",
+    "Tamed_Moose_Bull",
+    "Tamed_Moose_Cow",
+    "Tamed_Penguin",
+    "Tamed_Spark_Living",
+    "Tamed_Tetrabird",
+    "Tamed_Tortoise",
+    "Tamed_Trillodon",
+    "Tamed_Cactee",
+    "Tamed_Frog_Blue",
+    "Tamed_Frog_Green",
+    "Tamed_Frog_Orange",
+    "Tamed_Gecko",
+    "Tamed_Meerkat",
+    "Tamed_Mouse",
+    "Tamed_Squirrel",
+    "Tamed_Snail_Frost",
+    "Tamed_Snail_Magma"
+  ],
+  "Happiness": {
+    "Threshold": 70.0
+  },
+  "Eligibility": {
+    "RequireTamed": true,
+    "RequireAdult": true,
+    "RequireNotInCombat": true,
+    "RequireNotSleeping": true
+  },
+  "Pairing": {
+    "BreedRadius": 15.0,
+    "RequireWanderMode": false,
+    "RequireSameOwner": false,
+    "MaxNearbySameType": 8,
+    "RequireSameRoleId": true
+  },
+  "Cooldowns": {
+    "BaseCooldownMinutes": 45,
+    "MinDelaySeconds": 0,
+    "MaxDelaySeconds": 300
+  },
+  "PassiveBreeding": {
+    "Enabled": true,
+    "SweepIntervalSeconds": 30,
+    "Basis": "REAL_TIME"
+  },
+  "Timing": {
+    "Basis": "WORLD_TIME_SCALED"
+  },
+  "Inheritance": {
+    "InheritOwner": true,
+    "InheritTamed": true,
+    "InheritAttachments": true,
+    "InheritTraits": true,
+    "AttachmentInheritance": {
+      "ParentWeight": 0.95,
+      "RandomWeight": 0.0,
+      "MutationChance": 0.05
+    }
+  },
+  "OffspringLifecycle": {
+    "Enabled": true,
+    "TimeToFullGrownMinutes": 90,
+    "BabyStartScale": 0.8,
+    "AdultStartScale": 0.8,
+    "AdultSwitchScale": 1.2
+  },
+  "RoleOverrides": {}
+}
+

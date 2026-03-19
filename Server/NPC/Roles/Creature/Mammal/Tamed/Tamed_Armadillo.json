@@ -1,0 +1,39 @@
+{
+  "Modify": {
+    "Appearance": "Armadillo",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Armadillo"
+    ],
+    "DropList": "Drop_Armadillo",
+    "MaxHealth": 103,
+    "ViewRange": 10,
+    "IsMemory": true,
+    "MemoriesCategory": "Livestock",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Armadillo.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

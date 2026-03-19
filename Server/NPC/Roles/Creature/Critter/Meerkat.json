@@ -1,0 +1,50 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Critter_AH",
+  "Modify": {
+    "Appearance": "Meerkat",
+    "FlockArray": [
+      "Meerkat",
+      "Warthog"
+    ],
+    "DropList": "Drop_Meerkat",
+    "MaxHealth": 29,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Wildmeat_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Wildmeat_Raw",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Meerkat.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Meerkat",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
+  }
+}

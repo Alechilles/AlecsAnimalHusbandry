@@ -161,6 +161,32 @@ Core Livestock coverage includes the full vanilla `Template_Livestock` family:
 - Skrill
 - Turkey
 
+Expanded neutral wildlife coverage also includes the remaining vanilla `Template_Animal_Neutral` non-livestock roles, integrated into the same Animal Husbandry tame/companion systems:
+- Antelope
+- Armadillo
+- Crab
+- Deer Doe / Deer Stag
+- Flamingo
+- Hatworm
+- Horse Skeleton / Horse Skeleton Armored
+- Lizard Sand
+- Lobster
+- Moose Bull / Moose Cow
+- Penguin
+- Spark Living
+- Tetrabird
+- Tortoise
+- Trillodon
+
+Passive critter and cactee coverage now also includes:
+- Cactee
+- Frog Blue / Frog Green / Frog Orange
+- Gecko
+- Meerkat
+- Mouse
+- Snail Frost / Snail Magma
+- Squirrel
+
 Current Beast support includes broad tame-role coverage for vanilla predator/beast families, with dedicated Beast command/taming flow and Beast-specific trait tuning.
 
 ## Compatibility

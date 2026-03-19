@@ -243,6 +243,23 @@
           "SoundEvent": "SFX_Creative_Play_Selection_Widget"
         }
       }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "Items": [
+                null
+              ]
+            }
+          ],
+          "NpcHealthPercent": [
+            {}
+          ]
+        }
+      }
     }
   ]
 }

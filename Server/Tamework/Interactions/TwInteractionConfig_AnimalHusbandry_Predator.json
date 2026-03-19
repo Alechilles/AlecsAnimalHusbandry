@@ -107,15 +107,15 @@
               "Operator": "NoneOf"
             }
           ],
-          "NpcHealthPercent": [
-            {
-              "Value": 20
-            }
-          ],
           "NpcState": [
             {
               "State": "Sleep",
               "SubState": "Tranquilized"
+            }
+          ],
+          "NpcHealthPercent": [
+            {
+              "Value": 20
             }
           ]
         }

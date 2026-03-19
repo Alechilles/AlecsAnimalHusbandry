@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Snail_Frost",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Snail_Frost"
+    ],
+    "DropList": "Drop_Snail_Frost",
+    "MaxHealth": 61,
+    "MaxSpeed": 1,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Lettuce",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Snail_Frost.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

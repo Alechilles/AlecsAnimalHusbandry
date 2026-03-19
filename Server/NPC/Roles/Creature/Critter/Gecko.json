@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Critter_AH",
+  "Modify": {
+    "Appearance": "Gecko",
+    "FlockArray": [
+      "Gecko"
+    ],
+    "DropList": "Drop_Gecko",
+    "MaxHealth": 25,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Gecko.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Gecko",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
+  }
+}

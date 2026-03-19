@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+### Added
+- Added Animal Husbandry integration for the remaining Template_Animal_Neutral base-game roles by introducing wild override + Tamed_ role pairs for Antelope, Armadillo, Crab, Deer_Doe, Deer_Stag, Flamingo, Hatworm, Horse_Skeleton, Horse_Skeleton_Armored, Lizard_Sand, Lobster, Moose_Bull, Moose_Cow, Penguin, Spark_Living, Tetrabird, Tortoise, and Trillodon.
+- Added Animal Husbandry integration for the passive critter/cactee cohort via wild override + Tamed_ role pairs for Cactee, Frog_Blue, Frog_Green, Frog_Orange, Gecko, Meerkat, Mouse, Squirrel, Snail_Frost, and Snail_Magma.
+
+### Changed
+- Wired the new neutral-role cohort into Animal Husbandry Tamework role allowlists/config coverage (interaction, traits, companion, needs, happiness, breeding, command bag, and soul lantern capture/spawn lists) plus AH_Livestock_Tamed membership.
+- Extended the same allowlist/config coverage to the passive critter/cactee cohort (critter interaction config, traits, companion, needs, happiness, breeding, command bag, soul lantern capture/spawn, and AH_Livestock_Tamed group membership).
+- Passive critter/cactee roles now use dedicated critter templates (`Template_Animal_Critter_AH`, `Template_Critter_Tamed`) and a slimmed interaction config (`TwInteractionConfig_AnimalHusbandry_Critter`) focused on tame/feed/breed/mode-cycle.
+- Split that neutral cohort into a dedicated Tamework config set (`TwInteractionConfig_AnimalHusbandry_Neutral`, `TwCompanionConfig_AnimalHusbandry_Neutral`, `TwNeedsConfig_AnimalHusbandry_Neutral`, `TwHappinessConfig_AnimalHusbandry_Neutral`, `TwTraitConfig_AnimalHusbandry_Neutral`, `TwBreedingConfig_AnimalHusbandry_Neutral`) and rewired neutral roles to use the neutral interaction config id.
+- Replaced neutral wildlife Feedbag-only taming preferences with species-specific preferred foods across both wild and `Tamed_` role variants (including `Spark_Living` charcoal and `Trillodon` herbivore food tuning).
+- Spark Living now uses shared Tamework `Want_Food_Charcoal` thought-bubble particles (blank thought cloud + base-game charcoal icon).
+- Enabled first-pass mounting support for selected neutral `Tamed_` roles (`Horse_Skeleton`, `Horse_Skeleton_Armored`, `Moose_Bull`, `Moose_Cow`, `Trillodon`, `Deer_Stag`, `Antelope`, `Tetrabird`, `Tortoise`) with per-role mount anchor offsets.
+
 ## 1.2.0 - Companion Mounting + Interaction Reliability - 2026-03-16
 ### Added
 - Added mounting support for select larger tamed companions, including bison, mosshorns, wolves, grizzly and polar bears, sabertooths, snow leopards, cave raptors, and cave rexes.
@@ -113,4 +126,7 @@
 - Starter documentation (`README.md`, `CHANGELOG.md`).
 - Starter language pack scaffold (`Server/Languages/en-US/server.lang`).
 - Disabled starter Tamework config stubs for livestock interactions, happiness, breeding, and traits.
+
+
+
 

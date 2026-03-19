@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Squirrel",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Squirrel"
+    ],
+    "DropList": "Drop_Squirrel",
+    "MaxHealth": 15,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Fruit_Apple"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Apple",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Squirrel.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

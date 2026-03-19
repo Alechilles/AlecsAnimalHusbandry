@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Frog_Blue",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Frog_Blue"
+    ],
+    "DropList": "Drop_Frog_Blue",
+    "MaxHealth": 15,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Fish_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Fish_Raw",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Frog_Blue.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

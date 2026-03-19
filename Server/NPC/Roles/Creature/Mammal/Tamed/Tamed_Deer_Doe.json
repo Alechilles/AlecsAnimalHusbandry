@@ -1,0 +1,48 @@
+{
+  "Modify": {
+    "Appearance": "Deer_Doe",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Deer_Doe",
+      "Tamed_Deer_Stag"
+    ],
+    "DropList": "Drop_Deer_Doe",
+    "MaxHealth": 81,
+    "MaxSpeed": 10,
+    "ViewRange": 10,
+    "AlertedRange": 12,
+    "Timid": true,
+    "IsMemory": true,
+    "MemoriesCategory": "Livestock",
+    "MemoriesNameOverride": "Deer_Doe",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Lettuce",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1.1,
+    "MountAnchorZ": 0.2,
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Deer_Doe.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "Modify": {
+    "Appearance": "Tetrabird",
+    "FlockArray": [
+      "Tamed_Tetrabird"
+    ],
+    "DropList": "Drop_Tetrabird",
+    "MaxHealth": 38,
+    "WanderRadius": 10,
+    "RunThreshold": 0.6,
+    "IsMemory": true,
+    "MemoriesCategory": "Avian",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Chicken_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Chicken_Raw",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1.2,
+    "MountAnchorZ": 0.2,
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Tetrabird.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

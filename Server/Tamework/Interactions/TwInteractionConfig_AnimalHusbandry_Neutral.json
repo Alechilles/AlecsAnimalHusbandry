@@ -1,0 +1,214 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Antelope",
+    "Armadillo",
+    "Crab",
+    "Deer_Doe",
+    "Deer_Stag",
+    "Flamingo",
+    "Hatworm",
+    "Horse_Skeleton",
+    "Horse_Skeleton_Armored",
+    "Lizard_Sand",
+    "Lobster",
+    "Moose_Bull",
+    "Moose_Cow",
+    "Penguin",
+    "Spark_Living",
+    "Tetrabird",
+    "Tortoise",
+    "Trillodon",
+    "Tamed_Antelope",
+    "Tamed_Armadillo",
+    "Tamed_Crab",
+    "Tamed_Deer_Doe",
+    "Tamed_Deer_Stag",
+    "Tamed_Flamingo",
+    "Tamed_Hatworm",
+    "Tamed_Horse_Skeleton",
+    "Tamed_Horse_Skeleton_Armored",
+    "Tamed_Lizard_Sand",
+    "Tamed_Lobster",
+    "Tamed_Moose_Bull",
+    "Tamed_Moose_Cow",
+    "Tamed_Penguin",
+    "Tamed_Spark_Living",
+    "Tamed_Tetrabird",
+    "Tamed_Tortoise",
+    "Tamed_Trillodon"
+  ],
+  "Interactions": [
+    {
+      "Type": "Tame",
+      "ItemsParam": "AttractiveItemSet",
+      "RoleParam": "TameRoleChange",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true
+        }
+      },
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Entity"
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet",
+              "Operator": "NoneOf"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "SpawnParticles": {
+          "ParticleSystemParam": "AttractiveItemSetParticles",
+          "AttachTarget": "Node",
+          "AttachNode": "Head",
+          "OffsetParam": "ParticleOffset",
+          "PlayerOnly": false
+        }
+      },
+      "PromptHint": "server.interactionHints.tame"
+    },
+    {
+      "Type": "Breed",
+      "MinHappiness": 70,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet"
+            }
+          ],
+          "PlayerMovementState": [
+            {
+              "State": "Crouching"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "RemoveItemsHand": {
+          "Quantity": 1,
+          "ItemsParam": "AttractiveItemSet"
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts_Subtle",
+          "OffsetParam": "ParticleOffset",
+          "AttachTarget": "Node",
+          "AttachNode": "Head"
+        }
+      }
+    },
+    {
+      "Type": "Feed",
+      "Enabled": true,
+      "ItemsParam": "AttractiveItemSet",
+      "Heal": 25,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Pet_Heal",
+          "Color": "#fe6969",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Node",
+          "AttachNode": "Body",
+          "OffsetParam": "ParticleOffset"
+        }
+      },
+      "Requires": {
+        "All": {}
+      }
+    },
+    {
+      "Type": "Harvest",
+      "Enabled": true,
+      "RequireHarvestInteractionContext": true,
+      "RequireHarvestAlarmReady": true
+    },
+    {
+      "Type": "Mount",
+      "Enabled": true
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "AlarmState": [
+            {
+              "Name": "Pet_Ready",
+              "State": "unset"
+            }
+          ],
+          "PlayerHandEmpty": true,
+          "Parameter": [
+            {
+              "Name": "IsPettable",
+              "Value": "true",
+              "Operator": "Equals"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "TriggerNpcHook": {
+          "HookId": "TwHook_Pet",
+          "Consume": true
+        }
+      },
+      "PromptHint": "server.interactionHints.pet"
+    },
+    {
+      "Type": "ModeCycle",
+      "Enabled": true,
+      "Cycle": [
+        {
+          "State": "Follow",
+          "Message": "Following"
+        },
+        {
+          "State": "Hold",
+          "Message": "Staying"
+        },
+        {
+          "State": "Idle",
+          "Message": "Wandering"
+        }
+      ],
+      "ShowFloatingText": true,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Creative_Play_Selection_Widget"
+        }
+      }
+    }
+  ]
+}

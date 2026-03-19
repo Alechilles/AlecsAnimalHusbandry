@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Animal_Critter_AH",
+  "Modify": {
+    "Appearance": "Snail_Magma",
+    "FlockArray": [
+      "Snail_Magma"
+    ],
+    "DropList": "Drop_Snail_Magma",
+    "MaxHealth": 61,
+    "MaxSpeed": 1,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Chilli_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Chilli",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "InteractionConfigId": {
+      "Compute": "InteractionConfigId"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Snail_Magma.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Snail_Magma",
+      "Description": "The role the NPC will change into when it's tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
+      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
+    }
+  }
+}

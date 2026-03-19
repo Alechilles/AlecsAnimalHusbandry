@@ -19,28 +19,67 @@ This page is a practical quick-reference for livestock taming.
 
 
 ## Livestock Taming Table
-| Livestock | Preferred Food | Feedbag Accepted | Notes |
-|---|---|---|---|
-| Bison | Cauliflower | Yes | Standard livestock tame flow |
-| Boar | Pumpkin | Yes | Standard livestock tame flow |
-| Bunny | Carrot | Yes | Standard livestock tame flow |
-| Camel | Tomato | Yes | Standard livestock tame flow |
-| Chicken | Corn | Yes | Standard livestock tame flow |
-| Chicken Desert | Cotton | Yes | Standard livestock tame flow |
-| Cow | Lettuce | Yes | Standard livestock tame flow |
-| Goat | Apple | Yes | Standard livestock tame flow |
-| Horse | Carrot | Yes | Standard livestock tame flow |
-| Mosshorn | Potato | No | Uses potato-only food preference |
-| Mosshorn Plain | Potato | No | Uses potato-only food preference |
-| Mouflon | Apple | Yes | Standard livestock tame flow |
-| Pig | Turnip | Yes | Standard livestock tame flow |
-| Pig Wild | Aubergine | Yes | Standard livestock tame flow |
-| Rabbit | Carrot | Yes | Standard livestock tame flow |
-| Ram | Apple | Yes | Standard livestock tame flow |
-| Sheep | Lettuce | Yes | Standard livestock tame flow |
-| Skrill | Chilli | Yes | Standard livestock tame flow |
-| Turkey | Corn | Yes | Standard livestock tame flow |
-| Warthog | Onion | Yes | Standard livestock tame flow |
+
+| Animal | Preferred Food |
+|---|---|
+| Bison | Cauliflower |
+| Boar | Pumpkin |
+| Bunny | Carrot |
+| Camel | Tomato |
+| Chicken | Corn |
+| Chicken Desert | Cotton |
+| Cow | Lettuce |
+| Goat | Apple |
+| Horse | Carrot |
+| Mosshorn | Potato |
+| Mosshorn Plain | Potato |
+| Mouflon | Apple |
+| Pig | Turnip |
+| Pig Wild | Aubergine |
+| Rabbit | Carrot |
+| Ram | Apple |
+| Sheep | Lettuce |
+| Skrill | Chilli |
+| Turkey | Corn |
+| Warthog | Onion |
+
+## Neutral Animals Taming Table
+
+| Animal | Preferred Food |
+|---|---|
+| Antelope | Lettuce |
+| Armadillo | Egg |
+| Crab | Raw Fish |
+| Deer Doe | Lettuce |
+| Deer Stag | Lettuce |
+| Flamingo | Raw Fish |
+| Hatworm | Egg |
+| Horse Skeleton | Raw Beef |
+| Horse Skeleton Armored | Raw Beef |
+| Lizard Sand | Egg |
+| Lobster | Raw Fish |
+| Moose Bull | Cauliflower |
+| Moose Cow | Cauliflower |
+| Penguin | Raw Fish |
+| Spark Living | Charcoal |
+| Tetrabird | Raw Chicken |
+| Tortoise | Lettuce |
+| Trillodon | Cauliflower |
+
+## Critters Taming Table
+
+| Animal | Preferred Food |
+|---|---|
+| Cactee | Chilli |
+| Frog Blue | Raw Fish |
+| Frog Green | Raw Fish |
+| Frog Orange | Raw Fish |
+| Gecko | Egg |
+| Meerkat | Raw Wild Meat |
+| Mouse | Corn |
+| Squirrel | Apple |
+| Snail Frost | Lettuce |
+| Snail Magma | Chilli |
 
 > [Screenshot Placeholder: Livestock tame interaction with preferred food in hand]
 > [Screenshot Placeholder: Livestock linked to command bag after taming]

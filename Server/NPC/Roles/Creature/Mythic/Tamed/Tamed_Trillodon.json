@@ -1,0 +1,42 @@
+{
+  "Modify": {
+    "Appearance": "Trillodon",
+    "DropList": "Drop_Trillodon",
+    "MaxHealth": 145,
+    "IsMemory": true,
+    "MemoriesCategory": "Reptile",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Cauliflower_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Cauliflower",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1.8,
+    "MountAnchorZ": 0.15,
+    "FlockArray": [
+      "Tamed_Trillodon"
+    ],
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Trillodon.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

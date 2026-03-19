@@ -10,7 +10,7 @@ This page is a quick-reference for mobs that are currently configured as mountab
 2. Hold crouch and press `F` (Interact) on the companion.
 
 ## Mountable Livestock
-| Livestock |
+| Animal |
 |---|
 | Bison |
 | Camel |
@@ -20,8 +20,22 @@ This page is a quick-reference for mobs that are currently configured as mountab
 | Mosshorn Plain |
 | Ram |
 
+## Mountable Neutral Animals
+| Animal |
+|---|
+| Antelope |
+| Deer Stag |
+| Deer Doe |
+| Horse Skeleton |
+| Horse Skeleton Armored |
+| Moose Bull |
+| Moose Cow |
+| Tetrabird |
+| Tortoise |
+| Trillodon |
+
 ## Mountable Beasts
-| Beast |
+| Animal |
 |---|
 | Bear Grizzly |
 | Bear Polar |

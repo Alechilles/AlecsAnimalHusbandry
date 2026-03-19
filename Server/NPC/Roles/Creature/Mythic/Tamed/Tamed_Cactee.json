@@ -1,0 +1,34 @@
+{
+  "Modify": {
+    "Appearance": "Cactee",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Cactee"
+    ],
+    "DropList": "Drop_Cactee",
+    "MaxHealth": 61,
+    "MaxSpeed": 10,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Chilli_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Chilli",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Cactee.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "Modify": {
+    "Appearance": "Meerkat",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_Meerkat",
+      "Tamed_Warthog"
+    ],
+    "DropList": "Drop_Meerkat",
+    "MaxHealth": 29,
+    "MaxSpeed": 9,
+    "IsMemory": true,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Wildmeat_Raw"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Wildmeat_Raw",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Critter",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanRecall": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Critter_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Meerkat.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

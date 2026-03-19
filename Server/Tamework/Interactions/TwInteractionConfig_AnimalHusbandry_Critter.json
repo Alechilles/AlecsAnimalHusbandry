@@ -1,0 +1,160 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Cactee",
+    "Frog_Blue",
+    "Frog_Green",
+    "Frog_Orange",
+    "Gecko",
+    "Meerkat",
+    "Mouse",
+    "Squirrel",
+    "Snail_Frost",
+    "Snail_Magma",
+    "Tamed_Cactee",
+    "Tamed_Frog_Blue",
+    "Tamed_Frog_Green",
+    "Tamed_Frog_Orange",
+    "Tamed_Gecko",
+    "Tamed_Meerkat",
+    "Tamed_Mouse",
+    "Tamed_Squirrel",
+    "Tamed_Snail_Frost",
+    "Tamed_Snail_Magma"
+  ],
+  "Interactions": [
+    {
+      "Type": "Tame",
+      "ItemsParam": "AttractiveItemSet",
+      "RoleParam": "TameRoleChange",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true
+        }
+      },
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Entity"
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet",
+              "Operator": "NoneOf"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "SpawnParticles": {
+          "ParticleSystemParam": "AttractiveItemSetParticles",
+          "AttachTarget": "Node",
+          "AttachNode": "Head",
+          "OffsetParam": "ParticleOffset",
+          "PlayerOnly": false
+        }
+      },
+      "PromptHint": "server.interactionHints.tame"
+    },
+    {
+      "Type": "Breed",
+      "MinHappiness": 70,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet"
+            }
+          ],
+          "PlayerMovementState": [
+            {
+              "State": "Crouching"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "RemoveItemsHand": {
+          "Quantity": 1,
+          "ItemsParam": "AttractiveItemSet"
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts_Subtle",
+          "OffsetParam": "ParticleOffset",
+          "AttachTarget": "Node",
+          "AttachNode": "Head"
+        }
+      }
+    },
+    {
+      "Type": "Feed",
+      "Enabled": true,
+      "ItemsParam": "AttractiveItemSet",
+      "Heal": 25,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Pet_Heal",
+          "Color": "#fe6969",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Node",
+          "AttachNode": "Body",
+          "OffsetParam": "ParticleOffset"
+        }
+      },
+      "Requires": {
+        "All": {}
+      }
+    },
+    {
+      "Type": "ModeCycle",
+      "Enabled": true,
+      "Cycle": [
+        {
+          "State": "Follow",
+          "Message": "Following"
+        },
+        {
+          "State": "Hold",
+          "Message": "Staying"
+        },
+        {
+          "State": "Idle",
+          "Message": "Wandering"
+        }
+      ],
+      "ShowFloatingText": true,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Creative_Play_Selection_Widget"
+        }
+      }
+    }
+  ]
+}

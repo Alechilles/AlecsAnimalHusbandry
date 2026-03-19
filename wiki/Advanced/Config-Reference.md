@@ -12,6 +12,21 @@ If you only want to play, use the main guides instead.
 - Server/Tamework/Happiness
 - Server/Tamework/Companion
 
+## Neutral Cohort Config Set
+The neutral wildlife batch uses dedicated files so it can be tuned separately from core livestock:
+- `TwInteractionConfig_AnimalHusbandry_Neutral`
+- `TwCompanionConfig_AnimalHusbandry_Neutral`
+- `TwNeedsConfig_AnimalHusbandry_Neutral`
+- `TwHappinessConfig_AnimalHusbandry_Neutral`
+- `TwTraitConfig_AnimalHusbandry_Neutral`
+- `TwBreedingConfig_AnimalHusbandry_Neutral`
+
+## Critter Cohort Config Set
+The passive critter/cactee batch uses a dedicated interaction config and critter-focused templates:
+- `TwInteractionConfig_AnimalHusbandry_Critter`
+- `Template_Animal_Critter_AH`
+- `Template_Critter_Tamed`
+
 ## Important Breeding Key Formats
 Preferred keys:
 - Cooldowns.BaseCooldownMinutes

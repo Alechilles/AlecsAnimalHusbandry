@@ -1,0 +1,43 @@
+{
+  "Modify": {
+    "Appearance": "Tortoise",
+    "DropList": "Drop_Tortoise",
+    "MaxSpeed": 4,
+    "MaxHealth": 103,
+    "IsMemory": true,
+    "MemoriesCategory": "Reptile",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Crop_Lettuce_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Lettuce",
+    "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Neutral",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1.2,
+    "MountAnchorZ": 0,
+    "FlockArray": [
+      "Tamed_Tortoise"
+    ],
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Tortoise.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
