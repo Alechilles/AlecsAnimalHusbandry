@@ -261,6 +261,44 @@
               ]
             },
             {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": { "Compute": "ViewRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": 4,
+                      "Attitudes": [ "Revered", "Friendly", "Ignore" ],
+                      "GetNPCs": false
+                    }
+                  },
+                  {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": { "Compute": "AttractiveItemSet" }
+                      },
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Curious"
+                }
+              ]
+            },
+            {
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
@@ -613,6 +651,33 @@
                   }
                 },
                 {
+                  "Sensor": {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Or",
+                      "Sensors": [
+                        {
+                          "Type": "DroppedItem",
+                          "Range": { "Compute": "ViewRange" },
+                          "ViewSector": { "Compute": "ViewSector" },
+                          "Items": { "Compute": "AttractiveItemSet" }
+                        },
+                        {
+                          "Type": "Target",
+                          "Filters": [
+                            {
+                              "Type": "ItemInHand",
+                              "Items": { "Compute": "AttractiveItemSet" }
+                            },
+                            {
+                              "Type": "Attitude",
+                              "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
                   "Actions": [
                     {
                       "Type": "State",
