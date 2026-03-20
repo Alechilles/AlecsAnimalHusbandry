@@ -141,6 +141,10 @@
       "Value": "",
       "Description": "Overrides the memory name if set"
     },
+    "BreathesInWater": {
+      "Value": true,
+      "Description": "Whether this NPC can breathe underwater."
+    },
     "NameTranslationKey": {
       "Value": "server.npcRoles.Template.name",
       "Description": "Translation key for NPC name display"
@@ -156,6 +160,7 @@
   "DefaultNPCAttitude": "Ignore",
   "DefaultPlayerAttitude": { "Compute": "DefaultPlayerAttitude" },
   "AttitudeGroup": { "Compute": "AttitudeGroup" },
+  "BreathesInWater": { "Compute": "BreathesInWater" },
   "MotionControllerList": [
     {
       "Type": "Walk",
