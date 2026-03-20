@@ -2,7 +2,11 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
-The Beast Command Flute (Shakuhachi) is the command tool for Beast companions.
+## What It Does
+- Controls linked Beast companions.
+- Unlocks Beast-focused commands (Defend, Aggressive, Attack Target).
+- Uses the same linked panel action set as other command tools (`Recall`, `Set Home`, `Return Home`, `Unlink`, `Revive` when available).
+- Supports nearby-only `Release` and `Cull` safety actions when ownership/tame checks pass.
 
 ## Recipe
 - 1x Livestock Command Bag
@@ -18,10 +22,6 @@ The Beast Command Flute (Shakuhachi) is the command tool for Beast companions.
 
 ## Craft Time
 - 5 seconds
-
-## What It Does
-- Controls linked Beast companions.
-- Unlocks Beast-focused commands (Defend, Aggressive, Attack Target).
 
 ## Commands
 See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)

@@ -36,9 +36,11 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 
 **3. Create a good environment for your companions:**
 - Build a safe enclosure with room for movement.
-- Keep an accessible water source in the enclosure.
+- Keep an accessible water source in the enclosure (water blocks and feed trough water both work).
 - Keep your companions' preferred food type in a chest in the enclosure.
+- If you use feed troughs, keep bucket refill items available so trough water can be replenished.
 - Your animals will automatically eat and drink when they are hungry or thirsty.
+- Water source blocks are still supported for now, but the long-term plan is to deprecate that path after feed trough hydration has been tested more broadly.
 
 **4. Craft your command item:**
 - Craft the Animal Husbandry Command Bag at the Farmer's Workbench.
@@ -50,7 +52,9 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 - From here you can: 
   - View your animal's stats such as happiness, hunger, thirst, traits and more.
   - Issue commands to all linked animals simultaneously.
-  - Revive deceased companions.
+  - Use per-companion panel actions such as `Recall`, `Set Home`, `Return Home`, `Unlink`, and `Revive` when available.
+  - Use nearby-only safety actions `Release` and `Cull` from the linked panel when needed.
+  - Recover companions that show a `LOST` status with strict respawn/recovery flow.
   - Set homes and command to return to home or recall to you.
 
 **6. Beast progression path:**
@@ -86,7 +90,8 @@ Animals are meant to feel like long-term farm companions, not disposable resourc
 <img width="495" height="324" alt="Discord_xtdDoHHb6W" src="https://github.com/user-attachments/assets/e1dd722d-0eb0-4a28-8cc7-cc13300f72c8" />
 
 - Supported animals run on active needs and happiness systems instead of shallow one-off interactions.
-- Animals will **eat food from storage and water from water blocks automatically** when they are hungry or thirsty.
+- Animals will **eat food from storage and drink from nearby water sources automatically**, including water blocks and feed trough water charges.
+- Feed trough water can be refilled with compatible bucket items to keep passive hydration reliable.
 - Happiness is influenced by several factors and works on an "equilibrium" system where it sits naturally at about 50, and various factors increase or decrease it.
 - Animals will only breed if they are well taken care of and happy.
 
@@ -117,7 +122,10 @@ Animals are meant to feel like long-term farm companions, not disposable resourc
 - Combat-oriented options (`Defend`, `Attack Target`) are available on species that are configured to support them.
 - This is especially useful for Beasts that are intended to act as combat-capable companions.
 - Utility command flow for `Set Home`, `Return Home`, `Recall`, and move-to-location control.
-- Mobs may be sent home and recalled from anywhere in the same world, **even if they are currently unloaded**.
+- Linked panel actions include per-companion `Revive` plus nearby-only `Release`/`Cull` safety actions.
+- Linked panel status includes `LOST` handling with strict recovery through respawn flows.
+- Companions can be recalled from anywhere, including cross-world travel when that behavior is enabled in Tamework travel settings.
+- `Return Home` remains a same-world behavior.
 
 ### Beast Trait Profile
 

@@ -23,6 +23,10 @@ These values add up quickly on larger farms or mixed Beast/livestock setups.
 3. Keep pathing clear so companions can actually reach food/water.
 4. Avoid overcrowding in one pen.
 
+Feed trough note:
+- Feed trough water states can be consumed for hydration and refilled with water buckets.
+- Troughs are useful in enclosed pens where natural water access is awkward.
+
 See food preferences here:
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)

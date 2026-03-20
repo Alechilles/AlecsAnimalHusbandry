@@ -29,6 +29,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 
 ## Needs and Happiness
 - Animals seek food and water when configured to do so.
+- Feed trough blocks can provide staged water charges for hydration, and compatible bucket items can refill trough water.
 - Happiness influences breeding eligibility and long-term productivity.
 - Practical care loop details: [Happiness and Needs Guide](/mod/alecs-animal-husbandry/happiness-and-needs-guide)
 
@@ -45,6 +46,11 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 - Follow, Hold, Idle.
 - Home management and recall.
 - Optional combat command behavior on supported roles.
+- Linked panel includes per-companion `Revive` plus nearby-only `Release`/`Cull` actions with safety gating.
+
+## Species Coverage Snapshot
+- Livestock, neutral wildlife, and passive critter/cactee cohorts are all integrated into the same tame/companion progression loop.
+- Mounting capability is available on all Livestock, Neutral Wildlife, and Beasts that could reasonably support a rider. See [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference).
 
 ## Related Pages
 - [Items Index](/mod/alecs-animal-husbandry/items)

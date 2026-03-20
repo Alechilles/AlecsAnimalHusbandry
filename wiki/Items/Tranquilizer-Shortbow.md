@@ -2,6 +2,8 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
+![Crafting a Tranquilizer Shortbow](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/b071b2e9-f243-4058-8000-0fe92c17460b.png)
+
 ## What It Is Used For
 - Applies tranquilizer effects with [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - Used to set up Beast taming opportunities

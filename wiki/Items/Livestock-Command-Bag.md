@@ -2,7 +2,12 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
-The Livestock Command Bag is your core management tool for livestock companions.
+## What It Does
+- Link and unlink tamed livestock/neutral companions.
+- Open command selection.
+- Issue commands to linked members.
+- Provide per-companion panel actions (`Recall`, `Set Home`, `Return Home`, `Unlink`, `Revive` when available).
+- Provide nearby-only safety actions (`Release`, `Cull`) through confirm flow.
 
 ## Recipe
 - 10x Wheat
@@ -15,11 +20,6 @@ The Livestock Command Bag is your core management tool for livestock companions.
 
 ## Craft Time
 - 4 seconds
-
-## What It Does
-- Link and unlink tamed livestock companions.
-- Open command selection.
-- Issue commands to linked members.
 
 ## Commands
 See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)

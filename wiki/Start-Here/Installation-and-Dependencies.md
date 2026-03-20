@@ -4,7 +4,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 ## Required Mods
 - Alec's Animal Husbandry!
-- Alec's Tamework! (match the version listed in this mod's README)
+- Alec's Tamework! `2.4.x` (match the current version listed in this mod's README/changelog)
 - Alec's Nametags!
 
 ## Installation Steps

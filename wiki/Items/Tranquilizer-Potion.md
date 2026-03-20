@@ -2,6 +2,8 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
+![Crafting a Tranquilizer Potion](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/aabb4269-f9da-4735-ac50-2aa7d69e580e.png)
+
 ## Used For
 - Crafting [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - Crafting [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)

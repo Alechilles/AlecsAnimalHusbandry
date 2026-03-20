@@ -5,12 +5,16 @@ Related hub: [Items Index](/mod/alecs-animal-husbandry/items)
 
 This page is a practical quick-reference for Beast taming.
 
+![Beast Taming Gear](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/d7b61c44-e95e-4e07-85d9-8f984b82784c.png)
+
 ## Required Items
 1. [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 2. [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 3. [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
-4. [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute) (post-tame command control)
-5. Preferred food (see table below).
+4. Preferred food ([see table below](#beast-taming-and-feeding-table)).
+5. (Recommended) [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute) for post-tame command control.
+
+[![Beast Taming Demo Video](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/49863e5d-433c-4bc3-8de2-b79649f62499.png)](https://www.youtube.com/watch?v=Yo5Aemwwjfo)
 
 ## Beast Taming Flow
 1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion).

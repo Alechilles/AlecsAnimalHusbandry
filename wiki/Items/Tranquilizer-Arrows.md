@@ -2,6 +2,8 @@
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 
+![Crafting Tranquilizer Arrows](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/aa1ea5e3-71da-4159-b6e8-3dc094e127bc.png)
+
 ## Used For
 - Fired from the [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) to tranquilize Beasts for taming.
 

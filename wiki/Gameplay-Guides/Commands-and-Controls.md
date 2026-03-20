@@ -35,6 +35,11 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute
 - Commands require tame + ownership checks.
 - Flute has stricter active/cooldown settings than the livestock bag.
 
+## Linked Companion Panel Actions
+- You can manage companions one-by-one with `Recall`, `Set Home`, `Return Home`, `Unlink`, and `Revive`.
+- If a companion is nearby and owned by you, the panel can also show `Release` and `Cull`.
+- If a companion shows `LOST`, use respawn/recovery instead of recall/return-home.
+
 ## Related Pages
 - [Items Index](/mod/alecs-animal-husbandry/items)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
