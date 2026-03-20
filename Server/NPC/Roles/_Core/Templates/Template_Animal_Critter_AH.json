@@ -201,6 +201,40 @@
               }
             },
             {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": { "Compute": "ViewRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": 4,
+                      "Attitudes": [ "Revered", "Friendly", "Ignore", "Hostile" ],
+                      "GetNPCs": false
+                    }
+                  },
+                  {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": { "Compute": "AttractiveItemSet" }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Curious"
+                }
+              ]
+            },
+            {
               "Sensor": {
                 "Type": "Or",
                 "Sensors": [
@@ -416,6 +450,49 @@
                   }
                 },
                 {
+                  "Sensor": {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": { "Compute": "AttractiveItemSet" }
+                      }
+                    ]
+                  },
+                  "HeadMotion": {
+                    "Type": "Watch"
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 2,
+                    "StopDistance": 1,
+                    "RelativeSpeed": 0.25
+                  }
+                },
+                {
+                  "Sensor": {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Or",
+                      "Sensors": [
+                        {
+                          "Type": "DroppedItem",
+                          "Range": { "Compute": "ViewRange" },
+                          "ViewSector": { "Compute": "ViewSector" },
+                          "Items": { "Compute": "AttractiveItemSet" }
+                        },
+                        {
+                          "Type": "Target",
+                          "Filters": [
+                            {
+                              "Type": "ItemInHand",
+                              "Items": { "Compute": "AttractiveItemSet" }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  },
                   "Actions": [
                     {
                       "Type": "State",
