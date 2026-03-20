@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 - Neutral/Critter Cohort Expansion - 2026-03-19
 
 ### Added
 - Added Animal Husbandry integration for the remaining Template_Animal_Neutral base-game roles by introducing wild override + Tamed_ role pairs for Antelope, Armadillo, Crab, Deer_Doe, Deer_Stag, Flamingo, Hatworm, Horse_Skeleton, Horse_Skeleton_Armored, Lizard_Sand, Lobster, Moose_Bull, Moose_Cow, Penguin, Spark_Living, Tetrabird, Tortoise, and Trillodon.
