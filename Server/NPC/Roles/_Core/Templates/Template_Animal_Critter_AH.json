@@ -236,32 +236,49 @@
             },
             {
               "Sensor": {
-                "Type": "Or",
+                "Type": "And",
                 "Sensors": [
                   {
-                    "Type": "Player",
-                    "Range": 4,
-                    "LockOnTarget": true,
-                    "Filters": [
+                    "Type": "Or",
+                    "Sensors": [
                       {
-                        "Type": "LineOfSight"
+                        "Type": "Player",
+                        "Range": 4,
+                        "LockOnTarget": true,
+                        "Filters": [
+                          {
+                            "Type": "LineOfSight"
+                          }
+                        ]
+                      },
+                      {
+                        "Reference": "Component_Sensor_Sight_By_Attitude",
+                        "Modify": {
+                          "ViewRange": { "Compute": "ViewRange" },
+                          "ViewSector": { "Compute": "ViewSector" },
+                          "Attitudes": [ "Hostile" ]
+                        }
+                      },
+                      {
+                        "Reference": "Component_Sensor_Sound_By_Attitude",
+                        "Modify": {
+                          "HearingRange": { "Compute": "HearingRange" },
+                          "ThroughWalls": false,
+                          "Attitudes": [ "Hostile" ]
+                        }
                       }
                     ]
                   },
                   {
-                    "Reference": "Component_Sensor_Sight_By_Attitude",
-                    "Modify": {
-                      "ViewRange": { "Compute": "ViewRange" },
-                      "ViewSector": { "Compute": "ViewSector" },
-                      "Attitudes": [ "Hostile" ]
-                    }
-                  },
-                  {
-                    "Reference": "Component_Sensor_Sound_By_Attitude",
-                    "Modify": {
-                      "HearingRange": { "Compute": "HearingRange" },
-                      "ThroughWalls": false,
-                      "Attitudes": [ "Hostile" ]
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Target",
+                      "Filters": [
+                        {
+                          "Type": "ItemInHand",
+                          "Items": { "Compute": "AttractiveItemSet" }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -336,24 +353,41 @@
             },
             {
               "Sensor": {
-                "Type": "Or",
+                "Type": "And",
                 "Sensors": [
                   {
-                    "Type": "Player",
-                    "Range": 4,
-                    "LockOnTarget": true,
-                    "Filters": [
+                    "Type": "Or",
+                    "Sensors": [
                       {
-                        "Type": "LineOfSight"
+                        "Type": "Player",
+                        "Range": 4,
+                        "LockOnTarget": true,
+                        "Filters": [
+                          {
+                            "Type": "LineOfSight"
+                          }
+                        ]
+                      },
+                      {
+                        "Reference": "Component_Sensor_Sight_By_Attitude",
+                        "Modify": {
+                          "ViewRange": { "Compute": "DistractedSenseRange" },
+                          "ViewSector": { "Compute": "ViewSector" },
+                          "Attitudes": [ "Hostile" ]
+                        }
                       }
                     ]
                   },
                   {
-                    "Reference": "Component_Sensor_Sight_By_Attitude",
-                    "Modify": {
-                      "ViewRange": { "Compute": "DistractedSenseRange" },
-                      "ViewSector": { "Compute": "ViewSector" },
-                      "Attitudes": [ "Hostile" ]
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Target",
+                      "Filters": [
+                        {
+                          "Type": "ItemInHand",
+                          "Items": { "Compute": "AttractiveItemSet" }
+                        }
+                      ]
                     }
                   }
                 ]
