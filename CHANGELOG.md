@@ -11,9 +11,8 @@
 - Extended the same allowlist/config coverage to the passive critter/cactee cohort (critter interaction config, traits, companion, needs, happiness, breeding, command bag, soul lantern capture/spawn, and AH_Livestock_Tamed group membership).
 - Passive critter/cactee roles now use dedicated critter templates (`Template_Animal_Critter_AH`, `Template_Critter_Tamed`) and a slimmed interaction config (`TwInteractionConfig_AnimalHusbandry_Critter`) focused on tame/feed/breed/mode-cycle.
 - Split that neutral cohort into a dedicated Tamework config set (`TwInteractionConfig_AnimalHusbandry_Neutral`, `TwCompanionConfig_AnimalHusbandry_Neutral`, `TwNeedsConfig_AnimalHusbandry_Neutral`, `TwHappinessConfig_AnimalHusbandry_Neutral`, `TwTraitConfig_AnimalHusbandry_Neutral`, `TwBreedingConfig_AnimalHusbandry_Neutral`) and rewired neutral roles to use the neutral interaction config id.
-- Replaced neutral wildlife Feedbag-only taming preferences with species-specific preferred foods across both wild and `Tamed_` role variants (including `Spark_Living` charcoal and `Trillodon` herbivore food tuning).
 - Spark Living now uses shared Tamework `Want_Food_Charcoal` thought-bubble particles (blank thought cloud + base-game charcoal icon).
-- Enabled first-pass mounting support for selected neutral `Tamed_` roles (`Horse_Skeleton`, `Horse_Skeleton_Armored`, `Moose_Bull`, `Moose_Cow`, `Trillodon`, `Deer_Stag`, `Antelope`, `Tetrabird`, `Tortoise`) with per-role mount anchor offsets.
+- Enabled mounting support for selected neutral `Tamed_` roles (`Horse_Skeleton`, `Horse_Skeleton_Armored`, `Moose_Bull`, `Moose_Cow`, `Trillodon`, `Deer_Stag`, `Antelope`, `Tetrabird`, `Tortoise`) with per-role mount anchor offsets.
 
 ## 1.2.0 - Companion Mounting + Interaction Reliability - 2026-03-16
 ### Added
