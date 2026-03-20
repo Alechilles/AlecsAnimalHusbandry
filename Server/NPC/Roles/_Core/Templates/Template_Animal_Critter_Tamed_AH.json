@@ -1,0 +1,771 @@
+{
+  "Type": "Abstract",
+  "KnockbackScale": 0.5,
+  "StartState": "Idle",
+  "Parameters": {
+    "Appearance": {
+      "Value": "Mouse",
+      "Description": "Model to be used"
+    },
+    "ViewRange": {
+      "Value": 15,
+      "Description": "View range"
+    },
+    "ViewSector": {
+      "Value": 180,
+      "Description": "View sector"
+    },
+    "HearingRange": {
+      "Value": 15,
+      "Description": "Hearing range"
+    },
+    "AlertedRange": {
+      "Value": 30,
+      "Description": "A range within which the player can be seen/sensed when the NPC is alerted to their presence"
+    },
+    "DistractedSenseRange": {
+      "Value": 5,
+      "Description": "Hearing range when distracted by dropped fish"
+    },
+    "IdleMotionComponent": {
+      "Value": "Component_Instruction_Intelligent_Idle_Motion_Configurable_Leashed_Wander",
+      "Description": "The component that controls how the NPC moves during idle state"
+    },
+    "AttractiveItemSet": {
+      "Value": [ ],
+      "TypeHint": "String",
+      "Description": "Item to look for in players hand"
+    },
+    "AttractiveItemSetParticles": {
+      "Value": "Want_Food_Carrot",
+      "Description": "The particle system that spawns to indicate the NPC's liked item(s)."
+    },
+    "ParticleOffset": {
+      "Value": [ 0, 0.6, 0 ],
+      "Description": "The offset of any spawned particle systems."
+    },
+    "IsTameable": {
+      "Value": false,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "",
+      "Description": "The role the NPC will change into when it is tamed."
+    },
+    "InteractionConfigId": {
+      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
+      "Description": "Optional TwInteractionConfig asset id override."
+    },
+    "CanFollow": {
+      "Value": true,
+      "Description": "Whether command-driven Follow behavior is enabled for this role."
+    },
+    "CanHold": {
+      "Value": true,
+      "Description": "Whether command-driven Hold behavior is enabled for this role."
+    },
+    "CanRecall": {
+      "Value": true,
+      "Description": "Whether Recall behavior can drive this role into Follow."
+    },
+    "CanBreedPair": {
+      "Value": true,
+      "Description": "Whether breeding pair approach behavior is enabled for this role."
+    },
+    "GreetAnimation": {
+      "Value": "Curious",
+      "Description": "The animation to play while greeting a nearby non-hostile player."
+    },
+    "GreetStateTimeout": {
+      "Value": [ 2, 4 ],
+      "Description": "How long greet behavior lasts before returning to idle, in seconds."
+    },
+    "GreetTimeout": {
+      "Value": [ "PT1H", "PT4H" ],
+      "Description": "Cooldown between greet attempts."
+    },
+    "FollowItemPreDelay": {
+      "Value": [ 0.2, 0.6 ],
+      "Description": "Delay before transitioning from greet to curious when a preferred item is held."
+    },
+    "WanderRadius": {
+      "Value": 10,
+      "Description": "Wander Radius"
+    },
+    "MotionWander1Timer": {
+      "Value": [ 3, 6 ],
+      "Description": "How long the NPC will perform the Wander motion for, in seconds"
+    },
+    "MotionWander2Timer": {
+      "Value": [ 3, 6 ],
+      "Description": "How long the NPC will perform the WanderInCircle motion for, in seconds"
+    },
+    "MotionNothingTimer": {
+      "Value": [ 1, 2 ],
+      "Description": "How long the NPC will stop for between wandering motions, in seconds"
+    },
+    "DropList": {
+      "Value": "Empty",
+      "Description": "Drop items"
+    },
+    "MaxSpeed": {
+      "Value": 9,
+      "Description": "Max NPC walk speed"
+    },
+    "AttitudeGroup": {
+      "Value": "AH_Livestock_Tamed",
+      "Description": "This NPCs attitude group"
+    },
+    "DefaultPlayerAttitude": {
+      "Value": "Revered",
+      "Description": "Default attitude towards players"
+    },
+    "MaxHealth": {
+      "Value": 100,
+      "Description": "Max health for the NPC"
+    },
+    "FlockArray": {
+      "Value": [ ],
+      "TypeHint": "String",
+      "Description": "Array containing NPCs for this flock type"
+    },
+    "IsMemory": {
+      "Value": false,
+      "Description": "Defines if the NPC is a memory"
+    },
+    "MemoriesCategory": {
+      "Value": "Other",
+      "Description": "Defines the category of the memory"
+    },
+    "MemoriesNameOverride": {
+      "Value": "",
+      "Description": "Overrides the memory name if set"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Template.name",
+      "Description": "Translation key for NPC name display"
+    }
+  },
+  "IsMemory": { "Compute": "IsMemory" },
+  "MemoriesCategory": { "Compute": "MemoriesCategory" },
+  "MemoriesNameOverride": { "Compute": "MemoriesNameOverride" },
+  "FlockSpawnTypes": { "Compute": "FlockArray" },
+  "DropList": { "Compute": "DropList" },
+  "Appearance": { "Compute": "Appearance" },
+  "DisableDamageGroups": [ "Self" ],
+  "DefaultNPCAttitude": "Ignore",
+  "DefaultPlayerAttitude": { "Compute": "DefaultPlayerAttitude" },
+  "AttitudeGroup": { "Compute": "AttitudeGroup" },
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": { "Compute": "MaxSpeed" },
+      "Gravity": 10,
+      "MaxFallSpeed": 8,
+      "Acceleration": 10,
+      "MaxRotationSpeed": 180
+    }
+  ],
+  "MaxHealth": { "Compute": "MaxHealth" },
+  "Instructions": [
+    {
+      "Instructions": [
+        {
+          "$Comment": "Validation-only state sensors (disabled).",
+          "Enabled": false,
+          "Sensor": {
+            "Type": "State",
+            "State": "Sleep"
+          }
+        },
+        {
+          "$Comment": "Validation-only state setters (disabled).",
+          "Enabled": false,
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Follow"
+            },
+            {
+              "Type": "State",
+              "State": "Hold"
+            },
+            {
+              "Type": "State",
+              "State": "BreedPair"
+            },
+            {
+              "Type": "State",
+              "State": "Sleep"
+            }
+          ]
+        },
+        {
+          "$Comment": "Clear the greet alarm when it finishes.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Alarm",
+            "Name": "Greet_Ready",
+            "State": "Passed",
+            "Clear": true
+          },
+          "Actions": [
+            {
+              "Type": "Nothing"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Idle"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Clear_Status_Animation"
+            },
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [ "Flee", "Panic" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Sight_By_Attitude",
+                    "Modify": {
+                      "ViewRange": { "Compute": "ViewRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "Attitudes": [ "Hostile" ]
+                    }
+                  },
+                  {
+                    "Reference": "Component_Sensor_Sound_By_Attitude",
+                    "Modify": {
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "ThroughWalls": false,
+                      "Attitudes": [ "Hostile" ]
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": { "Compute": "ViewRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "HearingRange": { "Compute": "HearingRange" },
+                      "AbsoluteDetectionRange": 4,
+                      "Attitudes": [ "Revered", "Friendly", "Ignore" ],
+                      "GetNPCs": false
+                    }
+                  },
+                  {
+                    "Type": "Alarm",
+                    "Name": "Greet_Ready",
+                    "State": "Unset"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Greet"
+                }
+              ]
+            },
+            {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+              "Sensor": {
+                "Type": "DroppedItem",
+                "Range": { "Compute": "ViewRange" },
+                "ViewSector": { "Compute": "ViewSector" },
+                "Items": { "Compute": "AttractiveItemSet" }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Curious"
+                }
+              ]
+            },
+            {
+              "Reference": { "Compute": "IdleMotionComponent" },
+              "Interfaces": [ "Hytale.Instruction.Intelligent.Idle.Motion.ConfigurableWander" ],
+              "Nullable": true,
+              "Modify": {
+                "WanderRadius": { "Compute": "WanderRadius" },
+                "MotionWander1Timer": { "Compute": "MotionWander1Timer" },
+                "MotionWander2Timer": { "Compute": "MotionWander2Timer" },
+                "MotionNothingTimer": { "Compute": "MotionNothingTimer" }
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Greet"
+          },
+          "Instructions": [
+            {
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": { "Compute": "GreetAnimation" }
+                }
+              ]
+            },
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [ "Flee", "Panic" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            },
+            {
+              "Continue": true,
+              "Sensor": {
+                "Type": "Target",
+                "Range": { "Compute": "AlertedRange" }
+              },
+              "HeadMotion": {
+                "Type": "Watch"
+              }
+            },
+            {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": { "Compute": "AttractiveItemSet" }
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                  }
+                ]
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "SpawnParticles",
+                  "ParticleSystem": "Hearts_Subtle",
+                  "Offset": { "Compute": "ParticleOffset" },
+                  "TargetNodeName": "Head"
+                },
+                {
+                  "Type": "Timeout",
+                  "Delay": { "Compute": "FollowItemPreDelay" }
+                },
+                {
+                  "Type": "State",
+                  "State": "Curious"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target"
+              },
+              "ActionsBlocking": true,
+              "Actions": [
+                {
+                  "Type": "Timeout",
+                  "Delay": { "Compute": "GreetStateTimeout" }
+                },
+                {
+                  "Type": "SetAlarm",
+                  "Name": "Greet_Ready",
+                  "DurationRange": { "Compute": "GreetTimeout" }
+                },
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Target"
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Alerted"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Generic_Alerted",
+              "Modify": {
+                "_ExportStates": [ "Panic", "Idle", "Flee" ],
+                "AlertedRange": { "Compute": "AlertedRange" },
+                "WaitTime": [ 0.5, 0.5 ]
+              }
+            }
+          ]
+        },
+        {
+          "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+          "Sensor": {
+            "Type": "State",
+            "State": "Curious"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Clear_Status_Animation"
+            },
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [ "Flee", "Panic" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Sight_By_Attitude",
+                    "Modify": {
+                      "ViewRange": { "Compute": "DistractedSenseRange" },
+                      "ViewSector": { "Compute": "ViewSector" },
+                      "Attitudes": [ "Hostile" ]
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": { "Compute": "AttractiveItemSet" }
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                  }
+                ]
+              },
+              "Continue": true,
+              "HeadMotion": {
+                "Type": "Watch"
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "SlowDownDistance": 2,
+                "StopDistance": 1,
+                "RelativeSpeed": 0.25
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "State",
+                "State": ".Default"
+              },
+              "Instructions": [
+                {
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "Curious"
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [ 0.5, 2 ]
+                    },
+                    {
+                      "Type": "State",
+                      "State": ".Seek"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "State",
+                "State": ".Seek"
+              },
+              "Instructions": [
+                {
+                  "Reference": "Component_Instruction_Clear_Status_Animation"
+                },
+                {
+                  "Sensor": {
+                    "$TODO": "This may need some adjustments to be more lenient",
+                    "Type": "DroppedItem",
+                    "Range": 0.5,
+                    "Items": { "Compute": "AttractiveItemSet" }
+                  },
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "Curious"
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [ 1, 2 ]
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "Eat"
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [ 5, 10 ]
+                    },
+                    {
+                      "Type": "PickUpItem",
+                      "Range": 0.5,
+                      "StorageTarget": "Destroy"
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "$TODO": "This may need some adjustments to be more lenient",
+                    "Type": "DroppedItem",
+                    "Range": { "Compute": "ViewRange" },
+                    "ViewSector": { "Compute": "ViewSector" },
+                    "Items": { "Compute": "AttractiveItemSet" }
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 2,
+                    "StopDistance": 0.5,
+                    "RelativeSpeed": 0.2
+                  }
+                },
+                {
+                  "Sensor": {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": { "Compute": "AttractiveItemSet" }
+                      },
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                      }
+                    ]
+                  },
+                  "HeadMotion": {
+                    "Type": "Watch"
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 2,
+                    "StopDistance": 1,
+                    "RelativeSpeed": 0.25
+                  }
+                },
+                {
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Idle"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Flee"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Generic_Multitarget_Flee",
+              "Modify": {
+                "_ExportStates": [ "Panic", "Idle", "Panic" ],
+                "ViewRange": { "Compute": "ViewRange" },
+                "ViewSector": { "Compute": "ViewSector" },
+                "HearingRange": { "Compute": "HearingRange" },
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Panic"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Generic_Panic",
+              "Modify": {
+                "_ExportStates": [ "Idle" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Bridge breeding pair hooks into dedicated pair movement.",
+          "Enabled": { "Compute": "CanBreedPair" },
+          "Continue": true,
+          "Sensor": {
+            "Type": "Any"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Breeding_Pair",
+              "Modify": {
+                "_ExportStates": [ "BreedPair", "Idle" ]
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "No-op branch to pair the BreedPair state with a state sensor.",
+          "Enabled": { "Compute": "CanBreedPair" },
+          "Continue": true,
+          "Sensor": {
+            "Type": "State",
+            "State": "BreedPair"
+          }
+        },
+        {
+          "$Comment": "Command follow state used by Tamework mode cycle.",
+          "Enabled": { "Compute": "CanFollow || CanRecall" },
+          "Sensor": {
+            "Type": "State",
+            "State": "Follow"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Follow_Simple_TP",
+              "Modify": {
+                "MasterTargetSlot": "MasterTarget",
+                "FollowLockOnRange": 128,
+                "FollowSeekRange": 25
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Command hold state used by Tamework mode cycle.",
+          "Enabled": { "Compute": "CanHold" },
+          "Sensor": {
+            "Type": "State",
+            "State": "Hold"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Tamework_Instruction_Hold",
+              "Modify": {
+                "_ExportStates": [ "Sleep" ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "InteractionInstruction": {
+    "Instructions": [
+      {
+        "Continue": true,
+        "Actions": [
+          {
+            "Type": "LockOnInteractionTarget",
+            "TargetSlot": "InteractionTarget"
+          }
+        ]
+      },
+      {
+        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Continue": true,
+        "Sensor": {
+          "Type": "Any"
+        },
+        "Actions": [
+          {
+            "Type": "TameworkInteractPrompt",
+            "ConfigId": { "Compute": "InteractionConfigId" },
+            "LovedItems": { "Compute": "AttractiveItemSet" }
+          }
+        ]
+      },
+      {
+        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Sensor": {
+          "Type": "HasInteracted"
+        },
+        "Actions": [
+          {
+            "Type": "LockOnInteractionTarget",
+            "TargetSlot": "InteractionTarget"
+          },
+          {
+            "Type": "LockOnInteractionTarget",
+            "TargetSlot": "MasterTarget"
+          },
+          {
+            "Type": "TameworkInteract",
+            "ConfigId": { "Compute": "InteractionConfigId" },
+            "LovedItems": { "Compute": "AttractiveItemSet" }
+          }
+        ]
+      }
+    ]
+  },
+  "NameTranslationKey": { "Compute": "NameTranslationKey" }
+}
