@@ -109,11 +109,12 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false,
+    "CanBreedPair": true,
     "IsMountable": true,
     "MountAnchorX": 0,
     "MountAnchorY": 1.2,
-    "MountAnchorZ": 0.05
+    "MountAnchorZ": 0.05,
+    "NeedsSeekConsumeAnimation": ""
   },
   "Parameters": {
     "NameTranslationKey": {

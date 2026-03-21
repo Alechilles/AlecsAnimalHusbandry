@@ -113,6 +113,32 @@
       "Value": true,
       "Description": "Whether this NPC always sleeps through the whole night."
     },
+    "SleepAnimation": {
+      "Value": "Sleep",
+      "Description": "Optional loop animation while in Sleep state."
+    },
+    "SleepEnterAnimation": {
+      "Value": "Laydown",
+      "Description": "Optional animation to play when entering Sleep (for example Laydown)."
+    },
+    "SleepEnterDelayRange": {
+      "Value": [
+        0.83,
+        0.83
+      ],
+      "Description": "How long to wait after the sleep-enter animation before sleep settles."
+    },
+    "WakeAnimation": {
+      "Value": "Wake",
+      "Description": "Optional animation to play when waking from Sleep (for example Wake)."
+    },
+    "WakeDelayRange": {
+      "Value": [
+        1,
+        1.1
+      ],
+      "Description": "How long to wait after wake animation before post-sleep transitions continue."
+    },
     "HoldBaseAnimation": {
       "Value": "Idle",
       "Description": "Persistent Hold posture animation used between transient flavor animations."
@@ -143,7 +169,7 @@
       "Description": "How long to remain in the hold posture when no flavor animation is selected."
     },
     "WanderSettleExitAnimation": {
-      "Value": "StandUp",
+      "Value": "",
       "Description": "Optional animation to play when leaving Wander settle posture."
     },
     "WanderSettleExitDelayRange": {
@@ -209,6 +235,10 @@
       ],
       "TypeHint": "String",
       "Description": "Food item IDs accepted for feeding."
+    },
+    "NeedsSeekConsumeAnimation": {
+      "Value": "Eat",
+      "Description": "Optional animation played when consuming a needs resource (for example Eat)."
     },
     "AttackPauseRange": {
       "Value": [
@@ -506,7 +536,7 @@
       "Description": "Whether Set Home should be considered available for this role (consumed by command config/UI gating)."
     },
     "CanBreedPair": {
-      "Value": false,
+      "Value": true,
       "Description": "Whether breeding pair approach behavior is enabled for this role."
     },
     "TargetRange": {
@@ -641,9 +671,24 @@
           ]
         }
       ],
-      "Actions": {
-        "Reference": "Component_ActionList_Sleep"
-      }
+      "Enabled": {
+        "Compute": "!isEmpty(SleepEnterAnimation)"
+      },
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status",
+          "Animation": {
+            "Compute": "SleepEnterAnimation"
+          }
+        },
+        {
+          "Type": "Timeout",
+          "Delay": {
+            "Compute": "SleepEnterDelayRange"
+          }
+        }
+      ]
     },
     {
       "$Comment": "Record sleep origin when entering sleep from Hold so wake can return to Hold.",
@@ -703,9 +748,24 @@
           ]
         }
       ],
-      "Actions": {
-        "Reference": "Component_ActionList_Wake"
-      }
+      "Enabled": {
+        "Compute": "!isEmpty(WakeAnimation)"
+      },
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status",
+          "Animation": {
+            "Compute": "WakeAnimation"
+          }
+        },
+        {
+          "Type": "Timeout",
+          "Delay": {
+            "Compute": "WakeDelayRange"
+          }
+        }
+      ]
     },
     {
       "States": [
@@ -722,9 +782,28 @@
           ]
         }
       ],
-      "Actions": {
-        "Reference": "Component_Tamework_ActionList_StandUp"
-      }
+      "Enabled": {
+        "Compute": "!isEmpty(WanderSettleExitAnimation)"
+      },
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status",
+          "Animation": {
+            "Compute": "WanderSettleExitAnimation"
+          }
+        },
+        {
+          "Type": "Timeout",
+          "Delay": {
+            "Compute": "WanderSettleExitDelayRange"
+          }
+        },
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
     },
     {
       "$Comment": "Clear looping status animation when leaving hold/sleep/needs states so locomotion can play.",
@@ -906,6 +985,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "Water",
+                "NeedsSeekConsumeAnimation": {
+                  "Compute": "NeedsSeekConsumeAnimation"
+                },
                 "_ExportStates": [
                   "Idle"
                 ]
@@ -925,6 +1007,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "FoodContainer",
+                "NeedsSeekConsumeAnimation": {
+                  "Compute": "NeedsSeekConsumeAnimation"
+                },
                 "NeedsSeekFoodItemIDs": {
                   "Compute": "AttractiveItemSet"
                 },
@@ -953,6 +1038,9 @@
         },
         {
           "$Comment": "Bridge breeding pair hooks into dedicated pair movement.",
+          "Enabled": {
+            "Compute": "CanBreedPair"
+          },
           "Continue": true,
           "Sensor": {
             "Type": "Any"
@@ -971,6 +1059,9 @@
         },
         {
           "$Comment": "No-op branch to pair the BreedPair state with a state sensor.",
+          "Enabled": {
+            "Compute": "CanBreedPair"
+          },
           "Continue": true,
           "Sensor": {
             "Type": "State",
@@ -1058,6 +1149,9 @@
                 ],
                 "AlwaysSleepAtNight": {
                   "Compute": "AlwaysSleepAtNight"
+                },
+                "SleepEnabled": {
+                  "Compute": "!isEmpty(SleepAnimation)"
                 },
                 "SleepDelayAfterEntryRange": {
                   "Compute": "SleepDelayAfterHoldEnterRange"
@@ -1328,6 +1422,9 @@
                 ],
                 "AlwaysSleepAtNight": {
                   "Compute": "AlwaysSleepAtNight"
+                },
+                "SleepEnabled": {
+                  "Compute": "!isEmpty(SleepAnimation)"
                 }
               }
             }
@@ -1357,6 +1454,9 @@
                 },
                 "DayTimeNapTimeRange": {
                   "Compute": "DayTimeNapTimeRange"
+                },
+                "SleepAnimation": {
+                  "Compute": "SleepAnimation"
                 },
                 "HearingRange": {
                   "Compute": "HearingRange"

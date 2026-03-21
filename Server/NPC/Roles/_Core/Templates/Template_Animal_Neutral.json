@@ -116,6 +116,38 @@
       "Value": "",
       "Description": "The flavor animation to play during the day. Ignored if null or empty."
     },
+    "NeedsSeekConsumeAnimation": {
+      "Value": "Eat",
+      "Description": "Optional animation played when consuming a food resource (for example Eat)."
+    },
+    "SleepAnimation": {
+      "Value": "Sleep",
+      "Description": "Optional sleep-loop animation while in Sleep state."
+    },
+    "SleepEnterAnimation": {
+      "Value": "Laydown",
+      "Description": "Optional animation to play when entering Sleep (for example Laydown)."
+    },
+    "SleepEnterDelayRange": {
+      "Value": [ 0.83, 0.83 ],
+      "Description": "How long to wait after sleep-enter animation before sleep settles."
+    },
+    "WakeAnimation": {
+      "Value": "Wake",
+      "Description": "Optional animation to play when waking from Sleep (for example Wake)."
+    },
+    "WakeDelayRange": {
+      "Value": [ 1, 1.1 ],
+      "Description": "How long to wait after wake animation before continuing transitions."
+    },
+    "AlertedAnimation": {
+      "Value": "Alerted",
+      "Description": "Optional animation to play when entering Alerted or Panic reactions."
+    },
+    "CuriousAnimation": {
+      "Value": "Curious",
+      "Description": "Optional animation to play while following a liked item."
+    },
     "IgnoreOverrideTime": {
       "Value": 20,
       "Description": "The duration of the ignore attitude override for the target."
@@ -249,9 +281,27 @@
           "To": [ "Sleep" ]
         }
       ],
-      "Actions": {
-        "Reference": "Component_ActionList_Sleep"
-      }
+      "Actions": [
+        {
+          "Type": "Sequence",
+          "Enabled": { "Compute": "!isEmpty(SleepEnterAnimation)" },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": { "Compute": "SleepEnterAnimation" }
+            },
+            {
+              "Type": "Timeout",
+              "Delay": { "Compute": "SleepEnterDelayRange" }
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            }
+          ]
+        }
+      ]
     },
     {
       "States": [
@@ -260,9 +310,27 @@
           "To": [ "Alerted", "Flee", "Idle" ]
         }
       ],
-      "Actions": {
-        "Reference": "Component_ActionList_Wake"
-      }
+      "Actions": [
+        {
+          "Type": "Sequence",
+          "Enabled": { "Compute": "!isEmpty(WakeAnimation)" },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": { "Compute": "WakeAnimation" }
+            },
+            {
+              "Type": "Timeout",
+              "Delay": { "Compute": "WakeDelayRange" }
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            }
+          ]
+        }
+      ]
     },
     {
       "$Comment": "Always clear animation when moving from Alerted or Flee state.",
@@ -565,13 +633,19 @@
                   "ActionsBlocking": true,
                   "Actions": [
                     {
-                      "Type": "PlayAnimation",
-                      "Slot": "Status",
-                      "Animation": "Eat"
-                    },
-                    {
-                      "Type": "Timeout",
-                      "Delay": [ 4, 6 ]
+                      "Type": "Sequence",
+                      "Enabled": { "Compute": "!isEmpty(NeedsSeekConsumeAnimation)" },
+                      "Actions": [
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status",
+                          "Animation": { "Compute": "NeedsSeekConsumeAnimation" }
+                        },
+                        {
+                          "Type": "Timeout",
+                          "Delay": [ 4, 6 ]
+                        }
+                      ]
                     },
                     {
                       "Type": "PickUpItem",
@@ -736,13 +810,19 @@
                       "ActionsBlocking": true,
                       "Actions": [
                         {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": "Eat"
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [ 5, 6 ]
+                          "Type": "Sequence",
+                          "Enabled": { "Compute": "!isEmpty(NeedsSeekConsumeAnimation)" },
+                          "Actions": [
+                            {
+                              "Type": "PlayAnimation",
+                              "Slot": "Status",
+                              "Animation": { "Compute": "NeedsSeekConsumeAnimation" }
+                            },
+                            {
+                              "Type": "Timeout",
+                              "Delay": [ 5, 6 ]
+                            }
+                          ]
                         },
                         {
                           "Type": "PlayAnimation",
@@ -832,7 +912,7 @@
                 },
                 {
                   "$Comment": "Nap.",
-                  "Enabled": { "Compute": "DayTimeNapWeight > 0" },
+                  "Enabled": { "Compute": "DayTimeNapWeight > 0 && !isEmpty(SleepAnimation)" },
                   "Weight": { "Compute": "DayTimeNapWeight" },
                   "Instructions": [
                     {
@@ -849,6 +929,7 @@
             },
             {
               "$Comment": "Sleep time.",
+              "Enabled": { "Compute": "!isEmpty(SleepAnimation)" },
               "Actions": [
                 {
                   "Type": "Timeout",
@@ -917,9 +998,10 @@
                   ]
                 },
                 {
-                  "Reference": "Component_Instruction_Wild_Sleep_State",
+                  "Reference": "Component_Tamework_Instruction_Wild_Sleep_State",
                   "Modify": {
                     "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "Idle" ],
+                    "SleepAnimation": { "Compute": "SleepAnimation" },
                     "HearingRange": { "Compute": "HearingRange" },
                     "Attitudes": [ "Hostile", "Neutral" ],
                     "WakeupSensor": "Component_Sensor_Timed_Nap"
@@ -931,9 +1013,10 @@
               "$Comment": "Night-time sleep.",
               "Instructions": [
                 {
-                  "Reference": "Component_Instruction_Wild_Sleep_State",
+                  "Reference": "Component_Tamework_Instruction_Wild_Sleep_State",
                   "Modify": {
                     "_ExportStates": [ "Panic", "Panic", "Flee.Switch", "Idle" ],
+                    "SleepAnimation": { "Compute": "SleepAnimation" },
                     "HearingRange": { "Compute": "HearingRange" },
                     "Attitudes": [ "Hostile", "Neutral" ],
                     "DayTimePeriod": { "Compute": "DayTimePeriod" }
@@ -959,9 +1042,15 @@
               },
               "Actions": [
                 {
-                  "Type": "PlayAnimation",
-                  "Slot": "Status",
-                  "Animation": "Alerted"
+                  "Type": "Sequence",
+                  "Enabled": { "Compute": "!isEmpty(AlertedAnimation)" },
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": { "Compute": "AlertedAnimation" }
+                    }
+                  ]
                 },
                 {
                   "Type": "TimerStart",
@@ -1097,9 +1186,15 @@
                   },
                   "Actions": [
                     {
-                      "Type": "PlayAnimation",
-                      "Slot": "Status",
-                      "Animation": "Curious"
+                      "Type": "Sequence",
+                      "Enabled": { "Compute": "!isEmpty(CuriousAnimation)" },
+                      "Actions": [
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status",
+                          "Animation": { "Compute": "CuriousAnimation" }
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1429,13 +1524,19 @@
                       "ActionsBlocking": true,
                       "Actions": [
                         {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": "Alerted"
-                        },
-                        {
-                          "Type": "Timeout",
-                          "Delay": [ 0.2, 0.2 ]
+                          "Type": "Sequence",
+                          "Enabled": { "Compute": "!isEmpty(AlertedAnimation)" },
+                          "Actions": [
+                            {
+                              "Type": "PlayAnimation",
+                              "Slot": "Status",
+                              "Animation": { "Compute": "AlertedAnimation" }
+                            },
+                            {
+                              "Type": "Timeout",
+                              "Delay": [ 0.2, 0.2 ]
+                            }
+                          ]
                         },
                         {
                           "Type": "PlayAnimation",
@@ -1449,7 +1550,7 @@
                         },
                         {
                           "Type": "State",
-                          "State": "Flee.Attack"
+                          "State": ".Attack"
                         }
                       ]
                     },
@@ -1558,9 +1659,15 @@
               },
               "Actions": [
                 {
-                  "Type": "PlayAnimation",
-                  "Slot": "Status",
-                  "Animation": "Alerted"
+                  "Type": "Sequence",
+                  "Enabled": { "Compute": "!isEmpty(AlertedAnimation)" },
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": { "Compute": "AlertedAnimation" }
+                    }
+                  ]
                 }
               ]
             },
@@ -1723,9 +1830,15 @@
               {
                 "Actions": [
                   {
-                    "Type": "PlayAnimation",
-                    "Slot": "Status",
-                    "Animation": "Alerted"
+                    "Type": "Sequence",
+                    "Enabled": { "Compute": "!isEmpty(AlertedAnimation)" },
+                    "Actions": [
+                      {
+                        "Type": "PlayAnimation",
+                        "Slot": "Status",
+                        "Animation": { "Compute": "AlertedAnimation" }
+                      }
+                    ]
                   },
                   {
                     "Type": "SpawnParticles",

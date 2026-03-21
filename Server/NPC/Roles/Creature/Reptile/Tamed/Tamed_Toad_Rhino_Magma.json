@@ -80,7 +80,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Beef_Raw"],
+    "AttractiveItemSet": [
+      "Food_Beef_Raw"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -90,11 +92,15 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false,
+    "CanBreedPair": true,
     "IsMountable": false,
     "MountAnchorX": 0,
     "MountAnchorY": 1.3,
-    "MountAnchorZ": 0.1
+    "MountAnchorZ": 0.1,
+    "SleepAnimation": "",
+    "SleepEnterAnimation": "",
+    "WakeAnimation": "",
+    "NeedsSeekConsumeAnimation": ""
   },
   "Parameters": {
     "NameTranslationKey": {

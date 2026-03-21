@@ -64,7 +64,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Fish_Raw"],
+    "AttractiveItemSet": [
+      "Food_Fish_Raw"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -74,7 +76,7 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false,
+    "CanBreedPair": true,
     "IsMountable": false,
     "MountAnchorX": 0,
     "MountAnchorY": 1.3,

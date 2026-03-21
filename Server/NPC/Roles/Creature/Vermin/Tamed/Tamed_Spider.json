@@ -202,7 +202,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Chicken_Raw"],
+    "AttractiveItemSet": [
+      "Food_Chicken_Raw"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -212,8 +214,7 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false
+    "CanBreedPair": true,
+    "NeedsSeekConsumeAnimation": ""
   }
 }
-
-

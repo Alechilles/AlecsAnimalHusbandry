@@ -62,7 +62,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Beef_Raw"],
+    "AttractiveItemSet": [
+      "Food_Beef_Raw"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -72,7 +74,8 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false
+    "CanBreedPair": true,
+    "NeedsSeekConsumeAnimation": ""
   },
   "Parameters": {
     "NameTranslationKey": {
@@ -81,5 +84,3 @@
     }
   }
 }
-
-

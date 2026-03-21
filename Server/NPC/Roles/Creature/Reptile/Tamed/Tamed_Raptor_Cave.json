@@ -51,7 +51,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Chicken_Raw"],
+    "AttractiveItemSet": [
+      "Food_Chicken_Raw"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -61,11 +63,12 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false,
+    "CanBreedPair": true,
     "IsMountable": true,
     "MountAnchorX": 0,
     "MountAnchorY": 1.55,
-    "MountAnchorZ": 0.2
+    "MountAnchorZ": 0.2,
+    "NeedsSeekConsumeAnimation": ""
   },
   "Parameters": {
     "NameTranslationKey": {
@@ -74,5 +77,3 @@
     }
   }
 }
-
-

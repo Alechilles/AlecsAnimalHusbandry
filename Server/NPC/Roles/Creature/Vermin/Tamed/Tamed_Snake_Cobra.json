@@ -42,7 +42,9 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": ["Food_Egg"],
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
     "InteractionConfigId": "TwInteractionConfig_AnimalHusbandry_Predator",
     "CanFollow": true,
     "CanHold": true,
@@ -52,7 +54,11 @@
     "CanReturnHome": true,
     "CanRecall": true,
     "CanSetHome": true,
-    "CanBreedPair": false
+    "CanBreedPair": true,
+    "SleepAnimation": "",
+    "SleepEnterAnimation": "",
+    "WakeAnimation": "",
+    "NeedsSeekConsumeAnimation": ""
   },
   "Parameters": {
     "NameTranslationKey": {
