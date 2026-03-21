@@ -4,7 +4,7 @@
     "Description": "server.items.AnimalHusbandry_Command_Item.description"
   },
   "Quality": "Uncommon",
-  "PlayerAnimationsId": "Item",
+  "PlayerAnimationsId": "Block",
   "Interactions": {
     "Primary": {
       "Interactions": [
@@ -23,10 +23,10 @@
     }
   },
   "Model": "Items/Tools/Feedbag/Feedbag.blockymodel",
-  "Texture": "Items/Tools/Feedbag/Seedbag_Texture.png",
-  "Icon": "Icons/ItemsGenerated/Utility_Bag_Seed.png",
+  "Texture": "Items/Tools/Feedbag/Feedbag_Texture.png",
+  "Icon": "Icons/ItemsGenerated/Tool_Feedbag.png",
   "IconProperties": {
-    "Scale": 0.76,
+    "Scale": 0.5,
     "Translation": [
       -1,
       5
@@ -37,5 +37,6 @@
       0
     ]
   },
+  "Scale": 1.2,
   "MaxStack": 1
 }
