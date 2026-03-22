@@ -1,3 +1,9 @@
+---
+title: "Commands and Controls"
+order: 3
+published: true
+draft: false
+---
 # Commands and Controls
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -8,7 +14,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 - **F (Interact):** quick-toggle simple companion modes on both livestock and Beasts (`Follow`, `Hold`, `Idle`).
 
 ## Livestock Command Bag Commands
-Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
+Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/items/livestock-command-bag)
 
 - Follow
 - Hold
@@ -19,7 +25,7 @@ Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command
 - Idle
 
 ## Beast Command Flute Commands
-Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute)
 
 - Follow
 - Hold
@@ -42,8 +48,10 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute
 
 ## Related Pages
 - [Items Index](/mod/alecs-animal-husbandry/items)
-- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
+- [Mountable Mobs Reference](/mod/alecs-animal-husbandry/reference-library/mountable-mobs-reference)
 
 > [Screenshot Placeholder: Command radial/menu with highlighted options]
 > [Screenshot Placeholder: Attack Target use on a selected hostile]
+
+

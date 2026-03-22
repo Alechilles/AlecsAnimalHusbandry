@@ -1,3 +1,9 @@
+---
+title: "Systems Overview"
+order: 5
+published: true
+draft: false
+---
 # Systems Overview
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -25,13 +31,13 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 - Animal Husbandry Beast roles use tranquilizer sleep parameters to determine when sleep can trigger.
 - This is why Beast taming feels more like a hunt-and-subdue loop than livestock taming.
 - Once tame is complete, Beasts move into the same ownership/command ecosystem as other companions.
-- Full progression details: [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- Full progression details: [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
 
 ## Needs and Happiness
 - Animals seek food and water when configured to do so.
 - Feed trough blocks can provide staged water charges for hydration, and compatible bucket items can refill trough water.
 - Happiness influences breeding eligibility and long-term productivity.
-- Practical care loop details: [Happiness and Needs Guide](/mod/alecs-animal-husbandry/happiness-and-needs-guide)
+- Practical care loop details: [Happiness and Needs Guide](/mod/alecs-animal-husbandry/gameplay-guides/happiness-and-needs-guide)
 
 ## Breeding and Lifecycle
 - Breeding uses compatibility rules + cooldown + happiness gates.
@@ -50,11 +56,13 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 
 ## Species Coverage Snapshot
 - Livestock, neutral wildlife, and passive critter/cactee cohorts are all integrated into the same tame/companion progression loop.
-- Mounting capability is available on all Livestock, Neutral Wildlife, and Beasts that could reasonably support a rider. See [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference).
+- Mounting capability is available on all Livestock, Neutral Wildlife, and Beasts that could reasonably support a rider. See [Mountable Mobs Reference](/mod/alecs-animal-husbandry/reference-library/mountable-mobs-reference).
 
 ## Related Pages
 - [Items Index](/mod/alecs-animal-husbandry/items)
-- [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
+- [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/commands-and-controls)
 
 ## Coop Integration
 - Coop flows preserve companion metadata where configured.
+
+

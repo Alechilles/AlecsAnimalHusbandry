@@ -1,3 +1,9 @@
+---
+title: "Breeding and Growth Guide"
+order: 2
+published: true
+draft: false
+---
 # Breeding and Growth Guide
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -88,3 +94,4 @@ Default livestock pairing/cooldown profile:
 
 > [Screenshot Placeholder: Breeding pair ready state on two companions]
 > [Screenshot Placeholder: Newborn/juvenile stage beside adult parent]
+

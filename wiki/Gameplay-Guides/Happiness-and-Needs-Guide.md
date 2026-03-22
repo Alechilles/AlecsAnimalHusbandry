@@ -1,3 +1,9 @@
+---
+title: "Happiness and Needs Guide"
+order: 4
+published: true
+draft: false
+---
 # Happiness and Needs Guide
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -28,8 +34,8 @@ Feed trough note:
 - Troughs are useful in enclosed pens where natural water access is awkward.
 
 See food preferences here:
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
-- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/reference-library/livestock-taming-reference)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
 
 ## Happiness and Breeding
 - Breeding checks include a happiness gate (commonly **70** in current configs).
@@ -37,7 +43,7 @@ See food preferences here:
 - Stable care loops (food, water, safe enclosure, low stress) keep breeding cadence predictable.
 
 See breeding timings and cooldown behavior:
-- [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
+- [Breeding and Growth Guide](/mod/alecs-animal-husbandry/gameplay-guides/breeding-and-growth-guide)
 
 ## Fast Checklist
 1. Food available and in range.
@@ -47,3 +53,5 @@ See breeding timings and cooldown behavior:
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]
+
+

@@ -1,3 +1,9 @@
+---
+title: "Getting Started Guide"
+order: 2
+published: true
+draft: false
+---
 # Getting Started Guide
 
 Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -10,11 +16,11 @@ Pick your first route:
 ## Step 2A: Livestock First (Recommended)
 1. Find a supported livestock species.
 2. Complete the tame interaction.
-3. Craft a [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag).
+3. Craft a [Livestock Command Bag](/mod/alecs-animal-husbandry/items/livestock-command-bag).
 4. Link your companion and test `Follow`, `Hold`, and `Recall`.
 
 Preferred foods and livestock taming details:
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/reference-library/livestock-taming-reference)
 
 > [Screenshot Placeholder: Taming interaction prompt and successful tame state]
 
@@ -25,11 +31,11 @@ Before taming, prepare tranquilizer gear:
 3. Craft the Tranquilizer Shortbow at the Weapon Bench (Tier 2) with Armory access.
 4. Use tranquilizer pressure and health control until tame conditions are met.
 5. Keep the Beast at **20% HP or lower**, otherwise tranquilizer sleep will not trigger.
-6. After taming, craft/use the [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute).
+6. After taming, craft/use the [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute).
 
 Detailed recipes and per-species tranquilizer shot counts:
 - [Items Index](/mod/alecs-animal-husbandry/items)
-- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
 
 > [Screenshot Placeholder: Beast taming loadout in inventory]
 
@@ -62,7 +68,7 @@ Breeding readiness depends on happiness plus eligibility gates.
 5. If you want to trigger breeding manually, **crouch and interact while holding the animal's preferred food**.
 
 Use the detailed timings here:
-- [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
+- [Breeding and Growth Guide](/mod/alecs-animal-husbandry/gameplay-guides/breeding-and-growth-guide)
 
 ## Step 6: Scale With Commands
 Use command items to control multiple companions efficiently:
@@ -72,3 +78,5 @@ Use command items to control multiple companions efficiently:
 - Quick mode toggle: press `F` on a tamed companion to cycle simple modes (`Follow`, `Hold`, `Idle`).
 
 > [Screenshot Placeholder: Multiple companions executing a command at once]
+
+

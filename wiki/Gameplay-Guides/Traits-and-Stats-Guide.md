@@ -1,3 +1,9 @@
+---
+title: "Traits and Stats Guide"
+order: 6
+published: true
+draft: false
+---
 # Traits and Stats Guide
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -60,4 +66,5 @@ Use this page to understand the modifier ranges your lines can roll and inherit.
 
 > [Screenshot Placeholder: Companion panel trait list with values]
 > [Screenshot Placeholder: Side-by-side comparison of two breeding candidates]
+
 

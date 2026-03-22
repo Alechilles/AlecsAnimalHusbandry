@@ -1,3 +1,9 @@
+---
+title: "Troubleshooting"
+order: 7
+published: true
+draft: false
+---
 # Troubleshooting
 
 Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -35,7 +41,7 @@ Check:
 3. Alec's Tamework is installed and loaded correctly.
 
 Recipe details:
-- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute)
 
 ## "I can't craft tranquilizer bow/arrows/potion"
 Check:
@@ -46,9 +52,9 @@ Check:
 5. Logs do not show missing-asset validation errors.
 
 Recipe details:
-- [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
-- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
-- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+- [Tranquilizer Potion](/mod/alecs-animal-husbandry/items/tranquilizer-potion)
+- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items/tranquilizer-arrows)
+- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items/tranquilizer-shortbow)
 
 ## Recovery Workflow
 1. Revert last config edit.
@@ -57,3 +63,5 @@ Recipe details:
 4. Re-test with one species before scaling.
 
 > [Screenshot Placeholder: Example server error line and corrected config snippet]
+
+

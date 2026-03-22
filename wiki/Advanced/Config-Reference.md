@@ -1,3 +1,9 @@
+---
+title: "Config Reference (Advanced)"
+order: 2
+published: true
+draft: false
+---
 # Config Reference (Advanced)
 
 Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/readme)
@@ -58,3 +64,4 @@ Still supported for compatibility:
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
+

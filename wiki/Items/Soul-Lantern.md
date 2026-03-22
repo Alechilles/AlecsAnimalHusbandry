@@ -1,3 +1,9 @@
+---
+title: "Soul Lantern"
+order: 5
+published: true
+draft: false
+---
 # Soul Lantern
 
 Parent: [Items Index](/mod/alecs-animal-husbandry/items) | [Home](/mod/alecs-animal-husbandry/readme)
@@ -50,11 +56,13 @@ This makes the **Soul Lantern** useful for trading companions between players wh
 - Transport valuable breeding stock without leading them one by one.
 
 ## Related Pages
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
-- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
-- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/reference-library/livestock-taming-reference)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
+- [Livestock Command Bag](/mod/alecs-animal-husbandry/items/livestock-command-bag)
+- [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute)
 
 > [Screenshot Placeholder: Empty Soul Lantern in inventory]
 > [Screenshot Placeholder: Capturing a tamed companion with the Soul Lantern]
 > [Screenshot Placeholder: Releasing a stored companion into a new pen]
+
+
