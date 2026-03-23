@@ -68,7 +68,7 @@ This page is a practical quick-reference for livestock taming.
 | Moose Cow | Cauliflower |
 | Penguin | Raw Fish |
 | Spark Living | Charcoal |
-| Tetrabird | Raw Chicken |
+| Tetrabird | Wild Berries |
 | Tortoise | Lettuce |
 | Trillodon | Cauliflower |
 
