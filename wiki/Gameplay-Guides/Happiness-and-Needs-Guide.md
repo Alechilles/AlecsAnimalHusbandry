@@ -1,6 +1,6 @@
 ---
 title: "Happiness and Needs Guide"
-order: 4
+order: 3
 published: true
 draft: false
 ---
@@ -53,5 +53,6 @@ See breeding timings and cooldown behavior:
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]
+
 
 

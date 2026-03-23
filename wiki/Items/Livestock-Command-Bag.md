@@ -1,6 +1,6 @@
 ---
 title: "Livestock Command Bag"
-order: 3
+order: 2
 published: true
 draft: false
 ---
@@ -36,5 +36,6 @@ See: [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/command
 
 > [Screenshot Placeholder: Livestock Command Bag icon and in-hand view]
 > [Screenshot Placeholder: Bag command menu open with linked companions]
+
 
 

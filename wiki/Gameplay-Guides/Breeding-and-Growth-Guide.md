@@ -1,6 +1,6 @@
 ---
 title: "Breeding and Growth Guide"
-order: 2
+order: 5
 published: true
 draft: false
 ---
@@ -94,4 +94,5 @@ Default livestock pairing/cooldown profile:
 
 > [Screenshot Placeholder: Breeding pair ready state on two companions]
 > [Screenshot Placeholder: Newborn/juvenile stage beside adult parent]
+
 

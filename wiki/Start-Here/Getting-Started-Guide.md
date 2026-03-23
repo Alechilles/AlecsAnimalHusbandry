@@ -1,6 +1,6 @@
 ---
 title: "Getting Started Guide"
-order: 2
+order: 3
 published: true
 draft: false
 ---
@@ -78,5 +78,6 @@ Use command items to control multiple companions efficiently:
 - Quick mode toggle: press `F` on a tamed companion to cycle simple modes (`Follow`, `Hold`, `Idle`).
 
 > [Screenshot Placeholder: Multiple companions executing a command at once]
+
 
 

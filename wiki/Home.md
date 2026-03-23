@@ -1,5 +1,5 @@
 ---
-title: "Animal Husbandry Wiki"
+title: "Home"
 order: 1
 published: true
 draft: false
@@ -25,11 +25,11 @@ draft: false
 ## 3) Items and Crafting
 - [Items Index](/mod/alecs-animal-husbandry/items)
 - [Livestock Command Bag](/mod/alecs-animal-husbandry/items/livestock-command-bag)
-- [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute)
-- [Soul Lantern](/mod/alecs-animal-husbandry/items/soul-lantern)
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/items/tranquilizer-potion)
 - [Tranquilizer Arrows](/mod/alecs-animal-husbandry/items/tranquilizer-arrows)
 - [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/items/tranquilizer-shortbow)
+- [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command-flute)
+- [Soul Lantern](/mod/alecs-animal-husbandry/items/soul-lantern)
 - [Nametag](/mod/alecs-animal-husbandry/items/nametag)
 
 ## 4) Reference Library
@@ -42,5 +42,4 @@ draft: false
 - [Config Reference (Advanced)](/mod/alecs-animal-husbandry/advanced/config-reference)
 
 > [Screenshot Placeholder: Main companion command panel with multiple linked animals]
-
 

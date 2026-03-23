@@ -65,3 +65,4 @@ Still supported for compatibility:
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
 
+

@@ -60,3 +60,4 @@ This page is a quick-reference for mobs that are currently configured as mountab
 > [Screenshot Placeholder: Player mounting a Beast companion]
 
 
+

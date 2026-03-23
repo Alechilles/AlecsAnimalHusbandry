@@ -1,6 +1,6 @@
 ---
 title: "Commands and Controls"
-order: 3
+order: 4
 published: true
 draft: false
 ---
@@ -53,5 +53,6 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/items/beast-command
 
 > [Screenshot Placeholder: Command radial/menu with highlighted options]
 > [Screenshot Placeholder: Attack Target use on a selected hostile]
+
 
 

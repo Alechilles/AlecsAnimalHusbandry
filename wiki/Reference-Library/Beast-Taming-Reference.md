@@ -74,3 +74,4 @@ This page is a practical quick-reference for Beast taming.
 > [Screenshot Placeholder: Taming interaction after tranquilized sleep]
 
 
+

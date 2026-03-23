@@ -1,6 +1,6 @@
 ---
 title: "Beast Command Flute"
-order: 2
+order: 6
 published: true
 draft: false
 ---
@@ -38,5 +38,6 @@ See: [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/command
 
 > [Screenshot Placeholder: Beast Command Flute icon and in-hand model]
 > [Screenshot Placeholder: Beast command menu with Attack Target highlighted]
+
 
 

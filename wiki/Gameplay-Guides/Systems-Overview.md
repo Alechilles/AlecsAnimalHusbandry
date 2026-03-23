@@ -1,6 +1,6 @@
 ---
 title: "Systems Overview"
-order: 5
+order: 2
 published: true
 draft: false
 ---
@@ -64,5 +64,6 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [
 
 ## Coop Integration
 - Coop flows preserve companion metadata where configured.
+
 
 

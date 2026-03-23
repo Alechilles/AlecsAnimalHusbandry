@@ -1,6 +1,6 @@
 ---
 title: "Soul Lantern"
-order: 5
+order: 7
 published: true
 draft: false
 ---
@@ -64,5 +64,6 @@ This makes the **Soul Lantern** useful for trading companions between players wh
 > [Screenshot Placeholder: Empty Soul Lantern in inventory]
 > [Screenshot Placeholder: Capturing a tamed companion with the Soul Lantern]
 > [Screenshot Placeholder: Releasing a stored companion into a new pen]
+
 
 

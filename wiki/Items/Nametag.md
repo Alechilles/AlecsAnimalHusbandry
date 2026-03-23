@@ -1,6 +1,6 @@
 ---
 title: "Nametag"
-order: 4
+order: 8
 published: true
 draft: false
 ---
@@ -39,4 +39,5 @@ Use it to name your tamed livestock and Beasts so your stable and command panel 
 
 > [Screenshot Placeholder: Naming prompt open on a tamed livestock companion]
 > [Screenshot Placeholder: Named companions visible in a command panel list]
+
 

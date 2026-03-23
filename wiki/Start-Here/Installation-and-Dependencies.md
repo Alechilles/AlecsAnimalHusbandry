@@ -1,6 +1,6 @@
 ---
 title: "Installation and Dependencies"
-order: 3
+order: 2
 published: true
 draft: false
 ---
@@ -31,4 +31,5 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 > [Screenshot Placeholder: Server log with clean startup and no Animal Husbandry SEVERE errors]
 > [Screenshot Placeholder: First linked companion in command panel]
+
 

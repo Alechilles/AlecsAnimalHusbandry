@@ -1,6 +1,6 @@
 ---
 title: "Tranquilizer Shortbow"
-order: 8
+order: 5
 published: true
 draft: false
 ---
@@ -35,5 +35,6 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
 
 > [Screenshot Placeholder: Tranquilizer Shortbow recipe and crafted item]
+
 
 
