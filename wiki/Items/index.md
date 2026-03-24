@@ -1,6 +1,6 @@
 ---
 title: "Items Index"
-order: 1
+order: 4
 published: true
 draft: false
 ---
@@ -54,6 +54,7 @@ These items are useful for both livestock and Beast management.
 5. Apply Nametags to distinguish and organize specific companions.
 
 > [Screenshot Placeholder: Item progression row (bag -> tranquilizer kit -> flute)]
+
 
 
 

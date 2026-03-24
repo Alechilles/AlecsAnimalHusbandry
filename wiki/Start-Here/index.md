@@ -1,6 +1,6 @@
 ---
 title: "Start Here"
-order: 1
+order: 2
 published: true
 draft: false
 ---
@@ -22,6 +22,7 @@ Use this section for first-time setup and your first successful tame.
 
 ## Next Section
 - [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides)
+
 
 
 

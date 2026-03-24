@@ -1,6 +1,6 @@
 ---
 title: "Gameplay Guides Index"
-order: 1
+order: 3
 published: true
 draft: false
 ---
@@ -28,6 +28,7 @@ This section contains practical play guides for day-to-day companion management.
 
 ## Related Section
 - [Reference Library Index](/mod/alecs-animal-husbandry/reference-library)
+
 
 
 

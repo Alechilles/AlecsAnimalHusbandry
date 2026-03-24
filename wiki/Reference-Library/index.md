@@ -1,6 +1,6 @@
 ---
 title: "Reference Library Index"
-order: 1
+order: 5
 published: true
 draft: false
 ---
@@ -19,6 +19,7 @@ Use this section for lookup-style tables and species coverage information.
 - [Items Index](/mod/alecs-animal-husbandry/items)
 - [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides)
 - [Config Reference (Advanced)](/mod/alecs-animal-husbandry/advanced/config-reference)
+
 
 
 
