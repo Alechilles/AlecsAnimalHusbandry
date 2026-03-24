@@ -6,7 +6,7 @@ draft: false
 ---
 # Traits and Stats Guide
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 Traits are multipliers that shape companion performance.
 A trait value above/below 1.0 changes outcomes depending on the effect type.
@@ -66,6 +66,7 @@ Use this page to understand the modifier ranges your lines can roll and inherit.
 
 > [Screenshot Placeholder: Companion panel trait list with values]
 > [Screenshot Placeholder: Side-by-side comparison of two breeding candidates]
+
 
 
 

@@ -6,8 +6,8 @@ draft: false
 ---
 # Mountable Mobs Reference
 
-Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library) | [Home](/mod/alecs-animal-husbandry/readme)
-Related guide: [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/commands-and-controls)
+Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Related guide: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 This page is a quick-reference for mobs that are currently configured as mountable in Animal Husbandry.
 
@@ -58,6 +58,7 @@ This page is a quick-reference for mobs that are currently configured as mountab
 
 > [Screenshot Placeholder: Player mounting a livestock companion]
 > [Screenshot Placeholder: Player mounting a Beast companion]
+
 
 
 

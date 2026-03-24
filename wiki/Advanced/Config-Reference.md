@@ -6,7 +6,7 @@ draft: false
 ---
 # Config Reference (Advanced)
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/readme)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 This page is optional for players who want to tune behavior.
 If you only want to play, use the main guides instead.
@@ -64,5 +64,6 @@ Still supported for compatibility:
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
+
 
 

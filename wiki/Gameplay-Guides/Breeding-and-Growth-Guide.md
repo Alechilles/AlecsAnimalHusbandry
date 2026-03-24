@@ -6,7 +6,7 @@ draft: false
 ---
 # Breeding and Growth Guide
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides) | [Home](/mod/alecs-animal-husbandry/readme)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 This page is your practical timing reference for line planning.
 
@@ -94,5 +94,6 @@ Default livestock pairing/cooldown profile:
 
 > [Screenshot Placeholder: Breeding pair ready state on two companions]
 > [Screenshot Placeholder: Newborn/juvenile stage beside adult parent]
+
 
 

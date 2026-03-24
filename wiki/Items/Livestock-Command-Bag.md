@@ -6,7 +6,7 @@ draft: false
 ---
 # Livestock Command Bag
 
-Back to: [Items Index](/mod/alecs-animal-husbandry/items)
+Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## What It Does
 - Link and unlink tamed livestock/neutral companions.
@@ -28,14 +28,15 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 - 4 seconds
 
 ## Commands
-See: [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/commands-and-controls)
+See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 ## Related Pages
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/reference-library/livestock-taming-reference)
-- [Getting Started Guide](/mod/alecs-animal-husbandry/start-here/getting-started-guide)
+- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
 > [Screenshot Placeholder: Livestock Command Bag icon and in-hand view]
 > [Screenshot Placeholder: Bag command menu open with linked companions]
+
 
 
 

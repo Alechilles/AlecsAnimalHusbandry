@@ -6,7 +6,7 @@ draft: false
 ---
 # Nametag
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items) | [Home](/mod/alecs-animal-husbandry/readme)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 The **Nametag** is provided by **Alec's Nametags!** and is included in the Animal Husbandry dependency set.
 Use it to name your tamed livestock and Beasts so your stable and command panel are easier to manage.
@@ -39,5 +39,6 @@ Use it to name your tamed livestock and Beasts so your stable and command panel 
 
 > [Screenshot Placeholder: Naming prompt open on a tamed livestock companion]
 > [Screenshot Placeholder: Named companions visible in a command panel list]
+
 
 

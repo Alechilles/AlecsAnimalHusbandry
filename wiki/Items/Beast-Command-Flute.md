@@ -6,7 +6,7 @@ draft: false
 ---
 # Beast Command Flute
 
-Back to: [Items Index](/mod/alecs-animal-husbandry/items)
+Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## What It Does
 - Controls linked Beast companions.
@@ -30,14 +30,15 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items)
 - 5 seconds
 
 ## Commands
-See: [Commands and Controls](/mod/alecs-animal-husbandry/gameplay-guides/commands-and-controls)
+See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 ## Related Pages
-- [Beast Taming Reference](/mod/alecs-animal-husbandry/reference-library/beast-taming-reference)
-- [Getting Started Guide](/mod/alecs-animal-husbandry/start-here/getting-started-guide)
+- [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
 > [Screenshot Placeholder: Beast Command Flute icon and in-hand model]
 > [Screenshot Placeholder: Beast command menu with Attack Target highlighted]
+
 
 
 

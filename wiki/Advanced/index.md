@@ -6,10 +6,11 @@ draft: false
 ---
 # Advanced Index
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/readme)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 ## Child Pages
-- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/advanced/config-reference)
+- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference-advanced)
+
 
 
 
