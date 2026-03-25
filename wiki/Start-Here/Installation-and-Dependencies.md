@@ -9,9 +9,9 @@ draft: false
 Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 ## Required Mods
-- Alec's Animal Husbandry!
-- Alec's Tamework! `2.4.x` (match the current version listed in this mod's README/changelog)
-- Alec's Nametags!
+- [Alec's Animal Husbandry!](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
+- [Alec's Tamework!](https://www.curseforge.com/hytale/mods/alecs-tamework) `v2.4.x`
+- [Alec's Nametags!](https://www.curseforge.com/hytale/mods/alecs-nametags)
 
 ## Installation Steps
 1. Put all required mods into your Hytale Server/mods folder.
@@ -27,10 +27,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 ## Existing World Support
 - Existing worlds are supported.
-- Older tamed entities may require one successful interaction/link to fully migrate ownership metadata.
-
-> [Screenshot Placeholder: Server log with clean startup and no Animal Husbandry SEVERE errors]
-> [Screenshot Placeholder: First linked companion in command panel]
+- Older vanilla-tamed entities may require one successful interaction/link to fully migrate ownership metadata.
 
 
 
