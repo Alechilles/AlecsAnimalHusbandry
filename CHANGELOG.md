@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.3.1 - Aures Spawner Icons + Neutral Needs Consolidation - 2026-03-24
+
+### Added
+- Added Animal Husbandry soul-lantern icon override coverage for Aures livestock/companion variants by wiring attachment-driven generated icon mappings in `AnimalHusbandry_Soul_Lantern`.
+- Added animation override hooks across animal and predator role assets to align role animation behavior with current template wiring.
+
+### Changed
+- Consolidated neutral-animal needs handling into `TwNeedsConfig_AnimalHusbandry` and removed the separate `TwNeedsConfig_AnimalHusbandry_Neutral` split.
+- Updated livestock command-bag item + ingredient visuals to align with base `Tool_Feedbag` presentation.
+- Refreshed README/wiki navigation structure and links (index/frontmatter layout updates and current wiki slugs).
+
+### Fixed
+- Fixed Tetrabird preferred-food wiring so wild and tamed Tetrabird roles now point to the intended berry-based attractive item + particle set.
+
 ## 1.3.0 - Neutral/Critter Cohort Expansion - 2026-03-19
 
 ### Added
@@ -125,7 +139,6 @@
 - Starter documentation (`README.md`, `CHANGELOG.md`).
 - Starter language pack scaffold (`Server/Languages/en-US/server.lang`).
 - Disabled starter Tamework config stubs for livestock interactions, happiness, breeding, and traits.
-
 
 
 
