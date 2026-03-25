@@ -4,18 +4,21 @@
 [![Animal Husbandry](https://img.shields.io/curseforge/dt/1480275?label=Animal%20Husbandry&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
 
 [![Discord](https://img.shields.io/discord/1468261809739005996?style=for-the-badge&logo=discord&logoColor=white&label=Join%20Discord&color=rgb(88,101,242))](https://discord.gg/E8n8RgTTdq)
+[![Buy me a coffee](https://img.shields.io/badge/ko--fi-Support%20Me-ff5f5f?logo=ko-fi&style=for-the-badge)](https://ko-fi.com/alechilles)
+
+[![Creator Code](https://img.shields.io/badge/Creator%20Code-Alec-00AEEF?style=for-the-badge)](https://hytale.com/)
 
 # Alec's Animal Husbandry!
 
 ## Wiki
-- [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/home)
+- [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 - [Start Here](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/start-here)
 - [Installation and Dependencies](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/installation-and-dependencies)
 - [Getting Started Guide](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/getting-started-guide)
-- [Items](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items)
-- [Gameplay Guides](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides)
-- [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library)
-- [Advanced](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced)
+- [Items](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items-index)
+- [Gameplay Guides](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides-index)
+- [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library-index)
+- [Advanced](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced-index)
 
 Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
 
