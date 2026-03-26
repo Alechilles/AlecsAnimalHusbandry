@@ -1,10 +1,9 @@
 # Changelog
 
-## 1.3.2 - Aures Expansion Follow-Up + Compatibility Cleanup - 2026-03-26
+## 1.3.2 - Alec's Cats Soul Lantern Compatibility + Update 4 Compatibility Cleanup - 2026-03-26
 
 ### Added
 - Added Soul Lantern capture/spawner support for Alec's Cats roles in `AnimalHusbandry_Soul_Lantern`.
-- Added generated spawner icon coverage for Aures livestock skin variants.
 
 ### Changed
 - Removed the Animal Husbandry coop override assets (`Coop_Chicken` and `TwCoopConfig_AnimalHusbandry_Coop_Chicken`) now that they are no longer needed.
