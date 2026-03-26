@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.3.2 - Aures Expansion Follow-Up + Compatibility Cleanup - 2026-03-26
+
+### Added
+- Added Soul Lantern capture/spawner support for Alec's Cats roles in `AnimalHusbandry_Soul_Lantern`.
+- Added generated spawner icon coverage for Aures livestock skin variants.
+
+### Changed
+- Removed the Animal Husbandry coop override assets (`Coop_Chicken` and `TwCoopConfig_AnimalHusbandry_Coop_Chicken`) now that they are no longer needed.
+- Updated release metadata compatibility to `ServerVersion`/`gameVersions` `2026.03.26-89796e57b`.
+- Updated `manifest.json` version to `1.3.2`.
+- Refreshed dependency install documentation links in the wiki.
+
+### Fixed
+- Removed `NextTargetRange` from `Template_Predator` because it no longer exists on the base-game component.
+- Increased throw-speed values in shared livestock/neutral templates to satisfy current minimum throw-speed requirements.
+
 ## 1.3.1 - Aures Spawner Icons + Neutral Needs Consolidation - 2026-03-24
 
 ### Added
