@@ -495,10 +495,6 @@
       "Value": false,
       "Description": "Whether to flee while in the alerted state if not threatened after AlertedTime expires."
     },
-    "InteractionConfigId": {
-      "Value": "",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
-    },
     "CanFollow": {
       "Value": false,
       "Description": "Whether command-driven Follow behavior is enabled for this role."
@@ -1528,7 +1524,6 @@
         "Actions": [
           {
             "Type": "TameworkInteractPrompt",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsMountable": { "Compute": "IsMountable" }
           }
@@ -1549,7 +1544,6 @@
           },
           {
             "Type": "TameworkInteract",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsMountable": { "Compute": "IsMountable" }
           }

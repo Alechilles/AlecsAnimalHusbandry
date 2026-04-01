@@ -52,10 +52,6 @@
       "Value": "",
       "Description": "The role the NPC will change into when it is tamed."
     },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
-      "Description": "Optional TwInteractionConfig asset id override."
-    },
     "CanFollow": {
       "Value": true,
       "Description": "Whether command-driven Follow behavior is enabled for this role."
@@ -908,7 +904,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "true" },
         "Continue": true,
         "Sensor": {
           "Type": "Any"
@@ -916,13 +912,12 @@
         "Actions": [
           {
             "Type": "TameworkInteractPrompt",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" }
           }
         ]
       },
       {
-        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "true" },
         "Sensor": {
           "Type": "HasInteracted"
         },
@@ -937,7 +932,6 @@
           },
           {
             "Type": "TameworkInteract",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" }
           }
         ]

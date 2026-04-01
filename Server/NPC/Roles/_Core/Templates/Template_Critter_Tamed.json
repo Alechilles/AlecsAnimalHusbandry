@@ -44,10 +44,6 @@
       "Value": "Want_Food_Carrot",
       "Description": "The particle system that spawns to indicate the NPC's liked item(s)."
     },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry_Critter",
-      "Description": "Optional TwInteractionConfig asset id override."
-    },
     "AttitudeGroup": {
       "Value": "AH_Livestock_Tamed",
       "Description": "This NPCs attitude group"
@@ -92,7 +88,6 @@
     "NameTranslationKey": { "Compute": "NameTranslationKey" },
     "AttractiveItemSet": { "Compute": "AttractiveItemSet" },
     "AttractiveItemSetParticles": { "Compute": "AttractiveItemSetParticles" },
-    "InteractionConfigId": { "Compute": "InteractionConfigId" },
     "AttitudeGroup": { "Compute": "AttitudeGroup" },
     "DefaultPlayerAttitude": { "Compute": "DefaultPlayerAttitude" },
     "IsTameable": { "Compute": "IsTameable" },

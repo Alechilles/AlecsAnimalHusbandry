@@ -172,10 +172,6 @@
       "Value": false,
       "Description": "Whether this NPC can be 'harvested'. This includes shearing, milking, etc."
     },
-    "InteractionConfigId": {
-      "Value": "",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces overlapping vanilla interaction branches."
-    },
     "CanFollow": {
       "Value": false,
       "Description": "Whether command-driven Follow behavior is enabled for this role."
@@ -2184,7 +2180,7 @@
           ]
         },
         {
-          "Enabled": { "Compute": "isEmpty(InteractionConfigId)" },
+          "Enabled": { "Compute": "false" },
           "Sensor": {
             "Type": "State",
             "State": "$Tamed",
@@ -2452,7 +2448,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "true" },
         "Continue": true,
         "Sensor": {
           "Type": "Any"
@@ -2460,7 +2456,6 @@
         "Actions": [
           {
             "Type": "TameworkInteractPrompt",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
             "IsMountable": { "Compute": "IsMountable" },
@@ -2469,7 +2464,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "true" },
         "Sensor": {
           "Type": "HasInteracted"
         },
@@ -2484,7 +2479,6 @@
           },
           {
             "Type": "TameworkInteract",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
             "IsMountable": { "Compute": "IsMountable" },
@@ -2493,7 +2487,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "!isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "true" },
         "Sensor": {
           "Enabled": { "Compute": "!isEmpty(HarvestInteractionContext)" },
           "Type": "InteractionContext",
@@ -2510,7 +2504,6 @@
           },
           {
             "Type": "TameworkInteract",
-            "ConfigId": { "Compute": "InteractionConfigId" },
             "LovedItems": { "Compute": "AttractiveItemSet" },
             "IsHarvestable": { "Compute": "IsHarvestable" },
             "IsMountable": { "Compute": "IsMountable" },
@@ -2519,7 +2512,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "false" },
         "TreeMode": true,
         "Instructions": [
           {
@@ -2618,7 +2611,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "isEmpty(InteractionConfigId) && IsHarvestable" },
+        "Enabled": { "Compute": "false" },
         "TreeMode": true,
         "Instructions": [
           {
@@ -2689,7 +2682,7 @@
         ]
       },
       {
-        "Enabled": { "Compute": "isEmpty(InteractionConfigId) && IsMountable" },
+        "Enabled": { "Compute": "false" },
         "TreeMode": true,
         "Instructions": [
           {
@@ -2757,7 +2750,7 @@
       },
       {
         "$Comment": "Only now that we've failed to match all possible interactions do we set interactability to false.",
-        "Enabled": { "Compute": "isEmpty(InteractionConfigId)" },
+        "Enabled": { "Compute": "false" },
         "Actions": [
           {
             "Type": "SetInteractable",

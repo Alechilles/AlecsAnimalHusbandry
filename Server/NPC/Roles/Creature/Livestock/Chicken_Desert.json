@@ -36,9 +36,6 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "InteractionConfigId": {
-      "Compute": "InteractionConfigId"
-    },
     "SleepAnimation": "",
     "SleepEnterAnimation": "",
     "WakeAnimation": "",
@@ -58,10 +55,6 @@
     "TameRoleChange": {
       "Value": "Tamed_Chicken_Desert",
       "Description": "The role the NPC will change into when it's tamed."
-    },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
     }
   }
 }

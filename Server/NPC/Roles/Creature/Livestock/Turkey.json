@@ -3,13 +3,8 @@
   "Reference": "Template_Animal_Neutral",
   "Modify": {
     "Appearance": "Turkey",
-    "FlockArray": [
-      "Turkey",
-      "Turkey_Chick"
-    ],
-    "AttractiveItemSet": [
-      "Plant_Crop_Corn_Item"
-    ],
+    "FlockArray": ["Turkey", "Turkey_Chick"],
+    "AttractiveItemSet": ["Plant_Crop_Corn_Item"],
     "AttractiveItemSetParticles": "Want_Food_Corn",
     "DropList": "Drop_Turkey",
     "MaxHealth": 38,
@@ -31,9 +26,6 @@
     "MemoriesNameOverride": "Turkey",
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
-    },
-    "InteractionConfigId": {
-      "Compute": "InteractionConfigId"
     }
   },
   "Parameters": {
@@ -48,10 +40,6 @@
     "TameRoleChange": {
       "Value": "Tamed_Turkey",
       "Description": "The role the NPC will change into when it's tamed."
-    },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
     }
   }
 }

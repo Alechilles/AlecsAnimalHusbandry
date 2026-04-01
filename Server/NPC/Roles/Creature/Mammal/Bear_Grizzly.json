@@ -50,10 +50,6 @@
       "Value": "Tamed_Bear_Grizzly",
       "Description": "The role the NPC will change into when it's tamed."
     },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry_Predator",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
-    },
     "AttractiveItemSet": {
       "Value": ["Food_Fish_Raw"],
       "TypeHint": "String",
@@ -231,9 +227,6 @@
     },
     "TranquilizerSleepThresholdSeconds": {
       "Compute": "TranquilizerSleepThresholdSeconds"
-    },
-    "InteractionConfigId": {
-      "Compute": "InteractionConfigId"
     }
   }
 }

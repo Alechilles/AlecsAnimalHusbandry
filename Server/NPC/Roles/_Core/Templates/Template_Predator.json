@@ -447,10 +447,6 @@
         0.2
       ],
       "Description": "Health ratio range (relative to max health) required for tranquilizer-forced sleep. Default [0, 0.2] = 20% health or lower."
-    },
-    "InteractionConfigId": {
-      "Value": "",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow is used for this role."
     }
   },
   "IsMemory": {
@@ -3078,7 +3074,7 @@
       },
       {
         "Enabled": {
-          "Compute": "!isEmpty(InteractionConfigId) && IsTameable"
+          "Compute": "IsTameable"
         },
         "Continue": true,
         "Sensor": {
@@ -3087,9 +3083,6 @@
         "Actions": [
           {
             "Type": "TameworkInteractPrompt",
-            "ConfigId": {
-              "Compute": "InteractionConfigId"
-            },
             "LovedItems": {
               "Compute": "AttractiveItemSet"
             }
@@ -3098,7 +3091,7 @@
       },
       {
         "Enabled": {
-          "Compute": "!isEmpty(InteractionConfigId) && IsTameable"
+          "Compute": "IsTameable"
         },
         "Sensor": {
           "Type": "HasInteracted"
@@ -3110,9 +3103,6 @@
           },
           {
             "Type": "TameworkInteract",
-            "ConfigId": {
-              "Compute": "InteractionConfigId"
-            },
             "LovedItems": {
               "Compute": "AttractiveItemSet"
             }
@@ -3122,7 +3112,7 @@
       {
         "$Comment": "Only now that we've failed to match all possible interactions do we set interactability to false.",
         "Enabled": {
-          "Compute": "isEmpty(InteractionConfigId)"
+          "Compute": "false"
         },
         "Actions": [
           {

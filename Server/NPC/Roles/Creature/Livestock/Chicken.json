@@ -35,9 +35,6 @@
     "MemoriesNameOverride": "Chicken",
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
-    },
-    "InteractionConfigId": {
-      "Compute": "InteractionConfigId"
     }
   },
   "Parameters": {
@@ -52,10 +49,6 @@
     "TameRoleChange": {
       "Value": "Tamed_Chicken",
       "Description": "The role the NPC will change into when it's tamed."
-    },
-    "InteractionConfigId": {
-      "Value": "TwInteractionConfig_AnimalHusbandry",
-      "Description": "Optional TwInteractionConfig asset id override. If set, Tamework interaction flow replaces the vanilla tame branch."
     }
   }
 }
