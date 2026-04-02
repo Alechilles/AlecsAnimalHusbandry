@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.3 - Tamework Config ID Refactor - 2026-04-02
+
+### Changed
+- Renamed Animal Husbandry Tamework config assets to concise `AH*` ids/file names across interactions, breeding, companion, global, happiness, needs, traits, command item, and soul-lantern spawner config files.
+- Rewired wild/tamed role assets and shared templates to remove legacy `TwInteractionConfig_*` references and run the Tamework interaction flow through the renamed config assets.
+- Updated `manifest.json` version to `1.3.3`.
+
 ## 1.3.2 - Alec's Cats Soul Lantern Compatibility + Update 4 Compatibility Cleanup - 2026-03-26
 
 ### Added
