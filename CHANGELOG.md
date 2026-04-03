@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.3.4 - Temporary Coop Fallback Packaging - 2026-04-03
+
+### Added
+- Added temporary coop fallback assets directly in Animal Husbandry (`Server/Farming/Coops/Coop_Chicken.json` and `Server/Tamework/Items/Coops/ACCoopChicken.json`) so coop worlds remain stable when Alec's Coops is not enabled.
+
+### Changed
+- Updated fallback coop item config priority strategy so Alec's Coops can override Animal Husbandry when both are enabled.
+- Updated `manifest.json` version to `1.3.4`.
+
 ## 1.3.3 - Tamework Config ID Refactor - 2026-04-02
 
 ### Changed
