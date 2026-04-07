@@ -99,6 +99,21 @@
       "Value": "Want_Food_Carrot",
       "Description": "The particle system that spawns to indicate the NPC's liked item(s)."
     },
+    "FoodFavorite": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional favorite food IDs used for positive feed impulses. If empty, AttractiveItemSet is used."
+    },
+    "FoodGeneric": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional generic food IDs used for neutral/negative feed impulses."
+    },
+    "FoodPremium": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional premium food IDs used for bonus feed impulses."
+    },
     "FoodItemIDs": {
       "Value": [],
       "TypeHint": "String",

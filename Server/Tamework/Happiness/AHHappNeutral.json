@@ -42,6 +42,16 @@
   },
   "Impulses": {
     "GainOnFeed": 5.0,
+    "HandFeedDurationMinutes": 15.0,
+    "FeedImpulseDurationMinutes": 15.0,
+    "FeedItemImpulses": {
+      "Tw_Feed_Herbivore": -5.0
+    },
+    "FeedParamImpulses": {
+      "FoodFavorite": 5.0,
+      "FoodGeneric": -5.0,
+      "FoodPremium": 10.0
+    },
     "GainOnPet": 3.0,
     "LoseOnDamage": 10.0
   },

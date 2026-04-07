@@ -236,6 +236,21 @@
       "TypeHint": "String",
       "Description": "Food item IDs accepted for feeding."
     },
+    "FoodFavorite": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional favorite food IDs used for positive feed impulses. If empty, AttractiveItemSet is used."
+    },
+    "FoodGeneric": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional generic food IDs used for neutral/negative feed impulses."
+    },
+    "FoodPremium": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Optional premium food IDs used for bonus feed impulses."
+    },
     "NeedsSeekConsumeAnimation": {
       "Value": "Eat",
       "Description": "Optional animation played when consuming a needs resource (for example Eat)."

@@ -124,6 +124,11 @@
       "Type": "Feed",
       "Enabled": true,
       "ItemsParam": "AttractiveItemSet",
+      "ItemsInHand": [
+        {
+          "Item": "Tw_Feed_Herbivore"
+        }
+      ],
       "Heal": 25,
       "Effects": {
         "PlaySound": {

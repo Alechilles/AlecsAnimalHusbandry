@@ -19,6 +19,8 @@
     "Goat_Kid",
     "Horse",
     "Horse_Foal",
+    "Mosshorn",
+    "Mosshorn_Plain",
     "Mouflon",
     "Mouflon_Lamb",
     "Pig",
@@ -158,6 +160,11 @@
       "Type": "Feed",
       "Enabled": true,
       "ItemsParam": "AttractiveItemSet",
+      "ItemsInHand": [
+        {
+          "Item": "Tw_Feed_Herbivore"
+        }
+      ],
       "Heal": 25,
       "Effects": {
         "PlaySound": {

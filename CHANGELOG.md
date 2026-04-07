@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.4.0 - Multi-Food Feed Families + Timed Feed Happiness - 2026-04-07
+
+### Added
+- Added predator-specific needs/happiness config assets (`AHNeedsBeast`, `AHHappBeast`) so tamed predators can consume/use carnivore feed with dedicated impulse mappings.
+- Added optional food classification parameters to tamed templates (`FoodFavorite`, `FoodGeneric`, `FoodPremium`) for role-driven feed impulse mapping without per-role config duplication.
+
+### Changed
+- Feed interactions now keep `AttractiveItemSet` as the baseline food family and also accept feed items by cohort (`Tw_Feed_Herbivore` for livestock/neutral/critter, `Tw_Feed_Carnivore` for predator).
+- Passive needs consumption now includes feed items in container food ids (herbivore feed for default cohorts, carnivore feed for predator cohort).
+- Happiness configs now use timed feed impulses (`HandFeedDurationMinutes`, `FeedImpulseDurationMinutes`) with param/item mappings so feed effects refresh instead of stacking.
+- Enabled `HerbivoreFeed` and `CarnivoreFeed` asset-set toggles in `AHGlobal`.
+- Expanded tamed livestock group matching for neutral/critter cohorts using wildcard suffixes and restored Mosshorn coverage in livestock interaction role lists.
+- Removed the temporary coop fallback assets introduced in `1.3.4`.
+- Updated release metadata to `1.4.0` and aligned required Alec's Tamework dependency to `2.8.x`.
+
 ## 1.3.4 - Temporary Coop Fallback Packaging - 2026-04-03
 
 ### Added

@@ -28,7 +28,7 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 
 **1. Install requirements:**
 - Alec's Animal Husbandry!
-- Alec's Tamework! `v2.4.x`
+- Alec's Tamework! `v2.8.x`
 - Alec's Nametags!
 
 **2. Tame your first animal companion:**
@@ -201,7 +201,7 @@ Passive critter and cactee coverage now also includes:
 Current Beast support includes broad tame-role coverage for vanilla predator/beast families, with dedicated Beast command/taming flow and Beast-specific trait tuning.
 
 ## Compatibility
-- Requires Alec's Tamework! `2.4.x`
+- Requires Alec's Tamework! `2.8.x`
 - Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
 
 ## Planned Next
