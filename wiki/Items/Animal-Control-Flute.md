@@ -8,7 +8,7 @@ draft: false
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
-<img width="560" height="606" alt="Animal Control Flute" src="https://github.com/user-attachments/assets/672b1772-b4c6-46ce-9a1e-d3b62f4abaf5" />
+![Animal Control Flute](https://github.com/user-attachments/assets/672b1772-b4c6-46ce-9a1e-d3b62f4abaf5)
 
 ## What It Does
 - Link and unlink tamed livestock, neutral, and critter companions.
