@@ -8,6 +8,8 @@ draft: false
 
 Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
+![Nametag](https://github.com/user-attachments/assets/70ad5a86-bd2f-4655-805e-85dc9fbef1a5)
+
 The **Nametag** is provided by **Alec's Nametags!** and is included in the Animal Husbandry dependency set.
 Use it to name your tamed livestock and Beasts so your stable and command panel are easier to manage.
 
