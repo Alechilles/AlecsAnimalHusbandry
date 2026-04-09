@@ -51,7 +51,7 @@ These items are useful for both livestock and Beast management.
 ## Reference Tables
 
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 
 ## Suggested Progression
 1. Craft the Animal Control Flute and start building your first stable.

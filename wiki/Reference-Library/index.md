@@ -12,7 +12,7 @@ Use this section for lookup-style tables and species coverage information.
 
 ## Child Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 - [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
 
 ## Related Sections

@@ -20,7 +20,7 @@ Pick your first route:
 4. Link your companion and test `Follow`, `Hold`, and `Recall`.
 
 Preferred foods and livestock taming details:
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 
 > [Screenshot Placeholder: Taming interaction prompt and successful tame state]
 

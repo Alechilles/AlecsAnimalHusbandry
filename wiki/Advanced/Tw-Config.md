@@ -27,7 +27,7 @@ Unlike `/tw settings`, this editor is built for per-family/per-asset tuning (rol
 | `TwNameItemConfig` | Naming-item validation rules, ownership/tamed gates, character limits, random pool linkage. | [Naming-Items.md](https://github.com/Alechilles/AlecsTamework/blob/main/docs/Naming-Items.md) |
 | `TwNamesConfig` | Name pools used by naming systems for random suggestions. | [Naming-Items.md](https://github.com/Alechilles/AlecsTamework/blob/main/docs/Naming-Items.md) |
 | `TwCommandItemConfig` | Command tool linking, recipient filters, command lists/steps, linked panel behavior. | [Command-Items.md](https://github.com/Alechilles/AlecsTamework/blob/main/docs/Command-Items.md) |
-| `TwHappinessConfig` | Happiness values, equilibrium, impulses, and modifiers by role/cohort. | [Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index) |
+| `TwHappinessConfig` | Happiness values, equilibrium, impulses, and modifiers by role/group. | [Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index) |
 | `TwNeedsConfig` | Hunger/thirst decay, manual/passive refill behavior, tick policy, and needs-damage model. | [Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index) |
 | `TwBreedingConfig` | Breeding eligibility, cooldown timing, offspring lifecycle and role-family growth controls. | [Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index) |
 | `TwTraitConfig` | Trait pools, weights, inheritance rules, and role-specific trait behavior. | [Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index) |

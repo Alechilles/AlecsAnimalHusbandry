@@ -30,7 +30,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 ## Related Pages
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 - [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
 > [Screenshot Placeholder: Animal Control Flute icon and in-hand view]

@@ -1,26 +1,26 @@
 ---
-title: "Livestock Taming Reference"
+title: "Animal Taming Reference"
 order: 3
 published: true
 draft: false
 ---
-# Livestock Taming Reference
+# Animal Taming Reference
 
 Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 Related hub: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
-This page is a practical quick-reference for livestock taming.
+This page is a practical quick-reference for animal taming.
 
 ## Required Items
 1. Preferred food (see table below).
 2. [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute) (post-tame linking and commands).
 3. Basic enclosure setup with nearby water and food access.
 
-## Livestock Taming Flow
-1. Find a supported livestock species.
+## Animal Taming Flow
+1. Find a supported animal species.
 2. Hold its preferred food (or Feedbag if that species accepts it).
 3. Complete the tame interaction.
-4. You can press `F` on a tamed livestock animal to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
+4. You can press `F` on a tamed animal to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
 5. Left-click with your [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute) to link it.
 
 
@@ -49,8 +49,7 @@ This page is a practical quick-reference for livestock taming.
 | Turkey | Corn |
 | Warthog | Onion |
 
-## Neutral Animals Taming Table
-
+## Neutral Wildlife Taming Table
 | Animal | Preferred Food |
 |---|---|
 | Antelope | Lettuce |

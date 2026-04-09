@@ -36,7 +36,7 @@ Feed trough note:
 - Trough mechanics and bucket refill details: [Feed Trough](/mod/alecs-animal-husbandry/feed-trough)
 
 See food preferences here:
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 
 ## Happiness and Breeding
@@ -55,6 +55,5 @@ See breeding timings and cooldown behavior:
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]
-
 
 

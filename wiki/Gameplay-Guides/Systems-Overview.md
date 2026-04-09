@@ -55,7 +55,12 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 - Linked panel includes per-companion `Revive` plus nearby-only `Release`/`Cull` actions with safety gating.
 
 ## Species Coverage Snapshot
-- Livestock, neutral wildlife, and passive critter/cactee cohorts are all integrated into the same tame/companion progression loop.
+Animal Husbandry fully supports all vanilla:
+- Livestock
+- Neutral Animals (including passive critters/cactee variants)
+- Beasts (Predators)
+
+All of these animal groups are integrated into the same taming, companion, needs/happiness, breeding/progression, and command systems, with dedicated Beast combat/taming flow where applicable.
 - Mounting capability is available on all Livestock, Neutral Wildlife, and Beasts that could reasonably support a rider. See [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference).
 
 ## Related Pages

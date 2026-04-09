@@ -10,6 +10,9 @@
 [![Sponsored By HytaleModding Grant Program](https://github.com/user-attachments/assets/a03709e3-445a-4e58-8ec5-591688490c5d)](https://hytalemodding.dev/en/grants)
 
 # Alec's Animal Husbandry!
+Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
+
+Animal Husbandry now fully supports **all Livestock, Neutral Wildlife, and Beasts (Predators)**.
 
 ## Wiki
 - [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/animal-husbandry-wiki)
@@ -20,10 +23,6 @@
 - [Gameplay Guides](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides-index)
 - [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library-index)
 - [Configuration](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/configuration-index)
-
-Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
-
-Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through command and combat companion systems.
 
 ## Getting Started
 
@@ -70,18 +69,18 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 
 **7. Companion transport:**
 - Craft a **Soul Lantern** at Farmingbench Tier 2 (6x any wood, 2x void essence).
-- Use it to capture/release your tamed Livestock and Beasts.
+- Use it to capture/release your tamed companion animals.
 
 ## Core Gameplay Flow
 
 The intended loop is:
 1. Tame animals you care about.
 2. Keep them fed, watered, and happy.
-3. Breed strong pairs (especially for Livestock) to build better bloodlines.
+3. Breed strong pairs to build better bloodlines.
 4. Raise offspring through full life stages.
 5. Build stronger companion lines from healthier, happier, better-managed animals.
 
-Animals are meant to feel like long-term farm companions, not disposable resource drops.
+Animals are meant to feel like long-term companions, not disposable resource drops.
 
 ## Core Features
 
@@ -100,14 +99,14 @@ Animals are meant to feel like long-term farm companions, not disposable resourc
 - Happiness is influenced by several factors and works on an "equilibrium" system where it sits naturally at about 50, and various factors increase or decrease it.
 - Animals will only breed if they are well taken care of and happy.
 
-### Breeding, Traits, and Bloodlines (Livestock Focus)
+### Breeding, Traits, and Bloodlines
 <img width="649" height="119" alt="Discord_tBwiUZOqXi" src="https://github.com/user-attachments/assets/088f4c74-7cd3-478a-929a-5d9a64f3b76c" />
 
-- Breed compatible livestock pairs and grow long-term lines.
+- Breed compatible animal pairs and grow long-term lines.
 - **Breeding happens passively** when animals are above the happiness threshold and the area is not overcrowded.
 - Offspring roll and inherit traits, creating real variation between animals and lots of room for min-maxing.
-- Livestock uses the primary husbandry trait profile, including economy-oriented traits like `Bounty`.
-- Focus on maintaining a happy and bountiful herd that produces more per animal instead of mass farming shallow mobs.
+- Non-beast animal groups use the primary husbandry trait profile, including economy-oriented traits like `Bounty`.
+- Focus on maintaining happy, high-quality companion lines instead of mass farming shallow mobs.
 - Traits from natural spawns have a lower cap, with a higher cap that can be reached through breeding animals with the same traits.
 - Random attachments (such as fur color) are inherited, so babies will always match their parents (aside from a very small mutation chance).
 - Parent and offspring behavior supports more natural herd and flock development.
@@ -161,46 +160,12 @@ Adding the mod to an existing world is supported.
 - If an old tamed animal is not responding to owner-restricted actions, interact/link it once to migrate it.
 
 ## Species Scope
-Core Livestock coverage includes the full vanilla `Template_Livestock` family:
-- Bison
-- Boar / Pig / Warthog lines
-- Camel
-- Chicken / Desert Chicken
-- Cow
-- Goat
-- Horse
-- Mouflon / Sheep / Ram lines
-- Rabbit / Bunny
-- Skrill
-- Turkey
+Animal Husbandry fully supports all vanilla:
+- Livestock
+- Neutral Animals (including passive critters/cactee variants)
+- Predators (Beasts)
 
-Expanded neutral wildlife coverage also includes the remaining vanilla `Template_Animal_Neutral` non-livestock roles, integrated into the same Animal Husbandry tame/companion systems:
-- Antelope
-- Armadillo
-- Crab
-- Deer Doe / Deer Stag
-- Flamingo
-- Hatworm
-- Horse Skeleton / Horse Skeleton Armored
-- Lizard Sand
-- Lobster
-- Moose Bull / Moose Cow
-- Penguin
-- Spark Living
-- Tetrabird
-- Tortoise
-- Trillodon
-
-Passive critter and cactee coverage now also includes:
-- Cactee
-- Frog Blue / Frog Green / Frog Orange
-- Gecko
-- Meerkat
-- Mouse
-- Snail Frost / Snail Magma
-- Squirrel
-
-Current Beast support includes broad tame-role coverage for vanilla predator/beast families, with dedicated Beast command/taming flow and Beast-specific trait tuning.
+All of these animal groups are integrated into the same taming, companion, needs/happiness, breeding/progression, and command systems, with dedicated Beast combat/taming flow where applicable.
 
 ## Compatibility
 - Requires Alec's Tamework! `2.8.x`
@@ -216,7 +181,6 @@ Current Beast support includes broad tame-role coverage for vanilla predator/bea
 - Bonding/XP levels.
 - Talent trees.
   - Unlock stat increases, new behaviors, and new abilities as the companion levels up.
-- Expand support across more animal types, including broader Beast coverage.
 
 ## Hytame Shoutout
 

@@ -34,8 +34,8 @@ These are the current (non-deprecated) `AH*` config assets in this repo.
 | Breeding | `Server/Tamework/Breeding/AHBreedLivestock.json`<br>`Server/Tamework/Breeding/AHBreedNeutral.json`<br>`Server/Tamework/Breeding/AHBreedBeast.json` |
 | Traits | `Server/Tamework/Traits/AHTraitLivestock.json`<br>`Server/Tamework/Traits/AHTraitNeutral.json`<br>`Server/Tamework/Traits/AHTraitBeast.json` |
 
-### Cohort Mapping (including Beast)
-| Cohort | Interaction | Companion | Needs | Happiness | Breeding | Traits | Command |
+### Group Mapping (including Beast)
+| Group | Interaction | Companion | Needs | Happiness | Breeding | Traits | Command |
 |---|---|---|---|---|---|---|---|
 | Livestock | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestock` | `AHCommLivestock` |
 | Neutral | `AHIntNeutral` | `AHCompNeutral` | `AHNeedsMain` | `AHHappNeutral` | `AHBreedNeutral` | `AHTraitNeutral` | n/a |
@@ -56,5 +56,4 @@ Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were repl
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
-
 

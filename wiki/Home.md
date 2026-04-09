@@ -37,7 +37,7 @@ draft: false
 ## 4) Reference Library
 - [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 - [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
 
 ## 5) Configuration

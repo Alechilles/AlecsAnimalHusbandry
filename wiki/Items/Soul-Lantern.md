@@ -56,7 +56,7 @@ This makes the **Soul Lantern** useful for trading companions between players wh
 - Transport valuable breeding stock without leading them one by one.
 
 ## Related Pages
-- [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
+- [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 - [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
 - [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
