@@ -12,6 +12,8 @@ The **Soul Lantern** lets you capture and re-place your tamed livestock and Beas
 It is useful for moving companions between pens, relocating them to a new base, or packing them up before travel.
 Unlike a simple spawn item, it stores the animal's saved data so the companion is not reset when placed again.
 
+![Soul Lantern](https://github.com/user-attachments/assets/7ed512b2-ecf1-450d-a9e7-43217630705a)
+
 ## Crafting
 - Crafting station: **Farmer's Workbench (Tier 2)**
 - Recipe:
