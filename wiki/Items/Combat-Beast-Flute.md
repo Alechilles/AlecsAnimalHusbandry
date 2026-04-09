@@ -8,7 +8,7 @@ draft: false
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
-<img width="561" height="609" alt="Combat Beast Flute" src="https://github.com/user-attachments/assets/d6d316f0-024b-40c3-a7c9-cff8ab151119" />
+![Combat Beast Flute](https://github.com/user-attachments/assets/d6d316f0-024b-40c3-a7c9-cff8ab151119)
 
 ## What It Does
 - Controls linked Beast companions.
