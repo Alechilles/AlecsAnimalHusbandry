@@ -8,6 +8,8 @@ draft: false
 
 Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
+![Feed Trough](https://github.com/user-attachments/assets/29f3f0b6-8f5c-4b77-a3a4-9c83feebb2a0)
+
 The **Feed Trough** is a care block that helps automate food and hydration support in pens.
 
 ## What It Does
