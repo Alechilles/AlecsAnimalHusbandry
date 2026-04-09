@@ -22,6 +22,11 @@ on:
         required: true
         default: false
         type: boolean
+      additional_changelog_sections:
+        description: "Number of older changelog sections to append after the target version section."
+        required: false
+        default: "0"
+        type: string
   push:
     tags:
       - "v*.*.*"
@@ -105,8 +110,19 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
+          $extraSectionsRaw = "${{ github.event.inputs.additional_changelog_sections }}"
+          if ([string]::IsNullOrWhiteSpace($extraSectionsRaw)) {
+            $extraSectionsRaw = "0"
+          }
+
+          $extraSections = 0
+          if (-not [int]::TryParse($extraSectionsRaw, [ref]$extraSections) -or $extraSections -lt 0) {
+            throw "additional_changelog_sections must be a non-negative integer. Received '$extraSectionsRaw'."
+          }
+
           .\scripts\release\extract-changelog.ps1 `
             -Version "${{ steps.version.outputs.version }}" `
+            -IncludeAdditionalSections $extraSections `
             -OutputPath "artifacts\changelog.md"
 
           $changelogPath = (Resolve-Path "artifacts\changelog.md").Path

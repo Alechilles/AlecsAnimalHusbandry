@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.4.1 - Coop Fallback Restoration Hotfix - 2026-04-09
+
+### Fixed
+- Restored the temporary coop fallback assets (`Server/Farming/Coops/Coop_Chicken.json` and `Server/Tamework/Items/Coops/ACCoopChicken.json`) so coop flows remain stable when Alec's Coops is not enabled.
+
+### Changed
+- Updated `manifest.json` version to `1.4.1`.
+
 ## 1.4.0 - Multi-Food Feed Families + Timed Feed Happiness - 2026-04-08
 
 ### Added

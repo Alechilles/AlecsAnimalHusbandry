@@ -3,7 +3,8 @@ param(
     [string]$Version,
     [string]$ChangelogPath = "CHANGELOG.md",
     [string]$OutputPath = "artifacts/changelog.md",
-    [bool]$IncludeHeading = $true
+    [bool]$IncludeHeading = $true,
+    [int]$IncludeAdditionalSections = 0
 )
 
 Set-StrictMode -Version Latest
@@ -22,6 +23,10 @@ $normalizedVersion = Get-NormalizedVersion -RawVersion $Version
 $escapedVersion = [regex]::Escape($normalizedVersion)
 $sectionPattern = "^##\s+v?$escapedVersion(\s+-|\s*$)"
 
+if ($IncludeAdditionalSections -lt 0) {
+    throw "IncludeAdditionalSections must be >= 0."
+}
+
 $lines = Get-Content -Path $ChangelogPath
 $startIndex = -1
 for ($i = 0; $i -lt $lines.Count; $i++) {
@@ -36,8 +41,14 @@ if ($startIndex -lt 0) {
 }
 
 $endIndex = $lines.Count
+$remainingHeadingsToInclude = $IncludeAdditionalSections
 for ($i = $startIndex + 1; $i -lt $lines.Count; $i++) {
     if ($lines[$i] -match "^##\s+") {
+        if ($remainingHeadingsToInclude -gt 0) {
+            $remainingHeadingsToInclude--
+            continue
+        }
+
         $endIndex = $i
         break
     }
