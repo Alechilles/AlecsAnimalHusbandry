@@ -1,12 +1,17 @@
 # Changelog
 
-## 1.4.0 - Multi-Food Feed Families + Timed Feed Happiness - 2026-04-07
+## Unreleased
+
+## 1.4.0 - Multi-Food Feed Families + Timed Feed Happiness - 2026-04-08
 
 ### Added
 - Added predator-specific needs/happiness config assets (`AHNeedsBeast`, `AHHappBeast`) so tamed predators can consume/use carnivore feed with dedicated impulse mappings.
 - Added optional food classification parameters to tamed templates (`FoodFavorite`, `FoodGeneric`, `FoodPremium`) for role-driven feed impulse mapping without per-role config duplication.
 
 ### Changed
+- Updated command item naming to **Animal Control Flute** (base) and **Combat Beast Flute** (upgrade), and aligned player-facing docs/localization.
+- Updated command item progression recipes/bench tiers to the current design (`Animal Control Flute` on Farming Bench Tier 2, `Combat Beast Flute` on Farming Bench Tier 6 with Wild Wisteria log gate).
+- Converted the base command item presentation from bag-style visuals/sounds to flute-style behavior and refreshed flute texture/icon differentiation between Animal Control and Combat Beast variants.
 - Feed interactions now keep `AttractiveItemSet` as the baseline food family and also accept feed items by cohort (`Tw_Feed_Herbivore` for livestock/neutral/critter, `Tw_Feed_Carnivore` for predator).
 - Passive needs consumption now includes feed items in container food ids (herbivore feed for default cohorts, carnivore feed for predator cohort).
 - Happiness configs now use timed feed impulses (`HandFeedDurationMinutes`, `FeedImpulseDurationMinutes`) with param/item mappings so feed effects refresh instead of stacking.
@@ -14,6 +19,9 @@
 - Expanded tamed livestock group matching for neutral/critter cohorts using wildcard suffixes and restored Mosshorn coverage in livestock interaction role lists.
 - Removed the temporary coop fallback assets introduced in `1.3.4`.
 - Updated release metadata to `1.4.0` and aligned required Alec's Tamework dependency to `2.8.x`.
+- Rebalanced companion happiness around generic feed so baseline care remains below breeding readiness: generic feed impulses are now stronger negatives while active care boosts (hand-feed and pet) were tuned to let players push breeding readiness through intervention.
+- Raised breeding happiness requirements from `70` to `80` across passive breeding configs and manual breed interaction gates for livestock, neutral, beast, and critter cohorts.
+- Expanded wiki/README coverage for `1.4.0` command and care loops, including dedicated Feed Items + Feed Trough pages, generic-feed happiness penalty notes, and Wisteria-gated Combat Beast Flute progression guidance.
 
 ## 1.3.4 - Temporary Coop Fallback Packaging - 2026-04-03
 

@@ -1,28 +1,27 @@
 ---
-title: "Livestock Command Bag"
+title: "Animal Control Flute"
 order: 2
 published: true
 draft: false
 ---
-# Livestock Command Bag
+# Animal Control Flute
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## What It Does
-- Link and unlink tamed livestock/neutral companions.
+- Link and unlink tamed livestock, neutral, and critter companions.
 - Open command selection.
 - Issue commands to linked members.
 - Provide per-companion panel actions (`Recall`, `Set Home`, `Return Home`, `Unlink`, `Revive` when available).
 - Provide nearby-only safety actions (`Release`, `Cull`) through confirm flow.
 
 ## Recipe
-- 10x Wheat
-- 5x any vegetable item
-- 5x any fruit item
-- 10x Life Essence
+- 12x any wood item
+- 8x Fibre
+- 1x Concentrated Life Essence
 
 ## Bench Requirement
-- Farming Bench (Farming category)
+- Farming Bench (Tier 2, Farming category)
 
 ## Craft Time
 - 4 seconds
@@ -34,8 +33,8 @@ See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 - [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
-> [Screenshot Placeholder: Livestock Command Bag icon and in-hand view]
-> [Screenshot Placeholder: Bag command menu open with linked companions]
+> [Screenshot Placeholder: Animal Control Flute icon and in-hand view]
+> [Screenshot Placeholder: Animal Control Flute command menu open with linked companions]
 
 
 

@@ -14,7 +14,7 @@ Each item has its own page with recipe, bench requirements, and practical use no
 
 | Item | Use |
 |---|---|
-| [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag) | Command tool for livestock companions |
+| [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute) | Early-game command tool for livestock, neutral, and critter companions |
 
 ## Beast Taming Gear
 
@@ -30,7 +30,7 @@ These items are provided by Alec's Tamework and are required for Beast progressi
 
 | Item | Use |
 |---|---|
-| [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute) | Command tool for Beast companions |
+| [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) | Late-game command tool for Beast companions (Tier 6 + Wild Wisteria logs) |
 
 ## Companion Utility
 
@@ -41,19 +41,26 @@ These items are useful for both livestock and Beast management.
 | [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern) | Captures and re-places a tamed livestock animal or Beast companion |
 | [Nametag](/mod/alecs-animal-husbandry/nametag) | Names tamed companions for easier command/control management |
 
+## Feed and Care Items
+
+| Item | Use |
+|---|---|
+| [Feed Items](/mod/alecs-animal-husbandry/feed-items) | Herbivore/carnivore feed recipes and generic feed happiness penalty notes |
+| [Feed Trough](/mod/alecs-animal-husbandry/feed-trough) | Trough behavior, water-charge refills, and bucket recipe/details |
+
 ## Reference Tables
 
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 
 ## Suggested Progression
-1. Craft the Livestock Command Bag and start building your first stable.
+1. Craft the Animal Control Flute and start building your first stable.
 2. Move into Beast taming by crafting tranquilizer gear.
-3. Craft the Beast Command Flute once you are ready to manage Beast companions.
+3. Craft the Combat Beast Flute once you unlock Farming Bench Tier 6 and can harvest Wild Wisteria logs.
 4. Craft a Soul Lantern when you need to transport or reorganize valuable companions.
 5. Apply Nametags to distinguish and organize specific companions.
 
-> [Screenshot Placeholder: Item progression row (bag -> tranquilizer kit -> flute)]
+> [Screenshot Placeholder: Item progression row (animal control flute -> tranquilizer kit -> combat beast flute)]
 
 
 

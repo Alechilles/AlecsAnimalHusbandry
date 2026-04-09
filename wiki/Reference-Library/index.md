@@ -18,7 +18,7 @@ Use this section for lookup-style tables and species coverage information.
 ## Related Sections
 - [Items Index](/mod/alecs-animal-husbandry/items-index)
 - [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index)
-- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference-advanced)
+- [Config Reference (Configuration)](/mod/alecs-animal-husbandry/config-reference-configuration)
 
 
 

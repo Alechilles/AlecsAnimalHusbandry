@@ -12,9 +12,10 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 Check these first:
 1. They are tamed and adult.
 2. Happiness is above threshold.
-3. They are not sleeping or in combat.
-4. Cooldown + random delay window has elapsed.
-5. Nearby same-type limits are not exceeded.
+3. Breeding is toggled on for both animals.
+4. They are not sleeping or in combat.
+5. Cooldown + random delay window has elapsed.
+6. Nearby same-type limits are not exceeded.
 
 ## "They keep getting unhappy"
 Common causes:
@@ -33,15 +34,6 @@ Check:
 ## "Server fails on startup"
 - Read the first SEVERE asset validation line in server log.
 - Most common causes are bad internal references, invalid JSON types, or missing dependency mods.
-
-## "Flute item exists but I can't craft it"
-Check:
-1. You are at Weapon Bench Tier 2 and have Armory bow-diagram access.
-2. You have the required inputs (Livestock Command Bag, bamboo trunk, fibre, heavy leather, shadoweave fabric scrap, life essence).
-3. Alec's Tamework is installed and loaded correctly.
-
-Recipe details:
-- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
 
 ## "I can't craft tranquilizer bow/arrows/potion"
 Check:

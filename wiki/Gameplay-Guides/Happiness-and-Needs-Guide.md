@@ -30,8 +30,10 @@ These values add up quickly on larger farms or mixed Beast/livestock setups.
 4. Avoid overcrowding in one pen.
 
 Feed trough note:
-- Feed trough water states can be consumed for hydration and refilled with water buckets.
+- Feed trough water charges can be consumed for hydration and refilled with water buckets.
 - Troughs are useful in enclosed pens where natural water access is awkward.
+- Feed crafting and generic feed happiness notes: [Feed Items](/mod/alecs-animal-husbandry/feed-items)
+- Trough mechanics and bucket refill details: [Feed Trough](/mod/alecs-animal-husbandry/feed-trough)
 
 See food preferences here:
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
@@ -53,7 +55,6 @@ See breeding timings and cooldown behavior:
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]
-
 
 
 

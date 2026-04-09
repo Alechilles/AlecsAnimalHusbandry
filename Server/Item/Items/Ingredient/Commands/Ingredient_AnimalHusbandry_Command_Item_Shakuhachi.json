@@ -8,28 +8,20 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "AnimalHusbandry_Command_Item",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Wood_Bamboo_Trunk",
-        "Quantity": 12
-      },
-      {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 8
-      },
-      {
-        "ItemId": "Ingredient_Leather_Heavy",
-        "Quantity": 2
+        "ItemId": "Wood_Wisteria_Wild_Trunk",
+        "Quantity": 10
       },
       {
         "ItemId": "Ingredient_Fabric_Scrap_Shadoweave",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence_Concentrated",
         "Quantity": 1
       },
       {
-        "ItemId": "Ingredient_Life_Essence",
-        "Quantity": 6
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 10
       }
     ],
     "Output": [
@@ -45,7 +37,7 @@
         "Categories": [
           "Farming"
         ],
-        "RequiredTierLevel": 2
+        "RequiredTierLevel": 6
       }
     ],
     "OutputQuantity": 1,
@@ -53,6 +45,6 @@
   },
   "MaxStack": 1,
   "Model": "Items/AnimalHusbandry/Shakuhachi.blockymodel",
-  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png",
+  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_alt_64.png",
   "Quality": "Rare"
 }

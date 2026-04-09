@@ -41,18 +41,18 @@
     "ConvergencePerMinute": 8.0
   },
   "Impulses": {
-    "GainOnFeed": 5.0,
+    "GainOnFeed": 3.0,
     "HandFeedDurationMinutes": 15.0,
     "FeedImpulseDurationMinutes": 15.0,
     "FeedItemImpulses": {
-      "Tw_Feed_Herbivore": -5.0
+      "Tw_Feed_Herbivore": -8.0
     },
     "FeedParamImpulses": {
       "FoodFavorite": 5.0,
-      "FoodGeneric": -5.0,
+      "FoodGeneric": -8.0,
       "FoodPremium": 10.0
     },
-    "GainOnPet": 3.0,
+    "GainOnPet": 4.0,
     "LoseOnDamage": 10.0
   },
   "Modifiers": {

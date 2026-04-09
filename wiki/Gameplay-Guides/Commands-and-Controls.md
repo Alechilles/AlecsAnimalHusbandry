@@ -13,8 +13,8 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 - **Right-click (Secondary):** open command selection menu.
 - **F (Interact):** quick-toggle simple companion modes on both livestock and Beasts (`Follow`, `Hold`, `Idle`).
 
-## Livestock Command Bag Commands
-Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
+## Animal Control Flute Commands
+Item page: [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
 
 - Follow
 - Hold
@@ -24,8 +24,8 @@ Item page: [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command
 - Return Home
 - Idle
 
-## Beast Command Flute Commands
-Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+## Combat Beast Flute Commands
+Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 
 - Follow
 - Hold
@@ -39,7 +39,7 @@ Item page: [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute
 ## Limits and Gating
 - Membership mode is linked-only.
 - Commands require tame + ownership checks.
-- Flute has stricter active/cooldown settings than the livestock bag.
+- Combat Beast Flute has stricter active/cooldown settings than the Animal Control Flute.
 
 ## Linked Companion Panel Actions
 - You can manage companions one-by-one with `Recall`, `Set Home`, `Return Home`, `Unlink`, and `Revive`.

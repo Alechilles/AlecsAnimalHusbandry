@@ -4,24 +4,20 @@
     "Description": "server.items.AnimalHusbandry_Command_Item.description"
   },
   "Variant": true,
-  "Icon": "Icons/ItemsGenerated/Tool_Feedbag.png",
+  "Icon": "Icons/ItemsGenerated/AnimalHusbandry_Command_Item.png",
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Plant_Crop_Wheat_Item",
-        "Quantity": 10
+        "ResourceTypeId": "Wood_All",
+        "Quantity": 12
       },
       {
-        "ResourceTypeId": "Vegetables",
-        "Quantity": 5
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 8
       },
       {
-        "ResourceTypeId": "Fruits",
-        "Quantity": 5
-      },
-      {
-        "ItemId": "Ingredient_Life_Essence",
-        "Quantity": 10
+        "ItemId": "Ingredient_Life_Essence_Concentrated",
+        "Quantity": 1
       }
     ],
     "Output": [
@@ -36,14 +32,15 @@
         "Id": "Farmingbench",
         "Categories": [
           "Farming"
-        ]
+        ],
+        "RequiredTierLevel": 2
       }
     ],
     "OutputQuantity": 1,
     "TimeSeconds": 4
   },
   "MaxStack": 1,
-  "Model": "Items/Tools/Feedbag/Feedbag.blockymodel",
-  "Texture": "Items/Tools/Feedbag/Feedbag_Texture.png",
+  "Model": "Items/AnimalHusbandry/Shakuhachi.blockymodel",
+  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png",
   "Quality": "Uncommon"
 }

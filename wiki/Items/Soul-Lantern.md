@@ -58,8 +58,8 @@ This makes the **Soul Lantern** useful for trading companions between players wh
 ## Related Pages
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
-- [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
-- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
+- [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 
 > [Screenshot Placeholder: Empty Soul Lantern in inventory]
 > [Screenshot Placeholder: Capturing a tamed companion with the Soul Lantern]

@@ -13,7 +13,7 @@ This page is a practical quick-reference for livestock taming.
 
 ## Required Items
 1. Preferred food (see table below).
-2. [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag) (post-tame linking and commands).
+2. [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute) (post-tame linking and commands).
 3. Basic enclosure setup with nearby water and food access.
 
 ## Livestock Taming Flow
@@ -21,7 +21,7 @@ This page is a practical quick-reference for livestock taming.
 2. Hold its preferred food (or Feedbag if that species accepts it).
 3. Complete the tame interaction.
 4. You can press `F` on a tamed livestock animal to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
-5. Left-click with your [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag) to link it.
+5. Left-click with your [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute) to link it.
 
 
 ## Livestock Taming Table
@@ -88,7 +88,7 @@ This page is a practical quick-reference for livestock taming.
 | Snail Magma | Chilli |
 
 > [Screenshot Placeholder: Livestock tame interaction with preferred food in hand]
-> [Screenshot Placeholder: Livestock linked to command bag after taming]
+> [Screenshot Placeholder: Livestock linked to command flute after taming]
 
 
 

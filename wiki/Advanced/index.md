@@ -1,15 +1,17 @@
 ---
-title: "Advanced Index"
+title: "Configuration Index"
 order: 6
 published: true
 draft: false
 ---
-# Advanced Index
+# Configuration Index
 
 Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
 
 ## Child Pages
-- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference-advanced)
+- [TW Settings](/mod/alecs-animal-husbandry/tw-settings)
+- [TW Config](/mod/alecs-animal-husbandry/tw-config)
+- [Config Reference (Configuration)](/mod/alecs-animal-husbandry/config-reference-configuration)
 
 
 

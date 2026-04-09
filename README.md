@@ -1,12 +1,13 @@
-[![Cats](https://img.shields.io/curseforge/dt/1432112?label=Cats&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-cats)
 [![Tamework](https://img.shields.io/curseforge/dt/1447962?label=Tamework&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-tamework)
+[![Cats](https://img.shields.io/curseforge/dt/1432112?label=Cats&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-cats)
 [![Nametags](https://img.shields.io/curseforge/dt/1464844?label=Nametags&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-nametags)
 [![Animal Husbandry](https://img.shields.io/curseforge/dt/1480275?label=Animal%20Husbandry&style=for-the-badge&logo=curseforge&color=rgb(241%2C100%2C54))](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
 
 [![Discord](https://img.shields.io/discord/1468261809739005996?style=for-the-badge&logo=discord&logoColor=white&label=Join%20Discord&color=rgb(88,101,242))](https://discord.gg/E8n8RgTTdq)
 [![Buy me a coffee](https://img.shields.io/badge/ko--fi-Support%20Me-ff5f5f?logo=ko-fi&style=for-the-badge)](https://ko-fi.com/alechilles)
-
 [![Creator Code](https://img.shields.io/badge/Creator%20Code-Alec-00AEEF?style=for-the-badge)](https://hytale.com/)
+
+[![Sponsored By HytaleModding Grant Program](https://github.com/user-attachments/assets/a03709e3-445a-4e58-8ec5-591688490c5d)](https://hytalemodding.dev/en/grants)
 
 # Alec's Animal Husbandry!
 
@@ -18,7 +19,7 @@
 - [Items](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items-index)
 - [Gameplay Guides](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/gameplay-guides-index)
 - [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library-index)
-- [Advanced](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/advanced-index)
+- [Configuration](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/configuration-index)
 
 Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
 
@@ -46,12 +47,12 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 - Water source blocks are still supported for now, but the long-term plan is to deprecate that path after feed trough hydration has been tested more broadly.
 
 **4. Craft your command item:**
-- Craft the Animal Husbandry Command Bag at the Farmer's Workbench.
-  - 10x Wheat, 5x Any Vegetable, 5x Any Fruit, 10x Essence of Life
+- Craft the **Animal Control Flute** at the Farmer's Workbench (Tier 2).
+  - 12x Any Wood, 8x Fibre, 1x Concentrated Life Essence
 
 **5. Bind and command:**
-- Use the command bag to link your tamed animals.
-- Right-click with the command bag. 
+- Use the Animal Control Flute to link your tamed animals.
+- Right-click with the Animal Control Flute. 
 - From here you can: 
   - View your animal's stats such as happiness, hunger, thirst, traits and more.
   - Issue commands to all linked animals simultaneously.
@@ -64,7 +65,8 @@ Current gameplay emphasis is on **Livestock** and **Beasts** (Predators) through
 - Craft tranquilizer gear (Tranquilizer Potion + Tranquilizer Arrows + Tranquilizer Shortbow).
 - Bring a Beast to **20% HP or lower**, then apply tranquilizer to force sleep.
 - Tame with the Beast's preferred food.
-- Upgrade to the **Beast Command Flute** for Beast-focused command handling.
+- Upgrade to the **Combat Beast Flute** at Farmer's Workbench Tier 6 (1x Concentrated Life Essence, 10x Wild Wisteria Logs, 2x Shadoweave Fabric Scrap, 10x Fire Essence).
+- Wild Wisteria logs come from growing and harvesting a Wild Wisteria Tree after you unlock Farming Bench Tier 6.
 
 **7. Companion transport:**
 - Craft a **Soul Lantern** at Farmingbench Tier 2 (6x any wood, 2x void essence).

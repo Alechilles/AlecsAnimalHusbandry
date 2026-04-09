@@ -4,7 +4,7 @@
     "Description": "server.items.AnimalHusbandry_Command_Item.description"
   },
   "Quality": "Uncommon",
-  "PlayerAnimationsId": "Block",
+  "PlayerAnimationsId": "Item",
   "Interactions": {
     "Primary": {
       "Interactions": [
@@ -22,21 +22,20 @@
       ]
     }
   },
-  "Model": "Items/Tools/Feedbag/Feedbag.blockymodel",
-  "Texture": "Items/Tools/Feedbag/Feedbag_Texture.png",
-  "Icon": "Icons/ItemsGenerated/Tool_Feedbag.png",
+  "Model": "Items/AnimalHusbandry/Shakuhachi.blockymodel",
+  "Texture": "Items/AnimalHusbandry/shakuhachi_texture_64.png",
+  "Icon": "Icons/ItemsGenerated/AnimalHusbandry_Command_Item.png",
   "IconProperties": {
-    "Scale": 0.5,
-    "Translation": [
-      -1,
-      5
-    ],
+    "Scale": 0.68,
     "Rotation": [
-      135,
-      135,
-      0
+      334,
+      331,
+      321
+    ],
+    "Translation": [
+      -8,
+      -11
     ]
   },
-  "Scale": 1.2,
   "MaxStack": 1
 }

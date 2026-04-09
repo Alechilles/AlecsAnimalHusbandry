@@ -16,7 +16,7 @@ Pick your first route:
 ## Step 2A: Livestock First (Recommended)
 1. Find a supported livestock species.
 2. Complete the tame interaction.
-3. Craft a [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag).
+3. Craft an [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute).
 4. Link your companion and test `Follow`, `Hold`, and `Recall`.
 
 Preferred foods and livestock taming details:
@@ -31,7 +31,7 @@ Before taming, prepare tranquilizer gear:
 3. Craft the Tranquilizer Shortbow at the Weapon Bench (Tier 2) with Armory access.
 4. Use tranquilizer pressure and health control until tame conditions are met.
 5. Keep the Beast at **20% HP or lower**, otherwise tranquilizer sleep will not trigger.
-6. After taming, craft/use the [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute).
+6. After taming, craft/use the [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute).
 
 Detailed recipes and per-species tranquilizer shot counts:
 - [Items Index](/mod/alecs-animal-husbandry/items-index)

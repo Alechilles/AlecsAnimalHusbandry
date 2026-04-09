@@ -20,8 +20,8 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 ## First Login Checklist
 1. Tame one supported animal.
-2. Craft the Livestock Command Bag.
-3. Link that animal to the bag.
+2. Craft the Animal Control Flute.
+3. Link that animal to the flute.
 4. Test Follow, Hold, and Recall.
 5. Confirm the companion panel opens and stats are visible.
 

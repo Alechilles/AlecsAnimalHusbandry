@@ -1,12 +1,14 @@
 ---
-title: "Beast Command Flute"
+title: "Combat Beast Flute"
 order: 6
 published: true
 draft: false
 ---
-# Beast Command Flute
+# Combat Beast Flute
 
 Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
+
+![Combat Beast Flute](https://media.forgecdn.net/attachments/1621/997/discord_5rccf9u2et-png.png)
 
 ## What It Does
 - Controls linked Beast companions.
@@ -15,16 +17,17 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - Supports nearby-only `Release` and `Cull` safety actions when ownership/tame checks pass.
 
 ## Recipe
-- 1x Livestock Command Bag
-- 12x Bamboo Trunk
-- 8x Fibre
-- 2x Heavy Leather
-- 1x Shadoweave Fabric Scrap
-- 6x Life Essence
+- 1x Concentrated Life Essence
+- 10x Wild Wisteria Logs
+- 2x Shadoweave Fabric Scrap
+- 10x Fire Essence
 
 ## Bench Requirement
-- Weapon Bench (Bow, Tier 2)
-- Armory (Bow Diagrams)
+- Farming Bench (Tier 6, Farming category)
+
+## Wisteria Requirement
+- To obtain Wild Wisteria logs, first unlock Farming Bench Tier 6.
+- Once unlocked, grow a Wild Wisteria Tree and harvest its trunk logs for this recipe.
 
 ## Craft Time
 - 5 seconds
@@ -36,9 +39,5 @@ See: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 - [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
-> [Screenshot Placeholder: Beast Command Flute icon and in-hand model]
+> [Screenshot Placeholder: Combat Beast Flute icon and in-hand model]
 > [Screenshot Placeholder: Beast command menu with Attack Target highlighted]
-
-
-
-

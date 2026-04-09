@@ -20,7 +20,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 2. Apply tranquilizer pressure during combat.
 3. Trigger tranquilized sleep in the allowed health window.
 4. Complete taming flow.
-5. Control with the Beast Command Flute.
+5. Control with the Combat Beast Flute.
 
 ## Taming and Ownership
 - Ownership is persistent and integrated with companion systems.

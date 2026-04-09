@@ -24,11 +24,13 @@ draft: false
 
 ## 3) Items and Crafting
 - [Items Index](/mod/alecs-animal-husbandry/items-index)
-- [Livestock Command Bag](/mod/alecs-animal-husbandry/livestock-command-bag)
+- [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 - [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
-- [Beast Command Flute](/mod/alecs-animal-husbandry/beast-command-flute)
+- [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
+- [Feed Items](/mod/alecs-animal-husbandry/feed-items)
+- [Feed Trough](/mod/alecs-animal-husbandry/feed-trough)
 - [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern)
 - [Nametag](/mod/alecs-animal-husbandry/nametag)
 
@@ -38,8 +40,11 @@ draft: false
 - [Livestock Taming Reference](/mod/alecs-animal-husbandry/livestock-taming-reference)
 - [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference)
 
-## 5) Advanced
-- [Config Reference (Advanced)](/mod/alecs-animal-husbandry/config-reference-advanced)
+## 5) Configuration
+- [Configuration Index](/mod/alecs-animal-husbandry/configuration-index)
+- [TW Settings](/mod/alecs-animal-husbandry/tw-settings)
+- [TW Config](/mod/alecs-animal-husbandry/tw-config)
+- [Config Reference (Configuration)](/mod/alecs-animal-husbandry/config-reference-configuration)
 
 > [Screenshot Placeholder: Main companion command panel with multiple linked animals]
 

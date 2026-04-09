@@ -115,7 +115,7 @@
       "Default": true,
       "Feedback": {
         "HudMessage": "Follow: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_03",
         "ParticleSystem": "Follow"
       },
       "Steps": [
@@ -139,7 +139,7 @@
       "DisplayName": "Hold",
       "Feedback": {
         "HudMessage": "Hold: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_06",
         "ParticleSystem": "Hold"
       },
       "Steps": [
@@ -158,7 +158,7 @@
       "DisplayName": "Recall",
       "Feedback": {
         "HudMessage": "Recall: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_08",
         "ParticleSystem": "Poof_Small"
       },
       "Steps": [
@@ -177,7 +177,7 @@
       "DisplayName": "Move To Ping",
       "Feedback": {
         "HudMessage": "Move To Ping: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_10",
         "ParticleSystem": "Alerted"
       },
       "Steps": [
@@ -191,9 +191,9 @@
       "Id": "SetHome",
       "DisplayName": "Set Home",
       "Feedback": {
-        "ChatMessage": "Home set for this command bag.",
+        "ChatMessage": "Home set for this command flute.",
         "HudMessage": "Home Set",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_12",
         "ParticleSystem": "Poof_Small"
       },
       "Steps": [
@@ -209,7 +209,7 @@
       "DisplayName": "Return Home",
       "Feedback": {
         "HudMessage": "Return Home: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_14",
         "ParticleSystem": "Follow"
       },
       "Steps": [
@@ -225,7 +225,7 @@
       "DisplayName": "Idle",
       "Feedback": {
         "HudMessage": "Idle: {count}",
-        "SoundEvent": "SFX_Creative_Play_Selection_Widget",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_16",
         "ParticleSystem": "Idle"
       },
       "Steps": [
