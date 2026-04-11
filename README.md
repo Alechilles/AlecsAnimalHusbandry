@@ -62,6 +62,7 @@ Animal Husbandry now fully supports **all Livestock, Neutral Wildlife, and Beast
 
 **6. Beast progression path:**
 - Craft tranquilizer gear (Tranquilizer Potion + Tranquilizer Arrows + Tranquilizer Shortbow).
+- Once you have a Glowing Purple Mushroom to spare, craft Glowing Purple Mushroom Spores at Farming Bench Tier 6 to make the tranquilizer ingredient renewable.
 - Bring a Beast to **20% HP or lower**, then apply tranquilizer to force sleep.
 - Tame with the Beast's preferred food.
 - Upgrade to the **Combat Beast Flute** at Farmer's Workbench Tier 6 (1x Concentrated Life Essence, 10x Wild Wisteria Logs, 2x Shadoweave Fabric Scrap, 10x Fire Essence).
