@@ -1,6 +1,6 @@
 ---
 title: "Tranquilizer Shortbow"
-order: 5
+order: 6
 published: true
 draft: false
 ---
@@ -13,6 +13,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 ## What It Is Used For
 - Applies tranquilizer effects with [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - Used to set up Beast taming opportunities
+- Benefits from a renewable tranquilizer supply once you start growing [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
 ## Recipe
 - 1x Cobalt Shortbow
@@ -33,6 +34,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
 > [Screenshot Placeholder: Tranquilizer Shortbow recipe and crafted item]
 

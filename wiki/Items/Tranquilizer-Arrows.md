@@ -1,6 +1,6 @@
 ---
 title: "Tranquilizer Arrows"
-order: 4
+order: 5
 published: true
 draft: false
 ---
@@ -12,6 +12,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## Used For
 - Fired from the [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) to tranquilize Beasts for taming.
+- Depends on [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion), which can be sustained by growing [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores).
 
 ## Recipe
 - 6x Crude Arrows
@@ -29,6 +30,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
 > [Screenshot Placeholder: Tranquilizer Arrows recipe at Weapon Bench]
 

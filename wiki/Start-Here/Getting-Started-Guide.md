@@ -27,11 +27,12 @@ Preferred foods and livestock taming details:
 ## Step 2B: Beast First
 Before taming, prepare tranquilizer gear:
 1. Craft Tranquilizer Potion at the Alchemy Bench (Tier 2).
-2. Craft Tranquilizer Arrows at the Weapon Bench (Tier 2).
-3. Craft the Tranquilizer Shortbow at the Weapon Bench (Tier 2) with Armory access.
-4. Use tranquilizer pressure and health control until tame conditions are met.
-5. Keep the Beast at **20% HP or lower**, otherwise tranquilizer sleep will not trigger.
-6. After taming, craft/use the [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute).
+2. Once you have a mushroom to spare, craft [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) at Farming Bench Tier 6 to make the ingredient renewable.
+3. Craft Tranquilizer Arrows at the Weapon Bench (Tier 2).
+4. Craft the Tranquilizer Shortbow at the Weapon Bench (Tier 2) with Armory access.
+5. Use tranquilizer pressure and health control until tame conditions are met.
+6. Keep the Beast at **20% HP or lower**, otherwise tranquilizer sleep will not trigger.
+7. After taming, craft/use the [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute).
 
 Detailed recipes and per-species tranquilizer shot counts:
 - [Items Index](/mod/alecs-animal-husbandry/items-index)

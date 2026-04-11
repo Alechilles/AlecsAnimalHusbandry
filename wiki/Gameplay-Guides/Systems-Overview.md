@@ -28,6 +28,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 
 ## Beast Tranquilizer Flow
 - Core items come from Alec's Tamework: Tranquilizer Potion, Tranquilizer Arrows, and Tranquilizer Shortbow.
+- Glowing Purple Mushrooms for the potion can be made renewable through [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores).
 - Animal Husbandry Beast roles use tranquilizer sleep parameters to determine when sleep can trigger.
 - This is why Beast taming feels more like a hunt-and-subdue loop than livestock taming.
 - Once tame is complete, Beasts move into the same ownership/command ecosystem as other companions.
@@ -69,7 +70,6 @@ All of these animal groups are integrated into the same taming, companion, needs
 
 ## Coop Integration
 - Coop flows preserve companion metadata where configured.
-
 
 
 

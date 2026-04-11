@@ -24,14 +24,15 @@ This page is a practical quick-reference for Beast taming.
 
 ## Beast Taming Flow
 1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion).
-2. Craft [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows).
-3. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
-4. Use tranquilizer shots while managing the Beast's health carefully.
-5. Tranquilizer requires the target to be at **20% HP or lower** to take effect.
+2. If you want a renewable mushroom supply, craft [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) and grow extra mushrooms in mud.
+3. Craft [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows).
+4. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
+5. Use tranquilizer shots while managing the Beast's health carefully.
+6. Tranquilizer requires the target to be at **20% HP or lower** to take effect.
     - It doesn't matter if you build the tranquilizer stacks or get it below 20% first.
-6. Once the Beast is asleep, you can feed it it's preferred food to tame it.
-7. You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
-8. Left-click with your [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to link it for more advanced control.
+7. Once the Beast is asleep, you can feed it it's preferred food to tame it.
+8. You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
+9. Left-click with your [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to link it for more advanced control.
 
 ## Tranquilizer Shot Math
 - Tranquilizer duration per hit: **30 seconds**

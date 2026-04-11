@@ -25,6 +25,7 @@ draft: false
 ## 3) Items and Crafting
 - [Items Index](/mod/alecs-animal-husbandry/items-index)
 - [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
+- [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 - [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)

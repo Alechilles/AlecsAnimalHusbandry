@@ -22,6 +22,7 @@ These items are provided by Alec's Tamework and are required for Beast progressi
 
 | Item | Use |
 |---|---|
+| [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) | Renewable way to grow the mushrooms needed for tranquilizer potions |
 | [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion) | Base sedative used in the tranquilizer crafting chain |
 | [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows) | Applies tranquilizer pressure during combat |
 | [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) | Delivers tranquilizer arrows during Beast hunts |
@@ -55,7 +56,7 @@ These items are useful for both livestock and Beast management.
 
 ## Suggested Progression
 1. Craft the Animal Control Flute and start building your first stable.
-2. Move into Beast taming by crafting tranquilizer gear.
+2. Move into Beast taming by crafting tranquilizer gear and, once available, setting up Glowing Purple Mushroom spore farming for renewable potion ingredients.
 3. Craft the Combat Beast Flute once you unlock Farming Bench Tier 6 and can harvest Wild Wisteria logs.
 4. Craft a Soul Lantern when you need to transport or reorganize valuable companions.
 5. Apply Nametags to distinguish and organize specific companions.

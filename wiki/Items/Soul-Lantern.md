@@ -1,6 +1,6 @@
 ---
 title: "Soul Lantern"
-order: 7
+order: 8
 published: true
 draft: false
 ---

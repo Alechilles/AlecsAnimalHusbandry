@@ -14,6 +14,11 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - Crafting [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - Crafting [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 
+## Renewable Ingredient Path
+- Glowing Purple Mushrooms can now be cultivated by crafting [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) at the Farming Bench.
+- Each spores recipe uses **1x Glowing Purple Mushroom**, **8x Life Essence**, and **1x Void Essence**.
+- Plant spores in **mud** and keep them **out of sunlight** for the fastest growth.
+
 ## Recipe
 - 1x Empty Potion
 - 2x Venom Sac
@@ -33,6 +38,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## Related Pages
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
+- [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
 > [Screenshot Placeholder: Tranquilizer Potion recipe at Alchemy Bench]
 
