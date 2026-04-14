@@ -1,0 +1,32 @@
+{
+  "Environments": [
+    "Env_Zone3_Glacial"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "IceAndSnow",
+      "Id": "Wolf_White",
+      "Flock": "Pack_Small"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "IceAndSnow",
+      "Id": "Bear_Polar"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "IceAndSnow",
+      "Id": "Leopard_Snow"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "IceAndSnow",
+      "Id": "Fox_Arctic"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

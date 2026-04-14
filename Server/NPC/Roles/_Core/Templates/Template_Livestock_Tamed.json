@@ -1983,6 +1983,28 @@
               },
               "Instructions": [
                 {
+                  "$Comment": "Owners can still damage companions, but never become retaliation targets.",
+                  "Sensor": {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget",
+                    "Filters": [
+                      {
+                        "Type": "TameworkIsOwner"
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "ReleaseTarget",
+                      "TargetSlot": "LockedTarget"
+                    },
+                    {
+                      "Type": "State",
+                      "State": ".Default"
+                    }
+                  ]
+                },
+                {
                   "Sensor": {
                     "Type": "Target",
                     "TargetSlot": "LockedTarget",
@@ -2076,6 +2098,37 @@
                       "State": "Panic"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "$Comment": "Stop accidental owner hits from resolving into a retaliation attack.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": ".Attack"
+                  },
+                  {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget",
+                    "Filters": [
+                      {
+                        "Type": "TameworkIsOwner"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "ReleaseTarget",
+                  "TargetSlot": "LockedTarget"
+                },
+                {
+                  "Type": "State",
+                  "State": ".Default"
                 }
               ]
             },

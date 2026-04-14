@@ -8,6 +8,7 @@
     "Tamed_Emberwulf",
     "Tamed_Fen_Stalker",
     "Tamed_Fox",
+    "Tamed_Fox_Arctic",
     "Tamed_Hyena",
     "Tamed_Larva_Silk",
     "Tamed_Leopard_Snow",
@@ -146,6 +147,19 @@
       }
     },
     "Tamed_Fox": {
+      "Pairing": {
+        "MaxNearbySameType": 6
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 60,
+        "MinDelaySeconds": 180,
+        "MaxDelaySeconds": 540
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 90
+      }
+    },
+    "Tamed_Fox_Arctic": {
       "Pairing": {
         "MaxNearbySameType": 6
       },

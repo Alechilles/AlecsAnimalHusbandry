@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## 1.4.2 - Arctic Fox Variant + Owner Retaliation Guard - 2026-04-13
+
+### Added
+- Added Arctic Fox as a tameable predator variant, including wild glacial/mountain spawns, tamed role support, custom model/texture assets, and full beast-side integration across interactions, needs, happiness, breeding, command items, soul lanterns, and traits.
+
+### Fixed
+- Fixed tamed combat companions retaliating against their owner after accidental hits during defend/combat flows or while waking from owner-caused damage.
+
+### Changed
+- Updated `manifest.json` version to `1.4.2`.
+
 ## 1.4.1 - Coop Fallback Restoration Hotfix - 2026-04-09
 
 ### Fixed
