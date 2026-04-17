@@ -31,7 +31,8 @@ The **Feed Trough** is a care block that helps automate food and hydration suppo
 - Craft time: **1 second**
 
 ## How To Use
-![Fill Feed Trough Water](https://github.com/user-attachments/assets/3cf2d375-97cd-4d2a-8ef2-b03b615c2df2)
+![Fill Feed Trough Water](https://github.com/user-attachments/assets/31a10867-8322-45f3-ba68-2d28bfd58a1e)
+
 1. Place a Feed Trough in your enclosure.
 2. Fill the trough.
    - Interact to store food like a normal chest.
