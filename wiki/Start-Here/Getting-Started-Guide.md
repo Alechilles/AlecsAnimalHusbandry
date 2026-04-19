@@ -32,37 +32,31 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 # Taming
 Livestock and neutral wildlife will tell you their favorite foods with `F` Interact, just like base Hytale. This will be the food you tame them with and what you must feed to sustain them.
-![alt text](Hytale2026-04-18_00-16-01.png)
-> The [infographic below](https://www.reddit.com/r/hytale/comments/1rdv827/hytale_taming_cheat_sheet_updated_which_animal/) is a cheatsheet for the default Hytale tameable animals and their preferred food. 
 
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/aa562a8f-6228-487e-a360-cd8fb9953024" />
 
-![Food Preferences](default-food-cheatsheet.png)
+The [infographic below](https://www.reddit.com/r/hytale/comments/1rdv827/hytale_taming_cheat_sheet_updated_which_animal/) is a cheatsheet for the default Hytale tameable animals and their preferred food. 
 
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/93ce174f-6098-4cee-943d-b5b163290a22" />
 
 View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference) for all animals tameable in Alec's Animal Husbandry! 
-
-
 
 ## Animal Management 
 
 * Interact (default keybind `F`) to cycle animals through `Follow`, `Hold`, and `Recall` states.
-
-   ![alt text](follow-stay-wander.gif)
+   <img width="320" height="242" alt="Follow, Stay, and Wander commands" src="https://github.com/user-attachments/assets/e08d486f-fc8d-405f-8ac8-298301a5d8ef" />
 
 * To mount ridable animals, press ``F`` interact while crouching. 
 * Right-click with command flute to view your animal's stats such as happiness, hunger, thirst, traits and more.
+<img width="1663" height="1160" alt="image" src="https://github.com/user-attachments/assets/6d6564e7-7183-4843-9740-16374b486f37" />
 
-![alt text](image.png)
    * Use per-companion panel actions such as Recall, Set Home, Return Home, Unlink, and Revive when available.
- 
-* Recover companions that show a LOST status with strict respawn/recovery flow.
-* Set homes and command to return to home or recall to you.
-* Select a group command from the command wheel, then Left-click with flute to issue commands to all linked and/or nearby animals simultaneously.
+   * Recover companions that show a LOST status with strict respawn/recovery flow.
+   * Set homes and command to return to home or recall to you.
+   * Select a group command from the command wheel, then Left-click with flute to issue commands to all linked and/or nearby animals simultaneously.
+   * Use nearby-only mode to access actions Release and Cull from the Linked panel when needed.
 
-* Use nearby-only mode to access actions Release and Cull from the Linked panel when needed.
-
-    ![alt text](unlink-cull-process.gif)
-
+<img width="640" height="484" alt="unlink-cull-process" src="https://github.com/user-attachments/assets/b353fe21-7122-4367-a0ba-952bd68b36e6" />
 
 ## Beast Taming
 1. Craft Tranquilizer Potion at Lv2 Alchemy workbench 
@@ -73,7 +67,7 @@ View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-referen
 5. Link beast with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to manage health and happiness, and command up to 3 Active beasts at a time in combat.
    - (Note: Flute requires Wild Wisteria wood, grown from Wild Wisteria sapling, Lv6 Farming Bench). 
 
-![alt text](taming_arctic_fox.gif)
+<img width="320" height="242" alt="Taming an Arctic Fox" src="https://github.com/user-attachments/assets/26e43c5c-1d01-42a6-8864-af94c042a7c1" />
 
 Detailed recipes and per-species tranquilizer shot counts:
 - [Items Index](/mod/alecs-animal-husbandry/items-index)
@@ -85,14 +79,15 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 * **Attack Target** - Sics up to 3 Active beasts on a target
 * **Aggressive** - Will attack anything that comes near
 * **Defend** - Will attack anything that attacks you
-   ![alt text](image-1.png)
+  
+   <img width="300" alt="Command Radial" src="https://github.com/user-attachments/assets/d2a2d023-7504-48b3-8dbe-9418578f27fd" />
 
 # Health and Happiness 
 
 * Hunger and thirst decay over time. If Hunger or Thirst reach 0, your animal will start taking damage. 
 * Decay and damage rates can be adjusted in `/tw settings`. Lethality from malnourishment is toggled off by default. 
 
-   ![alt text](tw-settings.png)
+   <img width="583" height="696" alt="tw-settings" src="https://github.com/user-attachments/assets/1aa619d8-99f7-4c3f-827a-e66e7244c711" />
 
    > You can also `/tw config` for more complex options.
 
@@ -101,7 +96,8 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 * Fill a trough with water by right-clicking with water bucket. 
 
 
-![alt text](fill-feed-trough.gif) ![alt text](fill-water-tough.gif)
+<img width="320" height="210" alt="Filling trough with food" src="https://github.com/user-attachments/assets/a1ccafe5-59dd-4645-8b39-bb326b119550" /> <img width="320" height="210" alt="filling trough with water" src="https://github.com/user-attachments/assets/960f80d9-140f-4ec3-9c1a-b47f5a205260" />
+
 
 > Note: animals can drink from water source block, but may drown. This is base Hytale behavior. Use water troughs to keep animals safe!
 
