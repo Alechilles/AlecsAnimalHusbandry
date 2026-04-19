@@ -25,9 +25,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 4. Safely transport animals with Soul Latern, crafted at Farming Bench.
    * **Do not use base game Capture Create!** This resets your animal's data.
    
-
-
-
+    
 > **Download [Voile](https://www.curseforge.com/hytale/mods/docs) (optional dependency) to view all documentation ingame!** 
 
 # Taming
@@ -44,11 +42,13 @@ View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-referen
 ## Animal Management 
 
 * Interact (default keybind `F`) to cycle animals through `Follow`, `Hold`, and `Recall` states.
+
    <img width="320" height="242" alt="Follow, Stay, and Wander commands" src="https://github.com/user-attachments/assets/e08d486f-fc8d-405f-8ac8-298301a5d8ef" />
 
 * To mount ridable animals, press ``F`` interact while crouching. 
 * Right-click with command flute to view your animal's stats such as happiness, hunger, thirst, traits and more.
-<img width="1663" height="1160" alt="image" src="https://github.com/user-attachments/assets/6d6564e7-7183-4843-9740-16374b486f37" />
+ 
+<img width="800" alt="Tamework UI Showcase" src="https://github.com/user-attachments/assets/6d6564e7-7183-4843-9740-16374b486f37" />
 
    * Use per-companion panel actions such as Recall, Set Home, Return Home, Unlink, and Revive when available.
    * Recover companions that show a LOST status with strict respawn/recovery flow.
@@ -104,7 +104,7 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 
 Animals must have room to move around, and will have varying preferences for population/herd size to meet their social needs. 
 
-   >![alt text](image-2.png)
+![Happiness](https://github.com/user-attachments/assets/e1dd722d-0eb0-4a28-8cc7-cc13300f72c8)
 
 
 ## Breeding

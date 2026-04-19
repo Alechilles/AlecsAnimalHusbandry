@@ -39,11 +39,10 @@ Animal Husbandry now fully supports **all Livestock, Neutral Wildlife, and Beast
 
 **3. Create a good environment for your companions:**
 - Build a safe enclosure with room for movement.
-- Keep an accessible water source in the enclosure (water blocks and feed trough water both work).
-- Keep your companions' preferred food type in a chest in the enclosure.
-- If you use feed troughs, keep bucket refill items available so trough water can be replenished.
+- Keep your companions' preferred food type and water in feed troughs in the enclosure.
+  - Place food inside the trough for feeding
+  - Right-click with a bucket of water to fill with water
 - Your animals will automatically eat and drink when they are hungry or thirsty.
-- Water source blocks are still supported for now, but the long-term plan is to deprecate that path after feed trough hydration has been tested more broadly.
 
 **4. Craft your command item:**
 - Craft the **Animal Control Flute** at the Farmer's Workbench (Tier 2).
@@ -173,10 +172,6 @@ All of these animal groups are integrated into the same taming, companion, needs
 - Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
 
 ## Planned Next
-- Easier configuration for non-modders.
-  - In-game configuration UI.
-- Expanded per-species tuning and behavior identity.
-- Death over time from starvation and dehydration (optional toggle).
 - Death from old age (optional toggle).
 - Inbreeding penalties (optional toggle).
 - Bonding/XP levels.
