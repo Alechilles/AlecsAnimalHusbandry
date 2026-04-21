@@ -169,7 +169,7 @@ All of these animal groups are integrated into the same taming, companion, needs
 
 ## Compatibility
 - Requires Alec's Tamework! `2.8.x`
-- Likely incompatible with mods that edit the same animal role assets (especially `Template_Livestock` and Beast role configs).
+- Likely incompatible with mods that edit the same animal role assets (especially `AH_Template_Livestock` and Beast role configs).
 
 ## Planned Next
 - Death from old age (optional toggle).

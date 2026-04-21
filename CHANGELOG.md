@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## 1.4.3 - Template ID Cleanup + Cat Command Compatibility - 2026-04-20
+
+### Changed
+- Renamed the shared Animal Husbandry role templates to the `AH_Template_*` scheme and rewired role/template references plus compatibility notes to match the new ids.
+- Pet cats from Alec's Cats can now be linked and commanded with both the `Animal Control Flute` and `Combat Beast Flute`.
+- Refreshed the README/wiki getting-started and feed-trough guides with expanded animal-management guidance, corrected screenshots, and broken-image cleanup.
+- Updated `manifest.json` version to `1.4.3`.
+
+### Fixed
+- Tamed companions now clear their idle settle/sit posture before command-driven movement resumes, preventing sliding when follow/defend/move commands interrupt a resting idle animation.
+
 ## 1.4.2 - Arctic Fox Variant + Owner Retaliation Guard - 2026-04-13
 
 ### Added
@@ -70,7 +81,7 @@
 - Refreshed dependency install documentation links in the wiki.
 
 ### Fixed
-- Removed `NextTargetRange` from `Template_Predator` because it no longer exists on the base-game component.
+- Removed `NextTargetRange` from `AH_Template_Predator` because it no longer exists on the base-game component.
 - Increased throw-speed values in shared livestock/neutral templates to satisfy current minimum throw-speed requirements.
 
 ## 1.3.1 - Aures Spawner Icons + Neutral Needs Consolidation - 2026-03-24
@@ -90,13 +101,13 @@
 ## 1.3.0 - Neutral/Critter Cohort Expansion - 2026-03-19
 
 ### Added
-- Added Animal Husbandry integration for the remaining Template_Animal_Neutral base-game roles by introducing wild override + Tamed_ role pairs for Antelope, Armadillo, Crab, Deer_Doe, Deer_Stag, Flamingo, Hatworm, Horse_Skeleton, Horse_Skeleton_Armored, Lizard_Sand, Lobster, Moose_Bull, Moose_Cow, Penguin, Spark_Living, Tetrabird, Tortoise, and Trillodon.
+- Added Animal Husbandry integration for the remaining AH_Template_Animal_Neutral base-game roles by introducing wild override + Tamed_ role pairs for Antelope, Armadillo, Crab, Deer_Doe, Deer_Stag, Flamingo, Hatworm, Horse_Skeleton, Horse_Skeleton_Armored, Lizard_Sand, Lobster, Moose_Bull, Moose_Cow, Penguin, Spark_Living, Tetrabird, Tortoise, and Trillodon.
 - Added Animal Husbandry integration for the passive critter/cactee cohort via wild override + Tamed_ role pairs for Cactee, Frog_Blue, Frog_Green, Frog_Orange, Gecko, Meerkat, Mouse, Squirrel, Snail_Frost, and Snail_Magma.
 
 ### Changed
 - Wired the new neutral-role cohort into Animal Husbandry Tamework role allowlists/config coverage (interaction, traits, companion, needs, happiness, breeding, command bag, and soul lantern capture/spawn lists) plus AH_Livestock_Tamed membership.
 - Extended the same allowlist/config coverage to the passive critter/cactee cohort (critter interaction config, traits, companion, needs, happiness, breeding, command bag, soul lantern capture/spawn, and AH_Livestock_Tamed group membership).
-- Passive critter/cactee roles now use dedicated critter templates (`Template_Animal_Critter_AH`, `Template_Critter_Tamed`) and a slimmed interaction config (`TwInteractionConfig_AnimalHusbandry_Critter`) focused on tame/feed/breed/mode-cycle.
+- Passive critter/cactee roles now use dedicated critter templates (`AH_Template_Animal_Critter`, `AH_Template_Critter_Tamed`) and a slimmed interaction config (`TwInteractionConfig_AnimalHusbandry_Critter`) focused on tame/feed/breed/mode-cycle.
 - Split that neutral cohort into a dedicated Tamework config set (`TwInteractionConfig_AnimalHusbandry_Neutral`, `TwCompanionConfig_AnimalHusbandry_Neutral`, `TwNeedsConfig_AnimalHusbandry_Neutral`, `TwHappinessConfig_AnimalHusbandry_Neutral`, `TwTraitConfig_AnimalHusbandry_Neutral`, `TwBreedingConfig_AnimalHusbandry_Neutral`) and rewired neutral roles to use the neutral interaction config id.
 - Spark Living now uses shared Tamework `Want_Food_Charcoal` thought-bubble particles (blank thought cloud + base-game charcoal icon).
 - Enabled mounting support for selected neutral `Tamed_` roles (`Horse_Skeleton`, `Horse_Skeleton_Armored`, `Moose_Bull`, `Moose_Cow`, `Trillodon`, `Deer_Stag`, `Antelope`, `Tetrabird`, `Tortoise`) with per-role mount anchor offsets.
@@ -106,14 +117,14 @@
 - Added mounting support for select larger tamed companions, including bison, mosshorns, wolves, grizzly and polar bears, sabertooths, snow leopards, cave raptors, and cave rexes.
 
 ### Fixed
-- Fixed `Template_Predator_Tamed` so predator interaction prompts/actions forward the configured Tamework interaction inputs, restoring crouch-mount prompts and mount execution for predator companions marked as mountable.
+- Fixed `AH_Template_Predator_Tamed` so predator interaction prompts/actions forward the configured Tamework interaction inputs, restoring crouch-mount prompts and mount execution for predator companions marked as mountable.
 - Restored livestock harvest interactions to require configured harvest interaction context in the shared Animal Husbandry Tamework interaction config.
 
 ## 1.1.2 - Livestock Spawn Compatibility Hotfix - 2026-03-16
 ### Fixed
 - Added missing NPC group assets for `AH_Livestock_Tamed` and `AH_Predator_Tamed` so custom attitude groups resolve during startup on current builds.
 - Updated `AH_Predator_Tamed` to use wildcard predator role patterns so current builds resolve the tamed predator group without TagSet member warnings.
-- Updated wild livestock role overrides to expose tame parameters locally (`IsTameable`, `TameRoleChange`, `InteractionConfigId`) so `Template_Animal_Neutral` children no longer fail asset validation with private-parameter errors.
+- Updated wild livestock role overrides to expose tame parameters locally (`IsTameable`, `TameRoleChange`, `InteractionConfigId`) so `AH_Template_Animal_Neutral` children no longer fail asset validation with private-parameter errors.
 - Added explicit wild `Mosshorn` and `Mosshorn_Plain` role overrides with local tame parameters so those base-game livestock roles follow the same current-build compatibility rules.
 
 ### Changed
@@ -128,29 +139,29 @@
 
 ## 1.1.0 - Beast Taming Expansion + Command Flute - 2026-03-14
 ### Added
-- Added first-pass Beast role coverage by overriding all vanilla Beast roles (`Template_Predator` lineage) in Animal Husbandry.
-- Added `Tamed_` Beast role variants for all supported Beast roles, currently wired to `Template_Predator_Tamed`.
-- Added `Template_Predator_Tamed` by copying `Template_Cat_Pet` from Alec's Cats for Beast-tamed behavior.
+- Added first-pass Beast role coverage by overriding all vanilla Beast roles (`AH_Template_Predator` lineage) in Animal Husbandry.
+- Added `Tamed_` Beast role variants for all supported Beast roles, currently wired to `AH_Template_Predator_Tamed`.
+- Added `AH_Template_Predator_Tamed` by copying `Template_Cat_Pet` from Alec's Cats for Beast-tamed behavior.
 - Added Beast-compatible Soul Lantern spawner support (`AnimalHusbandry_Soul_Lantern` + filled variant + spawner config) with Animal Husbandry-specific localization and icon.
 - Added a new Animal Husbandry wiki item page for Nametag usage and integration context.
 
 ### Changed
 - Wild Beast role overrides now include taming + interaction wiring (`IsTameable`, `TameRoleChange`, `InteractionConfigId`).
-- Added a `Template_Predator` override with Tamework interaction support so Beast tame flows can execute at template level.
-- Added missing Beast/command parameter definitions to `Template_Predator_Tamed` so tamed Beast role fields (for example `Tamed_Wolf_Black`) resolve cleanly.
-- Added `TargetRange` and `CombatFleeIfTooCloseDistance` parameter definitions to `Template_Predator_Tamed` to fix runtime parameter-resolution errors (for example `Tamed_Bear_Grizzly`).
+- Added a `AH_Template_Predator` override with Tamework interaction support so Beast tame flows can execute at template level.
+- Added missing Beast/command parameter definitions to `AH_Template_Predator_Tamed` so tamed Beast role fields (for example `Tamed_Wolf_Black`) resolve cleanly.
+- Added `TargetRange` and `CombatFleeIfTooCloseDistance` parameter definitions to `AH_Template_Predator_Tamed` to fix runtime parameter-resolution errors (for example `Tamed_Bear_Grizzly`).
 - Added dedicated Beast interaction config `TwInteractionConfig_AnimalHusbandry_Predator` and wired Beast roles to it.
 - Beast taming now requires the target NPC to be below 20% health (`NpcHealthPercent` with `LessThan 20.0`).
 - Updated Animal Husbandry interaction and command-role allowlists to include the new Beast role variants.
 - Added tamed Beast role coverage to `Needs`, `Happiness`, `Breeding`, and `Companion` config role-id lists.
-- `Template_Livestock` sleep wake routing now preserves sleep origin: wake returns to `Idle` when sleep started from idle/follow, and returns to `Hold` when sleep started from hold.
+- `AH_Template_Livestock` sleep wake routing now preserves sleep origin: wake returns to `Idle` when sleep started from idle/follow, and returns to `Hold` when sleep started from hold.
 - Exposed `IsTameable`, `TameRoleChange`, and `InteractionConfigId` as parameters in chained Beast base roles (`Bear_Grizzly`, `Snake_Marsh`, `Spider`) so child variants can override tame settings without parameter visibility errors.
 - `TwInteractionConfig_AnimalHusbandry_Predator` role allowlist now contains only Beast and tamed-Beast roles (livestock role IDs removed).
 - `TwInteractionConfig_AnimalHusbandry` role allowlist now excludes Beast and tamed-Beast roles so Beast handling is isolated to the dedicated Beast interaction config.
-- Beast taming now additionally requires `Sleep.Tranquilized`; `Template_Predator` now forces tranquilized Beasts into `Sleep.Tranquilized` while `Tw_Status_Tranquilized` is active and wakes them when the effect ends.
-- Added `TranquilizerSleepThresholdSeconds` to `Template_Predator` so per-role tuning can require longer remaining tranquilizer duration (supporting higher-hit tranquilizer thresholds through effect-duration stacking).
-- Added `TranquilizerSleepHealthRange` to `Template_Predator` and gated tranquilizer-forced sleep by health ratio (default `[0, 0.2]`, so Beasts only fall asleep at 20% health or lower unless overridden per role).
-- Tranquilizer sleep threshold behavior in `Template_Predator` now latches eligibility while the effect is active: once the duration threshold is met, dropping health into `TranquilizerSleepHealthRange` will trigger sleep without requiring an additional tranquilizer hit.
+- Beast taming now additionally requires `Sleep.Tranquilized`; `AH_Template_Predator` now forces tranquilized Beasts into `Sleep.Tranquilized` while `Tw_Status_Tranquilized` is active and wakes them when the effect ends.
+- Added `TranquilizerSleepThresholdSeconds` to `AH_Template_Predator` so per-role tuning can require longer remaining tranquilizer duration (supporting higher-hit tranquilizer thresholds through effect-duration stacking).
+- Added `TranquilizerSleepHealthRange` to `AH_Template_Predator` and gated tranquilizer-forced sleep by health ratio (default `[0, 0.2]`, so Beasts only fall asleep at 20% health or lower unless overridden per role).
+- Tranquilizer sleep threshold behavior in `AH_Template_Predator` now latches eligibility while the effect is active: once the duration threshold is met, dropping health into `TranquilizerSleepHealthRange` will trigger sleep without requiring an additional tranquilizer hit.
 - Updated Beast tamed template spawner item bindings to use Animal Husbandry Soul Lantern IDs instead of cat-specific spawner IDs.
 - Updated command-item crafting quality/bench presentation for command bag and Beast command flute (`Uncommon`/`Rare`, Farmer's Workbench tier 2 for flute recipe).
 - Expanded wiki index pages to include Nametag under companion utility and item navigation.
@@ -186,7 +197,7 @@
 - Full livestock integration baseline for Animal Husbandry role coverage.
 - Tamework interaction config coverage for wild + tamed livestock role ids.
 - Traits config coverage for wild + tamed livestock role ids.
-- Pet custom interaction bridge via `TriggerNpcHook` (`TwHook_Pet`) with hook-driven NPC effects in `Template_Livestock`.
+- Pet custom interaction bridge via `TriggerNpcHook` (`TwHook_Pet`) with hook-driven NPC effects in `AH_Template_Livestock`.
 - Tamework coop integration config for `Coop_Chicken` with companion-aware intake policy.
 - Dedicated Animal Husbandry command bag item + recipe with a livestock role allowlist command config.
 - Release prep docs: final-state integration reference + V1 test checklist.
@@ -194,8 +205,8 @@
 ### Changed
 - `manifest.json` version bumped to `1.0.0`.
 - `manifest.json` server version identifier normalized to lowercase format.
-- `Template_Animal_Neutral` and `Template_Livestock` now use interaction-config-first behavior for overlapping interaction pathways.
-- `Template_Livestock` command/needs/breeding/flock bridge behavior aligned to the current Tamework-based V1 design.
+- `AH_Template_Animal_Neutral` and `AH_Template_Livestock` now use interaction-config-first behavior for overlapping interaction pathways.
+- `AH_Template_Livestock` command/needs/breeding/flock bridge behavior aligned to the current Tamework-based V1 design.
 - Tamed livestock role arrays normalized for tamed-family flock membership behavior.
 - `Coop_Chicken` override now accepts tamed chicken-family role variants while keeping vanilla wild auto-capture parity.
 - Breeding cadence tuned for V1 with shorter base breeding cooldown and family-specific growth durations.

@@ -817,6 +817,28 @@
       ]
     },
     {
+      "$Comment": "Clear wander settle status posture when command movement interrupts idle so companions do not slide while sitting.",
+      "States": [
+        {
+          "From": [
+            "Idle"
+          ],
+          "To": [
+            "Follow",
+            "Defend",
+            "CommandMove",
+            "Aggressive"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
+    },
+    {
       "$Comment": "Clear status-slot animation when entering locomotion/command states so movement animations can play.",
       "States": [
         {

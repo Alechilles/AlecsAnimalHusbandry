@@ -447,6 +447,21 @@
       }
     },
     {
+      "$Comment": "Clear idle settle status posture when command movement interrupts idle so companions do not slide while sitting.",
+      "States": [
+        {
+          "From": [ "Idle" ],
+          "To": [ "Follow", "Defend", "CommandMove" ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
+    },
+    {
       "$Comment": "Always clear animation when moving from Alerted, Flee, Hold, or Defend state.",
       "States": [
         {
