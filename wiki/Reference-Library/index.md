@@ -6,7 +6,7 @@ draft: false
 ---
 # Reference Library Index
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/)
 
 Use this section for lookup-style tables and species coverage information.
 

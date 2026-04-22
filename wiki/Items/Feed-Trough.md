@@ -6,7 +6,7 @@ draft: false
 ---
 # Feed Trough
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/)
 
 ![Feed Trough](https://github.com/user-attachments/assets/29f3f0b6-8f5c-4b77-a3a4-9c83feebb2a0)
 

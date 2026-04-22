@@ -6,7 +6,7 @@ draft: false
 ---
 # Troubleshooting
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/)
 
 ## "My animals won't breed"
 Check these first:
@@ -55,7 +55,6 @@ Recipe details:
 4. Re-test with one species before scaling.
 
 > [Screenshot Placeholder: Example server error line and corrected config snippet]
-
 
 
 

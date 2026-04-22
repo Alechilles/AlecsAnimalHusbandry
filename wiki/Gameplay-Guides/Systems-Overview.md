@@ -6,7 +6,7 @@ draft: false
 ---
 # Systems Overview
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/)
 
 ## Core Loop
 1. Tame a supported animal.

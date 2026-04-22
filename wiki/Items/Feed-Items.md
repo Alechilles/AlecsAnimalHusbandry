@@ -6,7 +6,7 @@ draft: false
 ---
 # Feed Items
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/)
 
 These care items are provided by **Alec's Tamework** and are used by Animal Husbandry companions.
 

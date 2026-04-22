@@ -6,7 +6,7 @@ draft: false
 ---
 # Animal Taming Reference
 
-Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/)
 Related hub: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 This page is a practical quick-reference for animal taming.
@@ -88,7 +88,6 @@ This page is a practical quick-reference for animal taming.
 
 > [Screenshot Placeholder: Livestock tame interaction with preferred food in hand]
 > [Screenshot Placeholder: Livestock linked to command flute after taming]
-
 
 
 

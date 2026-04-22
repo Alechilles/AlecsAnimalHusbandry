@@ -6,7 +6,7 @@ draft: false
 ---
 # Commands and Controls
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/)
 
 ## Primary Input Behavior
 - **Left-click (Primary):** link/unlink or issue selected command.

@@ -6,7 +6,7 @@ draft: false
 ---
 # Start Here
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/)
 
 Use this section for first-time setup and your first successful tame.
 

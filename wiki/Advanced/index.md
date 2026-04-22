@@ -6,7 +6,7 @@ draft: false
 ---
 # Configuration Index
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/)
 
 ## Child Pages
 - [TW Settings](/mod/alecs-animal-husbandry/tw-settings)

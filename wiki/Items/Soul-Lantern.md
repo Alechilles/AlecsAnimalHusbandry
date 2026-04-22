@@ -6,7 +6,7 @@ draft: false
 ---
 # Soul Lantern
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/)
 
 The **Soul Lantern** lets you capture and re-place your tamed livestock and Beast companions.
 It is useful for moving companions between pens, relocating them to a new base, or packing them up before travel.

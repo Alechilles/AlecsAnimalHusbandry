@@ -6,7 +6,7 @@ draft: false
 ---
 # Mountable Mobs Reference
 
-Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/)
 Related guide: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
 This page is a quick-reference for mobs that are currently configured as mountable in Animal Husbandry.

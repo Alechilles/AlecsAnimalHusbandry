@@ -6,7 +6,7 @@ draft: false
 ---
 # Gameplay Guides Index
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/)
 
 This section contains practical play guides for day-to-day companion management.
 

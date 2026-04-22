@@ -6,7 +6,7 @@ draft: false
 ---
 # Nametag
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/)
 
 ![Nametag](https://github.com/user-attachments/assets/70ad5a86-bd2f-4655-805e-85dc9fbef1a5)
 

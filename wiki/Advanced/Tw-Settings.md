@@ -6,7 +6,7 @@ draft: false
 ---
 # TW Settings
 
-Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/)
 
 Use `/tw settings` for **global world-level settings** that affect how Tamework behaves across your save.
 

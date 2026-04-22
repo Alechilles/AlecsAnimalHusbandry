@@ -6,7 +6,7 @@ draft: false
 ---
 # Breeding and Growth Guide
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/)
 
 This page is your practical timing reference for line planning.
 

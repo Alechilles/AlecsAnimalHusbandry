@@ -6,7 +6,7 @@ draft: false
 ---
 # Items Index
 
-Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Animal Husbandry Wiki](/mod/alecs-animal-husbandry/)
 
 Each item has its own page with recipe, bench requirements, and practical use notes.
 

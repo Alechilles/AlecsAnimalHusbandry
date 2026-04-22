@@ -6,7 +6,7 @@ draft: false
 ---
 # Glowing Purple Mushroom Spores
 
-Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/alecs-animal-husbandry/)
 
 **Glowing Purple Mushroom Spores** let you turn a scarce tranquilizer ingredient into a renewable, farmable crop.
 

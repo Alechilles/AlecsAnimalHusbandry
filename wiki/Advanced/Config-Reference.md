@@ -6,7 +6,7 @@ draft: false
 ---
 # Config Reference (Configuration)
 
-Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/)
 
 This page is optional for players who want to tune behavior.
 If you only want to play, use the main guides instead.
@@ -56,4 +56,3 @@ Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were repl
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
-

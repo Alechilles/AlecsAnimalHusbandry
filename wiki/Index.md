@@ -48,5 +48,3 @@ draft: false
 - [Config Reference (Configuration)](/mod/alecs-animal-husbandry/config-reference-configuration)
 
 > [Screenshot Placeholder: Main companion command panel with multiple linked animals]
-
-

@@ -6,7 +6,7 @@ draft: false
 ---
 # Getting Started Guide
 
-Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/)
 
 ## Quickstart Summary
 1. Livestock and Neutral wildlife are tamed identically to base Hytale: **feed their [favorite food](/mod/alecs-animal-husbandry/animal-taming-reference).** </br> Aggressive predators (Beasts) [require more steps](#beast-taming) to weaken and capture, akin to Pokemon or Monster Hunter. 

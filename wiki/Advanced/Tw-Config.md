@@ -6,7 +6,7 @@ draft: false
 ---
 # TW Config
 
-Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Configuration Index](/mod/alecs-animal-husbandry/configuration-index) | [Home](/mod/alecs-animal-husbandry/)
 
 Use `/tw config` when you want **intermediate-to-advanced, highly granular control** over Tamework behavior.
 

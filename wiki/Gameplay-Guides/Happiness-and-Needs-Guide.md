@@ -6,7 +6,7 @@ draft: false
 ---
 # Happiness and Needs Guide
 
-Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-index) | [Home](/mod/alecs-animal-husbandry/)
 
 This guide explains how to keep companions stable and breeding-ready.
 
@@ -55,5 +55,4 @@ See breeding timings and cooldown behavior:
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]
-
 

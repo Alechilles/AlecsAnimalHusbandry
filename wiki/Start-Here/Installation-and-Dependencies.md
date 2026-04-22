@@ -6,7 +6,7 @@ draft: false
 ---
 # Installation and Dependencies
 
-Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs-animal-husbandry/)
 
 ## Required Mods
 - [Alec's Animal Husbandry!](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
