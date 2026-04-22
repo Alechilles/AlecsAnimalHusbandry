@@ -10,12 +10,10 @@
 [![Sponsored By HytaleModding Grant Program](https://github.com/user-attachments/assets/a03709e3-445a-4e58-8ec5-591688490c5d)](https://hytalemodding.dev/en/grants)
 
 # Alec's Animal Husbandry!
-Animals in Hytale should feel alive, personal, and worth caring for. Alec's Animal Husbandry turns vanilla animals into a deep companion and management experience where taming, raising, and breeding all matter.
-
-Animal Husbandry now fully supports **all Livestock, Neutral Wildlife, and Beasts (Predators)**.
+Animals in Hytale should feel alive, personal, and worth caring for. Turns **all vanilla animals, from mice to dinosaurs**, into a deep companion and management experience where taming, raising, and breeding all matter.
 
 ## Wiki
-- [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/animal-husbandry-wiki)
+- [Home](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/)
 - [Start Here](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/start-here)
 - [Installation and Dependencies](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/installation-and-dependencies)
 - [Getting Started Guide](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/getting-started-guide)
