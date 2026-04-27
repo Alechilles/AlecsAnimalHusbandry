@@ -78,6 +78,95 @@
     "AdultStartScale": 0.8,
     "AdultSwitchScale": 1.2
   },
-  "RoleOverrides": {}
+  "RoleOverrides": {
+    "Tamed_Deer_Doe": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Tamed_Deer_Doe",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Tamed_Deer_Stag",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Deer_Stag": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Tamed_Deer_Doe",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Tamed_Deer_Stag",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Moose_Bull": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Tamed_Moose_Bull",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Tamed_Moose_Cow",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Tamed_Moose_Cow": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Tamed_Moose_Bull",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Tamed_Moose_Cow",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    }
+  }
 }
 

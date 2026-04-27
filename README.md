@@ -22,11 +22,48 @@ Animals in Hytale should feel alive, personal, and worth caring for. Turns **all
 - [Reference Library](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/reference-library-index)
 - [Configuration](https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/configuration-index)
 
-## Getting Started
+## Play How **You** Want to Play
+Animal Husbandry and Tamework are _very_ heavily customizable.
+- Use `/tw settings` to configure global Tamework settings and/or select a preset:
+  - Full Experience - Everything enabled
+  - Easier - All systems enabled, but animals will not take damage from Starvation/Hunger
+  - Simple (Minecraft-like) - Simple taming and on-interact breeding only. No Hunger/Thirst, Happiness, Passive Breeding, or Traits.
+- (Advanced) Use `/tw config` for granular control over every tiny aspect of Animal Husbandry and other installed Tamework mods.
 
+## Core Gameplay
+1. Tame animals you care about.
+2. Keep them fed, watered, and happy.
+3. Breed strong pairs with the traits you want.
+4. Raise offspring through full life stages.
+5. Build stronger companion lines from healthier, happier, better-managed animals.
+6. Bring beast companions along on your adventures for combat assistance.
+
+Animals are meant to feel like long-term companions, not disposable resource drops.
+
+## Core Features
+- **Real Taming and Ownership:**
+  - Tame animals into persistent companions instead of treating them like disposable mob drops.
+  - Ownership is respected across companion systems, tied into the husbandry progression loop, and can optionally include revive support.
+- **Needs and Happiness:**
+  - Animals have real hunger, thirst, and happiness systems that affect how well they thrive.
+  - They can automatically eat from storage, drink from nearby water or troughs, and only breed when properly cared for.
+- **Breeding, Traits, and Bloodlines:**
+  - Build long-term breeding lines instead of relying on shallow one-off farming.
+  - Offspring inherit traits and attachments from their parents, with room to improve trait quality through selective breeding.
+- **Life Stage Progression:**
+  - Animals grow from babies into adults as part of the normal companion loop.
+  - Raising young animals into mature, high-quality companions is a core part of progression.
+- **Commandable Companions:**
+  - Control your animals with companion commands like `Follow`, `Hold`, `Set Home`, `Return Home`, and `Recall`.
+  - Combat-capable Beasts also support battle-focused commands like `Defend` and `Attack Target`.
+- **Extra Utility:**
+  - Name your tamed animals with Nametags and manage them more cleanly as part of your homestead.
+  - Soul Lantern capture items and upgraded coops preserve important animal data like traits and attachments instead of wiping them on respawn.
+
+## Getting Started
 **1. Install requirements:**
 - Alec's Animal Husbandry!
-- Alec's Tamework! `v2.8.x`
+- Alec's Tamework!
 - Alec's Nametags!
 
 **2. Tame your first animal companion:**
@@ -69,90 +106,7 @@ Animals in Hytale should feel alive, personal, and worth caring for. Turns **all
 - Craft a **Soul Lantern** at Farmingbench Tier 2 (6x any wood, 2x void essence).
 - Use it to capture/release your tamed companion animals.
 
-## Core Gameplay Flow
-
-The intended loop is:
-1. Tame animals you care about.
-2. Keep them fed, watered, and happy.
-3. Breed strong pairs to build better bloodlines.
-4. Raise offspring through full life stages.
-5. Build stronger companion lines from healthier, happier, better-managed animals.
-
-Animals are meant to feel like long-term companions, not disposable resource drops.
-
-## Core Features
-
-### Real Taming and Ownership
-- Tame animals and make them part of your homestead, not just passive drops.
-- Ownership is persistent and respected across companion interactions.
-- Tamed variants are integrated into the broader husbandry progression loop.
-- Bonded companions may be revived after a cooldown (optional and configurable).
-
-### Needs and Happiness That Actually Matter
-<img width="495" height="324" alt="Discord_xtdDoHHb6W" src="https://github.com/user-attachments/assets/e1dd722d-0eb0-4a28-8cc7-cc13300f72c8" />
-
-- Supported animals run on active needs and happiness systems instead of shallow one-off interactions.
-- Animals will **eat food from storage and drink from nearby water sources automatically**, including water blocks and feed trough water charges.
-- Feed trough water can be refilled with compatible bucket items to keep passive hydration reliable.
-- Happiness is influenced by several factors and works on an "equilibrium" system where it sits naturally at about 50, and various factors increase or decrease it.
-- Animals will only breed if they are well taken care of and happy.
-
-### Breeding, Traits, and Bloodlines
-<img width="649" height="119" alt="Discord_tBwiUZOqXi" src="https://github.com/user-attachments/assets/088f4c74-7cd3-478a-929a-5d9a64f3b76c" />
-
-- Breed compatible animal pairs and grow long-term lines.
-- **Breeding happens passively** when animals are above the happiness threshold and the area is not overcrowded.
-- Offspring roll and inherit traits, creating real variation between animals and lots of room for min-maxing.
-- Non-beast animal groups use the primary husbandry trait profile, including economy-oriented traits like `Bounty`.
-- Focus on maintaining happy, high-quality companion lines instead of mass farming shallow mobs.
-- Traits from natural spawns have a lower cap, with a higher cap that can be reached through breeding animals with the same traits.
-- Random attachments (such as fur color) are inherited, so babies will always match their parents (aside from a very small mutation chance).
-- Parent and offspring behavior supports more natural herd and flock development.
-
-### Full Life Stage Progression
-
-<img width="330" height="198" alt="image" src="https://github.com/user-attachments/assets/0a652405-aa88-4caa-8bfd-affd77082f9e" />
-
-- Young animals start as babies and slowly grow over time, advancing life stages when appropriate.
-- Baby-to-adult progression is integrated into the companion system.
-- Raising animals from early life to maturity is a core gameplay loop.
-
-### Commandable Companions
-<img width="451" height="517" alt="Discord_Hpi2BwGKhl" src="https://github.com/user-attachments/assets/fe43ecc3-30c3-4328-be3e-0b5143f415b7" />
-
-- Direct behavior control with command modes like `Follow`, `Hold`, and `Idle`.
-- Combat-oriented options (`Defend`, `Attack Target`) are available on species that are configured to support them.
-- This is especially useful for Beasts that are intended to act as combat-capable companions.
-- Utility command flow for `Set Home`, `Return Home`, `Recall`, and move-to-location control.
-- Linked panel actions include per-companion `Revive` plus nearby-only `Release`/`Cull` safety actions.
-- Linked panel status includes `LOST` handling with strict recovery through respawn flows.
-- Companions can be recalled from anywhere, including cross-world travel when that behavior is enabled in Tamework travel settings.
-- `Return Home` remains a same-world behavior.
-
-### Beast Trait Profile
-
-- Beasts use a dedicated trait config: `TwTraitConfig_AnimalHusbandry_Predator`.
-- This profile is tuned around combat companions, with heavier emphasis on `Strength`, `Toughness`, and `Swiftness`.
-- Economy-focused livestock traits such as `Bounty` are excluded from Beast rolls.
-- Inheritance/mutation behavior remains consistent with the main husbandry trait system.
-
-### Nametags
-<img width="536" height="268" alt="image" src="https://github.com/user-attachments/assets/2311dbe5-02f0-4c93-8b58-d14ba60b7aa3" />
-
-- Craft a (custom modeled and textured) Nametag item that can be used to name any tamed/owned NPC.
-
-### Coop Integration
-- Chicken coops maintain the animal's traits, attachments, and other metadata instead of getting reset on respawn.
-
-## Tips For Best Results
-
-- Keep food storage and water practical and accessible to reduce failed need-seeking.
-- Avoid overcrowding if you want reliable passive breeding.
-- Use command modes deliberately: `Hold` for structure, `Follow` for movement, `Idle` for free behavior.
-- Breed for consistency, not just quantity; inheritance matters over time.
-
 ## Mid-Playthrough Worlds
-
 Adding the mod to an existing world is supported.
 - Pre-existing tamed animals can be bridged into Tamework ownership on first successful interaction/link.
 - If an old tamed animal is not responding to owner-restricted actions, interact/link it once to migrate it.
@@ -165,20 +119,14 @@ Animal Husbandry fully supports all vanilla:
 
 All of these animal groups are integrated into the same taming, companion, needs/happiness, breeding/progression, and command systems, with dedicated Beast combat/taming flow where applicable.
 
-## Compatibility
-- Requires Alec's Tamework! `2.8.x`
-- Likely incompatible with mods that edit the same animal role assets (especially `AH_Template_Livestock` and Beast role configs).
-
 ## Planned Next
-- Death from old age (optional toggle).
-- Inbreeding penalties (optional toggle).
 - Bonding/XP levels.
 - Talent trees.
   - Unlock stat increases, new behaviors, and new abilities as the companion levels up.
-
-## Hytame Shoutout
-
-If you're looking for a simpler, more Minecraft-like taming and breeding experience, I highly recommend checking out [Hytame - Animal Breeding](https://www.curseforge.com/hytale/mods/hytame) by my friend Lait!
+- Death from old age (optional toggle).
+- Inbreeding penalties (optional toggle).
+- Cleanliness system (optional)
+- Shelter system (optional)
 
 
 

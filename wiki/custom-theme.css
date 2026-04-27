@@ -1,0 +1,373 @@
+/* Alec's Animal Husbandry wiki theme
+   Paste into the HytaleModding Wiki custom CSS field for this mod.
+   Visual direction: warm field guide, barnwood surfaces, meadow accents,
+   and a restrained dusk glow pulled from the mod icon and banner art.
+*/
+
+:root {
+  --ahw-meadow: #6f8d35;
+  --ahw-meadow-deep: #4f6622;
+  --ahw-hay: #d7b06a;
+  --ahw-barnwood: #7b4e28;
+  --ahw-soil: #24180f;
+  --ahw-cream: #f6eddc;
+  --ahw-spore: #8f76c9;
+  --ahw-panel: rgba(252, 246, 235, 0.82);
+  --ahw-panel-strong: rgba(255, 250, 242, 0.92);
+  --ahw-panel-muted: rgba(244, 233, 211, 0.72);
+  --ahw-border: rgba(123, 78, 40, 0.18);
+  --ahw-shadow: rgba(77, 51, 25, 0.16);
+  --background: #efe5cf;
+  --foreground: #2b2117;
+  --card: #fbf4e8;
+  --card-foreground: #2b2117;
+  --popover: #fbf4e8;
+  --popover-foreground: #2b2117;
+  --primary: #5f7a2e;
+  --primary-foreground: #f7f1e4;
+  --secondary: rgba(111, 141, 53, 0.14);
+  --secondary-foreground: #314216;
+  --muted: rgba(164, 138, 102, 0.16);
+  --muted-foreground: #6b5a47;
+  --accent: rgba(111, 141, 53, 0.16);
+  --accent-foreground: #314216;
+  --border: rgba(123, 78, 40, 0.18);
+  --input: rgba(123, 78, 40, 0.18);
+  --ring: rgba(111, 141, 53, 0.42);
+}
+
+.dark {
+  --ahw-panel: rgba(27, 21, 15, 0.84);
+  --ahw-panel-strong: rgba(35, 27, 18, 0.94);
+  --ahw-panel-muted: rgba(45, 35, 23, 0.78);
+  --ahw-border: rgba(215, 176, 106, 0.16);
+  --ahw-shadow: rgba(0, 0, 0, 0.34);
+  --background: #11100c;
+  --foreground: #f5ecd8;
+  --card: #17130e;
+  --card-foreground: #f5ecd8;
+  --popover: #17130e;
+  --popover-foreground: #f5ecd8;
+  --primary: #8cae4d;
+  --primary-foreground: #1e170d;
+  --secondary: rgba(111, 141, 53, 0.18);
+  --secondary-foreground: #eef4dc;
+  --muted: rgba(88, 67, 43, 0.38);
+  --muted-foreground: #baa991;
+  --accent: rgba(111, 141, 53, 0.18);
+  --accent-foreground: #f3f7ea;
+  --border: rgba(215, 176, 106, 0.15);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: rgba(140, 174, 77, 0.52);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background: var(--background);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at top left, rgba(111, 141, 53, 0.15), transparent 30%),
+    radial-gradient(circle at top right, rgba(215, 176, 106, 0.12), transparent 26%),
+    linear-gradient(180deg, rgba(123, 78, 40, 0.08), rgba(17, 16, 12, 0) 22%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 42%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.018) 0,
+      rgba(255, 255, 255, 0.018) 10px,
+      transparent 10px,
+      transparent 22px
+    );
+  opacity: 0.55;
+}
+
+body > div {
+  position: relative;
+  z-index: 1;
+}
+
+nav.sticky.top-0 {
+  border-bottom-color: var(--ahw-border);
+  background: rgba(24, 19, 13, 0.86);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+html:not(.dark) nav.sticky.top-0 {
+  background: rgba(247, 240, 225, 0.9);
+  box-shadow: 0 14px 34px rgba(77, 51, 25, 0.08);
+}
+
+nav.sticky img {
+  border: 1px solid rgba(215, 176, 106, 0.25);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+nav.sticky span.text-primary,
+nav.sticky span.text-xl {
+  color: var(--ahw-hay);
+}
+
+html.dark nav.sticky span.text-primary,
+html.dark nav.sticky span.text-xl {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
+}
+
+.mb-6 nav,
+.mb-6 a {
+  color: var(--muted-foreground);
+}
+
+aside > div,
+main > .mb-8.overflow-hidden.rounded-2xl,
+main > .overflow-hidden.rounded-2xl {
+  border-color: var(--ahw-border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.05)),
+    linear-gradient(135deg, rgba(111, 141, 53, 0.12), rgba(123, 78, 40, 0.09) 48%, rgba(143, 118, 201, 0.05));
+  box-shadow:
+    0 24px 60px var(--ahw-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+html:not(.dark) aside > div,
+html:not(.dark) main > .mb-8.overflow-hidden.rounded-2xl,
+html:not(.dark) main > .overflow-hidden.rounded-2xl {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 252, 246, 0.9)),
+    linear-gradient(135deg, rgba(111, 141, 53, 0.07), rgba(123, 78, 40, 0.06) 50%, rgba(143, 118, 201, 0.025));
+}
+
+aside .border-b,
+main > .mb-8.overflow-hidden.rounded-2xl > .border-b,
+main > .overflow-hidden.rounded-2xl > .border-b {
+  border-bottom-color: rgba(215, 176, 106, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
+    linear-gradient(90deg, rgba(111, 141, 53, 0.08), rgba(111, 141, 53, 0));
+}
+
+aside .px-1.text-xs {
+  color: var(--ahw-hay);
+  letter-spacing: 0.18em;
+}
+
+aside nav a {
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+aside nav a:hover {
+  transform: translateX(2px);
+  border-color: rgba(215, 176, 106, 0.18);
+  background:
+    linear-gradient(90deg, rgba(111, 141, 53, 0.18), rgba(111, 141, 53, 0.08));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+aside nav a.font-medium {
+  border-color: rgba(215, 176, 106, 0.28);
+  background:
+    linear-gradient(90deg, rgba(215, 176, 106, 0.18), rgba(111, 141, 53, 0.18));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+aside nav .border-l {
+  border-color: rgba(215, 176, 106, 0.12);
+}
+
+main > .mb-8 [class*="text-2xl"] {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  letter-spacing: -0.03em;
+}
+
+.prose {
+  color: var(--foreground);
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
+
+.prose h1 {
+  line-height: 1.02;
+}
+
+.prose h2 {
+  position: relative;
+  margin-top: 2.7rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(215, 176, 106, 0.12);
+}
+
+.prose h2::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 76px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ahw-hay), var(--ahw-meadow));
+}
+
+.prose h3 {
+  color: var(--ahw-hay);
+}
+
+html:not(.dark) .prose h3 {
+  color: var(--ahw-barnwood);
+}
+
+.prose a {
+  color: var(--ahw-hay);
+  text-decoration-color: rgba(215, 176, 106, 0.42);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+html:not(.dark) .prose a {
+  color: #5d6f2d;
+  text-decoration-color: rgba(93, 111, 45, 0.4);
+}
+
+.prose a:hover {
+  color: #f1cd8d;
+}
+
+html:not(.dark) .prose a:hover {
+  color: #46561f;
+}
+
+.prose ul > li::marker,
+.prose ol > li::marker {
+  color: var(--ahw-hay);
+  font-weight: 700;
+}
+
+.prose li {
+  padding-left: 0.25rem;
+}
+
+.prose img {
+  border: 1px solid rgba(215, 176, 106, 0.18);
+  border-radius: 24px;
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--ahw-hay);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(111, 141, 53, 0.12), rgba(123, 78, 40, 0.1));
+  padding: 1rem 1.2rem;
+  color: var(--muted-foreground);
+}
+
+.prose blockquote p {
+  color: inherit;
+}
+
+.prose :not(pre) > code {
+  border: 1px solid rgba(143, 118, 201, 0.22);
+  border-radius: 0.55rem;
+  background: rgba(143, 118, 201, 0.13);
+  color: #ead5ff;
+  padding: 0.16rem 0.45rem;
+}
+
+html:not(.dark) .prose :not(pre) > code {
+  background: rgba(143, 118, 201, 0.1);
+  color: #5e438d;
+}
+
+.prose pre {
+  border: 1px solid rgba(143, 118, 201, 0.16);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(24, 20, 31, 0.96), rgba(12, 10, 16, 0.96));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(215, 176, 106, 0.14);
+  border-radius: 20px;
+  background: rgba(12, 12, 10, 0.08);
+}
+
+html:not(.dark) .prose table {
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.prose thead {
+  background: linear-gradient(90deg, rgba(111, 141, 53, 0.18), rgba(215, 176, 106, 0.14));
+}
+
+.prose th,
+.prose td {
+  border-color: rgba(215, 176, 106, 0.12);
+}
+
+.prose tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+main > .mb-8 .border-t,
+main > .overflow-hidden.rounded-2xl .border-t {
+  border-top-color: rgba(215, 176, 106, 0.14);
+  background:
+    linear-gradient(180deg, rgba(111, 141, 53, 0.08), rgba(0, 0, 0, 0));
+}
+
+main .group.h-auto.rounded-xl {
+  border-color: rgba(215, 176, 106, 0.16);
+  background:
+    linear-gradient(135deg, rgba(111, 141, 53, 0.12), rgba(123, 78, 40, 0.12));
+}
+
+main .group.h-auto.rounded-xl:hover {
+  border-color: rgba(215, 176, 106, 0.28);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(140, 174, 77, 0.55);
+  outline-offset: 3px;
+}
+
+* {
+  scrollbar-color: rgba(215, 176, 106, 0.42) rgba(38, 30, 20, 0.45);
+}
