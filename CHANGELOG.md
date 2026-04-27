@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+## 1.4.4 - Baby Role Coverage + Neutral Breeding Fixes - 2026-04-27
+
+### Added
+- Added command and Soul Lantern support for Celly's baby animal roles, including fox cubs, Arctic fox cubs, flamingo chicks, and tetrabird chicks.
+- Added an Animal Husbandry wiki custom theme stylesheet for the HytaleModding wiki surface.
+
+### Changed
+- Deer doe/stag and moose bull/cow breeding now use complementary adult-role family overrides so those paired variants can breed together and produce either adult role.
+- Refreshed the README and Getting Started wiki copy around settings presets, companion care, commandable animals, and planned systems.
+- Reworked wiki homepage routing to use the lowercase `index.md` import contract and updated internal links accordingly.
+- Aligned README/wiki dependency guidance with the required Alec's Tamework `v2.8.x` dependency.
+- Updated `manifest.json` version to `1.4.4`.
+
 ## 1.4.3 - Template ID Cleanup + Cat Command Compatibility - 2026-04-20
 
 ### Changed

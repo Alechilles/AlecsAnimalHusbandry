@@ -63,7 +63,7 @@ Animals are meant to feel like long-term companions, not disposable resource dro
 ## Getting Started
 **1. Install requirements:**
 - Alec's Animal Husbandry!
-- Alec's Tamework!
+- Alec's Tamework! `v2.8.x`
 - Alec's Nametags!
 
 **2. Tame your first animal companion:**
