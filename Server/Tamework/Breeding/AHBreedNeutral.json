@@ -60,6 +60,12 @@
   "Timing": {
     "Basis": "WORLD_TIME_SCALED"
   },
+  "Gender": {
+    "Enabled": true,
+    "RequireDifferentGender": true,
+    "MaleWeight": 1.0,
+    "FemaleWeight": 1.0
+  },
   "Inheritance": {
     "InheritOwner": true,
     "InheritTamed": true,
@@ -89,10 +95,12 @@
             "AdultRoles": [
               {
                 "RoleId": "Tamed_Deer_Doe",
+                "Gender": "Female",
                 "Weight": 1.0
               },
               {
                 "RoleId": "Tamed_Deer_Stag",
+                "Gender": "Male",
                 "Weight": 1.0
               }
             ],
@@ -111,10 +119,12 @@
             "AdultRoles": [
               {
                 "RoleId": "Tamed_Deer_Doe",
+                "Gender": "Female",
                 "Weight": 1.0
               },
               {
                 "RoleId": "Tamed_Deer_Stag",
+                "Gender": "Male",
                 "Weight": 1.0
               }
             ],
@@ -133,10 +143,12 @@
             "AdultRoles": [
               {
                 "RoleId": "Tamed_Moose_Bull",
+                "Gender": "Male",
                 "Weight": 1.0
               },
               {
                 "RoleId": "Tamed_Moose_Cow",
+                "Gender": "Female",
                 "Weight": 1.0
               }
             ],
@@ -155,10 +167,12 @@
             "AdultRoles": [
               {
                 "RoleId": "Tamed_Moose_Bull",
+                "Gender": "Male",
                 "Weight": 1.0
               },
               {
                 "RoleId": "Tamed_Moose_Cow",
+                "Gender": "Female",
                 "Weight": 1.0
               }
             ],

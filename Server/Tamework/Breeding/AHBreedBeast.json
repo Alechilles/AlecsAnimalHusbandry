@@ -60,6 +60,12 @@
   "Timing": {
     "Basis": "WORLD_TIME_SCALED"
   },
+  "Gender": {
+    "Enabled": true,
+    "RequireDifferentGender": true,
+    "MaleWeight": 1.0,
+    "FemaleWeight": 1.0
+  },
   "Inheritance": {
     "InheritOwner": true,
     "InheritTamed": true,

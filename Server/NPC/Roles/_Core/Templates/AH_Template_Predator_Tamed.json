@@ -993,6 +993,20 @@
           },
           "Instructions": [
             {
+              "$Comment": "Refresh the base leash point when tamed predators settle into Idle so leash and wander behavior use the current area.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "SetLeashPosition",
+                  "ToCurrent": true
+                }
+              ]
+            },
+            {
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource_Sensor",
               "Modify": {
                 "NeedsSeekFoodItemIds": {
@@ -1402,6 +1416,20 @@
             "State": "Hold"
           },
           "Instructions": [
+            {
+              "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "SetLeashPosition",
+                  "ToCurrent": true
+                }
+              ]
+            },
             {
               "Reference": "Component_Tamework_Instruction_Hold",
               "Modify": {

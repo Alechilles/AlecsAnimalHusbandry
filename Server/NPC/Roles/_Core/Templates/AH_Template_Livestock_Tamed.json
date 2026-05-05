@@ -963,6 +963,20 @@
           },
           "Instructions": [
             {
+              "$Comment": "Refresh the base leash point when tamed livestock settles into Idle so leash and wander behavior use the current area.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "SetLeashPosition",
+                  "ToCurrent": true
+                }
+              ]
+            },
+            {
               "$Comment": "Switch to flee state if any flock member engages a target TODO switch to attack if you are very close and can attack? otherwise flee.",
               "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
               "Sensor": {
@@ -1611,6 +1625,20 @@
             "State": "Hold"
           },
           "Instructions": [
+            {
+              "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "SetLeashPosition",
+                  "ToCurrent": true
+                }
+              ]
+            },
             {
               "Reference": "Component_Tamework_Instruction_Hold",
               "Modify": {

@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+## 1.5.0 - Demo Server Prep + Gendered Breeding Support - 2026-05-04
+
+### Added
+- Enabled gender-aware breeding across livestock, neutral, and beast breeding configs, with different-gender pairing required by default and explicit adult gender labels for deer and moose variants.
+- Added `AH_Demo_*` spawn marker assets for manually placing Animal Husbandry demo tetrabirds, cows, bison, normal foxes, cave raptors, cave rexes, turkeys, grizzly bears, and black wolves.
+
+### Changed
+- Updated release metadata to `1.5.0` and aligned the required Alec's Tamework dependency to `2.9.x`.
+- Refreshed the README with the current CurseForge HTML layout, demo server information, wiki shortcuts, item links, and supported-animal coverage.
+
+### Fixed
+- Tamed livestock, critter, and predator templates now refresh their leash point when settling into `Idle` or `Hold`, so leash and wander behavior anchor to the current area after command transitions.
+
 ## 1.4.4 - Baby Role Coverage + Neutral Breeding Fixes - 2026-04-27
 
 ### Added
