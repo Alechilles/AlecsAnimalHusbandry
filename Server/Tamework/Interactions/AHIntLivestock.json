@@ -249,6 +249,21 @@
         "PlaySound": {
           "SoundEvent": "SFX_Creative_Play_Selection_Widget"
         }
+      },
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "Operator": "NoneOf",
+              "Items": [
+                "Container_Bucket",
+                "Deco_Bucket",
+                "Tool_Shears_Basic"
+              ],
+              "Quantity": 1
+            }
+          ]
+        }
       }
     },
     {
