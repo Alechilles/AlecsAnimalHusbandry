@@ -17,25 +17,35 @@ This page is a practical quick-reference for Beast taming.
 * [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
 * [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 * [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
-* Preferred food ([see table below](#beast-taming-and-feeding-table)).
-* (Recommended) [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) for post-tame command control.
+* [Preferred food](#beast-taming-and-feeding-table) (see table below)
+* [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) (Recommended)
 
 [![Beast Taming Demo Video](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/49863e5d-433c-4bc3-8de2-b79649f62499.png)](https://www.youtube.com/watch?v=Yo5Aemwwjfo)
 
-## Beast Taming Flow
-1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion).
-2. If you want a renewable mushroom supply, craft [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) and grow extra mushrooms in mud.
-3. Craft [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows).
-4. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
-5. Use tranquilizer shots while managing the Beast's health carefully.
-6. Tranquilizer requires the target to be at **20% HP or lower** to take effect.
-    - It doesn't matter if you build the tranquilizer stacks or get it below 20% first.
-7. Once the Beast is asleep, you can feed it it's preferred food to tame it.
-8. You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold`, `Idle`).
-9. Left-click with your [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to link it for more advanced control.
+## Beast Taming Steps
+1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion) at Alchemy bench.
+    * Note: [Glowing Purple Mushrooms](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) can be cultivated via Farming Workbench.
 
+2. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) and [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows) at Weapons bench.
+3. Weaken beast by attacking until its health is 20% or less. 
+4. Shoot beast with tranquilizer arrows until it falls asleep. 
+    - It doesn't matter if you build the tranquilizer stacks or get it below 20% first.
+
+5. Once asleep, feed its [preferred food](#beast-taming-and-feeding-table) to complete the taming process.
+    - You can `F` interact while beast is asleep to check its preferred food.
+
+
+6. Left-click with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to link your newly tamed beast!
+
+<br/>
 
 <img width="320" height="242" alt="Taming an Arctic Fox" src="https://github.com/user-attachments/assets/26e43c5c-1d01-42a6-8864-af94c042a7c1" />
+
+
+<br/>
+
+You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold`, `Idle`), just like livestock and neutral animals..
+ 
 
 
 ## Tranquilizer Shot Math
