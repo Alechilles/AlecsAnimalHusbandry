@@ -10,7 +10,6 @@ is_index: true
 ![Animal Husbandry Banner Image](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/c7629674-2475-4286-8864-77bcf042ff43.jpg)
 
 ## 1) Start Here
-- [Start Here](/mod/alecs-animal-husbandry/start-here)
 - [Installation and Dependencies](/mod/alecs-animal-husbandry/installation-and-dependencies)
 - [Getting Started Guide](/mod/alecs-animal-husbandry/getting-started-guide)
 
