@@ -14,9 +14,9 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 2. After taming, link neutral animals with [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute), and predators with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute), to manage their health and happiness. Craft flutes at a Farming Bench.
    - Right-click with a flute to open the [command interface](#animal-management).
    - Left-click with a flute to link animals and issue group commands.
-   - Mount rideable animals with Crouch + Interact 
+   - Mount rideable animals with Crouch + Interact
    - Interact (default keybind `F`) handles most other interactions.
-   
+
 
 3. Animals [need](#health-and-happiness) access to food, water, and protected space to roam and socialize.
    - Animals will only eat their preferred food (used for taming), or generic feed crafted at a Farming Bench.
@@ -39,7 +39,7 @@ The [infographic below](https://www.reddit.com/r/hytale/comments/1rdv827/hytale_
 
 View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-reference) for all animals tameable in Alec's Animal Husbandry!
 
-## Animal Management 
+## Animal Management
 
 * Interact (default keybind `F`) to cycle animals through `Follow`, `Hold`, and `Recall` states.
 
@@ -47,7 +47,7 @@ View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-referen
 
 * To mount ridable animals, press `F` to interact while crouching.
 * Right-click with a command flute to view your animal's stats, such as happiness, hunger, thirst, traits, and more.
- 
+
 <img width="800" alt="Tamework UI Showcase" src="https://github.com/user-attachments/assets/6d6564e7-7183-4843-9740-16374b486f37" />
 
    * Use per-companion panel actions such as Recall, Set Home, Return Home, Unlink, and Revive when available.
@@ -65,7 +65,7 @@ View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-referen
 3. Weaken the beast to < 20% HP, then shoot tranquilizer arrows until it sleeps.
 4. Feed the sleeping beast its preferred food to complete the taming process.
 5. Link beast with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) to manage health and happiness, and command up to 3 Active beasts at a time in combat.
-   - (Note: Flute requires Wild Wisteria wood, grown from Wild Wisteria sapling, Lv6 Farming Bench). 
+   - (Note: Flute requires Wild Wisteria wood, grown from Wild Wisteria sapling, Lv6 Farming Bench).
 
 <img width="320" height="242" alt="Taming an Arctic Fox" src="https://github.com/user-attachments/assets/26e43c5c-1d01-42a6-8864-af94c042a7c1" />
 
@@ -74,18 +74,18 @@ Detailed recipes and per-species tranquilizer shot counts:
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 
 
-## Combat Management 
-Combat Beasts have all the same commands as neutral animals, plus various attack modes. 
+## Combat Management
+Combat Beasts have all the same commands as neutral animals, plus various attack modes.
 * **Attack Target** - Sics up to 3 Active beasts on a target
 * **Aggressive** - Will attack anything that comes near
 * **Defend** - Will attack anything that attacks you
-  
+
    <img width="300" alt="Command Radial" src="https://github.com/user-attachments/assets/d2a2d023-7504-48b3-8dbe-9418578f27fd" />
 
-## Health and Happiness 
+## Health and Happiness
 
 * Hunger and thirst decay over time. If hunger or thirst reaches 0, your animal will start taking damage.
-* Decay and damage rates can be adjusted in `/tw settings`. Lethality from malnourishment is toggled off by default. 
+* Decay and damage rates can be adjusted in `/tw settings`. Lethality from malnourishment is toggled off by default.
 
    <img width="583" height="696" alt="tw-settings" src="https://github.com/user-attachments/assets/1aa619d8-99f7-4c3f-827a-e66e7244c711" />
 
@@ -102,7 +102,7 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 > Note: animals can drink from a water source block, but may drown. This is base Hytale behavior. Use water troughs to keep animals safe!
 
 
-Animals must have room to move around, and will have varying preferences for population/herd size to meet their social needs. 
+Animals must have room to move around, and will have varying preferences for population/herd size to meet their social needs.
 
 ![Happiness](https://github.com/user-attachments/assets/e1dd722d-0eb0-4a28-8cc7-cc13300f72c8)
 
@@ -116,7 +116,3 @@ Animals must have room to move around, and will have varying preferences for pop
 
 Use the detailed timings here:
 - [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
-
-
-
-

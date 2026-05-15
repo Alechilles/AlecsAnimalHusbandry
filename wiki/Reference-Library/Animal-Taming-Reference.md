@@ -55,7 +55,7 @@ This page is a practical quick-reference for animal taming.
 
 ## Neutral Wildlife Taming Table
 | Animal | Preferred Food | |
-|---|---|---| 
+|---|---|---|
 | Antelope | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/e08a27a3-e01b-4107-9228-8c650b4bf2d0.png" /> | Lettuce |
 | Armadillo | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/602b7010-3923-487f-8d30-9aa58ab94a74.png" /> | Egg |
 | Crab | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/3e6f6d42-7c69-4024-900a-365c79f1a608.png" /> | Raw Fish |
@@ -78,7 +78,7 @@ This page is a practical quick-reference for animal taming.
 ## Critters Taming Table
 
 | Animal | Preferred Food | |
-|---|---|---| 
+|---|---|---|
 | Cactee | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/5b52b4e7-bc95-4302-ae6a-3127fcec5a32.png" /> | Chilli |
 | Frog Blue | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/3e6f6d42-7c69-4024-900a-365c79f1a608.png" /> | Raw Fish |
 | Frog Green | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/3e6f6d42-7c69-4024-900a-365c79f1a608.png" /> | Raw Fish |
@@ -89,8 +89,3 @@ This page is a practical quick-reference for animal taming.
 | Squirrel | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/227f88db-aa4e-4376-96b2-8c5863bd00bc.png" /> | Apple |
 | Snail Frost | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/e08a27a3-e01b-4107-9228-8c650b4bf2d0.png" /> | Lettuce |
 | Snail Magma | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/5b52b4e7-bc95-4302-ae6a-3127fcec5a32.png" /> | Chilli |
-
-
-
-
-

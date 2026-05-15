@@ -2,6 +2,21 @@
 
 ## Unreleased
 
+## 1.5.1 - Companion Command Compatibility + Memory Book Cleanup - 2026-05-15
+
+### Added
+- Added Alec's Cats longhair, shorthair, and bobtail variants to Animal Husbandry command flute and Soul Lantern compatibility.
+- Added Celly's Baby Animals as an optional CurseForge relationship for release publishing.
+- Added demo server join information to the README.
+
+### Changed
+- Updated `manifest.json` version to `1.5.1`.
+- Simplified Animal Taming and Beast Taming reference wiki tables for cleaner in-game documentation rendering.
+
+### Fixed
+- Tamed Animal Husbandry creatures no longer opt into memory-book category listings, reducing clutter from player-owned animals.
+- Livestock mode cycling no longer competes with bucket and shears interactions when players are trying to collect milk, water, or harvestables.
+
 ## 1.5.0 - Demo Server Prep + Gendered Breeding Support - 2026-05-04
 
 ### Added

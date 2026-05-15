@@ -1,3 +1,11 @@
+## Try it on the Animal Husbandry Demo Server! (Alpha)
+
+### Join Server IP: 135.148.172.198:22938
+
+### No download required!
+<p>You will automatically be placed in a private demo instance where you can play a brief tutorial to learn the basics of Alec's Animal Husbandry and/or freely experiment with it. The demo instancing and tutorial system is an alpha project, so please expect to run into bugs!</p>
+
+
 <div style="padding: 20px;">
   <p>
     <a href="https://www.curseforge.com/hytale/mods/alecs-tamework" target="_blank" rel="noopener noreferrer"><img alt="Tamework downloads" src="https://img.shields.io/curseforge/dt/1447962?label=Tamework&amp;style=for-the-badge&amp;logo=curseforge&amp;color=rgb(241%2C100%2C54)" /></a>
