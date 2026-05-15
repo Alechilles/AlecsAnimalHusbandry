@@ -16,7 +16,6 @@
 ### Fixed
 - Tamed Animal Husbandry creatures no longer opt into memory-book category listings, reducing clutter from player-owned animals.
 - Livestock mode cycling no longer competes with bucket and shears interactions when players are trying to collect milk, water, or harvestables.
-- Added `Tamed_NordicDrake` to the Combat Beast Flute allowlist so linked Nordic Drakes can receive beast commands.
 
 ## 1.5.0 - Demo Server Prep + Gendered Breeding Support - 2026-05-04
 
