@@ -14,7 +14,9 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 2. After taming, link neutral animals with [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute), and predators with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute), to manage their health and happiness. Craft flutes at a Farming Bench.
    - Right-click with a flute to open the [command interface](#animal-management).
    - Left-click with a flute to link animals and issue group commands.
+   - Mount rideable animals with Crouch + Interact 
    - Interact (default keybind `F`) handles most other interactions.
+   
 
 3. Animals [need](#health-and-happiness) access to food, water, and protected space to roam and socialize.
    - Animals will only eat their preferred food (used for taming), or generic feed crafted at a Farming Bench.
@@ -29,7 +31,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 ## Taming
 Livestock and neutral wildlife will tell you their favorite foods with `F` Interact, just like base Hytale. This will be the food you tame them with and what you must feed to sustain them.
 
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/aa562a8f-6228-487e-a360-cd8fb9953024" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/aa562a8f-6228-487e-a360-cd8fb9953024" />
 
 The [infographic below](https://www.reddit.com/r/hytale/comments/1rdv827/hytale_taming_cheat_sheet_updated_which_animal/) is a cheat sheet for the default Hytale tameable animals and their preferred food.
 
@@ -49,12 +51,12 @@ View [Animal Taming Reference](/mod/alecs-animal-husbandry/animal-taming-referen
 <img width="800" alt="Tamework UI Showcase" src="https://github.com/user-attachments/assets/6d6564e7-7183-4843-9740-16374b486f37" />
 
    * Use per-companion panel actions such as Recall, Set Home, Return Home, Unlink, and Revive when available.
-   * Recover companions that show a LOST status with the strict respawn/recovery flow.
-   * Set homes, then command animals to return home or recall to you.
    * Select a group command from the command wheel, then left-click with a flute to issue commands to all linked and/or nearby animals simultaneously.
    * Use nearby-only mode to access actions Release and Cull from the Linked panel when needed.
 
 <img width="640" height="484" alt="unlink-cull-process" src="https://github.com/user-attachments/assets/b353fe21-7122-4367-a0ba-952bd68b36e6" />
+
+<img src="https://media.forgecdn.net/attachments/description/1480275/description_41aa6c1b-657e-445e-a515-74b1c62af280.png" />
 
 ## Beast Taming
 1. Craft Tranquilizer Potion at Lv2 Alchemy Workbench.
@@ -94,7 +96,7 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 * Fill a trough with water by right-clicking with a water bucket.
 
 
-<img width="320" height="210" alt="Filling trough with food" src="https://github.com/user-attachments/assets/a1ccafe5-59dd-4645-8b39-bb326b119550" /> <img width="320" height="210" alt="filling trough with water" src="https://github.com/user-attachments/assets/960f80d9-140f-4ec3-9c1a-b47f5a205260" />
+<p float="left"><img width="320" height="210" alt="filling trough with water" src="https://github.com/user-attachments/assets/960f80d9-140f-4ec3-9c1a-b47f5a205260" /><img width="320" height="210" alt="Filling trough with food" src="https://github.com/user-attachments/assets/a1ccafe5-59dd-4645-8b39-bb326b119550" /></p>
 
 
 > Note: animals can drink from a water source block, but may drown. This is base Hytale behavior. Use water troughs to keep animals safe!
