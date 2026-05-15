@@ -30,8 +30,8 @@ This page is a practical quick-reference for animal taming.
 
 ## Livestock Taming Table
 
-| Animal | Preferred |  Food|
-|---|---:|:---|
+| Animal | Preferred Food | |
+|---|---|---| 
 | Bison | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/9d9bd68c-697a-44ce-9dee-740434007260.png" /> | Cauliflower |
 | Boar | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/73dcf9ea-d903-4282-8287-38f870929c9e.png" /> | Pumpkin |
 | Bunny | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/64801a1d-ae39-4e7c-8fbb-ba77efc4dd51.png" /> | Carrot |
