@@ -26,7 +26,7 @@ Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/ale
 - Instant
 
 ## Output
-- 1
+- 2
 
 ## How To Use
 1. Craft the spores at the Farming Bench after you have harvested at least one Glowing Purple Mushroom.
