@@ -71,6 +71,9 @@
       "model": "Livestock/Rabbit.json",
       "roles": ["Rabbit", "Tamed_Rabbit"],
       "keepAttachmentSets": ["BaseColor"],
+      "excludeAttachmentOptions": {
+        "BaseColor": ["0"]
+      },
       "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Rabbit/{role}_{combo_slug}.png"
     },
     {
