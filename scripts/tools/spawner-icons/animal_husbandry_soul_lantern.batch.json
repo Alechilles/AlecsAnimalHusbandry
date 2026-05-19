@@ -15,16 +15,29 @@
   ],
   "sources": {
     "baseGame": {
-      "modelsRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Server/Models"
+      "modelsRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Server/Models",
+      "commonRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
     },
     "auresLivestock": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Aures_Livestock_13_05_2026_NO_PIG_COW_CHICKEN.zip!Server/Models"
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Aures_Livestock_13_05_2026_NO_PIG_COW_CHICKEN.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Aures_Livestock_13_05_2026_NO_PIG_COW_CHICKEN.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+      ]
     },
     "cellysBabyAnimals": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.4.zip!Server/Models"
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.4.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.4.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+      ]
     },
     "cellysWildlifeSkins": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.4.zip!Server/Models"
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.4.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.4.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+      ]
     }
   },
   "entries": [
