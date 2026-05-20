@@ -1,10 +1,10 @@
 {
   "defaults": {
     "rendererName": "Animal Husbandry Soul Lantern curated icons",
-    "iconSize": 128,
+    "iconSize": 64,
     "cameraScale": 1.0,
     "cameraRotation": [22.5, 45, 22.5],
-    "cameraTranslation": [0, -13.5],
+    "cameraTranslation": [0, 0],
     "emptyValueToken": "none",
     "maxCombos": 10000
   },
@@ -26,16 +26,16 @@
       ]
     },
     "cellysBabyAnimals": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.4.zip!Server/Models",
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.5.zip!Server/Models",
       "commonRoots": [
-        "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.4.zip!Common",
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.5.zip!Common",
         "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
       ]
     },
     "cellysWildlifeSkins": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.4.zip!Server/Models",
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.5.zip!Server/Models",
       "commonRoots": [
-        "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.4.zip!Common",
+        "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.5.zip!Common",
         "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
       ]
     }
