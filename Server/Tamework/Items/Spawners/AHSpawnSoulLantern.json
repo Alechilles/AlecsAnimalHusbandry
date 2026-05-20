@@ -519,6 +519,42 @@
             "BaseColor": "5",
             "Shell": "Empty"
           }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-blue.png",
+          "Attachments": {
+            "Shell": "Blue"
+          }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-green.png",
+          "Attachments": {
+            "Shell": "Green"
+          }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-orange.png",
+          "Attachments": {
+            "Shell": "Orange"
+          }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-purple.png",
+          "Attachments": {
+            "Shell": "Purple"
+          }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-red.png",
+          "Attachments": {
+            "Shell": "Red"
+          }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-yellow.png",
+          "Attachments": {
+            "Shell": "Yellow"
+          }
         }
       ]
     },
@@ -1896,6 +1932,12 @@
             "BaseColor": "6",
             "Fleece": "Wool"
           }
+        },
+        {
+          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep/fleece-wool.png",
+          "Attachments": {
+            "Fleece": "Wool"
+          }
         }
       ]
     },
@@ -2951,50 +2993,6 @@
     },
     {
       "Roles": [
-        "Camel",
-        "Tamed_Camel"
-      ],
-      "Overrides": [
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-blue.png",
-          "Attachments": {
-            "Shell": "Blue"
-          }
-        },
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-green.png",
-          "Attachments": {
-            "Shell": "Green"
-          }
-        },
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-orange.png",
-          "Attachments": {
-            "Shell": "Orange"
-          }
-        },
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-purple.png",
-          "Attachments": {
-            "Shell": "Purple"
-          }
-        },
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-red.png",
-          "Attachments": {
-            "Shell": "Red"
-          }
-        },
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/shell-yellow.png",
-          "Attachments": {
-            "Shell": "Yellow"
-          }
-        }
-      ]
-    },
-    {
-      "Roles": [
         "Camel_Calf",
         "Tamed_Camel_Calf"
       ],
@@ -3144,17 +3142,512 @@
     },
     {
       "Roles": [
-        "Sheep",
-        "Tamed_Sheep"
+        "Bear_Grizzly",
+        "Tamed_Bear_Grizzly"
       ],
-      "Overrides": [
-        {
-          "Icon": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep/fleece-wool.png",
-          "Attachments": {
-            "Fleece": "Wool"
-          }
-        }
-      ]
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Grizzly/base.png"
+    },
+    {
+      "Roles": [
+        "Bear_Polar",
+        "Tamed_Bear_Polar"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Polar/base.png"
+    },
+    {
+      "Roles": [
+        "Boar",
+        "Tamed_Boar"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Boar/base.png"
+    },
+    {
+      "Roles": [
+        "Boar_Piglet",
+        "Tamed_Boar_Piglet"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Boar_Piglet/base.png"
+    },
+    {
+      "Roles": [
+        "Bunny",
+        "Tamed_Bunny"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bunny/base.png"
+    },
+    {
+      "Roles": [
+        "Chicken",
+        "Tamed_Chicken"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken/base.png"
+    },
+    {
+      "Roles": [
+        "Chicken_Chick",
+        "Tamed_Chicken_Chick"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Chick/base.png"
+    },
+    {
+      "Roles": [
+        "Chicken_Desert",
+        "Tamed_Chicken_Desert"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Desert/base.png"
+    },
+    {
+      "Roles": [
+        "Chicken_Desert_Chick",
+        "Tamed_Chicken_Desert_Chick"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Desert_Chick/base.png"
+    },
+    {
+      "Roles": [
+        "Cow_Calf",
+        "Tamed_Cow_Calf"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cow_Calf/base.png"
+    },
+    {
+      "Roles": [
+        "Crocodile",
+        "Tamed_Crocodile"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Crocodile/base.png"
+    },
+    {
+      "Roles": [
+        "Emberwulf",
+        "Tamed_Emberwulf"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Emberwulf/base.png"
+    },
+    {
+      "Roles": [
+        "Fen_Stalker",
+        "Tamed_Fen_Stalker"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Fen_Stalker/base.png"
+    },
+    {
+      "Roles": [
+        "Goat_Kid",
+        "Tamed_Goat_Kid"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Goat_Kid/base.png"
+    },
+    {
+      "Roles": [
+        "Horse_Foal",
+        "Tamed_Horse_Foal"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Horse_Foal/base.png"
+    },
+    {
+      "Roles": [
+        "Hyena",
+        "Tamed_Hyena"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Hyena/base.png"
+    },
+    {
+      "Roles": [
+        "Larva_Silk",
+        "Tamed_Larva_Silk"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Larva_Silk/base.png"
+    },
+    {
+      "Roles": [
+        "Leopard_Snow",
+        "Tamed_Leopard_Snow"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Leopard_Snow/base.png"
+    },
+    {
+      "Roles": [
+        "Molerat",
+        "Tamed_Molerat"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Molerat/base.png"
+    },
+    {
+      "Roles": [
+        "Mouflon_Lamb",
+        "Tamed_Mouflon_Lamb"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mouflon_Lamb/base.png"
+    },
+    {
+      "Roles": [
+        "Pig",
+        "Tamed_Pig"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig/base.png"
+    },
+    {
+      "Roles": [
+        "Pig_Piglet",
+        "Tamed_Pig_Piglet"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Piglet/base.png"
+    },
+    {
+      "Roles": [
+        "Ram_Lamb",
+        "Tamed_Ram_Lamb"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Ram_Lamb/base.png"
+    },
+    {
+      "Roles": [
+        "Raptor_Cave",
+        "Tamed_Raptor_Cave"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Raptor_Cave/base.png"
+    },
+    {
+      "Roles": [
+        "Rex_Cave",
+        "Tamed_Rex_Cave"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Rex_Cave/base.png"
+    },
+    {
+      "Roles": [
+        "Sheep_Lamb",
+        "Tamed_Sheep_Lamb"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep_Lamb/base.png"
+    },
+    {
+      "Roles": [
+        "Skrill",
+        "Tamed_Skrill"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Skrill/base.png"
+    },
+    {
+      "Roles": [
+        "Skrill_Chick",
+        "Tamed_Skrill_Chick"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Skrill_Chick/base.png"
+    },
+    {
+      "Roles": [
+        "Slug_Magma",
+        "Tamed_Slug_Magma"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Slug_Magma/base.png"
+    },
+    {
+      "Roles": [
+        "Snake_Cobra",
+        "Tamed_Snake_Cobra"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Cobra/base.png"
+    },
+    {
+      "Roles": [
+        "Snake_Marsh",
+        "Tamed_Snake_Marsh"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Marsh/base.png"
+    },
+    {
+      "Roles": [
+        "Snake_Rattle",
+        "Tamed_Snake_Rattle"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Rattle/base.png"
+    },
+    {
+      "Roles": [
+        "Snapdragon",
+        "Tamed_Snapdragon"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snapdragon/base.png"
+    },
+    {
+      "Roles": [
+        "Spider",
+        "Tamed_Spider"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spider/base.png"
+    },
+    {
+      "Roles": [
+        "Spider_Cave",
+        "Tamed_Spider_Cave"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spider_Cave/base.png"
+    },
+    {
+      "Roles": [
+        "Tamed_Mosshorn"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mosshorn/base.png"
+    },
+    {
+      "Roles": [
+        "Tiger_Sabertooth",
+        "Tamed_Tiger_Sabertooth"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Tiger_Sabertooth/base.png"
+    },
+    {
+      "Roles": [
+        "Toad_Rhino",
+        "Tamed_Toad_Rhino"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Toad_Rhino/base.png"
+    },
+    {
+      "Roles": [
+        "Toad_Rhino_Magma",
+        "Tamed_Toad_Rhino_Magma"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Toad_Rhino_Magma/base.png"
+    },
+    {
+      "Roles": [
+        "Warthog",
+        "Tamed_Warthog"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Warthog/base.png"
+    },
+    {
+      "Roles": [
+        "Warthog_Piglet",
+        "Tamed_Warthog_Piglet"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Warthog_Piglet/base.png"
+    },
+    {
+      "Roles": [
+        "Wolf_Black",
+        "Tamed_Wolf_Black"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Wolf_Black/base.png"
+    },
+    {
+      "Roles": [
+        "Wolf_White",
+        "Tamed_Wolf_White"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Wolf_White/base.png"
+    },
+    {
+      "Roles": [
+        "Antelope",
+        "Tamed_Antelope"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Antelope/base.png"
+    },
+    {
+      "Roles": [
+        "Armadillo",
+        "Tamed_Armadillo"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Armadillo/base.png"
+    },
+    {
+      "Roles": [
+        "Deer_Doe",
+        "Tamed_Deer_Doe"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Doe/base.png"
+    },
+    {
+      "Roles": [
+        "Deer_Stag",
+        "Tamed_Deer_Stag"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Stag/base.png"
+    },
+    {
+      "Roles": [
+        "Lizard_Sand",
+        "Tamed_Lizard_Sand"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lizard_Sand/base.png"
+    },
+    {
+      "Roles": [
+        "Lobster",
+        "Tamed_Lobster"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lobster/base.png"
+    },
+    {
+      "Roles": [
+        "Moose_Bull",
+        "Tamed_Moose_Bull"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Bull/base.png"
+    },
+    {
+      "Roles": [
+        "Moose_Cow",
+        "Tamed_Moose_Cow"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Cow/base.png"
+    },
+    {
+      "Roles": [
+        "Penguin",
+        "Tamed_Penguin"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Penguin/base.png"
+    },
+    {
+      "Roles": [
+        "Spark_Living",
+        "Tamed_Spark_Living"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spark_Living/base.png"
+    },
+    {
+      "Roles": [
+        "Tortoise",
+        "Tamed_Tortoise"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Tortoise/base.png"
+    },
+    {
+      "Roles": [
+        "Trillodon",
+        "Tamed_Trillodon"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Trillodon/base.png"
+    },
+    {
+      "Roles": [
+        "Frog_Blue",
+        "Tamed_Frog_Blue"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Blue/base.png"
+    },
+    {
+      "Roles": [
+        "Frog_Green",
+        "Tamed_Frog_Green"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Green/base.png"
+    },
+    {
+      "Roles": [
+        "Frog_Orange",
+        "Tamed_Frog_Orange"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Orange/base.png"
+    },
+    {
+      "Roles": [
+        "Gecko",
+        "Tamed_Gecko"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Gecko/base.png"
+    },
+    {
+      "Roles": [
+        "Meerkat",
+        "Tamed_Meerkat"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Meerkat/base.png"
+    },
+    {
+      "Roles": [
+        "Snail_Frost",
+        "Tamed_Snail_Frost"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snail_Frost/base.png"
+    },
+    {
+      "Roles": [
+        "Snail_Magma",
+        "Tamed_Snail_Magma"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snail_Magma/base.png"
+    },
+    {
+      "Roles": [
+        "Cat",
+        "Cat_Longhair",
+        "Cat_Shorthair",
+        "Cat_Bobtail",
+        "Cat_Pet",
+        "Cat_Longhair_Pet",
+        "Cat_Shorthair_Pet",
+        "Cat_Bobtail_Pet"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cat/base.png"
     }
   ]
 }
