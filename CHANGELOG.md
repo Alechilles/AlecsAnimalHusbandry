@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+## 1.5.2 - Soul Lantern Icons + Beast Collars + Update 5 Compatibility - 2026-05-26
+
+### Added
+- Added curated Soul Lantern icon coverage and generated icon assets for Animal Husbandry capture/spawn flows, including shared role groups, base-only entries, and Aures livestock variants.
+- Added tamed beast collar appearance support for tamed hyenas, black wolves, and white wolves.
+- Added German localization coverage.
+- Added the Soul Lantern icon batch manifest and source fallback support for regenerating icon overrides.
+
+### Changed
+- Reworked Soul Lantern spawner icon override data to use grouped role icon entries with default icons instead of the oversized per-role generated matrix.
+- Updated beast taming, breeding/growth, animal taming reference, and glowing purple mushroom spore wiki documentation.
+- Updated CurseForge publishing to upload changelogs as HTML.
+- Updated release metadata for Hytale server `0.5.0`, Alec's Tamework `2.11.x`, and manifest version `1.5.2`.
+
+### Fixed
+- Adjusted Soul Lantern icon framing and replaced the earlier generated icon matrix with curated outputs and batch fallback data.
+- Removed tracked macOS metadata files from the release tree so they are not packaged.
+
 ## 1.5.1 - Companion Command Compatibility + Memory Book Cleanup - 2026-05-15
 
 ### Added
