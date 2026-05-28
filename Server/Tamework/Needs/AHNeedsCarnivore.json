@@ -1,0 +1,29 @@
+{
+  "Enabled": true,
+  "Priority": 200,
+  "Parent": "AHNeedsMain",
+  "RoleIds": [
+    "Tamed_Penguin",
+    "Tamed_Frog_Blue",
+    "Tamed_Frog_Green",
+    "Tamed_Frog_Orange",
+    "Tamed_Gecko"
+  ],
+  "PassiveRefill": {
+    "SweepIntervalSeconds": 15,
+    "NearbyContainerFeedEnabled": true,
+    "ContainerSearchRadius": 8.0,
+    "ContainerConsumeRadius": 3.0,
+    "ContainerVerticalScanRadius": 2,
+    "ContainerFoodItemIds": [
+      "Tw_Feed_Carnivore"
+    ],
+    "HungerGainPerConsumedItem": 25.0,
+    "MaxContainerItemsConsumedPerSweep": 1,
+    "NearbyWaterDrinkEnabled": true,
+    "WaterSearchRadius": 8.0,
+    "WaterConsumeRadius": 3.0,
+    "WaterVerticalScanRadius": 2,
+    "ThirstGainPerSweepNearWater": 25.0
+  }
+}
