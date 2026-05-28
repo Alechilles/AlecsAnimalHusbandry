@@ -1,6 +1,8 @@
 # Changelog
 
 ## Unreleased
+- Added Animal Husbandry leveling and talent configs for livestock, neutral wildlife, critters, and combat Beasts, covering all checked-in tamed companion roles with a very slow long-term progression curve.
+- Updated README/wiki documentation to describe XP levels, passive talents, and their config files as active systems.
 
 ## 1.5.2 - Soul Lantern Icons + Beast Collars + Update 5 Compatibility - 2026-05-26
 

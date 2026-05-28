@@ -33,14 +33,16 @@ These are the current (non-deprecated) `AH*` config assets in this repo.
 | Happiness | `Server/Tamework/Happiness/AHHappMain.json`<br>`Server/Tamework/Happiness/AHHappNeutral.json`<br>`Server/Tamework/Happiness/AHHappBeast.json` |
 | Breeding | `Server/Tamework/Breeding/AHBreedLivestock.json`<br>`Server/Tamework/Breeding/AHBreedNeutral.json`<br>`Server/Tamework/Breeding/AHBreedBeast.json` |
 | Traits | `Server/Tamework/Traits/AHTraitLivestock.json`<br>`Server/Tamework/Traits/AHTraitNeutral.json`<br>`Server/Tamework/Traits/AHTraitBeast.json` |
+| Leveling | `Server/Tamework/Leveling/AHLevelLivestock.json`<br>`Server/Tamework/Leveling/AHLevelNeutral.json`<br>`Server/Tamework/Leveling/AHLevelCritter.json`<br>`Server/Tamework/Leveling/AHLevelBeast.json` |
+| Talents | `Server/Tamework/Talents/AHTalentLivestock.json`<br>`Server/Tamework/Talents/AHTalentNeutral.json`<br>`Server/Tamework/Talents/AHTalentCritter.json`<br>`Server/Tamework/Talents/AHTalentBeast.json` |
 
 ### Group Mapping (including Beast)
-| Group | Interaction | Companion | Needs | Happiness | Breeding | Traits | Command |
-|---|---|---|---|---|---|---|---|
-| Livestock | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestock` | `AHCommLivestock` |
-| Neutral | `AHIntNeutral` | `AHCompNeutral` | `AHNeedsMain` | `AHHappNeutral` | `AHBreedNeutral` | `AHTraitNeutral` | n/a |
-| Beast | `AHIntBeast` | `AHCompMain` | `AHNeedsBeast` | `AHHappBeast` | `AHBreedBeast` | `AHTraitBeast` | `AHCommBeast` |
-| Critter | `AhIntCritter` | n/a | `AHNeedsMain` | `AHHappMain` | `AHBreedNeutral` | `AHTraitNeutral` | n/a |
+| Group | Interaction | Companion | Needs | Happiness | Breeding | Traits | Leveling | Talents | Command |
+|---|---|---|---|---|---|---|---|---|---|
+| Livestock | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestock` | `AHLevelLivestock` | `AHTalentLivestock` | `AHCommLivestock` |
+| Neutral | `AHIntNeutral` | `AHCompNeutral` | `AHNeedsMain` | `AHHappNeutral` | `AHBreedNeutral` | `AHTraitNeutral` | `AHLevelNeutral` | `AHTalentNeutral` | `AHCommLivestock` |
+| Beast | `AHIntBeast` | `AHCompMain` | `AHNeedsBeast` | `AHHappBeast` | `AHBreedBeast` | `AHTraitBeast` | `AHLevelBeast` | `AHTalentBeast` | `AHCommBeast` |
+| Critter | `AhIntCritter` | `AHCompNeutral` | `AHNeedsMain` | `AHHappMain` | `AHBreedNeutral` | `AHTraitNeutral` | `AHLevelCritter` | `AHTalentCritter` | `AHCommLivestock` |
 
 ## Deprecated Naming Note
 Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were replaced by the `AH*` config file set above.
@@ -55,4 +57,6 @@ Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were repl
 - Too much breeding: raise BaseCooldownMinutes.
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
+- Leveling too slow/fast: tune BaseXp, GrowthFactor, and each XpSources section.
+- Talents too strong/weak: tune TalentPoints and the multipliers in the active AHTalent config.
 - Overcrowding: lower MaxNearbySameType on sensitive species.

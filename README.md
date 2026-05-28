@@ -81,6 +81,13 @@ The demo instancing and tutorial system is an alpha project, so please expect to
     </ul>
   </li>
   <li>
+    <strong>XP Levels and Talents</strong>
+    <ul>
+      <li>Tamed companions gain XP from care, harvest, breeding, and combat activities that fit their role.</li>
+      <li>Leveling is intentionally long-term, especially for combat Beasts, with modest passive talents that improve health, speed, utility, or damage.</li>
+    </ul>
+  </li>
+  <li>
     <strong>Commandable Companions</strong>
     <ul>
       <li>Control your animals with companion commands like <strong>Follow</strong>, <strong>Hold</strong>, <strong>Set Home</strong>, <strong>Return Home</strong>, and <strong>Recall</strong>.</li>
@@ -115,6 +122,14 @@ The demo instancing and tutorial system is an alpha project, so please expect to
       <li>Right-click with a flute to open the command interface.</li>
       <li>Left-click with a flute to link animals and issue group commands.</li>
       <li>Interact, default keybind <strong>F</strong>, handles most other interactions.</li>
+    </ul>
+  </li>
+  <li>
+    Keep working with your companions to level them over time.
+    <ul>
+      <li>Livestock progress mainly from feeding, harvests, and breeding.</li>
+      <li>Neutral wildlife and critters progress from care-focused activities, with only light combat XP where appropriate.</li>
+      <li>Combat Beasts level the slowest and gain most of their progress from real combat plus long-term care.</li>
     </ul>
   </li>
   <li>
@@ -280,8 +295,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <br />
 
 <ul>
-  <li>Bonding and XP levels.</li>
-  <li>Talent trees with stat increases, behaviors, and new abilities.</li>
   <li>Genders.</li>
   <li>Optional death from old age.</li>
   <li>Optional inbreeding penalties.</li>

@@ -1,0 +1,73 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Antelope",
+    "Tamed_Armadillo",
+    "Tamed_Cactee",
+    "Tamed_Deer_Doe",
+    "Tamed_Deer_Stag",
+    "Tamed_Flamingo",
+    "Tamed_Hatworm",
+    "Tamed_Horse_Skeleton",
+    "Tamed_Horse_Skeleton_Armored",
+    "Tamed_Lizard_Sand",
+    "Tamed_Moose_Bull",
+    "Tamed_Moose_Cow",
+    "Tamed_Penguin",
+    "Tamed_Spark_Living",
+    "Tamed_Tetrabird",
+    "Tamed_Tortoise",
+    "Tamed_Trillodon"
+  ],
+  "Levels": {
+    "MaxLevel": 25,
+    "BaseXp": 175.0,
+    "GrowthFactor": 1.17
+  },
+  "XpSources": {
+    "Feed": {
+      "Enabled": true,
+      "FlatXp": 4.0
+    },
+    "Harvest": {
+      "Enabled": true,
+      "FlatXp": 6.0
+    },
+    "Breeding": {
+      "Enabled": true,
+      "FlatXp": 80.0
+    },
+    "Combat": {
+      "Enabled": true,
+      "DamageDealtXpPerPoint": 0.1,
+      "DamageTakenXpPerPoint": 0.04,
+      "MinimumDamageEvent": 2.0,
+      "AwardVsPlayers": false,
+      "AwardVsOwnedAllies": false
+    }
+  },
+  "StatGrowth": {
+    "Effects": [
+      {
+        "EffectKey": "MaxHealthMultiplier",
+        "PerLevel": 0.004
+      },
+      {
+        "EffectKey": "MoveSpeedMultiplier",
+        "PerLevel": 0.0015
+      },
+      {
+        "EffectKey": "DamageDealtMultiplier",
+        "PerLevel": 0.002
+      },
+      {
+        "EffectKey": "HarvestDoubleDropChanceMultiplier",
+        "PerLevel": 0.001
+      }
+    ]
+  },
+  "TalentPoints": {
+    "PointsPerLevel": 1
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Bear_Grizzly",
+    "Tamed_Bear_Polar",
+    "Tamed_Crocodile",
+    "Tamed_Emberwulf",
+    "Tamed_Fen_Stalker",
+    "Tamed_Fox",
+    "Tamed_Fox_Arctic",
+    "Tamed_Hyena",
+    "Tamed_Larva_Silk",
+    "Tamed_Leopard_Snow",
+    "Tamed_Molerat",
+    "Tamed_Raptor_Cave",
+    "Tamed_Rat",
+    "Tamed_Rex_Cave",
+    "Tamed_Scorpion",
+    "Tamed_Slug_Magma",
+    "Tamed_Snake_Cobra",
+    "Tamed_Snake_Marsh",
+    "Tamed_Snake_Rattle",
+    "Tamed_Snapdragon",
+    "Tamed_Spider",
+    "Tamed_Spider_Cave",
+    "Tamed_Tiger_Sabertooth",
+    "Tamed_Toad_Rhino",
+    "Tamed_Toad_Rhino_Magma",
+    "Tamed_Wolf_Black",
+    "Tamed_Wolf_White",
+    "Tamed_Yeti"
+  ],
+  "Levels": {
+    "MaxLevel": 30,
+    "BaseXp": 200.0,
+    "GrowthFactor": 1.15
+  },
+  "XpSources": {
+    "Feed": {
+      "Enabled": true,
+      "FlatXp": 3.0
+    },
+    "Harvest": {
+      "Enabled": true,
+      "FlatXp": 4.0
+    },
+    "Breeding": {
+      "Enabled": true,
+      "FlatXp": 120.0
+    },
+    "Combat": {
+      "Enabled": true,
+      "DamageDealtXpPerPoint": 0.35,
+      "DamageTakenXpPerPoint": 0.12,
+      "MinimumDamageEvent": 2.0,
+      "AwardVsPlayers": false,
+      "AwardVsOwnedAllies": false
+    }
+  },
+  "StatGrowth": {
+    "Effects": [
+      {
+        "EffectKey": "MaxHealthMultiplier",
+        "PerLevel": 0.006
+      },
+      {
+        "EffectKey": "DamageDealtMultiplier",
+        "PerLevel": 0.004
+      },
+      {
+        "EffectKey": "MoveSpeedMultiplier",
+        "PerLevel": 0.001
+      }
+    ]
+  },
+  "TalentPoints": {
+    "PointsPerLevel": 1
+  }
+}

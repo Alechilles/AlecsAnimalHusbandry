@@ -54,9 +54,9 @@ Beasts:
 | Strength | Damage dealt | 0.95-1.2 | 0.75-1.5 | 1 | Higher is better |
 
 ## Base Stat Note
-This mod defines **trait multipliers** and progression behavior.
+This mod defines **trait multipliers**, XP leveling, and passive talent behavior.
 Base species HP/damage/speed values come from the role assets they inherit from.
-Use this page to understand the modifier ranges your lines can roll and inherit.
+Use this page to understand the modifier ranges your lines can roll and inherit; leveling and talents add modest long-term bonuses on top of those inherited base stats.
 
 ## Breeding Strategy
 1. Keep your best breeder pairs separated and protected.

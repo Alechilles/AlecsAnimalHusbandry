@@ -1,0 +1,89 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Crab",
+    "Tamed_Frog_Blue",
+    "Tamed_Frog_Green",
+    "Tamed_Frog_Orange",
+    "Tamed_Gecko",
+    "Tamed_Lobster",
+    "Tamed_Meerkat",
+    "Tamed_Mouse",
+    "Tamed_Snail_Frost",
+    "Tamed_Snail_Magma",
+    "Tamed_Squirrel"
+  ],
+  "Talents": [
+    {
+      "Id": "AH_Critter_Spry",
+      "DisplayName": "Spry",
+      "Description": "Slightly improves movement speed.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 1,
+      "Branch": "Utility",
+      "PointCost": 1,
+      "MinLevel": 2,
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.03
+        }
+      ]
+    },
+    {
+      "Id": "AH_Critter_Healthy",
+      "DisplayName": "Healthy",
+      "Description": "Raises maximum health.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 1,
+      "Branch": "Care",
+      "PointCost": 1,
+      "MinLevel": 4,
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.04
+        }
+      ]
+    },
+    {
+      "Id": "AH_Critter_Eager",
+      "DisplayName": "Eager",
+      "Description": "Improves harvest bonus chances when applicable.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Tier": 2,
+      "Branch": "Utility",
+      "PointCost": 2,
+      "MinLevel": 8,
+      "RequiresTalentIds": [
+        "AH_Critter_Spry"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "HarvestDoubleDropChanceMultiplier",
+          "Multiplier": 1.03
+        }
+      ]
+    },
+    {
+      "Id": "AH_Critter_Seasoned",
+      "DisplayName": "Seasoned",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 3,
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 14,
+      "RequiresTalentIds": [
+        "AH_Critter_Healthy"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.05
+        }
+      ]
+    }
+  ]
+}

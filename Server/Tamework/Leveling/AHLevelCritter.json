@@ -1,0 +1,63 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Crab",
+    "Tamed_Frog_Blue",
+    "Tamed_Frog_Green",
+    "Tamed_Frog_Orange",
+    "Tamed_Gecko",
+    "Tamed_Lobster",
+    "Tamed_Meerkat",
+    "Tamed_Mouse",
+    "Tamed_Snail_Frost",
+    "Tamed_Snail_Magma",
+    "Tamed_Squirrel"
+  ],
+  "Levels": {
+    "MaxLevel": 20,
+    "BaseXp": 120.0,
+    "GrowthFactor": 1.14
+  },
+  "XpSources": {
+    "Feed": {
+      "Enabled": true,
+      "FlatXp": 4.0
+    },
+    "Harvest": {
+      "Enabled": false,
+      "FlatXp": 0.0
+    },
+    "Breeding": {
+      "Enabled": true,
+      "FlatXp": 35.0
+    },
+    "Combat": {
+      "Enabled": false,
+      "DamageDealtXpPerPoint": 0.0,
+      "DamageTakenXpPerPoint": 0.0,
+      "MinimumDamageEvent": 2.0,
+      "AwardVsPlayers": false,
+      "AwardVsOwnedAllies": false
+    }
+  },
+  "StatGrowth": {
+    "Effects": [
+      {
+        "EffectKey": "MaxHealthMultiplier",
+        "PerLevel": 0.003
+      },
+      {
+        "EffectKey": "MoveSpeedMultiplier",
+        "PerLevel": 0.0015
+      },
+      {
+        "EffectKey": "HarvestDoubleDropChanceMultiplier",
+        "PerLevel": 0.001
+      }
+    ]
+  },
+  "TalentPoints": {
+    "PointsPerLevel": 1
+  }
+}

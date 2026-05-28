@@ -1,0 +1,114 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Antelope",
+    "Tamed_Armadillo",
+    "Tamed_Cactee",
+    "Tamed_Deer_Doe",
+    "Tamed_Deer_Stag",
+    "Tamed_Flamingo",
+    "Tamed_Hatworm",
+    "Tamed_Horse_Skeleton",
+    "Tamed_Horse_Skeleton_Armored",
+    "Tamed_Lizard_Sand",
+    "Tamed_Moose_Bull",
+    "Tamed_Moose_Cow",
+    "Tamed_Penguin",
+    "Tamed_Spark_Living",
+    "Tamed_Tetrabird",
+    "Tamed_Tortoise",
+    "Tamed_Trillodon"
+  ],
+  "Talents": [
+    {
+      "Id": "AH_Neutral_Hardy",
+      "DisplayName": "Hardy",
+      "Description": "Raises maximum health.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 1,
+      "Branch": "Survival",
+      "PointCost": 1,
+      "MinLevel": 2,
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.05
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Agile",
+      "DisplayName": "Agile",
+      "Description": "Improves movement speed.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 1,
+      "Branch": "Utility",
+      "PointCost": 1,
+      "MinLevel": 4,
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.04
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Watchful",
+      "DisplayName": "Watchful",
+      "Description": "Slightly improves outgoing damage.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 2,
+      "Branch": "Survival",
+      "PointCost": 2,
+      "MinLevel": 9,
+      "RequiresTalentIds": [
+        "AH_Neutral_Hardy"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.04
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Steady",
+      "DisplayName": "Steady",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 3,
+      "Branch": "Survival",
+      "PointCost": 2,
+      "MinLevel": 15,
+      "RequiresTalentIds": [
+        "AH_Neutral_Watchful"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.06
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Nimble",
+      "DisplayName": "Nimble",
+      "Description": "Improves movement speed further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 4,
+      "Branch": "Utility",
+      "PointCost": 3,
+      "MinLevel": 21,
+      "RequiresTalentIds": [
+        "AH_Neutral_Agile"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.05
+        }
+      ]
+    }
+  ]
+}

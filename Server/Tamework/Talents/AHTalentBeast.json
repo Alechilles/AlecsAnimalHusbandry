@@ -1,0 +1,125 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Bear_Grizzly",
+    "Tamed_Bear_Polar",
+    "Tamed_Crocodile",
+    "Tamed_Emberwulf",
+    "Tamed_Fen_Stalker",
+    "Tamed_Fox",
+    "Tamed_Fox_Arctic",
+    "Tamed_Hyena",
+    "Tamed_Larva_Silk",
+    "Tamed_Leopard_Snow",
+    "Tamed_Molerat",
+    "Tamed_Raptor_Cave",
+    "Tamed_Rat",
+    "Tamed_Rex_Cave",
+    "Tamed_Scorpion",
+    "Tamed_Slug_Magma",
+    "Tamed_Snake_Cobra",
+    "Tamed_Snake_Marsh",
+    "Tamed_Snake_Rattle",
+    "Tamed_Snapdragon",
+    "Tamed_Spider",
+    "Tamed_Spider_Cave",
+    "Tamed_Tiger_Sabertooth",
+    "Tamed_Toad_Rhino",
+    "Tamed_Toad_Rhino_Magma",
+    "Tamed_Wolf_Black",
+    "Tamed_Wolf_White",
+    "Tamed_Yeti"
+  ],
+  "Talents": [
+    {
+      "Id": "AH_Beast_Conditioned",
+      "DisplayName": "Conditioned",
+      "Description": "Raises maximum health.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 1,
+      "Branch": "Survival",
+      "PointCost": 1,
+      "MinLevel": 2,
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.06
+        }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Quick",
+      "DisplayName": "Quick",
+      "Description": "Improves movement speed.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 1,
+      "Branch": "Mobility",
+      "PointCost": 1,
+      "MinLevel": 5,
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.03
+        }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Trained",
+      "DisplayName": "Trained",
+      "Description": "Improves outgoing damage.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 2,
+      "Branch": "Combat",
+      "PointCost": 2,
+      "MinLevel": 10,
+      "RequiresTalentIds": [
+        "AH_Beast_Conditioned"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.06
+        }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Veteran",
+      "DisplayName": "Veteran",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 3,
+      "Branch": "Survival",
+      "PointCost": 2,
+      "MinLevel": 17,
+      "RequiresTalentIds": [
+        "AH_Beast_Trained"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.08
+        }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Apex",
+      "DisplayName": "Apex",
+      "Description": "Improves outgoing damage further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 4,
+      "Branch": "Combat",
+      "PointCost": 3,
+      "MinLevel": 24,
+      "RequiresTalentIds": [
+        "AH_Beast_Veteran"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.08
+        }
+      ]
+    }
+  ]
+}

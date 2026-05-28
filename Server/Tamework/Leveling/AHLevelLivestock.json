@@ -1,0 +1,88 @@
+{
+  "Enabled": true,
+  "Priority": 1,
+  "RoleIds": [
+    "Tamed_Bison",
+    "Tamed_Bison_Calf",
+    "Tamed_Boar",
+    "Tamed_Boar_Piglet",
+    "Tamed_Bunny",
+    "Tamed_Camel",
+    "Tamed_Camel_Calf",
+    "Tamed_Chicken",
+    "Tamed_Chicken_Chick",
+    "Tamed_Chicken_Desert",
+    "Tamed_Chicken_Desert_Chick",
+    "Tamed_Cow",
+    "Tamed_Cow_Calf",
+    "Tamed_Goat",
+    "Tamed_Goat_Kid",
+    "Tamed_Horse",
+    "Tamed_Horse_Foal",
+    "Tamed_Mosshorn",
+    "Tamed_Mosshorn_Plain",
+    "Tamed_Mouflon",
+    "Tamed_Mouflon_Lamb",
+    "Tamed_Pig",
+    "Tamed_Pig_Piglet",
+    "Tamed_Pig_Wild",
+    "Tamed_Pig_Wild_Piglet",
+    "Tamed_Rabbit",
+    "Tamed_Ram",
+    "Tamed_Ram_Lamb",
+    "Tamed_Sheep",
+    "Tamed_Sheep_Lamb",
+    "Tamed_Skrill",
+    "Tamed_Skrill_Chick",
+    "Tamed_Turkey",
+    "Tamed_Turkey_Chick",
+    "Tamed_Warthog",
+    "Tamed_Warthog_Piglet"
+  ],
+  "Levels": {
+    "MaxLevel": 25,
+    "BaseXp": 150.0,
+    "GrowthFactor": 1.16
+  },
+  "XpSources": {
+    "Feed": {
+      "Enabled": true,
+      "FlatXp": 5.0
+    },
+    "Harvest": {
+      "Enabled": true,
+      "FlatXp": 12.0
+    },
+    "Breeding": {
+      "Enabled": true,
+      "FlatXp": 90.0
+    },
+    "Combat": {
+      "Enabled": false,
+      "DamageDealtXpPerPoint": 0.0,
+      "DamageTakenXpPerPoint": 0.0,
+      "MinimumDamageEvent": 2.0,
+      "AwardVsPlayers": false,
+      "AwardVsOwnedAllies": false
+    }
+  },
+  "StatGrowth": {
+    "Effects": [
+      {
+        "EffectKey": "MaxHealthMultiplier",
+        "PerLevel": 0.004
+      },
+      {
+        "EffectKey": "MoveSpeedMultiplier",
+        "PerLevel": 0.001
+      },
+      {
+        "EffectKey": "HarvestDoubleDropChanceMultiplier",
+        "PerLevel": 0.003
+      }
+    ]
+  },
+  "TalentPoints": {
+    "PointsPerLevel": 1
+  }
+}
