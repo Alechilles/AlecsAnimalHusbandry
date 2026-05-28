@@ -95,6 +95,8 @@ Combat Beasts have all the same commands as neutral animals, plus various attack
 
 * Fill a trough with water by right-clicking with a water bucket.
 
+![Filling trough with water](https://github.com/user-attachments/assets/960f80d9-140f-4ec3-9c1a-b47f5a205260)
+![Filling trough with food](https://github.com/user-attachments/assets/a1ccafe5-59dd-4645-8b39-bb326b119550)
 
 <p float="left"><img width="320" height="210" alt="filling trough with water" src="https://github.com/user-attachments/assets/960f80d9-140f-4ec3-9c1a-b47f5a205260" /><img width="320" height="210" alt="Filling trough with food" src="https://github.com/user-attachments/assets/a1ccafe5-59dd-4645-8b39-bb326b119550" /></p>
 
