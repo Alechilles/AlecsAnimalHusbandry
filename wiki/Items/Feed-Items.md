@@ -18,7 +18,7 @@ These care items are provided by **Alec's Tamework** and are used by Animal Husb
 ![Herbivore Feed](https://github.com/user-attachments/assets/3cc8fce0-18b5-4a6f-8bf5-4189f2655c3d)
 
 ## Herbivore Feed
-- Used to feed livestock, neutral, and critter animals.
+- Used to feed herbivorous and omnivorous livestock, neutral, and critter animals. 
 - Recipe:
   - 5x Any Vegetables
   - 5x Any Fruits
@@ -29,7 +29,7 @@ These care items are provided by **Alec's Tamework** and are used by Animal Husb
 ![Carnivore Kibble](https://github.com/user-attachments/assets/afa4a3b6-fdf7-4a31-b856-161a8427c185)
 
 ## Carnivore Kibble
-- Used to feed Beast/predator animals.
+- Used to feed Beast/predator animals and omnivorous animals. 
 - Recipe:
   - 10x Any Meats
 - Output: **10**
@@ -44,5 +44,3 @@ These care items are provided by **Alec's Tamework** and are used by Animal Husb
 - [Feed Trough](/mod/alecs-animal-husbandry/feed-trough)
 - [Happiness and Needs Guide](/mod/alecs-animal-husbandry/happiness-and-needs-guide)
 - [Systems Overview](/mod/alecs-animal-husbandry/systems-overview)
-
-> [Screenshot Placeholder: Herbivore Feed and Carnivore Kibble in inventory]
