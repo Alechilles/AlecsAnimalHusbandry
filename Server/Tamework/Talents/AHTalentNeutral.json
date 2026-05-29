@@ -31,7 +31,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.03 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.03
+        }
       ]
     },
     {
@@ -44,7 +47,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.025 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.025
+        }
       ]
     },
     {
@@ -57,20 +63,26 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.08 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.08
+        }
       ]
     },
     {
       "Id": "AH_Neutral_LightStep",
-      "DisplayName": "Light Step",
-      "Description": "Slightly improves harvest bonus chances where applicable.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "DisplayName": "Easy Keeper",
+      "Description": "Slightly slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 1,
       "Branch": "Care",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "HarvestDoubleDropChanceMultiplier", "Multiplier": 1.05 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.98
+        }
       ]
     },
     {
@@ -83,7 +95,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.94 }
+        {
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.94
+        }
       ]
     },
     {
@@ -99,7 +114,10 @@
         "AH_Neutral_Hardy"
       ],
       "Effects": [
-        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.04 }
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.04
+        }
       ]
     },
     {
@@ -115,7 +133,10 @@
         "AH_Neutral_CalmTemper"
       ],
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.94 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.94
+        }
       ]
     },
     {
@@ -131,7 +152,10 @@
         "AH_Neutral_Agile"
       ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.035 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.035
+        }
       ]
     },
     {
@@ -147,7 +171,10 @@
         "AH_Neutral_CalmTemper"
       ],
       "Effects": [
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.90 }
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.9
+        }
       ]
     },
     {
@@ -163,7 +190,10 @@
         "AH_Neutral_PatientPair"
       ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.09 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.09
+        }
       ]
     },
     {
@@ -173,13 +203,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 3,
       "Branch": "Care",
-      "PointCost": 2,
+      "PointCost": 3,
       "MinLevel": 14,
       "RequiresTalentIds": [
         "AH_Neutral_Forager"
       ],
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.87 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.87
+        }
       ]
     },
     {
@@ -195,7 +228,10 @@
         "AH_Neutral_Hardy"
       ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.05 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.05
+        }
       ]
     },
     {
@@ -211,7 +247,10 @@
         "AH_Neutral_FertileStock"
       ],
       "Effects": [
-        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.50 }
+        {
+          "EffectKey": "TraitMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
       ]
     },
     {
@@ -227,7 +266,10 @@
         "AH_Neutral_Trailwise"
       ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.04 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.04
+        }
       ]
     },
     {
@@ -243,7 +285,10 @@
         "AH_Neutral_WildVariation"
       ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.14 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.14
+        }
       ]
     },
     {
@@ -259,7 +304,10 @@
         "AH_Neutral_Steady"
       ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.07 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.07
+        }
       ]
     },
     {
@@ -275,8 +323,14 @@
         "AH_Neutral_FieldRest"
       ],
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.13 },
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.78 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.13
+        },
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.78
+        }
       ]
     },
     {
@@ -292,7 +346,10 @@
         "AH_Neutral_StrongFamily"
       ],
       "Effects": [
-        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.86 }
+        {
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.86
+        }
       ]
     }
   ]

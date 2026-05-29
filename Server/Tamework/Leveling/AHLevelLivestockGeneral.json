@@ -2,27 +2,40 @@
   "Enabled": true,
   "Priority": 1,
   "RoleIds": [
-    "Tamed_Crab",
-    "Tamed_Frog_Blue",
-    "Tamed_Frog_Green",
-    "Tamed_Frog_Orange",
-    "Tamed_Gecko",
-    "Tamed_Lobster",
-    "Tamed_Meerkat",
-    "Tamed_Mouse",
-    "Tamed_Snail_Frost",
-    "Tamed_Snail_Magma",
-    "Tamed_Squirrel"
+    "Tamed_Bison",
+    "Tamed_Bison_Calf",
+    "Tamed_Boar",
+    "Tamed_Boar_Piglet",
+    "Tamed_Bunny",
+    "Tamed_Camel",
+    "Tamed_Camel_Calf",
+    "Tamed_Goat",
+    "Tamed_Goat_Kid",
+    "Tamed_Horse",
+    "Tamed_Horse_Foal",
+    "Tamed_Mouflon",
+    "Tamed_Mouflon_Lamb",
+    "Tamed_Pig",
+    "Tamed_Pig_Piglet",
+    "Tamed_Pig_Wild",
+    "Tamed_Pig_Wild_Piglet",
+    "Tamed_Rabbit",
+    "Tamed_Ram",
+    "Tamed_Ram_Lamb",
+    "Tamed_Turkey",
+    "Tamed_Turkey_Chick",
+    "Tamed_Warthog",
+    "Tamed_Warthog_Piglet"
   ],
   "Levels": {
-    "MaxLevel": 20,
-    "BaseXp": 120,
-    "GrowthFactor": 1.14
+    "MaxLevel": 25,
+    "BaseXp": 150,
+    "GrowthFactor": 1.16
   },
   "XpSources": {
     "Feed": {
       "Enabled": true,
-      "FlatXp": 4
+      "FlatXp": 5
     },
     "Harvest": {
       "Enabled": false,
@@ -30,7 +43,7 @@
     },
     "Breeding": {
       "Enabled": true,
-      "FlatXp": 35
+      "FlatXp": 90
     },
     "Combat": {
       "Enabled": false,
@@ -45,11 +58,11 @@
     "Effects": [
       {
         "EffectKey": "MaxHealthMultiplier",
-        "PerLevel": 0.003
+        "PerLevel": 0.004
       },
       {
         "EffectKey": "MoveSpeedMultiplier",
-        "PerLevel": 0.0015
+        "PerLevel": 0.001
       }
     ]
   },

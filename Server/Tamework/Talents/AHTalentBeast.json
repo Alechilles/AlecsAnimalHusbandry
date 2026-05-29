@@ -42,7 +42,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.02 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.02
+        }
       ]
     },
     {
@@ -55,7 +58,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.07 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.07
+        }
       ]
     },
     {
@@ -68,7 +74,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.015 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.015
+        }
       ]
     },
     {
@@ -81,7 +90,10 @@
       "PointCost": 2,
       "MinLevel": 5,
       "Effects": [
-        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.02 }
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.02
+        }
       ]
     },
     {
@@ -94,7 +106,10 @@
       "PointCost": 2,
       "MinLevel": 5,
       "Effects": [
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.92 }
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.92
+        }
       ]
     },
     {
@@ -107,7 +122,10 @@
       "PointCost": 2,
       "MinLevel": 6,
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.94 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.94
+        }
       ]
     },
     {
@@ -123,7 +141,10 @@
         "AH_Beast_ControlledTemper"
       ],
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.11 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.11
+        }
       ]
     },
     {
@@ -139,7 +160,10 @@
         "AH_Beast_Quick"
       ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.025 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.025
+        }
       ]
     },
     {
@@ -152,7 +176,10 @@
       "PointCost": 2,
       "MinLevel": 7,
       "Effects": [
-        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.945 }
+        {
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.945
+        }
       ]
     },
     {
@@ -168,7 +195,10 @@
         "AH_Beast_Conditioned"
       ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.04 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.04
+        }
       ]
     },
     {
@@ -184,7 +214,10 @@
         "AH_Beast_DenPairing"
       ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.08 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.08
+        }
       ]
     },
     {
@@ -200,7 +233,10 @@
         "AH_Beast_Trained"
       ],
       "Effects": [
-        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.035 }
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.035
+        }
       ]
     },
     {
@@ -216,7 +252,10 @@
         "AH_Beast_Veteran"
       ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.06 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.06
+        }
       ]
     },
     {
@@ -226,13 +265,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
       "Tier": 4,
       "Branch": "Recovery",
-      "PointCost": 2,
+      "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Beast_FieldDressing"
       ],
       "Effects": [
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.84 }
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.84
+        }
       ]
     },
     {
@@ -242,13 +284,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 4,
       "Branch": "Recovery",
-      "PointCost": 2,
+      "PointCost": 3,
       "MinLevel": 17,
       "RequiresTalentIds": [
         "AH_Beast_WarAppetite"
       ],
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.91 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.91
+        }
       ]
     },
     {
@@ -264,7 +309,10 @@
         "AH_Beast_Pounce"
       ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.035 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.035
+        }
       ]
     },
     {
@@ -280,7 +328,10 @@
         "AH_Beast_StrongBlood"
       ],
       "Effects": [
-        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.50 }
+        {
+          "EffectKey": "TraitMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
       ]
     },
     {
@@ -290,13 +341,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 5,
       "Branch": "Combat",
-      "PointCost": 3,
+      "PointCost": 4,
       "MinLevel": 22,
       "RequiresTalentIds": [
         "AH_Beast_Apex"
       ],
       "Effects": [
-        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.05 }
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.05
+        }
       ]
     },
     {
@@ -306,13 +360,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 5,
       "Branch": "Survival",
-      "PointCost": 3,
+      "PointCost": 4,
       "MinLevel": 23,
       "RequiresTalentIds": [
         "AH_Beast_IronSinew"
       ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.08 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.08
+        }
       ]
     },
     {
@@ -322,13 +379,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 5,
       "Branch": "Recovery",
-      "PointCost": 3,
+      "PointCost": 4,
       "MinLevel": 24,
       "RequiresTalentIds": [
         "AH_Beast_VeteranRecovery"
       ],
       "Effects": [
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.80 }
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.78
+        }
       ]
     },
     {
@@ -344,8 +404,14 @@
         "AH_Beast_MutagenicLine"
       ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.12 },
-        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.90 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.12
+        },
+        {
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.9
+        }
       ]
     },
     {
@@ -355,13 +421,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 6,
       "Branch": "Combat",
-      "PointCost": 3,
+      "PointCost": 4,
       "MinLevel": 28,
       "RequiresTalentIds": [
         "AH_Beast_FocusedStrike"
       ],
       "Effects": [
-        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.07 }
+        {
+          "EffectKey": "DamageDealtMultiplier",
+          "Multiplier": 1.07
+        }
       ]
     }
   ]

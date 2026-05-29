@@ -25,7 +25,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.03 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.03
+        }
       ]
     },
     {
@@ -38,7 +41,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.07 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.07
+        }
       ]
     },
     {
@@ -51,7 +57,10 @@
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.015 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.015
+        }
       ]
     },
     {
@@ -63,9 +72,14 @@
       "Branch": "Care",
       "PointCost": 2,
       "MinLevel": 6,
-      "RequiresTalentIds": [ "AH_Critter_TinyVitality" ],
+      "RequiresTalentIds": [
+        "AH_Critter_TinyVitality"
+      ],
       "Effects": [
-        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.05 }
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.05
+        }
       ]
     },
     {
@@ -77,9 +91,14 @@
       "Branch": "Care",
       "PointCost": 2,
       "MinLevel": 7,
-      "RequiresTalentIds": [ "AH_Critter_BrightEyes" ],
+      "RequiresTalentIds": [
+        "AH_Critter_BrightEyes"
+      ],
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.94 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.94
+        }
       ]
     },
     {
@@ -91,9 +110,14 @@
       "Branch": "Scurry",
       "PointCost": 2,
       "MinLevel": 7,
-      "RequiresTalentIds": [ "AH_Critter_Spry" ],
+      "RequiresTalentIds": [
+        "AH_Critter_Spry"
+      ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.025 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.025
+        }
       ]
     },
     {
@@ -106,7 +130,10 @@
       "PointCost": 2,
       "MinLevel": 8,
       "Effects": [
-        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.92 }
+        {
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.92
+        }
       ]
     },
     {
@@ -118,9 +145,14 @@
       "Branch": "Care",
       "PointCost": 2,
       "MinLevel": 10,
-      "RequiresTalentIds": [ "AH_Critter_PocketResilience" ],
+      "RequiresTalentIds": [
+        "AH_Critter_PocketResilience"
+      ],
       "Effects": [
-        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.75 }
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.75
+        }
       ]
     },
     {
@@ -130,11 +162,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "Tier": 3,
       "Branch": "Care",
-      "PointCost": 2,
+      "PointCost": 3,
       "MinLevel": 12,
-      "RequiresTalentIds": [ "AH_Critter_SoftNeeds" ],
+      "RequiresTalentIds": [
+        "AH_Critter_SoftNeeds"
+      ],
       "Effects": [
-        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.86 }
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.86
+        }
       ]
     },
     {
@@ -144,11 +181,16 @@
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
       "Branch": "Scurry",
-      "PointCost": 2,
+      "PointCost": 3,
       "MinLevel": 12,
-      "RequiresTalentIds": [ "AH_Critter_QuickFeet" ],
+      "RequiresTalentIds": [
+        "AH_Critter_QuickFeet"
+      ],
       "Effects": [
-        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.035 }
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.035
+        }
       ]
     },
     {
@@ -160,9 +202,14 @@
       "Branch": "Breeding",
       "PointCost": 2,
       "MinLevel": 12,
-      "RequiresTalentIds": [ "AH_Critter_GentlePairing" ],
+      "RequiresTalentIds": [
+        "AH_Critter_GentlePairing"
+      ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.07 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.07
+        }
       ]
     },
     {
@@ -174,9 +221,14 @@
       "Branch": "Care",
       "PointCost": 3,
       "MinLevel": 15,
-      "RequiresTalentIds": [ "AH_Critter_CozyDen" ],
+      "RequiresTalentIds": [
+        "AH_Critter_CozyDen"
+      ],
       "Effects": [
-        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.11 }
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.11
+        }
       ]
     },
     {
@@ -188,9 +240,14 @@
       "Branch": "Breeding",
       "PointCost": 3,
       "MinLevel": 16,
-      "RequiresTalentIds": [ "AH_Critter_TinyNest" ],
+      "RequiresTalentIds": [
+        "AH_Critter_TinyNest"
+      ],
       "Effects": [
-        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.5 }
+        {
+          "EffectKey": "TraitMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
       ]
     },
     {
@@ -202,9 +259,14 @@
       "Branch": "Breeding",
       "PointCost": 3,
       "MinLevel": 18,
-      "RequiresTalentIds": [ "AH_Critter_CuriousLineage" ],
+      "RequiresTalentIds": [
+        "AH_Critter_CuriousLineage"
+      ],
       "Effects": [
-        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.11 }
+        {
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.11
+        }
       ]
     }
   ]

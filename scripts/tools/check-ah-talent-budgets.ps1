@@ -6,14 +6,14 @@ $ErrorActionPreference = "Stop"
 
 $configs = @(
     @{
-        Name = "Livestock"
+        Name = "LivestockHarvest"
         Path = "Server/Tamework/Talents/AHTalentLivestock.json"
         MaxPoints = 24
-        MinOptionCost = 34
-        MaxOptionCost = 40
+        MinOptionCost = 36
+        MaxOptionCost = 42
         Upper = @{
             MaxHealthMultiplier = 1.16
-            MoveSpeedMultiplier = 1.08
+            MoveSpeedMultiplier = 1.09
             HarvestDoubleDropChanceMultiplier = 1.18
             TraitMutationChanceMultiplier = 1.80
         }
@@ -22,13 +22,31 @@ $configs = @(
             HarvestCooldownMultiplier = 0.75
             ReviveCooldownMultiplier = 0.70
         }
+        ForbiddenEffects = @()
+    },
+    @{
+        Name = "LivestockGeneral"
+        Path = "Server/Tamework/Talents/AHTalentLivestockGeneral.json"
+        MaxPoints = 24
+        MinOptionCost = 30
+        MaxOptionCost = 34
+        Upper = @{
+            MaxHealthMultiplier = 1.16
+            MoveSpeedMultiplier = 1.09
+            TraitMutationChanceMultiplier = 1.80
+        }
+        Lower = @{
+            NeedsDecayMultiplier = 0.80
+            ReviveCooldownMultiplier = 0.70
+        }
+        ForbiddenEffects = @("HarvestDoubleDropChanceMultiplier", "HarvestCooldownMultiplier")
     },
     @{
         Name = "Neutral"
         Path = "Server/Tamework/Talents/AHTalentNeutral.json"
         MaxPoints = 24
-        MinOptionCost = 34
-        MaxOptionCost = 38
+        MinOptionCost = 36
+        MaxOptionCost = 40
         Upper = @{
             MaxHealthMultiplier = 1.16
             MoveSpeedMultiplier = 1.10
@@ -40,13 +58,14 @@ $configs = @(
             BreedCooldownMultiplier = 0.80
             ReviveCooldownMultiplier = 0.70
         }
+        ForbiddenEffects = @("HarvestDoubleDropChanceMultiplier", "HarvestCooldownMultiplier")
     },
     @{
         Name = "Critter"
         Path = "Server/Tamework/Talents/AHTalentCritter.json"
         MaxPoints = 19
         MinOptionCost = 26
-        MaxOptionCost = 30
+        MaxOptionCost = 32
         Upper = @{
             MaxHealthMultiplier = 1.12
             MoveSpeedMultiplier = 1.08
@@ -56,13 +75,14 @@ $configs = @(
             NeedsDecayMultiplier = 0.80
             ReviveCooldownMultiplier = 0.75
         }
+        ForbiddenEffects = @("HarvestDoubleDropChanceMultiplier", "HarvestCooldownMultiplier", "DamageDealtMultiplier")
     },
     @{
         Name = "Beast"
         Path = "Server/Tamework/Talents/AHTalentBeast.json"
         MaxPoints = 29
-        MinOptionCost = 42
-        MaxOptionCost = 50
+        MinOptionCost = 50
+        MaxOptionCost = 58
         Upper = @{
             MaxHealthMultiplier = 1.22
             DamageDealtMultiplier = 1.20
@@ -74,6 +94,7 @@ $configs = @(
             ReviveCooldownMultiplier = 0.60
             BreedCooldownMultiplier = 0.85
         }
+        ForbiddenEffects = @("HarvestDoubleDropChanceMultiplier", "HarvestCooldownMultiplier")
     }
 )
 
@@ -91,6 +112,22 @@ function Get-EffectProduct {
         }
     }
     return $value
+}
+
+function Test-PrerequisitesMet {
+    param(
+        [object]$Talent,
+        [string[]]$PurchasedIds
+    )
+    foreach ($requiredId in @($Talent.RequiresTalentIds)) {
+        if ($null -eq $requiredId -or [string]::IsNullOrWhiteSpace([string]$requiredId)) {
+            continue
+        }
+        if (-not ($PurchasedIds -contains [string]$requiredId)) {
+            return $false
+        }
+    }
+    return $true
 }
 
 function Get-LegalTalentSets {
@@ -133,17 +170,7 @@ function Get-LegalTalentSets {
             if (($Spent + $cost) -gt $MaxPoints) {
                 continue
             }
-            $requirementsMet = $true
-            foreach ($requiredId in @($talent.RequiresTalentIds)) {
-                if ($null -eq $requiredId -or [string]::IsNullOrWhiteSpace([string]$requiredId)) {
-                    continue
-                }
-                if (-not ($ids -contains [string]$requiredId)) {
-                    $requirementsMet = $false
-                    break
-                }
-            }
-            if (-not $requirementsMet) {
+            if (-not (Test-PrerequisitesMet -Talent $talent -PurchasedIds $ids)) {
                 continue
             }
             $next = @($ids + $talent.Id)
@@ -166,6 +193,32 @@ foreach ($config in $configs) {
     if ($optionCost -lt $config.MinOptionCost -or $optionCost -gt $config.MaxOptionCost) {
         throw "$($config.Name) option cost $optionCost is outside expected range $($config.MinOptionCost)-$($config.MaxOptionCost)."
     }
+
+    foreach ($talent in $talents) {
+        $talentIndex = [array]::IndexOf($talents, $talent)
+        if ([int]$talent.Tier -eq 1 -and [int]$talent.MinLevel -ne 1) {
+            throw "$($config.Name) tier 1 talent $($talent.Id) must require level 1."
+        }
+        foreach ($requiredId in @($talent.RequiresTalentIds)) {
+            if ($null -eq $requiredId -or [string]::IsNullOrWhiteSpace([string]$requiredId)) {
+                continue
+            }
+            $requiredTalent = $talents | Where-Object { $_.Id -eq [string]$requiredId } | Select-Object -First 1
+            if ($null -eq $requiredTalent) {
+                throw "$($config.Name) talent $($talent.Id) requires missing talent $requiredId."
+            }
+            $requiredIndex = [array]::IndexOf($talents, $requiredTalent)
+            if ($requiredIndex -ge $talentIndex) {
+                throw "$($config.Name) talent $($talent.Id) must appear after prerequisite $requiredId."
+            }
+        }
+        foreach ($effect in @($talent.Effects)) {
+            if ($config.ForbiddenEffects -contains [string]$effect.EffectKey) {
+                throw "$($config.Name) talent $($talent.Id) uses forbidden effect $($effect.EffectKey)."
+            }
+        }
+    }
+
     $sets = @(Get-LegalTalentSets -Talents $talents -MaxPoints $config.MaxPoints)
     if ($sets.Count -eq 0) {
         throw "$($config.Name) has no legal talent purchase sets."

@@ -22,27 +22,27 @@
   ],
   "Levels": {
     "MaxLevel": 25,
-    "BaseXp": 175.0,
+    "BaseXp": 175,
     "GrowthFactor": 1.17
   },
   "XpSources": {
     "Feed": {
       "Enabled": true,
-      "FlatXp": 4.0
+      "FlatXp": 4
     },
     "Harvest": {
-      "Enabled": true,
-      "FlatXp": 6.0
+      "Enabled": false,
+      "FlatXp": 0
     },
     "Breeding": {
       "Enabled": true,
-      "FlatXp": 80.0
+      "FlatXp": 80
     },
     "Combat": {
       "Enabled": true,
       "DamageDealtXpPerPoint": 0.1,
       "DamageTakenXpPerPoint": 0.04,
-      "MinimumDamageEvent": 2.0,
+      "MinimumDamageEvent": 2,
       "AwardVsPlayers": false,
       "AwardVsOwnedAllies": false
     }
@@ -60,10 +60,6 @@
       {
         "EffectKey": "DamageDealtMultiplier",
         "PerLevel": 0.002
-      },
-      {
-        "EffectKey": "HarvestDoubleDropChanceMultiplier",
-        "PerLevel": 0.001
       }
     ]
   },

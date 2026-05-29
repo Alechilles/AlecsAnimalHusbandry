@@ -32,17 +32,20 @@ These are the current (non-deprecated) `AH*` config assets in this repo.
 | Needs | `Server/Tamework/Needs/AHNeedsMain.json`<br>`Server/Tamework/Needs/AHNeedsBeast.json` |
 | Happiness | `Server/Tamework/Happiness/AHHappMain.json`<br>`Server/Tamework/Happiness/AHHappNeutral.json`<br>`Server/Tamework/Happiness/AHHappBeast.json` |
 | Breeding | `Server/Tamework/Breeding/AHBreedLivestock.json`<br>`Server/Tamework/Breeding/AHBreedNeutral.json`<br>`Server/Tamework/Breeding/AHBreedBeast.json` |
-| Traits | `Server/Tamework/Traits/AHTraitLivestock.json`<br>`Server/Tamework/Traits/AHTraitNeutral.json`<br>`Server/Tamework/Traits/AHTraitBeast.json` |
-| Leveling | `Server/Tamework/Leveling/AHLevelLivestock.json`<br>`Server/Tamework/Leveling/AHLevelNeutral.json`<br>`Server/Tamework/Leveling/AHLevelCritter.json`<br>`Server/Tamework/Leveling/AHLevelBeast.json` |
-| Talents | `Server/Tamework/Talents/AHTalentLivestock.json`<br>`Server/Tamework/Talents/AHTalentNeutral.json`<br>`Server/Tamework/Talents/AHTalentCritter.json`<br>`Server/Tamework/Talents/AHTalentBeast.json` |
+| Traits | `Server/Tamework/Traits/AHTraitLivestock.json`<br>`Server/Tamework/Traits/AHTraitLivestockGeneral.json`<br>`Server/Tamework/Traits/AHTraitNeutral.json`<br>`Server/Tamework/Traits/AHTraitBeast.json` |
+| Leveling | `Server/Tamework/Leveling/AHLevelLivestock.json`<br>`Server/Tamework/Leveling/AHLevelLivestockGeneral.json`<br>`Server/Tamework/Leveling/AHLevelNeutral.json`<br>`Server/Tamework/Leveling/AHLevelCritter.json`<br>`Server/Tamework/Leveling/AHLevelBeast.json` |
+| Talents | `Server/Tamework/Talents/AHTalentLivestock.json`<br>`Server/Tamework/Talents/AHTalentLivestockGeneral.json`<br>`Server/Tamework/Talents/AHTalentNeutral.json`<br>`Server/Tamework/Talents/AHTalentCritter.json`<br>`Server/Tamework/Talents/AHTalentBeast.json` |
 
 ### Group Mapping (including Beast)
 | Group | Interaction | Companion | Needs | Happiness | Breeding | Traits | Leveling | Talents | Command |
 |---|---|---|---|---|---|---|---|---|---|
-| Livestock | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestock` | `AHLevelLivestock` | `AHTalentLivestock` | `AHCommLivestock` |
+| Livestock (harvest-capable) | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestock` | `AHLevelLivestock` | `AHTalentLivestock` | `AHCommLivestock` |
+| Livestock (general) | `AHIntLivestock` | `AHCompMain` | `AHNeedsMain` | `AHHappMain` | `AHBreedLivestock` | `AHTraitLivestockGeneral` | `AHLevelLivestockGeneral` | `AHTalentLivestockGeneral` | `AHCommLivestock` |
 | Neutral | `AHIntNeutral` | `AHCompNeutral` | `AHNeedsMain` | `AHHappNeutral` | `AHBreedNeutral` | `AHTraitNeutral` | `AHLevelNeutral` | `AHTalentNeutral` | `AHCommLivestock` |
 | Beast | `AHIntBeast` | `AHCompMain` | `AHNeedsBeast` | `AHHappBeast` | `AHBreedBeast` | `AHTraitBeast` | `AHLevelBeast` | `AHTalentBeast` | `AHCommBeast` |
 | Critter | `AhIntCritter` | `AHCompNeutral` | `AHNeedsMain` | `AHHappMain` | `AHBreedNeutral` | `AHTraitNeutral` | `AHLevelCritter` | `AHTalentCritter` | `AHCommLivestock` |
+
+Harvest-capable livestock configs cover chicken, cow, mosshorn, sheep, and skrill families. General livestock configs cover livestock families without harvest interactions, so they do not roll Bounty traits or spend points on harvest-only talents.
 
 ## Deprecated Naming Note
 Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were replaced by the `AH*` config file set above.
