@@ -192,8 +192,17 @@
     {
       "Type": "Harvest",
       "Enabled": true,
-      "RequireHarvestInteractionContext": true,
-      "RequireHarvestAlarmReady": true
+      "RequireHarvestInteractionContext": false,
+      "RequireHarvestAlarmReady": true,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "HarvestInteractionRequiredItems"
+            }
+          ]
+        }
+      }
     },
     {
       "Type": "Mount",
