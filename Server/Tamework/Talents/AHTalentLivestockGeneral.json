@@ -289,23 +289,19 @@
     {
       "Id": "AH_Livestock_StableLine",
       "DisplayName": "Stable Line",
-      "Description": "Improves fertility and trait mutation chance.",
+      "Description": "Improves breeding fertility further.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 5,
       "Branch": "Breeding",
       "PointCost": 3,
       "MinLevel": 22,
       "RequiresTalentIds": [
-        "AH_Livestock_StrangeSpark"
+        "AH_Livestock_StrongLineage"
       ],
       "Effects": [
         {
           "EffectKey": "FertilityMultiplier",
           "Multiplier": 1.13
-        },
-        {
-          "EffectKey": "TraitMutationChanceMultiplier",
-          "Multiplier": 1.38
         }
       ]
     }

@@ -235,7 +235,7 @@
       "Id": "AH_Critter_CuriousLineage",
       "DisplayName": "Curious Lineage",
       "Description": "Improves trait mutation chance while breeding.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 4,
       "Branch": "Breeding",
       "PointCost": 3,
@@ -260,7 +260,7 @@
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
-        "AH_Critter_CuriousLineage"
+        "AH_Critter_TinyNest"
       ],
       "Effects": [
         {
