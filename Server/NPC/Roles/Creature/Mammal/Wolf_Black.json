@@ -83,8 +83,12 @@
     "CombatStrafeWeight": 10,
     "CombatBackOffAfterAttack": true,
     "CombatBackOffDistanceRange": [
-      3,
-      5
+      1.75,
+      2.75
+    ],
+    "CombatBackOffDurationRange": [
+      0.8,
+      1.3
     ],
     "Attack": "Root_NPC_Wolf_Attack",
     "AttackDistance": 2.5,
