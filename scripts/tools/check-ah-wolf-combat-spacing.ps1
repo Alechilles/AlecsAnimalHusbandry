@@ -42,8 +42,8 @@ foreach ($role in $rolesToCheck) {
         continue
     }
 
-    if ($modify.CombatBehaviorDistance -ne 6) {
-        $failures.Add("${role}: CombatBehaviorDistance must be 6")
+    if ($modify.CombatBehaviorDistance -ne 8) {
+        $failures.Add("${role}: CombatBehaviorDistance must be 8 so the wolf has room to re-enter combat movement after backing off")
     }
     if ($modify.CombatDirectWeight -ne 0) {
         $failures.Add("${role}: CombatDirectWeight must be 0 so wolves do not mix direct close-in behavior with strafing")
@@ -56,13 +56,15 @@ foreach ($role in $rolesToCheck) {
     }
 
     $distance = @($modify.CombatBackOffDistanceRange)
-    if ($distance.Count -ne 2 -or $distance[0] -lt 1.5 -or $distance[1] -gt 2.75) {
-        $failures.Add("${role}: CombatBackOffDistanceRange must stay within [1.5, 2.75]")
+    if ($distance.Count -ne 2 -or $distance[0] -ne 3 -or $distance[1] -ne 5) {
+        $failures.Add("${role}: CombatBackOffDistanceRange must preserve the original [3, 5] wolf retreat")
     }
 
-    $duration = @($modify.CombatBackOffDurationRange)
-    if ($duration.Count -ne 2 -or $duration[0] -lt 0.5 -or $duration[1] -gt 1.3) {
-        $failures.Add("${role}: CombatBackOffDurationRange must stay within [0.5, 1.3]")
+    if ($null -ne $modify.CombatBackOffDurationRange) {
+        $duration = @($modify.CombatBackOffDurationRange)
+        if ($duration.Count -ne 2 -or $duration[0] -ne 2 -or $duration[1] -ne 3) {
+            $failures.Add("${role}: explicit CombatBackOffDurationRange must preserve the original [2, 3] timing")
+        }
     }
 }
 
