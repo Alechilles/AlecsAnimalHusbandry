@@ -335,6 +335,25 @@
       ]
     },
     {
+      "Id": "AH_Beast_WildMark",
+      "DisplayName": "Wild Mark",
+      "Description": "Raises appearance mutation chance during breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 19,
+      "RequiresTalentIds": [
+        "AH_Beast_StrongBlood"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "AppearanceMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
+      ]
+    },
+    {
       "Id": "AH_Beast_FocusedStrike",
       "DisplayName": "Focused Strike",
       "Description": "Improves outgoing damage again.",

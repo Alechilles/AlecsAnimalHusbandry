@@ -251,6 +251,25 @@
       ]
     },
     {
+      "Id": "AH_Critter_OddPattern",
+      "DisplayName": "Odd Pattern",
+      "Description": "Improves appearance mutation chance while breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 16,
+      "RequiresTalentIds": [
+        "AH_Critter_TinyNest"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "AppearanceMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
+      ]
+    },
+    {
       "Id": "AH_Critter_SmallFamily",
       "DisplayName": "Small Family",
       "Description": "Improves fertility further.",

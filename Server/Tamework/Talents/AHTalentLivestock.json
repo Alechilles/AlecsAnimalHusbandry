@@ -306,6 +306,25 @@
       ]
     },
     {
+      "Id": "AH_Livestock_PatternSpark",
+      "DisplayName": "Pattern Spark",
+      "Description": "Raises appearance mutation chance during breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 17,
+      "RequiresTalentIds": [
+        "AH_Livestock_StrongLineage"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "AppearanceMutationChanceMultiplier",
+          "Multiplier": 1.3
+        }
+      ]
+    },
+    {
       "Id": "AH_Livestock_SeasonYield",
       "DisplayName": "Season Yield",
       "Description": "Improves harvest rewards and reset time.",

@@ -254,6 +254,25 @@
       ]
     },
     {
+      "Id": "AH_Neutral_UnusualPattern",
+      "DisplayName": "Unusual Pattern",
+      "Description": "Raises appearance mutation chance during breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 3,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 18,
+      "RequiresTalentIds": [
+        "AH_Neutral_FertileStock"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "AppearanceMutationChanceMultiplier",
+          "Multiplier": 1.5
+        }
+      ]
+    },
+    {
       "Id": "AH_Neutral_Nimble",
       "DisplayName": "Nimble",
       "Description": "Improves movement speed again.",
