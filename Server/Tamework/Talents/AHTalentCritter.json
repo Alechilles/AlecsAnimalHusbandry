@@ -16,73 +16,195 @@
   ],
   "Talents": [
     {
-      "Id": "AH_Critter_Spry",
-      "DisplayName": "Spry",
-      "Description": "Slightly improves movement speed.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
-      "Tier": 1,
-      "Branch": "Utility",
-      "PointCost": 1,
-      "MinLevel": 2,
-      "Effects": [
-        {
-          "EffectKey": "MoveSpeedMultiplier",
-          "Multiplier": 1.03
-        }
-      ]
-    },
-    {
-      "Id": "AH_Critter_Healthy",
-      "DisplayName": "Healthy",
+      "Id": "AH_Critter_TinyVitality",
+      "DisplayName": "Tiny Vitality",
       "Description": "Raises maximum health.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
       "Branch": "Care",
       "PointCost": 1,
-      "MinLevel": 4,
+      "MinLevel": 1,
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.04
-        }
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.03 }
       ]
     },
     {
-      "Id": "AH_Critter_Eager",
-      "DisplayName": "Eager",
-      "Description": "Improves harvest bonus chances when applicable.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Id": "AH_Critter_BrightEyes",
+      "DisplayName": "Bright Eyes",
+      "Description": "Improves happiness gains.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
+      "Tier": 1,
+      "Branch": "Care",
+      "PointCost": 1,
+      "MinLevel": 1,
+      "Effects": [
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.07 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_Spry",
+      "DisplayName": "Spry",
+      "Description": "Slightly improves movement speed.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 1,
+      "Branch": "Scurry",
+      "PointCost": 1,
+      "MinLevel": 1,
+      "Effects": [
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.015 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_PocketResilience",
+      "DisplayName": "Pocket Resilience",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 2,
-      "Branch": "Utility",
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 6,
+      "RequiresTalentIds": [ "AH_Critter_TinyVitality" ],
+      "Effects": [
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.05 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_SoftNeeds",
+      "DisplayName": "Soft Needs",
+      "Description": "Slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
+      "Tier": 2,
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 7,
+      "RequiresTalentIds": [ "AH_Critter_BrightEyes" ],
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.94 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_QuickFeet",
+      "DisplayName": "Quick Feet",
+      "Description": "Improves movement speed further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 2,
+      "Branch": "Scurry",
+      "PointCost": 2,
+      "MinLevel": 7,
+      "RequiresTalentIds": [ "AH_Critter_Spry" ],
+      "Effects": [
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.025 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_GentlePairing",
+      "DisplayName": "Gentle Pairing",
+      "Description": "Shortens breeding cooldowns.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 2,
+      "Branch": "Breeding",
       "PointCost": 2,
       "MinLevel": 8,
-      "RequiresTalentIds": [
-        "AH_Critter_Spry"
-      ],
       "Effects": [
-        {
-          "EffectKey": "HarvestDoubleDropChanceMultiplier",
-          "Multiplier": 1.03
-        }
+        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.92 }
       ]
     },
     {
-      "Id": "AH_Critter_Seasoned",
-      "DisplayName": "Seasoned",
-      "Description": "Raises maximum health further.",
+      "Id": "AH_Critter_CozyDen",
+      "DisplayName": "Cozy Den",
+      "Description": "Reduces revive cooldown.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
       "Branch": "Care",
       "PointCost": 2,
-      "MinLevel": 14,
-      "RequiresTalentIds": [
-        "AH_Critter_Healthy"
-      ],
+      "MinLevel": 10,
+      "RequiresTalentIds": [ "AH_Critter_PocketResilience" ],
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.05
-        }
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.75 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_QuietKeeper",
+      "DisplayName": "Quiet Keeper",
+      "Description": "Slows hunger and thirst decay further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
+      "Tier": 3,
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 12,
+      "RequiresTalentIds": [ "AH_Critter_SoftNeeds" ],
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.86 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_SmallShortcut",
+      "DisplayName": "Small Shortcut",
+      "Description": "Adds a final small movement boost.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 3,
+      "Branch": "Scurry",
+      "PointCost": 2,
+      "MinLevel": 12,
+      "RequiresTalentIds": [ "AH_Critter_QuickFeet" ],
+      "Effects": [
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.035 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_TinyNest",
+      "DisplayName": "Tiny Nest",
+      "Description": "Improves fertility.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 3,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 12,
+      "RequiresTalentIds": [ "AH_Critter_GentlePairing" ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.07 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_CaretakerBond",
+      "DisplayName": "Caretaker Bond",
+      "Description": "Improves happiness gains further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
+      "Tier": 4,
+      "Branch": "Care",
+      "PointCost": 3,
+      "MinLevel": 15,
+      "RequiresTalentIds": [ "AH_Critter_CozyDen" ],
+      "Effects": [
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.11 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_CuriousLineage",
+      "DisplayName": "Curious Lineage",
+      "Description": "Improves trait mutation chance while breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 16,
+      "RequiresTalentIds": [ "AH_Critter_TinyNest" ],
+      "Effects": [
+        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.5 }
+      ]
+    },
+    {
+      "Id": "AH_Critter_SmallFamily",
+      "DisplayName": "Small Family",
+      "Description": "Improves fertility further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 5,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 18,
+      "RequiresTalentIds": [ "AH_Critter_CuriousLineage" ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.11 }
       ]
     }
   ]

@@ -40,12 +40,22 @@
       "Tier": 1,
       "Branch": "Survival",
       "PointCost": 1,
-      "MinLevel": 2,
+      "MinLevel": 1,
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.06
-        }
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.02 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_ControlledTemper",
+      "DisplayName": "Controlled Temper",
+      "Description": "Increases happiness gained from care.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 1,
+      "Branch": "Breeding",
+      "PointCost": 1,
+      "MinLevel": 1,
+      "Effects": [
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.07 }
       ]
     },
     {
@@ -56,12 +66,9 @@
       "Tier": 1,
       "Branch": "Mobility",
       "PointCost": 1,
-      "MinLevel": 5,
+      "MinLevel": 1,
       "Effects": [
-        {
-          "EffectKey": "MoveSpeedMultiplier",
-          "Multiplier": 1.03
-        }
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.015 }
       ]
     },
     {
@@ -72,15 +79,80 @@
       "Tier": 2,
       "Branch": "Combat",
       "PointCost": 2,
-      "MinLevel": 10,
+      "MinLevel": 5,
+      "Effects": [
+        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.02 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_FieldDressing",
+      "DisplayName": "Field Dressing",
+      "Description": "Reduces revive cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
+      "Tier": 2,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 5,
+      "Effects": [
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.92 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_WarAppetite",
+      "DisplayName": "War Appetite",
+      "Description": "Slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 2,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 6,
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.94 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_SteadyNerves",
+      "DisplayName": "Steady Nerves",
+      "Description": "Improves happiness gained from care further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 2,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 6,
       "RequiresTalentIds": [
-        "AH_Beast_Conditioned"
+        "AH_Beast_ControlledTemper"
       ],
       "Effects": [
-        {
-          "EffectKey": "DamageDealtMultiplier",
-          "Multiplier": 1.06
-        }
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.11 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Pounce",
+      "DisplayName": "Pounce",
+      "Description": "Improves movement speed further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 2,
+      "Branch": "Mobility",
+      "PointCost": 2,
+      "MinLevel": 7,
+      "RequiresTalentIds": [
+        "AH_Beast_Quick"
+      ],
+      "Effects": [
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.025 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_DenPairing",
+      "DisplayName": "Den Pairing",
+      "Description": "Reduces breeding cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 2,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 7,
+      "Effects": [
+        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.945 }
       ]
     },
     {
@@ -91,15 +163,28 @@
       "Tier": 3,
       "Branch": "Survival",
       "PointCost": 2,
-      "MinLevel": 17,
+      "MinLevel": 10,
       "RequiresTalentIds": [
-        "AH_Beast_Trained"
+        "AH_Beast_Conditioned"
       ],
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.08
-        }
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.04 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_StrongBlood",
+      "DisplayName": "Strong Blood",
+      "Description": "Improves breeding fertility.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 3,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 12,
+      "RequiresTalentIds": [
+        "AH_Beast_DenPairing"
+      ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.08 }
       ]
     },
     {
@@ -107,18 +192,176 @@
       "DisplayName": "Apex",
       "Description": "Improves outgoing damage further.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
-      "Tier": 4,
+      "Tier": 3,
       "Branch": "Combat",
       "PointCost": 3,
-      "MinLevel": 24,
+      "MinLevel": 13,
+      "RequiresTalentIds": [
+        "AH_Beast_Trained"
+      ],
+      "Effects": [
+        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.035 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_IronSinew",
+      "DisplayName": "Iron Sinew",
+      "Description": "Raises maximum health again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 4,
+      "Branch": "Survival",
+      "PointCost": 3,
+      "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Beast_Veteran"
       ],
       "Effects": [
-        {
-          "EffectKey": "DamageDealtMultiplier",
-          "Multiplier": 1.08
-        }
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.06 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_VeteranRecovery",
+      "DisplayName": "Veteran Recovery",
+      "Description": "Reduces revive cooldown further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
+      "Tier": 4,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 16,
+      "RequiresTalentIds": [
+        "AH_Beast_FieldDressing"
+      ],
+      "Effects": [
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.84 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_HardMarch",
+      "DisplayName": "Hard March",
+      "Description": "Slows hunger and thirst decay further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 4,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 17,
+      "RequiresTalentIds": [
+        "AH_Beast_WarAppetite"
+      ],
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.91 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_Chase",
+      "DisplayName": "Chase",
+      "Description": "Improves movement speed again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 4,
+      "Branch": "Mobility",
+      "PointCost": 3,
+      "MinLevel": 18,
+      "RequiresTalentIds": [
+        "AH_Beast_Pounce"
+      ],
+      "Effects": [
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.035 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_MutagenicLine",
+      "DisplayName": "Mutagenic Line",
+      "Description": "Raises trait mutation chance during breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 19,
+      "RequiresTalentIds": [
+        "AH_Beast_StrongBlood"
+      ],
+      "Effects": [
+        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.50 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_FocusedStrike",
+      "DisplayName": "Focused Strike",
+      "Description": "Improves outgoing damage again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 5,
+      "Branch": "Combat",
+      "PointCost": 3,
+      "MinLevel": 22,
+      "RequiresTalentIds": [
+        "AH_Beast_Apex"
+      ],
+      "Effects": [
+        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.05 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_PackGuard",
+      "DisplayName": "Pack Guard",
+      "Description": "Raises maximum health one final time.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 5,
+      "Branch": "Survival",
+      "PointCost": 3,
+      "MinLevel": 23,
+      "RequiresTalentIds": [
+        "AH_Beast_IronSinew"
+      ],
+      "Effects": [
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.08 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_BondedReturn",
+      "DisplayName": "Bonded Return",
+      "Description": "Further reduces revive cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 5,
+      "Branch": "Recovery",
+      "PointCost": 3,
+      "MinLevel": 24,
+      "RequiresTalentIds": [
+        "AH_Beast_VeteranRecovery"
+      ],
+      "Effects": [
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.80 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_PackLine",
+      "DisplayName": "Pack Line",
+      "Description": "Improves fertility and breeding recovery.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 5,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 25,
+      "RequiresTalentIds": [
+        "AH_Beast_MutagenicLine"
+      ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.12 },
+        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.90 }
+      ]
+    },
+    {
+      "Id": "AH_Beast_GuardBreak",
+      "DisplayName": "Guard Break",
+      "Description": "Slightly improves outgoing damage.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 6,
+      "Branch": "Combat",
+      "PointCost": 3,
+      "MinLevel": 28,
+      "RequiresTalentIds": [
+        "AH_Beast_FocusedStrike"
+      ],
+      "Effects": [
+        { "EffectKey": "DamageDealtMultiplier", "Multiplier": 1.07 }
       ]
     }
   ]

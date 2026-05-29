@@ -48,12 +48,9 @@
       "Tier": 1,
       "Branch": "Care",
       "PointCost": 1,
-      "MinLevel": 2,
+      "MinLevel": 1,
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.04
-        }
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.03 }
       ]
     },
     {
@@ -62,14 +59,37 @@
       "Description": "Slightly improves movement speed.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 1,
-      "Branch": "Utility",
+      "Branch": "Care",
       "PointCost": 1,
-      "MinLevel": 4,
+      "MinLevel": 1,
       "Effects": [
-        {
-          "EffectKey": "MoveSpeedMultiplier",
-          "Multiplier": 1.03
-        }
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.03 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_GentleDisposition",
+      "DisplayName": "Gentle Disposition",
+      "Description": "Increases happiness gained from care.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 1,
+      "Branch": "Breeding",
+      "PointCost": 1,
+      "MinLevel": 1,
+      "Effects": [
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.08 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_LightAppetite",
+      "DisplayName": "Light Appetite",
+      "Description": "Slightly slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 1,
+      "Branch": "Recovery",
+      "PointCost": 1,
+      "MinLevel": 1,
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.96 }
       ]
     },
     {
@@ -78,55 +98,239 @@
       "Description": "Improves harvest bonus chances.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
       "Tier": 2,
-      "Branch": "Utility",
+      "Branch": "Production",
       "PointCost": 2,
-      "MinLevel": 8,
-      "RequiresTalentIds": [
-        "AH_Livestock_Sturdy"
-      ],
+      "MinLevel": 5,
       "Effects": [
-        {
-          "EffectKey": "HarvestDoubleDropChanceMultiplier",
-          "Multiplier": 1.05
-        }
+        { "EffectKey": "HarvestDoubleDropChanceMultiplier", "Multiplier": 1.03 }
       ]
     },
     {
-      "Id": "AH_Livestock_Seasoned",
-      "DisplayName": "Seasoned",
-      "Description": "Raises maximum health further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Id": "AH_Livestock_PatientCourtship",
+      "DisplayName": "Patient Courtship",
+      "Description": "Reduces breeding cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 2,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 9,
+      "RequiresTalentIds": [
+        "AH_Livestock_GentleDisposition"
+      ],
+      "Effects": [
+        { "EffectKey": "BreedCooldownMultiplier", "Multiplier": 0.94 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_BountifulCoat",
+      "DisplayName": "Bountiful Coat",
+      "Description": "Improves harvest bonus chances further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Tier": 3,
+      "Branch": "Production",
+      "PointCost": 2,
+      "MinLevel": 10,
+      "RequiresTalentIds": [
+        "AH_Livestock_Reliable"
+      ],
+      "Effects": [
+        { "EffectKey": "HarvestDoubleDropChanceMultiplier", "Multiplier": 1.06 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_EfficientKeeper",
+      "DisplayName": "Efficient Keeper",
+      "Description": "Slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 3,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 11,
+      "RequiresTalentIds": [
+        "AH_Livestock_LightAppetite"
+      ],
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.93 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_StrongLineage",
+      "DisplayName": "Strong Lineage",
+      "Description": "Improves breeding fertility.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 3,
+      "Branch": "Breeding",
+      "PointCost": 2,
+      "MinLevel": 12,
+      "RequiresTalentIds": [
+        "AH_Livestock_PatientCourtship"
+      ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.09 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_QuickerRegrowth",
+      "DisplayName": "Quicker Regrowth",
+      "Description": "Shortens the harvest reset timer.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Tier": 3,
+      "Branch": "Production",
+      "PointCost": 2,
+      "MinLevel": 13,
+      "RequiresTalentIds": [
+        "AH_Livestock_Reliable"
+      ],
+      "Effects": [
+        { "EffectKey": "HarvestCooldownMultiplier", "Multiplier": 0.92 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_CarefulGait",
+      "DisplayName": "Careful Gait",
+      "Description": "Improves movement speed further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
       "Branch": "Care",
       "PointCost": 2,
       "MinLevel": 14,
       "RequiresTalentIds": [
-        "AH_Livestock_Reliable"
+        "AH_Livestock_Surefooted"
       ],
       "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.06
-        }
+        { "EffectKey": "MoveSpeedMultiplier", "Multiplier": 1.05 }
       ]
     },
     {
-      "Id": "AH_Livestock_Bountiful",
-      "DisplayName": "Bountiful",
-      "Description": "Improves harvest bonus chances further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Id": "AH_Livestock_SteadyHeart",
+      "DisplayName": "Steady Heart",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 3,
+      "Branch": "Care",
+      "PointCost": 3,
+      "MinLevel": 8,
+      "RequiresTalentIds": [
+        "AH_Livestock_Sturdy"
+      ],
+      "Effects": [
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.07 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_ShortRest",
+      "DisplayName": "Short Rest",
+      "Description": "Reduces revive cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
+      "Tier": 3,
+      "Branch": "Recovery",
+      "PointCost": 3,
+      "MinLevel": 13,
+      "RequiresTalentIds": [
+        "AH_Livestock_LightAppetite"
+      ],
+      "Effects": [
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.85 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_Rooted",
+      "DisplayName": "Rooted",
+      "Description": "Raises maximum health again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 4,
-      "Branch": "Utility",
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 16,
+      "RequiresTalentIds": [
+        "AH_Livestock_SteadyHeart"
+      ],
+      "Effects": [
+        { "EffectKey": "MaxHealthMultiplier", "Multiplier": 1.05 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_WarmStall",
+      "DisplayName": "Warm Stall",
+      "Description": "Slows hunger and thirst decay further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 4,
+      "Branch": "Recovery",
+      "PointCost": 2,
+      "MinLevel": 16,
+      "RequiresTalentIds": [
+        "AH_Livestock_EfficientKeeper"
+      ],
+      "Effects": [
+        { "EffectKey": "NeedsDecayMultiplier", "Multiplier": 0.91 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_StrangeSpark",
+      "DisplayName": "Strange Spark",
+      "Description": "Raises trait mutation chance during breeding.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 17,
+      "RequiresTalentIds": [
+        "AH_Livestock_StrongLineage"
+      ],
+      "Effects": [
+        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.30 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_SeasonYield",
+      "DisplayName": "Season Yield",
+      "Description": "Improves harvest rewards and reset time.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
+      "Tier": 5,
+      "Branch": "Production",
       "PointCost": 3,
       "MinLevel": 20,
       "RequiresTalentIds": [
-        "AH_Livestock_Seasoned"
+        "AH_Livestock_BountifulCoat",
+        "AH_Livestock_QuickerRegrowth"
       ],
       "Effects": [
-        {
-          "EffectKey": "HarvestDoubleDropChanceMultiplier",
-          "Multiplier": 1.08
-        }
+        { "EffectKey": "HarvestDoubleDropChanceMultiplier", "Multiplier": 1.08 },
+        { "EffectKey": "HarvestCooldownMultiplier", "Multiplier": 0.82 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_BarnFavorite",
+      "DisplayName": "Barn Favorite",
+      "Description": "Improves happiness gain and revive recovery.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 5,
+      "Branch": "Recovery",
+      "PointCost": 3,
+      "MinLevel": 21,
+      "RequiresTalentIds": [
+        "AH_Livestock_ShortRest"
+      ],
+      "Effects": [
+        { "EffectKey": "HappinessGainMultiplier", "Multiplier": 1.13 },
+        { "EffectKey": "ReviveCooldownMultiplier", "Multiplier": 0.80 }
+      ]
+    },
+    {
+      "Id": "AH_Livestock_StableLine",
+      "DisplayName": "Stable Line",
+      "Description": "Improves fertility and trait mutation chance.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 5,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 22,
+      "RequiresTalentIds": [
+        "AH_Livestock_StrangeSpark"
+      ],
+      "Effects": [
+        { "EffectKey": "FertilityMultiplier", "Multiplier": 1.13 },
+        { "EffectKey": "TraitMutationChanceMultiplier", "Multiplier": 1.38 }
       ]
     }
   ]
