@@ -183,7 +183,7 @@
       ]
     },
     {
-      "Id": "AH_Livestock_WarmStall",
+      "Id": "AH_Livestock_SteadyRoutine",
       "DisplayName": "Steady Routine",
       "Description": "Further slows hunger and thirst decay through consistent care.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
@@ -211,7 +211,7 @@
       "PointCost": 3,
       "MinLevel": 21,
       "RequiresTalentIds": [
-        "AH_Livestock_WarmStall",
+        "AH_Livestock_SteadyRoutine",
         "AH_Livestock_ShortRest"
       ],
       "Effects": [
