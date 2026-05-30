@@ -50,7 +50,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 - Livestock progress mainly through feeding, harvests, and breeding.
 - Critters and neutral wildlife progress from care-focused activities, with only light combat XP where appropriate.
 - Beasts level the slowest and gain most of their progress from real combat plus long-term care.
-- Talent choices are passive bonuses for health, movement, harvest utility, or restrained combat power.
+- Talent choices are passive bonuses for health, movement, harvest utility, care upkeep, happiness, breeding reliability, revive recovery, or restrained combat power.
 
 ## Traits
 - Livestock and Beasts can use separate trait configs.

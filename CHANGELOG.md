@@ -1,8 +1,31 @@
 # Changelog
 
-## Unreleased
-- Added Animal Husbandry leveling and talent configs for livestock, neutral wildlife, critters, and combat Beasts, covering all checked-in tamed companion roles with a very slow long-term progression curve.
-- Updated README/wiki documentation to describe XP levels, passive talents, and their config files as active systems.
+## 1.6.0 - Companion Progression and Talent Trees - 2026-05-30
+
+### Added
+- Added Animal Husbandry leveling configs for all 92 checked-in tamed companion roles, split across harvest livestock, non-harvest livestock, neutral wildlife, critters, and combat Beasts.
+- Added Animal Husbandry talent trees for all companion archetypes, with more talent options than available points and branching paths for conditioning, care, production, breeding, recovery, and combat specialization.
+- Added utility talents for slower hunger/thirst decay, happiness gain, breeding cooldown, fertility, trait mutation chance, appearance mutation chance, harvest cooldown, revive cooldown, and restrained combat scaling.
+- Added appearance mutation talent branches alongside trait mutation branches so players can opt into mutation-focused breeding paths without blocking the core breeding line.
+- Added separate livestock progression and talent coverage for animals with harvest functionality versus livestock that cannot be harvested.
+- Added carnivore and omnivore needs configs, with related feed-item and wiki updates for diet-specific companion care.
+- Added progression coverage and talent-budget validation scripts for release checks.
+
+### Changed
+- Tuned companion leveling around long-term but achievable goals: critters near 15 hours, neutral wildlife near 20 hours without combat, livestock near 30 hours, and Beasts near 30 hours when moderate combat use is included.
+- Added 15-minute feed XP cooldowns and raised care/breeding/harvest XP values so regular care matters without letting repeated feed clicks dominate progression.
+- Retuned talent trees so first-row talents are available at level 1 and deeper talents generally cost more or provide stronger bonuses than earlier nodes.
+- Renamed and reorganized talent categories so similar effects use consistent branch names across livestock, neutral wildlife, critters, and Beasts.
+- Split mutation talents into side branches so mutation chance remains optional instead of mandatory for non-mutation breeding bonuses.
+- Updated livestock harvest templates to use Tamework harvest alarms, allowing harvest cooldown talents to scale reset timers.
+- Updated release metadata for Alec's Tamework `2.12.x`, Hytale `0.5.x`, and manifest version `1.6.0`.
+- Updated README/wiki documentation to describe XP levels, passive talents, talent trees, traits, and progression config files as active systems.
+
+### Fixed
+- Fixed milk and other container-style harvest luck behavior so harvest bonuses can preserve the harvest cooldown instead of duplicating filled buckets.
+- Fixed livestock harvest interactions so bucket/shears requirements route through the correct item-specific harvest checks.
+- Fixed wolf combat spacing and retreat tuning so white and black wolves retain intended combat behavior after progression template changes.
+- Fixed talent IDs and names that no longer matched their effects, including the steady routine and livestock care/upkeep talents.
 
 ## 1.5.2 - Soul Lantern Icons + Beast Collars + Update 5 Compatibility - 2026-05-26
 
