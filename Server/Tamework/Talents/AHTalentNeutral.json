@@ -27,7 +27,7 @@
       "Description": "Raises maximum health.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
-      "Branch": "Survival",
+      "Branch": "Conditioning",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -42,14 +42,95 @@
       "DisplayName": "Agile",
       "Description": "Improves movement speed.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
-      "Tier": 1,
-      "Branch": "Mobility",
+      "Tier": 2,
+      "Branch": "Conditioning",
       "PointCost": 1,
-      "MinLevel": 1,
+      "MinLevel": 4,
+      "RequiresTalentIds": [
+        "AH_Neutral_Hardy"
+      ],
       "Effects": [
         {
           "EffectKey": "MoveSpeedMultiplier",
           "Multiplier": 1.025
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Steady",
+      "DisplayName": "Steady",
+      "Description": "Raises maximum health further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 3,
+      "Branch": "Conditioning",
+      "PointCost": 2,
+      "MinLevel": 10,
+      "RequiresTalentIds": [
+        "AH_Neutral_Agile"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.05
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Trailwise",
+      "DisplayName": "Trailwise",
+      "Description": "Improves movement speed further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 3,
+      "Branch": "Conditioning",
+      "PointCost": 2,
+      "MinLevel": 10,
+      "RequiresTalentIds": [
+        "AH_Neutral_Agile"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.035
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_WaryHide",
+      "DisplayName": "Wary Hide",
+      "Description": "Raises maximum health again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
+      "Tier": 4,
+      "Branch": "Conditioning",
+      "PointCost": 3,
+      "MinLevel": 18,
+      "RequiresTalentIds": [
+        "AH_Neutral_Steady",
+        "AH_Neutral_Trailwise"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MaxHealthMultiplier",
+          "Multiplier": 1.07
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Nimble",
+      "DisplayName": "Nimble",
+      "Description": "Improves movement speed again.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
+      "Tier": 4,
+      "Branch": "Conditioning",
+      "PointCost": 3,
+      "MinLevel": 18,
+      "RequiresTalentIds": [
+        "AH_Neutral_Steady",
+        "AH_Neutral_Trailwise"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "MoveSpeedMultiplier",
+          "Multiplier": 1.04
         }
       ]
     },
@@ -74,14 +155,98 @@
       "DisplayName": "Easy Keeper",
       "Description": "Slightly slows hunger and thirst decay.",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
-      "Tier": 1,
+      "Tier": 2,
       "Branch": "Care",
       "PointCost": 1,
-      "MinLevel": 1,
+      "MinLevel": 4,
+      "RequiresTalentIds": [
+        "AH_Neutral_CalmTemper"
+      ],
       "Effects": [
         {
           "EffectKey": "NeedsDecayMultiplier",
           "Multiplier": 0.98
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_Forager",
+      "DisplayName": "Forager",
+      "Description": "Slows hunger and thirst decay.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 3,
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 8,
+      "RequiresTalentIds": [
+        "AH_Neutral_LightStep"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.94
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_FieldRest",
+      "DisplayName": "Field Rest",
+      "Description": "Reduces revive cooldown.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
+      "Tier": 3,
+      "Branch": "Care",
+      "PointCost": 2,
+      "MinLevel": 10,
+      "RequiresTalentIds": [
+        "AH_Neutral_LightStep"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.9
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_QuietMetabolism",
+      "DisplayName": "Quiet Metabolism",
+      "Description": "Slows hunger and thirst decay further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Tier": 4,
+      "Branch": "Care",
+      "PointCost": 3,
+      "MinLevel": 15,
+      "RequiresTalentIds": [
+        "AH_Neutral_Forager"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "NeedsDecayMultiplier",
+          "Multiplier": 0.87
+        }
+      ]
+    },
+    {
+      "Id": "AH_Neutral_TrustedCompanion",
+      "DisplayName": "Trusted Companion",
+      "Description": "Improves happiness gain and revive recovery.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
+      "Tier": 5,
+      "Branch": "Care",
+      "PointCost": 3,
+      "MinLevel": 22,
+      "RequiresTalentIds": [
+        "AH_Neutral_QuietMetabolism",
+        "AH_Neutral_FieldRest"
+      ],
+      "Effects": [
+        {
+          "EffectKey": "HappinessGainMultiplier",
+          "Multiplier": 1.13
+        },
+        {
+          "EffectKey": "ReviveCooldownMultiplier",
+          "Multiplier": 0.78
         }
       ]
     },
@@ -102,82 +267,6 @@
       ]
     },
     {
-      "Id": "AH_Neutral_Watchful",
-      "DisplayName": "Watchful",
-      "Description": "Slightly improves outgoing damage.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
-      "Tier": 2,
-      "Branch": "Survival",
-      "PointCost": 2,
-      "MinLevel": 9,
-      "RequiresTalentIds": [
-        "AH_Neutral_Hardy"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "DamageDealtMultiplier",
-          "Multiplier": 1.04
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_Forager",
-      "DisplayName": "Forager",
-      "Description": "Slows hunger and thirst decay.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
-      "Tier": 2,
-      "Branch": "Care",
-      "PointCost": 2,
-      "MinLevel": 8,
-      "RequiresTalentIds": [
-        "AH_Neutral_CalmTemper"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "NeedsDecayMultiplier",
-          "Multiplier": 0.94
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_Trailwise",
-      "DisplayName": "Trailwise",
-      "Description": "Improves movement speed further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
-      "Tier": 2,
-      "Branch": "Mobility",
-      "PointCost": 2,
-      "MinLevel": 10,
-      "RequiresTalentIds": [
-        "AH_Neutral_Agile"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "MoveSpeedMultiplier",
-          "Multiplier": 1.035
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_FieldRest",
-      "DisplayName": "Field Rest",
-      "Description": "Reduces revive cooldown.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
-      "Tier": 2,
-      "Branch": "Care",
-      "PointCost": 2,
-      "MinLevel": 12,
-      "RequiresTalentIds": [
-        "AH_Neutral_CalmTemper"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "ReviveCooldownMultiplier",
-          "Multiplier": 0.9
-        }
-      ]
-    },
-    {
       "Id": "AH_Neutral_FertileStock",
       "DisplayName": "Fertile Stock",
       "Description": "Improves breeding fertility.",
@@ -185,7 +274,7 @@
       "Tier": 2,
       "Branch": "Breeding",
       "PointCost": 2,
-      "MinLevel": 13,
+      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Neutral_PatientPair"
       ],
@@ -197,40 +286,40 @@
       ]
     },
     {
-      "Id": "AH_Neutral_QuietMetabolism",
-      "DisplayName": "Quiet Metabolism",
-      "Description": "Slows hunger and thirst decay further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
+      "Id": "AH_Neutral_StrongFamily",
+      "DisplayName": "Strong Family",
+      "Description": "Improves breeding fertility further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "Breeding",
       "PointCost": 3,
-      "MinLevel": 14,
+      "MinLevel": 15,
       "RequiresTalentIds": [
-        "AH_Neutral_Forager"
+        "AH_Neutral_FertileStock"
       ],
       "Effects": [
         {
-          "EffectKey": "NeedsDecayMultiplier",
-          "Multiplier": 0.87
+          "EffectKey": "FertilityMultiplier",
+          "Multiplier": 1.14
         }
       ]
     },
     {
-      "Id": "AH_Neutral_Steady",
-      "DisplayName": "Steady",
-      "Description": "Raises maximum health further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
-      "Tier": 3,
-      "Branch": "Survival",
-      "PointCost": 2,
-      "MinLevel": 15,
+      "Id": "AH_Neutral_GentleRut",
+      "DisplayName": "Gentle Rut",
+      "Description": "Reduces breeding cooldown further.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
+      "Tier": 4,
+      "Branch": "Breeding",
+      "PointCost": 3,
+      "MinLevel": 22,
       "RequiresTalentIds": [
-        "AH_Neutral_Hardy"
+        "AH_Neutral_StrongFamily"
       ],
       "Effects": [
         {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.05
+          "EffectKey": "BreedCooldownMultiplier",
+          "Multiplier": 0.86
         }
       ]
     },
@@ -273,101 +362,37 @@
       ]
     },
     {
-      "Id": "AH_Neutral_Nimble",
-      "DisplayName": "Nimble",
-      "Description": "Improves movement speed again.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
-      "Tier": 4,
-      "Branch": "Mobility",
-      "PointCost": 3,
-      "MinLevel": 21,
-      "RequiresTalentIds": [
-        "AH_Neutral_Trailwise"
-      ],
+      "Id": "AH_Neutral_Watchful",
+      "DisplayName": "Watchful",
+      "Description": "Slightly improves outgoing damage.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
+      "Tier": 1,
+      "Branch": "Combat",
+      "PointCost": 2,
+      "MinLevel": 1,
       "Effects": [
         {
-          "EffectKey": "MoveSpeedMultiplier",
+          "EffectKey": "DamageDealtMultiplier",
           "Multiplier": 1.04
         }
       ]
     },
     {
-      "Id": "AH_Neutral_StrongFamily",
-      "DisplayName": "Strong Family",
-      "Description": "Improves breeding fertility further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
-      "Tier": 4,
-      "Branch": "Breeding",
-      "PointCost": 3,
-      "MinLevel": 21,
+      "Id": "AH_Neutral_GuardedInstinct",
+      "DisplayName": "Guarded Instinct",
+      "Description": "Slightly reduces incoming damage.",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Toughness.png",
+      "Tier": 2,
+      "Branch": "Combat",
+      "PointCost": 2,
+      "MinLevel": 9,
       "RequiresTalentIds": [
-        "AH_Neutral_FertileStock"
+        "AH_Neutral_Watchful"
       ],
       "Effects": [
         {
-          "EffectKey": "FertilityMultiplier",
-          "Multiplier": 1.14
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_WaryHide",
-      "DisplayName": "Wary Hide",
-      "Description": "Raises maximum health again.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
-      "Tier": 5,
-      "Branch": "Survival",
-      "PointCost": 3,
-      "MinLevel": 21,
-      "RequiresTalentIds": [
-        "AH_Neutral_Steady"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "MaxHealthMultiplier",
-          "Multiplier": 1.07
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_TrustedCompanion",
-      "DisplayName": "Trusted Companion",
-      "Description": "Improves happiness gain and revive recovery.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
-      "Tier": 5,
-      "Branch": "Care",
-      "PointCost": 3,
-      "MinLevel": 22,
-      "RequiresTalentIds": [
-        "AH_Neutral_FieldRest"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "HappinessGainMultiplier",
-          "Multiplier": 1.13
-        },
-        {
-          "EffectKey": "ReviveCooldownMultiplier",
-          "Multiplier": 0.78
-        }
-      ]
-    },
-    {
-      "Id": "AH_Neutral_GentleRut",
-      "DisplayName": "Gentle Rut",
-      "Description": "Reduces breeding cooldown further.",
-      "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
-      "Tier": 5,
-      "Branch": "Breeding",
-      "PointCost": 3,
-      "MinLevel": 23,
-      "RequiresTalentIds": [
-        "AH_Neutral_StrongFamily"
-      ],
-      "Effects": [
-        {
-          "EffectKey": "BreedCooldownMultiplier",
-          "Multiplier": 0.86
+          "EffectKey": "DamageTakenMultiplier",
+          "Multiplier": 0.97
         }
       ]
     }
