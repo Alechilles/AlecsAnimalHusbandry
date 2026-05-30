@@ -16,6 +16,7 @@
 - Updated livestock harvest templates to use Tamework harvest alarms, allowing harvest cooldown talents to scale reset timers.
 - Updated release metadata for Alec's Tamework `2.12.x`, Hytale `0.5.x`, and manifest version `1.6.0`.
 - Updated README/wiki documentation to describe XP levels, passive talents, talent trees, traits, and progression config files as active systems.
+- Updated taming reference and getting started wiki images to use Markdown image/link markup for cleaner rendering in feed tables and trough instructions.
 
 ### Fixed
 - Fixed milk and other container-style harvest luck behavior so harvest bonuses can preserve the harvest cooldown instead of duplicating filled buckets.
