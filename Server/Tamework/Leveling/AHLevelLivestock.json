@@ -17,21 +17,22 @@
   ],
   "Levels": {
     "MaxLevel": 25,
-    "BaseXp": 150,
-    "GrowthFactor": 1.16
+    "BaseXp": 125,
+    "GrowthFactor": 1.07
   },
   "XpSources": {
     "Feed": {
       "Enabled": true,
-      "FlatXp": 5
+      "FlatXp": 20,
+      "AwardCooldownSeconds": 900
     },
     "Harvest": {
       "Enabled": true,
-      "FlatXp": 12
+      "FlatXp": 35
     },
     "Breeding": {
       "Enabled": true,
-      "FlatXp": 90
+      "FlatXp": 130
     },
     "Combat": {
       "Enabled": false,
