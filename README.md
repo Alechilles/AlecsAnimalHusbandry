@@ -17,6 +17,7 @@
     <a href="https://discord.gg/E8n8RgTTdq" target="_blank" rel="noopener noreferrer"><img alt="Join Discord" src="https://img.shields.io/discord/1468261809739005996?style=for-the-badge&amp;logo=discord&amp;logoColor=white&amp;label=Join%20Discord&amp;color=rgb(88,101,242)" /></a>
     <a href="https://ko-fi.com/alechilles" target="_blank" rel="noopener noreferrer"><img alt="Support me on Ko-fi" src="https://img.shields.io/badge/ko--fi-Support%20Me-ff5f5f?logo=ko-fi&amp;style=for-the-badge" /></a>
     <a href="https://hytale.com/" target="_blank" rel="noopener noreferrer"><img alt="Creator Code Alec" src="https://img.shields.io/badge/Creator%20Code-Alec-00AEEF?style=for-the-badge" /></a>
+    <a href="https://twitter.com/intent/user?screen_name=Alechilles" target="_blank" rel="noopener noreferrer"><img alt="Follow Alec on X" src="https://img.shields.io/badge/Follow-%40Alec-White?style=for-the-badge&amp;logo=x&amp;logoColor=%23ffffff&amp;logoSize=auto&amp;label=Follow&amp;labelColor=%23555555&amp;color=%23939393" /></a>
   </p>
   <p>
     <a href="https://hytalemodding.dev/en/grants" target="_blank" rel="noopener noreferrer"><img alt="Sponsored by HytaleModding Grant Program" src="https://github.com/user-attachments/assets/a03709e3-445a-4e58-8ec5-591688490c5d" /></a>

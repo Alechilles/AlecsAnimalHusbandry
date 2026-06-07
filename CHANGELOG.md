@@ -1,9 +1,14 @@
 # Changelog
 
-## Unreleased
+## 1.6.1 - Harvest Alarm and Asset Pack Hotfix - 2026-06-07
 
 ### Added
 - Added a 256x256 in-game icon for the Animal Husbandry asset pack.
+
+### Changed
+- Updated livestock harvest templates to use Tamework harvest alarms and reset sensors, allowing harvest cooldown talents to scale reset timers without relying on base-game harvest alarms.
+- Updated release metadata for Alec's Tamework `2.13.x`, Hytale `0.5.x`, Modtale `0.5.3`, and manifest version `1.6.1`.
+- Added the asset pack icon to release packages and expanded optional CurseForge relationships for Alec's Cats and the MMO Taming Skill Pack.
 
 ## 1.6.0 - Companion Progression and Talent Trees - 2026-05-30
 
@@ -18,7 +23,7 @@
 ### Changed
 - Tuned companion leveling around long-term but achievable goals: critters near 15 hours, neutral wildlife near 20 hours without combat, livestock near 30 hours, and Beasts near 30 hours when moderate combat use is included.
 - Added 15-minute feed XP cooldowns and raised care/breeding/harvest XP values so regular care matters without letting repeated feed clicks dominate progression.
-- Updated livestock harvest templates to use Tamework harvest alarms and reset sensors, allowing harvest cooldown talents to scale reset timers without relying on base-game harvest alarms.
+- Updated livestock harvest templates to use Tamework harvest alarms, allowing harvest cooldown talents to scale reset timers.
 - Updated release metadata for Alec's Tamework `2.12.x`, Hytale `0.5.x`, and manifest version `1.6.0`.
 - Updated README/wiki documentation to describe XP levels, passive talents, talent trees, traits, and progression config files as active systems.
 - Updated taming reference and getting started wiki images to use Markdown image/link markup for cleaner rendering in feed tables and trough instructions.
