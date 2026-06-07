@@ -13,7 +13,7 @@
 ### Changed
 - Tuned companion leveling around long-term but achievable goals: critters near 15 hours, neutral wildlife near 20 hours without combat, livestock near 30 hours, and Beasts near 30 hours when moderate combat use is included.
 - Added 15-minute feed XP cooldowns and raised care/breeding/harvest XP values so regular care matters without letting repeated feed clicks dominate progression.
-- Updated livestock harvest templates to use Tamework harvest alarms, allowing harvest cooldown talents to scale reset timers.
+- Updated livestock harvest templates to use Tamework harvest alarms and reset sensors, allowing harvest cooldown talents to scale reset timers without relying on base-game harvest alarms.
 - Updated release metadata for Alec's Tamework `2.12.x`, Hytale `0.5.x`, and manifest version `1.6.0`.
 - Updated README/wiki documentation to describe XP levels, passive talents, talent trees, traits, and progression config files as active systems.
 - Updated taming reference and getting started wiki images to use Markdown image/link markup for cleaner rendering in feed tables and trough instructions.

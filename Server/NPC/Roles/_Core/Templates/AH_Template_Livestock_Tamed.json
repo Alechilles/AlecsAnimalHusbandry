@@ -819,7 +819,7 @@
       "Enabled": { "Compute": "IsHarvestable" },
       "Continue": true,
       "Sensor": {
-        "Type": "Alarm",
+        "Type": "TameworkAlarm",
         "Name": "Harvest_Ready",
         "State": "Passed",
         "Clear": true
@@ -2738,7 +2738,7 @@
                 "Type": "And",
                 "Sensors": [
                   {
-                    "Type": "Alarm",
+                    "Type": "TameworkAlarm",
                     "Name": "Harvest_Ready",
                     "State": "Unset"
                   },
