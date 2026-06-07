@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Added a 256x256 in-game icon for the Animal Husbandry asset pack.
+
 ## 1.6.0 - Companion Progression and Talent Trees - 2026-05-30
 
 ### Added
