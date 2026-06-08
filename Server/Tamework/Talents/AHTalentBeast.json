@@ -34,11 +34,11 @@
   "Talents": [
     {
       "Id": "AH_Beast_Conditioned",
-      "DisplayName": "Conditioned",
-      "Description": "Raises maximum health.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_conditioned.name",
+      "Description": "animalhusbandry.talents.ah_beast_conditioned.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -50,11 +50,11 @@
     },
     {
       "Id": "AH_Beast_Quick",
-      "DisplayName": "Quick",
-      "Description": "Improves movement speed.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_quick.name",
+      "Description": "animalhusbandry.talents.ah_beast_quick.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 2,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -69,11 +69,11 @@
     },
     {
       "Id": "AH_Beast_Veteran",
-      "DisplayName": "Veteran",
-      "Description": "Raises maximum health further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_veteran.name",
+      "Description": "animalhusbandry.talents.ah_beast_veteran.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -88,11 +88,11 @@
     },
     {
       "Id": "AH_Beast_Pounce",
-      "DisplayName": "Pounce",
-      "Description": "Improves movement speed further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_pounce.name",
+      "Description": "animalhusbandry.talents.ah_beast_pounce.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -107,11 +107,11 @@
     },
     {
       "Id": "AH_Beast_IronSinew",
-      "DisplayName": "Iron Sinew",
-      "Description": "Raises maximum health again.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_ironsinew.name",
+      "Description": "animalhusbandry.talents.ah_beast_ironsinew.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
@@ -126,11 +126,11 @@
     },
     {
       "Id": "AH_Beast_Chase",
-      "DisplayName": "Chase",
-      "Description": "Improves movement speed again.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_chase.name",
+      "Description": "animalhusbandry.talents.ah_beast_chase.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -146,11 +146,11 @@
     },
     {
       "Id": "AH_Beast_PackGuard",
-      "DisplayName": "Pack Guard",
-      "Description": "Raises maximum health one final time.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_packguard.name",
+      "Description": "animalhusbandry.talents.ah_beast_packguard.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 5,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 4,
       "MinLevel": 23,
       "RequiresTalentIds": [
@@ -166,11 +166,11 @@
     },
     {
       "Id": "AH_Beast_ControlledTemper",
-      "DisplayName": "Controlled Temper",
-      "Description": "Increases happiness gained from care.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_controlledtemper.name",
+      "Description": "animalhusbandry.talents.ah_beast_controlledtemper.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 1,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -182,11 +182,11 @@
     },
     {
       "Id": "AH_Beast_WarAppetite",
-      "DisplayName": "War Appetite",
-      "Description": "Slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_warappetite.name",
+      "Description": "animalhusbandry.talents.ah_beast_warappetite.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 2,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 6,
       "RequiresTalentIds": [
@@ -201,11 +201,11 @@
     },
     {
       "Id": "AH_Beast_FieldDressing",
-      "DisplayName": "Field Dressing",
-      "Description": "Reduces revive cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_fielddressing.name",
+      "Description": "animalhusbandry.talents.ah_beast_fielddressing.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
       "Tier": 2,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 6,
       "RequiresTalentIds": [
@@ -220,11 +220,11 @@
     },
     {
       "Id": "AH_Beast_SteadyNerves",
-      "DisplayName": "Steady Nerves",
-      "Description": "Improves happiness gained from care further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_steadynerves.name",
+      "Description": "animalhusbandry.talents.ah_beast_steadynerves.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -239,11 +239,11 @@
     },
     {
       "Id": "AH_Beast_HardMarch",
-      "DisplayName": "Hard March",
-      "Description": "Slows hunger and thirst decay further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_hardmarch.name",
+      "Description": "animalhusbandry.talents.ah_beast_hardmarch.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 4,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 17,
       "RequiresTalentIds": [
@@ -258,11 +258,11 @@
     },
     {
       "Id": "AH_Beast_VeteranRecovery",
-      "DisplayName": "Veteran Recovery",
-      "Description": "Reduces revive cooldown further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_veteranrecovery.name",
+      "Description": "animalhusbandry.talents.ah_beast_veteranrecovery.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
       "Tier": 4,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 17,
       "RequiresTalentIds": [
@@ -277,11 +277,11 @@
     },
     {
       "Id": "AH_Beast_BondedReturn",
-      "DisplayName": "Bonded Return",
-      "Description": "Further reduces revive cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_bondedreturn.name",
+      "Description": "animalhusbandry.talents.ah_beast_bondedreturn.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 5,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 4,
       "MinLevel": 24,
       "RequiresTalentIds": [
@@ -297,11 +297,11 @@
     },
     {
       "Id": "AH_Beast_DenPairing",
-      "DisplayName": "Den Pairing",
-      "Description": "Reduces breeding cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_denpairing.name",
+      "Description": "animalhusbandry.talents.ah_beast_denpairing.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 1,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 1,
       "Effects": [
@@ -313,11 +313,11 @@
     },
     {
       "Id": "AH_Beast_StrongBlood",
-      "DisplayName": "Strong Blood",
-      "Description": "Improves breeding fertility.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_strongblood.name",
+      "Description": "animalhusbandry.talents.ah_beast_strongblood.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 2,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 9,
       "RequiresTalentIds": [
@@ -332,11 +332,11 @@
     },
     {
       "Id": "AH_Beast_PackLine",
-      "DisplayName": "Pack Line",
-      "Description": "Improves fertility and breeding recovery.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_packline.name",
+      "Description": "animalhusbandry.talents.ah_beast_packline.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -355,11 +355,11 @@
     },
     {
       "Id": "AH_Beast_MutagenicLine",
-      "DisplayName": "Mutagenic Line",
-      "Description": "Raises trait mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_mutagenicline.name",
+      "Description": "animalhusbandry.talents.ah_beast_mutagenicline.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 19,
       "RequiresTalentIds": [
@@ -374,11 +374,11 @@
     },
     {
       "Id": "AH_Beast_WildMark",
-      "DisplayName": "Wild Mark",
-      "Description": "Raises appearance mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_wildmark.name",
+      "Description": "animalhusbandry.talents.ah_beast_wildmark.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 19,
       "RequiresTalentIds": [
@@ -393,11 +393,11 @@
     },
     {
       "Id": "AH_Beast_Trained",
-      "DisplayName": "Trained",
-      "Description": "Improves outgoing damage.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_trained.name",
+      "Description": "animalhusbandry.talents.ah_beast_trained.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 1,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
       "MinLevel": 1,
       "Effects": [
@@ -409,11 +409,11 @@
     },
     {
       "Id": "AH_Beast_Apex",
-      "DisplayName": "Apex",
-      "Description": "Improves outgoing damage further.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_apex.name",
+      "Description": "animalhusbandry.talents.ah_beast_apex.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 2,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 3,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -428,11 +428,11 @@
     },
     {
       "Id": "AH_Beast_GuardedStance",
-      "DisplayName": "Guarded Stance",
-      "Description": "Reduces incoming damage.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_guardedstance.name",
+      "Description": "animalhusbandry.talents.ah_beast_guardedstance.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Toughness.png",
       "Tier": 2,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -447,11 +447,11 @@
     },
     {
       "Id": "AH_Beast_FocusedStrike",
-      "DisplayName": "Focused Strike",
-      "Description": "Improves outgoing damage again.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_focusedstrike.name",
+      "Description": "animalhusbandry.talents.ah_beast_focusedstrike.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 3,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 4,
       "MinLevel": 16,
       "RequiresTalentIds": [
@@ -467,11 +467,11 @@
     },
     {
       "Id": "AH_Beast_ThickHide",
-      "DisplayName": "Thick Hide",
-      "Description": "Further reduces incoming damage.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_thickhide.name",
+      "Description": "animalhusbandry.talents.ah_beast_thickhide.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Toughness.png",
       "Tier": 4,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -486,11 +486,11 @@
     },
     {
       "Id": "AH_Beast_GuardBreak",
-      "DisplayName": "Guard Break",
-      "Description": "Slightly improves outgoing damage.",
+      "DisplayName": "animalhusbandry.talents.ah_beast_guardbreak.name",
+      "Description": "animalhusbandry.talents.ah_beast_guardbreak.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 5,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 4,
       "MinLevel": 25,
       "RequiresTalentIds": [

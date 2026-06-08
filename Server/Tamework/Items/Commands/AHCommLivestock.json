@@ -120,10 +120,10 @@
   "CommandList": [
     {
       "Id": "Follow",
-      "DisplayName": "Follow",
+      "DisplayName": "animalhusbandry.commands.follow.name",
       "Default": true,
       "Feedback": {
-        "HudMessage": "Follow: {count}",
+        "HudMessage": "animalhusbandry.commands.follow.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_03",
         "ParticleSystem": "Follow"
       },
@@ -145,9 +145,9 @@
     },
     {
       "Id": "Hold",
-      "DisplayName": "Hold",
+      "DisplayName": "animalhusbandry.commands.hold.name",
       "Feedback": {
-        "HudMessage": "Hold: {count}",
+        "HudMessage": "animalhusbandry.commands.hold.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_06",
         "ParticleSystem": "Hold"
       },
@@ -164,9 +164,9 @@
     },
     {
       "Id": "Recall",
-      "DisplayName": "Recall",
+      "DisplayName": "animalhusbandry.commands.recall.name",
       "Feedback": {
-        "HudMessage": "Recall: {count}",
+        "HudMessage": "animalhusbandry.commands.recall.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_08",
         "ParticleSystem": "Poof_Small"
       },
@@ -183,9 +183,9 @@
     },
     {
       "Id": "MoveToPing",
-      "DisplayName": "Move To Ping",
+      "DisplayName": "animalhusbandry.commands.moveToPing.name",
       "Feedback": {
-        "HudMessage": "Move To Ping: {count}",
+        "HudMessage": "animalhusbandry.commands.moveToPing.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_10",
         "ParticleSystem": "Alerted"
       },
@@ -198,10 +198,10 @@
     },
     {
       "Id": "SetHome",
-      "DisplayName": "Set Home",
+      "DisplayName": "animalhusbandry.commands.setHome.name",
       "Feedback": {
-        "ChatMessage": "Home set for this command flute.",
-        "HudMessage": "Home Set",
+        "ChatMessage": "animalhusbandry.commands.setHome.chat",
+        "HudMessage": "animalhusbandry.commands.setHome.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_12",
         "ParticleSystem": "Poof_Small"
       },
@@ -215,9 +215,9 @@
     },
     {
       "Id": "ReturnHome",
-      "DisplayName": "Return Home",
+      "DisplayName": "animalhusbandry.commands.returnHome.name",
       "Feedback": {
-        "HudMessage": "Return Home: {count}",
+        "HudMessage": "animalhusbandry.commands.returnHome.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_14",
         "ParticleSystem": "Follow"
       },
@@ -231,9 +231,9 @@
     },
     {
       "Id": "Idle",
-      "DisplayName": "Idle",
+      "DisplayName": "animalhusbandry.commands.idle.name",
       "Feedback": {
-        "HudMessage": "Idle: {count}",
+        "HudMessage": "animalhusbandry.commands.idle.hud",
         "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_16",
         "ParticleSystem": "Idle"
       },
@@ -250,4 +250,3 @@
     }
   ]
 }
-

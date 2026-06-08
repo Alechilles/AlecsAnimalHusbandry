@@ -30,11 +30,11 @@
   "Talents": [
     {
       "Id": "AH_Livestock_Sturdy",
-      "DisplayName": "Sturdy",
-      "Description": "Raises maximum health.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_sturdy.name",
+      "Description": "animalhusbandry.talents.ah_livestock_sturdy.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -46,11 +46,11 @@
     },
     {
       "Id": "AH_Livestock_Surefooted",
-      "DisplayName": "Surefooted",
-      "Description": "Slightly improves movement speed.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_surefooted.name",
+      "Description": "animalhusbandry.talents.ah_livestock_surefooted.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 2,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -65,11 +65,11 @@
     },
     {
       "Id": "AH_Livestock_SteadyHeart",
-      "DisplayName": "Steady Heart",
-      "Description": "Raises maximum health further.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_steadyheart.name",
+      "Description": "animalhusbandry.talents.ah_livestock_steadyheart.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -84,11 +84,11 @@
     },
     {
       "Id": "AH_Livestock_CarefulGait",
-      "DisplayName": "Careful Gait",
-      "Description": "Improves movement speed further.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_carefulgait.name",
+      "Description": "animalhusbandry.talents.ah_livestock_carefulgait.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -103,11 +103,11 @@
     },
     {
       "Id": "AH_Livestock_Rooted",
-      "DisplayName": "Rooted",
-      "Description": "Raises maximum health again.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_rooted.name",
+      "Description": "animalhusbandry.talents.ah_livestock_rooted.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
@@ -123,11 +123,11 @@
     },
     {
       "Id": "AH_Livestock_GentleDisposition",
-      "DisplayName": "Gentle Disposition",
-      "Description": "Increases happiness gained from care.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_gentledisposition.name",
+      "Description": "animalhusbandry.talents.ah_livestock_gentledisposition.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 1,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -139,11 +139,11 @@
     },
     {
       "Id": "AH_Livestock_LightAppetite",
-      "DisplayName": "Light Appetite",
-      "Description": "Slightly slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_lightappetite.name",
+      "Description": "animalhusbandry.talents.ah_livestock_lightappetite.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 2,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -158,11 +158,11 @@
     },
     {
       "Id": "AH_Livestock_EfficientKeeper",
-      "DisplayName": "Efficient Keeper",
-      "Description": "Slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_efficientkeeper.name",
+      "Description": "animalhusbandry.talents.ah_livestock_efficientkeeper.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 9,
       "RequiresTalentIds": [
@@ -177,11 +177,11 @@
     },
     {
       "Id": "AH_Livestock_ShortRest",
-      "DisplayName": "Short Rest",
-      "Description": "Reduces revive cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_shortrest.name",
+      "Description": "animalhusbandry.talents.ah_livestock_shortrest.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -196,11 +196,11 @@
     },
     {
       "Id": "AH_Livestock_SteadyRoutine",
-      "DisplayName": "Steady Routine",
-      "Description": "Further slows hunger and thirst decay through consistent care.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_steadyroutine.name",
+      "Description": "animalhusbandry.talents.ah_livestock_steadyroutine.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 4,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
@@ -215,11 +215,11 @@
     },
     {
       "Id": "AH_Livestock_BarnFavorite",
-      "DisplayName": "Barn Favorite",
-      "Description": "Improves happiness gain and revive recovery.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_barnfavorite.name",
+      "Description": "animalhusbandry.talents.ah_livestock_barnfavorite.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 5,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 21,
       "RequiresTalentIds": [
@@ -239,11 +239,11 @@
     },
     {
       "Id": "AH_Livestock_PatientCourtship",
-      "DisplayName": "Patient Courtship",
-      "Description": "Reduces breeding cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_patientcourtship.name",
+      "Description": "animalhusbandry.talents.ah_livestock_patientcourtship.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 1,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 1,
       "Effects": [
@@ -255,11 +255,11 @@
     },
     {
       "Id": "AH_Livestock_StrongLineage",
-      "DisplayName": "Strong Lineage",
-      "Description": "Improves breeding fertility.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_stronglineage.name",
+      "Description": "animalhusbandry.talents.ah_livestock_stronglineage.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 2,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -274,11 +274,11 @@
     },
     {
       "Id": "AH_Livestock_StableLine",
-      "DisplayName": "Stable Line",
-      "Description": "Improves breeding fertility further.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_stableline.name",
+      "Description": "animalhusbandry.talents.ah_livestock_stableline.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 14,
       "RequiresTalentIds": [
@@ -293,11 +293,11 @@
     },
     {
       "Id": "AH_Livestock_StrangeSpark",
-      "DisplayName": "Strange Spark",
-      "Description": "Raises trait mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_strangespark.name",
+      "Description": "animalhusbandry.talents.ah_livestock_strangespark.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 17,
       "RequiresTalentIds": [
@@ -312,11 +312,11 @@
     },
     {
       "Id": "AH_Livestock_PatternSpark",
-      "DisplayName": "Pattern Spark",
-      "Description": "Raises appearance mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_livestock_patternspark.name",
+      "Description": "animalhusbandry.talents.ah_livestock_patternspark.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 17,
       "RequiresTalentIds": [

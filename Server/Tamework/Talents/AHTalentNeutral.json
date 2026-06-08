@@ -23,11 +23,11 @@
   "Talents": [
     {
       "Id": "AH_Neutral_Hardy",
-      "DisplayName": "Hardy",
-      "Description": "Raises maximum health.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_hardy.name",
+      "Description": "animalhusbandry.talents.ah_neutral_hardy.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -39,11 +39,11 @@
     },
     {
       "Id": "AH_Neutral_Agile",
-      "DisplayName": "Agile",
-      "Description": "Improves movement speed.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_agile.name",
+      "Description": "animalhusbandry.talents.ah_neutral_agile.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 2,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -58,11 +58,11 @@
     },
     {
       "Id": "AH_Neutral_Steady",
-      "DisplayName": "Steady",
-      "Description": "Raises maximum health further.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_steady.name",
+      "Description": "animalhusbandry.talents.ah_neutral_steady.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -77,11 +77,11 @@
     },
     {
       "Id": "AH_Neutral_Trailwise",
-      "DisplayName": "Trailwise",
-      "Description": "Improves movement speed further.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_trailwise.name",
+      "Description": "animalhusbandry.talents.ah_neutral_trailwise.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -96,11 +96,11 @@
     },
     {
       "Id": "AH_Neutral_WaryHide",
-      "DisplayName": "Wary Hide",
-      "Description": "Raises maximum health again.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_waryhide.name",
+      "Description": "animalhusbandry.talents.ah_neutral_waryhide.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -116,11 +116,11 @@
     },
     {
       "Id": "AH_Neutral_Nimble",
-      "DisplayName": "Nimble",
-      "Description": "Improves movement speed again.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_nimble.name",
+      "Description": "animalhusbandry.talents.ah_neutral_nimble.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -136,11 +136,11 @@
     },
     {
       "Id": "AH_Neutral_CalmTemper",
-      "DisplayName": "Calm Temper",
-      "Description": "Increases happiness gained from care.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_calmtemper.name",
+      "Description": "animalhusbandry.talents.ah_neutral_calmtemper.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 1,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -152,11 +152,11 @@
     },
     {
       "Id": "AH_Neutral_LightStep",
-      "DisplayName": "Easy Keeper",
-      "Description": "Slightly slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_lightstep.name",
+      "Description": "animalhusbandry.talents.ah_neutral_lightstep.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 2,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -171,11 +171,11 @@
     },
     {
       "Id": "AH_Neutral_Forager",
-      "DisplayName": "Forager",
-      "Description": "Slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_forager.name",
+      "Description": "animalhusbandry.talents.ah_neutral_forager.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -190,11 +190,11 @@
     },
     {
       "Id": "AH_Neutral_FieldRest",
-      "DisplayName": "Field Rest",
-      "Description": "Reduces revive cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_fieldrest.name",
+      "Description": "animalhusbandry.talents.ah_neutral_fieldrest.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Resilience.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -209,11 +209,11 @@
     },
     {
       "Id": "AH_Neutral_QuietMetabolism",
-      "DisplayName": "Quiet Metabolism",
-      "Description": "Slows hunger and thirst decay further.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_quietmetabolism.name",
+      "Description": "animalhusbandry.talents.ah_neutral_quietmetabolism.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Care.png",
       "Tier": 4,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 15,
       "RequiresTalentIds": [
@@ -228,11 +228,11 @@
     },
     {
       "Id": "AH_Neutral_TrustedCompanion",
-      "DisplayName": "Trusted Companion",
-      "Description": "Improves happiness gain and revive recovery.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_trustedcompanion.name",
+      "Description": "animalhusbandry.talents.ah_neutral_trustedcompanion.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bond.png",
       "Tier": 5,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 22,
       "RequiresTalentIds": [
@@ -252,11 +252,11 @@
     },
     {
       "Id": "AH_Neutral_PatientPair",
-      "DisplayName": "Patient Pair",
-      "Description": "Reduces breeding cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_patientpair.name",
+      "Description": "animalhusbandry.talents.ah_neutral_patientpair.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 1,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -268,11 +268,11 @@
     },
     {
       "Id": "AH_Neutral_FertileStock",
-      "DisplayName": "Fertile Stock",
-      "Description": "Improves breeding fertility.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_fertilestock.name",
+      "Description": "animalhusbandry.talents.ah_neutral_fertilestock.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 2,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -287,11 +287,11 @@
     },
     {
       "Id": "AH_Neutral_StrongFamily",
-      "DisplayName": "Strong Family",
-      "Description": "Improves breeding fertility further.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_strongfamily.name",
+      "Description": "animalhusbandry.talents.ah_neutral_strongfamily.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 15,
       "RequiresTalentIds": [
@@ -306,11 +306,11 @@
     },
     {
       "Id": "AH_Neutral_GentleRut",
-      "DisplayName": "Gentle Rut",
-      "Description": "Reduces breeding cooldown further.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_gentlerut.name",
+      "Description": "animalhusbandry.talents.ah_neutral_gentlerut.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 4,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 22,
       "RequiresTalentIds": [
@@ -325,11 +325,11 @@
     },
     {
       "Id": "AH_Neutral_WildVariation",
-      "DisplayName": "Wild Variation",
-      "Description": "Raises trait mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_wildvariation.name",
+      "Description": "animalhusbandry.talents.ah_neutral_wildvariation.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -344,11 +344,11 @@
     },
     {
       "Id": "AH_Neutral_UnusualPattern",
-      "DisplayName": "Unusual Pattern",
-      "Description": "Raises appearance mutation chance during breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_unusualpattern.name",
+      "Description": "animalhusbandry.talents.ah_neutral_unusualpattern.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 18,
       "RequiresTalentIds": [
@@ -363,11 +363,11 @@
     },
     {
       "Id": "AH_Neutral_Watchful",
-      "DisplayName": "Watchful",
-      "Description": "Slightly improves outgoing damage.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_watchful.name",
+      "Description": "animalhusbandry.talents.ah_neutral_watchful.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "Tier": 1,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
       "MinLevel": 1,
       "Effects": [
@@ -379,11 +379,11 @@
     },
     {
       "Id": "AH_Neutral_GuardedInstinct",
-      "DisplayName": "Guarded Instinct",
-      "Description": "Slightly reduces incoming damage.",
+      "DisplayName": "animalhusbandry.talents.ah_neutral_guardedinstinct.name",
+      "Description": "animalhusbandry.talents.ah_neutral_guardedinstinct.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Toughness.png",
       "Tier": 2,
-      "Branch": "Combat",
+      "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
       "MinLevel": 9,
       "RequiresTalentIds": [

@@ -17,11 +17,11 @@
   "Talents": [
     {
       "Id": "AH_Critter_TinyVitality",
-      "DisplayName": "Tiny Vitality",
-      "Description": "Raises maximum health.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_tinyvitality.name",
+      "Description": "animalhusbandry.talents.ah_critter_tinyvitality.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 1,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -33,11 +33,11 @@
     },
     {
       "Id": "AH_Critter_Spry",
-      "DisplayName": "Spry",
-      "Description": "Slightly improves movement speed.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_spry.name",
+      "Description": "animalhusbandry.talents.ah_critter_spry.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 2,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
       "MinLevel": 4,
       "RequiresTalentIds": [
@@ -52,11 +52,11 @@
     },
     {
       "Id": "AH_Critter_PocketResilience",
-      "DisplayName": "Pocket Resilience",
-      "Description": "Raises maximum health further.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_pocketresilience.name",
+      "Description": "animalhusbandry.talents.ah_critter_pocketresilience.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -71,11 +71,11 @@
     },
     {
       "Id": "AH_Critter_QuickFeet",
-      "DisplayName": "Quick Feet",
-      "Description": "Improves movement speed further.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_quickfeet.name",
+      "Description": "animalhusbandry.talents.ah_critter_quickfeet.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 3,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -90,11 +90,11 @@
     },
     {
       "Id": "AH_Critter_SmallShortcut",
-      "DisplayName": "Small Shortcut",
-      "Description": "Adds a final small movement boost.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_smallshortcut.name",
+      "Description": "animalhusbandry.talents.ah_critter_smallshortcut.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "Tier": 4,
-      "Branch": "Conditioning",
+      "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
       "MinLevel": 12,
       "RequiresTalentIds": [
@@ -110,11 +110,11 @@
     },
     {
       "Id": "AH_Critter_BrightEyes",
-      "DisplayName": "Bright Eyes",
-      "Description": "Improves happiness gains.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_brighteyes.name",
+      "Description": "animalhusbandry.talents.ah_critter_brighteyes.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "Tier": 1,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
       "MinLevel": 1,
       "Effects": [
@@ -126,11 +126,11 @@
     },
     {
       "Id": "AH_Critter_SoftNeeds",
-      "DisplayName": "Soft Needs",
-      "Description": "Slows hunger and thirst decay.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_softneeds.name",
+      "Description": "animalhusbandry.talents.ah_critter_softneeds.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "Tier": 2,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 6,
       "RequiresTalentIds": [
@@ -145,11 +145,11 @@
     },
     {
       "Id": "AH_Critter_CozyDen",
-      "DisplayName": "Cozy Den",
-      "Description": "Reduces revive cooldown.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_cozyden.name",
+      "Description": "animalhusbandry.talents.ah_critter_cozyden.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
       "MinLevel": 10,
       "RequiresTalentIds": [
@@ -164,11 +164,11 @@
     },
     {
       "Id": "AH_Critter_QuietKeeper",
-      "DisplayName": "Quiet Keeper",
-      "Description": "Slows hunger and thirst decay further.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_quietkeeper.name",
+      "Description": "animalhusbandry.talents.ah_critter_quietkeeper.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "Tier": 3,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 12,
       "RequiresTalentIds": [
@@ -183,11 +183,11 @@
     },
     {
       "Id": "AH_Critter_CaretakerBond",
-      "DisplayName": "Caretaker Bond",
-      "Description": "Improves happiness gains further.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_caretakerbond.name",
+      "Description": "animalhusbandry.talents.ah_critter_caretakerbond.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "Tier": 4,
-      "Branch": "Care",
+      "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
       "MinLevel": 15,
       "RequiresTalentIds": [
@@ -203,11 +203,11 @@
     },
     {
       "Id": "AH_Critter_GentlePairing",
-      "DisplayName": "Gentle Pairing",
-      "Description": "Shortens breeding cooldowns.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_gentlepairing.name",
+      "Description": "animalhusbandry.talents.ah_critter_gentlepairing.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 1,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 1,
       "Effects": [
@@ -219,11 +219,11 @@
     },
     {
       "Id": "AH_Critter_TinyNest",
-      "DisplayName": "Tiny Nest",
-      "Description": "Improves fertility.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_tinynest.name",
+      "Description": "animalhusbandry.talents.ah_critter_tinynest.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 2,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
       "MinLevel": 8,
       "RequiresTalentIds": [
@@ -238,11 +238,11 @@
     },
     {
       "Id": "AH_Critter_SmallFamily",
-      "DisplayName": "Small Family",
-      "Description": "Improves fertility further.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_smallfamily.name",
+      "Description": "animalhusbandry.talents.ah_critter_smallfamily.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 14,
       "RequiresTalentIds": [
@@ -257,11 +257,11 @@
     },
     {
       "Id": "AH_Critter_CuriousLineage",
-      "DisplayName": "Curious Lineage",
-      "Description": "Improves trait mutation chance while breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_curiouslineage.name",
+      "Description": "animalhusbandry.talents.ah_critter_curiouslineage.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
@@ -276,11 +276,11 @@
     },
     {
       "Id": "AH_Critter_OddPattern",
-      "DisplayName": "Odd Pattern",
-      "Description": "Improves appearance mutation chance while breeding.",
+      "DisplayName": "animalhusbandry.talents.ah_critter_oddpattern.name",
+      "Description": "animalhusbandry.talents.ah_critter_oddpattern.description",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Mutation.png",
       "Tier": 3,
-      "Branch": "Breeding",
+      "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
       "MinLevel": 16,
       "RequiresTalentIds": [
