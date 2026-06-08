@@ -102,6 +102,12 @@ if ($sourceVersion -ne $normalizedVersion) {
 Assert-ChangelogHasVersion -ChangelogPath "CHANGELOG.md" -NormalizedVersion $normalizedVersion
 Assert-PackageInputs -Config $config
 
+$localizationCoverageScript = Join-Path $PSScriptRoot "..\tools\check-ah-localization-coverage.ps1"
+if (-not (Test-Path -LiteralPath $localizationCoverageScript)) {
+    throw "Localization coverage script '$localizationCoverageScript' was not found."
+}
+& $localizationCoverageScript -Root (Resolve-Path ".").Path
+
 if ($config.requiresTameworkDependency) {
     if ($config.versionSource -ne "manifest") {
         throw "requiresTameworkDependency is only supported for manifest versionSource."
