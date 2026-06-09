@@ -12,6 +12,9 @@
 - Updated release metadata for Alec's Tamework `2.13.x`, Hytale `0.5.x`, Modtale `0.5.3`, and manifest version `1.6.1`.
 - Added the asset pack icon to release packages and expanded optional CurseForge relationships for Alec's Cats and the MMO Taming Skill Pack.
 
+### Fixed
+- Fixed Windows-built release zips so packaged asset paths use game-compatible forward slashes, preventing zipped installs from hiding Animal Husbandry items such as the command flutes.
+
 ## 1.6.0 - Companion Progression and Talent Trees - 2026-05-30
 
 ### Added

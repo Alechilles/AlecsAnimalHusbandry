@@ -24,6 +24,57 @@ function Get-ArtifactName {
     return $Config.artifactNameTemplate.Replace("{version}", $NormalizedVersion)
 }
 
+function Add-ZipEntries {
+    param(
+        [string]$SourceRoot,
+        [string]$DestinationPath
+    )
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+    $resolvedSourceRoot = (Resolve-Path -Path $SourceRoot).Path
+    $resolvedDestination = [IO.Path]::GetFullPath($DestinationPath)
+    $destinationDirectory = Split-Path -Path $resolvedDestination -Parent
+    if (-not [string]::IsNullOrWhiteSpace($destinationDirectory)) {
+        New-Item -ItemType Directory -Path $destinationDirectory -Force | Out-Null
+    }
+
+    $archive = [IO.Compression.ZipFile]::Open($resolvedDestination, [IO.Compression.ZipArchiveMode]::Create)
+    try {
+        Get-ChildItem -Path $resolvedSourceRoot -Recurse -File |
+            Sort-Object FullName |
+            ForEach-Object {
+                $relativePath = [IO.Path]::GetRelativePath($resolvedSourceRoot, $_.FullName)
+                $entryName = $relativePath -replace "\\", "/"
+                [IO.Compression.ZipFileExtensions]::CreateEntryFromFile(
+                    $archive,
+                    $_.FullName,
+                    $entryName,
+                    [IO.Compression.CompressionLevel]::Optimal
+                ) | Out-Null
+            }
+    } finally {
+        $archive.Dispose()
+    }
+}
+
+function Assert-ZipEntryNames {
+    param([string]$Path)
+
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+    $archive = [IO.Compression.ZipFile]::OpenRead((Resolve-Path -Path $Path).Path)
+    try {
+        $badEntries = @($archive.Entries | Where-Object { $_.FullName.Contains("\") } | Select-Object -First 20)
+        if ($badEntries.Count -gt 0) {
+            $names = $badEntries | ForEach-Object { $_.FullName }
+            throw "Zip artifact contains backslash entry names: $($names -join ', ')"
+        }
+    } finally {
+        $archive.Dispose()
+    }
+}
+
 if (-not (Test-Path -Path $ConfigPath)) {
     throw "Release config '$ConfigPath' was not found."
 }
@@ -88,8 +139,8 @@ switch ($config.packaging) {
             Remove-Item -Path $artifactPath -Force
         }
 
-        $zipSource = Join-Path $stagingDir "*"
-        Compress-Archive -Path $zipSource -DestinationPath $artifactPath -CompressionLevel Optimal
+        Add-ZipEntries -SourceRoot $stagingDir -DestinationPath $artifactPath
+        Assert-ZipEntryNames -Path $artifactPath
     }
     default {
         throw "Unsupported packaging '$($config.packaging)' in $ConfigPath."
