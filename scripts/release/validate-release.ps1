@@ -118,6 +118,17 @@ if ($config.requiresTameworkDependency) {
     if ($dependencies -notcontains "Alechilles:Alec's Tamework!") {
         throw "manifest.json is missing dependency 'Alechilles:Alec's Tamework!'."
     }
+
+    if ($config.PSObject.Properties.Name -contains "expectedTameworkDependency") {
+        $expectedTameworkDependency = [string]$config.expectedTameworkDependency
+        $actualTameworkDependency = [string]$manifest.Dependencies."Alechilles:Alec's Tamework!"
+        if ([string]::IsNullOrWhiteSpace($actualTameworkDependency)) {
+            throw "manifest.json has an empty dependency range for 'Alechilles:Alec's Tamework!'."
+        }
+        if ($actualTameworkDependency.Trim() -ne $expectedTameworkDependency.Trim()) {
+            throw "manifest.json Tamework dependency '$actualTameworkDependency' does not match expected '$expectedTameworkDependency'."
+        }
+    }
 }
 
 Write-Host "Release validation passed for $($config.modName) $normalizedVersion"
