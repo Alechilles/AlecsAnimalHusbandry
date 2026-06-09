@@ -1,20 +1,27 @@
 # Changelog
 
+## 1.6.2 - Localization and Packaging Hotfix - 2026-06-09
+
+### Added
+- Added bundled French (France), French (Canada), and Brazilian Portuguese translations for Animal Husbandry items, Tamework config text, talents, traits, commands, interactions, and happiness labels.
+
+### Changed
+- Updated Animal Husbandry Tamework configs to use `server.lang` keys for player-facing talent, trait, command, interaction, and happiness text.
+- Updated release metadata for Alec's Tamework `2.14.x`, Hytale `0.5.x`, Modtale `0.5.3`, and manifest version `1.6.2`.
+
+### Fixed
+- Fixed Windows-built release zips so packaged asset paths use game-compatible forward slashes, preventing zipped installs from hiding Animal Husbandry items such as the command flutes.
+- Fixed the packaged Tamework dependency range so Animal Husbandry declares compatibility with the Tamework 2.14.x server build used by the latest package.
+
 ## 1.6.1 - Harvest Alarm and Asset Pack Hotfix - 2026-06-07
 
 ### Added
 - Added a 256x256 in-game icon for the Animal Husbandry asset pack.
-- Added bundled French (France), French (Canada), and Brazilian Portuguese translations for Animal Husbandry items, Tamework config text, talents, traits, commands, interactions, and happiness labels.
 
 ### Changed
 - Updated livestock harvest templates to use Tamework harvest alarms and reset sensors, allowing harvest cooldown talents to scale reset timers without relying on base-game harvest alarms.
-- Updated Animal Husbandry Tamework configs to use `server.lang` keys for player-facing talent, trait, command, interaction, and happiness text.
-- Updated release metadata for Alec's Tamework `2.14.x`, Hytale `0.5.x`, Modtale `0.5.3`, and manifest version `1.6.1`.
+- Updated release metadata for Alec's Tamework `2.13.x`, Hytale `0.5.x`, Modtale `0.5.3`, and manifest version `1.6.1`.
 - Added the asset pack icon to release packages and expanded optional CurseForge relationships for Alec's Cats and the MMO Taming Skill Pack.
-
-### Fixed
-- Fixed Windows-built release zips so packaged asset paths use game-compatible forward slashes, preventing zipped installs from hiding Animal Husbandry items such as the command flutes.
-- Fixed the packaged Tamework dependency range so Animal Husbandry v1.6.1 declares compatibility with the Tamework 2.14.x server build used by the latest test package.
 
 ## 1.6.0 - Companion Progression and Talent Trees - 2026-05-30
 
