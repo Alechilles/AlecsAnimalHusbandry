@@ -1,11 +1,3 @@
-## Try it on the Animal Husbandry Demo Server! (Alpha)
-
-### Join Server IP: 135.148.172.198:22938
-
-### No download required!
-<p>You will automatically be placed in a private demo instance where you can play a brief tutorial to learn the basics of Alec's Animal Husbandry and/or freely experiment with it. The demo instancing and tutorial system is an alpha project, so please expect to run into bugs!</p>
-
-
 <div style="padding: 20px;">
   <p>
     <a href="https://www.curseforge.com/hytale/mods/alecs-tamework" target="_blank" rel="noopener noreferrer"><img alt="Tamework downloads" src="https://img.shields.io/curseforge/dt/1447962?label=Tamework&amp;style=for-the-badge&amp;logo=curseforge&amp;color=rgb(241%2C100%2C54)" /></a>
@@ -24,7 +16,7 @@
   </p>
 
   <p style="font-size: 1.15em;"><strong>Turn all of Hytale's vanilla animals into interactive livestock and long-term companions, worth caring for.</strong></p>
-  <p>Animal Husbandry gives every vanilla animal, from mice to dinosaurs, a deeper gameplay built around taming, ownership, needs, happiness, traits, growth, commands, and progression.</p>
+  <p>Animal Husbandry gives every vanilla animal, from mice to dinosaurs, deeper gameplay built around taming, ownership, needs, happiness, traits, growth, commands, and progression.</p>
 
   <p>
     <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/" target="_blank" rel="noopener noreferrer"><strong>Open the Wiki</strong></a>
@@ -36,6 +28,18 @@
     <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/items-index" target="_blank" rel="noopener noreferrer">Items</a>
   </p>
 </div>
+
+--------------
+<H2>Required:</H2>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-coops">Alec's Coops!</a></li>
+<H2>Recommended:</H2>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/cellys-wildlife-skins">Celly's Wildlife Skins</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/mmo-skill-tree-taming-skill-pack-alecs-tamework">Taming Addon for MMO Skills</a></li>
+
+------------
 
 <H2>Try it on the Animal Husbandry Demo Server! (Alpha)</h2>
 <H3>Join server IP: 135.148.172.198:22938</H3>
@@ -290,17 +294,9 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 
 <br />
 
-<p>
-  <img src="https://media.forgecdn.net/attachments/description/1480275/description_80feb236-56a4-4ace-80df-d59480b5adc4.png" alt="Planned Next" width="849" />
-</p>
-<br />
-
-<ul>
-  <li>Genders.</li>
-  <li>Optional death from old age.</li>
-  <li>Optional inbreeding penalties.</li>
-  <li>Optional cleanliness system.</li>
-  <li>Optional shelter system.</li>
-</ul>
+<H2>Telemetry</H2>
+<a><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework</a>, and thus Alec's Animal Husbandry utilizes <a href="https://www.curseforge.com/hytale/mods/alecs-telemetry>"> Alec's Telemetry</a> to report crash, error, performance, and usage telemetry data to the developer.</p>
+<p>This data does <strong>not</strong> contain any personally identifiable information, and is exclusively used to diagnose issues in the mod to provide a better user experience.</p>
+<p>You may disable this feature at any time in the `/tw settings` menu in the Telemetry section.</p>
 
 <br />
