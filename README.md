@@ -31,14 +31,17 @@
 
 --------------
 <H2>Required:</H2>
+<ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-coops">Alec's Coops!</a></li>
+</ul>
 <H2>Recommended:</H2>
+<ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-wildlife-skins">Celly's Wildlife Skins</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/mmo-skill-tree-taming-skill-pack-alecs-tamework">Taming Addon for MMO Skills</a></li>
-
+</ul>
 ------------
 
 <H2>Try it on the Animal Husbandry Demo Server! (Alpha)</h2>
@@ -54,7 +57,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_27c99a32-19e5-4b70-8b32-ae2610cc4686.png" alt="Core Features" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <ul>
   <li>
@@ -113,7 +116,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_f837e0c9-36c9-4f68-bb57-fa4fc270fa65.png" alt="Getting Started" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <ul>
   <li>
@@ -170,7 +173,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_41aa6c1b-657e-445e-a515-74b1c62af280.png" alt="Beast Taming" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <p>Predators and other combat-capable Beasts require a bit more effort to tame.</p>
 
@@ -190,7 +193,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_7fcd09ce-9768-4e42-809b-a5ef66394b7a.png" alt="Customize the Experience" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <p>Animal Husbandry is built on <strong>Alec's Tamework!</strong>, so server owners and solo players can decide how involved the animal systems should be.</p>
 
@@ -226,7 +229,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_55894b5e-2d68-48db-a420-4fde0c3faf32.png" alt="Supported Animals" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
   <tr>
@@ -258,7 +261,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_b0758305-51ac-4f95-a4bd-9b867649f58b.png" alt="Adding to Existing Worlds" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <p>Adding the mod to an existing world is supported. Pre-existing tamed animals can be bridged into Tamework ownership on first successful interaction or command-link. If an older tamed animal does not respond to owner-restricted actions, interact with it or link it once to migrate it.</p>
 
@@ -267,7 +270,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>
   <img src="https://media.forgecdn.net/attachments/description/1480275/description_e315ea4a-d6d3-4de0-9e72-970856075a99.png" alt="Wiki Shortcuts" width="849" />
 </p>
-<br />
+<p>&nbsp;</p>
 
 <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
   <tr>
@@ -295,7 +298,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <br />
 
 <H2>Telemetry</H2>
-<a><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework</a>, and thus Alec's Animal Husbandry utilizes <a href="https://www.curseforge.com/hytale/mods/alecs-telemetry>"> Alec's Telemetry</a> to report crash, error, performance, and usage telemetry data to the developer.</p>
+<p><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework</a>, and thus Alec's Animal Husbandry utilizes <a href="https://www.curseforge.com/hytale/mods/alecs-telemetry">Alec's Telemetry</a> to report crash, error, performance, and usage telemetry data to the developer.</p>
 <p>This data does <strong>not</strong> contain any personally identifiable information, and is exclusively used to diagnose issues in the mod to provide a better user experience.</p>
 <p>You may disable this feature at any time in the `/tw settings` menu in the Telemetry section.</p>
 
