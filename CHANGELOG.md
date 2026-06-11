@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+- Updated livestock hay/food-block seeking to use Tamework reachability preflight before entering movement, reducing cases where animals try to path to unreachable food blocks outside fences.
+
 ## 1.6.2 - Localization and Packaging Hotfix - 2026-06-09
 
 ### Added

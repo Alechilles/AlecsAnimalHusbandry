@@ -1180,11 +1180,11 @@
                 },
                 {
                   "Sensor": {
-                    "Type": "Block",
+                    "Type": "TameworkReachableBlockTarget",
+                    "BlockSet": { "Compute": "FoodBlockSet" },
                     "Range": { "Compute": "ViewRange" },
-                    "MaxHeight": 4,
-                    "Blocks": { "Compute": "FoodBlockSet" },
-                    "Random": true
+                    "VerticalRadius": 4,
+                    "Label": "AH_FoodBlock"
                   },
                   "BodyMotion": {
                     "Type": "Seek",
@@ -1389,11 +1389,11 @@
                             "State": "Unset"
                           },
                           {
-                            "Type": "Block",
+                            "Type": "TameworkReachableBlockTarget",
+                            "BlockSet": { "Compute": "FoodBlockSet" },
                             "Range": { "Compute": "ViewRange" },
-                            "MaxHeight": 4,
-                            "Blocks": { "Compute": "FoodBlockSet" },
-                            "Random": true
+                            "VerticalRadius": 4,
+                            "Label": "AH_FoodBlock"
                           }
                         ]
                       },
