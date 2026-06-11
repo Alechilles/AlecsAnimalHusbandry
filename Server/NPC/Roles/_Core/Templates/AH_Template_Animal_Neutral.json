@@ -100,6 +100,10 @@
       "Value": "Hay",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
     },
+    "FoodTargetSlot": {
+      "Value": "AHFoodTarget",
+      "Description": "Stored target used while seeking a food block or dropped food item."
+    },
     "DayTimePeriod": {
       "Value": [ 6.01, 17.99 ],
       "Description": "The hour range considered to be daytime for this NPC (inclusive). Hours should be written with decimal fractions."
@@ -604,24 +608,10 @@
               "Instructions": [
                 {
                   "Sensor": {
-                    "Type": "Or",
-                    "Sensors": [
-                      {
-                        "Type": "Block",
-                        "Range": 1.5,
-                        "MaxHeight": 4,
-                        "Blocks": { "Compute": "FoodBlockSet" },
-                        "Random": true
-                      },
-                      {
-                        "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
-                        "Type": "DroppedItem",
-                        "Range": 1,
-                        "Items": { "Compute": "AttractiveItemSet" },
-                        "ViewSector": { "Compute": "ViewSector" },
-                        "LineOfSight": true
-                      }
-                    ]
+                    "Type": "ReadPosition",
+                    "Slot": { "Compute": "FoodTargetSlot" },
+                    "Range": 1.5,
+                    "MinRange": 0
                   },
                   "BodyMotion": {
                     "Type": "AimCharge"
@@ -653,24 +643,10 @@
                 },
                 {
                   "Sensor": {
-                    "Type": "Or",
-                    "Sensors": [
-                      {
-                        "Type": "Block",
-                        "Range": { "Compute": "ViewRange" },
-                        "MaxHeight": 4,
-                        "Blocks": { "Compute": "FoodBlockSet" },
-                        "Random": true
-                      },
-                      {
-                        "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
-                        "Type": "DroppedItem",
-                        "Range": { "Compute": "ViewRange" },
-                        "Items": { "Compute": "AttractiveItemSet" },
-                        "ViewSector": { "Compute": "ViewSector" },
-                        "LineOfSight": true
-                      }
-                    ]
+                    "Type": "ReadPosition",
+                    "Slot": { "Compute": "FoodTargetSlot" },
+                    "Range": { "Compute": "ViewRange" },
+                    "MinRange": 1.5
                   },
                   "BodyMotion": {
                     "Type": "Seek",
@@ -861,15 +837,19 @@
                           },
                           {
                             "Enabled": { "Compute": "!isEmpty(FoodBlockSet)" },
-                            "Type": "Block",
+                            "Type": "TameworkReachableBlockTarget",
+                            "BlockSet": { "Compute": "FoodBlockSet" },
                             "Range": { "Compute": "ViewRange" },
-                            "MaxHeight": 4,
-                            "Blocks": { "Compute": "FoodBlockSet" },
-                            "Random": true
+                            "VerticalRadius": 4,
+                            "Label": "AH_FoodBlock"
                           }
                         ]
                       },
                       "Actions": [
+                        {
+                          "Type": "StorePosition",
+                          "Slot": { "Compute": "FoodTargetSlot" }
+                        },
                         {
                           "Type": "State",
                           "State": ".FindFood"
