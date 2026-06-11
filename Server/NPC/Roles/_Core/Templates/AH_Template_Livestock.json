@@ -108,6 +108,10 @@
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
     },
+    "FoodBlockTargetSlot": {
+      "Value": "AHFoodBlockTarget",
+      "Description": "Stored reachable stand target used while seeking a food block."
+    },
     "WeightFollowItem": {
       "Value": 100,
       "Description": "The probability the NPC will follow an attractive item when held by a non-hostile target, in percent."
@@ -1102,11 +1106,10 @@
               "Instructions": [
                 {
                   "Sensor": {
-                    "Type": "Block",
+                    "Type": "ReadPosition",
+                    "Slot": { "Compute": "FoodBlockTargetSlot" },
                     "Range": 2,
-                    "MaxHeight": 4,
-                    "Blocks": { "Compute": "FoodBlockSet" },
-                    "Random": true
+                    "MinRange": 0
                   },
                   "HeadMotion": {
                     "Type": "Aim"
@@ -1136,11 +1139,10 @@
                 },
                 {
                   "Sensor": {
-                    "Type": "TameworkReachableBlockTarget",
-                    "BlockSet": { "Compute": "FoodBlockSet" },
+                    "Type": "ReadPosition",
+                    "Slot": { "Compute": "FoodBlockTargetSlot" },
                     "Range": { "Compute": "ViewRange" },
-                    "VerticalRadius": 4,
-                    "Label": "AH_FoodBlock"
+                    "MinRange": 1.5
                   },
                   "BodyMotion": {
                     "Type": "Seek",
@@ -1354,6 +1356,10 @@
                         ]
                       },
                       "Actions": [
+                        {
+                          "Type": "StorePosition",
+                          "Slot": { "Compute": "FoodBlockTargetSlot" }
+                        },
                         {
                           "Type": "State",
                           "State": ".EatFromBlock"
