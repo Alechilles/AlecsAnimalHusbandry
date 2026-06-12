@@ -122,12 +122,12 @@
       "Tw_Feed_Herbivore"
     ],
     "HungerGainPerConsumedItem": 25.0,
-    "MaxContainerItemsConsumedPerSweep": 4,
+    "MaxContainerItemsConsumedPerSweep": 1,
     "NearbyWaterDrinkEnabled": true,
     "WaterSearchRadius": 8.0,
     "WaterConsumeRadius": 3.0,
     "WaterVerticalScanRadius": 2,
-    "ThirstGainPerSweepNearWater": 100.0
+    "ThirstGainPerSweepNearWater": 25.0
   },
   "ManualRefill": {
     "HungerGainOnFeedInteraction": 25.0,
