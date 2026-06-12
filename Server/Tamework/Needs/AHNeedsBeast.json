@@ -58,12 +58,12 @@
       "Tw_Feed_Carnivore"
     ],
     "HungerGainPerConsumedItem": 25.0,
-    "MaxContainerItemsConsumedPerSweep": 1,
+    "MaxContainerItemsConsumedPerSweep": 4,
     "NearbyWaterDrinkEnabled": true,
     "WaterSearchRadius": 8.0,
     "WaterConsumeRadius": 3.0,
     "WaterVerticalScanRadius": 2,
-    "ThirstGainPerSweepNearWater": 25.0
+    "ThirstGainPerSweepNearWater": 100.0
   },
   "ManualRefill": {
     "HungerGainOnFeedInteraction": 25.0,
