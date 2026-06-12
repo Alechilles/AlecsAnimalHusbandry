@@ -985,7 +985,7 @@
           }
         },
         {
-          "$Comment": "Bridge needs-seek sensor pass while in Idle state.",
+          "$Comment": "Refresh the base leash point when tamed predators settle into Idle so leash and wander behavior use the current area.",
           "Continue": true,
           "Sensor": {
             "Type": "State",
@@ -993,7 +993,6 @@
           },
           "Instructions": [
             {
-              "$Comment": "Refresh the base leash point when tamed predators settle into Idle so leash and wander behavior use the current area.",
               "Continue": true,
               "Sensor": {
                 "Type": "Any",
@@ -1005,7 +1004,26 @@
                   "ToCurrent": true
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "$Comment": "Bridge needs-seek sensor pass while in non-movement resting states.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Idle"
+              },
+              {
+                "Type": "State",
+                "State": "Hold"
+              }
+            ]
+          },
+          "Instructions": [
             {
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource_Sensor",
               "Modify": {
