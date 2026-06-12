@@ -123,6 +123,11 @@
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
     },
+    "FoodBlockTypes": {
+      "Value": [ "Ingredient_Hay" ],
+      "TypeHint": "String",
+      "Description": "Exact block type ids that tamed livestock can seek as food blocks."
+    },
     "FoodBlockTargetSlot": {
       "Value": "AHFoodBlockTarget",
       "Description": "Stored reachable stand target used while seeking a food block."
@@ -1378,7 +1383,7 @@
                   ]
                 },
                 {
-                  "Enabled": { "Compute": "!isEmpty(FoodBlockSet)" },
+                  "Enabled": { "Compute": "!isEmpty(FoodBlockSet) || !isEmptyStringArray(FoodBlockTypes)" },
                   "Weight": 10,
                   "Instructions": [
                     {
@@ -1393,6 +1398,7 @@
                           {
                             "Type": "TameworkReachableBlockTarget",
                             "BlockSet": { "Compute": "FoodBlockSet" },
+                            "BlockTypes": { "Compute": "FoodBlockTypes" },
                             "Range": { "Compute": "ViewRange" },
                             "VerticalRadius": 4,
                             "Label": "AH_FoodBlock"

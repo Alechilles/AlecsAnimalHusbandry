@@ -4,6 +4,7 @@
 
 ### Fixed
 - Updated livestock hay/food-block seeking to use Tamework reachability preflight before entering movement, reducing cases where animals try to path to unreachable food blocks outside fences.
+- Fixed tamed livestock hay seeking so cows, bison, and other companions can detect placed hay by exact block type even when the base blockset lookup does not resolve the hay block name.
 
 ## 1.6.2 - Localization and Packaging Hotfix - 2026-06-09
 
