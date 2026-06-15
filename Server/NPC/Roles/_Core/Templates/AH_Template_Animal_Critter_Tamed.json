@@ -95,6 +95,10 @@
       "Value": [ "PT1H", "PT4H" ],
       "Description": "Cooldown between greet attempts."
     },
+    "NeedsSeekConsumeStartDistance": {
+      "Value": 2,
+      "Description": "Distance from trough/source where this small critter can begin needs consumption."
+    },
     "FollowItemPreDelay": {
       "Value": [ 0.2, 0.6 ],
       "Description": "Delay before transitioning from greet to curious when a preferred item is held."
@@ -313,6 +317,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "Water",
+                "NeedsSeekConsumeStartDistance": {
+                  "Compute": "NeedsSeekConsumeStartDistance"
+                },
                 "NeedsSeekConsumeMaintainMinDistance": 1,
                 "NeedsSeekConsumeMaintainMaxDistance": 2,
                 "NeedsSeekConsumeMaintainDistanceRange": [
@@ -342,6 +349,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "FoodContainer",
+                "NeedsSeekConsumeStartDistance": {
+                  "Compute": "NeedsSeekConsumeStartDistance"
+                },
                 "NeedsSeekConsumeMaintainMinDistance": 1,
                 "NeedsSeekConsumeMaintainMaxDistance": 2,
                 "NeedsSeekConsumeMaintainDistanceRange": [

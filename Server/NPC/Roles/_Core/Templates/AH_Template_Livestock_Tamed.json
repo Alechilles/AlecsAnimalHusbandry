@@ -119,6 +119,10 @@
       "TypeHint": "String",
       "Description": "Optional food item ids used for needs-seek food consumption. If empty, TwNeedsConfig container food ids are used."
     },
+    "NeedsSeekConsumeStartDistance": {
+      "Value": 2.5,
+      "Description": "Distance from trough/source where this livestock can begin needs consumption."
+    },
     "FoodBlockSet": {
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
@@ -626,6 +630,9 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "Water",
+            "NeedsSeekConsumeStartDistance": {
+              "Compute": "NeedsSeekConsumeStartDistance"
+            },
             "NeedsSeekConsumeMaintainMinDistance": 1,
             "NeedsSeekConsumeMaintainMaxDistance": 2,
             "NeedsSeekConsumeMaintainDistanceRange": [
@@ -655,6 +662,9 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "FoodContainer",
+            "NeedsSeekConsumeStartDistance": {
+              "Compute": "NeedsSeekConsumeStartDistance"
+            },
             "NeedsSeekConsumeMaintainMinDistance": 1,
             "NeedsSeekConsumeMaintainMaxDistance": 2,
             "NeedsSeekConsumeMaintainDistanceRange": [1,2],

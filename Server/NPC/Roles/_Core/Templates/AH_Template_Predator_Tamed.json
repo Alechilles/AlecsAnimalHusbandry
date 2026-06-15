@@ -270,6 +270,10 @@
       "Value": "Eat",
       "Description": "Optional animation played when consuming a needs resource (for example Eat)."
     },
+    "NeedsSeekConsumeStartDistance": {
+      "Value": 2.5,
+      "Description": "Distance from trough/source where this predator can begin needs consumption."
+    },
     "AttackPauseRange": {
       "Value": [
         2,
@@ -1137,6 +1141,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "Water",
+                "NeedsSeekConsumeStartDistance": {
+                  "Compute": "NeedsSeekConsumeStartDistance"
+                },
                 "NeedsSeekConsumeAnimation": {
                   "Compute": "NeedsSeekConsumeAnimation"
                 },
@@ -1159,6 +1166,9 @@
               "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
               "Modify": {
                 "NeedsSeekResourceType": "FoodContainer",
+                "NeedsSeekConsumeStartDistance": {
+                  "Compute": "NeedsSeekConsumeStartDistance"
+                },
                 "NeedsSeekConsumeAnimation": {
                   "Compute": "NeedsSeekConsumeAnimation"
                 },
