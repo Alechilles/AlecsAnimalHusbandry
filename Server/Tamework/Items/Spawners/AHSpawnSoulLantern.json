@@ -138,6 +138,7 @@
       "Crab",
       "Deer_Doe",
       "Deer_Stag",
+      "Bluebird",
       "Flamingo",
       "Hatworm",
       "Horse_Skeleton",
@@ -156,6 +157,7 @@
       "Tamed_Crab",
       "Tamed_Deer_Doe",
       "Tamed_Deer_Stag",
+      "Tamed_Bluebird",
       "Tamed_Flamingo",
       "Tamed_Flamingo_Chick",
       "Tamed_Hatworm",
@@ -3514,6 +3516,14 @@
       ],
       "Overrides": [],
       "IconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Stag/base.png"
+    },
+    {
+      "Roles": [
+        "Bluebird",
+        "Tamed_Bluebird"
+      ],
+      "Overrides": [],
+      "IconDefault": "Icons/ModelsGenerated/Bluebird.png"
     },
     {
       "Roles": [

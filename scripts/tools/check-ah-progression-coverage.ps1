@@ -81,8 +81,8 @@ function Assert-ExactCoverage {
 }
 
 $roles = @(Get-CheckedInTamedRoles -Root $Root)
-if ($roles.Count -ne 92) {
-    throw "Expected 92 checked-in Tamed_*.json roles, found $($roles.Count)."
+if ($roles.Count -ne 93) {
+    throw "Expected 93 checked-in Tamed_*.json roles, found $($roles.Count)."
 }
 
 Assert-ExactCoverage -Roles $roles -Configs (Get-RoleScopedConfigs -Root $Root -Family "Leveling") -Family "Leveling"

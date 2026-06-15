@@ -1,0 +1,39 @@
+{
+  "Type": "Variant",
+  "Reference": "AH_Template_Animal_Neutral",
+  "Parameters": {
+    "MinHeightOverGround": {
+      "Value": 15,
+      "Description": "Minimum flight height over ground."
+    },
+    "MaxHeightOverGround": {
+      "Value": 35,
+      "Description": "Maximum flight height over ground."
+    }
+  },
+  "Modify": {
+    "FoodBlockSet": "",
+    "GrazingBlockSet": "",
+    "DayTimeNapWeight": 0,
+    "NeedsSeekConsumeAnimation": "",
+    "SleepAnimation": "",
+    "SleepEnterAnimation": "",
+    "WakeAnimation": "",
+    "CuriousAnimation": "",
+    "AlertedAnimation": "FlyFast",
+    "MotionControllerList": [
+      {
+        "Type": "Fly",
+        "MaxHorizontalSpeed": { "Compute": "MaxSpeed" },
+        "MaxSinkSpeed": 3,
+        "MaxClimbSpeed": 10,
+        "MinAirSpeed": 4,
+        "Acceleration": 5,
+        "MinHeightOverGround": { "Compute": "MinHeightOverGround" },
+        "MaxHeightOverGround": { "Compute": "MaxHeightOverGround" },
+        "MaxRollAngle": 180,
+        "MaxTurnSpeed": 360
+      }
+    ]
+  }
+}

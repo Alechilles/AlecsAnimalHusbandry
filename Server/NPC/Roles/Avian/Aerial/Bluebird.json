@@ -1,0 +1,49 @@
+{
+  "Type": "Variant",
+  "Reference": "AH_Template_Aerial_Neutral",
+  "Modify": {
+    "Appearance": "Bluebird",
+    "FlockArray": [
+      "Bluebird"
+    ],
+    "DropList": "Drop_Bluebird",
+    "MaxHealth": 15,
+    "MaxSpeed": 20,
+    "WanderRadius": 15,
+    "ParticleOffset": [
+      0,
+      0.4,
+      0
+    ],
+    "IsMemory": true,
+    "MemoriesCategory": "Avian",
+    "MemoriesNameOverride": "Bluebird",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Plant_Fruit_Berries_Red"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Wild_Berry_Red",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Bluebird.name",
+      "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_Bluebird",
+      "Description": "The role the NPC will change into when it's tamed."
+    }
+  }
+}
