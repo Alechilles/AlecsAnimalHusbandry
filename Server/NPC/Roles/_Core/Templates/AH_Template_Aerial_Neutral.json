@@ -336,6 +336,30 @@
       },
       "MaxRollAngle": 180,
       "MaxTurnSpeed": 360
+    },
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": {
+        "Compute": "MaxSpeed"
+      },
+      "Gravity": 15,
+      "MaxFallSpeed": 15,
+      "JumpHeight": 0.1,
+      "MaxRotationSpeed": {
+        "Compute": "MaxRotationSpeed"
+      },
+      "Acceleration": 100,
+      "RunThreshold": {
+        "Compute": "RunThreshold"
+      },
+      "DescentAnimationType": "Fall",
+      "DescentSteepness": 2.5,
+      "DescentBlending": 1,
+      "JumpDescentSteepness": 8,
+      "MaxClimbHeight": {
+        "Compute": "ClimbHeight"
+      },
+      "FenceBlockSet": "Fence"
     }
   ],
   "StateTransitions": [
@@ -780,6 +804,7 @@
                     },
                     {
                       "Type": "PickUpItem",
+                      "Hoover": true,
                       "Items": [
                         "*Hay*"
                       ],
