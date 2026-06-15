@@ -134,6 +134,18 @@
       "TypeHint": "String",
       "Description": "Optional food item ids used for needs-seek food consumption. If empty, TwNeedsConfig container food ids are used."
     },
+    "NeedsSeekConsumeStartDistance": {
+      "Value": 1.5,
+      "Description": "Distance from trough/source where this aerial NPC can begin needs consumption."
+    },
+    "NeedsSeekConsumeMaintainMaxDistance": {
+      "Value": 1.25,
+      "Description": "Maximum distance from trough/source this aerial NPC should maintain while consuming."
+    },
+    "NeedsSeekConsumeMaintainDistanceRange": {
+      "Value": [ 1, 1.25 ],
+      "Description": "Distance band this aerial NPC should maintain while waiting to consume."
+    },
     "FoodBlockSet": {
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
@@ -769,12 +781,16 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "Water",
+            "NeedsSeekConsumeStartDistance": {
+              "Compute": "NeedsSeekConsumeStartDistance"
+            },
             "NeedsSeekConsumeMaintainMinDistance": 1,
-            "NeedsSeekConsumeMaintainMaxDistance": 2,
-            "NeedsSeekConsumeMaintainDistanceRange": [
-              1,
-              2
-            ],
+            "NeedsSeekConsumeMaintainMaxDistance": {
+              "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+            },
+            "NeedsSeekConsumeMaintainDistanceRange": {
+              "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+            },
             "NeedsSeekFailedCooldownRange": [
               1.8,
               1.8
@@ -798,12 +814,16 @@
           "Reference": "Component_Tamework_Instruction_Needs_Seek_Resource",
           "Modify": {
             "NeedsSeekResourceType": "FoodContainer",
+            "NeedsSeekConsumeStartDistance": {
+              "Compute": "NeedsSeekConsumeStartDistance"
+            },
             "NeedsSeekConsumeMaintainMinDistance": 1,
-            "NeedsSeekConsumeMaintainMaxDistance": 2,
-            "NeedsSeekConsumeMaintainDistanceRange": [
-              1,
-              2
-            ],
+            "NeedsSeekConsumeMaintainMaxDistance": {
+              "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+            },
+            "NeedsSeekConsumeMaintainDistanceRange": {
+              "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+            },
             "NeedsSeekFailedCooldownRange": [
               1.8,
               1.8
@@ -1991,39 +2011,39 @@
           },
           "Sensor": {
             "Type": "State",
-            "State": "Follow"
-          },
-          "Instructions": [
-            {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "TameworkSetFlyingCompanionMode",
-                  "Mode": "Follow"
-                }
-              ]
+          "State": "Follow"
+        },
+        "Instructions": [
+          {
+            "Continue": true,
+            "Sensor": {
+              "Type": "Any",
+              "Once": true
             },
-            {
-              "Reference": "AH_Component_Tamework_Instruction_Follow_Flying",
-              "Modify": {
-                "MasterTargetSlot": "MasterTarget",
-                "FollowDesiredAltitudeRange": [
-                  4,
-                  8
-                ],
-                "FollowTeleportThresholdRange": 32,
-                "FollowSeekSlowDownDistance": 10,
-                "FollowSeekStopDistance": 6,
-                "FollowSeekRelativeSpeed": 0.9,
-                "FollowHoverRadius": 1.75,
-                "FollowHoverRelativeSpeed": 0.12
+            "Actions": [
+              {
+                "Type": "TameworkSetFlyingCompanionMode",
+                "Mode": "Follow"
               }
+            ]
+          },
+          {
+            "Reference": "AH_Component_Tamework_Instruction_Follow_Flying",
+            "Modify": {
+              "MasterTargetSlot": "MasterTarget",
+              "FollowDesiredAltitudeRange": [
+                4,
+                8
+              ],
+              "FollowTeleportThresholdRange": 32,
+              "FollowSeekSlowDownDistance": 10,
+              "FollowSeekStopDistance": 6,
+              "FollowSeekRelativeSpeed": 0.9,
+              "FollowHoverRadius": 1.75,
+              "FollowHoverRelativeSpeed": 0.12
             }
-          ]
+          }
+        ]
         },
         {
           "$Comment": "Command hold state used by Tamework mode cycle.",
@@ -2033,11 +2053,11 @@
           "Sensor": {
             "Type": "State",
             "State": "Hold"
-          },
-          "Instructions": [
-            {
-              "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
-              "Continue": true,
+        },
+        "Instructions": [
+          {
+            "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
+            "Continue": true,
               "Sensor": {
                 "Type": "Any",
                 "Once": true
@@ -2046,31 +2066,31 @@
                 {
                   "Type": "SetLeashPosition",
                   "ToCurrent": true
-                }
-              ]
+              }
+            ]
+          },
+          {
+            "Continue": true,
+            "Sensor": {
+              "Type": "Any",
+              "Once": true
             },
-            {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "TameworkSetFlyingCompanionMode",
-                  "Mode": "Hold",
-                  "LandingState": "Hold",
-                  "GroundedState": "Hold",
-                  "DescendStep": 0.12,
-                  "ReissueDelayMs": 50,
-                  "GroundedStableTicks": 3,
-                  "VerticalMovementEpsilon": 0.15
-                }
-              ]
-            },
-            {
-              "Reference": "Component_Tamework_Instruction_Hold",
-              "Modify": {
+            "Actions": [
+              {
+                "Type": "TameworkSetFlyingCompanionMode",
+                "Mode": "Hold",
+                "LandingState": "Hold",
+                "GroundedState": "Hold",
+                "DescendStep": 0.12,
+                "ReissueDelayMs": 50,
+                "GroundedStableTicks": 3,
+                "VerticalMovementEpsilon": 0.15
+              }
+            ]
+          },
+          {
+            "Reference": "Component_Tamework_Instruction_Hold",
+            "Modify": {
                 "_ExportStates": [
                   "Sleep"
                 ]

@@ -3,9 +3,7 @@
   "Reference": "AH_Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Cow",
-    "NeedsSeekConsumeStartDistance": 2,
-    "NeedsSeekConsumeMaintainMaxDistance": 1.75,
-    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.75],
+    "NeedsSeekConsumeStartDistance": 3,
     "AttitudeGroup": "AH_Livestock_Tamed",
     "FlockArray": [
       "Tamed_Cow",
