@@ -2,6 +2,9 @@
   "Type": "Variant",
   "Reference": "AH_Template_Livestock_Tamed",
   "Modify": {
+    "NeedsSeekConsumeStartDistance": 1.65,
+    "NeedsSeekConsumeMaintainMaxDistance": 1.4,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.4],
     "Appearance": "Mouflon_Lamb",
     "FlockArray": [
       "Tamed_Mouflon_Lamb",

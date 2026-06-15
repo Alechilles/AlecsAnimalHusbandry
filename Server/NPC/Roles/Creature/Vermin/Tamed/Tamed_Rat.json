@@ -2,6 +2,9 @@
   "Type": "Variant",
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
+    "NeedsSeekConsumeStartDistance": 1.5,
+    "NeedsSeekConsumeMaintainMaxDistance": 1.25,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.25],
     "DropList": "Drop_Rat",
     "Appearance": "Rat",
     "AttitudeGroup": "AH_Predator_Tamed",

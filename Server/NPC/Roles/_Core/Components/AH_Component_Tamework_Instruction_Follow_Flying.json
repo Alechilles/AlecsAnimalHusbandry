@@ -1,0 +1,232 @@
+{
+  "$Comment": "Flying follow behavior for aerial Animal Husbandry companions.",
+  "Type": "Component",
+  "Class": "Instruction",
+  "Interface": "Tamework.Instruction.Follow",
+  "Parameters": {
+    "MasterTargetSlot": {
+      "Value": "MasterTarget",
+      "Description": "Target slot used to track the owner/master."
+    },
+    "FollowDesiredAltitudeRange": {
+      "Value": [
+        4,
+        8
+      ],
+      "Description": "Preferred altitude range to maintain while following."
+    },
+    "FollowTeleportThresholdRange": {
+      "Value": 32,
+      "Description": "Distance beyond which teleport fallback is used instead of normal flight catch-up."
+    },
+    "FollowSeekSlowDownDistance": {
+      "Value": 10,
+      "Description": "Distance from the owner where flight catch-up begins to slow down."
+    },
+    "FollowSeekStopDistance": {
+      "Value": 6,
+      "Description": "Distance from the owner considered close enough for flying follow."
+    },
+    "FollowSeekRelativeSpeed": {
+      "Value": 0.9,
+      "Description": "Relative speed used while flying toward the owner."
+    },
+    "FollowHoverRadius": {
+      "Value": 1.75,
+      "Description": "Small hover orbit radius used when already near the owner."
+    },
+    "FollowHoverRelativeSpeed": {
+      "Value": 0.12,
+      "Description": "Relative speed used for close hover/orbit behavior."
+    }
+  },
+  "Content": {
+    "$Comment": "Take off when grounded, fly back to the owner when separated, and hover loosely when already nearby.",
+    "Continue": true,
+    "Sensor": {
+      "Type": "Any"
+    },
+    "Instructions": [
+      {
+        "$Comment": "Keep combat target released while in follow mode.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "Any",
+          "Once": true
+        },
+        "Actions": [
+          {
+            "Type": "ReleaseTarget",
+            "TargetSlot": "LockedTarget"
+          }
+        ]
+      },
+      {
+        "$Comment": "If grounded, take off before running the flying follow behavior.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "MotionController",
+          "MotionController": "Walk"
+        },
+        "BodyMotion": {
+          "Type": "TakeOff",
+          "JumpSpeed": 4
+        }
+      },
+      {
+        "$Comment": "Maintain a suitable airborne altitude while follow mode is active.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "MotionController",
+          "MotionController": "Fly"
+        },
+        "Actions": [
+          {
+            "Type": "OverrideAltitude",
+            "DesiredAltitudeRange": {
+              "Compute": "FollowDesiredAltitudeRange"
+            }
+          }
+        ]
+      },
+      {
+        "$Comment": "Teleport back to the owner if they are far beyond normal catch-up range.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "And",
+          "Sensors": [
+            {
+              "Type": "MotionController",
+              "MotionController": "Fly"
+            },
+            {
+              "Type": "Not",
+              "Sensor": {
+                "Type": "Target",
+                "TargetSlot": {
+                  "Compute": "MasterTargetSlot"
+                },
+                "Range": {
+                  "Compute": "FollowTeleportThresholdRange"
+                }
+              }
+            },
+            {
+              "Type": "Target",
+              "TargetSlot": {
+                "Compute": "MasterTargetSlot"
+              }
+            }
+          ]
+        },
+        "BodyMotion": {
+          "Type": "Teleport"
+        }
+      },
+      {
+        "$Comment": "Fly back toward the owner until within the desired follow distance.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "And",
+          "Sensors": [
+            {
+              "Type": "MotionController",
+              "MotionController": "Fly"
+            },
+            {
+              "Type": "Target",
+              "TargetSlot": {
+                "Compute": "MasterTargetSlot"
+              },
+              "Range": {
+                "Compute": "FollowTeleportThresholdRange"
+              },
+              "MinRange": {
+                "Compute": "FollowSeekStopDistance + 0.35"
+              }
+            }
+          ]
+        },
+        "HeadMotion": {
+          "Type": "Watch"
+        },
+        "BodyMotion": {
+          "Type": "Seek",
+          "SlowDownDistance": {
+            "Compute": "FollowSeekSlowDownDistance"
+          },
+          "StopDistance": {
+            "Compute": "FollowSeekStopDistance"
+          },
+          "RelativeSpeed": {
+            "Compute": "FollowSeekRelativeSpeed"
+          }
+        }
+      },
+      {
+        "$Comment": "Hover loosely when already close to the owner.",
+        "Continue": true,
+        "Sensor": {
+          "Type": "And",
+          "Sensors": [
+            {
+              "Type": "MotionController",
+              "MotionController": "Fly"
+            },
+            {
+              "Type": "Target",
+              "TargetSlot": {
+                "Compute": "MasterTargetSlot"
+              },
+              "Range": {
+                "Compute": "FollowSeekStopDistance + 0.35"
+              }
+            }
+          ]
+        },
+        "HeadMotion": {
+          "Type": "Watch"
+        },
+        "BodyMotion": {
+          "Type": "WanderInCircle",
+          "Radius": {
+            "Compute": "FollowHoverRadius"
+          },
+          "RelativeSpeed": {
+            "Compute": "FollowHoverRelativeSpeed"
+          }
+        }
+      },
+      {
+        "$Comment": "Fallback hover if the owner target is temporarily unavailable but the companion is still airborne.",
+        "Sensor": {
+          "Type": "And",
+          "Sensors": [
+            {
+              "Type": "MotionController",
+              "MotionController": "Fly"
+            },
+            {
+              "Type": "Not",
+              "Sensor": {
+                "Type": "Target",
+                "TargetSlot": {
+                  "Compute": "MasterTargetSlot"
+                }
+              }
+            }
+          ]
+        },
+        "BodyMotion": {
+          "Type": "WanderInCircle",
+          "Radius": {
+            "Compute": "FollowHoverRadius"
+          },
+          "RelativeSpeed": {
+            "Compute": "FollowHoverRelativeSpeed"
+          }
+        }
+      }
+    ]
+  }
+}

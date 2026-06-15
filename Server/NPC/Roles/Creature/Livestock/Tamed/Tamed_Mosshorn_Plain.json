@@ -3,7 +3,9 @@
   "Reference": "AH_Template_Livestock_Tamed",
   "Modify": {
     "Appearance": "Mosshorn_Plain",
-    "NeedsSeekConsumeStartDistance": 3,
+    "NeedsSeekConsumeStartDistance": 2.25,
+    "NeedsSeekConsumeMaintainMaxDistance": 2,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2],
     "AttitudeGroup": "AH_Livestock_Tamed",
     "AttractiveItemSet": [
       "Plant_Crop_Potato_Item"

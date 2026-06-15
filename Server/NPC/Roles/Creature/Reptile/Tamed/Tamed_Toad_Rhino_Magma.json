@@ -3,7 +3,9 @@
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
     "Appearance": "Toad_Rhino_Magma",
-    "NeedsSeekConsumeStartDistance": 3.25,
+    "NeedsSeekConsumeStartDistance": 2.25,
+    "NeedsSeekConsumeMaintainMaxDistance": 2,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2],
     "WanderRadius": 6,
     "ViewRange": 15,
     "FleeRange": 15,

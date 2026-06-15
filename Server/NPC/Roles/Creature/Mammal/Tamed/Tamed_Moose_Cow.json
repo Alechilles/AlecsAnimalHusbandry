@@ -1,7 +1,9 @@
 {
   "Modify": {
     "Appearance": "Moose_Cow",
-    "NeedsSeekConsumeStartDistance": 3,
+    "NeedsSeekConsumeStartDistance": 2.25,
+    "NeedsSeekConsumeMaintainMaxDistance": 2,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2],
     "AttitudeGroup": "AH_Livestock_Tamed",
     "FlockArray": [
       "Tamed_Moose_Cow",

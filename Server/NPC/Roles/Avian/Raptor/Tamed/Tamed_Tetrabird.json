@@ -1,5 +1,8 @@
 {
   "Modify": {
+    "NeedsSeekConsumeStartDistance": 2,
+    "NeedsSeekConsumeMaintainMaxDistance": 1.75,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.75],
     "Appearance": "Tetrabird",
     "FlockArray": [
       "Tamed_Tetrabird"

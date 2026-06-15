@@ -416,11 +416,11 @@
       "Description": "The translation key for the NPC name display"
     },
     "MinHeightOverGround": {
-      "Value": 10,
+      "Value": 4,
       "Description": "Minimum flight height over ground."
     },
     "MaxHeightOverGround": {
-      "Value": 25,
+      "Value": 12,
       "Description": "Maximum flight height over ground."
     }
   },
@@ -1995,11 +1995,32 @@
           },
           "Instructions": [
             {
-              "Reference": "Component_Tamework_Instruction_Follow_Simple_TP",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "TameworkSetFlyingCompanionMode",
+                  "Mode": "Follow"
+                }
+              ]
+            },
+            {
+              "Reference": "AH_Component_Tamework_Instruction_Follow_Flying",
               "Modify": {
                 "MasterTargetSlot": "MasterTarget",
-                "FollowLockOnRange": 128,
-                "FollowSeekRange": 25
+                "FollowDesiredAltitudeRange": [
+                  4,
+                  8
+                ],
+                "FollowTeleportThresholdRange": 32,
+                "FollowSeekSlowDownDistance": 10,
+                "FollowSeekStopDistance": 6,
+                "FollowSeekRelativeSpeed": 0.9,
+                "FollowHoverRadius": 1.75,
+                "FollowHoverRelativeSpeed": 0.12
               }
             }
           ]
@@ -2025,6 +2046,25 @@
                 {
                   "Type": "SetLeashPosition",
                   "ToCurrent": true
+                }
+              ]
+            },
+            {
+              "Continue": true,
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "TameworkSetFlyingCompanionMode",
+                  "Mode": "Hold",
+                  "LandingState": "Hold",
+                  "GroundedState": "Hold",
+                  "DescendStep": 0.12,
+                  "ReissueDelayMs": 50,
+                  "GroundedStableTicks": 3,
+                  "VerticalMovementEpsilon": 0.15
                 }
               ]
             },

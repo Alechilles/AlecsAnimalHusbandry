@@ -123,6 +123,14 @@
       "Value": 2.5,
       "Description": "Distance from trough/source where this livestock can begin needs consumption."
     },
+    "NeedsSeekConsumeMaintainMaxDistance": {
+      "Value": 2,
+      "Description": "Maximum distance from trough/source this livestock should maintain while consuming."
+    },
+    "NeedsSeekConsumeMaintainDistanceRange": {
+      "Value": [ 1, 2 ],
+      "Description": "Distance band this livestock should maintain while waiting to consume."
+    },
     "FoodBlockSet": {
       "Value": "Livestock_Feeding",
       "Description": "The type of block that this NPC will occasionally seek out to munch on."
@@ -634,11 +642,12 @@
               "Compute": "NeedsSeekConsumeStartDistance"
             },
             "NeedsSeekConsumeMaintainMinDistance": 1,
-            "NeedsSeekConsumeMaintainMaxDistance": 2,
-            "NeedsSeekConsumeMaintainDistanceRange": [
-              1,
-              2
-            ],
+            "NeedsSeekConsumeMaintainMaxDistance": {
+              "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+            },
+            "NeedsSeekConsumeMaintainDistanceRange": {
+              "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+            },
             "NeedsSeekFailedCooldownRange": [
               1.8,
               1.8
@@ -666,8 +675,12 @@
               "Compute": "NeedsSeekConsumeStartDistance"
             },
             "NeedsSeekConsumeMaintainMinDistance": 1,
-            "NeedsSeekConsumeMaintainMaxDistance": 2,
-            "NeedsSeekConsumeMaintainDistanceRange": [1,2],
+            "NeedsSeekConsumeMaintainMaxDistance": {
+              "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+            },
+            "NeedsSeekConsumeMaintainDistanceRange": {
+              "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+            },
             "NeedsSeekFailedCooldownRange": [1.8,1.8],
             "NeedsSeekFoodItemIDs": {
               "Compute": "AttractiveItemSet"
