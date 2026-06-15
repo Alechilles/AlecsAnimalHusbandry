@@ -795,6 +795,8 @@
               1.8,
               1.8
             ],
+            "NeedsSeekFlyingLandingEnabled": true,
+            "NeedsSeekFlyingLandingState": "NeedsSeekWater",
             "_ExportStates": [
               "Idle"
             ]
@@ -828,6 +830,8 @@
               1.8,
               1.8
             ],
+            "NeedsSeekFlyingLandingEnabled": true,
+            "NeedsSeekFlyingLandingState": "NeedsSeekFood",
             "NeedsSeekFoodItemIDs": {
               "Compute": "AttractiveItemSet"
             },
@@ -2084,7 +2088,8 @@
                   "DescendStep": 0.12,
                   "ReissueDelayMs": 50,
                   "GroundedStableTicks": 3,
-                  "VerticalMovementEpsilon": 0.15
+                  "VerticalMovementEpsilon": 0.15,
+                  "LandingTargetSlot": "MasterTarget"
                 }
               ]
             },
