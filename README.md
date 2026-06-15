@@ -12,9 +12,6 @@
     <a href="https://twitter.com/intent/user?screen_name=Alechilles" target="_blank" rel="noopener noreferrer"><img alt="Follow Alec on X" src="https://img.shields.io/badge/Follow-%40Alec-White?style=for-the-badge&amp;logo=x&amp;logoColor=rgb(255%2C255%2C255)&amp;logoSize=auto&amp;label=Follow&amp;labelColor=rgb(85%2C85%2C85)&amp;color=rgb(147%2C147%2C147)" /></a>
   </p>
   <p>
-    <a href="https://bisecthosting.com/Alec" target="_blank"><img alt="25% Off BisectHosting Servers With Code: Alec" src="https://www.bisecthosting.com/partners/custom-banners/249bd432-0996-4ccb-8184-65cd3791a3d2.webp" /></a>
-  </p>
-  <p>
     <a href="https://hytalemodding.dev/en/grants" target="_blank" rel="noopener noreferrer"><img alt="Sponsored by HytaleModding Grant Program" src="https://github.com/user-attachments/assets/a03709e3-445a-4e58-8ec5-591688490c5d" /></a>
   </p>
 
@@ -33,7 +30,6 @@
 </div>
 
 --------------
-
 <H2>Required:</H2>
 <ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
@@ -41,13 +37,11 @@
 </ul>
 <H2>Recommended:</H2>
 <ul>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags!</a></li>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-cats">Alec's Cats!</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-wildlife-skins">Celly's Wildlife Skins</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/mmo-skill-tree-taming-skill-pack-alecs-tamework">Taming Addon for MMO Skills</a></li>
 </ul>
-
 ------------
 
 <H2>Try it on the Animal Husbandry Demo Server! (Alpha)</h2>

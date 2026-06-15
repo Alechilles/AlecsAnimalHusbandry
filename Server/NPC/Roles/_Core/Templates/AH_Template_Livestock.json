@@ -1,7 +1,6 @@
 {
   "Type": "Abstract",
   "StartState": "Idle",
-  "Debug": "DisplayState",
   "Parameters": {
     "Appearance": {
       "Value": "Deer_Stag",
@@ -1297,7 +1296,6 @@
                 },
                 {
                   "$Comment": "TODO: grazing component seems to be borked",
-                  "Enabled": false,
                   "Weight": 10,
                   "Instructions": [
                     {
