@@ -1,7 +1,9 @@
 {
   "Modify": {
     "Appearance": "Trillodon",
-    "NeedsSeekConsumeStartDistance": 3.25,
+    "NeedsSeekConsumeStartDistance": 2.75,
+    "NeedsSeekConsumeMaintainMaxDistance": 2.5,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2.5],
     "DropList": "Drop_Trillodon",
     "MaxHealth": 145,
     "IsMemory": false,

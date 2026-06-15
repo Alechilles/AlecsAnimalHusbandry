@@ -1,7 +1,9 @@
 {
   "Modify": {
     "Appearance": "Horse_Skeleton",
-    "NeedsSeekConsumeStartDistance": 3,
+    "NeedsSeekConsumeStartDistance": 2.25,
+    "NeedsSeekConsumeMaintainMaxDistance": 2,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2],
     "FlockArray": [
       "Tamed_Horse_Skeleton",
       "Tamed_Horse_Skeleton_Armored"

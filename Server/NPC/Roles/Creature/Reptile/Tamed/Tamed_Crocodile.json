@@ -3,7 +3,9 @@
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
     "Appearance": "Crocodile",
-    "NeedsSeekConsumeStartDistance": 3.25,
+    "NeedsSeekConsumeStartDistance": 2.5,
+    "NeedsSeekConsumeMaintainMaxDistance": 2.25,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2.25],
     "AttitudeGroup": "AH_Predator_Tamed",
     "WanderRadius": 4,
     "ViewRange": 12,

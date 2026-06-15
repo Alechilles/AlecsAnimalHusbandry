@@ -3,6 +3,7 @@
 ## Unreleased
 
 ### Fixed
+- Tuned tamed companion food and water consume spacing per species size so animals stand closer to troughs while still allowing larger mobs enough room to complete consumption.
 - Updated tamed livestock, critter, and predator needs seeking to run preflight scanners from idle or hold states, so animals only enter needs movement after Tamework confirms a reachable food or water target.
 - Updated livestock hay/food-block seeking to use Tamework reachability preflight before entering movement, reducing cases where animals try to path to unreachable food blocks outside fences.
 - Fixed tamed livestock hay seeking so cows, bison, and other companions can detect placed hay by exact block type even when the base blockset lookup does not resolve the hay block name.

@@ -3,7 +3,9 @@
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
     "Appearance": "Bear_Polar",
-    "NeedsSeekConsumeStartDistance": 3,
+    "NeedsSeekConsumeStartDistance": 2.5,
+    "NeedsSeekConsumeMaintainMaxDistance": 2.25,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2.25],
     "DropList": "Drop_Bear_Polar",
     "Attack": "Root_NPC_Bear_Polar_Attack",
     "MaxHealth": 103,

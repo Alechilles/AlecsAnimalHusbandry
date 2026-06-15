@@ -2,6 +2,9 @@
   "Type": "Variant",
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
+    "NeedsSeekConsumeStartDistance": 1.5,
+    "NeedsSeekConsumeMaintainMaxDistance": 1.25,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.25],
     "Appearance": "Slug_Magma",
     "DropList": "Drop_Slug_Magma",
     "Attack": "Larva_Silk_Bite",

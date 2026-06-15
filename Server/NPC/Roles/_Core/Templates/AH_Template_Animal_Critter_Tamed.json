@@ -99,6 +99,14 @@
       "Value": 2,
       "Description": "Distance from trough/source where this small critter can begin needs consumption."
     },
+    "NeedsSeekConsumeMaintainMaxDistance": {
+      "Value": 1.5,
+      "Description": "Maximum distance from trough/source this small critter should maintain while consuming."
+    },
+    "NeedsSeekConsumeMaintainDistanceRange": {
+      "Value": [ 1, 1.5 ],
+      "Description": "Distance band this small critter should maintain while waiting to consume."
+    },
     "FollowItemPreDelay": {
       "Value": [ 0.2, 0.6 ],
       "Description": "Delay before transitioning from greet to curious when a preferred item is held."
@@ -321,11 +329,12 @@
                   "Compute": "NeedsSeekConsumeStartDistance"
                 },
                 "NeedsSeekConsumeMaintainMinDistance": 1,
-                "NeedsSeekConsumeMaintainMaxDistance": 2,
-                "NeedsSeekConsumeMaintainDistanceRange": [
-                  1,
-                  2
-                ],
+                "NeedsSeekConsumeMaintainMaxDistance": {
+                  "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+                },
+                "NeedsSeekConsumeMaintainDistanceRange": {
+                  "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+                },
                 "NeedsSeekFailedCooldownRange": [
                   1.8,
                   1.8
@@ -353,11 +362,12 @@
                   "Compute": "NeedsSeekConsumeStartDistance"
                 },
                 "NeedsSeekConsumeMaintainMinDistance": 1,
-                "NeedsSeekConsumeMaintainMaxDistance": 2,
-                "NeedsSeekConsumeMaintainDistanceRange": [
-                  1,
-                  2
-                ],
+                "NeedsSeekConsumeMaintainMaxDistance": {
+                  "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+                },
+                "NeedsSeekConsumeMaintainDistanceRange": {
+                  "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+                },
                 "NeedsSeekFailedCooldownRange": [
                   1.8,
                   1.8

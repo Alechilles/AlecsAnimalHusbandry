@@ -274,6 +274,14 @@
       "Value": 2.5,
       "Description": "Distance from trough/source where this predator can begin needs consumption."
     },
+    "NeedsSeekConsumeMaintainMaxDistance": {
+      "Value": 2,
+      "Description": "Maximum distance from trough/source this predator should maintain while consuming."
+    },
+    "NeedsSeekConsumeMaintainDistanceRange": {
+      "Value": [ 1, 2 ],
+      "Description": "Distance band this predator should maintain while waiting to consume."
+    },
     "AttackPauseRange": {
       "Value": [
         2,
@@ -1144,6 +1152,12 @@
                 "NeedsSeekConsumeStartDistance": {
                   "Compute": "NeedsSeekConsumeStartDistance"
                 },
+                "NeedsSeekConsumeMaintainMaxDistance": {
+                  "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+                },
+                "NeedsSeekConsumeMaintainDistanceRange": {
+                  "Compute": "NeedsSeekConsumeMaintainDistanceRange"
+                },
                 "NeedsSeekConsumeAnimation": {
                   "Compute": "NeedsSeekConsumeAnimation"
                 },
@@ -1168,6 +1182,12 @@
                 "NeedsSeekResourceType": "FoodContainer",
                 "NeedsSeekConsumeStartDistance": {
                   "Compute": "NeedsSeekConsumeStartDistance"
+                },
+                "NeedsSeekConsumeMaintainMaxDistance": {
+                  "Compute": "NeedsSeekConsumeMaintainMaxDistance"
+                },
+                "NeedsSeekConsumeMaintainDistanceRange": {
+                  "Compute": "NeedsSeekConsumeMaintainDistanceRange"
                 },
                 "NeedsSeekConsumeAnimation": {
                   "Compute": "NeedsSeekConsumeAnimation"

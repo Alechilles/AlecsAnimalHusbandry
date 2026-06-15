@@ -3,7 +3,9 @@
   "Reference": "AH_Template_Predator_Tamed",
   "Modify": {
     "Appearance": "Emberwulf",
-    "NeedsSeekConsumeStartDistance": 3,
+    "NeedsSeekConsumeStartDistance": 2.25,
+    "NeedsSeekConsumeMaintainMaxDistance": 2,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 2],
     "AttitudeGroup": "AH_Predator_Tamed",
     "DropList": "Drop_Emberwulf",
     "MaxHealth": 193,
