@@ -56,7 +56,7 @@
         ]
       },
       {
-        "$Comment": "While airborne, keep descending toward a valid landing spot.",
+        "$Comment": "While airborne, let Tamework's targeted landing controller fly toward the configured landing spot.",
         "Continue": true,
         "Sensor": {
           "Type": "MotionController",
@@ -73,42 +73,8 @@
             ]
           },
           {
-            "Sensor": {
-              "Type": "AdjustPosition",
-              "Offset": [
-                0,
-                1,
-                0
-              ],
-              "Sensor": {
-                "Type": "SearchRay",
-                "Name": "HoldLandingRay",
-                "Range": {
-                  "Compute": "HoldLandingSearchRange"
-                },
-                "Angle": {
-                  "Compute": "HoldLandingSearchAngle"
-                },
-                "Blocks": "Gaia"
-              }
-            },
             "BodyMotion": {
-              "Type": "Land",
-              "SlowDownDistance": {
-                "Compute": "HoldLandingSlowDownDistance"
-              },
-              "StopDistance": {
-                "Compute": "HoldLandingStopDistance"
-              },
-              "GoalLenience": {
-                "Compute": "HoldLandingGoalLenience"
-              }
-            }
-          },
-          {
-            "BodyMotion": {
-              "Type": "Wander",
-              "RelativeSpeed": 0.1
+              "Type": "Nothing"
             }
           }
         ]
