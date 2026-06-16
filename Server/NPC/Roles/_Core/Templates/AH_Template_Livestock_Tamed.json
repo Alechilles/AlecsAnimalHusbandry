@@ -21,6 +21,21 @@
       ],
       "Description": "Cooldown range in seconds between low-hunger food thought particle cues."
     },
+    "ThirstThoughtThresholdRatio": {
+      "Value": 0.25,
+      "Description": "Normalized thirst ratio at or below which the NPC shows its water thought particles."
+    },
+    "ThirstThoughtCooldownRange": {
+      "Value": [
+        30,
+        45
+      ],
+      "Description": "Cooldown range in seconds between critical-thirst water thought particle cues."
+    },
+    "WaterThoughtParticles": {
+      "Value": "Want_Water",
+      "Description": "The particle system that spawns to indicate the NPC wants water."
+    },
     "SeparationDistance": {
       "Value": 1,
       "Description": "The separation distance between this and other NPCs."
@@ -659,6 +674,70 @@
         {
           "Type": "TimerRestart",
           "Name": "Hunger_FoodThought_Cooldown"
+        }
+      ]
+    },
+    {
+      "$Comment": "Show water thought particles while thirst is critically low.",
+      "Continue": true,
+      "Sensor": {
+        "Type": "And",
+        "Sensors": [
+          {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Idle"
+              },
+              {
+                "Type": "State",
+                "State": "Hold"
+              },
+              {
+                "Type": "State",
+                "State": "Follow"
+              }
+            ]
+          },
+          {
+            "Type": "TameworkNeedBelow",
+            "Need": "Thirst",
+            "RatioBelow": {
+              "Compute": "ThirstThoughtThresholdRatio"
+            }
+          },
+          {
+            "Type": "Timer",
+            "Name": "Thirst_WaterThought_Cooldown",
+            "State": "Stopped"
+          }
+        ]
+      },
+      "Actions": [
+        {
+          "Type": "SpawnParticles",
+          "ParticleSystem": {
+            "Compute": "WaterThoughtParticles"
+          },
+          "Offset": {
+            "Compute": "ParticleOffset"
+          },
+          "TargetNodeName": "Head"
+        },
+        {
+          "Type": "TimerStart",
+          "Name": "Thirst_WaterThought_Cooldown",
+          "StartValueRange": {
+            "Compute": "ThirstThoughtCooldownRange"
+          },
+          "RestartValueRange": {
+            "Compute": "ThirstThoughtCooldownRange"
+          }
+        },
+        {
+          "Type": "TimerRestart",
+          "Name": "Thirst_WaterThought_Cooldown"
         }
       ]
     },
