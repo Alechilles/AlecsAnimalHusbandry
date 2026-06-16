@@ -38,12 +38,12 @@
 <ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-coops">Alec's Coops!</a></li>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags!</a></li>
-<li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-cats">Alec's Cats!</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-wildlife-skins">Celly's Wildlife Skins</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/mmo-skill-tree-taming-skill-pack-alecs-tamework">Taming Addon for MMO Skills</a></li>
 </ul>
@@ -248,11 +248,7 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
   </tr>
   <tr>
     <td style="border: 1px solid #e6ded8; padding: 10px;"><strong>Neutral Wildlife</strong></td>
-    <td style="border: 1px solid #e6ded8; padding: 10px;">Antelope, Armadillo, Crab, Deer Doe, Deer Stag, Hatworm, Horse Skeleton, Horse Skeleton Armored, Lizard Sand, Lobster, Moose Bull, Moose Cow, Spark Living, Tortoise, Trillodon.</td>
-  </tr>
-  <tr>
-    <td style="border: 1px solid #e6ded8; padding: 10px;"><strong>Aerial Animals (Alpha)</strong></td>
-    <td style="border: 1px solid #e6ded8; padding: 10px;">Bluebird, Flamingo, Penguin, Tetrabird.</td>
+    <td style="border: 1px solid #e6ded8; padding: 10px;">Antelope, Armadillo, Crab, Deer Doe, Deer Stag, Flamingo, Hatworm, Horse Skeleton, Horse Skeleton Armored, Lizard Sand, Lobster, Moose Bull, Moose Cow, Penguin, Spark Living, Tetrabird, Tortoise, Trillodon.</td>
   </tr>
   <tr>
     <td style="border: 1px solid #e6ded8; padding: 10px;"><strong>Critters and Cactee Variants</strong></td>
@@ -263,8 +259,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
     <td style="border: 1px solid #e6ded8; padding: 10px;">Bear Grizzly, Bear Polar, Crocodile, Emberwulf, Fen Stalker, Fox, Fox Arctic, Hyena, Larva Silk, Leopard Snow, Molerat, Raptor Cave, Rat, Rex Cave, Scorpion, Slug Magma, Snake Cobra, Snake Marsh, Snake Rattle, Snapdragon, Spider, Spider Cave, Tiger Sabertooth, Toad Rhino, Toad Rhino Magma, Wolf Black, Wolf White, Yeti.</td>
   </tr>
 </table>
-
-<p><strong>Aerial/bird support is alpha:</strong> Bluebird, Flamingo, Penguin, and Tetrabird companion behavior includes new flying follow, hold, and landing controls that may still need tuning.</p>
 
 <p><strong>Baby animals:</strong> Baby animals are supported for all animals that have dedicated baby models, as well as babies added by <a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals" target="_blank" rel="noopener noreferrer">Celly's Baby Animals</a>. Animals that do not have dedicated baby models will spawn miniature versions of the adult models as babies.</p>
 
