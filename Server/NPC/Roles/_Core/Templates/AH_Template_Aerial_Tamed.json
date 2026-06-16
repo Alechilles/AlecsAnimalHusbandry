@@ -454,11 +454,11 @@
       "Description": "The translation key for the NPC name display"
     },
     "MinHeightOverGround": {
-      "Value": 4,
+      "Value": 6,
       "Description": "Minimum flight height over ground."
     },
     "MaxHeightOverGround": {
-      "Value": 12,
+      "Value": 14,
       "Description": "Maximum flight height over ground."
     }
   },
@@ -525,7 +525,8 @@
         "Compute": "MaxHeightOverGround"
       },
       "MaxRollAngle": 180,
-      "MaxTurnSpeed": 360
+      "MaxTurnSpeed": 360,
+      "DesiredAltitudeWeight": 1
     },
     {
       "Type": "Walk",
@@ -2197,8 +2198,8 @@
             "Modify": {
               "MasterTargetSlot": "MasterTarget",
               "FollowDesiredAltitudeRange": [
-                4,
-                8
+                6,
+                10
               ],
               "FollowTeleportThresholdRange": 32,
               "FollowSeekSlowDownDistance": 10,
