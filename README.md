@@ -37,10 +37,10 @@
 <H2>Required:</H2>
 <ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-coops">Alec's Coops!</a></li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-coops">Alec's Coops!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-nametags">Alec's Nametags!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-cats">Alec's Cats!</a></li>
 <li><a href="https://www.curseforge.com/hytale/mods/cellys-baby-animals">Celly's Baby Animals</a></li>

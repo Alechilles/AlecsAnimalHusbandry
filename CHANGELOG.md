@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 1.6.4 - Dependency Metadata Hotfix - 2026-06-16
+
+### Changed
+- Updated release metadata for manifest version `1.6.4`.
+- Updated packaged README and CurseForge relationships so Alec's Tamework is the only required dependency, while Alec's Coops, Alec's Nametags, Celly's Baby Animals, and Celly's Wildlife Skins are recommended optional integrations.
+
+### Fixed
+- Added load-order metadata so Animal Husbandry loads before Celly's Baby Animals and Celly's Wildlife Skins when those optional mods are installed.
+
 ## 1.6.3 - Aerial Companion Alpha and Needs Fixes - 2026-06-16
 
 ### Added
