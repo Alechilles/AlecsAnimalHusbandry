@@ -20,7 +20,10 @@
   "OptionalDependencies": {
     "Alechilles:Alec's Nametags!": "*"
   },
-  "LoadBefore": {},
+  "LoadBefore": {
+    "excellynt:Celly's Baby Animals": "*",
+    "excellynt:Celly's Wildlife Skins": "*"
+  },
   "DisabledByDefault": false,
   "IncludesAssetPack": true,
   "SubPlugins": [],
