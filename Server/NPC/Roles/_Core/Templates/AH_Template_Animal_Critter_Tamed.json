@@ -59,6 +59,17 @@
       "Value": [ 0, 0.6, 0 ],
       "Description": "The offset of any spawned particle systems."
     },
+    "HungerThoughtThresholdRatio": {
+      "Value": 0.25,
+      "Description": "Normalized hunger ratio at or below which the NPC shows its food thought particles."
+    },
+    "HungerThoughtCooldownRange": {
+      "Value": [
+        30,
+        45
+      ],
+      "Description": "Cooldown range in seconds between low-hunger food thought particle cues."
+    },
     "IsTameable": {
       "Value": false,
       "Description": "Whether this NPC can be tamed."
@@ -271,6 +282,70 @@
                   "ToCurrent": true
                 }
               ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Show food thought particles while hunger is critically low.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Idle"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Hold"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  }
+                ]
+              },
+              {
+                "Type": "TameworkNeedBelow",
+                "Need": "Hunger",
+                "RatioBelow": {
+                  "Compute": "HungerThoughtThresholdRatio"
+                }
+              },
+              {
+                "Type": "Timer",
+                "Name": "Hunger_FoodThought_Cooldown",
+                "State": "Stopped"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": {
+                "Compute": "AttractiveItemSetParticles"
+              },
+              "Offset": {
+                "Compute": "ParticleOffset"
+              },
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "TimerStart",
+              "Name": "Hunger_FoodThought_Cooldown",
+              "StartValueRange": {
+                "Compute": "HungerThoughtCooldownRange"
+              },
+              "RestartValueRange": {
+                "Compute": "HungerThoughtCooldownRange"
+              }
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Hunger_FoodThought_Cooldown"
             }
           ]
         },
