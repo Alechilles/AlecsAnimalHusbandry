@@ -559,7 +559,8 @@
           "From": [
             "Idle",
             "Follow",
-            "Hold"
+            "Hold",
+            "HoldGrounded"
           ],
           "To": [
             "Sleep"
@@ -575,7 +576,8 @@
       "States": [
         {
           "From": [
-            "Hold"
+            "Hold",
+            "HoldGrounded"
           ],
           "To": [
             "Sleep"
@@ -663,6 +665,7 @@
             "Alerted",
             "Flee",
             "Hold",
+            "HoldGrounded",
             "Defend"
           ]
         }
@@ -1055,6 +1058,10 @@
         {
           "Type": "State",
           "State": "Hold"
+        },
+        {
+          "Type": "State",
+          "State": "HoldGrounded"
         },
         {
           "Type": "State",
@@ -2169,39 +2176,39 @@
           },
           "Sensor": {
             "Type": "State",
-            "State": "Follow"
-          },
-          "Instructions": [
-            {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "TameworkSetFlyingCompanionMode",
-                  "Mode": "Follow"
-                }
-              ]
+          "State": "Follow"
+        },
+        "Instructions": [
+          {
+            "Continue": true,
+            "Sensor": {
+              "Type": "Any",
+              "Once": true
             },
-            {
-              "Reference": "AH_Component_Tamework_Instruction_Follow_Flying",
-              "Modify": {
-                "MasterTargetSlot": "MasterTarget",
-                "FollowDesiredAltitudeRange": [
-                  4,
-                  8
-                ],
-                "FollowTeleportThresholdRange": 32,
-                "FollowSeekSlowDownDistance": 10,
-                "FollowSeekStopDistance": 6,
-                "FollowSeekRelativeSpeed": 0.9,
-                "FollowHoverRadius": 1.75,
-                "FollowHoverRelativeSpeed": 0.12
+            "Actions": [
+              {
+                "Type": "TameworkSetFlyingCompanionMode",
+                "Mode": "Follow"
               }
+            ]
+          },
+          {
+            "Reference": "AH_Component_Tamework_Instruction_Follow_Flying",
+            "Modify": {
+              "MasterTargetSlot": "MasterTarget",
+              "FollowDesiredAltitudeRange": [
+                4,
+                8
+              ],
+              "FollowTeleportThresholdRange": 32,
+              "FollowSeekSlowDownDistance": 10,
+              "FollowSeekStopDistance": 6,
+              "FollowSeekRelativeSpeed": 0.9,
+              "FollowHoverRadius": 1.75,
+              "FollowHoverRelativeSpeed": 0.12
             }
-          ]
+          }
+        ]
         },
         {
           "$Comment": "Command hold state used by Tamework mode cycle.",
@@ -2211,11 +2218,11 @@
           "Sensor": {
             "Type": "State",
             "State": "Hold"
-          },
-          "Instructions": [
-            {
-              "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
-              "Continue": true,
+        },
+        "Instructions": [
+          {
+            "$Comment": "Refresh the base leash point when command hold settles the NPC in place.",
+            "Continue": true,
               "Sensor": {
                 "Type": "Any",
                 "Once": true
@@ -2224,31 +2231,51 @@
                 {
                   "Type": "SetLeashPosition",
                   "ToCurrent": true
-                }
-              ]
+              }
+            ]
+          },
+          {
+            "Continue": true,
+            "Sensor": {
+              "Type": "Any",
+              "Once": true
             },
+            "Actions": [
+              {
+                "Type": "TameworkSetFlyingCompanionMode",
+                "Mode": "Hold",
+                "LandingState": "Hold",
+                "GroundedState": "HoldGrounded",
+                "DescendStep": 0.12,
+                "ReissueDelayMs": 50,
+                "GroundedStableTicks": 3,
+                "VerticalMovementEpsilon": 0.15,
+                "LandingTargetSlot": "MasterTarget"
+              }
+            ]
+          },
+          {
+            "Reference": "AH_Component_Tamework_Instruction_Hold_Flying",
+            "Modify": {
+                "_ExportStates": [
+                  "Sleep"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "$Comment": "Grounded hold state reached after aerial companions land beside the owner.",
+          "Enabled": {
+            "Compute": "CanHold"
+          },
+          "Sensor": {
+            "Type": "State",
+            "State": "HoldGrounded"
+          },
+          "Instructions": [
             {
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "TameworkSetFlyingCompanionMode",
-                  "Mode": "Hold",
-                  "LandingState": "Hold",
-                  "GroundedState": "Hold",
-                  "DescendStep": 0.12,
-                  "ReissueDelayMs": 50,
-                  "GroundedStableTicks": 3,
-                  "VerticalMovementEpsilon": 0.15,
-                  "LandingTargetSlot": "MasterTarget"
-                }
-              ]
-            },
-            {
-              "Reference": "Component_Tamework_Instruction_Hold",
+              "Reference": "AH_Component_Tamework_Instruction_Hold_Flying",
               "Modify": {
                 "_ExportStates": [
                   "Sleep"
