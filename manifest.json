@@ -15,10 +15,11 @@
   "ServerVersion": "0.5.x",
   "Dependencies": {
     "Alechilles:Alec's Tamework!": "2.14.x",
-    "Alechilles:Alec's Nametags!": "*",
     "Alechilles:Alec's Coops!": "*"
   },
-  "OptionalDependencies": {},
+  "OptionalDependencies": {
+    "Alechilles:Alec's Nametags!": "*"
+  },
   "LoadBefore": {},
   "DisabledByDefault": false,
   "IncludesAssetPack": true,
