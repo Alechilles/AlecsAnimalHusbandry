@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 1.6.5 - Telemetry Stats and Dependency Alignment - 2026-06-18
+
+### Added
+- Added a telemetry consent icon and stats descriptor for Alec's Animal Husbandry so hosted usage summaries can be enabled through the shared consent flow.
+
+### Changed
+- Updated release metadata for manifest version `1.6.5`, Alec's Tamework `2.15.x`, Hytale `0.5.x`, and Modtale `0.5.3`.
+
+### Fixed
+- Fixed CurseForge release relationships so Alec's Coops and Alec's Nametags remain recommended optional integrations instead of required dependencies.
+- Updated hosted telemetry stats routing to the current Alec telemetry ingest endpoint used by the shared rollout.
+
 ## 1.6.4 - Dependency Metadata Hotfix - 2026-06-16
 
 ### Changed
