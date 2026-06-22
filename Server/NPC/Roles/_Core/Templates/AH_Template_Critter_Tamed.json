@@ -75,6 +75,18 @@
     "CanBreedPair": {
       "Value": true,
       "Description": "Whether breeding pair approach behavior is enabled for this role."
+    },
+    "NeedsSeekConsumeStartDistance": {
+      "Value": 1.5,
+      "Description": "Distance from trough/source where this critter can begin needs consumption."
+    },
+    "NeedsSeekConsumeMaintainMaxDistance": {
+      "Value": 1.25,
+      "Description": "Maximum distance from trough/source this critter should maintain while consuming."
+    },
+    "NeedsSeekConsumeMaintainDistanceRange": {
+      "Value": [ 1, 1.25 ],
+      "Description": "Distance band this critter should maintain while waiting to consume."
     }
   },
   "Modify": {
@@ -95,6 +107,9 @@
     "CanFollow": { "Compute": "CanFollow" },
     "CanHold": { "Compute": "CanHold" },
     "CanRecall": { "Compute": "CanRecall" },
-    "CanBreedPair": { "Compute": "CanBreedPair" }
+    "CanBreedPair": { "Compute": "CanBreedPair" },
+    "NeedsSeekConsumeStartDistance": { "Compute": "NeedsSeekConsumeStartDistance" },
+    "NeedsSeekConsumeMaintainMaxDistance": { "Compute": "NeedsSeekConsumeMaintainMaxDistance" },
+    "NeedsSeekConsumeMaintainDistanceRange": { "Compute": "NeedsSeekConsumeMaintainDistanceRange" }
   }
 }
