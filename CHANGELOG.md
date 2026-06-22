@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.6.6 - Critter Needs Template Hotfix - 2026-06-22
+
+### Changed
+- Updated release metadata for manifest version `1.6.6`.
+
+### Fixed
+- Added the missing tamed critter needs-consume distance parameters to `AH_Template_Critter_Tamed` so direct critter role overrides for trough/source approach and maintain distances resolve through the shared template.
+
 ## 1.6.5 - Telemetry Stats and Dependency Alignment - 2026-06-18
 
 ### Added
