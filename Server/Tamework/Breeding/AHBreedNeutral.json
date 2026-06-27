@@ -5,6 +5,8 @@
     "Tamed_Antelope",
     "Tamed_Armadillo",
     "Tamed_Crab",
+    "Deer_Doe",
+    "Deer_Stag",
     "Tamed_Deer_Doe",
     "Tamed_Deer_Stag",
     "Tamed_Bluebird",
@@ -86,6 +88,54 @@
     "AdultSwitchScale": 1.2
   },
   "RoleOverrides": {
+    "Deer_Doe": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Deer_Doe",
+                "Gender": "Female",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Deer_Stag",
+                "Gender": "Male",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Deer_Stag": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Deer_Doe",
+                "Gender": "Female",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Deer_Stag",
+                "Gender": "Male",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
     "Tamed_Deer_Doe": {
       "Pairing": {
         "RoleCompatibility": "DifferentFamilyRole"

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Fixed
+- Locked deer role gender assignment so `Deer_Doe` resolves female and `Deer_Stag` resolves male before and after taming.
+
 ## 1.6.6 - Critter Needs Template Hotfix - 2026-06-22
 
 ### Changed
