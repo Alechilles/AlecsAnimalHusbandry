@@ -87,6 +87,31 @@ function Assert-PackageInputs {
     }
 }
 
+function Get-NormalizedZipInclude {
+    param([string]$Path)
+
+    return (($Path.Trim()) -replace "\\", "/").Trim("/")
+}
+
+function Assert-ZipIncludesHaveNoAncestorConflicts {
+    param([object]$ZipIncludes)
+
+    $normalizedIncludes = @($ZipIncludes | ForEach-Object { Get-NormalizedZipInclude -Path ([string]$_) })
+    for ($i = 0; $i -lt $normalizedIncludes.Count; $i++) {
+        for ($j = 0; $j -lt $normalizedIncludes.Count; $j++) {
+            if ($i -eq $j) {
+                continue
+            }
+
+            $parent = $normalizedIncludes[$i]
+            $child = $normalizedIncludes[$j]
+            if ($child.StartsWith("$parent/", [StringComparison]::OrdinalIgnoreCase)) {
+                throw "Zip include '$child' is nested under zip include '$parent'. Include only '$parent' to avoid nested package paths."
+            }
+        }
+    }
+}
+
 if (-not (Test-Path -Path $ConfigPath)) {
     throw "Release config '$ConfigPath' was not found."
 }
@@ -101,6 +126,9 @@ if ($sourceVersion -ne $normalizedVersion) {
 
 Assert-ChangelogHasVersion -ChangelogPath "CHANGELOG.md" -NormalizedVersion $normalizedVersion
 Assert-PackageInputs -Config $config
+if ($config.packaging -eq "zip") {
+    Assert-ZipIncludesHaveNoAncestorConflicts -ZipIncludes $config.zipIncludes
+}
 
 $localizationCoverageScript = Join-Path $PSScriptRoot "..\tools\check-ah-localization-coverage.ps1"
 if (-not (Test-Path -LiteralPath $localizationCoverageScript)) {
