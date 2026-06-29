@@ -18,7 +18,7 @@
 - Locked moose role gender assignment so `Moose_Cow` resolves female and `Moose_Bull` resolves male before and after taming.
 - Added wild role coverage to AH breeding configs so untamed Tamework-supported animals can resolve gender before taming.
 - Updated critter lure targeting to use player lock-on checks, improving critter response when players hold attractive taming items.
-- Restored the telemetry project descriptor to the root package path required by the release ZIP contract.
+- Moved the telemetry project descriptor to `Server/Telemetry/project.json` to match Alec's Telemetry's updated descriptor lookup path.
 
 ## 1.6.6 - Critter Needs Template Hotfix - 2026-06-22
 
