@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## 1.6.7 - Food Profiles and Companion Inspection Polish - 2026-06-28
+## 1.7.0 - Food Profiles, Companion Inspection Polish, and Package Layout Fix - 2026-06-29
 
 ### Added
 - Added explicit Tamework food profiles for animals using the neutral, beast, and critter templates, so HUD food displays and feeding logic use each animal's tame food as its preferred food and show compatible crafted feed options after taming.
@@ -11,7 +11,7 @@
 
 ### Changed
 - Updated food-item README and wiki guidance so crafted-feed happiness notes now point players to the command HUD's per-animal food profile details instead of describing a single generic-feed penalty.
-- Updated release metadata for manifest version `1.6.7`.
+- Updated release metadata for manifest version `1.7.0`.
 
 ### Fixed
 - Locked deer role gender assignment so `Deer_Doe` resolves female and `Deer_Stag` resolves male before and after taming.
@@ -19,6 +19,7 @@
 - Added wild role coverage to AH breeding configs so untamed Tamework-supported animals can resolve gender before taming.
 - Updated critter lure targeting to use player lock-on checks, improving critter response when players hold attractive taming items.
 - Moved the telemetry project descriptor to `Server/Telemetry/project.json` to match Alec's Telemetry's updated descriptor lookup path.
+- Fixed the release ZIP layout so server assets package under `Server/...` instead of `Server/Server/...`, restoring packaged item definitions such as the Animal Control Flute and Combat Beast Flute.
 
 ## 1.6.6 - Critter Needs Template Hotfix - 2026-06-22
 
