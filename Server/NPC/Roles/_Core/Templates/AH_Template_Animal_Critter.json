@@ -204,27 +204,13 @@
             {
               "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet)" },
               "Sensor": {
-                "Type": "And",
-                "Sensors": [
+                "Type": "Player",
+                "Range": { "Compute": "ViewRange" },
+                "LockOnTarget": true,
+                "Filters": [
                   {
-                    "Reference": "Component_Sensor_Standard_Detection",
-                    "Modify": {
-                      "ViewRange": { "Compute": "ViewRange" },
-                      "ViewSector": { "Compute": "ViewSector" },
-                      "HearingRange": { "Compute": "HearingRange" },
-                      "AbsoluteDetectionRange": 4,
-                      "Attitudes": [ "Revered", "Friendly", "Ignore", "Hostile" ],
-                      "GetNPCs": false
-                    }
-                  },
-                  {
-                    "Type": "Target",
-                    "Filters": [
-                      {
-                        "Type": "ItemInHand",
-                        "Items": { "Compute": "AttractiveItemSet" }
-                      }
-                    ]
+                    "Type": "ItemInHand",
+                    "Items": { "Compute": "AttractiveItemSet" }
                   }
                 ]
               },

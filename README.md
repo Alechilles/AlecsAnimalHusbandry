@@ -150,8 +150,8 @@ The demo instancing and tutorial system is an alpha project, so please expect to
     Animals need access to food, water, and protected space to roam and socialize.
     <ul>
       <li>Use <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/feed-trough" target="_blank" rel="noopener noreferrer">Feed Troughs</a> to give your animals food and water.</li>
-      <li>Animals will only eat their preferred food, which is also used for taming, or <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/feed-items" target="_blank" rel="noopener noreferrer">generic feed</a> crafted at a Farming Bench.</li>
-      <li>Generic feed inhibits breeding due to unhappiness, but they will not starve.</li>
+      <li>Animals will only eat their preferred food, which is also used for taming, or <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/feed-items" target="_blank" rel="noopener noreferrer">crafted feed</a> that matches their food profile.</li>
+      <li>The command HUD shows each animal's food options and happiness effects.</li>
       <li>Passive breeding occurs with high happiness and is toggled per animal in the command flute interface.</li>
     </ul>
   </li>

@@ -1,0 +1,42 @@
+{
+  "Enabled": true,
+  "Priority": 110,
+  "RoleIds": [],
+  "Foods": {
+    "Preferred": [],
+    "Premium": [],
+    "Compatible": [
+      "Tw_Feed_Herbivore",
+      "Tw_Feed_Carnivore"
+    ],
+    "Disliked": []
+  },
+  "Happiness": {
+    "Preferred": 5,
+    "Premium": 10,
+    "Compatible": -8,
+    "Disliked": -10
+  },
+  "RoleOverrides": {
+    "Cactee": { "Foods": { "Preferred": [ "Plant_Crop_Chilli_Item" ] } },
+    "Tamed_Cactee": { "Foods": { "Preferred": [ "Plant_Crop_Chilli_Item" ] } },
+    "Frog_Blue": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Tamed_Frog_Blue": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Frog_Green": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Tamed_Frog_Green": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Frog_Orange": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Tamed_Frog_Orange": { "Foods": { "Preferred": [ "Food_Fish_Raw" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Gecko": { "Foods": { "Preferred": [ "Food_Egg" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Tamed_Gecko": { "Foods": { "Preferred": [ "Food_Egg" ], "Compatible": [ "Tw_Feed_Carnivore" ] } },
+    "Meerkat": { "Foods": { "Preferred": [ "Food_Wildmeat_Raw" ] } },
+    "Tamed_Meerkat": { "Foods": { "Preferred": [ "Food_Wildmeat_Raw" ] } },
+    "Mouse": { "Foods": { "Preferred": [ "Plant_Crop_Corn_Item" ] } },
+    "Tamed_Mouse": { "Foods": { "Preferred": [ "Plant_Crop_Corn_Item" ] } },
+    "Snail_Frost": { "Foods": { "Preferred": [ "Plant_Crop_Lettuce_Item" ] } },
+    "Tamed_Snail_Frost": { "Foods": { "Preferred": [ "Plant_Crop_Lettuce_Item" ] } },
+    "Snail_Magma": { "Foods": { "Preferred": [ "Plant_Crop_Chilli_Item" ] } },
+    "Tamed_Snail_Magma": { "Foods": { "Preferred": [ "Plant_Crop_Chilli_Item" ] } },
+    "Squirrel": { "Foods": { "Preferred": [ "Plant_Fruit_Apple" ] } },
+    "Tamed_Squirrel": { "Foods": { "Preferred": [ "Plant_Fruit_Apple" ] } }
+  }
+}

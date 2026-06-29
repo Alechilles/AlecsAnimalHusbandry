@@ -2,36 +2,63 @@
   "Enabled": true,
   "Priority": 100,
   "RoleIds": [
+    "Antelope",
     "Tamed_Antelope",
+    "Armadillo",
     "Tamed_Armadillo",
+    "Crab",
     "Tamed_Crab",
     "Deer_Doe",
     "Deer_Stag",
     "Tamed_Deer_Doe",
     "Tamed_Deer_Stag",
+    "Bluebird",
     "Tamed_Bluebird",
+    "Flamingo",
     "Tamed_Flamingo",
+    "Hatworm",
     "Tamed_Hatworm",
+    "Horse_Skeleton",
     "Tamed_Horse_Skeleton",
+    "Horse_Skeleton_Armored",
     "Tamed_Horse_Skeleton_Armored",
+    "Lizard_Sand",
     "Tamed_Lizard_Sand",
+    "Lobster",
     "Tamed_Lobster",
+    "Moose_Bull",
+    "Moose_Cow",
     "Tamed_Moose_Bull",
     "Tamed_Moose_Cow",
+    "Penguin",
     "Tamed_Penguin",
+    "Spark_Living",
     "Tamed_Spark_Living",
+    "Tetrabird",
     "Tamed_Tetrabird",
+    "Tortoise",
     "Tamed_Tortoise",
+    "Trillodon",
     "Tamed_Trillodon",
+    "Cactee",
     "Tamed_Cactee",
+    "Frog_Blue",
     "Tamed_Frog_Blue",
+    "Frog_Green",
     "Tamed_Frog_Green",
+    "Frog_Orange",
     "Tamed_Frog_Orange",
+    "Gecko",
     "Tamed_Gecko",
+    "Meerkat",
     "Tamed_Meerkat",
+    "Mouse",
     "Tamed_Mouse",
+    "Squirrel",
     "Tamed_Squirrel",
+    "Snail_Frost",
     "Tamed_Snail_Frost",
+    "Snail_Magma",
     "Tamed_Snail_Magma"
   ],
   "Happiness": {
@@ -176,6 +203,54 @@
               {
                 "RoleId": "Tamed_Deer_Stag",
                 "Gender": "Male",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Moose_Bull": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Moose_Bull",
+                "Gender": "Male",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Moose_Cow",
+                "Gender": "Female",
+                "Weight": 1.0
+              }
+            ],
+            "TimeToFullGrownMinutes": 90
+          }
+        ]
+      }
+    },
+    "Moose_Cow": {
+      "Pairing": {
+        "RoleCompatibility": "DifferentFamilyRole"
+      },
+      "OffspringLifecycle": {
+        "Families": [
+          {
+            "AdultRoles": [
+              {
+                "RoleId": "Moose_Bull",
+                "Gender": "Male",
+                "Weight": 1.0
+              },
+              {
+                "RoleId": "Moose_Cow",
+                "Gender": "Female",
                 "Weight": 1.0
               }
             ],

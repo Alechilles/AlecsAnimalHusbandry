@@ -46,7 +46,7 @@ These items are useful for both livestock and Beast management.
 
 | Item | Use |
 |---|---|
-| [Feed Items](/mod/alecs-animal-husbandry/feed-items) | Herbivore/carnivore feed recipes and generic feed happiness penalty notes |
+| [Feed Items](/mod/alecs-animal-husbandry/feed-items) | Herbivore/carnivore feed recipes and food-profile happiness notes |
 | [Feed Trough](/mod/alecs-animal-husbandry/feed-trough) | Trough behavior, water-charge refills, and bucket recipe/details |
 
 ## Reference Tables

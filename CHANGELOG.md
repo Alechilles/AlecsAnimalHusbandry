@@ -2,8 +2,23 @@
 
 ## Unreleased
 
+## 1.6.7 - Food Profiles and Companion Inspection Polish - 2026-06-28
+
+### Added
+- Added explicit Tamework food profiles for animals using the neutral, beast, and critter templates, so HUD food displays and feeding logic use each animal's tame food as its preferred food and show compatible crafted feed options after taming.
+- Added Arctic Fox localization coverage and a validation script to keep wild and tamed Arctic Fox role names aligned across supported languages.
+- Added translated command-flute description guidance that tells players they can look at an animal to inspect it.
+
+### Changed
+- Updated food-item README and wiki guidance so crafted-feed happiness notes now point players to the command HUD's per-animal food profile details instead of describing a single generic-feed penalty.
+- Updated release metadata for manifest version `1.6.7`.
+
 ### Fixed
 - Locked deer role gender assignment so `Deer_Doe` resolves female and `Deer_Stag` resolves male before and after taming.
+- Locked moose role gender assignment so `Moose_Cow` resolves female and `Moose_Bull` resolves male before and after taming.
+- Added wild role coverage to AH breeding configs so untamed Tamework-supported animals can resolve gender before taming.
+- Updated critter lure targeting to use player lock-on checks, improving critter response when players hold attractive taming items.
+- Restored the telemetry project descriptor to the root package path required by the release ZIP contract.
 
 ## 1.6.6 - Critter Needs Template Hotfix - 2026-06-22
 

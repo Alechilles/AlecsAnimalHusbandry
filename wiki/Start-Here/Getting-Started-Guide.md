@@ -19,8 +19,8 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 
 3. Animals [need](#health-and-happiness) access to food, water, and protected space to roam and socialize.
-   - Animals will only eat their preferred food (used for taming), or generic feed crafted at a Farming Bench.
-   - Generic feed inhibits breeding due to unhappiness, but they won't starve.
+   - Animals will only eat their preferred food (used for taming), or crafted feed that matches their food profile.
+   - The command HUD shows each animal's food options and happiness effects.
    - Passive breeding occurs with high happiness and is toggled per animal in the command flute interface.
 
 4. Safely transport animals with the Soul Lantern, crafted at a Farming Bench.

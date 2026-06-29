@@ -10,10 +10,10 @@ Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/ale
 
 These care items are provided by **Alec's Tamework** and are used by Animal Husbandry companions.
 
-## Generic Feed Happiness Penalty
-- Generic feed is a fallback care option, not a premium food source.
-- Each time a companion eats **Herbivore Feed** or **Carnivore Kibble**, it applies a **-10 happiness** debuff for 15 minutes.
-- Use species-preferred foods when possible if you want to keep happiness stable for breeding.
+## Crafted Feed Happiness
+- Crafted feed is a fallback care option, not a species-preferred food source.
+- The happiness effect depends on the animal's food profile. Use the command-item HUD to compare the exact effect for that animal.
+- Use species-preferred foods when possible if you want the best happiness gain for breeding.
 
 ![Herbivore Feed](https://github.com/user-attachments/assets/3cc8fce0-18b5-4a6f-8bf5-4189f2655c3d)
 
