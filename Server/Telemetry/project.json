@@ -2,22 +2,11 @@
   "schemaVersion": 1,
   "projectId": "alecs-animal-husbandry",
   "displayName": "Alec's Animal Husbandry!",
-  "runtimeMode": "dependency",
-  "capture": {
-    "uncaughtExceptions": false,
-    "setupFailures": false,
-    "startFailures": false,
-    "exceptionalWorldRemovals": false
+  "telemetry": {
+    "stats": {
+      "supported": true
+    }
   },
-  "events": {
-    "errors": { "enabled": false },
-    "lifecycle": { "enabled": false },
-    "breadcrumbs": { "enabled": false, "automatic": false }
-  },
-  "performance": { "enabled": false },
-  "usage": { "enabled": false },
-  "stats": { "enabled": true },
-  "reports": { "enabled": false },
   "ui": {
     "iconTexturePath": "AlecsAnimalHusbandry/Telemetry/ConsentIcon.png"
   },
@@ -26,8 +15,6 @@
     "destinationMode": "hosted"
   },
   "hosted": {
-    "endpoint": "https://telemetry-dev.alecsmods.com/ingest/event",
-    "eventEndpoint": "https://telemetry-dev.alecsmods.com/ingest/event",
     "projectKey": "proj_h5O58_C3DNM6ulEDN3n7lDdd"
   }
 }

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+- Updated the telemetry descriptor to the current stats descriptor schema and removed dev endpoint overrides so Alec's Telemetry uses its default hosted endpoint.
+
 ## 1.7.0 - Food Profiles, Companion Inspection Polish, and Package Layout Fix - 2026-06-29
 
 ### Added
