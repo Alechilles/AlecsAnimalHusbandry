@@ -1,36 +1,6 @@
 {
   "Type": "Variant",
   "Reference": "AH_Template_Predator_Tamed",
-  "Parameters": {
-    "Appearance": {
-      "Value": "Spider",
-      "Description": "Model to be used."
-    },
-    "DropList": {
-      "Value": "Drop_Spider",
-      "Description": "Drop Items."
-    },
-    "MaxHealth": {
-      "Value": 45,
-      "Description": "Max Health."
-    },
-    "BlockStepDetectionBlockSet": {
-      "Value": "",
-      "Description": "The name of the passive detection component"
-    },
-    "BlockStepDetectionIncludeNPCs": {
-      "Value": true,
-      "Description": "Whether block steps from NPCs will be detected."
-    },
-    "BlockStepDetectionRange": {
-      "Value": 20,
-      "Description": "The name of the blockset used for passive detection"
-    },
-    "NameTranslationKey": {
-      "Value": "server.npcRoles.Spider.name",
-      "Description": "Translation key for NPC name display"
-    }
-  },
   "Modify": {
     "NeedsSeekConsumeStartDistance": 1.85,
     "NeedsSeekConsumeMaintainMaxDistance": 1.6,
@@ -48,30 +18,18 @@
     "ViewRange": 6,
     "HearingRange": 8,
     "AlertedRange": 10,
-    "AlertedTime": [
-      2,
-      2
-    ],
+    "AlertedTime": [2, 2],
     "FleeIfNotThreatened": false,
     "LeashDistance": 30,
     "LeashMinPlayerDistance": 5,
-    "LeashTimer": [
-      3,
-      3
-    ],
+    "LeashTimer": [3, 3],
     "CombatBackOffAfterAttack": false,
     "CombatBehaviorDistance": 4,
     "CombatRelativeTurnSpeed": 1,
     "CombatDirectWeight": 0,
     "CombatStrafeWeight": 10,
-    "CombatStrafingFrequencyRange": [
-      1,
-      2
-    ],
-    "CombatStrafingDurationRange": [
-      2,
-      3
-    ],
+    "CombatStrafingFrequencyRange": [1, 2],
+    "CombatStrafingDurationRange": [2, 3],
     "Attack": "Root_NPC_Spider_Attack",
     "AttackDistance": 3,
     "TargetRange": 3,
@@ -86,10 +44,7 @@
     "BlockStepDetectionRange": {
       "Compute": "BlockStepDetectionRange"
     },
-    "DayTimePeriod": [
-      17.99,
-      6.01
-    ],
+    "DayTimePeriod": [17.99, 6.01],
     "AlwaysSleepAtNight": false,
     "DayTimeNapWeight": 0,
     "TimidDuringDay": false,
@@ -165,9 +120,7 @@
                   "Next": {
                     "Type": "EffectCondition",
                     "Entity": "Target",
-                    "EntityEffectIds": [
-                      "Antidote"
-                    ],
+                    "EntityEffectIds": ["Antidote"],
                     "Match": "None",
                     "Next": {
                       "Type": "ClearEntityEffect",
@@ -205,10 +158,12 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": [
-      "Food_Chicken_Raw"
-    ],
+    "AttractiveItemSet": ["Food_Chicken_Raw"],
     "AttractiveItemSetParticles": "Want_Food_Chicken_Raw",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 0.6,
+    "MountAnchorZ": 0.1,
     "CanFollow": true,
     "CanHold": true,
     "CanDefend": true,
@@ -219,5 +174,35 @@
     "CanSetHome": true,
     "CanBreedPair": true,
     "NeedsSeekConsumeAnimation": ""
+  },
+  "Parameters": {
+    "Appearance": {
+      "Value": "Spider",
+      "Description": "Model to be used."
+    },
+    "DropList": {
+      "Value": "Drop_Spider",
+      "Description": "Drop Items."
+    },
+    "MaxHealth": {
+      "Value": 45,
+      "Description": "Max Health."
+    },
+    "BlockStepDetectionBlockSet": {
+      "Value": "",
+      "Description": "The name of the passive detection component"
+    },
+    "BlockStepDetectionIncludeNPCs": {
+      "Value": true,
+      "Description": "Whether block steps from NPCs will be detected."
+    },
+    "BlockStepDetectionRange": {
+      "Value": 20,
+      "Description": "The name of the blockset used for passive detection"
+    },
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Spider.name",
+      "Description": "Translation key for NPC name display"
+    }
   }
 }

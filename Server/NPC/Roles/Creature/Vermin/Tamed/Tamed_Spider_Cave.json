@@ -78,9 +78,7 @@
                   "Next": {
                     "Type": "EffectCondition",
                     "Entity": "Target",
-                    "EntityEffectIds": [
-                      "Antidote"
-                    ],
+                    "EntityEffectIds": ["Antidote"],
                     "Match": "None",
                     "Next": {
                       "Type": "ClearEntityEffect",
@@ -118,10 +116,12 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": [
-      "Food_Chicken_Raw"
-    ],
+    "AttractiveItemSet": ["Food_Chicken_Raw"],
     "AttractiveItemSetParticles": "Want_Food_Chicken_Raw",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 0.6,
+    "MountAnchorZ": 0.1,
     "CanFollow": true,
     "CanHold": true,
     "CanDefend": true,

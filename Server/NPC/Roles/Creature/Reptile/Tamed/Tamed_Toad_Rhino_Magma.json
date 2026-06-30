@@ -19,10 +19,7 @@
     "LeashDistance": 40,
     "HardLeashDistance": 80,
     "LeashMinPlayerDistance": 8,
-    "LeashTimer": [
-      10,
-      15
-    ],
+    "LeashTimer": [10, 15],
     "ClimbHeight": 3,
     "MinJumpHeight": 2,
     "AscentAnimationType": "Walk",
@@ -83,9 +80,7 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": [
-      "Food_Beef_Raw"
-    ],
+    "AttractiveItemSet": ["Food_Beef_Raw"],
     "AttractiveItemSetParticles": "Want_Food_Beef_Raw",
     "CanFollow": true,
     "CanHold": true,

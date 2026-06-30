@@ -15,53 +15,29 @@
     "HearingRange": 12,
     "AbsoluteDetectionRange": 2,
     "AlertedRange": 18,
-    "AlertedTime": [
-      3,
-      3
-    ],
+    "AlertedTime": [3, 3],
     "MaintainDistanceWhileAlerted": false,
-    "ThreatenDelayRange": [
-      2,
-      2
-    ],
+    "ThreatenDelayRange": [2, 2],
     "ThreatenAnimation": "Howl",
     "FleeIfNotThreatened": false,
     "FleeRange": 11,
     "HardLeashDistance": 60,
     "LeashDistance": 30,
     "LeashMinPlayerDistance": 7,
-    "LeashTimer": [
-      4,
-      5
-    ],
+    "LeashTimer": [4, 5],
     "CombatBehaviorDistance": 6,
     "CombatDirectWeight": 0,
     "CombatStrafeWeight": 10,
     "CombatBackOffAfterAttack": true,
-    "CombatBackOffDistanceRange": [
-      4,
-      5
-    ],
-    "CombatBackOffDurationRange": [
-      3,
-      3
-    ],
+    "CombatBackOffDistanceRange": [4, 5],
+    "CombatBackOffDurationRange": [3, 3],
     "Attack": "Root_NPC_Attack_Melee",
-    "AttackPauseRange": [
-      5,
-      5
-    ],
+    "AttackPauseRange": [5, 5],
     "AttackDistance": 2.5,
     "ChaseRelativeSpeed": 0.65,
     "CombatMovingRelativeSpeed": 0.65,
-    "CombatStrafingDurationRange": [
-      3,
-      3
-    ],
-    "CombatStrafingFrequencyRange": [
-      2,
-      2
-    ],
+    "CombatStrafingDurationRange": [3, 3],
+    "CombatStrafingFrequencyRange": [2, 2],
     "AlwaysSleepAtNight": false,
     "NightFlavorAnimation": "",
     "DayTimeNapWeight": 0,
@@ -101,9 +77,7 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": [
-      "Food_Wildmeat_Raw"
-    ],
+    "AttractiveItemSet": ["Food_Wildmeat_Raw"],
     "AttractiveItemSetParticles": "Want_Food_Wildmeat_Raw",
     "CanFollow": true,
     "CanHold": true,
@@ -114,9 +88,9 @@
     "CanRecall": true,
     "CanSetHome": true,
     "CanBreedPair": true,
-    "IsMountable": false,
+    "IsMountable": true,
     "MountAnchorX": 0,
-    "MountAnchorY": 1.7,
+    "MountAnchorY": 1.9,
     "MountAnchorZ": 0,
     "NeedsSeekConsumeAnimation": ""
   },
