@@ -1,9 +1,11 @@
 # Changelog
 
-## Unreleased
+## 1.7.1 - Mountable Creatures and Telemetry Descriptor Hotfix - 2026-06-30
 
 ### Changed
+- Made tamed crabs, emberwulfs, lobsters, scorpions, spiders, and cave spiders mountable, with mount anchor tuning for each supported role.
 - Updated the telemetry descriptor to the current stats descriptor schema and removed dev endpoint overrides so Alec's Telemetry uses its default hosted endpoint.
+- Updated release metadata for manifest version `1.7.1`.
 
 ## 1.7.0 - Food Profiles, Companion Inspection Polish, and Package Layout Fix - 2026-06-29
 
