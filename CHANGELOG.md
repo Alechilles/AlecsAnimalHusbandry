@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Added a Tamework dynamic attachment rule that gives tamed moose named `Flash` the Canada blanket appearance.
+
 ## 1.7.1 - Mountable Creatures and Telemetry Descriptor Hotfix - 2026-06-30
 
 ### Changed

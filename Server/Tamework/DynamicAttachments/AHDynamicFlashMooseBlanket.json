@@ -1,0 +1,24 @@
+{
+  "Enabled": true,
+  "Priority": 100,
+  "RoleIds": [
+    "Tamed_Moose_Bull",
+    "Tamed_Moose_Cow"
+  ],
+  "Rules": [
+    {
+      "Id": "flash_canada_blanket",
+      "Priority": 100,
+      "Persistence": "Permanent",
+      "Conditions": [
+        {
+          "Type": "DisplayNameEquals",
+          "Value": "Flash"
+        }
+      ],
+      "Attachments": {
+        "Blanket": "Blanket_Canada"
+      }
+    }
+  ]
+}
