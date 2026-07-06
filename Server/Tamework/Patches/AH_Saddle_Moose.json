@@ -1,0 +1,65 @@
+{
+  "Id": "AH_Saddle_Moose",
+  "$Comment": "Patch any loaded Moose_Cow or Moose_Bull model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
+
+  "Targets": [
+    "Server/Models/Wildlife/Moose_Bull.json",
+    "Server/Models/Wildlife/Moose_Cow.json"
+  ],
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-moose",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Antlers.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 10
+            },
+            "Yes": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Moose.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 100
+            }
+          },
+          "SaddleBlanket": {
+            "None": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 10
+            },
+            "Canada": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Canada.png",
+              "Weight": 10
+            },
+            "Red": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red.png",
+              "Weight": 10
+            },
+            "Blue": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue.png",
+              "Weight": 10
+            },
+            "Green": {
+              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green.png",
+              "Weight": 10
+            }
+          }
+        }
+      }
+    }
+  ]
+}
