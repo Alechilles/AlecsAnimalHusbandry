@@ -1,0 +1,147 @@
+{
+  "Id": "AH_Saddle_Horse",
+  "$Comment": "Patch any loaded Moose_Cow or Moose_Bull model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Livestock/Horse.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-horse",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Saddle.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 10
+            },
+            "Yes": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Saddle.blockymodel",
+              "Texture": "NPC/Livestock/Horse/Models/Attachments/Saddle_Texture.png",
+              "Weight": 100
+            }
+          },
+          "SaddleBlanket": {
+            "None": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 10
+            },
+            "Canada": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Canada.png",
+              "Weight": 0
+            },
+            "Red": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red.png",
+              "Weight": 10
+            },
+            "Blue": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue.png",
+              "Weight": 10
+            },
+            "Green": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green.png",
+              "Weight": 10
+            },
+            "White": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_White.png",
+              "Weight": 10
+            },
+            "Black": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Black.png",
+              "Weight": 10
+            },
+            "LightBlue": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue_Light.png",
+              "Weight": 10
+            },
+            "LightCyan": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan_Light.png",
+              "Weight": 10
+            },
+            "Cyan": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan.png",
+              "Weight": 10
+            },
+            "LightGray": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray_Light.png",
+              "Weight": 10
+            },
+            "Gray": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray.png",
+              "Weight": 10
+            },
+            "LightGreen": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green_Light.png",
+              "Weight": 10
+            },
+            "LightOrange": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange_Light.png",
+              "Weight": 10
+            },
+            "Orange": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange.png",
+              "Weight": 10
+            },
+            "LightPink": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink_Light.png",
+              "Weight": 10
+            },
+            "Pink": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink_Light.png",
+              "Weight": 10
+            },
+            "LightPurple": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple_Light.png",
+              "Weight": 10
+            },
+            "Purple": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple.png",
+              "Weight": 10
+            },
+            "LightRed": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red_Light.png",
+              "Weight": 10
+            },
+            "LightYellow": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow_Light.png",
+              "Weight": 10
+            },
+            "Yellow": {
+              "Model": "NPC/Livestock/Horse/Models/Attachments/Blanket_Horse.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow.png",
+              "Weight": 10
+            }
+          }
+        }
+      }
+    }
+  ]
+}
