@@ -1,10 +1,10 @@
 {
-  "Id": "AH_Saddle_Moose",
-  "$Comment": "Patch any loaded Moose_Cow or Moose_Bull model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
+  "Id": "AH_Saddle_Deer",
+  "$Comment": "Patch any loaded Deer_Stag or Deer_Doe model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
 
   "Targets": [
-    "Server/Models/Wildlife/Moose_Bull.json",
-    "Server/Models/Wildlife/Moose_Cow.json"
+    "Server/Models/Wildlife/Model_Deer_Stag.json",
+    "Server/Models/Wildlife/Deer_Doe.json"
   ],
 
   "When": {
@@ -14,131 +14,131 @@
   "Enabled": true,
   "Operations": [
     {
-      "Id": "add-saddles-for-moose",
+      "Id": "add-saddles-for-deer",
       "Op": "Merge",
       "Path": "/",
       "Value": {
           "RandomAttachmentSets": {
           "Saddle": {
             "None": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Antlers.blockymodel",
-              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Saddle_Deer.blockymodel",
+              "Texture": "NPC/Wildlife/Deer/Models/Empty.png",
               "Weight": 10
             },
             "Yes": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Moose.blockymodel",
-              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Saddle_Deer.blockymodel",
+              "Texture": "NPC/Wildlife/Deer/Models/Attachments/Saddle_Texture.png",
               "Weight": 100
             }
           },
           "SaddleBlanket": {
             "None": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
-              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
+              "Texture": "NPC/Wildlife/Deer/Models/Empty.png",
               "Weight": 10
             },
             "Canada": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Canada.png",
               "Weight": 0
             },
             "Red": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red.png",
               "Weight": 10
             },
             "Blue": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue.png",
               "Weight": 10
             },
             "Green": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green.png",
               "Weight": 10
             },
             "White": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_White.png",
               "Weight": 10
             },
             "Black": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Black.png",
               "Weight": 10
             },
             "LightBlue": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue_Light.png",
               "Weight": 10
             },
             "LightCyan": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan_Light.png",
               "Weight": 10
             },
             "Cyan": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan.png",
               "Weight": 10
             },
             "LightGray": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray_Light.png",
               "Weight": 10
             },
             "Gray": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray.png",
               "Weight": 10
             },
             "LightGreen": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green_Light.png",
               "Weight": 10
             },
             "LightOrange": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange_Light.png",
               "Weight": 10
             },
             "Orange": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange.png",
               "Weight": 10
             },
             "LightPink": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink_Light.png",
               "Weight": 10
             },
             "Pink": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink_Light.png",
               "Weight": 10
             },
             "LightPurple": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple_Light.png",
               "Weight": 10
             },
             "Purple": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple.png",
               "Weight": 10
             },
             "LightRed": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red_Light.png",
               "Weight": 10
             },
             "LightYellow": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow_Light.png",
               "Weight": 10
             },
             "Yellow": {
-              "Model": "NPC/Wildlife/Moose/Models/Attachments/Model_Blanket.blockymodel",
+              "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow.png",
               "Weight": 10
             }
