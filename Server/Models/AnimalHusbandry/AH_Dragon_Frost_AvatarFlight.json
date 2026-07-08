@@ -1,0 +1,156 @@
+{
+  "Model": "NPC/AnimalHusbandry/Dragon_Frost/Models/Model_AvatarFlight.blockymodel",
+  "Texture": "NPC/AnimalHusbandry/Dragon_Frost/Models/Texture.png",
+  "EyeHeight": 3.5,
+  "HitBox": {
+    "Max": {
+      "X": 1.5,
+      "Y": 4,
+      "Z": 1.5
+    },
+    "Min": {
+      "X": -1.5,
+      "Y": 0,
+      "Z": -1.5
+    }
+  },
+  "MinScale": 0.25,
+  "MaxScale": 0.45,
+  "Camera": {
+    "Pitch": {
+      "AngleRange": {
+        "Max": 60,
+        "Min": -45
+      },
+      "TargetNodes": [
+        "AF_Head"
+      ]
+    },
+    "Yaw": {
+      "TargetNodes": [
+        "AF_Head"
+      ]
+    }
+  },
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Idle.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Walk.blockyanim"
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Run.blockyanim"
+        }
+      ]
+    },
+    "Jump": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "Fall": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fall.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fly_Idle.blockyanim",
+          "BlendingDuration": 0.2,
+          "Speed": 1.5
+        }
+      ]
+    },
+    "Fly": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fly.blockyanim",
+          "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Glide.blockyanim",
+          "BlendingDuration": 0.2
+        }
+      ]
+    },
+    "FlyFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Glide.blockyanim",
+          "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fly.blockyanim",
+          "BlendingDuration": 0.2
+        }
+      ]
+    },
+    "Hurt": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Hurt.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "Death": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Death.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Sleep": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Sleep.blockyanim",
+          "SoundEventId": "SFX_Dragon_Sleep"
+        }
+      ]
+    }
+  },
+  "Icon": "Icons/ModelsGenerated/Dragon_Frost.png"
+}
