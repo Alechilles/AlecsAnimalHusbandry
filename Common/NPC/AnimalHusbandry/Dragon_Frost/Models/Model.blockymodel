@@ -9,6 +9,43 @@
           "name": "Chest",
           "children": [
             {
+              "id": "ah_mount_anchor",
+              "name": "MountAnchor",
+              "children": [],
+              "position": {
+                "x": 33.5,
+                "y": 33.5,
+                "z": 56.0
+              },
+              "orientation": {
+                "x": 0,
+                "y": 0,
+                "z": 0,
+                "w": 1
+              },
+              "shape": {
+                "type": "none",
+                "offset": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "stretch": {
+                  "x": 1,
+                  "y": 1,
+                  "z": 1
+                },
+                "settings": {
+                  "isPiece": true
+                },
+                "visible": true,
+                "doubleSided": false,
+                "unwrapMode": "custom",
+                "textureLayout": {},
+                "shadingMode": "flat"
+              }
+            },
+            {
               "id": "123",
               "name": "Neck",
               "children": [
@@ -6184,43 +6221,6 @@
                     "angle": 0
                   }
                 },
-                "shadingMode": "flat"
-              }
-            },
-            {
-              "id": "ah_mount_anchor",
-              "name": "MountAnchor",
-              "children": [],
-              "position": {
-                "x": 33.5,
-                "y": 33.5,
-                "z": 56.0
-              },
-              "orientation": {
-                "x": 0,
-                "y": 0,
-                "z": 0,
-                "w": 1
-              },
-              "shape": {
-                "type": "none",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "stretch": {
-                  "x": 1,
-                  "y": 1,
-                  "z": 1
-                },
-                "settings": {
-                  "isPiece": true
-                },
-                "textureLayout": {},
-                "unwrapMode": "custom",
-                "visible": true,
-                "doubleSided": false,
                 "shadingMode": "flat"
               }
             }

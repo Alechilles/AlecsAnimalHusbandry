@@ -1,17 +1,17 @@
 {
   "Model": "NPC/AnimalHusbandry/Dragon_Frost/Models/Model.blockymodel",
   "Texture": "NPC/AnimalHusbandry/Dragon_Frost/Models/Texture.png",
-  "EyeHeight": 2.5,
+  "EyeHeight": 3.5,
   "HitBox": {
     "Max": {
-      "X": 0.5,
-      "Y": 3.5,
-      "Z": 0.7
+      "X": 1.5,
+      "Y": 4,
+      "Z": 1.5
     },
     "Min": {
-      "X": -0.5,
+      "X": -1.5,
       "Y": 0,
-      "Z": -0.7
+      "Z": -1.5
     }
   },
   "MinScale": 0.25,
@@ -36,7 +36,8 @@
     "Idle": {
       "Animations": [
         {
-          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Idle.blockyanim"
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Idle.blockyanim",
+          "Speed": 1
         }
       ]
     },
@@ -44,13 +45,6 @@
       "Animations": [
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Walk.blockyanim"
-        }
-      ]
-    },
-    "WalkBackward": {
-      "Animations": [
-        {
-          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Walk_Backward.blockyanim"
         }
       ]
     },
@@ -113,6 +107,10 @@
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Fly.blockyanim",
           "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Glide.blockyanim",
+          "BlendingDuration": 0.2
         }
       ]
     },
@@ -120,6 +118,10 @@
       "Animations": [
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Glide.blockyanim",
+          "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Fly.blockyanim",
           "BlendingDuration": 0.2
         }
       ]
@@ -144,21 +146,11 @@
     "Sleep": {
       "Animations": [
         {
-          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Sleep.blockyanim"
+          "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/Sleep.blockyanim",
+          "SoundEventId": "SFX_Dragon_Sleep"
         }
       ]
     }
   },
-  "IconProperties": {
-    "Scale": 0.6,
-    "Rotation": [
-      0.0,
-      -45.0,
-      0.0
-    ],
-    "Translation": [
-      19.0,
-      -41.0
-    ]
-  }
+  "Icon": "Icons/ModelsGenerated/Dragon_Frost.png"
 }
