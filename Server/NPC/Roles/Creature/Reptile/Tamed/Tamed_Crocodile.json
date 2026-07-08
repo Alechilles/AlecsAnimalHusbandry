@@ -14,10 +14,7 @@
     "HearingRange": 8,
     "LeashDistance": 4,
     "LeashMinPlayerDistance": 3,
-    "LeashTimer": [
-      2,
-      4
-    ],
+    "LeashTimer": [2, 4],
     "Chase": false,
     "DropList": "Drop_Crocodile",
     "MaxSpeed": 4,
@@ -62,10 +59,12 @@
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     },
-    "AttractiveItemSet": [
-      "Food_Fish_Raw"
-    ],
+    "AttractiveItemSet": ["Food_Fish_Raw"],
     "AttractiveItemSetParticles": "Want_Food_Fish_Raw",
+    "IsMountable": true,
+    "MountAnchorX": 0,
+    "MountAnchorY": 1,
+    "MountAnchorZ": 0,
     "CanFollow": true,
     "CanHold": true,
     "CanDefend": true,
