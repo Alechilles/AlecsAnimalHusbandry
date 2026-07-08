@@ -1,0 +1,40 @@
+{
+  "Parent": "Tamework_Avatar_Flight_Default",
+  "Enabled": true,
+  "Priority": 100,
+  "Model": {
+    "ApplyModel": true,
+    "ModelId": "AH_Dragon_Frost",
+    "Scale": 0.3
+  },
+  "Animation": {
+    "IdleAnimation": "FlyIdle",
+    "FlightAnimation": "Fly",
+    "FastFlightAnimation": "FlyFast",
+    "PoseAnimationsEnabled": true,
+    "PitchPoseSlot": "Status",
+    "RollPoseSlot": "Status",
+    "PitchUpPoseAnimation": "TameworkPitchUp",
+    "PitchDownPoseAnimation": "TameworkPitchDown",
+    "BankLeftPoseAnimation": "TameworkBankLeft",
+    "BankRightPoseAnimation": "TameworkBankRight",
+    "PitchUpBankLeftPoseAnimation": "TameworkPitchUpBankLeft",
+    "PitchUpBankRightPoseAnimation": "TameworkPitchUpBankRight",
+    "PitchDownBankLeftPoseAnimation": "TameworkPitchDownBankLeft",
+    "PitchDownBankRightPoseAnimation": "TameworkPitchDownBankRight",
+    "PitchPoseThresholdDegrees": 6.0,
+    "RollPoseThresholdDegrees": 4.0,
+    "PoseResendIntervalMs": 150.0,
+    "SuppressStatusAnimation": true,
+    "SuppressEmoteAnimation": true
+  },
+  "RiderVisual": {
+    "HideOwnerEquipment": true,
+    "HideOwnerArmor": true,
+    "HideOwnerHands": true,
+    "ShowRider": true,
+    "SeatOffsetX": 0.0,
+    "SeatOffsetY": 1.35,
+    "SeatOffsetZ": -0.25
+  }
+}
