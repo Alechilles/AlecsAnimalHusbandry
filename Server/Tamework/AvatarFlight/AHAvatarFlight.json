@@ -7,6 +7,14 @@
     "ModelId": "AH_Dragon_Frost_AvatarFlight",
     "Scale": 0.4
   },
+  "Vfx": {
+    "LaunchChargeMinScale": 1.95,
+    "LaunchChargeMaxScale": 3.45,
+    "LaunchCancelScale": 2.1,
+    "LaunchReleasePartialScale": 2.25,
+    "LaunchReleaseMidScale": 3.0,
+    "LaunchReleaseFullScale": 3.6
+  },
   "Animation": {
     "IdleAnimation": "FlyIdle",
     "FlightAnimation": "Fly",

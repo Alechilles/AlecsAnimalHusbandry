@@ -3,7 +3,7 @@
 ## Unreleased
 
 ### Added
-- Added Animal Husbandry-owned Frost Dragon avatar-flight model assets for Tamework dragon flight, based on the base-game Frost Dragon assets with a shoulder-mounted `MountAnchor` node for rider visuals.
+- Added Animal Husbandry-owned Frost Dragon avatar-flight model assets for Tamework dragon flight, based on the base-game Frost Dragon assets with a shoulder-mounted `MountAnchor` node for rider visuals and 3x launch VFX scaling.
 - Added a Tamework dynamic attachment rule that gives tamed moose named `Flash` the Canada blanket appearance.
 
 ## 1.7.1 - Mountable Creatures and Telemetry Descriptor Hotfix - 2026-06-30
