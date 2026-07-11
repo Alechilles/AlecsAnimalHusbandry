@@ -23,13 +23,14 @@
           "id": "2",
           "name": "Pelvis",
           "position": {"x": 0, "y": 83, "z": -30},
-          "orientation": {"x": 0.13053, "y": 0, "z": 0, "w": 0.99144},
+          "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
           "shape": {
-            "type": "none",
+            "type": "box",
             "offset": {"x": 0, "y": 0, "z": -2},
             "stretch": {"x": 1, "y": 1, "z": 1},
             "settings": {
-              "isPiece": false
+              "isPiece": false,
+              "size": {"x": 41, "y": 42, "z": 40}
             },
             "textureLayout": {},
             "unwrapMode": "custom",
@@ -41,11 +42,11 @@
             {
               "id": "3",
               "name": "Belly",
-              "position": {"x": 0, "y": -2, "z": 14},
-              "orientation": {"x": -0.13053, "y": 0, "z": 0, "w": 0.99144},
+              "position": {"x": 0, "y": -1.80682, "z": 13.94823},
+              "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": -0.7, "z": 13.5},
+                "offset": {"x": 0, "y": 1.09089, "z": 13.3106},
                 "stretch": {"x": 1, "y": 1.15, "z": 1.25},
                 "settings": {
                   "isPiece": false,

@@ -1,0 +1,38 @@
+{
+  "Id": "AH_Saddle_Bear",
+  "$Comment": "Patch any loaded Bear_Grizzly and Bear_Polar model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Targets": [
+    "Server/Models/Beast/Bear_Grizzly.json",
+    "Server/Models/Beast/Bear_Polar.json"
+  ],
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-bear",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

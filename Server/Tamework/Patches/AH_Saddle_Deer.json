@@ -1,9 +1,10 @@
 {
   "Id": "AH_Saddle_Deer",
-  "$Comment": "Patch any loaded Deer_Stag or Deer_Doe model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
+  "$Comment": "Patch any loaded Deer_Stag, Deer_Doe, and Antelope model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
   "Targets": [
     "Server/Models/Wildlife/Model_Deer_Stag.json",
-    "Server/Models/Wildlife/Deer_Doe.json"
+    "Server/Models/Wildlife/Deer_Doe.json",
+    "Server/Models/Wildlife/Antelope.json"
   ],
   "When": {
     "TargetExists": true
@@ -21,7 +22,7 @@
             "None": {
               "Model": "NPC/Wildlife/Deer/Models/Attachments/Saddle_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Deer/Models/Empty.png",
-              "Weight": 10
+              "Weight": 1
             },
             "Yes": {
               "Model": "NPC/Wildlife/Deer/Models/Attachments/Saddle_Deer.blockymodel",
@@ -33,7 +34,7 @@
             "None": {
               "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
               "Texture": "NPC/Wildlife/Deer/Models/Empty.png",
-              "Weight": 10
+              "Weight": 1
             },
             "Canada": {
               "Model": "NPC/Wildlife/Deer/Models/Attachments/Blanket_Deer.blockymodel",
