@@ -1,0 +1,58 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AH_Saddle.name",
+    "Description": "server.items.AH_Saddle.description"
+  },
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Quality": "Tool",
+  "PlayerAnimationsId": "Item",
+  "UsePlayerAnimations": true,
+  "Model": "NPC/Livestock/Horse/Models/Attachments/Saddle.blockymodel",
+  "Texture": "NPC/Livestock/Horse/Models/Attachments/Saddle_Texture.png",
+  "Scale": 0.5,
+  "IconProperties": {
+    "Scale": 0.72,
+    "Rotation": [
+      25,
+      225,
+      0
+    ],
+    "Translation": [
+      0,
+      -5
+    ]
+  },
+  "MaxStack": 20,
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Bolt_Wool",
+        "Quantity": 2
+      }
+    ],
+    "Output": [
+      {
+        "ItemId": "AH_Saddle",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Farmingbench",
+        "Categories": [
+          "Farming"
+        ],
+        "RequiredTierLevel": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 3
+  }
+}

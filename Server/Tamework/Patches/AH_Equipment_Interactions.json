@@ -1,0 +1,146 @@
+{
+  "Id": "AH_Equipment_Interactions",
+  "$Comment": "Adds owner-only saddle and wool-blanket interactions to every Animal Husbandry interaction family. Model support requirements hide these entries on unsupported NPC models.",
+  "Targets": [
+    "Server/Tamework/Interactions/AHIntLivestock.json",
+    "Server/Tamework/Interactions/AHIntNeutral.json",
+    "Server/Tamework/Interactions/AHIntBeast.json",
+    "Server/Tamework/Interactions/AhIntCritter.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 100,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "insert-owner-saddle-interaction",
+      "Op": "Insert",
+      "Path": "/Interactions",
+      "Position": "Start",
+      "Existing": {
+        "PromptHint": "server.animalhusbandry.interactions.applySaddle"
+      },
+      "Value": {
+        "Type": "Custom",
+        "Requires": {
+          "All": {
+            "IsTamed": true,
+            "PlayerIsOwner": true,
+            "ItemsInHand": [
+              {
+                "Items": [
+                  "AH_Saddle"
+                ],
+                "Quantity": 1
+              }
+            ],
+            "Custom": [
+              {
+                "Id": "tamework:model_supports_attachment",
+                "Param": "Saddle",
+                "Values": [
+                  "Yes"
+                ]
+              }
+            ]
+          }
+        },
+        "Effects": {
+          "Custom": [
+            {
+              "Id": "tamework:set_attachment_from_held_item",
+              "Param": "Saddle",
+              "Values": [
+                "AH_Saddle=Yes"
+              ]
+            }
+          ]
+        },
+        "PromptHint": "server.animalhusbandry.interactions.applySaddle"
+      }
+    },
+    {
+      "Id": "insert-owner-blanket-interaction",
+      "Op": "Insert",
+      "Path": "/Interactions",
+      "Position": "Start",
+      "Existing": {
+        "PromptHint": "server.animalhusbandry.interactions.applyBlanket"
+      },
+      "Value": {
+        "Type": "Custom",
+        "Requires": {
+          "All": {
+            "IsTamed": true,
+            "PlayerIsOwner": true,
+            "ItemsInHand": [
+              {
+                "Items": [
+                  "Cloth_Block_Wool_Black",
+                  "Cloth_Block_Wool_Blue",
+                  "Cloth_Block_Wool_Blue_Light",
+                  "Cloth_Block_Wool_Cyan",
+                  "Cloth_Block_Wool_Cyan_Light",
+                  "Cloth_Block_Wool_Gray",
+                  "Cloth_Block_Wool_Gray_Light",
+                  "Cloth_Block_Wool_Green",
+                  "Cloth_Block_Wool_Green_Light",
+                  "Cloth_Block_Wool_Orange",
+                  "Cloth_Block_Wool_Orange_Light",
+                  "Cloth_Block_Wool_Pink",
+                  "Cloth_Block_Wool_Pink_Light",
+                  "Cloth_Block_Wool_Purple",
+                  "Cloth_Block_Wool_Purple_Light",
+                  "Cloth_Block_Wool_Red",
+                  "Cloth_Block_Wool_Red_Light",
+                  "Cloth_Block_Wool_White",
+                  "Cloth_Block_Wool_Yellow",
+                  "Cloth_Block_Wool_Yellow_Light"
+                ],
+                "Quantity": 1
+              }
+            ],
+            "Custom": [
+              {
+                "Id": "tamework:model_supports_attachment",
+                "Param": "SaddleBlanket"
+              }
+            ]
+          }
+        },
+        "Effects": {
+          "Custom": [
+            {
+              "Id": "tamework:set_attachment_from_held_item",
+              "Param": "SaddleBlanket",
+              "Values": [
+                "Cloth_Block_Wool_Black=Black",
+                "Cloth_Block_Wool_Blue=Blue",
+                "Cloth_Block_Wool_Blue_Light=LightBlue",
+                "Cloth_Block_Wool_Cyan=Cyan",
+                "Cloth_Block_Wool_Cyan_Light=LightCyan",
+                "Cloth_Block_Wool_Gray=Gray",
+                "Cloth_Block_Wool_Gray_Light=LightGray",
+                "Cloth_Block_Wool_Green=Green",
+                "Cloth_Block_Wool_Green_Light=LightGreen",
+                "Cloth_Block_Wool_Orange=Orange",
+                "Cloth_Block_Wool_Orange_Light=LightOrange",
+                "Cloth_Block_Wool_Pink=Pink",
+                "Cloth_Block_Wool_Pink_Light=LightPink",
+                "Cloth_Block_Wool_Purple=Purple",
+                "Cloth_Block_Wool_Purple_Light=LightPurple",
+                "Cloth_Block_Wool_Red=Red",
+                "Cloth_Block_Wool_Red_Light=LightRed",
+                "Cloth_Block_Wool_White=White",
+                "Cloth_Block_Wool_Yellow=Yellow",
+                "Cloth_Block_Wool_Yellow_Light=LightYellow"
+              ]
+            }
+          ]
+        },
+        "PromptHint": "server.animalhusbandry.interactions.applyBlanket"
+      }
+    }
+  ]
+}

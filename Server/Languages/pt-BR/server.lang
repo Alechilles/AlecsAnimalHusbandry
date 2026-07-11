@@ -8,6 +8,8 @@ server.mods.alecs_animal_husbandry.status.scaffold=Estrutura da Criação de Ani
 server.npcRoles.Fox_Arctic.name=Raposa-do-ártico
 
 # Items
+items.AH_Saddle.name=Sela
+items.AH_Saddle.description=Use em um animal domesticado que pertence a você para equipar uma sela.
 items.AnimalHusbandry_Command_Item.name=Flauta de Controle Animal
 items.AnimalHusbandry_Command_Item.description=Clique esquerdo em um animal domesticado para vinculá-lo a esta flauta.\nClique direito para abrir o menu de comandos.\nClique esquerdo depois de selecionar um comando para emiti-lo.\nOlhe para um animal para inspecioná-lo.
 items.AnimalHusbandry_Command_Item_Shakuhachi.name=Flauta de Fera de Combate
@@ -222,6 +224,8 @@ animalhusbandry.commands.returnHome.name=Voltar para Casa
 animalhusbandry.commands.returnHome.hud=Voltar para Casa: {count}
 
 # Interactions
+animalhusbandry.interactions.applySaddle=Colocar sela
+animalhusbandry.interactions.applyBlanket=Colocar manta
 animalhusbandry.interactions.message.following=Seguindo
 animalhusbandry.interactions.message.staying=Ficando
 animalhusbandry.interactions.message.wandering=Vagando

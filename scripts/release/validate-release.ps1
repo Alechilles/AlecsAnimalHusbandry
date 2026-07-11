@@ -136,6 +136,12 @@ if (-not (Test-Path -LiteralPath $localizationCoverageScript)) {
 }
 & $localizationCoverageScript -Root (Resolve-Path ".").Path
 
+$equipmentCoverageScript = Join-Path $PSScriptRoot "..\tools\check-ah-equipment-assets.ps1"
+if (-not (Test-Path -LiteralPath $equipmentCoverageScript)) {
+    throw "Equipment asset check '$equipmentCoverageScript' was not found."
+}
+& $equipmentCoverageScript -Root (Resolve-Path ".").Path
+
 if ($config.requiresTameworkDependency) {
     if ($config.versionSource -ne "manifest") {
         throw "requiresTameworkDependency is only supported for manifest versionSource."

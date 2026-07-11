@@ -8,6 +8,8 @@ server.mods.alecs_animal_husbandry.status.scaffold=Tierhaltungs-Gerüst initiali
 server.npcRoles.Fox_Arctic.name=Polarfuchs
 
 # Items
+items.AH_Saddle.name=Sattel
+items.AH_Saddle.description=Benutze ihn an einem gezähmten Tier, das dir gehört, um einen Sattel anzulegen.
 items.AnimalHusbandry_Command_Item.name=Tierkontroll-Flöte
 items.AnimalHusbandry_Command_Item.description=Linksklick auf ein gezähmtes Tier, um es mit dieser Flöte zu verknüpfen.\nRechtsklick zum Öffnen des Befehlsmenüs.\nLinksklick nach Auswahl eines Befehls, um ihn auszuführen.\nSchau ein Tier an, um es zu inspizieren.
 items.AnimalHusbandry_Command_Item_Shakuhachi.name=Kampfbestien-Flöte
@@ -222,6 +224,8 @@ animalhusbandry.commands.returnHome.name=Nach Hause
 animalhusbandry.commands.returnHome.hud=Nach Hause: {count}
 
 # Interactions
+animalhusbandry.interactions.applySaddle=Sattel anlegen
+animalhusbandry.interactions.applyBlanket=Decke auflegen
 animalhusbandry.interactions.message.following=Folgt
 animalhusbandry.interactions.message.staying=Bleibt
 animalhusbandry.interactions.message.wandering=Wandert

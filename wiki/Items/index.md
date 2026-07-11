@@ -41,6 +41,7 @@ These items are useful for both livestock and Beast management.
 |---|---|
 | [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern) | Captures and re-places a tamed livestock animal or Beast companion |
 | [Nametag](/mod/alecs-animal-husbandry/nametag) | Names tamed companions for easier command/control management |
+| [Saddles and Blankets](/mod/alecs-animal-husbandry/saddles-and-blankets) | Equips supported owned animals with persistent saddles and one of 20 wool blanket colors |
 
 ## Feed and Care Items
 
@@ -60,6 +61,7 @@ These items are useful for both livestock and Beast management.
 3. Craft the Combat Beast Flute once you unlock Farming Bench Tier 6 and can harvest Wild Wisteria logs.
 4. Craft a Soul Lantern when you need to transport or reorganize valuable companions.
 5. Apply Nametags to distinguish and organize specific companions.
+6. Craft saddles and use colored wool blocks to customize supported owned animals.
 
 > [Screenshot Placeholder: Item progression row (animal control flute -> tranquilizer kit -> combat beast flute)]
 

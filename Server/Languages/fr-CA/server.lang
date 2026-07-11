@@ -8,6 +8,8 @@ server.mods.alecs_animal_husbandry.status.scaffold=Structure d'Élevage d'animau
 server.npcRoles.Fox_Arctic.name=Renard arctique
 
 # Items
+items.AH_Saddle.name=Selle
+items.AH_Saddle.description=Utilisez-la sur un animal apprivoisé qui vous appartient pour l'équiper d'une selle.
 items.AnimalHusbandry_Command_Item.name=Flûte de contrôle animal
 items.AnimalHusbandry_Command_Item.description=Clic gauche sur un animal apprivoisé pour le lier à cette flûte.\nClic droit pour ouvrir le menu des commandes.\nClic gauche après avoir choisi une commande pour la donner.\nRegardez un animal pour l'inspecter.
 items.AnimalHusbandry_Command_Item_Shakuhachi.name=Flûte de bête de combat
@@ -222,6 +224,8 @@ animalhusbandry.commands.returnHome.name=Rentrer au foyer
 animalhusbandry.commands.returnHome.hud=Rentrer au foyer : {count}
 
 # Interactions
+animalhusbandry.interactions.applySaddle=Installer la selle
+animalhusbandry.interactions.applyBlanket=Mettre la couverture
 animalhusbandry.interactions.message.following=Suit
 animalhusbandry.interactions.message.staying=Reste
 animalhusbandry.interactions.message.wandering=Vagabonde

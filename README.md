@@ -112,6 +112,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
     <strong>Extra Utility</strong>
     <ul>
       <li>Name your tamed animals with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/nametag" target="_blank" rel="noopener noreferrer">Nametags</a> and manage them more cleanly as part of your homestead.</li>
+      <li>Equip supported owned animals with persistent <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/saddles-and-blankets" target="_blank" rel="noopener noreferrer">saddles and colored wool blankets</a>.</li>
       <li><a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/soul-lantern" target="_blank" rel="noopener noreferrer">Soul Lantern</a> capture items and upgraded coops preserve important animal data like traits and attachments instead of wiping them on respawn.</li>
     </ul>
   </li>

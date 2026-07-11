@@ -8,6 +8,8 @@ server.mods.alecs_animal_husbandry.status.scaffold=Animal Husbandry scaffold ini
 server.npcRoles.Fox_Arctic.name=Arctic Fox
 
 # Items
+items.AH_Saddle.name=Saddle
+items.AH_Saddle.description=Use on a tamed animal you own to equip a saddle.
 items.AnimalHusbandry_Command_Item.name=Animal Control Flute
 items.AnimalHusbandry_Command_Item.description=Left click a tamed animal to link it to this flute.\nRight click to open the command menu.\nLeft click after selecting a command to issue it.\nLook at an animal to inspect it.
 items.AnimalHusbandry_Command_Item_Shakuhachi.name=Combat Beast Flute
@@ -222,6 +224,8 @@ animalhusbandry.commands.returnHome.name=Return Home
 animalhusbandry.commands.returnHome.hud=Return Home: {count}
 
 # Interactions
+animalhusbandry.interactions.applySaddle=Apply Saddle
+animalhusbandry.interactions.applyBlanket=Apply Blanket
 animalhusbandry.interactions.message.following=Following
 animalhusbandry.interactions.message.staying=Staying
 animalhusbandry.interactions.message.wandering=Wandering
