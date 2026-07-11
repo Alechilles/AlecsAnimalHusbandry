@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Tortoise",
+  "$Comment": "Patch any loaded Tortoise model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Wildlife/Tortoise.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-tortoise",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Wildlife/Tortoise/Models/Attachments/Saddle_Tortoise.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Wildlife/Tortoise/Models/Attachments/Saddle_Tortoise.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "Id": "AH_Saddle_Spider",
+  "$Comment": "Patch any loaded Tamed_Spider_Black and Tamed_Spider_White model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Targets": [
+    "Server/Models/Beast/Spider.json",
+    "Server/Models/Beast/Spider_Cave.json"
+  ],
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-spider",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Beast/Spider/Models/Attachments/Saddle_Spider.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Beast/Spider/Models/Attachments/Saddle_Spider.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

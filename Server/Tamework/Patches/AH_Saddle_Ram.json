@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Ram",
+  "$Comment": "Patch any loaded Ram model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Livestock/Ram.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-ram",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Livestock/Ram/Models/Attachments/Saddle_Ram.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Livestock/Ram/Models/Attachments/Saddle_Ram.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

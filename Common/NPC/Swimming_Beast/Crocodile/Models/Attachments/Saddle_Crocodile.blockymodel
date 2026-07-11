@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "1",
-      "name": "Belly",
+      "name": "Chest",
       "position": {"x": 0, "y": 0, "z": -14},
       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
       "shape": {
@@ -22,36 +22,36 @@
         {
           "id": "2",
           "name": "Saddle",
-          "position": {"x": 0.5, "y": 27.11982, "z": -1.21131},
-          "orientation": {"x": 0, "y": 1, "z": 0, "w": 0},
+          "position": {"x": 0, "y": 28.11982, "z": -3.21131},
+          "orientation": {"x": 0, "y": 0.99976, "z": 0.02181, "w": 0},
           "shape": {
             "type": "box",
             "offset": {"x": 0, "y": -2.11982, "z": 1.21131},
-            "stretch": {"x": 1, "y": 1, "z": 1},
+            "stretch": {"x": 1.125, "y": 1, "z": 1},
             "settings": {
               "isPiece": false,
-              "size": {"x": 37, "y": 8, "z": 31}
+              "size": {"x": 38, "y": 8, "z": 31}
             },
             "textureLayout": {
               "back": {
                 "offset": {"x": 28, "y": 73},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "right": {
                 "offset": {"x": 28, "y": 68},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "front": {
-                "offset": {"x": 92, "y": 127},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "offset": {"x": 92, "y": 128},
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "left": {
                 "offset": {"x": 28, "y": 68},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "top": {
                 "offset": {"x": 61, "y": 44},
@@ -73,47 +73,47 @@
             {
               "id": "3",
               "name": "Saddle--C1",
-              "position": {"x": -0.5, "y": 2.5, "z": -19.5},
+              "position": {"x": -1, "y": 2.5, "z": -19.5},
               "orientation": {"x": 0.10887, "y": 0, "z": 0, "w": 0.99406},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0.5, "y": 0, "z": 0},
-                "stretch": {"x": 1, "y": 1, "z": 1},
+                "offset": {"x": 1, "y": 0, "z": 0},
+                "stretch": {"x": 1.125, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
-                  "size": {"x": 25, "y": 5, "z": 8},
+                  "size": {"x": 26, "y": 5, "z": 8},
                   "isStaticBox": true
                 },
                 "textureLayout": {
                   "back": {
-                    "offset": {"x": 63, "y": 68},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "offset": {"x": 63, "y": 69},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "right": {
                     "offset": {"x": 91, "y": 65},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "front": {
                     "offset": {"x": 30, "y": 53},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "left": {
                     "offset": {"x": 91, "y": 65},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "top": {
-                    "offset": {"x": 99, "y": 73},
+                    "offset": {"x": 99, "y": 74},
                     "mirror": {"x": true, "y": false},
                     "angle": 90
                   },
                   "bottom": {
-                    "offset": {"x": 88, "y": 115},
-                    "mirror": {"x": false, "y": false},
-                    "angle": 270
+                    "offset": {"x": 88, "y": 116},
+                    "mirror": {"x": true, "y": true},
+                    "angle": 90
                   }
                 },
                 "unwrapMode": "custom",
@@ -125,37 +125,37 @@
             {
               "id": "4",
               "name": "Saddle--C2",
-              "position": {"x": -0.5, "y": 2.5, "z": 16.5},
+              "position": {"x": -1, "y": 2.5, "z": 16.5},
               "orientation": {"x": -0.21644, "y": 0, "z": 0, "w": 0.9763},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0.5, "y": 1.5, "z": 0},
-                "stretch": {"x": 1, "y": 1, "z": 1},
+                "offset": {"x": 1, "y": 1.5, "z": 0},
+                "stretch": {"x": 1.125, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
-                  "size": {"x": 31, "y": 6, "z": 10},
+                  "size": {"x": 32, "y": 6, "z": 10},
                   "isStaticBox": true
                 },
                 "textureLayout": {
                   "back": {
-                    "offset": {"x": 29, "y": 44},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "offset": {"x": 29, "y": 45},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "right": {
                     "offset": {"x": 90, "y": 67},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "front": {
                     "offset": {"x": 92, "y": 75},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "left": {
                     "offset": {"x": 90, "y": 67},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "top": {
                     "offset": {"x": 95, "y": 39},
@@ -163,9 +163,9 @@
                     "angle": 0
                   },
                   "bottom": {
-                    "offset": {"x": 88, "y": 118},
-                    "mirror": {"x": false, "y": false},
-                    "angle": 270
+                    "offset": {"x": 88, "y": 119},
+                    "mirror": {"x": true, "y": true},
+                    "angle": 90
                   }
                 },
                 "unwrapMode": "custom",

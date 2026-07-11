@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Trillodon",
+  "$Comment": "Patch any loaded Trillodon model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Wildlife/Trillodon.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-trillodon",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Wildlife/Trillodon/Models/Attachments/Saddle_Trillodon.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Wildlife/Trillodon/Models/Attachments/Saddle_Trillodon.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}
