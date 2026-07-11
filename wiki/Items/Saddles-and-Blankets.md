@@ -29,4 +29,6 @@ Blankets do not require a saddle. Saddle and blanket selections persist through 
 
 ## Current Model Coverage
 
-The equipment interaction automatically appears only when the animal's current model exposes the required attachment slot. The included first-party saddle and blanket model patches cover horses, deer, and moose; additional Animal Husbandry model patches can use the same interaction without new Java logic.
+Saddles are supported on every animal listed in the [Mountable Mobs Reference](/mod/alecs-animal-husbandry/mountable-mobs-reference), including alternate models such as polar bears, plain mosshorns, armored skeleton horses, cave spiders, and the wolf-family big cats.
+
+Blankets are supported on horses, deer and antelope, moose, mosshorns, and skeleton horses. The equipment interaction appears only when the animal's current model exposes the matching attachment slot, so unsupported blanket models do not show a misleading prompt.

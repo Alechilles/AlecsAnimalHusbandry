@@ -45,28 +45,130 @@ $mappedItems = @($blanketMappings | ForEach-Object { ($_ -split '=', 2)[0] } | S
 $mappedValues = @($blanketMappings | ForEach-Object { ($_ -split '=', 2)[1] } | Sort-Object -Unique)
 Require-Condition (@(Compare-Object ($blanketItems | Sort-Object) $mappedItems).Count -eq 0) "Blanket requirement items and effect mapping keys must match."
 
-$modelPatchNames = @("AH_Saddle_Horse.json", "AH_Saddle_Deer.json", "AH_Saddle_Moose.json")
-foreach ($modelPatchName in $modelPatchNames) {
-    $modelPatchPath = Join-Path $Root "Server/Tamework/Patches/$modelPatchName"
-    $modelPatch = Get-Content -Raw -LiteralPath $modelPatchPath | ConvertFrom-Json
-    $sets = $modelPatch.Operations[0].Value.RandomAttachmentSets
-    Require-Condition ($sets.Saddle.None.Weight -gt 0) "$modelPatchName must keep Saddle.None as a random default."
-    Require-Condition ($sets.Saddle.Yes.Weight -eq 0) "$modelPatchName must not randomly apply saddles."
-    Require-Condition ($sets.SaddleBlanket.None.Weight -gt 0) "$modelPatchName must keep SaddleBlanket.None as a random default."
+$expectedModelTargets = @(
+    "Server/Models/Beast/Bear_Grizzly.json",
+    "Server/Models/Beast/Bear_Polar.json",
+    "Server/Models/Beast/Emberwulf.json",
+    "Server/Models/Beast/Leopard_Snow.json",
+    "Server/Models/Beast/Raptor_Cave.json",
+    "Server/Models/Beast/Rex_Cave.json",
+    "Server/Models/Beast/Scorpion.json",
+    "Server/Models/Beast/Spider.json",
+    "Server/Models/Beast/Spider_Cave.json",
+    "Server/Models/Beast/Tamed_Wolf_Black.json",
+    "Server/Models/Beast/Tamed_Wolf_White.json",
+    "Server/Models/Beast/Tiger_Sabertooth.json",
+    "Server/Models/Livestock/Bison.json",
+    "Server/Models/Livestock/Camel.json",
+    "Server/Models/Livestock/Cow.json",
+    "Server/Models/Livestock/Horse.json",
+    "Server/Models/Livestock/Ram.json",
+    "Server/Models/Swimming_Beast/Crab.json",
+    "Server/Models/Swimming_Beast/Crocodile.json",
+    "Server/Models/Swimming_Beast/Lobster.json",
+    "Server/Models/Undead/Horse_Skeleton.json",
+    "Server/Models/Undead/Horse_Skeleton_Armored.json",
+    "Server/Models/Wildlife/Antelope.json",
+    "Server/Models/Wildlife/Deer_Doe.json",
+    "Server/Models/Wildlife/Model_Deer_Stag.json",
+    "Server/Models/Wildlife/Moose_Bull.json",
+    "Server/Models/Wildlife/Moose_Cow.json",
+    "Server/Models/Wildlife/Mosshorn.json",
+    "Server/Models/Wildlife/Mosshorn_Plain.json",
+    "Server/Models/Wildlife/Tetrabird.json",
+    "Server/Models/Wildlife/Tortoise.json",
+    "Server/Models/Wildlife/Trillodon.json"
+)
+$expectedBlanketPatches = @(
+    "AH_Saddle_Deer.json",
+    "AH_Saddle_Horse.json",
+    "AH_Saddle_Horse_Skeleton.json",
+    "AH_Saddle_Moose.json",
+    "AH_Saddle_Mosshorn.json"
+)
+$expectedBlanketTextures = @{
+    Black = "Blanket_Black.png"
+    Blue = "Blanket_Blue.png"
+    LightBlue = "Blanket_Blue_Light.png"
+    Cyan = "Blanket_Cyan.png"
+    LightCyan = "Blanket_Cyan_Light.png"
+    Gray = "Blanket_Gray.png"
+    LightGray = "Blanket_Gray_Light.png"
+    Green = "Blanket_Green.png"
+    LightGreen = "Blanket_Green_Light.png"
+    Orange = "Blanket_Orange.png"
+    LightOrange = "Blanket_Orange_Light.png"
+    Pink = "Blanket_Pink.png"
+    LightPink = "Blanket_Pink_Light.png"
+    Purple = "Blanket_Purple.png"
+    LightPurple = "Blanket_Purple_Light.png"
+    Red = "Blanket_Red.png"
+    LightRed = "Blanket_Red_Light.png"
+    White = "Blanket_White.png"
+    Yellow = "Blanket_Yellow.png"
+    LightYellow = "Blanket_Yellow_Light.png"
+}
 
-    $availableBlankets = @($sets.SaddleBlanket.PSObject.Properties.Name)
-    foreach ($mappedValue in $mappedValues) {
-        Require-Condition ($availableBlankets -contains $mappedValue) "$modelPatchName is missing blanket value '$mappedValue'."
-        Require-Condition ($sets.SaddleBlanket.$mappedValue.Weight -eq 0) "$modelPatchName blanket '$mappedValue' must have zero random weight."
-        $blanket = $sets.SaddleBlanket.$mappedValue
-        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($blanket.Model)"))) "$modelPatchName blanket '$mappedValue' model does not exist."
-        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($blanket.Texture)"))) "$modelPatchName blanket '$mappedValue' texture does not exist."
+$modelPatchPaths = @(Get-ChildItem -LiteralPath (Join-Path $Root "Server/Tamework/Patches") -Filter "AH_Saddle_*.json")
+Require-Condition ($modelPatchPaths.Count -eq 21) "Expected 21 saddle model patches, found $($modelPatchPaths.Count)."
+
+$actualModelTargets = @()
+$actualBlanketPatches = @()
+foreach ($modelPatchPath in $modelPatchPaths) {
+    $modelPatchName = $modelPatchPath.Name
+    $modelPatch = Get-Content -Raw -LiteralPath $modelPatchPath.FullName | ConvertFrom-Json
+    $targetProperty = $modelPatch.PSObject.Properties["Target"]
+    $targetsProperty = $modelPatch.PSObject.Properties["Targets"]
+    if ($null -ne $targetProperty) {
+        $actualModelTargets += $targetProperty.Value
+    }
+    if ($null -ne $targetsProperty) {
+        $actualModelTargets += @($targetsProperty.Value)
     }
 
-    $saddle = $sets.Saddle.Yes
-    Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddle.Model)"))) "$modelPatchName saddle model does not exist."
-    Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddle.Texture)"))) "$modelPatchName saddle texture does not exist."
+    $sets = $modelPatch.Operations[0].Value.RandomAttachmentSets
+    Require-Condition ($null -ne $sets.Saddle) "$modelPatchName must define a Saddle attachment set."
+    Require-Condition ($sets.Saddle.None.Weight -gt 0) "$modelPatchName must keep Saddle.None as a random default."
+    Require-Condition ($sets.Saddle.Yes.Weight -eq 0) "$modelPatchName must not randomly apply saddles."
+    foreach ($saddleValue in @("None", "Yes")) {
+        $saddle = $sets.Saddle.$saddleValue
+        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddle.Model)"))) "$modelPatchName saddle '$saddleValue' model does not exist."
+        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddle.Texture)"))) "$modelPatchName saddle '$saddleValue' texture does not exist."
+    }
+
+    $blanketSetProperty = $sets.PSObject.Properties["SaddleBlanket"]
+    if ($null -eq $blanketSetProperty) {
+        Require-Condition (-not ($expectedBlanketPatches -contains $modelPatchName)) "$modelPatchName must define its supplied SaddleBlanket model."
+        continue
+    }
+
+    $blanketSet = $blanketSetProperty.Value
+    $actualBlanketPatches += $modelPatchName
+    Require-Condition ($expectedBlanketPatches -contains $modelPatchName) "$modelPatchName unexpectedly defines SaddleBlanket support."
+    Require-Condition ($blanketSet.None.Weight -gt 0) "$modelPatchName must keep SaddleBlanket.None as a random default."
+    $availableBlankets = @($blanketSet.PSObject.Properties.Name)
+    foreach ($mappedValue in $mappedValues) {
+        Require-Condition ($availableBlankets -contains $mappedValue) "$modelPatchName is missing blanket value '$mappedValue'."
+        $blanket = $blanketSet.$mappedValue
+        Require-Condition ($blanket.Weight -eq 0) "$modelPatchName blanket '$mappedValue' must have zero random weight."
+        $expectedTexture = "NPC/Wildlife/Moose/Models/Attachments/$($expectedBlanketTextures[$mappedValue])"
+        Require-Condition ($blanket.Texture -eq $expectedTexture) "$modelPatchName blanket '$mappedValue' uses '$($blanket.Texture)' instead of '$expectedTexture'."
+    }
+    foreach ($blanketProperty in $blanketSet.PSObject.Properties) {
+        $blanket = $blanketProperty.Value
+        if ($blanketProperty.Name -ne "None") {
+            Require-Condition ($blanket.Weight -eq 0) "$modelPatchName blanket '$($blanketProperty.Name)' must have zero random weight."
+        }
+        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($blanket.Model)"))) "$modelPatchName blanket '$($blanketProperty.Name)' model does not exist."
+        Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($blanket.Texture)"))) "$modelPatchName blanket '$($blanketProperty.Name)' texture does not exist."
+    }
 }
+
+$duplicateTargets = @($actualModelTargets | Group-Object | Where-Object { $_.Count -gt 1 })
+$duplicateTargetNames = @($duplicateTargets | ForEach-Object { $_.Name })
+Require-Condition ($duplicateTargets.Count -eq 0) "Saddle model targets must not be patched more than once: $($duplicateTargetNames -join ', ')"
+Require-Condition (@(Compare-Object ($expectedModelTargets | Sort-Object) ($actualModelTargets | Sort-Object)).Count -eq 0) "Saddle model patches must cover exactly the 32 mountable model targets."
+Require-Condition (@(Compare-Object ($expectedBlanketPatches | Sort-Object) ($actualBlanketPatches | Sort-Object)).Count -eq 0) "Blanket model patches do not match the five supplied blanket model families."
 
 $saddleItemPath = Join-Path $Root "Server/Item/Items/Tools/AH_Saddle.json"
 $saddleItem = Get-Content -Raw -LiteralPath $saddleItemPath | ConvertFrom-Json
@@ -74,4 +176,4 @@ Require-Condition ($saddleItem.Recipe.Output[0].ItemId -eq "AH_Saddle") "AH_Sadd
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Model)"))) "AH_Saddle model reference does not exist."
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Texture)"))) "AH_Saddle texture reference does not exist."
 
-Write-Host "Animal Husbandry equipment asset checks passed: 20 blanket colors, 3 model patches, and AH_Saddle."
+Write-Host "Animal Husbandry equipment asset checks passed: 20 blanket colors, 21 saddle patches, 32 model targets, 5 blanket patches, and AH_Saddle."

@@ -1,6 +1,6 @@
 {
   "Id": "AH_Saddle_Lobster",
-  "$Comment": "Patch any loaded Lobster model definitions to include saddle. TargetExists is evaluated per target.",
+  "$Comment": "Patch loaded Lobster and Scorpion model definitions with their shared pelvis-mounted saddle. TargetExists is evaluated per target.",
 
   "Targets": [
     "Server/Models/Swimming_Beast/Lobster.json",

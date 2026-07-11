@@ -1,6 +1,6 @@
 {
   "Id": "AH_Saddle_Mosshorn",
-  "$Comment": "Patch any loaded Mosshorn model definitions to include saddle. TargetExists is evaluated per target.",
+  "$Comment": "Patch any loaded Mosshorn model definitions to include saddles and saddle blankets. TargetExists is evaluated per target.",
 
   "Targets": [
     "Server/Models/Wildlife/Mosshorn.json",
@@ -28,6 +28,118 @@
             "Yes": {
               "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Saddle_Mosshorn.blockymodel",
               "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          },
+          "SaddleBlanket": {
+            "None": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Canada": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Canada.png",
+              "Weight": 0
+            },
+            "Red": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red.png",
+              "Weight": 0
+            },
+            "Blue": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue.png",
+              "Weight": 0
+            },
+            "Green": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green.png",
+              "Weight": 0
+            },
+            "White": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_White.png",
+              "Weight": 0
+            },
+            "Black": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Black.png",
+              "Weight": 0
+            },
+            "LightBlue": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Blue_Light.png",
+              "Weight": 0
+            },
+            "LightCyan": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan_Light.png",
+              "Weight": 0
+            },
+            "Cyan": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Cyan.png",
+              "Weight": 0
+            },
+            "LightGray": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray_Light.png",
+              "Weight": 0
+            },
+            "Gray": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Gray.png",
+              "Weight": 0
+            },
+            "LightGreen": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Green_Light.png",
+              "Weight": 0
+            },
+            "LightOrange": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange_Light.png",
+              "Weight": 0
+            },
+            "Orange": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Orange.png",
+              "Weight": 0
+            },
+            "LightPink": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink_Light.png",
+              "Weight": 0
+            },
+            "Pink": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Pink.png",
+              "Weight": 0
+            },
+            "LightPurple": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple_Light.png",
+              "Weight": 0
+            },
+            "Purple": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Purple.png",
+              "Weight": 0
+            },
+            "LightRed": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Red_Light.png",
+              "Weight": 0
+            },
+            "LightYellow": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow_Light.png",
+              "Weight": 0
+            },
+            "Yellow": {
+              "Model": "NPC/Wildlife/Mosshorn/Models/Attachments/Blanket_Mosshorn.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Blanket_Yellow.png",
               "Weight": 0
             }
           }

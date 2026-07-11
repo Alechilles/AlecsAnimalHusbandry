@@ -3,8 +3,8 @@
 ## Unreleased
 
 ### Added
-- Added a craftable `AH_Saddle` and owner-only interactions for equipping persistent saddles and blankets on supported tamed animals. Full wool blocks apply their corresponding blanket color across all 20 colors.
-- Added equipment asset validation covering exact cloth mappings, model attachment options, owner/tamed gates, and non-random saddle/blanket defaults.
+- Added a craftable `AH_Saddle` and owner-only interactions for equipping persistent saddles on every currently mountable tamed animal. Full wool blocks apply persistent blankets across all 20 colors on horses, deer and antelope, moose, mosshorns, and skeleton horses.
+- Added equipment asset validation covering exact cloth mappings, all 32 mountable model targets, every saddle and blanket attachment option, owner/tamed gates, and non-random equipment defaults.
 - Added Animal Husbandry-owned Frost Dragon avatar-flight model assets for Tamework dragon flight, based on the base-game Frost Dragon assets with a shoulder-mounted `MountAnchor` node, 3x launch VFX scaling, and a dedicated crouch-to-launch charging animation.
 - Added a Tamework dynamic attachment rule that gives tamed moose named `Flash` the Canada blanket appearance.
 
