@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Crocodile",
+  "$Comment": "Patch any loaded Crocodile model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Swimming_Beast/Crocodile.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-crocodile",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Swimming_Beast/Crocodile/Models/Attachments/Saddle_Crocodile.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Swimming_Beast/Crocodile/Models/Attachments/Saddle_Crocodile.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "Id": "AH_Saddle_Wolf",
+  "$Comment": "Patch any loaded Tamed_Wolf_Black and Tamed_Wolf_White model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Targets": [
+    "Server/Models/Beast/Tamed_Wolf_White.json",
+    "Server/Models/Beast/Tamed_Wolf_Black.json",
+    "Server/Models/Beast/Tiger_Sabertooth.json",
+    "Server/Models/Beast/Leopard_Snow.json"
+  ],
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-wolf",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Beast/Wolf/Models/Attachments/Saddle_Wolf.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Beast/Wolf/Models/Attachments/Saddle_Wolf.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

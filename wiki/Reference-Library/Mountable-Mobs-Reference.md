@@ -30,10 +30,12 @@ This page is a quick-reference for mobs that are currently configured as mountab
 | Animal |
 |---|
 | Antelope |
+| Crab |
 | Deer Stag |
 | Deer Doe |
 | Horse Skeleton |
 | Horse Skeleton Armored |
+| Lobster |
 | Moose Bull |
 | Moose Cow |
 | Tetrabird |
@@ -45,9 +47,14 @@ This page is a quick-reference for mobs that are currently configured as mountab
 |---|
 | Bear Grizzly |
 | Bear Polar |
+| Crocodile |
+| Emberwulf |
 | Leopard Snow |
 | Raptor Cave |
 | Rex Cave |
+| Scorpion |
+| Spider |
+| Spider Cave |
 | Tiger Sabertooth |
 | Wolf Black |
 | Wolf White |

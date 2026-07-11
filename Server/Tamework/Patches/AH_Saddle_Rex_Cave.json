@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Rex_Cave",
+  "$Comment": "Patch any loaded Rex_Cave model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Beast/Rex_Cave.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-rex-cave",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Beast/Rex_Cave/Models/Attachments/Saddle_Rex_Cave.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Beast/Rex_Cave/Models/Attachments/Saddle_Rex_Cave.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

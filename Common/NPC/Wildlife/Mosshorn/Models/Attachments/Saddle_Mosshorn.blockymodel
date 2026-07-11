@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "1",
-      "name": "Belly",
+      "name": "Chest",
       "position": {"x": 0, "y": 0, "z": -14},
       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
       "shape": {
@@ -22,11 +22,11 @@
         {
           "id": "2",
           "name": "Saddle",
-          "position": {"x": 0.5, "y": 27.11982, "z": -1.21131},
-          "orientation": {"x": 0, "y": 1, "z": 0, "w": 0},
+          "position": {"x": 0, "y": 41.5, "z": 16.5},
+          "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
           "shape": {
             "type": "box",
-            "offset": {"x": 0, "y": -2.11982, "z": 1.21131},
+            "offset": {"x": 0.5, "y": -2.5, "z": -16.5},
             "stretch": {"x": 1, "y": 1, "z": 1},
             "settings": {
               "isPiece": false,
@@ -35,23 +35,23 @@
             "textureLayout": {
               "back": {
                 "offset": {"x": 28, "y": 73},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "right": {
                 "offset": {"x": 28, "y": 68},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "front": {
                 "offset": {"x": 92, "y": 127},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "left": {
                 "offset": {"x": 28, "y": 68},
-                "mirror": {"x": false, "y": false},
-                "angle": 270
+                "mirror": {"x": true, "y": true},
+                "angle": 90
               },
               "top": {
                 "offset": {"x": 61, "y": 44},
@@ -87,23 +87,23 @@
                 "textureLayout": {
                   "back": {
                     "offset": {"x": 63, "y": 68},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "right": {
                     "offset": {"x": 91, "y": 65},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "front": {
                     "offset": {"x": 30, "y": 53},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "left": {
                     "offset": {"x": 91, "y": 65},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "top": {
                     "offset": {"x": 99, "y": 73},
@@ -112,8 +112,8 @@
                   },
                   "bottom": {
                     "offset": {"x": 88, "y": 115},
-                    "mirror": {"x": false, "y": false},
-                    "angle": 270
+                    "mirror": {"x": true, "y": true},
+                    "angle": 90
                   }
                 },
                 "unwrapMode": "custom",
@@ -139,23 +139,23 @@
                 "textureLayout": {
                   "back": {
                     "offset": {"x": 29, "y": 44},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "right": {
                     "offset": {"x": 90, "y": 67},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "front": {
                     "offset": {"x": 92, "y": 75},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "left": {
                     "offset": {"x": 90, "y": 67},
-                    "mirror": {"x": true, "y": true},
-                    "angle": 90
+                    "mirror": {"x": false, "y": false},
+                    "angle": 270
                   },
                   "top": {
                     "offset": {"x": 95, "y": 39},
@@ -164,8 +164,8 @@
                   },
                   "bottom": {
                     "offset": {"x": 88, "y": 118},
-                    "mirror": {"x": false, "y": false},
-                    "angle": 270
+                    "mirror": {"x": true, "y": true},
+                    "angle": 90
                   }
                 },
                 "unwrapMode": "custom",

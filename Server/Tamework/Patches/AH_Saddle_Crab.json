@@ -1,0 +1,35 @@
+{
+  "Id": "AH_Saddle_Crab",
+  "$Comment": "Patch any loaded Crab model definitions to include saddle. TargetExists is evaluated per target.",
+
+  "Target": "Server/Models/Swimming_Beast/Crab.json",
+
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-saddles-for-crab",
+      "Op": "Merge",
+      "Path": "/",
+      "Value": {
+          "RandomAttachmentSets": {
+          "Saddle": {
+            "None": {
+              "Model": "NPC/Swimming_Beast/Crab/Models/Attachments/Saddle_Crab.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Swimming_Beast/Crab/Models/Attachments/Saddle_Crab.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}
