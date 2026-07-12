@@ -9,19 +9,19 @@
   "Quality": "Tool",
   "PlayerAnimationsId": "Item",
   "UsePlayerAnimations": true,
-  "Model": "NPC/Livestock/Horse/Models/Attachments/Saddle.blockymodel",
-  "Texture": "NPC/Livestock/Horse/Models/Attachments/Saddle_Texture.png",
+  "Model": "NPC/Beast/Rex_Cave/Models/Attachments/Saddle_Rex_Cave.blockymodel",
+  "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
   "Scale": 0.5,
   "IconProperties": {
-    "Scale": 0.72,
+    "Scale": 0.5,
     "Rotation": [
-      25,
-      225,
-      0
+      14,
+      289,
+      340
     ],
     "Translation": [
-      0,
-      -5
+      15,
+      -25
     ]
   },
   "MaxStack": 20,
@@ -54,5 +54,7 @@
     ],
     "OutputQuantity": 1,
     "TimeSeconds": 3
-  }
+  },
+  "Icon": "Icons/ItemsGenerated/AH_Saddle.png",
+  "BlockType": ""
 }
