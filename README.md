@@ -154,6 +154,8 @@ The demo instancing and tutorial system is an alpha project, so please expect to
       <li>Animals will only eat their preferred food, which is also used for taming, or <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/feed-items" target="_blank" rel="noopener noreferrer">crafted feed</a> that matches their food profile.</li>
       <li>The command HUD shows each animal's food options and happiness effects.</li>
       <li>Passive breeding occurs with high happiness and is toggled per animal in the command flute interface.</li>
+      <li>Fertility can intentionally produce zero through four offspring. Manual and passive attempts share the same hard nearby-population limit, including already pending litters.</li>
+      <li>Capturing either parent into a Tamework-managed coop before birth cancels the pending litter.</li>
     </ul>
   </li>
   <li>

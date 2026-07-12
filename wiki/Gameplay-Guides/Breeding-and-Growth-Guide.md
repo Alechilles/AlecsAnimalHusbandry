@@ -35,6 +35,20 @@ Your breeding pair must pass all of these checks:
 Manual breeding still respects these gates.
 If crouch-feeding does not start breeding, the animal is usually blocked by one of the checks above.
 
+## Litter Size, Capacity, and Pending Births
+
+Fertility intentionally rolls a litter from **zero through four offspring**. Zero is a normal biological result, not necessarily an error or a duplicated callback.
+
+Manual and passive breeding use the same birth-job and capacity rules:
+
+- `MaxNearbySameType` is a hard execution-time ceiling.
+- Live nearby animals and children reserved by other pending litters both consume headroom.
+- If a planned litter is larger than the remaining headroom, only the admitted number can spawn.
+- One parent can belong to only one active birth job, and a job can claim its spawn callback only once.
+- Capturing either parent into a Tamework-managed coop before birth cancels the pending job; the delayed callback also checks that both parents are still valid before spawning.
+
+Example: with a maximum of eight matching animals, seven already nearby, and a rolled litter of four, only one child is admitted. Two pairs starting near the limit share the same reservations, so their combined result cannot exceed the cap.
+
 ## Livestock Breeding and Growth Reference
 After breeding, animals will be unable to breed for the duration of their breeding cooldown.
 
