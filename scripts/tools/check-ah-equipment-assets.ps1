@@ -34,16 +34,77 @@ Require-Condition ($saddleInteraction.Requires.All.IsTamed -eq $true) "Saddle in
 Require-Condition ($saddleInteraction.Requires.All.PlayerIsOwner -eq $true) "Saddle interaction must require the owner."
 Require-Condition ($blanketInteraction.Requires.All.IsTamed -eq $true) "Blanket interaction must require a tamed NPC."
 Require-Condition ($blanketInteraction.Requires.All.PlayerIsOwner -eq $true) "Blanket interaction must require the owner."
+Require-Condition ($saddleInteraction.Requires.All.Custom[0].Id -eq "tamework:attachment_exchange_available") "Saddle equip must use the attachment exchange gate."
+Require-Condition ($saddleInteraction.Effects.Custom[0].Id -eq "tamework:exchange_attachment") "Saddle equip must use the atomic attachment exchange effect."
+Require-Condition ($blanketInteraction.Requires.All.Custom[0].Id -eq "tamework:attachment_exchange_available") "Blanket equip must use the attachment exchange gate."
+Require-Condition ($blanketInteraction.Effects.Custom[0].Id -eq "tamework:exchange_attachment") "Blanket equip must use the atomic attachment exchange effect."
 
 $blanketItems = @($blanketInteraction.Requires.All.ItemsInHand[0].Items)
+$blanketRequirementMappings = @($blanketInteraction.Requires.All.Custom[0].Values)
 $blanketMappings = @($blanketInteraction.Effects.Custom[0].Values)
 Require-Condition ($blanketItems.Count -eq 20) "Blanket interaction must accept exactly 20 full wool colors."
+Require-Condition ($blanketRequirementMappings.Count -eq 20) "Blanket exchange gate must map exactly 20 wool colors."
 Require-Condition ($blanketMappings.Count -eq 20) "Blanket effect must map exactly 20 wool colors."
 Require-Condition (-not ($blanketItems | Where-Object { $_ -match '_(Half|Stairs)$' })) "Blanket interaction must not accept shaped cloth variants."
+Require-Condition (@(Compare-Object ($blanketRequirementMappings | Sort-Object) ($blanketMappings | Sort-Object)).Count -eq 0) "Blanket requirement and effect mappings must match."
 
 $mappedItems = @($blanketMappings | ForEach-Object { ($_ -split '=', 2)[0] } | Sort-Object)
 $mappedValues = @($blanketMappings | ForEach-Object { ($_ -split '=', 2)[1] } | Sort-Object -Unique)
 Require-Condition (@(Compare-Object ($blanketItems | Sort-Object) $mappedItems).Count -eq 0) "Blanket requirement items and effect mapping keys must match."
+Require-Condition (-not ($mappedValues -contains "Canada")) "The appearance-only Canada blanket must not be mapped to a fabricated refund item."
+
+$removalPatchPath = Join-Path $Root "Server/Tamework/Patches/AH_Equipment_Removal_Interactions.json"
+$removalPatch = Get-Content -Raw -LiteralPath $removalPatchPath | ConvertFrom-Json
+$expectedRemovalTargets = @(
+    "Server/Tamework/Interactions/AHIntLivestock.json",
+    "Server/Tamework/Interactions/AHIntNeutral.json",
+    "Server/Tamework/Interactions/AHIntBeast.json"
+)
+Require-Condition ($removalPatch.Targets.Count -eq 3) "Equipment removal patch must target the three interaction families with Pet support."
+Require-Condition (@(Compare-Object ($removalPatch.Targets | Sort-Object) ($expectedRemovalTargets | Sort-Object)).Count -eq 0) "Equipment removal targets must match the Pet-enabled interaction families."
+Require-Condition ($removalPatch.Operations.Count -eq 2) "Equipment removal patch must contain saddle and blanket operations."
+foreach ($target in $removalPatch.Targets) {
+    $targetPath = Join-Path $Root $target
+    $targetConfig = Get-Content -Raw -LiteralPath $targetPath | ConvertFrom-Json
+    $petInteraction = $targetConfig.Interactions | Where-Object {
+        $promptProperty = $_.PSObject.Properties["PromptHint"]
+        $null -ne $promptProperty -and $promptProperty.Value -eq "server.interactionHints.pet"
+    }
+    Require-Condition ($null -ne $petInteraction) "Removal target must contain the Pet anchor: $target"
+}
+
+$saddleRemovalOperation = $removalPatch.Operations[0]
+$blanketRemovalOperation = $removalPatch.Operations[1]
+Require-Condition ($saddleRemovalOperation.Op -eq "Insert" -and $blanketRemovalOperation.Op -eq "Insert") "Equipment removals must use Insert operations."
+Require-Condition ($saddleRemovalOperation.Position -eq "After" -and $blanketRemovalOperation.Position -eq "After") "Equipment removals must use anchored After placement."
+Require-Condition ($saddleRemovalOperation.Find.PromptHint -eq "server.interactionHints.pet") "Saddle removal must be inserted after Pet."
+Require-Condition ($blanketRemovalOperation.Find.PromptHint -eq "server.animalhusbandry.interactions.removeSaddle") "Blanket removal must be inserted after Saddle removal."
+Require-Condition ($saddleRemovalOperation.Existing.PromptHint -eq "server.animalhusbandry.interactions.removeSaddle") "Saddle removal requires an idempotency matcher."
+Require-Condition ($blanketRemovalOperation.Existing.PromptHint -eq "server.animalhusbandry.interactions.removeBlanket") "Blanket removal requires an idempotency matcher."
+
+$saddleRemoval = $saddleRemovalOperation.Value
+$blanketRemoval = $blanketRemovalOperation.Value
+foreach ($removal in @($saddleRemoval, $blanketRemoval)) {
+    Require-Condition ($removal.Requires.All.IsTamed -eq $true) "Equipment removal must require a tamed NPC."
+    Require-Condition ($removal.Requires.All.PlayerIsOwner -eq $true) "Equipment removal must require the owner."
+    Require-Condition ($removal.Requires.All.PlayerHandEmpty -eq $true) "Equipment removal must require an empty hand."
+    Require-Condition ($removal.Requires.All.Custom[0].Id -eq "tamework:attachment_exchange_available") "Equipment removal must use the attachment exchange gate."
+    Require-Condition ($removal.Effects.Custom[0].Id -eq "tamework:exchange_attachment") "Equipment removal must use the atomic attachment exchange effect."
+    Require-Condition (@(Compare-Object ($removal.Requires.All.Custom[0].Values | Sort-Object) ($removal.Effects.Custom[0].Values | Sort-Object)).Count -eq 0) "Equipment removal requirement and effect mappings must match."
+}
+Require-Condition (@(Compare-Object ($saddleRemoval.Effects.Custom[0].Values | Sort-Object) ($saddleInteraction.Effects.Custom[0].Values | Sort-Object)).Count -eq 0) "Saddle equip and removal mappings must match."
+Require-Condition (@(Compare-Object ($blanketRemoval.Effects.Custom[0].Values | Sort-Object) ($blanketMappings | Sort-Object)).Count -eq 0) "Blanket equip and removal mappings must match."
+
+$languagePaths = @(Get-ChildItem -LiteralPath (Join-Path $Root "Server/Languages") -Filter "server.lang" -Recurse)
+Require-Condition ($languagePaths.Count -eq 5) "Expected five localized server.lang files."
+foreach ($languagePath in $languagePaths) {
+    $languageText = Get-Content -Raw -LiteralPath $languagePath.FullName
+    Require-Condition ($languageText -match '(?m)^animalhusbandry\.interactions\.removeSaddle=.+$') "Missing remove Saddle prompt in $($languagePath.FullName)."
+    Require-Condition ($languageText -match '(?m)^animalhusbandry\.interactions\.removeBlanket=.+$') "Missing remove Blanket prompt in $($languagePath.FullName)."
+}
+$englishLanguage = Get-Content -Raw -LiteralPath (Join-Path $Root "Server/Languages/en-US/server.lang")
+Require-Condition ($englishLanguage -match '(?m)^animalhusbandry\.interactions\.removeSaddle=Remove Saddle$') "English Saddle removal prompt must read 'Remove Saddle'."
+Require-Condition ($englishLanguage -match '(?m)^animalhusbandry\.interactions\.removeBlanket=Remove Blanket$') "English Blanket removal prompt must read 'Remove Blanket'."
 
 $expectedModelTargets = @(
     "Server/Models/Beast/Bear_Grizzly.json",
@@ -176,4 +237,4 @@ Require-Condition ($saddleItem.Recipe.Output[0].ItemId -eq "AH_Saddle") "AH_Sadd
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Model)"))) "AH_Saddle model reference does not exist."
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Texture)"))) "AH_Saddle texture reference does not exist."
 
-Write-Host "Animal Husbandry equipment asset checks passed: 20 blanket colors, 21 saddle patches, 32 model targets, 5 blanket patches, and AH_Saddle."
+Write-Host "Animal Husbandry equipment asset checks passed: atomic equip/replacement, Pet-first Saddle/Blanket removal, exact refunds, 20 blanket colors, 21 saddle patches, 32 model targets, 5 blanket patches, and AH_Saddle."

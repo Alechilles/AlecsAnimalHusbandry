@@ -1,11 +1,10 @@
 {
-  "Id": "AH_Equipment_Interactions",
-  "$Comment": "Adds owner-only saddle and wool-blanket exchange interactions to every Animal Husbandry interaction family. Exchange requirements hide unsupported, already-equipped, or non-refundable states.",
+  "Id": "AH_Equipment_Removal_Interactions",
+  "$Comment": "Adds empty-hand equipment removal after Pet. Saddle is checked before Blanket so repeated interactions remove them in that order.",
   "Targets": [
     "Server/Tamework/Interactions/AHIntLivestock.json",
     "Server/Tamework/Interactions/AHIntNeutral.json",
-    "Server/Tamework/Interactions/AHIntBeast.json",
-    "Server/Tamework/Interactions/AhIntCritter.json"
+    "Server/Tamework/Interactions/AHIntBeast.json"
   ],
   "When": {
     "TargetExists": true
@@ -14,12 +13,15 @@
   "Enabled": true,
   "Operations": [
     {
-      "Id": "insert-owner-saddle-interaction",
+      "Id": "insert-owner-saddle-removal",
       "Op": "Insert",
       "Path": "/Interactions",
-      "Position": "Start",
+      "Position": "After",
+      "Find": {
+        "PromptHint": "server.interactionHints.pet"
+      },
       "Existing": {
-        "PromptHint": "server.animalhusbandry.interactions.applySaddle"
+        "PromptHint": "server.animalhusbandry.interactions.removeSaddle"
       },
       "Value": {
         "Type": "Custom",
@@ -27,14 +29,7 @@
           "All": {
             "IsTamed": true,
             "PlayerIsOwner": true,
-            "ItemsInHand": [
-              {
-                "Items": [
-                  "AH_Saddle"
-                ],
-                "Quantity": 1
-              }
-            ],
+            "PlayerHandEmpty": true,
             "Custom": [
               {
                 "Id": "tamework:attachment_exchange_available",
@@ -57,16 +52,19 @@
             }
           ]
         },
-        "PromptHint": "server.animalhusbandry.interactions.applySaddle"
+        "PromptHint": "server.animalhusbandry.interactions.removeSaddle"
       }
     },
     {
-      "Id": "insert-owner-blanket-interaction",
+      "Id": "insert-owner-blanket-removal",
       "Op": "Insert",
       "Path": "/Interactions",
-      "Position": "Start",
+      "Position": "After",
+      "Find": {
+        "PromptHint": "server.animalhusbandry.interactions.removeSaddle"
+      },
       "Existing": {
-        "PromptHint": "server.animalhusbandry.interactions.applyBlanket"
+        "PromptHint": "server.animalhusbandry.interactions.removeBlanket"
       },
       "Value": {
         "Type": "Custom",
@@ -74,33 +72,7 @@
           "All": {
             "IsTamed": true,
             "PlayerIsOwner": true,
-            "ItemsInHand": [
-              {
-                "Items": [
-                  "Cloth_Block_Wool_Black",
-                  "Cloth_Block_Wool_Blue",
-                  "Cloth_Block_Wool_Blue_Light",
-                  "Cloth_Block_Wool_Cyan",
-                  "Cloth_Block_Wool_Cyan_Light",
-                  "Cloth_Block_Wool_Gray",
-                  "Cloth_Block_Wool_Gray_Light",
-                  "Cloth_Block_Wool_Green",
-                  "Cloth_Block_Wool_Green_Light",
-                  "Cloth_Block_Wool_Orange",
-                  "Cloth_Block_Wool_Orange_Light",
-                  "Cloth_Block_Wool_Pink",
-                  "Cloth_Block_Wool_Pink_Light",
-                  "Cloth_Block_Wool_Purple",
-                  "Cloth_Block_Wool_Purple_Light",
-                  "Cloth_Block_Wool_Red",
-                  "Cloth_Block_Wool_Red_Light",
-                  "Cloth_Block_Wool_White",
-                  "Cloth_Block_Wool_Yellow",
-                  "Cloth_Block_Wool_Yellow_Light"
-                ],
-                "Quantity": 1
-              }
-            ],
+            "PlayerHandEmpty": true,
             "Custom": [
               {
                 "Id": "tamework:attachment_exchange_available",
@@ -161,7 +133,7 @@
             }
           ]
         },
-        "PromptHint": "server.animalhusbandry.interactions.applyBlanket"
+        "PromptHint": "server.animalhusbandry.interactions.removeBlanket"
       }
     }
   ]

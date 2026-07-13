@@ -17,15 +17,19 @@ Craft an `AH_Saddle` at a Tier 1 Farming Bench using:
 - 4 Light Leather
 - 2 Wool Bolts
 
-Hold the saddle and interact with a supported tamed animal you own. One saddle is consumed and the saddle remains part of that animal's saved appearance.
+Hold the saddle and interact with a supported tamed animal you own. One saddle is consumed and the saddle remains part of that animal's saved appearance. To remove it, interact with an empty hand; the same `AH_Saddle` item is returned to your active hotbar slot.
 
 ## Colored Blankets
 
 Hold any full wool cloth block and interact with a supported tamed animal you own. One block is consumed and its color becomes the animal's blanket color. Applying a different color replaces the previous blanket; applying the currently equipped color consumes nothing.
 
+When a different color is applied, the previously equipped wool block is returned. Interact with an empty hand to remove a blanket and receive its exact color back.
+
 All 20 full wool colors are supported. Half blocks, stairs, and other shaped cloth variants are not accepted.
 
 Blankets do not require a saddle. Saddle and blanket selections persist through normal Tamework capture, respawn, and model synchronization flows.
+
+Petting takes priority over empty-hand removal. If Pet is ready, the first interaction pets the animal and starts the Pet cooldown. The next interaction removes equipment. When both a saddle and blanket are equipped, the saddle is removed first and the following interaction removes the blanket.
 
 ## Current Model Coverage
 

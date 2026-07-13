@@ -41,7 +41,7 @@ These items are useful for both livestock and Beast management.
 |---|---|
 | [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern) | Captures and re-places a tamed livestock animal or Beast companion |
 | [Nametag](/mod/alecs-animal-husbandry/nametag) | Names tamed companions for easier command/control management |
-| [Saddles and Blankets](/mod/alecs-animal-husbandry/saddles-and-blankets) | Equips supported owned animals with persistent saddles and one of 20 wool blanket colors |
+| [Saddles and Blankets](/mod/alecs-animal-husbandry/saddles-and-blankets) | Equips or removes persistent saddles and 20 wool blanket colors, refunding replaced equipment |
 
 ## Feed and Care Items
 
