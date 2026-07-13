@@ -97,14 +97,29 @@ Require-Condition (@(Compare-Object ($blanketRemoval.Effects.Custom[0].Values | 
 
 $languagePaths = @(Get-ChildItem -LiteralPath (Join-Path $Root "Server/Languages") -Filter "server.lang" -Recurse)
 Require-Condition ($languagePaths.Count -eq 5) "Expected five localized server.lang files."
+$equipmentPromptKeys = @(
+    "applySaddle",
+    "applyBlanket",
+    "removeSaddle",
+    "removeBlanket"
+)
 foreach ($languagePath in $languagePaths) {
     $languageText = Get-Content -Raw -LiteralPath $languagePath.FullName
-    Require-Condition ($languageText -match '(?m)^animalhusbandry\.interactions\.removeSaddle=.+$') "Missing remove Saddle prompt in $($languagePath.FullName)."
-    Require-Condition ($languageText -match '(?m)^animalhusbandry\.interactions\.removeBlanket=.+$') "Missing remove Blanket prompt in $($languagePath.FullName)."
+    foreach ($promptKey in $equipmentPromptKeys) {
+        $promptPattern = "(?m)^animalhusbandry\.interactions\.$promptKey=.*<key>.*$"
+        Require-Condition ($languageText -match $promptPattern) "Equipment prompt '$promptKey' must contain <key> in $($languagePath.FullName)."
+    }
 }
 $englishLanguage = Get-Content -Raw -LiteralPath (Join-Path $Root "Server/Languages/en-US/server.lang")
-Require-Condition ($englishLanguage -match '(?m)^animalhusbandry\.interactions\.removeSaddle=Remove Saddle$') "English Saddle removal prompt must read 'Remove Saddle'."
-Require-Condition ($englishLanguage -match '(?m)^animalhusbandry\.interactions\.removeBlanket=Remove Blanket$') "English Blanket removal prompt must read 'Remove Blanket'."
+$expectedEnglishPrompts = @(
+    "animalhusbandry.interactions.applySaddle=Press <key> to equip Saddle",
+    "animalhusbandry.interactions.applyBlanket=Press <key> to equip Blanket",
+    "animalhusbandry.interactions.removeSaddle=Press <key> to remove Saddle",
+    "animalhusbandry.interactions.removeBlanket=Press <key> to remove Blanket"
+)
+foreach ($expectedPrompt in $expectedEnglishPrompts) {
+    Require-Condition ($englishLanguage -match "(?m)^$([regex]::Escape($expectedPrompt))$") "Missing exact English equipment prompt: $expectedPrompt"
+}
 
 $expectedModelTargets = @(
     "Server/Models/Beast/Bear_Grizzly.json",
