@@ -552,6 +552,28 @@
       "Value": false,
       "Description": "Whether to flee while in the alerted state if not threatened after AlertedTime expires."
     },
+    "IsPettable": {
+      "Value": true,
+      "Description": "Whether players can pet the NPC."
+    },
+    "PetAnimation": {
+      "Value": "Alerted",
+      "Description": "The animation the NPC will play when petted."
+    },
+    "PetRequiredAttitudes": {
+      "Value": [
+        "Friendly",
+        "Revered"
+      ],
+      "Description": "The attitude groups of players that can pet the NPC."
+    },
+    "PetTimeout": {
+      "Value": [
+        "PT15M",
+        "PT15M"
+      ],
+      "Description": "The timeout between consecutive pets."
+    },
     "CanFollow": {
       "Value": false,
       "Description": "Whether command-driven Follow behavior is enabled for this role."
@@ -1789,6 +1811,71 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Apply pet effects when a pet interaction emits TwHook_Pet.",
+      "Enabled": {
+        "Compute": "IsPettable"
+      },
+      "Continue": true,
+      "Sensor": {
+        "Type": "TameworkHook",
+        "HookId": "TwHook_Pet",
+        "Consume": true
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Not",
+            "Sensor": {
+              "Type": "State",
+              "State": "Sleep"
+            }
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": {
+                "Compute": "PetAnimation"
+              }
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Hearts_Subtle",
+              "Offset": {
+                "Compute": "ParticleOffset"
+              },
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "SetAlarm",
+              "Name": "Pet_Ready",
+              "DurationRange": {
+                "Compute": "PetTimeout"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Clear the pet alarm when it finishes.",
+      "Enabled": {
+        "Compute": "IsPettable"
+      },
+      "Continue": true,
+      "Sensor": {
+        "Type": "Alarm",
+        "Name": "Pet_Ready",
+        "State": "Passed",
+        "Clear": true
+      },
+      "Actions": [
+        {
+          "Type": "Nothing"
         }
       ]
     }
