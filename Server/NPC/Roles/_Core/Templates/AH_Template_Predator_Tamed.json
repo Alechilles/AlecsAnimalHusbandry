@@ -1020,6 +1020,71 @@
       ]
     },
     {
+      "$Comment": "Apply pet effects when a pet interaction emits TwHook_Pet.",
+      "Enabled": {
+        "Compute": "IsPettable"
+      },
+      "Continue": true,
+      "Sensor": {
+        "Type": "TameworkHook",
+        "HookId": "TwHook_Pet",
+        "Consume": true
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Not",
+            "Sensor": {
+              "Type": "State",
+              "State": "Sleep"
+            }
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status",
+              "Animation": {
+                "Compute": "PetAnimation"
+              }
+            },
+            {
+              "Type": "SpawnParticles",
+              "ParticleSystem": "Hearts_Subtle",
+              "Offset": {
+                "Compute": "ParticleOffset"
+              },
+              "TargetNodeName": "Head"
+            },
+            {
+              "Type": "SetAlarm",
+              "Name": "Pet_Ready",
+              "DurationRange": {
+                "Compute": "PetTimeout"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Clear the pet alarm when it finishes.",
+      "Enabled": {
+        "Compute": "IsPettable"
+      },
+      "Continue": true,
+      "Sensor": {
+        "Type": "Alarm",
+        "Name": "Pet_Ready",
+        "State": "Passed",
+        "Clear": true
+      },
+      "Actions": [
+        {
+          "Type": "Nothing"
+        }
+      ]
+    },
+    {
       "$Comment": "",
       "Instructions": [
         {
@@ -1811,71 +1876,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "$Comment": "Apply pet effects when a pet interaction emits TwHook_Pet.",
-      "Enabled": {
-        "Compute": "IsPettable"
-      },
-      "Continue": true,
-      "Sensor": {
-        "Type": "TameworkHook",
-        "HookId": "TwHook_Pet",
-        "Consume": true
-      },
-      "Instructions": [
-        {
-          "Sensor": {
-            "Type": "Not",
-            "Sensor": {
-              "Type": "State",
-              "State": "Sleep"
-            }
-          },
-          "Actions": [
-            {
-              "Type": "PlayAnimation",
-              "Slot": "Status",
-              "Animation": {
-                "Compute": "PetAnimation"
-              }
-            },
-            {
-              "Type": "SpawnParticles",
-              "ParticleSystem": "Hearts_Subtle",
-              "Offset": {
-                "Compute": "ParticleOffset"
-              },
-              "TargetNodeName": "Head"
-            },
-            {
-              "Type": "SetAlarm",
-              "Name": "Pet_Ready",
-              "DurationRange": {
-                "Compute": "PetTimeout"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "$Comment": "Clear the pet alarm when it finishes.",
-      "Enabled": {
-        "Compute": "IsPettable"
-      },
-      "Continue": true,
-      "Sensor": {
-        "Type": "Alarm",
-        "Name": "Pet_Ready",
-        "State": "Passed",
-        "Clear": true
-      },
-      "Actions": [
-        {
-          "Type": "Nothing"
         }
       ]
     }
