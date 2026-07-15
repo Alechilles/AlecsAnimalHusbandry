@@ -102,7 +102,11 @@
     "AttachmentInheritance": {
       "ParentWeight": 0.95,
       "RandomWeight": 0.0,
-      "MutationChance": 0.05
+      "MutationChance": 0.05,
+      "ExcludedSets": [
+        "Saddle",
+        "SaddleBlanket"
+      ]
     }
   },
   "OffspringLifecycle": {

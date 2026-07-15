@@ -29,6 +29,8 @@ All 20 full wool colors are supported. Half blocks, stairs, and other shaped clo
 
 Blankets do not require a saddle. Saddle and blanket selections persist through normal Tamework capture, respawn, and model synchronization flows.
 
+Saddles and blankets are equipment, not inherited appearance traits. Offspring keep their model's unequipped defaults even when either parent is equipped.
+
 Petting takes priority over empty-hand removal. If Pet is ready, the first interaction pets the animal and starts the Pet cooldown. The next interaction removes equipment. When both a saddle and blanket are equipped, the saddle is removed first and the following interaction removes the blanket.
 
 ## Current Model Coverage

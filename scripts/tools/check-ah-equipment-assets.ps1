@@ -103,22 +103,33 @@ $equipmentPromptKeys = @(
     "removeSaddle",
     "removeBlanket"
 )
+$keyGlyphToken = "[{key}]"
+$keyGlyphTokenPattern = [regex]::Escape($keyGlyphToken)
 foreach ($languagePath in $languagePaths) {
     $languageText = Get-Content -Raw -LiteralPath $languagePath.FullName
     foreach ($promptKey in $equipmentPromptKeys) {
-        $promptPattern = "(?m)^animalhusbandry\.interactions\.$promptKey=.*<key>.*$"
-        Require-Condition ($languageText -match $promptPattern) "Equipment prompt '$promptKey' must contain <key> in $($languagePath.FullName)."
+        $promptPattern = "(?m)^animalhusbandry\.interactions\.$promptKey=.*$keyGlyphTokenPattern.*$"
+        Require-Condition ($languageText -match $promptPattern) "Equipment prompt '$promptKey' must contain $keyGlyphToken in $($languagePath.FullName)."
     }
 }
 $englishLanguage = Get-Content -Raw -LiteralPath (Join-Path $Root "Server/Languages/en-US/server.lang")
 $expectedEnglishPrompts = @(
-    "animalhusbandry.interactions.applySaddle=Press <key> to equip Saddle",
-    "animalhusbandry.interactions.applyBlanket=Press <key> to equip Blanket",
-    "animalhusbandry.interactions.removeSaddle=Press <key> to remove Saddle",
-    "animalhusbandry.interactions.removeBlanket=Press <key> to remove Blanket"
+    "animalhusbandry.interactions.applySaddle=Press [{key}] to equip Saddle",
+    "animalhusbandry.interactions.applyBlanket=Press [{key}] to equip Blanket",
+    "animalhusbandry.interactions.removeSaddle=Press [{key}] to remove Saddle",
+    "animalhusbandry.interactions.removeBlanket=Press [{key}] to remove Blanket"
 )
 foreach ($expectedPrompt in $expectedEnglishPrompts) {
     Require-Condition ($englishLanguage -match "(?m)^$([regex]::Escape($expectedPrompt))$") "Missing exact English equipment prompt: $expectedPrompt"
+}
+
+$breedingPaths = @(Get-ChildItem -LiteralPath (Join-Path $Root "Server/Tamework/Breeding") -Filter "AHBreed*.json")
+$expectedExcludedSets = @("Saddle", "SaddleBlanket")
+Require-Condition ($breedingPaths.Count -eq 3) "Expected three Animal Husbandry breeding configs."
+foreach ($breedingPath in $breedingPaths) {
+    $breedingConfig = Get-Content -Raw -LiteralPath $breedingPath.FullName | ConvertFrom-Json
+    $excludedSets = @($breedingConfig.Inheritance.AttachmentInheritance.ExcludedSets)
+    Require-Condition (@(Compare-Object ($excludedSets | Sort-Object) ($expectedExcludedSets | Sort-Object)).Count -eq 0) "Breeding config must exclude Saddle and SaddleBlanket inheritance: $($breedingPath.FullName)"
 }
 
 $expectedModelTargets = @(
@@ -252,4 +263,4 @@ Require-Condition ($saddleItem.Recipe.Output[0].ItemId -eq "AH_Saddle") "AH_Sadd
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Model)"))) "AH_Saddle model reference does not exist."
 Require-Condition ((Test-Path -LiteralPath (Join-Path $Root "Common/$($saddleItem.Texture)"))) "AH_Saddle texture reference does not exist."
 
-Write-Host "Animal Husbandry equipment asset checks passed: atomic equip/replacement, Pet-first Saddle/Blanket removal, exact refunds, 20 blanket colors, 21 saddle patches, 32 model targets, 5 blanket patches, and AH_Saddle."
+Write-Host "Animal Husbandry equipment asset checks passed: bound-key prompt glyphs, atomic equip/replacement, Pet-first Saddle/Blanket removal, exact refunds, non-heritable equipment sets, 20 blanket colors, 21 saddle patches, 32 model targets, 5 blanket patches, and AH_Saddle."
