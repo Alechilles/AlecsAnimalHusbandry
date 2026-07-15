@@ -9,13 +9,13 @@ draft: false
 Parent: [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index) | [Home](/mod/alecs-animal-husbandry/)
 Related guide: [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
 
-This page is a quick-reference for mobs that are currently configured as mountable in Animal Husbandry. It was verified against the v1.7.1 role assets: 32 tamed roles are mount-enabled.
+This page is a quick-reference for mobs that are currently configured as mountable in Animal Husbandry.
 
 ## How To Mount
 1. Make sure the mob is tamed and owned by you.
 2. Hold crouch and press `F` (Interact) on the companion.
 
-## Mountable Livestock (7)
+## Mountable Livestock
 | Animal |
 |---|
 | Bison |
@@ -26,7 +26,7 @@ This page is a quick-reference for mobs that are currently configured as mountab
 | Mosshorn Plain |
 | Ram |
 
-## Mountable Neutral Animals (12)
+## Mountable Neutral Animals
 | Animal |
 |---|
 | Antelope |
@@ -42,7 +42,7 @@ This page is a quick-reference for mobs that are currently configured as mountab
 | Tortoise |
 | Trillodon |
 
-## Mountable Beasts (13)
+## Mountable Beasts
 | Animal |
 |---|
 | Bear Grizzly |
@@ -60,7 +60,7 @@ This page is a quick-reference for mobs that are currently configured as mountab
 | Wolf White |
 
 ## Notes
-- This list reflects the current tamed-role configuration (`IsMountable: true`) and can change in future updates.
+- This list reflects current role configuration (`IsMountable: true`) and can change in future updates.
 - If a species is tameable but not listed here, it is currently not mount-enabled.
 
 > [Screenshot Placeholder: Player mounting a livestock companion]
