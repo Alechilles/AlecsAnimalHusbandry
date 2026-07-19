@@ -5,7 +5,7 @@
 ### Added
 - Added a craftable `AH_Saddle` and owner-only interactions for equipping persistent saddles on every currently mountable tamed animal. Full wool blocks apply persistent blankets across all 20 colors on horses, deer and antelope, moose, mosshorns, and skeleton horses. Equipment prompts display the bound interaction key, and offspring never inherit equipped saddles or blankets. Empty-hand interactions remove saddles before blankets and return the exact item, while changing a blanket color refunds the old wool block.
 - Added equipment asset validation covering exact equip/refund mappings, Pet-first Saddle/Blanket removal order, all 32 mountable model targets, every saddle and blanket attachment option, owner/tamed gates, and non-random equipment defaults.
-- Added Animal Husbandry-owned Frost Dragon avatar-flight assets for Tamework dragon flight, including its shoulder-mounted rider anchor, scaled launch VFX, dedicated launch animation, and icy wingtip trails during launch, flap, boost, and near-maximum-speed gliding.
+- Added Animal Husbandry-owned Frost Dragon avatar-flight assets for Tamework dragon flight, including its shoulder-mounted rider anchor, scaled launch VFX, dedicated launch animation, animation-timed wing-flap audio, and icy wingtip trails during launch, flap, boost, and near-maximum-speed gliding.
 - Added a Tamework dynamic attachment rule that gives tamed moose named `Flash` the Canada blanket appearance.
 
 ### Changed

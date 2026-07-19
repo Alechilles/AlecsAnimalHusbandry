@@ -107,7 +107,11 @@
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fly_Idle.blockyanim",
           "BlendingDuration": 0.2,
-          "Speed": 1.5
+          "Speed": 1.5,
+          "FootstepIntervals": [
+            25
+          ],
+          "SoundEventId": "SFX_Tamework_AvatarFlight_Wing_Flap_Footstep"
         }
       ]
     },
@@ -115,7 +119,11 @@
       "Animations": [
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Fly.blockyanim",
-          "BlendingDuration": 0.2
+          "BlendingDuration": 0.2,
+          "FootstepIntervals": [
+            12
+          ],
+          "SoundEventId": "SFX_Tamework_AvatarFlight_Wing_Flap_Footstep"
         },
         {
           "Animation": "NPC/AnimalHusbandry/Dragon_Frost/Animations/AvatarFlight/Glide.blockyanim",
