@@ -15,6 +15,15 @@
     "LaunchReleaseMidScale": 3.0,
     "LaunchReleaseFullScale": 3.6
   },
+  "Trails": {
+    "Enabled": true,
+    "LaunchRootInteraction": "Root_AH_Dragon_Frost_AvatarFlight_Trails_Launch",
+    "FlapRootInteraction": "Root_AH_Dragon_Frost_AvatarFlight_Trails_Flap",
+    "BoostRootInteraction": "Root_AH_Dragon_Frost_AvatarFlight_Trails_Boost",
+    "FastGlideRootInteraction": "Root_AH_Dragon_Frost_AvatarFlight_Trails_Fast_Glide",
+    "FastGlideStartSpeedRatio": 0.92,
+    "FastGlideStopSpeedRatio": 0.86
+  },
   "Animation": {
     "IdleAnimation": "FlyIdle",
     "FlightAnimation": "Fly",

@@ -1,0 +1,22 @@
+{
+  "Type": "Simple",
+  "RunTime": 0.45,
+  "Effects": {
+    "Trails": [
+      {
+        "TrailId": "AH_Dragon_Frost_AvatarFlight_Wingtip_Burst",
+        "TargetNodeName": "R-Spike-Tip",
+        "TargetEntityPart": "Self",
+        "PositionOffset": { "X": 0, "Y": 0, "Z": 0 },
+        "RotationOffset": { "Pitch": 0, "Roll": 0, "Yaw": 0 }
+      },
+      {
+        "TrailId": "AH_Dragon_Frost_AvatarFlight_Wingtip_Burst",
+        "TargetNodeName": "L-Spike-Tip",
+        "TargetEntityPart": "Self",
+        "PositionOffset": { "X": 0, "Y": 0, "Z": 0 },
+        "RotationOffset": { "Pitch": 0, "Roll": 0, "Yaw": 0 }
+      }
+    ]
+  }
+}
