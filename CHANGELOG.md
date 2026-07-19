@@ -12,7 +12,7 @@
 - Updated the required Alec's Tamework dependency to `2.17.x` for built-in held-item attachments and condition-driven avatar-flight trails.
 
 ### Fixed
-- Fixed Frost Dragon wing-flap sounds either rapidly retriggering or stopping after the first flight-animation cycle. Flying and hovering now use continuous cadence loops synchronized to their respective animation speeds.
+- Fixed Frost Dragon flap sounds accumulating during forward flight or remaining silent while hovering. Flight and hover now schedule randomized one-shot wing sounds at their respective animation cadences.
 
 ## 1.7.1 - Mountable Creatures and Telemetry Descriptor Hotfix - 2026-06-30
 
