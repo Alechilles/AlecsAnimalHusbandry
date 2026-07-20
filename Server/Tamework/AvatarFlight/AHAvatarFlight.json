@@ -5,7 +5,13 @@
   "Model": {
     "ApplyModel": true,
     "ModelId": "AH_Dragon_Frost_AvatarFlight",
-    "Scale": 0.4
+    "Scale": 1.0,
+    "CameraPositionOffset": {
+      "X": 2.0,
+      "Y": 0.5,
+      "Z": 14.0
+    },
+    "EyeHeight": 6.25
   },
   "Vfx": {
     "LaunchChargeMinScale": 1.95,
