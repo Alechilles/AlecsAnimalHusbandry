@@ -8,6 +8,7 @@
     "Tamed_Bear_Polar",
     "Crocodile",
     "Tamed_Crocodile",
+    "Tamed_Dragon_Frost",
     "Emberwulf",
     "Tamed_Emberwulf",
     "Fen_Stalker",
@@ -156,6 +157,19 @@
       },
       "OffspringLifecycle": {
         "TimeToFullGrownMinutes": 200
+      }
+    },
+    "Tamed_Dragon_Frost": {
+      "Pairing": {
+        "MaxNearbySameType": 2
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 180,
+        "MinDelaySeconds": 540,
+        "MaxDelaySeconds": 1620
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 300
       }
     },
     "Tamed_Emberwulf": {
