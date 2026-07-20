@@ -1,0 +1,134 @@
+{
+  "Type": "Parallel",
+  "$Comment": "Longer-range freezing breath used during the Frost Dragon aerial strafing run.",
+  "Interactions": [
+    {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "FreezingBreathMoving",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Head",
+                "SystemId": "Ice_Staff",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.1,
+                  "Z": -2.5
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 1.75
+              }
+            ],
+            "ClearAnimationOnFinish": true
+          },
+          "RunTime": 1.2
+        }
+      ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 0.75,
+            "ExtendLeft": 0.75,
+            "ExtendRight": 0.75,
+            "ExtendBottom": 0.75,
+            "StartDistance": 2,
+            "EndDistance": 12.5
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Freezing_Breath_Damage"
+            ]
+          },
+          "Next": {
+            "Type": "Serial",
+            "Interactions": [
+              {
+                "Type": "Simple",
+                "RunTime": 0.25
+              },
+              {
+                "Type": "Selector",
+                "RunTime": 0.05,
+                "Selector": {
+                  "Id": "Stab",
+                  "TestLineOfSight": true,
+                  "ExtendTop": 0.75,
+                  "ExtendLeft": 0.75,
+                  "ExtendRight": 0.75,
+                  "ExtendBottom": 0.75,
+                  "StartDistance": 1.5,
+                  "EndDistance": 12
+                },
+                "HitEntity": {
+                  "Interactions": [
+                    "AH_Dragon_Frost_Freezing_Breath_Damage"
+                  ]
+                }
+              },
+              {
+                "Type": "Simple",
+                "RunTime": 0.25
+              },
+              {
+                "Type": "Selector",
+                "RunTime": 0.05,
+                "Selector": {
+                  "Id": "Stab",
+                  "TestLineOfSight": true,
+                  "ExtendTop": 0.75,
+                  "ExtendLeft": 0.75,
+                  "ExtendRight": 0.75,
+                  "ExtendBottom": 0.75,
+                  "StartDistance": 1.5,
+                  "EndDistance": 12
+                },
+                "HitEntity": {
+                  "Interactions": [
+                    "AH_Dragon_Frost_Freezing_Breath_Damage"
+                  ]
+                }
+              },
+              {
+                "Type": "Simple",
+                "RunTime": 0.25
+              },
+              {
+                "Type": "Selector",
+                "RunTime": 0.05,
+                "Selector": {
+                  "Id": "Stab",
+                  "TestLineOfSight": true,
+                  "ExtendTop": 0.75,
+                  "ExtendLeft": 0.75,
+                  "ExtendRight": 0.75,
+                  "ExtendBottom": 0.75,
+                  "StartDistance": 1.5,
+                  "EndDistance": 12
+                },
+                "HitEntity": {
+                  "Interactions": [
+                    "AH_Dragon_Frost_Freezing_Breath_Damage"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "Type": "CombatActionEvaluator",
+  "TargetMemoryDuration": 10,
+  "CombatActionEvaluator": {
+    "RunConditions": [
+      {
+        "Type": "TimeSinceLastUsed",
+        "Curve": {
+          "ResponseCurve": "Linear",
+          "XRange": [ 0, 2 ]
+        }
+      },
+      {
+        "Type": "Randomiser",
+        "MinValue": 0.85,
+        "MaxValue": 1
+      }
+    ],
+    "MinRunUtility": 0.5,
+    "MinActionUtility": 0.1,
+    "PredictabilityRange": [ 0.75, 0.95 ],
+    "AvailableActions": {
+      "SelectTarget": {
+        "Type": "SelectBasicAttackTarget",
+        "Description": "Select a hostile target for basic attacks.",
+        "Conditions": [
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "Type": "Switch",
+              "SwitchPoint": 4
+            }
+          }
+        ]
+      },
+      "AirBreathRun": {
+        "Type": "State",
+        "Description": "Commit to an aerial freezing-breath strafing run.",
+        "Target": "Hostile",
+        "State": "Combat",
+        "SubState": "AirBreathIngress",
+        "WeightCoefficient": 6,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleDescendingLogistic",
+              "XRange": [ 0, 36 ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [ 15, 30 ]
+            }
+          },
+          {
+            "Type": "Randomiser",
+            "MinValue": 0.8,
+            "MaxValue": 1
+          }
+        ]
+      },
+      "AirFrostBoltVolley": {
+        "Type": "State",
+        "Description": "Stop and launch a bounded frost-bolt volley.",
+        "Target": "Hostile",
+        "State": "Combat",
+        "SubState": "AirVolley",
+        "WeightCoefficient": 3,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleDescendingLogistic",
+              "XRange": [ 0, 28 ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [ 12, 20 ]
+            }
+          },
+          {
+            "Type": "Randomiser",
+            "MinValue": 0.65,
+            "MaxValue": 1
+          }
+        ]
+      },
+      "GroundBite": {
+        "Type": "Ability",
+        "Description": "Use the grounded lunge bite.",
+        "Target": "Hostile",
+        "SubState": "Default",
+        "Ability": "Root_NPC_AH_Dragon_Frost_Bite",
+        "WeightCoefficient": 3,
+        "AttackDistanceRange": [ 2.5, 4.5 ],
+        "PostExecuteDistanceRange": [ 3.5, 3.5 ],
+        "FailureTimeout": 4,
+        "RequireAiming": true,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleLogistic",
+              "XRange": [ 0, 6 ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [ 10, 20 ]
+            }
+          }
+        ]
+      },
+      "GroundFreezingBreath": {
+        "Type": "Ability",
+        "Description": "Use the grounded freezing-breath attack.",
+        "Target": "Hostile",
+        "SubState": "Default",
+        "Ability": "Root_NPC_AH_Dragon_Frost_Freezing_Breath",
+        "WeightCoefficient": 4,
+        "AttackDistanceRange": [ 3, 9 ],
+        "PostExecuteDistanceRange": [ 5, 5 ],
+        "FailureTimeout": 5,
+        "RequireAiming": true,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleLogistic",
+              "XRange": [ 0, 10 ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [ 10, 20 ]
+            }
+          }
+        ]
+      }
+    },
+    "ActionSets": {
+      "Default": {
+        "BasicAttacks": {
+          "Attacks": [ "Root_NPC_AH_Dragon_Frost_Attack" ],
+          "Randomise": false,
+          "MaxRange": 5.25,
+          "Timeout": 2,
+          "CooldownRange": [ 1.5, 2.5 ]
+        },
+        "Actions": [
+          "SelectTarget",
+          "GroundFreezingBreath",
+          "GroundBite"
+        ]
+      },
+      "AirRanged": {
+        "BasicAttacks": {
+          "Attacks": [ "Root_NPC_AH_Dragon_Frost_Frost_Bolt" ],
+          "Randomise": false,
+          "MaxRange": 28,
+          "Timeout": 2.5,
+          "CooldownRange": [ 1, 3 ]
+        },
+        "Actions": [
+          "SelectTarget",
+          "AirBreathRun",
+          "AirFrostBoltVolley"
+        ]
+      }
+    }
+  }
+}

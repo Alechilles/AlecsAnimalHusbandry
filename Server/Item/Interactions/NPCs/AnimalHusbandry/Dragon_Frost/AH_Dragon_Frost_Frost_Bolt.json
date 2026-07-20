@@ -1,0 +1,53 @@
+{
+  "Type": "Serial",
+  "$Comment": "Aerial projectile cadence using the copied ice-ball projectile family.",
+  "Interactions": [
+    {
+      "Type": "Simple",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+        "ItemAnimationId": "FrostBoltMoving",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Head",
+            "SystemId": "AH_Dragon_Frost_Frost_Bolt_Charging",
+            "DetachedFromModel": false,
+            "PositionOffset": {
+              "Y": 0,
+              "Z": -1.5
+            },
+            "Scale": 0.6
+          }
+        ]
+      },
+      "RunTime": 0.6
+    },
+    {
+      "Type": "TameworkLaunchProjectile",
+      "RunTime": 0,
+      "ProjectileId": "AH_Dragon_Frost_Frost_Bolt",
+      "LaunchPositionOffset": {
+        "X": 0,
+        "Y": 2.25,
+        "Z": -2.5
+      },
+      "TrajectoryMode": "Direct",
+      "TargetSlot": "LockedTarget",
+      "ImpactEffect": {
+        "EffectId": "AH_Dragon_Frost_Chilled",
+        "Radius": 3,
+        "ExcludeSource": true
+      },
+      "Effects": {
+        "WorldSoundEventId": "SFX_Staff_Ice_Shoot",
+        "LocalSoundEventId": "SFX_Staff_Ice_Shoot"
+      },
+      "Tags": {}
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.35
+    }
+  ]
+}

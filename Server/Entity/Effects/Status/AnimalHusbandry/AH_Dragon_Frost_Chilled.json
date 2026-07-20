@@ -1,0 +1,13 @@
+{
+  "Name": "Chilled",
+  "ApplicationEffects": {
+    "HorizontalSpeedMultiplier": 0.7,
+    "EntityBottomTint": "#86CFF8",
+    "EntityTopTint": "#D9F3FF"
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 3
+}

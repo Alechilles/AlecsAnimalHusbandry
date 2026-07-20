@@ -1,0 +1,63 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+    "ItemAnimationId": "SwingLeft"
+  },
+  "RunTime": 0.379,
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "Selector",
+            "RunTime": 0.152,
+            "Selector": {
+              "Id": "Horizontal",
+              "Direction": "ToLeft",
+              "TestLineOfSight": true,
+              "ExtendTop": 0.75,
+              "ExtendBottom": 0.75,
+              "StartDistance": 2.51,
+              "EndDistance": 5.32,
+              "Length": 67.39,
+              "RollOffset": 45,
+              "YawStartOffset": -2.66,
+              "PitchOffset": -23.94
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "Replace",
+                  "DefaultOk": true,
+                  "Var": "Swing_Left_Damage",
+                  "DefaultValue": {
+                    "Interactions": [
+                      "AH_Dragon_Frost_Swing_Left_Damage"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Next": {
+              "Type": "Simple",
+              "RunTime": 0.53
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Simple",
+            "RunTime": 0.303,
+            "Effects": {
+              "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

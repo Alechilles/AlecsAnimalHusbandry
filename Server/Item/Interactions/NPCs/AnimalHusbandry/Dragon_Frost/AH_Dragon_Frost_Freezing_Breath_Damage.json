@@ -1,0 +1,25 @@
+{
+  "Parent": "DamageEntityParent",
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Ice": 18
+    },
+    "RandomPercentageModifier": 0.1
+  },
+  "DamageEffects": {
+    "Knockback": {
+      "Force": 4,
+      "VelocityType": "Add"
+    },
+    "WorldParticles": [
+      {
+        "SystemId": "Impact_Ice"
+      }
+    ]
+  },
+  "Next": {
+    "Type": "ApplyEffect",
+    "EffectId": "AH_Dragon_Frost_Chilled",
+    "Entity": "Target"
+  }
+}

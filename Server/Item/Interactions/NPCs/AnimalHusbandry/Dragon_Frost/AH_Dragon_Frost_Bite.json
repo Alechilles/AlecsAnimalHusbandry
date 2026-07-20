@@ -1,0 +1,62 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+    "ItemAnimationId": "Bite"
+  },
+  "RunTime": 0.25,
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "Selector",
+            "RunTime": 0.167,
+            "Selector": {
+              "Id": "Horizontal",
+              "Direction": "ToRight",
+              "TestLineOfSight": true,
+              "ExtendTop": 0.75,
+              "ExtendBottom": 0.75,
+              "StartDistance": 3.12,
+              "EndDistance": 4.75,
+              "Length": 44.55,
+              "RollOffset": -90,
+              "YawStartOffset": 2.66
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "Replace",
+                  "DefaultOk": true,
+                  "Var": "Bite_Damage",
+                  "DefaultValue": {
+                    "Interactions": [
+                      "AH_Dragon_Frost_Bite_Damage"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Next": {
+              "Type": "Simple",
+              "RunTime": 0.25
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Simple",
+            "RunTime": 0.167,
+            "Effects": {
+              "WorldSoundEventId": "SFX_Rex_Bite"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

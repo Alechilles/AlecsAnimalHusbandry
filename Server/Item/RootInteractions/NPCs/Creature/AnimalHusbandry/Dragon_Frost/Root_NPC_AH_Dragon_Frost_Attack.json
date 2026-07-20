@@ -1,0 +1,18 @@
+{
+  "Interactions": [
+    {
+      "Type": "Chaining",
+      "ChainId": "AHDragonFrostAttacks",
+      "ChainingAllowance": 15,
+      "Next": [
+        "AH_Dragon_Frost_Bite",
+        "AH_Dragon_Frost_Swing_Left"
+      ]
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}
