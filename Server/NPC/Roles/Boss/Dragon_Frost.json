@@ -1,0 +1,19 @@
+{
+  "Type": "Variant",
+  "Reference": "AH_Template_Dragon_Frost",
+  "Modify": {
+    "Appearance": "AH_Dragon_Frost",
+    "MaxHealth": 400,
+    "IsMemory": true,
+    "MemoriesCategory": "Mythic",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Dragon_Frost.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
