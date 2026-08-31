@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.8 - Frost Dragon Texture Cleanup Hotfix - 2026-08-31
+
+### Changed
+
+- Removed the duplicate Frost Dragon texture from the mod package. Both custom
+  Frost Dragon models now use Hytale's vanilla texture with no visual change.
+
 ## 2.1.7 - Stable 0.6 Compatibility Hotfix - 2026-08-27
 
 ### Changed
