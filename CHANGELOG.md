@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.1.10 - Beacon telemetry descriptor migration - 2026-09-01
+
+### Changed
+
+- Moved the passive telemetry descriptor to Beacon's `Server/Beacon/project.json` contract.
+- Updated current Beacon link and `/beacon consent` command guidance.
+
 ## 2.1.9 - Saddle Patch Compatibility Hotfix - 2026-08-31
 
 ### Changed
