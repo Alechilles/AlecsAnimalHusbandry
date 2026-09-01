@@ -6,19 +6,7 @@
     "Server/Models/Beast/Bear_Polar.json"
   ],
   "When": {
-    "All": [
-      {
-        "TargetExists": true
-      },
-      {
-        "JsonPathExists": {
-          "Source": {
-            "Type": "Target"
-          },
-          "Path": "/RandomAttachmentSets"
-        }
-      }
-    ]
+    "TargetExists": true
   },
   "Priority": 0,
   "Enabled": true,
@@ -26,18 +14,20 @@
     {
       "Id": "add-saddles-for-bear",
       "Op": "Merge",
-      "Path": "/RandomAttachmentSets",
+      "Path": "",
       "Value": {
-        "AH_Saddle": {
-          "None": {
-            "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
-            "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
-            "Weight": 1
-          },
-          "Yes": {
-            "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
-            "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
-            "Weight": 0
+        "RandomAttachmentSets": {
+          "AH_Saddle": {
+            "None": {
+              "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Empty.png",
+              "Weight": 1
+            },
+            "Yes": {
+              "Model": "NPC/Beast/Bear_Grizzly/Models/Attachments/Saddle_Bear.blockymodel",
+              "Texture": "NPC/Wildlife/Moose/Models/Attachments/Saddle_Leather.png",
+              "Weight": 0
+            }
           }
         }
       }

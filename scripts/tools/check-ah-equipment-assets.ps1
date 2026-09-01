@@ -211,7 +211,7 @@ foreach ($modelPatchPath in $modelPatchPaths) {
         $actualModelTargets += @($targetsProperty.Value)
     }
 
-    $sets = $modelPatch.Operations[0].Value
+    $sets = $modelPatch.Operations[0].Value.RandomAttachmentSets
     Require-Condition ($null -ne $sets.AH_Saddle) "$modelPatchName must define an AH_Saddle attachment set."
     Require-Condition ($sets.AH_Saddle.None.Weight -gt 0) "$modelPatchName must keep AH_Saddle.None as a random default."
     Require-Condition ($sets.AH_Saddle.Yes.Weight -eq 0) "$modelPatchName must not randomly apply saddles."

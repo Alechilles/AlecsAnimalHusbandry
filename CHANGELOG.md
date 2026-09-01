@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.9 - Saddle Patch Compatibility Hotfix - 2026-08-31
+
+### Changed
+
+- Required Alec's Tamework `>=3.4.0 <4.0`, which embeds Patchwork 1.4.0.
+- Replaced each saddle patch pair with one root merge. Saddle attachment sets
+  now merge correctly whether `RandomAttachmentSets` already exists or not.
+
 ## 2.1.8 - Frost Dragon Texture Cleanup Hotfix - 2026-08-31
 
 ### Changed
