@@ -308,8 +308,8 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <br />
 
 <H2>Telemetry</H2>
-<p><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework</a>, and thus Alec's Animal Husbandry utilizes <a href="https://www.curseforge.com/hytale/mods/alecs-telemetry">Alec's Telemetry</a> to report crash, error, performance, and usage telemetry data to the developer.</p>
+<p><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework</a>, and thus Alec's Animal Husbandry utilizes <a href="https://beacon.modstats.io">Beacon</a> to report crash, error, performance, and usage telemetry data to the developer.</p>
 <p>This data is anonymous and does <strong>not</strong> contain any personally identifiable information, and is exclusively used to diagnose issues in the mod to provide a better user experience.</p>
-<p>You may review or change consent at any time with <code>/telemetry consent</code>.</p>
+<p>You may review or change consent at any time with <code>/beacon consent</code>.</p>
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
