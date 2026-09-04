@@ -13,6 +13,9 @@ Husbandry interaction configs.
 Install this pack with Alec's Animal Husbandry! 2.1.9 or later and Alec's
 Tamework! 3.4.0 or later. Restart the game or server after installation.
 
+Put the ZIP in `Hytale/UserData/Mods`. Hytale does not scan the `UserData`
+root for mods or asset packs.
+
 Run `/patchwork status` to confirm that all three `AH_MountOnF` definitions
 applied.
 
