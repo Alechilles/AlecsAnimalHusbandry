@@ -19,6 +19,9 @@ root for mods or asset packs.
 Run `/patchwork status` to confirm that all three `AH_MountOnF` definitions
 applied.
 
+Validated in Hytale 0.6.3 with Alec's Animal Husbandry! 2.1.9, Alec's
+Tamework! 3.4.1, and Patchwork 1.4.1.
+
 The frost dragon still needs a Flightmaster's Talisman for mounting. Its
 talisman warning moves to plain F, and crouch+F remains available for mode
 cycling.
