@@ -1,0 +1,58 @@
+{
+  "Id": "AH_MountOnF_Companions",
+  "$Comment": "Makes plain interact mount and crouch+interact cycle modes. ModeCycle moves before Mount because Tamework selects the first matching interaction.",
+  "Targets": [
+    "Server/Tamework/Interactions/AHIntNeutral.json",
+    "Server/Tamework/Interactions/AHIntLivestock.json",
+    "Server/Tamework/Interactions/AHIntBeast.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 200,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "allow-mount-while-standing",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "Mount"
+      },
+      "Value": {
+        "RequireCrouching": false
+      }
+    },
+    {
+      "Id": "require-crouching-for-mode-cycle",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "ModeCycle"
+      },
+      "Value": {
+        "Requires": {
+          "All": {
+            "PlayerMovementState": [
+              {
+                "State": "Crouching"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "Id": "prefer-crouching-mode-cycle-over-mount",
+      "Op": "MoveMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "ModeCycle"
+      },
+      "Position": "Before",
+      "Find": {
+        "Type": "Mount"
+      }
+    }
+  ]
+}
