@@ -277,6 +277,14 @@
     "MaxHeightOverGround": {
       "Value": 35,
       "Description": "Maximum flight height over ground."
+    },
+    "FlockLeaderLeashDistance": {
+      "Value": 40,
+      "Description": "Home radius for a wild flock leader, in blocks."
+    },
+    "FlockFollowDistance": {
+      "Value": 8,
+      "Description": "Distance at which wild followers move back toward their flock leader, in blocks."
     }
   },
   "IsMemory": {
@@ -533,7 +541,7 @@
       "Continue": true,
       "Instructions": [
         {
-          "$Comment": "Update flock member leash positions to match the leader.",
+          "$Comment": "Track the live flock leader without replacing the threat or food target.",
           "Enabled": {
             "Compute": "!isEmptyStringArray(FlockArray)"
           },
@@ -557,15 +565,12 @@
           },
           "Actions": [
             {
-              "Type": "Timeout",
-              "Delay": [
-                0.5,
-                2
-              ],
-              "Action": {
-                "Type": "SetLeashPosition",
-                "ToTarget": true
-              }
+              "Type": "SetMarkedTarget",
+              "TargetSlot": "AH_FlockLeader"
+            },
+            {
+              "Type": "SetLeashPosition",
+              "ToTarget": true
             }
           ]
         },
@@ -575,20 +580,43 @@
             "Compute": "!isEmptyStringArray(FlockArray)"
           },
           "Sensor": {
-            "Type": "Mob",
-            "Range": 20,
-            "ExcludeOwnType": false,
-            "LockOnTarget": true,
-            "Filters": [
+            "Type": "And",
+            "Sensors": [
               {
-                "Type": "NPCGroup",
-                "IncludeGroups": [
-                  "Self"
+                "Type": "Mob",
+                "Range": 20,
+                "ExcludeOwnType": false,
+                "LockOnTarget": false,
+                "Filters": [
+                  {
+                    "Type": "NPCGroup",
+                    "IncludeGroups": [
+                      "Self"
+                    ]
+                  },
+                  {
+                    "Type": "Or",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "NotMember"
+                      },
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  }
                 ]
               },
               {
-                "Type": "Flock",
-                "FlockStatus": "NotMember"
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "NotMember"
+                  }
+                ]
               }
             ]
           },
@@ -842,6 +870,378 @@
       ]
     },
     {
+      "$Comment": "Flock decisions and alarms run during idle, feeding, sleep and escape.",
+      "Enabled": {
+        "Compute": "!isEmptyStringArray(FlockArray)"
+      },
+      "Continue": true,
+      "Instructions": [
+        {
+          "$Comment": "Clear the alarm latch only after this bird finishes escaping.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Not",
+            "Sensor": {
+              "Type": "Or",
+              "Sensors": [
+                {
+                  "Type": "State",
+                  "State": "Flee"
+                },
+                {
+                  "Type": "State",
+                  "State": "Panic"
+                }
+              ]
+            }
+          },
+          "Actions": [
+            {
+              "Type": "SetFlag",
+              "Name": "AH_FlockAlarmSent",
+              "SetTo": false
+            }
+          ]
+        },
+        {
+          "$Comment": "Consume flock alarms even while escaping; do not relay the same scare.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Beacon",
+            "Message": "AH_Flock_Threat",
+            "Range": 256,
+            "TargetSlot": "LockedTarget"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Or",
+                  "Sensors": [
+                    {
+                      "Type": "State",
+                      "State": "Flee"
+                    },
+                    {
+                      "Type": "State",
+                      "State": "Panic"
+                    }
+                  ]
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockAlarmSent",
+                  "SetTo": true
+                },
+                {
+                  "Type": "State",
+                  "State": "Flee"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Consume flock alarms even while escaping; do not relay the same scare.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Beacon",
+            "Message": "AH_Flock_Panic",
+            "Range": 256
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Or",
+                  "Sensors": [
+                    {
+                      "Type": "State",
+                      "State": "Flee"
+                    },
+                    {
+                      "Type": "State",
+                      "State": "Panic"
+                    }
+                  ]
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockAlarmSent",
+                  "SetTo": true
+                },
+                {
+                  "Type": "State",
+                  "State": "Panic"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "A locally spooked member alerts the whole flock once, including its leader.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Flee"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Panic"
+                  }
+                ]
+              },
+              {
+                "Type": "Flag",
+                "Name": "AH_FlockAlarmSent",
+                "Set": false
+              }
+            ]
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "TargetSlot": "LockedTarget"
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockAlarmSent",
+                  "SetTo": true
+                },
+                {
+                  "Type": "FlockBeacon",
+                  "Message": "AH_Flock_Threat",
+                  "SendToSelf": false,
+                  "ExpirationTime": 1,
+                  "SendTargetSlot": "LockedTarget"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockAlarmSent",
+                  "SetTo": true
+                },
+                {
+                  "Type": "FlockBeacon",
+                  "Message": "AH_Flock_Panic",
+                  "SendToSelf": false,
+                  "ExpirationTime": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Publish the leader decision continuously so new members also synchronize. Landing intent takes effect before touchdown.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Self",
+            "Filters": [
+              {
+                "Type": "Flock",
+                "FlockStatus": "Leader"
+              }
+            ]
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Idle.TakeOff"
+                  },
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "State",
+                        "State": "Flee"
+                      },
+                      {
+                        "Type": "State",
+                        "State": "Panic"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Type": "Not",
+                        "Sensor": {
+                          "Type": "State",
+                          "State": "Idle.Landing"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "FlockBeacon",
+                  "Message": "AH_Flock_Air",
+                  "SendToSelf": false,
+                  "ExpirationTime": 1
+                }
+              ]
+            },
+            {
+              "Actions": [
+                {
+                  "Type": "FlockBeacon",
+                  "Message": "AH_Flock_Ground",
+                  "SendToSelf": false,
+                  "ExpirationTime": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Beacon",
+                "Message": "AH_Flock_Air",
+                "Range": 256
+              },
+              {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Follower"
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SetFlag",
+              "Name": "AH_FlockLeaderFlying",
+              "SetTo": true
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "AH_FlockLeaderModeKnown",
+              "SetTo": true
+            }
+          ]
+        },
+        {
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Beacon",
+                "Message": "AH_Flock_Ground",
+                "Range": 256
+              },
+              {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Follower"
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SetFlag",
+              "Name": "AH_FlockLeaderFlying",
+              "SetTo": false
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "AH_FlockLeaderModeKnown",
+              "SetTo": true
+            }
+          ]
+        },
+        {
+          "$Comment": "Leader takeoff interrupts food following and ordinary alerts, but never escape.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Follower"
+                  }
+                ]
+              },
+              {
+                "Type": "Flag",
+                "Name": "AH_FlockLeaderFlying",
+                "Set": true
+              },
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Sleep"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowItem"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Alerted"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "ReturnHome"
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "$Comment": "Initialize the produce alarm. This prevents NPCs from producing as soon as they spawn in",
       "Enabled": {
         "Compute": "!isEmpty(ProduceItem)"
@@ -887,26 +1287,6 @@
           },
           "Instructions": [
             {
-              "$Comment": "Switch to flee state if any flock member engages a target TODO switch to attack if you are very close and can attack? otherwise flee.",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
-              "Sensor": {
-                "Type": "Beacon",
-                "Message": "Flock_Attack",
-                "TargetSlot": "LockedTarget",
-                "Range": {
-                  "Compute": "HearingRange"
-                }
-              },
-              "Actions": [
-                {
-                  "Type": "State",
-                  "State": "Alerted"
-                }
-              ]
-            },
-            {
               "Reference": "Component_Instruction_Damage_Check",
               "Modify": {
                 "_ExportStates": [
@@ -917,6 +1297,193 @@
                   "Compute": "AlertedRange"
                 }
               }
+            },
+            {
+              "$Comment": "Followers mirror the leader flight decision and stay close; only leaders and lone birds run the timed cycle.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Follower"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Target",
+                    "TargetSlot": "AH_FlockLeader"
+                  },
+                  {
+                    "Type": "Flag",
+                    "Name": "AH_FlockLeaderModeKnown",
+                    "Set": true
+                  },
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Flag",
+                        "Name": "AH_FlockLeaderFlying",
+                        "Set": true
+                      },
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Flag",
+                    "Name": "AH_FlockLeaderFlying",
+                    "Set": true
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      "BodyMotion": {
+                        "Type": "TakeOff",
+                        "JumpSpeed": 4
+                      }
+                    },
+                    {
+                      "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Eval",
+                            "Expression": "blocked"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 150,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "FlockLeader"
+                      },
+                      "BodyMotion": {
+                        "Type": "Seek",
+                        "SlowDownDistance": {
+                          "Compute": "FlockFollowDistance"
+                        },
+                        "StopDistance": 3,
+                        "RelativeSpeed": 0.4,
+                        "UsePathfinder": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  "Instructions": [
+                    {
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Any",
+                        "Once": true
+                      },
+                      "Actions": [
+                        {
+                          "Type": "ResetSearchRays"
+                        }
+                      ]
+                    },
+                    {
+                      "Continue": true,
+                      "Actions": [
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            45,
+                            60
+                          ],
+                          "Action": {
+                            "Type": "ResetSearchRays"
+                          }
+                        }
+                      ],
+                      "$Comment": "Allow descent from cruise altitude; retry the landing search without restarting the full flight interval."
+                    },
+                    {
+                      "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Eval",
+                            "Expression": "blocked"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 150,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "AdjustPosition",
+                        "Offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "Sensor": {
+                          "Type": "SearchRay",
+                          "Name": "AH_Wild_Landing",
+                          "Range": 64,
+                          "Angle": 90,
+                          "Blocks": "StoneAndSoil"
+                        }
+                      },
+                      "BodyMotion": {
+                        "Type": "Land",
+                        "RelativeSpeed": 0.4,
+                        "SlowDownDistance": 1,
+                        "StopDistance": 0.5,
+                        "UsePathfinder": true
+                      }
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 90,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 0.25
+                      }
+                    }
+                  ]
+                }
+              ]
             },
             {
               "$Comment": "Check if there are any potential things that can alert the NPC",
@@ -988,14 +1555,53 @@
                 "Type": "And",
                 "Sensors": [
                   {
-                    "Type": "Leash",
-                    "Range": {
-                      "Compute": "LeashDistance"
-                    }
-                  },
-                  {
                     "Type": "MotionController",
                     "MotionController": "Walk"
+                  },
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "Leader"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "FlockLeaderLeashDistance"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "NotMember"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "LeashDistance"
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               },
@@ -1054,22 +1660,127 @@
               ]
             },
             {
-              "$Comment": "Alternate about 80% airborne and 20% grounded during undisturbed active time; feeding, sleep and threats interrupt the cycle.",
+              "$Comment": "Grounded followers stay near the leader between food interactions.",
               "Sensor": {
-                "Type": "Or",
+                "Type": "And",
                 "Sensors": [
                   {
-                    "Type": "Time",
-                    "Period": {
-                      "Compute": "DayTimePeriod"
-                    },
-                    "CheckDay": true
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Follower"
+                      }
+                    ]
                   },
                   {
-                    "Type": "Any",
-                    "Enabled": {
-                      "Compute": "isEmpty(SleepAnimation)"
-                    }
+                    "Type": "Target",
+                    "TargetSlot": "AH_FlockLeader"
+                  },
+                  {
+                    "Type": "Flag",
+                    "Name": "AH_FlockLeaderModeKnown",
+                    "Set": true
+                  },
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Time",
+                        "Period": {
+                          "Compute": "DayTimePeriod"
+                        },
+                        "CheckDay": true
+                      },
+                      {
+                        "Type": "Any",
+                        "Enabled": {
+                          "Compute": "isEmpty(SleepAnimation)"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "FlockLeader"
+                      },
+                      {
+                        "Type": "Leash",
+                        "Range": {
+                          "Compute": "FlockFollowDistance"
+                        }
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": {
+                      "Compute": "FlockFollowDistance"
+                    },
+                    "StopDistance": 3,
+                    "RelativeSpeed": 0.4,
+                    "UsePathfinder": true
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "RelativeSpeed": 0.25
+                  }
+                }
+              ]
+            },
+            {
+              "$Comment": "Alternate about 80% airborne and 20% grounded during undisturbed active time; feeding, sleep and threats interrupt the cycle.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Leader"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "NotMember"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "Time",
+                        "Period": {
+                          "Compute": "DayTimePeriod"
+                        },
+                        "CheckDay": true
+                      },
+                      {
+                        "Type": "Any",
+                        "Enabled": {
+                          "Compute": "isEmpty(SleepAnimation)"
+                        }
+                      }
+                    ]
                   }
                 ]
               },
@@ -1207,15 +1918,80 @@
                     },
                     {
                       "Sensor": {
-                        "Type": "Leash",
-                        "Range": {
-                          "Compute": "WanderRadius"
-                        }
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "Leader"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "FlockLeaderLeashDistance"
+                            }
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Seek",
+                        "SlowDownDistance": {
+                          "Compute": "FlockLeaderLeashDistance * 0.75"
+                        },
+                        "StopDistance": {
+                          "Compute": "FlockLeaderLeashDistance * 0.5"
+                        },
+                        "RelativeSpeed": 0.25
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "NotMember"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "WanderRadius"
+                            }
+                          }
+                        ]
                       },
                       "BodyMotion": {
                         "Type": "Seek",
                         "SlowDownDistance": 1.5,
                         "StopDistance": 1,
+                        "RelativeSpeed": 0.25
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Leader"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": {
+                          "Compute": "FlockLeaderLeashDistance"
+                        },
+                        "MaxHeadingChange": 60,
                         "RelativeSpeed": 0.25
                       }
                     },
@@ -1445,23 +2221,6 @@
             "State": "Sleep"
           },
           "Instructions": [
-            {
-              "$Comment": "Wake up if an enemy attacks a flock member.",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
-              "Sensor": {
-                "Type": "Beacon",
-                "Message": "Flock_Attack",
-                "TargetSlot": "LockedTarget"
-              },
-              "Actions": [
-                {
-                  "Type": "State",
-                  "State": "Alerted"
-                }
-              ]
-            },
             {
               "$Comment": "Night-time sleep.",
               "Instructions": [
@@ -1861,22 +2620,19 @@
           },
           "Instructions": [
             {
-              "$Comment": "Switch to flee state if any flock member engages a target TODO switch to attack if you are very close and can attack? otherwise flee.",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
               "Sensor": {
-                "Type": "Beacon",
-                "Message": "Flock_Attack",
-                "TargetSlot": "LockedTarget",
-                "Range": {
-                  "Compute": "HearingRange"
-                }
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Follower"
+                  }
+                ]
               },
               "Actions": [
                 {
                   "Type": "State",
-                  "State": "Alerted"
+                  "State": "Idle"
                 }
               ]
             },
@@ -2028,24 +2784,6 @@
             "State": "Flee"
           },
           "Instructions": [
-            {
-              "$Comment": "TODO: Add a state message",
-              "Enabled": {
-                "Compute": "!isEmptyStringArray(FlockArray)"
-              },
-              "Continue": true,
-              "Sensor": {
-                "Type": "Any",
-                "Once": true
-              },
-              "Actions": [
-                {
-                  "Type": "FlockBeacon",
-                  "Message": "Flock_Attack",
-                  "SendTargetSlot": "LockedTarget"
-                }
-              ]
-            },
             {
               "Reference": "Component_Instruction_Damage_Check",
               "Modify": {
@@ -2614,5 +3352,9 @@
   },
   "NameTranslationKey": {
     "Compute": "NameTranslationKey"
-  }
+  },
+  "FlockAllowedNPC": {
+    "Compute": "FlockArray"
+  },
+  "FlockCanLead": true
 }
