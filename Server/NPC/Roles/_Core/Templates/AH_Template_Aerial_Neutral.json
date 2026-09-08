@@ -1921,6 +1921,12 @@
                         "Type": "And",
                         "Sensors": [
                           {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "FlockLeaderLeashDistance"
+                            }
+                          },
+                          {
                             "Type": "Self",
                             "Filters": [
                               {
@@ -1928,12 +1934,6 @@
                                 "FlockStatus": "Leader"
                               }
                             ]
-                          },
-                          {
-                            "Type": "Leash",
-                            "Range": {
-                              "Compute": "FlockLeaderLeashDistance"
-                            }
                           }
                         ]
                       },
@@ -1946,12 +1946,19 @@
                           "Compute": "FlockLeaderLeashDistance * 0.5"
                         },
                         "RelativeSpeed": 0.25
-                      }
+                      },
+                      "$Comment": "Leash must provide the seek position before the self flock-status filter."
                     },
                     {
                       "Sensor": {
                         "Type": "And",
                         "Sensors": [
+                          {
+                            "Type": "Leash",
+                            "Range": {
+                              "Compute": "WanderRadius"
+                            }
+                          },
                           {
                             "Type": "Self",
                             "Filters": [
@@ -1960,12 +1967,6 @@
                                 "FlockStatus": "NotMember"
                               }
                             ]
-                          },
-                          {
-                            "Type": "Leash",
-                            "Range": {
-                              "Compute": "WanderRadius"
-                            }
                           }
                         ]
                       },
@@ -1974,7 +1975,8 @@
                         "SlowDownDistance": 1.5,
                         "StopDistance": 1,
                         "RelativeSpeed": 0.25
-                      }
+                      },
+                      "$Comment": "Leash must provide the seek position before the self flock-status filter."
                     },
                     {
                       "Sensor": {
