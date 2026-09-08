@@ -1295,7 +1295,7 @@
           ]
         },
         {
-          "$Comment": "Leader takeoff interrupts food following and ordinary alerts, but never escape.",
+          "$Comment": "Leader takeoff interrupts food following and ordinary alerts, except grounded food trust; escape always takes priority.",
           "Continue": true,
           "Sensor": {
             "Type": "And",
@@ -1334,6 +1334,52 @@
                     "State": "ReturnHome"
                   }
                 ]
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "And",
+                  "Sensors": [
+                    {
+                      "Type": "State",
+                      "State": "FollowItem"
+                    },
+                    {
+                      "Type": "And",
+                      "Sensors": [
+                        {
+                          "Type": "Target",
+                          "TargetSlot": "LockedTarget",
+                          "Range": {
+                            "Compute": "AlertedActionRange"
+                          },
+                          "Filters": [
+                            {
+                              "Type": "Attitude",
+                              "Attitudes": [
+                                "Friendly",
+                                "Revered"
+                              ]
+                            },
+                            {
+                              "Type": "Not",
+                              "Filter": {
+                                "Type": "ItemInHand",
+                                "Items": {
+                                  "Compute": "AttractiveItemSet"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "Type": "MotionController",
+                          "MotionController": "Walk"
+                        }
+                      ]
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -3394,6 +3440,52 @@
             "State": "FollowItem"
           },
           "Instructions": [
+            {
+              "$Comment": "Stay on foot near the former food holder until their temporary friendly attitude expires. This preempts the shared component's unconditional takeoff on item loss.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget",
+                    "Range": {
+                      "Compute": "AlertedActionRange"
+                    },
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Friendly",
+                          "Revered"
+                        ]
+                      },
+                      {
+                        "Type": "Not",
+                        "Filter": {
+                          "Type": "ItemInHand",
+                          "Items": {
+                            "Compute": "AttractiveItemSet"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "MaintainDistance",
+                "DesiredDistanceRange": [
+                  1.5,
+                  2.0
+                ],
+                "RelativeForwardsSpeed": 0.3,
+                "RelativeBackwardsSpeed": 0.3
+              }
+            },
             {
               "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
               "Sensor": {
