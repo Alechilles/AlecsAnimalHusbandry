@@ -1388,8 +1388,11 @@
                         },
                         "StopDistance": 3,
                         "RelativeSpeed": 0.4,
-                        "UsePathfinder": true
-                      }
+                        "UsePathfinder": true,
+                        "Falloff": 1,
+                        "DesiredAltitudeWeight": 0
+                      },
+                      "$Comment": "Brake gradually and follow the leader in full 3D instead of correcting toward an independent cruise height."
                     }
                   ]
                 },
