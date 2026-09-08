@@ -1383,16 +1383,14 @@
                       },
                       "BodyMotion": {
                         "Type": "Seek",
-                        "SlowDownDistance": {
-                          "Compute": "FlockFollowDistance"
-                        },
-                        "StopDistance": 3,
+                        "SlowDownDistance": 1.5,
+                        "StopDistance": 0.5,
                         "RelativeSpeed": 0.4,
                         "UsePathfinder": true,
                         "Falloff": 1,
                         "DesiredAltitudeWeight": 0
                       },
-                      "$Comment": "Brake gradually and follow the leader in full 3D instead of correcting toward an independent cruise height."
+                      "$Comment": "Only brake within 1.5 blocks of the leader; keep matching its height during flight."
                     }
                   ]
                 },
