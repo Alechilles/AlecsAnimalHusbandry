@@ -120,8 +120,8 @@
       "MinLevel": 1,
       "Effects": [
         {
-          "EffectKey": "HappinessGainMultiplier",
-          "Multiplier": 1.08
+          "EffectKey": "HappinessFlatBonus",
+          "Amount": 2.7
         }
       ]
     },
@@ -216,8 +216,8 @@
       ],
       "Effects": [
         {
-          "EffectKey": "HappinessGainMultiplier",
-          "Multiplier": 1.13
+          "EffectKey": "HappinessFlatBonus",
+          "Amount": 4.3
         },
         {
           "EffectKey": "ReviveCooldownMultiplier",

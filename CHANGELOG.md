@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased development changes
+
+- Disposition now adds a flat -10 to +10 happiness adjustment instead of scaling
+  care and condition effects. Requires the matching development Tamework build.
+- Existing genetic scores and purchased talent IDs are preserved, including
+  captured animals. Happiness talents now grant flat mood bonuses. Existing timed
+  effects retain their recorded amount until refresh or expiry.
+- Species bases, food stacking, ownership and other talent effects are unchanged.
+
 ## 2.1.9 - Saddle Patch Compatibility Hotfix - 2026-08-31
 
 ### Changed
