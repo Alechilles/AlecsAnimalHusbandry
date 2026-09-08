@@ -626,6 +626,106 @@
               "State": "Panic"
             }
           ]
+        },
+        {
+          "Continue": true,
+          "$Comment": "Attacks interrupt favorite-food approach and landing immediately.",
+          "Sensor": {
+            "Type": "State",
+            "State": "FollowItem"
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [
+                  "Flee.Switch",
+                  "Panic"
+                ],
+                "AlertedRange": {
+                  "Compute": "AlertedRange"
+                }
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": {
+                  "Compute": "AlertedActionRange"
+                },
+                "Filters": [
+                  {
+                    "Type": "Not",
+                    "Filter": {
+                      "Type": "ItemInHand",
+                      "Items": {
+                        "Compute": "AttractiveItemSet"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Flee.Switch"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Nearby hostile animals interrupt idle and food following.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Idle"
+              },
+              {
+                "Type": "State",
+                "State": "Alerted"
+              },
+              {
+                "Type": "State",
+                "State": "FollowItem"
+              },
+              {
+                "Type": "State",
+                "State": "ReturnHome"
+              }
+            ]
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Mob",
+                "Range": {
+                  "Compute": "AlertedActionRange"
+                },
+                "LockOnTarget": true,
+                "Filters": [
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [
+                      "Hostile"
+                    ]
+                  },
+                  {
+                    "Type": "LineOfSight"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Flee.Switch"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -902,230 +1002,362 @@
               ]
             },
             {
-              "$Comment": "Execute daytime idle behaviors.",
-              "Type": "Random",
-              "ExecuteFor": [
-                20,
-                30
-              ],
+              "$Comment": "Alternate about 80% airborne and 20% grounded during undisturbed active time; feeding, sleep and threats interrupt the cycle.",
               "Sensor": {
-                "Type": "Time",
-                "Period": {
-                  "Compute": "DayTimePeriod"
-                },
-                "CheckDay": true
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Time",
+                    "Period": {
+                      "Compute": "DayTimePeriod"
+                    },
+                    "CheckDay": true
+                  },
+                  {
+                    "Type": "Eval",
+                    "Expression": "isEmpty(SleepAnimation)"
+                  }
+                ]
               },
               "Instructions": [
                 {
-                  "$Comment": "Regular wander.",
-                  "Weight": 20,
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".Default"
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      "Actions": [
+                        {
+                          "Type": "State",
+                          "State": ".Grounded"
+                        }
+                      ]
+                    },
+                    {
+                      "Actions": [
+                        {
+                          "Type": "State",
+                          "State": ".Flying"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".TakeOff"
+                  },
+                  "Instructions": [
+                    {
+                      "$Comment": "Grounded flight resumes through the native takeoff motion.",
+                      "Sensor": {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      "BodyMotion": {
+                        "Type": "TakeOff",
+                        "JumpSpeed": 4
+                      }
+                    },
+                    {
+                      "Actions": [
+                        {
+                          "Type": "State",
+                          "State": ".Flying"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".Grounded"
+                  },
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "RelativeSpeed": 0.25
+                  },
+                  "Actions": [
+                    {
+                      "Type": "Timeout",
+                      "Delay": [
+                        45,
+                        90
+                      ],
+                      "Action": {
+                        "Type": "State",
+                        "State": ".TakeOff"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".Flying"
+                  },
                   "Instructions": [
                     {
                       "Continue": true,
                       "Actions": [
                         {
-                          "Type": "Crouch",
-                          "Crouch": false
+                          "Type": "Timeout",
+                          "Delay": [
+                            180,
+                            360
+                          ],
+                          "Action": {
+                            "Type": "State",
+                            "State": ".Landing"
+                          }
                         }
                       ]
                     },
                     {
-                      "Reference": "Component_Instruction_Leash_To_Flock_Leader",
-                      "Modify": {
-                        "Enabled": {
-                          "Compute": "!isEmptyStringArray(FlockArray)"
-                        },
-                        "WanderRadius": {
+                      "$Comment": "Grounded flight resumes through the native takeoff motion.",
+                      "Sensor": {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      "BodyMotion": {
+                        "Type": "TakeOff",
+                        "JumpSpeed": 4
+                      }
+                    },
+                    {
+                      "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Eval",
+                            "Expression": "blocked"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 150,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "Leash",
+                        "Range": {
                           "Compute": "WanderRadius"
-                        },
-                        "StopDistance": 3
+                        }
+                      },
+                      "BodyMotion": {
+                        "Type": "Seek",
+                        "SlowDownDistance": 1.5,
+                        "StopDistance": 1,
+                        "RelativeSpeed": 0.25
                       }
                     },
                     {
                       "BodyMotion": {
-                        "Type": "Sequence",
-                        "Looped": true,
-                        "Motions": [
-                          {
-                            "Type": "Timer",
-                            "Time": [
-                              1,
-                              5
-                            ],
-                            "Motion": {
-                              "Type": "WanderInCircle",
-                              "Radius": {
-                                "Compute": "WanderRadius"
-                              },
-                              "MaxHeadingChange": 60,
-                              "RelativeSpeed": 0.18
-                            }
-                          },
-                          {
-                            "Type": "Timer",
-                            "Time": [
-                              3,
-                              8
-                            ],
-                            "Motion": {
-                              "Type": "Nothing"
-                            }
-                          }
-                        ]
+                        "Type": "WanderInCircle",
+                        "Radius": {
+                          "Compute": "WanderRadius"
+                        },
+                        "MaxHeadingChange": 60,
+                        "RelativeSpeed": 0.25
                       }
                     }
                   ]
                 },
                 {
-                  "$Comment": "TODO: grazing component seems to be borked",
-                  "Weight": 10,
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".Landing"
+                  },
                   "Instructions": [
                     {
                       "Sensor": {
-                        "Type": "Self",
-                        "Filters": [
-                          {
-                            "Type": "StandingOnBlock",
-                            "BlockSet": {
-                              "Compute": "GrazingBlockSet"
-                            }
-                          }
-                        ]
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
                       },
-                      "ActionsBlocking": true,
                       "Actions": [
                         {
-                          "Type": "Sequence",
-                          "Enabled": {
-                            "Compute": "!isEmpty(NeedsSeekConsumeAnimation)"
-                          },
-                          "Actions": [
-                            {
-                              "Type": "PlayAnimation",
-                              "Slot": "Status",
-                              "Animation": {
-                                "Compute": "NeedsSeekConsumeAnimation"
-                              }
-                            },
-                            {
-                              "Type": "Timeout",
-                              "Delay": [
-                                5,
-                                6
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status"
-                        },
-                        {
-                          "Type": "ResetInstructions"
+                          "Type": "State",
+                          "State": ".Grounded"
                         }
                       ]
                     },
                     {
-                      "$Comment": "They are not standing on grazing block",
-                      "Actions": [
-                        {
-                          "Type": "ResetInstructions"
-                        },
-                        {
-                          "Type": "State",
-                          "State": ".Default"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Enabled": {
-                    "Compute": "!isEmptyStringArray(AttractiveItemSet)"
-                  },
-                  "Weight": 10,
-                  "Instructions": [
-                    {
+                      "Continue": true,
                       "Sensor": {
-                        "Type": "DroppedItem",
-                        "Range": {
-                          "Compute": "ViewRange"
-                        },
-                        "Items": {
-                          "Compute": "AttractiveItemSet"
-                        },
-                        "ViewSector": {
-                          "Compute": "ViewSector"
-                        },
-                        "LineOfSight": true
+                        "Type": "Any",
+                        "Once": true
                       },
                       "Actions": [
                         {
-                          "Type": "StorePosition",
-                          "Slot": {
-                            "Compute": "FoodTargetSlot"
-                          }
-                        },
-                        {
-                          "Type": "State",
-                          "State": ".FindFood"
+                          "Type": "ResetSearchRays"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "$Comment": "Play a daytime flavor animation.",
-                  "Enabled": {
-                    "Compute": "!isEmpty(DayFlavorAnimation)"
-                  },
-                  "Weight": 3,
-                  "Instructions": [
+                    },
                     {
-                      "ActionsBlocking": true,
+                      "Continue": true,
                       "Actions": [
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status",
-                          "Animation": {
-                            "Compute": "DayFlavorAnimation"
-                          }
-                        },
                         {
                           "Type": "Timeout",
-                          "Delay": {
-                            "Compute": "DayFlavorAnimationLength"
+                          "Delay": [
+                            8,
+                            12
+                          ],
+                          "Action": {
+                            "Type": "State",
+                            "State": ".Flying"
                           }
-                        },
-                        {
-                          "Type": "PlayAnimation",
-                          "Slot": "Status"
-                        },
-                        {
-                          "Type": "ResetInstructions"
                         }
                       ]
+                    },
+                    {
+                      "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Eval",
+                            "Expression": "blocked"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 150,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "AdjustPosition",
+                        "Offset": [
+                          0,
+                          1,
+                          0
+                        ],
+                        "Sensor": {
+                          "Type": "SearchRay",
+                          "Name": "AH_Wild_Landing",
+                          "Range": 64,
+                          "Angle": 90,
+                          "Blocks": "StoneAndSoil"
+                        }
+                      },
+                      "BodyMotion": {
+                        "Type": "Land",
+                        "RelativeSpeed": 0.4,
+                        "SlowDownDistance": 1,
+                        "StopDistance": 0.5,
+                        "UsePathfinder": true
+                      }
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 90,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 0.25
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$Comment": "Land before nighttime sleep; retry a blocked or unavailable landing instead of sleeping in flight.",
+              "Sensor": {
+                "Type": "MotionController",
+                "MotionController": "Fly"
+              },
+              "Instructions": [
+                {
+                  "Continue": true,
+                  "Actions": [
+                    {
+                      "Type": "Timeout",
+                      "Delay": [
+                        8,
+                        12
+                      ],
+                      "Action": {
+                        "Type": "ResetSearchRays"
+                      }
                     }
                   ]
                 },
                 {
-                  "$Comment": "Nap.",
-                  "Enabled": {
-                    "Compute": "DayTimeNapWeight > 0 && !isEmpty(SleepAnimation)"
+                  "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Type": "Eval",
+                        "Expression": "blocked"
+                      }
+                    ]
                   },
-                  "Weight": {
-                    "Compute": "DayTimeNapWeight"
-                  },
-                  "Instructions": [
-                    {
-                      "Actions": [
-                        {
-                          "Type": "State",
-                          "State": "Sleep.Nap"
-                        }
-                      ]
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 1
+                  }
+                },
+                {
+                  "Sensor": {
+                    "Type": "AdjustPosition",
+                    "Offset": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "Sensor": {
+                      "Type": "SearchRay",
+                      "Name": "AH_Wild_Landing",
+                      "Range": 64,
+                      "Angle": 90,
+                      "Blocks": "StoneAndSoil"
                     }
-                  ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Land",
+                    "RelativeSpeed": 0.4,
+                    "SlowDownDistance": 1,
+                    "StopDistance": 0.5,
+                    "UsePathfinder": true
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 90,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 0.25
+                  }
                 }
               ]
             },
@@ -1586,6 +1818,20 @@
                             }
                           }
                         ]
+                      },
+                      {
+                        "Type": "Target",
+                        "Filters": [
+                          {
+                            "Type": "Not",
+                            "Filter": {
+                              "Type": "ItemInHand",
+                              "Items": {
+                                "Compute": "AttractiveItemSet"
+                              }
+                            }
+                          }
+                        ]
                       }
                     ]
                   },
@@ -1682,6 +1928,39 @@
                   "State": "Alerted"
                 }
               ]
+            },
+            {
+              "$Comment": "Grounded flight resumes through the native takeoff motion.",
+              "Sensor": {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              },
+              "BodyMotion": {
+                "Type": "TakeOff",
+                "JumpSpeed": 4
+              }
+            },
+            {
+              "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Eval",
+                    "Expression": "blocked"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
             },
             {
               "Sensor": {
@@ -1887,6 +2166,39 @@
               ]
             },
             {
+              "$Comment": "Grounded flight resumes through the native takeoff motion.",
+              "Sensor": {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              },
+              "BodyMotion": {
+                "Type": "TakeOff",
+                "JumpSpeed": 4
+              }
+            },
+            {
+              "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Eval",
+                    "Expression": "blocked"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
+            },
+            {
               "Sensor": {
                 "Type": "Target",
                 "Range": {
@@ -1981,6 +2293,39 @@
               ]
             },
             {
+              "$Comment": "Grounded flight resumes through the native takeoff motion.",
+              "Sensor": {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              },
+              "BodyMotion": {
+                "Type": "TakeOff",
+                "JumpSpeed": 4
+              }
+            },
+            {
+              "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Eval",
+                    "Expression": "blocked"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
+            },
+            {
               "Sensor": {
                 "Type": "Damage",
                 "Combat": true
@@ -2011,6 +2356,28 @@
             "State": "FollowItem"
           },
           "Instructions": [
+            {
+              "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Eval",
+                    "Expression": "blocked"
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
+            },
             {
               "Reference": "Component_Tamework_Instruction_SeekFood_PlayerFollow_Flying",
               "Modify": {
@@ -2218,5 +2585,6 @@
   },
   "NameTranslationKey": {
     "Compute": "NameTranslationKey"
-  }
+  },
+  "InitialMotionController": "Fly"
 }
