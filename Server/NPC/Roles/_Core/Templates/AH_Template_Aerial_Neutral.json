@@ -605,6 +605,76 @@
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script, when in water go straight to panic to get out",
       "Instructions": [
         {
+          "$Comment": "Start the flight interval only on a real transition to flight, not when an alert returns to Idle.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "MotionController",
+                "MotionController": "Fly"
+              },
+              {
+                "Type": "Flag",
+                "Name": "AH_WildFlightClockActive",
+                "Set": false
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "TimerStart",
+              "Name": "AH_WildFlightDuration",
+              "StartValueRange": [
+                180,
+                360
+              ],
+              "RestartValueRange": [
+                180,
+                360
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "AH_WildFlightDuration"
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "AH_WildFlightClockActive",
+              "SetTo": true
+            }
+          ]
+        },
+        {
+          "$Comment": "Touchdown ends this flight interval; the next takeoff starts a fresh one.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              },
+              {
+                "Type": "Flag",
+                "Name": "AH_WildFlightClockActive",
+                "Set": true
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "TimerStop",
+              "Name": "AH_WildFlightDuration"
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "AH_WildFlightClockActive",
+              "SetTo": false
+            }
+          ]
+        },
+        {
           "Sensor": {
             "Type": "And",
             "Sensors": [
@@ -701,20 +771,62 @@
           "Instructions": [
             {
               "Sensor": {
-                "Type": "Mob",
-                "Range": {
-                  "Compute": "AlertedActionRange"
-                },
-                "LockOnTarget": true,
-                "Filters": [
+                "Type": "And",
+                "Sensors": [
                   {
-                    "Type": "Attitude",
-                    "Attitudes": [
-                      "Hostile"
-                    ]
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
                   },
                   {
-                    "Type": "LineOfSight"
+                    "Type": "Mob",
+                    "Range": 8,
+                    "LockOnTarget": true,
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Hostile"
+                        ]
+                      },
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Flee.Switch"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Mob",
+                    "Range": {
+                      "Compute": "AlertedActionRange"
+                    },
+                    "LockOnTarget": true,
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Hostile"
+                        ]
+                      },
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
                   }
                 ]
               },
@@ -809,25 +921,58 @@
             {
               "$Comment": "Check if there are any potential things that can alert the NPC",
               "Sensor": {
-                "Reference": "Component_Sensor_Standard_Detection",
-                "Modify": {
-                  "ViewRange": {
-                    "Compute": "ViewRange"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": {
+                        "Compute": "ViewRange"
+                      },
+                      "ViewSector": {
+                        "Compute": "ViewSector"
+                      },
+                      "HearingRange": {
+                        "Compute": "HearingRange"
+                      },
+                      "AbsoluteDetectionRange": {
+                        "Compute": "AbsoluteDetectionRange"
+                      },
+                      "Attitudes": [
+                        "Neutral"
+                      ]
+                    }
                   },
-                  "ViewSector": {
-                    "Compute": "ViewSector"
-                  },
-                  "HearingRange": {
-                    "Compute": "HearingRange"
-                  },
-                  "AbsoluteDetectionRange": {
-                    "Compute": "AbsoluteDetectionRange"
-                  },
-                  "Attitudes": [
-                    "Hostile",
-                    "Neutral"
-                  ]
-                }
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "ViewRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "HearingRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Hostile"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               "Actions": [
                 {
@@ -1014,18 +1159,16 @@
                   },
                   "Instructions": [
                     {
-                      "Continue": true,
+                      "$Comment": "An expired flight interval remains due while threats interrupt idle; land as soon as idle is safe again.",
+                      "Sensor": {
+                        "Type": "Timer",
+                        "Name": "AH_WildFlightDuration",
+                        "State": "Stopped"
+                      },
                       "Actions": [
                         {
-                          "Type": "Timeout",
-                          "Delay": [
-                            180,
-                            360
-                          ],
-                          "Action": {
-                            "Type": "State",
-                            "State": ".Landing"
-                          }
+                          "Type": "State",
+                          "State": ".Landing"
                         }
                       ]
                     },
@@ -1752,26 +1895,59 @@
             {
               "$Comment": "Check if there are any potential things that can alert the NPC",
               "Sensor": {
-                "Reference": "Component_Sensor_Standard_Detection",
-                "Modify": {
-                  "ViewRange": {
-                    "Compute": "ViewRange"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Reference": "Component_Sensor_Standard_Detection",
+                    "Modify": {
+                      "ViewRange": {
+                        "Compute": "ViewRange"
+                      },
+                      "ViewSector": {
+                        "Compute": "ViewSector"
+                      },
+                      "HearingRange": {
+                        "Compute": "HearingRange"
+                      },
+                      "AbsoluteDetectionRange": {
+                        "Compute": "AbsoluteDetectionRange"
+                      },
+                      "Attitudes": [
+                        "Neutral",
+                        "Friendly"
+                      ]
+                    }
                   },
-                  "ViewSector": {
-                    "Compute": "ViewSector"
-                  },
-                  "HearingRange": {
-                    "Compute": "HearingRange"
-                  },
-                  "AbsoluteDetectionRange": {
-                    "Compute": "AbsoluteDetectionRange"
-                  },
-                  "Attitudes": [
-                    "Hostile",
-                    "Neutral",
-                    "Friendly"
-                  ]
-                }
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "ViewRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "HearingRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Hostile"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               "Actions": [
                 {
