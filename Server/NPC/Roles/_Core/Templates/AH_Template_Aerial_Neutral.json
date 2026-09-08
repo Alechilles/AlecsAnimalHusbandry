@@ -912,8 +912,10 @@
                     "CheckDay": true
                   },
                   {
-                    "Type": "Eval",
-                    "Expression": "isEmpty(SleepAnimation)"
+                    "Type": "Any",
+                    "Enabled": {
+                      "Compute": "isEmpty(SleepAnimation)"
+                    }
                   }
                 ]
               },
