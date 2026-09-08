@@ -1378,8 +1378,55 @@
                       }
                     },
                     {
+                      "$Comment": "Start catching up outside the flock radius.",
+                      "Continue": true,
                       "Sensor": {
-                        "Type": "FlockLeader"
+                        "Type": "Leash",
+                        "Range": {
+                          "Compute": "FlockFollowDistance"
+                        }
+                      },
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_FlockCatchingUp",
+                          "SetTo": true
+                        }
+                      ]
+                    },
+                    {
+                      "$Comment": "Rejoin well inside the radius so movement does not switch every tick at its edge.",
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Not",
+                        "Sensor": {
+                          "Type": "Leash",
+                          "Range": {
+                            "Compute": "FlockFollowDistance * 0.5"
+                          }
+                        }
+                      },
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_FlockCatchingUp",
+                          "SetTo": false
+                        }
+                      ]
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "FlockLeader"
+                          },
+                          {
+                            "Type": "Flag",
+                            "Name": "AH_FlockCatchingUp",
+                            "Set": true
+                          }
+                        ]
                       },
                       "BodyMotion": {
                         "Type": "Seek",
@@ -1390,7 +1437,20 @@
                         "Falloff": 1,
                         "DesiredAltitudeWeight": 0
                       },
-                      "$Comment": "Only brake within 1.5 blocks of the leader; keep matching its height during flight."
+                      "$Comment": "Catch up only while separated; switch to roaming before reaching the seek stopping distance."
+                    },
+                    {
+                      "$Comment": "Keep flying around the moving leader leash point rather than stopping directly behind it.",
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": {
+                          "Compute": "FlockFollowDistance"
+                        },
+                        "UseSphere": true,
+                        "MaxHeadingChange": 45,
+                        "RelativeSpeed": 0.25,
+                        "DesiredAltitudeWeight": 0
+                      }
                     }
                   ]
                 },
