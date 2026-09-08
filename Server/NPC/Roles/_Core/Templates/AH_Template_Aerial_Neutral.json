@@ -837,13 +837,22 @@
               ]
             },
             {
-              "$Comment": "If we're beyond our soft leash radius for a set period of time, return home.",
+              "$Comment": "Grounded animals return home on foot; flight height must not repeatedly interrupt the aerial idle cycle.",
               "Continue": true,
               "Sensor": {
-                "Type": "Leash",
-                "Range": {
-                  "Compute": "LeashDistance"
-                }
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Leash",
+                    "Range": {
+                      "Compute": "LeashDistance"
+                    }
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  }
+                ]
               },
               "ActionsBlocking": true,
               "Actions": [
@@ -1115,15 +1124,15 @@
                         {
                           "Type": "Timeout",
                           "Delay": [
-                            8,
-                            12
+                            45,
+                            60
                           ],
                           "Action": {
-                            "Type": "State",
-                            "State": ".Flying"
+                            "Type": "ResetSearchRays"
                           }
                         }
-                      ]
+                      ],
+                      "$Comment": "Allow descent from cruise altitude; retry the landing search without restarting the full flight interval."
                     },
                     {
                       "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
@@ -1196,8 +1205,8 @@
                     {
                       "Type": "Timeout",
                       "Delay": [
-                        8,
-                        12
+                        45,
+                        60
                       ],
                       "Action": {
                         "Type": "ResetSearchRays"
@@ -1772,15 +1781,17 @@
               ]
             },
             {
-              "$Comment": "Grounded flight resumes through the native takeoff motion.",
+              "$Comment": "Resume aerial idle if an existing return-home state is already flying; grounded return-home stays on foot.",
               "Sensor": {
                 "Type": "MotionController",
-                "MotionController": "Walk"
+                "MotionController": "Fly"
               },
-              "BodyMotion": {
-                "Type": "TakeOff",
-                "JumpSpeed": 4
-              }
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
             },
             {
               "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
@@ -2427,6 +2438,5 @@
   },
   "NameTranslationKey": {
     "Compute": "NameTranslationKey"
-  },
-  "InitialMotionController": "Fly"
+  }
 }
