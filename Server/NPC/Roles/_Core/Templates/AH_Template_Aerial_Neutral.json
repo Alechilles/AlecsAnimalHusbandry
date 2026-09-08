@@ -1350,9 +1350,6 @@
                         {
                           "Type": "Target",
                           "TargetSlot": "LockedTarget",
-                          "Range": {
-                            "Compute": "AlertedActionRange"
-                          },
                           "Filters": [
                             {
                               "Type": "Attitude",
@@ -3441,16 +3438,13 @@
           },
           "Instructions": [
             {
-              "$Comment": "Stay on foot near the former food holder until their temporary friendly attitude expires. This preempts the shared component's unconditional takeoff on item loss.",
+              "$Comment": "Wander on foot after food is put away until trust expires, danger interrupts, or food returns. Player distance does not end this grace period.",
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
                   {
                     "Type": "Target",
                     "TargetSlot": "LockedTarget",
-                    "Range": {
-                      "Compute": "AlertedActionRange"
-                    },
                     "Filters": [
                       {
                         "Type": "Attitude",
@@ -3477,13 +3471,8 @@
                 ]
               },
               "BodyMotion": {
-                "Type": "MaintainDistance",
-                "DesiredDistanceRange": [
-                  1.5,
-                  2.0
-                ],
-                "RelativeForwardsSpeed": 0.3,
-                "RelativeBackwardsSpeed": 0.3
+                "Type": "Wander",
+                "RelativeSpeed": 0.25
               }
             },
             {
