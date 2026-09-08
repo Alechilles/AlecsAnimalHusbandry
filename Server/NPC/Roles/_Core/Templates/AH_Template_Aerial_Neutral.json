@@ -633,6 +633,100 @@
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script, when in water go straight to panic to get out",
       "Instructions": [
         {
+          "$Comment": "A real attack breaks food trust before favorite food can refresh it.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Damage",
+                "Combat": true,
+                "TargetSlot": "LockedTarget"
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Damage",
+                  "Friendly": true
+                }
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "OverrideAttitude",
+              "Attitude": "Hostile",
+              "Duration": 30
+            }
+          ]
+        },
+        {
+          "$Comment": "Visible favorite food grants this player 30 seconds of friendliness; refresh only while food remains visible and the bird is calm.",
+          "Enabled": {
+            "Compute": "!isEmptyStringArray(AttractiveItemSet)"
+          },
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Player",
+                "Range": {
+                  "Compute": "AlertedActionRange"
+                },
+                "LockOnTarget": false,
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": {
+                      "Compute": "AttractiveItemSet"
+                    }
+                  },
+                  {
+                    "Type": "LineOfSight"
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [
+                      "Neutral",
+                      "Friendly",
+                      "Revered"
+                    ]
+                  }
+                ]
+              },
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Idle"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Alerted"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowItem"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "ReturnHome"
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "OverrideAttitude",
+              "Attitude": "Friendly",
+              "Duration": 30
+            }
+          ]
+        },
+        {
           "$Comment": "Start the flight interval only on a real transition to flight, not when an alert returns to Idle.",
           "Continue": true,
           "Sensor": {
@@ -760,6 +854,16 @@
                         "Compute": "AttractiveItemSet"
                       }
                     }
+                  },
+                  {
+                    "Type": "Not",
+                    "Filter": {
+                      "Type": "Attitude",
+                      "Attitudes": [
+                        "Friendly",
+                        "Revered"
+                      ]
+                    }
                   }
                 ]
               },
@@ -768,7 +872,8 @@
                   "Type": "State",
                   "State": "Flee.Switch"
                 }
-              ]
+              ],
+              "$Comment": "Putting food away only startles a target that has no remaining friendly attitude."
             }
           ]
         },
@@ -1543,6 +1648,43 @@
                       }
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "$Comment": "A player who is still trusted can attract the bird again by showing favorite food.",
+              "Enabled": {
+                "Compute": "!isEmptyStringArray(AttractiveItemSet)"
+              },
+              "Sensor": {
+                "Type": "Player",
+                "Range": {
+                  "Compute": "ViewRange"
+                },
+                "LockOnTarget": true,
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": {
+                      "Compute": "AttractiveItemSet"
+                    }
+                  },
+                  {
+                    "Type": "LineOfSight"
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [
+                      "Friendly",
+                      "Revered"
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
                 }
               ]
             },
@@ -2375,6 +2517,36 @@
               }
             },
             {
+              "$Comment": "Stay calm when a trusted player puts food away; return to ordinary idle instead of the timid flee branches.",
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [
+                      "Friendly",
+                      "Revered"
+                    ]
+                  },
+                  {
+                    "Type": "Not",
+                    "Filter": {
+                      "Type": "ItemInHand",
+                      "Items": {
+                        "Compute": "AttractiveItemSet"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
               "Enabled": {
                 "Compute": "!isEmptyStringArray(AttractiveItemSet)"
               },
@@ -2712,6 +2884,43 @@
               }
             },
             {
+              "$Comment": "A player who is still trusted can attract the bird again by showing favorite food.",
+              "Enabled": {
+                "Compute": "!isEmptyStringArray(AttractiveItemSet)"
+              },
+              "Sensor": {
+                "Type": "Player",
+                "Range": {
+                  "Compute": "ViewRange"
+                },
+                "LockOnTarget": true,
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": {
+                      "Compute": "AttractiveItemSet"
+                    }
+                  },
+                  {
+                    "Type": "LineOfSight"
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [
+                      "Friendly",
+                      "Revered"
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
               "$Comment": "Check if there are any potential things that can alert the NPC",
               "Sensor": {
                 "Type": "Or",
@@ -2732,8 +2941,7 @@
                         "Compute": "AbsoluteDetectionRange"
                       },
                       "Attitudes": [
-                        "Neutral",
-                        "Friendly"
+                        "Neutral"
                       ]
                     }
                   },
