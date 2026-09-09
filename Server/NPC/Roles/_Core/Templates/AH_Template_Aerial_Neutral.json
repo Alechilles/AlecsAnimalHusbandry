@@ -1554,7 +1554,7 @@
           ]
         },
         {
-          "$Comment": "Frightened followers continuously pursue the escaping leader instead of choosing independent flee or roaming directions.",
+          "$Comment": "Frightened followers pursue the escaping leader at normal following speed, including obstacle recovery.",
           "Sensor": {
             "Type": "And",
             "Sensors": [
@@ -1694,7 +1694,7 @@
                 "Type": "Wander",
                 "MinHeadingChange": 150,
                 "MaxHeadingChange": 180,
-                "RelativeSpeed": 1
+                "RelativeSpeed": 0.4
               }
             },
             {
@@ -1705,7 +1705,7 @@
                 "Type": "Seek",
                 "SlowDownDistance": 1.5,
                 "StopDistance": 0.5,
-                "RelativeSpeed": 1,
+                "RelativeSpeed": 0.4,
                 "UsePathfinder": true,
                 "Falloff": 1,
                 "DesiredAltitudeWeight": 0
@@ -3559,12 +3559,34 @@
                   }
                 ]
               },
-              "BodyMotion": {
-                "Type": "Wander",
-                "MinHeadingChange": 150,
-                "MaxHeadingChange": 180,
-                "RelativeSpeed": 1
-              }
+              "Instructions": [
+                {
+                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
+                  "Sensor": {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 0.4
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 1
+                  }
+                }
+              ]
             },
             {
               "Sensor": {
@@ -3572,16 +3594,6 @@
                 "Range": {
                   "Compute": "AlertedRange + 3"
                 }
-              },
-              "BodyMotion": {
-                "Type": "Flee",
-                "SlowDownDistance": {
-                  "Compute": "AlertedRange - 3"
-                },
-                "StopDistance": {
-                  "Compute": "AlertedRange + 3"
-                },
-                "RelativeSpeed": 0.68
               },
               "Actions": [
                 {
@@ -3593,6 +3605,53 @@
                   "Action": {
                     "Type": "State",
                     "State": ".Switch"
+                  }
+                }
+              ],
+              "Instructions": [
+                {
+                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Target",
+                        "Range": {
+                          "Compute": "AlertedRange + 3"
+                        }
+                      },
+                      {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Leader"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Flee",
+                    "SlowDownDistance": {
+                      "Compute": "AlertedRange - 3"
+                    },
+                    "StopDistance": {
+                      "Compute": "AlertedRange + 3"
+                    },
+                    "RelativeSpeed": 0.25
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Flee",
+                    "SlowDownDistance": {
+                      "Compute": "AlertedRange - 3"
+                    },
+                    "StopDistance": {
+                      "Compute": "AlertedRange + 3"
+                    },
+                    "RelativeSpeed": 0.68
                   }
                 }
               ]
@@ -3686,34 +3745,111 @@
                   }
                 ]
               },
-              "BodyMotion": {
-                "Type": "Wander",
-                "MinHeadingChange": 150,
-                "MaxHeadingChange": 180,
-                "RelativeSpeed": 1
-              }
+              "Instructions": [
+                {
+                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
+                  "Sensor": {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 0.4
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 1
+                  }
+                }
+              ]
             },
             {
               "Sensor": {
                 "Type": "Damage",
                 "Combat": true
               },
-              "BodyMotion": {
-                "Type": "Flee",
-                "SlowDownDistance": 9,
-                "StopDistance": 14,
-                "RelativeSpeed": 1,
-                "RelaxedMoveConstraints": false
-              }
+              "Instructions": [
+                {
+                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Damage",
+                        "Combat": true
+                      },
+                      {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Leader"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Flee",
+                    "SlowDownDistance": 9,
+                    "StopDistance": 14,
+                    "RelativeSpeed": 0.25,
+                    "RelaxedMoveConstraints": false
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "Flee",
+                    "SlowDownDistance": 9,
+                    "StopDistance": 14,
+                    "RelativeSpeed": 1,
+                    "RelaxedMoveConstraints": false
+                  }
+                }
+              ]
             },
             {
-              "BodyMotion": {
-                "Type": "WanderInCircle",
-                "Radius": 10,
-                "MaxHeadingChange": 90,
-                "RelativeSpeed": 1,
-                "RelaxedMoveConstraints": true
-              }
+              "Instructions": [
+                {
+                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
+                  "Sensor": {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "WanderInCircle",
+                    "Radius": 10,
+                    "MaxHeadingChange": 90,
+                    "RelativeSpeed": 0.25,
+                    "RelaxedMoveConstraints": true
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "WanderInCircle",
+                    "Radius": 10,
+                    "MaxHeadingChange": 90,
+                    "RelativeSpeed": 1,
+                    "RelaxedMoveConstraints": true
+                  }
+                }
+              ]
             }
           ]
         },
