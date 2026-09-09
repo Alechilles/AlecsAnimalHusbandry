@@ -2017,8 +2017,9 @@
                           "Type": "SearchRay",
                           "Name": "AH_Wild_Landing",
                           "Range": 64,
-                          "Angle": 90,
-                          "Blocks": "StoneAndSoil"
+                          "Angle": 30,
+                          "Blocks": "StoneAndSoil",
+                          "$Comment": "Choose and cache terrain ahead at thirty degrees below horizontal, leaving room for a diagonal landing approach."
                         }
                       },
                       "BodyMotion": {
@@ -2756,8 +2757,9 @@
                           "Type": "SearchRay",
                           "Name": "AH_Wild_Landing",
                           "Range": 64,
-                          "Angle": 90,
-                          "Blocks": "StoneAndSoil"
+                          "Angle": 30,
+                          "Blocks": "StoneAndSoil",
+                          "$Comment": "Choose and cache terrain ahead at thirty degrees below horizontal, leaving room for a diagonal landing approach."
                         }
                       },
                       "BodyMotion": {
@@ -2836,8 +2838,9 @@
                       "Type": "SearchRay",
                       "Name": "AH_Wild_Landing",
                       "Range": 64,
-                      "Angle": 90,
-                      "Blocks": "StoneAndSoil"
+                      "Angle": 30,
+                      "Blocks": "StoneAndSoil",
+                      "$Comment": "Choose and cache terrain ahead at thirty degrees below horizontal, leaving room for a diagonal landing approach."
                     }
                   },
                   "BodyMotion": {
