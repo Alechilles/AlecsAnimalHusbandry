@@ -14,7 +14,7 @@
 
 ### Changed
 
-- Wild flock leaders normally fly for 3–6 minutes and rest on the ground for
+- Wild flock leaders normally fly for 1–3 minutes and rest on the ground for
   45–90 seconds. Food, threats, and sleep can interrupt the cycle.
 - Flock leaders use the same 40-block home area on the ground and in flight.
 - Takeoff gains height before normal flight. Automatic landing searches ahead

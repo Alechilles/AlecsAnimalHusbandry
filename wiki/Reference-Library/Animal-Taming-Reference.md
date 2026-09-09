@@ -86,7 +86,7 @@ Once tamed, animals can be fed their preferred food or one of the [crafted food]
 These passive vanilla flyers use the normal feed-to-tame interaction after they approach and land. Interact without the correct preferred food in hand to make the animal show its food thought bubble. Once tamed, they use the same needs, happiness, breeding, growth, and non-combat command systems as other Animal Husbandry companions.
 
 Wild flocks follow their leader's flight and landing decisions. A nearby threat
-or an attack can alert the whole flock. Leaders normally fly for 3–6 minutes,
+or an attack can alert the whole flock. Leaders normally fly for 1–3 minutes,
 then spend 45–90 seconds on the ground, with food, danger, and sleep interrupting
 that cycle. Followers stay near the leader and land around its touchdown area.
 
