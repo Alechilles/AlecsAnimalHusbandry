@@ -4286,6 +4286,70 @@
           },
           "Instructions": [
             {
+              "$Comment": "A follower already grounded near favorite food approaches on foot; do not re-enter the shared component's initial takeoff after a flock landing.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget",
+                    "Range": {
+                      "Compute": "AlertedActionRange"
+                    },
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": {
+                          "Compute": "AttractiveItemSet"
+                        }
+                      },
+                      {
+                        "Type": "LineOfSight"
+                      },
+                      {
+                        "Type": "Not",
+                        "Filter": {
+                          "Type": "Attitude",
+                          "Attitudes": [
+                            "Hostile",
+                            "Ignore"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  },
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Follower"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "IgnoreForAvoidance",
+                  "TargetSlot": "LockedTarget"
+                }
+              ],
+              "BodyMotion": {
+                "Type": "MaintainDistance",
+                "DesiredDistanceRange": [
+                  1.5,
+                  2
+                ],
+                "RelativeForwardsSpeed": 0.3,
+                "RelativeBackwardsSpeed": 0.3
+              }
+            },
+            {
               "$Comment": "Wander on foot after food is put away until trust expires, danger interrupts, or food returns. Player distance does not end this grace period.",
               "Sensor": {
                 "Type": "And",
