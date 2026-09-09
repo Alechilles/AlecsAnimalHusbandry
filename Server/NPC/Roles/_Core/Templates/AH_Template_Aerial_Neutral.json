@@ -344,7 +344,8 @@
       },
       "MaxRollAngle": 180,
       "MaxTurnSpeed": 360,
-      "MaxClimbAngle": 75
+      "MaxClimbAngle": 75,
+      "MaxSinkAngle": 45
     },
     {
       "Type": "Walk",
@@ -2079,6 +2080,40 @@
               ]
             },
             {
+              "$Comment": "Watch an unfamiliar player within twelve units on the ground; actual flight still requires the eight-unit reaction range.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Player",
+                    "Range": 12,
+                    "LockOnTarget": true,
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Neutral"
+                        ]
+                      },
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
               "$Comment": "Ground threats use the immediate reaction range; airborne detection retains its wider sight range.",
               "Sensor": {
                 "Type": "Or",
@@ -3062,6 +3097,64 @@
               ]
             },
             {
+              "$Comment": "Remain grounded and watch a visible player in the alert band; do not repeat the entry animation or act on the alert timer here.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Target",
+                    "Range": 12,
+                    "Filters": [
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  },
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Target",
+                      "Range": {
+                        "Compute": "AlertedActionRange"
+                      }
+                    }
+                  }
+                ]
+              },
+              "HeadMotion": {
+                "Type": "Watch"
+              }
+            },
+            {
+              "$Comment": "End a ground alert when the target leaves the twelve-unit watch range.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
+                  },
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Target",
+                      "Range": 12
+                    }
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
               "$Comment": "Watching a target always, if we have any",
               "Continue": true,
               "Sensor": {
@@ -3360,6 +3453,40 @@
                       "Friendly",
                       "Revered"
                     ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "$Comment": "Watch an unfamiliar player within twelve units on the ground; actual flight still requires the eight-unit reaction range.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Player",
+                    "Range": 12,
+                    "LockOnTarget": true,
+                    "Filters": [
+                      {
+                        "Type": "Attitude",
+                        "Attitudes": [
+                          "Neutral"
+                        ]
+                      },
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Walk"
                   }
                 ]
               },
