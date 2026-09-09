@@ -3545,6 +3545,42 @@
               }
             },
             {
+              "$Comment": "Flock leader escape pace; keep the threat sensor first so Flee receives the threat position.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Type": "Eval",
+                        "Expression": "blocked"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 0.4
+              }
+            },
+            {
               "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
               "Sensor": {
                 "Type": "And",
@@ -3559,10 +3595,24 @@
                   }
                 ]
               },
-              "Instructions": [
-                {
-                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
-                  "Sensor": {
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Target",
+                    "Range": {
+                      "Compute": "AlertedRange + 3"
+                    }
+                  },
+                  {
                     "Type": "Self",
                     "Filters": [
                       {
@@ -3570,23 +3620,33 @@
                         "FlockStatus": "Leader"
                       }
                     ]
-                  },
-                  "BodyMotion": {
-                    "Type": "Wander",
-                    "MinHeadingChange": 150,
-                    "MaxHeadingChange": 180,
-                    "RelativeSpeed": 0.4
                   }
-                },
+                ]
+              },
+              "Actions": [
                 {
-                  "BodyMotion": {
-                    "Type": "Wander",
-                    "MinHeadingChange": 150,
-                    "MaxHeadingChange": 180,
-                    "RelativeSpeed": 1
+                  "Type": "Timeout",
+                  "Delay": [
+                    8,
+                    8
+                  ],
+                  "Action": {
+                    "Type": "State",
+                    "State": ".Switch"
                   }
                 }
-              ]
+              ],
+              "BodyMotion": {
+                "Type": "Flee",
+                "SlowDownDistance": {
+                  "Compute": "AlertedRange - 3"
+                },
+                "StopDistance": {
+                  "Compute": "AlertedRange + 3"
+                },
+                "RelativeSpeed": 0.25
+              },
+              "$Comment": "Flock leader escape pace; keep the threat sensor first so Flee receives the threat position."
             },
             {
               "Sensor": {
@@ -3608,53 +3668,16 @@
                   }
                 }
               ],
-              "Instructions": [
-                {
-                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
-                  "Sensor": {
-                    "Type": "And",
-                    "Sensors": [
-                      {
-                        "Type": "Target",
-                        "Range": {
-                          "Compute": "AlertedRange + 3"
-                        }
-                      },
-                      {
-                        "Type": "Self",
-                        "Filters": [
-                          {
-                            "Type": "Flock",
-                            "FlockStatus": "Leader"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "BodyMotion": {
-                    "Type": "Flee",
-                    "SlowDownDistance": {
-                      "Compute": "AlertedRange - 3"
-                    },
-                    "StopDistance": {
-                      "Compute": "AlertedRange + 3"
-                    },
-                    "RelativeSpeed": 0.25
-                  }
+              "BodyMotion": {
+                "Type": "Flee",
+                "SlowDownDistance": {
+                  "Compute": "AlertedRange - 3"
                 },
-                {
-                  "BodyMotion": {
-                    "Type": "Flee",
-                    "SlowDownDistance": {
-                      "Compute": "AlertedRange - 3"
-                    },
-                    "StopDistance": {
-                      "Compute": "AlertedRange + 3"
-                    },
-                    "RelativeSpeed": 0.68
-                  }
-                }
-              ]
+                "StopDistance": {
+                  "Compute": "AlertedRange + 3"
+                },
+                "RelativeSpeed": 0.68
+              }
             },
             {
               "Actions": [
@@ -3731,6 +3754,42 @@
               }
             },
             {
+              "$Comment": "Flock leader escape pace; keep the threat sensor first so Flee receives the threat position.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Type": "Eval",
+                        "Expression": "blocked"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 0.4
+              }
+            },
+            {
               "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
               "Sensor": {
                 "Type": "And",
@@ -3745,10 +3804,22 @@
                   }
                 ]
               },
-              "Instructions": [
-                {
-                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
-                  "Sensor": {
+              "BodyMotion": {
+                "Type": "Wander",
+                "MinHeadingChange": 150,
+                "MaxHeadingChange": 180,
+                "RelativeSpeed": 1
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Damage",
+                    "Combat": true
+                  },
+                  {
                     "Type": "Self",
                     "Filters": [
                       {
@@ -3756,100 +3827,58 @@
                         "FlockStatus": "Leader"
                       }
                     ]
-                  },
-                  "BodyMotion": {
-                    "Type": "Wander",
-                    "MinHeadingChange": 150,
-                    "MaxHeadingChange": 180,
-                    "RelativeSpeed": 0.4
                   }
-                },
-                {
-                  "BodyMotion": {
-                    "Type": "Wander",
-                    "MinHeadingChange": 150,
-                    "MaxHeadingChange": 180,
-                    "RelativeSpeed": 1
-                  }
-                }
-              ]
+                ]
+              },
+              "BodyMotion": {
+                "Type": "Flee",
+                "SlowDownDistance": 9,
+                "StopDistance": 14,
+                "RelativeSpeed": 0.25,
+                "RelaxedMoveConstraints": false
+              },
+              "$Comment": "Flock leader escape pace; keep the threat sensor first so Flee receives the threat position."
             },
             {
               "Sensor": {
                 "Type": "Damage",
                 "Combat": true
               },
-              "Instructions": [
-                {
-                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
-                  "Sensor": {
-                    "Type": "And",
-                    "Sensors": [
-                      {
-                        "Type": "Damage",
-                        "Combat": true
-                      },
-                      {
-                        "Type": "Self",
-                        "Filters": [
-                          {
-                            "Type": "Flock",
-                            "FlockStatus": "Leader"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "BodyMotion": {
-                    "Type": "Flee",
-                    "SlowDownDistance": 9,
-                    "StopDistance": 14,
-                    "RelativeSpeed": 0.25,
-                    "RelaxedMoveConstraints": false
-                  }
-                },
-                {
-                  "BodyMotion": {
-                    "Type": "Flee",
-                    "SlowDownDistance": 9,
-                    "StopDistance": 14,
-                    "RelativeSpeed": 1,
-                    "RelaxedMoveConstraints": false
-                  }
-                }
-              ]
+              "BodyMotion": {
+                "Type": "Flee",
+                "SlowDownDistance": 9,
+                "StopDistance": 14,
+                "RelativeSpeed": 1,
+                "RelaxedMoveConstraints": false
+              }
             },
             {
-              "Instructions": [
-                {
-                  "$Comment": "Keep the flock leader within the normal follower speed budget during escape.",
-                  "Sensor": {
-                    "Type": "Self",
-                    "Filters": [
-                      {
-                        "Type": "Flock",
-                        "FlockStatus": "Leader"
-                      }
-                    ]
-                  },
-                  "BodyMotion": {
-                    "Type": "WanderInCircle",
-                    "Radius": 10,
-                    "MaxHeadingChange": 90,
-                    "RelativeSpeed": 0.25,
-                    "RelaxedMoveConstraints": true
+              "Sensor": {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Leader"
                   }
-                },
-                {
-                  "BodyMotion": {
-                    "Type": "WanderInCircle",
-                    "Radius": 10,
-                    "MaxHeadingChange": 90,
-                    "RelativeSpeed": 1,
-                    "RelaxedMoveConstraints": true
-                  }
-                }
-              ]
+                ]
+              },
+              "BodyMotion": {
+                "Type": "WanderInCircle",
+                "Radius": 10,
+                "MaxHeadingChange": 90,
+                "RelativeSpeed": 0.25,
+                "RelaxedMoveConstraints": true
+              },
+              "$Comment": "Flock leader escape pace; keep the threat sensor first so Flee receives the threat position."
+            },
+            {
+              "BodyMotion": {
+                "Type": "WanderInCircle",
+                "Radius": 10,
+                "MaxHeadingChange": 90,
+                "RelativeSpeed": 1,
+                "RelaxedMoveConstraints": true
+              }
             }
           ]
         },
