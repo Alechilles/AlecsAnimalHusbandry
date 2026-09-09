@@ -1454,6 +1454,36 @@
               "ExpirationTime": 1
             }
           ]
+        },
+        {
+          "$Comment": "Only a leader that has actually touched down provides the shared flock landing area.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Leader"
+                  }
+                ]
+              },
+              {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "FlockBeacon",
+              "Message": "AH_Flock_Touchdown",
+              "SendToSelf": false,
+              "ExpirationTime": 1
+            }
+          ]
         }
       ]
     },
@@ -1956,34 +1986,6 @@
                   },
                   "Instructions": [
                     {
-                      "Continue": true,
-                      "Sensor": {
-                        "Type": "Any",
-                        "Once": true
-                      },
-                      "Actions": [
-                        {
-                          "Type": "ResetSearchRays"
-                        }
-                      ]
-                    },
-                    {
-                      "Continue": true,
-                      "Actions": [
-                        {
-                          "Type": "Timeout",
-                          "Delay": [
-                            45,
-                            60
-                          ],
-                          "Action": {
-                            "Type": "ResetSearchRays"
-                          }
-                        }
-                      ],
-                      "$Comment": "Allow descent from cruise altitude; retry the landing search without restarting the full flight interval."
-                    },
-                    {
                       "$Comment": "Vanilla bird recovery turns away from an obstructed flight path.",
                       "Sensor": {
                         "Type": "And",
@@ -2007,20 +2009,17 @@
                     },
                     {
                       "Sensor": {
-                        "Type": "AdjustPosition",
-                        "Offset": [
-                          0,
-                          1,
-                          0
-                        ],
-                        "Sensor": {
-                          "Type": "SearchRay",
-                          "Name": "AH_Wild_Landing",
-                          "Range": 64,
-                          "Angle": 30,
-                          "Blocks": "StoneAndSoil",
-                          "$Comment": "Choose and cache terrain ahead at thirty degrees below horizontal, leaving room for a diagonal landing approach."
-                        }
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "FlockLeader"
+                          },
+                          {
+                            "Type": "Beacon",
+                            "Message": "AH_Flock_Touchdown",
+                            "Range": 256
+                          }
+                        ]
                       },
                       "BodyMotion": {
                         "Type": "Land",
@@ -2031,14 +2030,82 @@
                       }
                     },
                     {
+                      "$Comment": "Start catching up outside the flock radius.",
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Leash",
+                        "Range": {
+                          "Compute": "FlockFollowDistance"
+                        }
+                      },
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_FlockCatchingUp",
+                          "SetTo": true
+                        }
+                      ]
+                    },
+                    {
+                      "$Comment": "Rejoin well inside the radius so movement does not switch every tick at its edge.",
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Not",
+                        "Sensor": {
+                          "Type": "Leash",
+                          "Range": {
+                            "Compute": "FlockFollowDistance * 0.5"
+                          }
+                        }
+                      },
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_FlockCatchingUp",
+                          "SetTo": false
+                        }
+                      ]
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "FlockLeader"
+                          },
+                          {
+                            "Type": "Flag",
+                            "Name": "AH_FlockCatchingUp",
+                            "Set": true
+                          }
+                        ]
+                      },
                       "BodyMotion": {
-                        "Type": "Wander",
-                        "MinHeadingChange": 90,
-                        "MaxHeadingChange": 180,
-                        "RelativeSpeed": 0.25
+                        "Type": "Seek",
+                        "SlowDownDistance": 1.5,
+                        "StopDistance": 0.5,
+                        "RelativeSpeed": 0.4,
+                        "UsePathfinder": true,
+                        "Falloff": 1,
+                        "DesiredAltitudeWeight": 0
+                      },
+                      "$Comment": "Catch up only while separated; switch to roaming before reaching the seek stopping distance."
+                    },
+                    {
+                      "$Comment": "Keep flying around the moving leader leash point rather than stopping directly behind it.",
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": {
+                          "Compute": "FlockFollowDistance"
+                        },
+                        "UseSphere": true,
+                        "MaxHeadingChange": 45,
+                        "RelativeSpeed": 0.25,
+                        "DesiredAltitudeWeight": 0
                       }
                     }
-                  ]
+                  ],
+                  "$Comment": "Follow the leader through its diagonal descent, then land at its touchdown area instead of searching independently."
                 }
               ]
             },
@@ -3635,6 +3702,47 @@
                 "MaxHeadingChange": 180,
                 "RelativeSpeed": 1
               }
+            },
+            {
+              "$Comment": "Grounded flock leaders use the same forty-unit home area as flight, rather than walking back to the lone-animal inner radius.",
+              "Sensor": {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Leader"
+                  }
+                ]
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Leash",
+                    "Range": {
+                      "Compute": "FlockLeaderLeashDistance"
+                    }
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": {
+                      "Compute": "FlockLeaderLeashDistance * 0.75"
+                    },
+                    "StopDistance": {
+                      "Compute": "FlockLeaderLeashDistance * 0.5"
+                    },
+                    "RelativeSpeed": 0.25,
+                    "UsePathfinder": true
+                  }
+                },
+                {
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Idle"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "Sensor": {
