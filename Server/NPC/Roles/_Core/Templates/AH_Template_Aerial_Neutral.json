@@ -166,8 +166,8 @@
       "Description": "How long to wait after wake animation before continuing transitions."
     },
     "AlertedAnimation": {
-      "Value": "FlyFast",
-      "Description": "Optional animation to play when entering Alerted or Panic reactions."
+      "Value": "",
+      "Description": "Optional alert animation. Empty by default so ground alerts do not force a flying animation; flight animations come from the motion controller."
     },
     "CuriousAnimation": {
       "Value": "",
@@ -2041,7 +2041,7 @@
               ]
             },
             {
-              "$Comment": "A player who is still trusted can attract the bird again by showing favorite food.",
+              "$Comment": "Favorite food remains visible at the wider sight range without triggering distant ground threat alerts.",
               "Enabled": {
                 "Compute": "!isEmptyStringArray(AttractiveItemSet)"
               },
@@ -2064,6 +2064,7 @@
                   {
                     "Type": "Attitude",
                     "Attitudes": [
+                      "Neutral",
                       "Friendly",
                       "Revered"
                     ]
@@ -2078,29 +2079,67 @@
               ]
             },
             {
-              "$Comment": "Check if there are any potential things that can alert the NPC",
+              "$Comment": "Ground threats use the immediate reaction range; airborne detection retains its wider sight range.",
               "Sensor": {
                 "Type": "Or",
                 "Sensors": [
                   {
-                    "Reference": "Component_Sensor_Standard_Detection",
-                    "Modify": {
-                      "ViewRange": {
-                        "Compute": "ViewRange"
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
                       },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "AlertedActionRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "AlertedActionRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Neutral"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
                       },
-                      "HearingRange": {
-                        "Compute": "HearingRange"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Neutral"
-                      ]
-                    }
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "ViewRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "HearingRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Neutral"
+                          ]
+                        }
+                      }
+                    ]
                   },
                   {
                     "Type": "And",
@@ -3060,15 +3099,35 @@
                   ]
                 },
                 {
-                  "$Comment": "Timer ended, we are timid and still have a target, flee",
+                  "$Comment": "A ground alert timeout may only cause flight while the target is within the reaction range.",
                   "Enabled": {
                     "Compute": "Timid"
                   },
                   "Sensor": {
-                    "Type": "Target",
-                    "Range": {
-                      "Compute": "AlertedRange"
-                    }
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Target",
+                        "Range": {
+                          "Compute": "AlertedRange"
+                        }
+                      },
+                      {
+                        "Type": "Or",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Target",
+                            "Range": {
+                              "Compute": "AlertedActionRange"
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   },
                   "Actions": [
                     {
@@ -3274,7 +3333,7 @@
               }
             },
             {
-              "$Comment": "A player who is still trusted can attract the bird again by showing favorite food.",
+              "$Comment": "Favorite food remains visible at the wider sight range without triggering distant ground threat alerts.",
               "Enabled": {
                 "Compute": "!isEmptyStringArray(AttractiveItemSet)"
               },
@@ -3297,6 +3356,7 @@
                   {
                     "Type": "Attitude",
                     "Attitudes": [
+                      "Neutral",
                       "Friendly",
                       "Revered"
                     ]
@@ -3311,29 +3371,67 @@
               ]
             },
             {
-              "$Comment": "Check if there are any potential things that can alert the NPC",
+              "$Comment": "Ground threats use the immediate reaction range; airborne detection retains its wider sight range.",
               "Sensor": {
                 "Type": "Or",
                 "Sensors": [
                   {
-                    "Reference": "Component_Sensor_Standard_Detection",
-                    "Modify": {
-                      "ViewRange": {
-                        "Compute": "ViewRange"
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
                       },
-                      "ViewSector": {
-                        "Compute": "ViewSector"
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "AlertedActionRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "AlertedActionRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Neutral"
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
                       },
-                      "HearingRange": {
-                        "Compute": "HearingRange"
-                      },
-                      "AbsoluteDetectionRange": {
-                        "Compute": "AbsoluteDetectionRange"
-                      },
-                      "Attitudes": [
-                        "Neutral"
-                      ]
-                    }
+                      {
+                        "Reference": "Component_Sensor_Standard_Detection",
+                        "Modify": {
+                          "ViewRange": {
+                            "Compute": "ViewRange"
+                          },
+                          "ViewSector": {
+                            "Compute": "ViewSector"
+                          },
+                          "HearingRange": {
+                            "Compute": "HearingRange"
+                          },
+                          "AbsoluteDetectionRange": {
+                            "Compute": "AbsoluteDetectionRange"
+                          },
+                          "Attitudes": [
+                            "Neutral"
+                          ]
+                        }
+                      }
+                    ]
                   },
                   {
                     "Type": "And",
