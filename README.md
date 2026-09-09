@@ -110,6 +110,13 @@ The demo instancing and tutorial system is an alpha project, so please expect to
     </ul>
   </li>
   <li>
+    <strong>Wild Flying Flocks</strong>
+    <ul>
+      <li>Wild flying animals follow their flock leader through takeoff, flight, and landing, and alert the flock when danger approaches.</li>
+      <li>Offer their favorite food to bring them down. After you put it away, they stay calm and wander on the ground for a short time.</li>
+    </ul>
+  </li>
+  <li>
     <strong>Extra Utility</strong>
     <ul>
       <li>Name your tamed animals with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/nametag" target="_blank" rel="noopener noreferrer">Nametags</a> and manage them more cleanly as part of your homestead.</li>

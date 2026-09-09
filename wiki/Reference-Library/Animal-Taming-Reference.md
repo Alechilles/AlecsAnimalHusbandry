@@ -85,6 +85,17 @@ Once tamed, animals can be fed their preferred food or one of the [crafted food]
 
 These passive vanilla flyers use the normal feed-to-tame interaction after they approach and land. Interact without the correct preferred food in hand to make the animal show its food thought bubble. Once tamed, they use the same needs, happiness, breeding, growth, and non-combat command systems as other Animal Husbandry companions.
 
+Wild flocks follow their leader's flight and landing decisions. A nearby threat
+or an attack can alert the whole flock. Leaders normally fly for 3–6 minutes,
+then spend 45–90 seconds on the ground, with food, danger, and sleep interrupting
+that cycle. Followers stay near the leader and land around its touchdown area.
+
+Grounded birds watch unfamiliar players from about 12 blocks away and take off
+when they approach within 8 blocks without favorite food. Showing favorite food
+nearby grants 30 seconds of trust, refreshed while the food stays visible. After
+you put it away, they stop following and wander on the ground until trust expires
+or danger interrupts. Showing the food again resumes their approach.
+
 | Flying Companion | Preferred Food | | Crafted Food Options |
 |---|---|---|:---:|
 | Bluebird | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/2c093a41-d191-420f-ab95-d7504ad405cd.png" alt="Corn" /> | Corn | [![Herbivore Feed](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/9f9b7eeb-ff3c-4ec9-80da-9513bbd601d6.png)](/mod/alecs-animal-husbandry/feed-items#herbivore-feed) |
