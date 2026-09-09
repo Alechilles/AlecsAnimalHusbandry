@@ -971,6 +971,32 @@
               ]
             }
           ]
+        },
+        {
+          "$Comment": "Keep the launch window armed on the ground; it expires two seconds after switching to flight and survives state changes.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "MotionController",
+            "MotionController": "Walk"
+          },
+          "Actions": [
+            {
+              "Type": "TimerStart",
+              "Name": "AH_TakeoffClimb",
+              "StartValueRange": [
+                2,
+                2
+              ],
+              "RestartValueRange": [
+                2,
+                2
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "AH_TakeoffClimb"
+            }
+          ]
         }
       ]
     },
@@ -1428,6 +1454,62 @@
     },
     {
       "Instructions": [
+        {
+          "$Comment": "Gain clearance above the launch point before ordinary flight steering can flatten the ascent. Applies to flock, food, idle, and escape takeoffs.",
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "MotionController",
+                "MotionController": "Fly"
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Timer",
+                  "Name": "AH_TakeoffClimb",
+                  "State": "Stopped"
+                }
+              }
+            ]
+          },
+          "Instructions": [
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [
+                  "Flee.Switch",
+                  "Panic"
+                ],
+                "AlertedRange": {
+                  "Compute": "AlertedRange"
+                }
+              },
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "AdjustPosition",
+                "Offset": [
+                  0,
+                  6,
+                  0
+                ],
+                "Sensor": {
+                  "Type": "Self"
+                }
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "SlowDownDistance": 1,
+                "StopDistance": 0.5,
+                "RelativeSpeed": 0.6,
+                "UsePathfinder": true,
+                "DesiredAltitudeWeight": 0
+              }
+            }
+          ]
+        },
         {
           "Sensor": {
             "Type": "State",
