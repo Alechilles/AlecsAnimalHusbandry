@@ -748,13 +748,14 @@
               "Type": "TimerStart",
               "Name": "AH_WildFlightDuration",
               "StartValueRange": [
-                180,
-                360
+                30,
+                30
               ],
               "RestartValueRange": [
-                180,
-                360
-              ]
+                30,
+                30
+              ],
+              "$Comment": "Temporary testing interval: restore flight ranges to [180, 360] after testing."
             },
             {
               "Type": "TimerRestart",
@@ -2181,13 +2182,14 @@
                     {
                       "Type": "Timeout",
                       "Delay": [
-                        45,
-                        90
+                        30,
+                        30
                       ],
                       "Action": {
                         "Type": "State",
                         "State": ".TakeOff"
-                      }
+                      },
+                      "$Comment": "Temporary testing interval: restore grounded delay to [45, 90] after testing."
                     }
                   ]
                 },
