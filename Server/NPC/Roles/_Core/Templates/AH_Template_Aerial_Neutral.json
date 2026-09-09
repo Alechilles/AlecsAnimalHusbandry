@@ -1554,7 +1554,7 @@
           ]
         },
         {
-          "$Comment": "Frightened followers pursue the escaping leader at normal following speed, including obstacle recovery.",
+          "$Comment": "After the shared takeoff climb, use the exact idle flock flight motions, spacing, catch-up hysteresis, and roaming while the leader escapes.",
           "Sensor": {
             "Type": "And",
             "Sensors": [
@@ -1694,12 +1694,59 @@
                 "Type": "Wander",
                 "MinHeadingChange": 150,
                 "MaxHeadingChange": 180,
-                "RelativeSpeed": 0.4
+                "RelativeSpeed": 1
               }
             },
             {
+              "$Comment": "Start catching up outside the flock radius.",
+              "Continue": true,
               "Sensor": {
-                "Type": "FlockLeader"
+                "Type": "Leash",
+                "Range": {
+                  "Compute": "FlockFollowDistance"
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockCatchingUp",
+                  "SetTo": true
+                }
+              ]
+            },
+            {
+              "$Comment": "Rejoin well inside the radius so movement does not switch every tick at its edge.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Leash",
+                  "Range": {
+                    "Compute": "FlockFollowDistance * 0.5"
+                  }
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "AH_FlockCatchingUp",
+                  "SetTo": false
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "FlockLeader"
+                  },
+                  {
+                    "Type": "Flag",
+                    "Name": "AH_FlockCatchingUp",
+                    "Set": true
+                  }
+                ]
               },
               "BodyMotion": {
                 "Type": "Seek",
@@ -1710,7 +1757,20 @@
                 "Falloff": 1,
                 "DesiredAltitudeWeight": 0
               },
-              "$Comment": "Pursue the leader throughout escape; independent roaming would scatter a compact flock before catch-up begins."
+              "$Comment": "Catch up only while separated; switch to roaming before reaching the seek stopping distance."
+            },
+            {
+              "$Comment": "Keep flying around the moving leader leash point rather than stopping directly behind it.",
+              "BodyMotion": {
+                "Type": "WanderInCircle",
+                "Radius": {
+                  "Compute": "FlockFollowDistance"
+                },
+                "UseSphere": true,
+                "MaxHeadingChange": 45,
+                "RelativeSpeed": 0.25,
+                "DesiredAltitudeWeight": 0
+              }
             }
           ]
         },
