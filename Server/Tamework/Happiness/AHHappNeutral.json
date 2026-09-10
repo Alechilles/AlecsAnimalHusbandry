@@ -49,28 +49,28 @@
     "Tamed_Vulture"
   ],
   "Values": {
-    "CurrentDefault": 50,
-    "Min": 0,
-    "Max": 100
+    "CurrentDefault": 50.0,
+    "Min": 0.0,
+    "Max": 100.0
   },
   "Equilibrium": {
-    "BaseSetpoint": 50,
-    "ConvergencePerMinute": 8
+    "BaseSetpoint": 50.0,
+    "ConvergencePerMinute": 8.0
   },
   "Impulses": {
-    "GainOnFeed": 3,
-    "HandFeedDurationMinutes": 15,
-    "FeedImpulseDurationMinutes": 15,
+    "GainOnFeed": 3.0,
+    "HandFeedDurationMinutes": 15.0,
+    "FeedImpulseDurationMinutes": 15.0,
     "FeedItemImpulses": {
-      "Tw_Feed_Herbivore": -8
+      "Tw_Feed_Herbivore": -8.0
     },
     "FeedParamImpulses": {
-      "FoodFavorite": 5,
-      "FoodGeneric": -8,
-      "FoodPremium": 10
+      "FoodFavorite": 5.0,
+      "FoodGeneric": -8.0,
+      "FoodPremium": 10.0
     },
-    "GainOnPet": 4,
-    "LoseOnDamage": 10
+    "GainOnPet": 4.0,
+    "LoseOnDamage": 10.0
   },
   "Modifiers": {
     "Hunger": {
@@ -79,30 +79,30 @@
         {
           "Id": "well_fed",
           "Label": "animalhusbandry.happiness.hunger.wellFed",
-          "MinPercent": 80,
-          "MaxPercent": 100,
-          "Offset": 10
+          "MinPercent": 80.0,
+          "MaxPercent": 100.0,
+          "Offset": 10.0
         },
         {
           "Id": "sated",
           "Label": "animalhusbandry.happiness.hunger.sated",
-          "MinPercent": 40,
-          "MaxPercent": 80,
-          "Offset": 0
+          "MinPercent": 40.0,
+          "MaxPercent": 80.0,
+          "Offset": 0.0
         },
         {
           "Id": "hungry",
           "Label": "animalhusbandry.happiness.hunger.hungry",
-          "MinPercent": 10,
-          "MaxPercent": 40,
-          "Offset": -15
+          "MinPercent": 10.0,
+          "MaxPercent": 40.0,
+          "Offset": -15.0
         },
         {
           "Id": "starving",
           "Label": "animalhusbandry.happiness.hunger.starving",
-          "MinPercent": 0,
-          "MaxPercent": 10,
-          "Offset": -30
+          "MinPercent": 0.0,
+          "MaxPercent": 10.0,
+          "Offset": -30.0
         }
       ]
     },
@@ -112,68 +112,60 @@
         {
           "Id": "quenched",
           "Label": "animalhusbandry.happiness.thirst.quenched",
-          "MinPercent": 80,
-          "MaxPercent": 100,
-          "Offset": 8
+          "MinPercent": 80.0,
+          "MaxPercent": 100.0,
+          "Offset": 8.0
         },
         {
           "Id": "hydrated",
           "Label": "animalhusbandry.happiness.thirst.hydrated",
-          "MinPercent": 40,
-          "MaxPercent": 80,
-          "Offset": 0
+          "MinPercent": 40.0,
+          "MaxPercent": 80.0,
+          "Offset": 0.0
         },
         {
           "Id": "thirsty",
           "Label": "animalhusbandry.happiness.thirst.thirsty",
-          "MinPercent": 10,
-          "MaxPercent": 40,
-          "Offset": -18
+          "MinPercent": 10.0,
+          "MaxPercent": 40.0,
+          "Offset": -18.0
         },
         {
           "Id": "dehydrated",
           "Label": "animalhusbandry.happiness.thirst.dehydrated",
-          "MinPercent": 0,
-          "MaxPercent": 10,
-          "Offset": -35
+          "MinPercent": 0.0,
+          "MaxPercent": 10.0,
+          "Offset": -35.0
         }
       ]
     },
     "Population": {
       "Enabled": true,
-      "Radius": 14,
+      "Radius": 14.0,
       "Bands": [
         {
           "Id": "lonely",
           "Label": "animalhusbandry.happiness.population.lonely",
           "MinCount": 0,
           "MaxCount": 0,
-          "Offset": -12
+          "Offset": -12.0
         },
         {
           "Id": "social",
           "Label": "animalhusbandry.happiness.population.social",
           "MinCount": 1,
           "MaxCount": 8,
-          "Offset": 8
+          "Offset": 8.0
         },
         {
           "Id": "crowded",
           "Label": "animalhusbandry.happiness.population.crowded",
           "MinCount": 9,
           "MaxCount": -1,
-          "Offset": -15
+          "Offset": -15.0
         }
       ]
     },
-    "OwnerNearbyOffset": 5
-  },
-  "Disposition": {
-    "Mode": "FLAT",
-    "TraitMin": 0.7,
-    "TraitNeutral": 1,
-    "TraitMax": 1.3,
-    "MinOffset": -10,
-    "MaxOffset": 10
+    "OwnerNearbyOffset": 5.0
   }
 }

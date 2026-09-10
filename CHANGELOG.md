@@ -6,13 +6,6 @@
   Craft it at a tier-1 Farmer's Workbench with 2 Iron Bars and 2 Light Leather.
   Hold primary use for 0.8 seconds to cull an owned, tamed animal.
 
-- Disposition now adds a flat -10 to +10 happiness adjustment instead of scaling
-  care and condition effects. Requires the matching development Tamework build.
-- Existing genetic scores and purchased talent IDs are preserved, including
-  captured animals. Happiness talents now grant flat mood bonuses. Existing timed
-  effects retain their recorded amount until refresh or expiry.
-- Species bases, food stacking, ownership and other talent effects are unchanged.
-
 ## 2.2.0 - Wild Flying Flocks - 2026-09-09
 
 ### Added
