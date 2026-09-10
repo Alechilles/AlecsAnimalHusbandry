@@ -2,6 +2,10 @@
 
 ## Unreleased development changes
 
+- Added a Butcher's Knife with a custom cleaver model and hand-painted texture.
+  Craft it at a tier-1 Farmer's Workbench with 2 Iron Bars and 2 Light Leather.
+  Hold primary use for 0.8 seconds to cull an owned, tamed animal.
+
 - Disposition now adds a flat -10 to +10 happiness adjustment instead of scaling
   care and condition effects. Requires the matching development Tamework build.
 - Existing genetic scores and purchased talent IDs are preserved, including

@@ -1,0 +1,49 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AH_Butchers_Knife.name",
+    "Description": "server.items.AH_Butchers_Knife.description"
+  },
+  "Categories": [
+    "Items.Tools"
+  ],
+  "Quality": "Uncommon",
+  "PlayerAnimationsId": "Item",
+  "UsePlayerAnimations": true,
+  "Interactions": {
+    "Primary": "Root_AH_Butchers_Knife_Cull"
+  },
+  "Model": "Items/AnimalHusbandry/ButchersCleaver/Butchers_Cleaver.blockymodel",
+  "Texture": "Items/AnimalHusbandry/ButchersCleaver/Butchers_Cleaver_Texture.png",
+  "Icon": "Icons/ItemsGenerated/AH_Butchers_Knife.png",
+  "MaxStack": 1,
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 2
+      }
+    ],
+    "Output": [
+      {
+        "ItemId": "AH_Butchers_Knife",
+        "Quantity": 1
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Farmingbench",
+        "Categories": [
+          "Farming"
+        ],
+        "RequiredTierLevel": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 3
+  }
+}

@@ -34,6 +34,9 @@
 
 --------------
 
+<H2>Butcher's Knife (development)</H2>
+<p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
+
 <H2>Required:</H2>
 <ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
