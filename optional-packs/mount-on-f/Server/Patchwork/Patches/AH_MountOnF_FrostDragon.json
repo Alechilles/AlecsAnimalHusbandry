@@ -1,0 +1,77 @@
+{
+  "Id": "AH_MountOnF_FrostDragon",
+  "$Comment": "Swaps mount and mode-cycle inputs while keeping the frost dragon's Flightmaster's Talisman gate and warning aligned with mounting.",
+  "Target": "Server/Tamework/Interactions/AHIntFrostDragon.json",
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 200,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "allow-mount-while-standing",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "Mount"
+      },
+      "Value": {
+        "RequireCrouching": false
+      }
+    },
+    {
+      "Id": "require-crouching-for-mode-cycle",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "ModeCycle"
+      },
+      "Value": {
+        "Requires": {
+          "All": {
+            "PlayerMovementState": [
+              {
+                "State": "Crouching"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "Id": "move-talisman-warning-to-standing-input",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Effects": {
+          "ShowFloatingText": {
+            "Message": "animalhusbandry.interactions.message.flightmastersTalismanRequired"
+          }
+        }
+      },
+      "Value": {
+        "Requires": {
+          "All": {
+            "PlayerMovementState": []
+          }
+        }
+      }
+    },
+    {
+      "Id": "prefer-crouching-mode-cycle-over-talisman-warning",
+      "Op": "MoveMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "ModeCycle"
+      },
+      "Position": "Before",
+      "Find": {
+        "Effects": {
+          "ShowFloatingText": {
+            "Message": "animalhusbandry.interactions.message.flightmastersTalismanRequired"
+          }
+        }
+      }
+    }
+  ]
+}
