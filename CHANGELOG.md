@@ -1,5 +1,47 @@
 # Changelog
 
+## Unreleased development changes
+
+- Added a Butcher's Knife with a custom cleaver model and hand-painted texture.
+  Craft it at a tier-1 Farmer's Workbench with 2 Iron Bars and 2 Light Leather.
+  Hold primary use for 0.8 seconds to cull an owned, tamed animal.
+
+- Disposition now adds a flat -10 to +10 happiness adjustment instead of scaling
+  care and condition effects. Requires the matching development Tamework build.
+- Existing genetic scores and purchased talent IDs are preserved, including
+  captured animals. Happiness talents now grant flat mood bonuses. Existing timed
+  effects retain their recorded amount until refresh or expiry.
+- Species bases, food stacking, ownership and other talent effects are unchanged.
+
+## 2.2.0 - Wild Flying Flocks - 2026-09-09
+
+### Added
+
+- Wild flying animals now coordinate takeoff, flight, landing, and escape as a
+  flock. Followers stay near their leader and land around its touchdown area.
+- Grounded birds watch unfamiliar players within 12 blocks and flee when they
+  approach within 8 blocks without favorite food. Nearby danger alerts the flock.
+- Showing favorite food nearby grants 30 seconds of trust. Putting the food away
+  stops following and lets the animal wander calmly on the ground until trust
+  expires or danger interrupts. Showing food again resumes its approach.
+
+### Changed
+
+- Wild flock leaders normally fly for 1–3 minutes and rest on the ground for
+  45–90 seconds. Food, threats, and sleep can interrupt the cycle.
+- Flock leaders use the same 40-block home area on the ground and in flight.
+- Takeoff gains height before normal flight. Automatic landing searches ahead
+  for a diagonal approach instead of selecting terrain directly underneath.
+- Requires Alec's Tamework `>=3.4.5 <4.0`.
+
+### Fixed
+
+- Improved flight recovery around obstacles and follower movement near leaders.
+- Prevented distant ground alerts from playing a flying animation in place.
+- Prevented freshly landed flock followers from taking off again to approach
+  nearby favorite food.
+- Corrected aerial role parameters and state wiring that could prevent spawning.
+
 ## 2.1.10 - Beacon telemetry descriptor migration - 2026-09-01
 
 ### Changed

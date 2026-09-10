@@ -1,0 +1,31 @@
+{
+  "Id": "AH_MountOnF_Critters",
+  "$Comment": "Moves the mode-cycle input to crouch+interact for critters, which do not define a Mount interaction.",
+  "Target": "Server/Tamework/Interactions/AhIntCritter.json",
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 200,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "require-crouching-for-mode-cycle",
+      "Op": "MergeMatching",
+      "Path": "/Interactions",
+      "Match": {
+        "Type": "ModeCycle"
+      },
+      "Value": {
+        "Requires": {
+          "All": {
+            "PlayerMovementState": [
+              {
+                "State": "Crouching"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

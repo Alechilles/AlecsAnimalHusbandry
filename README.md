@@ -34,6 +34,9 @@
 
 --------------
 
+<H2>Butcher's Knife (development)</H2>
+<p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
+
 <H2>Required:</H2>
 <ul>
 <li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
@@ -107,6 +110,13 @@ The demo instancing and tutorial system is an alpha project, so please expect to
       <li>Control your animals with companion commands like <strong>Follow</strong>, <strong>Hold</strong>, <strong>Set Home</strong>, <strong>Return Home</strong>, and <strong>Recall</strong>.</li>
       <li>Combat-capable Beasts also support battle-focused commands like <strong>Defend</strong> and <strong>Attack Target</strong>.</li>
       <li>Call supported critters and flying companions onto your shoulder with the <strong>To Me</strong> action in their linked companion card.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Wild Flying Flocks</strong>
+    <ul>
+      <li>Wild flying animals follow their flock leader through takeoff, flight, and landing, and alert the flock when danger approaches.</li>
+      <li>Offer their favorite food to bring them down. After you put it away, they stay calm and wander on the ground for a short time.</li>
     </ul>
   </li>
   <li>
