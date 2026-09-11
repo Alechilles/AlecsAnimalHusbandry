@@ -285,6 +285,18 @@
     "FlockFollowDistance": {
       "Value": 8,
       "Description": "Distance at which wild followers move back toward their flock leader, in blocks."
+    },
+    "FlightFormation": {
+      "Value": "None",
+      "Description": "Ambient flock flight formation: None, Loose, or Chevron."
+    },
+    "FlightFormationSpacing": {
+      "Value": 3,
+      "Description": "Distance between flight formation positions in blocks. Must be positive."
+    },
+    "FlightFormationTightness": {
+      "Value": 0.6,
+      "Description": "Flight formation position correction strength, greater than zero and at most one."
     }
   },
   "IsMemory": {
@@ -328,7 +340,8 @@
   "KnockbackScale": 0.5,
   "MotionControllerList": [
     {
-      "Type": "Fly",
+      "Type": "TameworkFormationFly",
+      "Formation": { "Compute": "FlightFormation" },
       "MaxHorizontalSpeed": {
         "Compute": "MaxSpeed"
       },
@@ -1899,6 +1912,20 @@
                         "MinHeadingChange": 150,
                         "MaxHeadingChange": 180,
                         "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Reference": "Component_Tamework_Instruction_Flight_Formation",
+                      "Modify": {
+                        "FlightFormation": {
+                          "Compute": "FlightFormation"
+                        },
+                        "FlightFormationSpacing": {
+                          "Compute": "FlightFormationSpacing"
+                        },
+                        "FlightFormationTightness": {
+                          "Compute": "FlightFormationTightness"
+                        }
                       }
                     },
                     {

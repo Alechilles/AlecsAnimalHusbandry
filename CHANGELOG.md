@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Ducks use chevron formations during wild cruising and tamed airborne idle. Aerial roles can select None, Loose, or Chevron and tune spacing and tightness. Requires the matching Tamework flight-formation development build.
+
 - Moved companion icon variants into shared dynamic icon assets used by capture items and both command panels. Requires the matching Tamework dynamic-icon development build.
 
 - Added a Butcher's Knife with a custom cleaver model and hand-painted texture.

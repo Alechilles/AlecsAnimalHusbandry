@@ -19,7 +19,31 @@ For command-level guidance first, see:
 For complete field-by-field documentation across all config families, use:
 - [Alec's Tamework Config Reference Index](https://wiki.hytalemodding.dev/mod/alecs-tamework/config-reference-index)
 
+## Bird flight formations
+
+The aerial role templates expose these NPC role parameters. They are edited in
+role JSON, rather than through a `Tw*Config` asset.
+
+| Parameter | Default | Meaning |
+| --- | --- | --- |
+| `FlightFormation` | `None` | `None`, `Loose`, or `Chevron`. Ducks select `Chevron`; other species retain their existing flight behavior by default. |
+| `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
+| `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
+
+Set these values in the species role's `Modify` map. `Loose` produces a compact
+group with gentle drift; `Chevron` produces two arms behind the flock leader.
+Wild formations apply during cruising and end when the leader starts landing.
+Tamed formations apply during airborne idle; individual commands keep their
+existing movement. Both require a flying flock leader and the matching Tamework
+build with flight formation support. Formation-enabled species have a lower
+minimum airspeed, allowing followers to catch up or slow down into position.
+Visual spacing and terrain behavior still need in-game tuning.
+
+See Tamework's [Flight Formation Guide](https://wiki.hytalemodding.dev/mod/alecs-tamework/flight-formation-guide)
+for integration details.
+
 ## Active Animal Husbandry Config Files
+
 These are the current (non-deprecated) `AH*` config assets in this repo.
 
 ### Core Family Files

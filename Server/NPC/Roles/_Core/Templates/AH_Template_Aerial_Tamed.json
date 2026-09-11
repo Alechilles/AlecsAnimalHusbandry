@@ -465,6 +465,18 @@
     "MaxHeightOverGround": {
       "Value": 14,
       "Description": "Maximum flight height over ground."
+    },
+    "FlightFormation": {
+      "Value": "None",
+      "Description": "Ambient flock flight formation: None, Loose, or Chevron."
+    },
+    "FlightFormationSpacing": {
+      "Value": 3,
+      "Description": "Distance between flight formation positions in blocks. Must be positive."
+    },
+    "FlightFormationTightness": {
+      "Value": 0.6,
+      "Description": "Flight formation position correction strength, greater than zero and at most one."
     }
   },
   "IsMemory": {
@@ -515,7 +527,8 @@
   "KnockbackScale": 0.5,
   "MotionControllerList": [
     {
-      "Type": "Fly",
+      "Type": "TameworkFormationFly",
+      "Formation": { "Compute": "FlightFormation" },
       "MaxHorizontalSpeed": {
         "Compute": "MaxSpeed"
       },
@@ -2149,13 +2162,31 @@
                           }
                         ]
                       },
-                      "BodyMotion": {
-                        "Type": "WanderInCircle",
-                        "Radius": {
-                          "Compute": "WanderRadius"
+                      "Instructions": [
+                        {
+                          "Reference": "Component_Tamework_Instruction_Flight_Formation",
+                          "Modify": {
+                            "FlightFormation": {
+                              "Compute": "FlightFormation"
+                            },
+                            "FlightFormationSpacing": {
+                              "Compute": "FlightFormationSpacing"
+                            },
+                            "FlightFormationTightness": {
+                              "Compute": "FlightFormationTightness"
+                            }
+                          }
                         },
-                        "RelativeSpeed": 0.3
-                      }
+                        {
+                          "BodyMotion": {
+                            "Type": "WanderInCircle",
+                            "Radius": {
+                              "Compute": "WanderRadius"
+                            },
+                            "RelativeSpeed": 0.3
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
