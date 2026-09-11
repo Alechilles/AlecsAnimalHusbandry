@@ -1,6 +1,6 @@
 {
   "defaults": {
-    "rendererName": "Animal Husbandry Soul Lantern curated icons",
+    "rendererName": "Animal Husbandry curated companion portraits",
     "iconSize": 64,
     "cameraScale": 1.0,
     "cameraRotation": [
@@ -16,43 +16,111 @@
     "cameraAutoFramePadding": 4,
     "cameraAutoFrameMaxAttempts": 6,
     "emptyValueToken": "none",
-    "maxCombos": 10000
+    "maxCombos": 1000
   },
   "notes": [
-    "Entries are ordered from most-specific external attachment sets to more generic base-game attachment sets because Tamework matches authored attachment maps as subset criteria.",
-    "Base-game models without RandomAttachmentSets are listed as base-only entries and generate a single dynamic icon asset IconDefault/base.png.",
-    "Source paths use APPDATA so this manifest works across normal Windows user profiles as long as the same upstream archives are installed in UserData/Mods."
+    "Generate variant assets with --dynamic-icon-id-prefix AH_DynamicIcon. Default-only assets are maintained directly under Server/Tamework/DynamicIcons.",
+    "Every generated variant config specifies a default portrait. Entries sharing roles merge in order, with mod variants before vanilla variants.",
+    "Only major visual slots multiply the icon count. renderAttachmentDefaults supplies representative omitted anatomy/details without constraining icon matching.",
+    "Pinned installed archive versions are intentional; review slot selections and counts when refreshing a source."
   ],
   "sources": {
     "baseGame": {
-      "modelsRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Server/Models",
-      "commonRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+      "modelsRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Server/Models",
+      "commonRoot": "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
     },
     "auresLivestock": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Aures_Livestock_13_05_2026_NO_PIG_COW_CHICKEN.zip!Server/Models",
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/0.6.1_Aures_Livestock_28_08_2026.zip!Server/Models",
       "commonRoots": [
-        "${APPDATA}/Hytale/UserData/Mods/Aures_Livestock_13_05_2026_NO_PIG_COW_CHICKEN.zip!Common",
-        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+        "${APPDATA}/Hytale/UserData/Mods/0.6.1_Aures_Livestock_28_08_2026.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "auresHorses": {
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/0.6.3_Aures_Horses_06_09_2026.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/0.6.3_Aures_Horses_06_09_2026.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
       ]
     },
     "cellysBabyAnimals": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.5.zip!Server/Models",
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.1.3a.zip!Server/Models",
       "commonRoots": [
-        "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.0.5.zip!Common",
-        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Baby Animals v1.1.3a.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "cellysBeastSkins": {
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Beast Skins v1.0.0.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Beast Skins v1.0.0.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "cellysCritterSkins": {
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Critter Skins v1.0.1.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Critter Skins v1.0.1.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "cellysElementalSkins": {
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Celly's Elemental Skins v1.0.2.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Elemental Skins v1.0.2.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "cellysAvianSkins": {
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Avian Skins v1.0.3.zip!Server/Models",
+      "commonRoots": [
+        "${APPDATA}/Hytale/UserData/Mods/Cellys Avian Skins v1.0.3.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
       ]
     },
     "cellysWildlifeSkins": {
-      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.5.zip!Server/Models",
+      "modelsRoot": "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.3.0.zip!Server/Models",
       "commonRoots": [
-        "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.1.5.zip!Common",
-        "${APPDATA}/Hytale/install/release/package/game/latest/Assets/Common"
+        "${APPDATA}/Hytale/UserData/Mods/Cellys Wildlife Skins v1.3.0.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
+      ]
+    },
+    "animalHusbandry": {
+      "modelsRoot": "${MANIFEST_DIR}/../../../Server/Models",
+      "commonRoots": [
+        "${MANIFEST_DIR}/../../../Common",
+        "${APPDATA}/Hytale/UserData/Mods/Celly's Elemental Skins v1.0.2.zip!Common",
+        "${APPDATA}/Hytale/install/release/package/game/latest/Assets.zip!Common"
       ]
     }
   },
   "entries": [
     {
-      "id": "aures_camel",
+      "id": "cellysBabyAnimals_Calf",
+      "source": "cellysBabyAnimals",
+      "model": "Livestock/Calf.json",
+      "roles": [
+        "Cow_Calf",
+        "Tamed_Cow_Calf"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "excludeAttachmentOptions": {
+        "BaseColor": [
+          "0"
+        ]
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cow_Calf/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Calf/{combo_slug}.png",
+      "attachmentSetsPatch": {
+        "source": "cellysBabyAnimals",
+        "path": "../Tamework/Patches/CBA_ALS_Cow_Calf_Skins.json",
+        "pointer": "/Operations/0/Value"
+      }
+    },
+    {
+      "id": "auresLivestock_Camel",
       "source": "auresLivestock",
       "model": "Livestock/Camel.json",
       "roles": [
@@ -63,10 +131,61 @@
         "BaseColor",
         "Shell"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Camel/{combo_slug}.png"
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ModelsGenerated/Camel.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Camel/{combo_slug}.png"
     },
     {
-      "id": "aures_goat",
+      "id": "auresLivestock_Chicken",
+      "source": "auresLivestock",
+      "model": "Livestock/Chicken.json",
+      "roles": [
+        "Chicken",
+        "Tamed_Chicken"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "renderAttachmentDefaults": {
+        "LegColor": "0"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Chicken/{combo_slug}.png"
+    },
+    {
+      "id": "auresLivestock_Chicken_Desert",
+      "source": "auresLivestock",
+      "model": "Livestock/Chicken_Desert.json",
+      "roles": [
+        "Chicken_Desert",
+        "Tamed_Chicken_Desert"
+      ],
+      "keepAttachmentSets": [
+        "Desert_Base"
+      ],
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Desert/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Chicken_Desert/{combo_slug}.png"
+    },
+    {
+      "id": "auresLivestock_Cow",
+      "source": "auresLivestock",
+      "model": "Livestock/Cow.json",
+      "roles": [
+        "Cow",
+        "Tamed_Cow"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "renderAttachmentDefaults": {
+        "Fleece": "Wool"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Cow.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Cow/{combo_slug}.png"
+    },
+    {
+      "id": "auresLivestock_Goat",
       "source": "auresLivestock",
       "model": "Livestock/Goat.json",
       "roles": [
@@ -77,10 +196,14 @@
         "BaseColor",
         "Horns"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Goat/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Eyes": "1"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Goat.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Goat/{combo_slug}.png"
     },
     {
-      "id": "aures_mouflon",
+      "id": "auresLivestock_Mouflon",
       "source": "auresLivestock",
       "model": "Livestock/Mouflon.json",
       "roles": [
@@ -91,10 +214,31 @@
         "BaseColor",
         "Fur"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Mouflon/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Hooves": "0"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Mouflon.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Mouflon/{combo_slug}.png"
     },
     {
-      "id": "aures_rabbit",
+      "id": "auresLivestock_Pig",
+      "source": "auresLivestock",
+      "model": "Livestock/Pig.json",
+      "roles": [
+        "Pig",
+        "Tamed_Pig"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "1"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Pig/{combo_slug}.png"
+    },
+    {
+      "id": "auresLivestock_Rabbit",
       "source": "auresLivestock",
       "model": "Livestock/Rabbit.json",
       "roles": [
@@ -104,15 +248,16 @@
       "keepAttachmentSets": [
         "BaseColor"
       ],
-      "excludeAttachmentOptions": {
-        "BaseColor": [
-          "0"
-        ]
+      "renderAttachmentDefaults": {
+        "Horns": "0",
+        "Eyes": "1",
+        "Fur": "1"
       },
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Rabbit/{combo_slug}.png"
+      "iconDefault": "Icons/ModelsGenerated/Rabbit.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Rabbit/{combo_slug}.png"
     },
     {
-      "id": "aures_ram",
+      "id": "auresLivestock_Ram",
       "source": "auresLivestock",
       "model": "Livestock/Ram.json",
       "roles": [
@@ -123,10 +268,14 @@
         "BaseColor",
         "Horn"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Ram/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Fur": "1"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Ram.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Ram/{combo_slug}.png"
     },
     {
-      "id": "aures_sheep",
+      "id": "auresLivestock_Sheep",
       "source": "auresLivestock",
       "model": "Livestock/Sheep.json",
       "roles": [
@@ -134,133 +283,328 @@
         "Tamed_Sheep"
       ],
       "keepAttachmentSets": [
-        "BaseColor",
-        "Fleece"
+        "BaseColor"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/AuresLivestock/Sheep/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Fleece": "Wool"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Sheep.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Sheep/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_bison",
-      "source": "cellysWildlifeSkins",
-      "model": "Livestock/Bison.json",
+      "id": "auresLivestock_Skrill",
+      "source": "auresLivestock",
+      "model": "Livestock/Skrill.json",
       "roles": [
-        "Bison",
-        "Tamed_Bison"
+        "Skrill",
+        "Tamed_Skrill"
       ],
       "keepAttachmentSets": [
-        "BaseColor",
-        "Horns"
+        "Skrill_Base"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Bison/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "LegColor": "0"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Skrill/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresLivestock/Skrill/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_bison_calf",
-      "source": "cellysWildlifeSkins",
-      "model": "Livestock/Bison_Calf.json",
+      "id": "auresHorses_Horse",
+      "source": "auresHorses",
+      "model": "Livestock/Horse.json",
       "roles": [
-        "Bison_Calf",
-        "Tamed_Bison_Calf"
+        "Horse",
+        "Tamed_Horse"
       ],
       "keepAttachmentSets": [
-        "BaseColor",
-        "Horns"
+        "66BaseColor",
+        "Hair"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Bison_Calf/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "2Eyes": "0",
+        "3HeadMark": "0",
+        "4BodyPattern": "0",
+        "5LegPatterns": "0"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Horse.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresHorses/Horse/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_crab",
-      "source": "cellysWildlifeSkins",
-      "model": "Swimming_Beast/Crab.json",
+      "id": "auresHorses_Horse_Skeleton",
+      "source": "auresHorses",
+      "model": "Undead/Horse_Skeleton.json",
       "roles": [
-        "Crab",
-        "Tamed_Crab"
+        "Horse_Skeleton",
+        "Tamed_Horse_Skeleton"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Undead_Base",
+        "Undead_Armor"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Crab/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Mane": "Undead_Mane_No",
+        "Undead_Horns": "Undead_Horns",
+        "Undead_Unicorn": "Undead_Unicorn",
+        "Undead_Spikes": "Undead_Spikes"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Horse_Skeleton.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/auresHorses/Horse_Skeleton/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_flamingo",
-      "source": "cellysWildlifeSkins",
-      "model": "Flying_Wildlife/Flamingo.json",
+      "id": "cellysBabyAnimals_Fox_Cub",
+      "source": "cellysBabyAnimals",
+      "model": "Beast/Fox_Cub.json",
       "roles": [
-        "Flamingo",
-        "Tamed_Flamingo"
+        "Tamed_Fox_Cub"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Base",
+        "Paws"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Flamingo/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Fox_Cub/base-2000__paws-2000.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Fox_Cub/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_fox",
-      "source": "cellysWildlifeSkins",
-      "model": "Beast/Fox.json",
+      "id": "cellysBabyAnimals_Fox_Arctic_Cub",
+      "source": "cellysBabyAnimals",
+      "model": "Beast/Fox_Arctic_Cub.json",
       "roles": [
-        "Fox",
-        "Tamed_Fox"
+        "Tamed_Fox_Arctic_Cub"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Base",
+        "Paws"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Fox/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Fluff": "2500",
+        "Eyes": "2500"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Fox_Arctic_Cub/base-2500__paws-2500.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Fox_Arctic_Cub/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_fox_arctic",
-      "source": "cellysWildlifeSkins",
-      "model": "Beast/Fox_Arctic.json",
+      "id": "cellysBabyAnimals_Flamingo_Chick",
+      "source": "cellysBabyAnimals",
+      "model": "Flying_Wildlife/Flamingo_Chick.json",
       "roles": [
-        "Fox_Arctic",
-        "Tamed_Fox_Arctic"
+        "Tamed_Flamingo_Chick"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Base",
+        "Wings"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Fox_Arctic/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Beakfeet": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Flamingo_Chick/base-2000__wings-2000.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Flamingo_Chick/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_mouse",
-      "source": "cellysWildlifeSkins",
-      "model": "Critter/Mouse.json",
+      "id": "cellysBabyAnimals_Tetrabird_Chick",
+      "source": "cellysBabyAnimals",
+      "model": "Wildlife/Tetrabird_Chick.json",
       "roles": [
-        "Mouse",
-        "Tamed_Mouse"
+        "Tamed_Tetrabird_Chick"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Base",
+        "Wings"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Mouse/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Crest": "2001"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Tetrabird_Chick/base-2001__wings-2000.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBabyAnimals/Tetrabird_Chick/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_rat",
-      "source": "cellysWildlifeSkins",
-      "model": "Beast/Rat.json",
-      "roles": [
-        "Rat",
-        "Tamed_Rat"
-      ],
-      "keepAttachmentSets": [
-        "Fur"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Rat/{combo_slug}.png"
-    },
-    {
-      "id": "celly_wildlife_scorpion",
-      "source": "cellysWildlifeSkins",
+      "id": "cellysBeastSkins_Scorpion",
+      "source": "cellysBeastSkins",
       "model": "Beast/Scorpion.json",
       "roles": [
         "Scorpion",
         "Tamed_Scorpion"
       ],
       "keepAttachmentSets": [
+        "Head",
         "Base"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Scorpion/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Trim": "2000",
+        "Claw": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Scorpion.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Scorpion/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_squirrel",
-      "source": "cellysWildlifeSkins",
+      "id": "cellysBeastSkins_Fox",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Fox.json",
+      "roles": [
+        "Fox",
+        "Tamed_Fox"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Paws"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Fox.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Fox/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Fox_Arctic",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Fox_Arctic.json",
+      "roles": [
+        "Fox_Arctic",
+        "Tamed_Fox_Arctic"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Paws"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2500",
+        "Eyes": "2500"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Fox_Arctic/base-2500__paws-2500.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Fox_Arctic/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Wolf_Black",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Wolf_Black.json",
+      "roles": [
+        "Wolf_Black",
+        "Tamed_Wolf_Black"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Wolf_Black/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Wolf_Black/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Wolf_White",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Wolf_White.json",
+      "roles": [
+        "Wolf_White",
+        "Tamed_Wolf_White"
+      ],
+      "keepAttachmentSets": [
+        "BaseColor"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2500"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Wolf_White.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Wolf_White/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Bear_Grizzly",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Bear_Grizzly.json",
+      "roles": [
+        "Bear_Grizzly",
+        "Tamed_Bear_Grizzly"
+      ],
+      "keepAttachmentSets": [
+        "Base"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Grizzly/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Bear_Grizzly/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Bear_Polar",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Bear_Polar.json",
+      "roles": [
+        "Bear_Polar",
+        "Tamed_Bear_Polar"
+      ],
+      "keepAttachmentSets": [
+        "Base"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Polar/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Bear_Polar/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Hyena",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Hyena.json",
+      "roles": [
+        "Hyena",
+        "Tamed_Hyena"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Darkspots"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Hyena/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Hyena/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Spider",
+      "source": "cellysBeastSkins",
+      "model": "Beast/Spider.json",
+      "roles": [
+        "Spider",
+        "Tamed_Spider"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Feet"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2003",
+        "Face": "2003",
+        "Eyes": "2003"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spider/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Spider/{combo_slug}.png"
+    },
+    {
+      "id": "cellysBeastSkins_Crocodile",
+      "source": "cellysBeastSkins",
+      "model": "Swimming_Beast/Crocodile.json",
+      "roles": [
+        "Crocodile",
+        "Tamed_Crocodile"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Belly"
+      ],
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Crocodile/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysBeastSkins/Crocodile/{combo_slug}.png"
+    },
+    {
+      "id": "cellysCritterSkins_Squirrel",
+      "source": "cellysCritterSkins",
       "model": "Critter/Squirrel.json",
       "roles": [
         "Squirrel",
@@ -269,10 +613,350 @@
       "keepAttachmentSets": [
         "Base"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Squirrel/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Squirrel.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysCritterSkins/Squirrel/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_tetrabird",
+      "id": "cellysCritterSkins_Meerkat",
+      "source": "cellysCritterSkins",
+      "model": "Critter/Meerkat.json",
+      "roles": [
+        "Meerkat",
+        "Tamed_Meerkat"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Stripes"
+      ],
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Meerkat/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysCritterSkins/Meerkat/{combo_slug}.png"
+    },
+    {
+      "id": "cellysCritterSkins_Mouse",
+      "source": "cellysCritterSkins",
+      "model": "Critter/Mouse.json",
+      "roles": [
+        "Mouse",
+        "Tamed_Mouse"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Tail"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Mouse.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysCritterSkins/Mouse/{combo_slug}.png"
+    },
+    {
+      "id": "cellysElementalSkins_Emberwulf",
+      "source": "cellysElementalSkins",
+      "model": "Beast/Emberwulf.json",
+      "roles": [
+        "Emberwulf",
+        "Tamed_Emberwulf"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Cracks"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Emberwulf/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysElementalSkins/Emberwulf/{combo_slug}.png"
+    },
+    {
+      "id": "cellysElementalSkins_Spark_Living",
+      "source": "cellysElementalSkins",
+      "model": "Beast/Spark_Living.json",
+      "roles": [
+        "Spark_Living",
+        "Tamed_Spark_Living"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Fire"
+      ],
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spark_Living/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysElementalSkins/Spark_Living/{combo_slug}.png"
+    },
+    {
+      "id": "cellysElementalSkins_Dragon_Frost",
+      "source": "animalHusbandry",
+      "model": "AnimalHusbandry/AH_Dragon_Frost.json",
+      "roles": [
+        "Dragon_Frost",
+        "Tamed_Dragon_Frost"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Ice"
+      ],
+      "renderAttachmentDefaults": {},
+      "iconDefault": "Icons/ModelsGenerated/Dragon_Frost.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysElementalSkins/Dragon_Frost/{combo_slug}.png",
+      "attachmentSetsPatch": {
+        "source": "cellysElementalSkins",
+        "path": "../Tamework/Patches/CES_AH_Dragon_Frost_Skins.json",
+        "pointer": "/Operations/0/Value/RandomAttachmentSets"
+      }
+    },
+    {
+      "id": "cellysAvianSkins_Owl_Brown",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Critter/Owl_Brown.json",
+      "roles": [
+        "Owl_Brown",
+        "Tamed_Owl_Brown"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Beakfeet"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Owl_Brown.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Owl_Brown/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Owl_Snow",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Critter/Owl_Snow.json",
+      "roles": [
+        "Owl_Snow",
+        "Tamed_Owl_Snow"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Beakfeet"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2500"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Owl_Snow.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Owl_Snow/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Bat",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Critter/Bat.json",
+      "roles": [
+        "Bat",
+        "Tamed_Bat"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Skin"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Bat.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Bat/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Bat_Ice",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Critter/Bat_Ice.json",
+      "roles": [
+        "Bat_Ice",
+        "Tamed_Bat_Ice"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Frost"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2500",
+        "Skin": "2500",
+        "Eyes": "2500"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Bat_Ice.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Bat_Ice/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Crow",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Critter/Crow.json",
+      "roles": [
+        "Crow",
+        "Tamed_Crow"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Beakfeet"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Crow.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Crow/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Raven",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Wildlife/Raven.json",
+      "roles": [
+        "Raven",
+        "Tamed_Raven"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Beakfeet"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Raven.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Raven/{combo_slug}.png"
+    },
+    {
+      "id": "cellysAvianSkins_Hawk",
+      "source": "cellysAvianSkins",
+      "model": "Flying_Wildlife/Hawk.json",
+      "roles": [
+        "Hawk",
+        "Tamed_Hawk"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Fluff"
+      ],
+      "renderAttachmentDefaults": {
+        "Beakfeet": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Hawk.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysAvianSkins/Hawk/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Lizard_Sand",
+      "source": "cellysWildlifeSkins",
+      "model": "Beast/Lizard_Sand.json",
+      "roles": [
+        "Lizard_Sand",
+        "Tamed_Lizard_Sand"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Stripes"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lizard_Sand/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Lizard_Sand/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Flamingo",
+      "source": "cellysWildlifeSkins",
+      "model": "Flying_Wildlife/Flamingo.json",
+      "roles": [
+        "Flamingo",
+        "Tamed_Flamingo"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Wings"
+      ],
+      "renderAttachmentDefaults": {
+        "Beakfeet": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Flamingo.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Flamingo/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Moose_Bull",
+      "source": "cellysWildlifeSkins",
+      "model": "Wildlife/Moose_Bull.json",
+      "roles": [
+        "Moose_Bull",
+        "Tamed_Moose_Bull"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Fluff"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000",
+        "Antlers": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Bull/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Moose_Bull/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Moose_Cow",
+      "source": "cellysWildlifeSkins",
+      "model": "Wildlife/Moose_Cow.json",
+      "roles": [
+        "Moose_Cow",
+        "Tamed_Moose_Cow"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Fluff"
+      ],
+      "renderAttachmentDefaults": {
+        "Eyes": "2000",
+        "Antlers": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Cow/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Moose_Cow/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Model_Deer_Stag",
+      "source": "cellysWildlifeSkins",
+      "model": "Wildlife/Model_Deer_Stag.json",
+      "roles": [
+        "Deer_Stag",
+        "Tamed_Deer_Stag"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Antlers"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000",
+        "Flora": "2001",
+        "Vines": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Stag/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Model_Deer_Stag/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Deer_Doe",
+      "source": "cellysWildlifeSkins",
+      "model": "Wildlife/Deer_Doe.json",
+      "roles": [
+        "Deer_Doe",
+        "Tamed_Deer_Doe"
+      ],
+      "keepAttachmentSets": [
+        "Base",
+        "Antlers"
+      ],
+      "renderAttachmentDefaults": {
+        "Fluff": "2000",
+        "Eyes": "2000",
+        "Flora": "2001",
+        "Vines": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Doe/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Deer_Doe/{combo_slug}.png"
+    },
+    {
+      "id": "cellysWildlifeSkins_Tetrabird",
       "source": "cellysWildlifeSkins",
       "model": "Wildlife/Tetrabird.json",
       "roles": [
@@ -280,85 +964,51 @@
         "Tamed_Tetrabird"
       ],
       "keepAttachmentSets": [
-        "Base"
+        "Base",
+        "Wings"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Tetrabird/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Crest": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Tetrabird.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Tetrabird/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_turkey",
+      "id": "cellysWildlifeSkins_Lobster",
       "source": "cellysWildlifeSkins",
-      "model": "Livestock/Turkey.json",
+      "model": "Swimming_Beast/Lobster.json",
       "roles": [
-        "Turkey",
-        "Tamed_Turkey"
+        "Lobster",
+        "Tamed_Lobster"
       ],
       "keepAttachmentSets": [
-        "BaseColor",
-        "Feathers"
+        "Base"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Turkey/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Claws": "2000",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lobster/base.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Lobster/{combo_slug}.png"
     },
     {
-      "id": "celly_wildlife_turkey_chick",
+      "id": "cellysWildlifeSkins_Crab",
       "source": "cellysWildlifeSkins",
-      "model": "Livestock/Turkey_Chick.json",
+      "model": "Swimming_Beast/Crab.json",
       "roles": [
-        "Turkey_Chick",
-        "Tamed_Turkey_Chick"
+        "Crab",
+        "Tamed_Crab"
       ],
       "keepAttachmentSets": [
-        "BaseColor",
-        "Feathers"
+        "Base",
+        "Shell"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyWildlifeSkins/Turkey_Chick/{combo_slug}.png"
-    },
-    {
-      "id": "celly_baby_flamingo_chick",
-      "source": "cellysBabyAnimals",
-      "model": "Flying_Wildlife/Flamingo_Chick.json",
-      "roles": [
-        "Tamed_Flamingo_Chick"
-      ],
-      "keepAttachmentSets": [
-        "Base"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyBabyAnimals/Flamingo_Chick/{combo_slug}.png"
-    },
-    {
-      "id": "celly_baby_fox_arctic_cub",
-      "source": "cellysBabyAnimals",
-      "model": "Beast/Fox_Arctic_Cub.json",
-      "roles": [
-        "Tamed_Fox_Arctic_Cub"
-      ],
-      "keepAttachmentSets": [
-        "Base"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyBabyAnimals/Fox_Arctic_Cub/{combo_slug}.png"
-    },
-    {
-      "id": "celly_baby_fox_cub",
-      "source": "cellysBabyAnimals",
-      "model": "Beast/Fox_Cub.json",
-      "roles": [
-        "Tamed_Fox_Cub"
-      ],
-      "keepAttachmentSets": [
-        "Base"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyBabyAnimals/Fox_Cub/{combo_slug}.png"
-    },
-    {
-      "id": "celly_baby_tetrabird_chick",
-      "source": "cellysBabyAnimals",
-      "model": "Wildlife/Tetrabird_Chick.json",
-      "roles": [
-        "Tamed_Tetrabird_Chick"
-      ],
-      "keepAttachmentSets": [
-        "Base"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/CellyBabyAnimals/Tetrabird_Chick/{combo_slug}.png"
+      "renderAttachmentDefaults": {
+        "Claw": "2001",
+        "Eyes": "2000"
+      },
+      "iconDefault": "Icons/ModelsGenerated/Crab.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/cellysWildlifeSkins/Crab/{combo_slug}.png"
     },
     {
       "id": "base_camel",
@@ -371,7 +1021,8 @@
       "keepAttachmentSets": [
         "Shell"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Camel.png"
     },
     {
       "id": "base_camel_calf",
@@ -384,7 +1035,8 @@
       "keepAttachmentSets": [
         "Shell"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel_Calf/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Camel_Calf/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Camel_Calf.png"
     },
     {
       "id": "base_cow",
@@ -397,7 +1049,8 @@
       "keepAttachmentSets": [
         "Fleece"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cow/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cow/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Cow.png"
     },
     {
       "id": "base_horse",
@@ -410,19 +1063,22 @@
       "keepAttachmentSets": [
         "Hair"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Horse/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Horse/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Horse.png"
     },
     {
       "id": "base_mosshorn_plain",
       "source": "baseGame",
       "model": "Wildlife/Mosshorn_Plain.json",
       "roles": [
-        "Tamed_Mosshorn_Plain"
+        "Tamed_Mosshorn_Plain",
+        "Mosshorn_Plain"
       ],
       "keepAttachmentSets": [
         "Flowers"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mosshorn_Plain/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mosshorn_Plain/{combo_slug}.png",
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mosshorn_Plain/flowers-flowers1.png"
     },
     {
       "id": "base_pig_wild",
@@ -435,7 +1091,8 @@
       "keepAttachmentSets": [
         "Fur"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Wild/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Wild/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Pig_Wild.png"
     },
     {
       "id": "base_pig_wild_piglet",
@@ -448,7 +1105,8 @@
       "keepAttachmentSets": [
         "Fur"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Wild_Piglet/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Wild_Piglet/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Pig_Wild_Piglet.png"
     },
     {
       "id": "base_sheep",
@@ -461,642 +1119,34 @@
       "keepAttachmentSets": [
         "Fleece"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep/{combo_slug}.png"
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep/{combo_slug}.png",
+      "iconDefault": "Icons/ModelsGenerated/Sheep.png"
     },
     {
-      "id": "baseonly_bear_grizzly",
+      "id": "base_hatworm",
       "source": "baseGame",
-      "model": "Beast/Bear_Grizzly.json",
+      "model": "Beast/Hatworm.json",
       "roles": [
-        "Bear_Grizzly",
-        "Tamed_Bear_Grizzly"
+        "Hatworm",
+        "Tamed_Hatworm"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Grizzly/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_bear_polar",
-      "source": "baseGame",
-      "model": "Beast/Bear_Polar.json",
-      "roles": [
-        "Bear_Polar",
-        "Tamed_Bear_Polar"
+      "keepAttachmentSets": [
+        "Hat"
       ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bear_Polar/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_boar",
-      "source": "baseGame",
-      "model": "Livestock/Boar.json",
-      "roles": [
-        "Boar",
-        "Tamed_Boar"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Boar/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_boar_piglet",
-      "source": "baseGame",
-      "model": "Livestock/Boar_Piglet.json",
-      "roles": [
-        "Boar_Piglet",
-        "Tamed_Boar_Piglet"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Boar_Piglet/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_bunny",
-      "source": "baseGame",
-      "model": "Livestock/Bunny.json",
-      "roles": [
-        "Bunny",
-        "Tamed_Bunny"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Bunny/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_chicken",
-      "source": "baseGame",
-      "model": "Livestock/Chicken.json",
-      "roles": [
-        "Chicken",
-        "Tamed_Chicken"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_chicken_chick",
-      "source": "baseGame",
-      "model": "Livestock/Chick.json",
-      "roles": [
-        "Chicken_Chick",
-        "Tamed_Chicken_Chick"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Chick/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_chicken_desert",
-      "source": "baseGame",
-      "model": "Livestock/Chicken_Desert.json",
-      "roles": [
-        "Chicken_Desert",
-        "Tamed_Chicken_Desert"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Desert/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_chicken_desert_chick",
-      "source": "baseGame",
-      "model": "Livestock/Chick_Desert.json",
-      "roles": [
-        "Chicken_Desert_Chick",
-        "Tamed_Chicken_Desert_Chick"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Chicken_Desert_Chick/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_cow_calf",
-      "source": "baseGame",
-      "model": "Livestock/Calf.json",
-      "roles": [
-        "Cow_Calf",
-        "Tamed_Cow_Calf"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cow_Calf/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_crocodile",
-      "source": "baseGame",
-      "model": "Swimming_Beast/Crocodile.json",
-      "roles": [
-        "Crocodile",
-        "Tamed_Crocodile"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Crocodile/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_emberwulf",
-      "source": "baseGame",
-      "model": "Beast/Emberwulf.json",
-      "roles": [
-        "Emberwulf",
-        "Tamed_Emberwulf"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Emberwulf/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_fen_stalker",
-      "source": "baseGame",
-      "model": "Swimming_Beast/Fen_Stalker.json",
-      "roles": [
-        "Fen_Stalker",
-        "Tamed_Fen_Stalker"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Fen_Stalker/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_goat_kid",
-      "source": "baseGame",
-      "model": "Livestock/Goat_Kid.json",
-      "roles": [
-        "Goat_Kid",
-        "Tamed_Goat_Kid"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Goat_Kid/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_horse_foal",
-      "source": "baseGame",
-      "model": "Livestock/Horse_Foal.json",
-      "roles": [
-        "Horse_Foal",
-        "Tamed_Horse_Foal"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Horse_Foal/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_hyena",
-      "source": "baseGame",
-      "model": "Beast/Hyena.json",
-      "roles": [
-        "Hyena",
-        "Tamed_Hyena"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Hyena/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_larva_silk",
-      "source": "baseGame",
-      "model": "Beast/Larva_Silk.json",
-      "roles": [
-        "Larva_Silk",
-        "Tamed_Larva_Silk"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Larva_Silk/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_leopard_snow",
-      "source": "baseGame",
-      "model": "Beast/Leopard_Snow.json",
-      "roles": [
-        "Leopard_Snow",
-        "Tamed_Leopard_Snow"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Leopard_Snow/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_molerat",
-      "source": "baseGame",
-      "model": "Beast/Molerat.json",
-      "roles": [
-        "Molerat",
-        "Tamed_Molerat"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Molerat/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_mouflon_lamb",
-      "source": "baseGame",
-      "model": "Livestock/Mouflon_Lamb.json",
-      "roles": [
-        "Mouflon_Lamb",
-        "Tamed_Mouflon_Lamb"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mouflon_Lamb/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_pig",
-      "source": "baseGame",
-      "model": "Livestock/Pig.json",
-      "roles": [
-        "Pig",
-        "Tamed_Pig"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_pig_piglet",
-      "source": "baseGame",
-      "model": "Livestock/Piglet.json",
-      "roles": [
-        "Pig_Piglet",
-        "Tamed_Pig_Piglet"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Pig_Piglet/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_ram_lamb",
-      "source": "baseGame",
-      "model": "Livestock/Ram_Lamb.json",
-      "roles": [
-        "Ram_Lamb",
-        "Tamed_Ram_Lamb"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Ram_Lamb/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_raptor_cave",
-      "source": "baseGame",
-      "model": "Beast/Raptor_Cave.json",
-      "roles": [
-        "Raptor_Cave",
-        "Tamed_Raptor_Cave"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Raptor_Cave/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_rex_cave",
-      "source": "baseGame",
-      "model": "Beast/Rex_Cave.json",
-      "roles": [
-        "Rex_Cave",
-        "Tamed_Rex_Cave"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Rex_Cave/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_sheep_lamb",
-      "source": "baseGame",
-      "model": "Livestock/Lamb.json",
-      "roles": [
-        "Sheep_Lamb",
-        "Tamed_Sheep_Lamb"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Sheep_Lamb/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_skrill",
-      "source": "baseGame",
-      "model": "Livestock/Skrill.json",
-      "roles": [
-        "Skrill",
-        "Tamed_Skrill"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Skrill/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_skrill_chick",
-      "source": "baseGame",
-      "model": "Livestock/Skrill_Chick.json",
-      "roles": [
-        "Skrill_Chick",
-        "Tamed_Skrill_Chick"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Skrill_Chick/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_slug_magma",
-      "source": "baseGame",
-      "model": "Beast/Slug_Magma.json",
-      "roles": [
-        "Slug_Magma",
-        "Tamed_Slug_Magma"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Slug_Magma/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snake_cobra",
-      "source": "baseGame",
-      "model": "Beast/Snake_Cobra.json",
-      "roles": [
-        "Snake_Cobra",
-        "Tamed_Snake_Cobra"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Cobra/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snake_marsh",
-      "source": "baseGame",
-      "model": "Beast/Snake_Marsh.json",
-      "roles": [
-        "Snake_Marsh",
-        "Tamed_Snake_Marsh"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Marsh/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snake_rattle",
-      "source": "baseGame",
-      "model": "Beast/Snake_Rattle.json",
-      "roles": [
-        "Snake_Rattle",
-        "Tamed_Snake_Rattle"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snake_Rattle/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snapdragon",
-      "source": "baseGame",
-      "model": "Beast/Snapdragon.json",
-      "roles": [
-        "Snapdragon",
-        "Tamed_Snapdragon"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snapdragon/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_spider",
-      "source": "baseGame",
-      "model": "Beast/Spider.json",
-      "roles": [
-        "Spider",
-        "Tamed_Spider"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spider/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_spider_cave",
-      "source": "baseGame",
-      "model": "Beast/Spider_Cave.json",
-      "roles": [
-        "Spider_Cave",
-        "Tamed_Spider_Cave"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spider_Cave/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_mosshorn",
-      "source": "baseGame",
-      "model": "Wildlife/Mosshorn.json",
-      "roles": [
-        "Tamed_Mosshorn"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Mosshorn/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_tiger_sabertooth",
-      "source": "baseGame",
-      "model": "Beast/Tiger_Sabertooth.json",
-      "roles": [
-        "Tiger_Sabertooth",
-        "Tamed_Tiger_Sabertooth"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Tiger_Sabertooth/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_toad_rhino",
-      "source": "baseGame",
-      "model": "Beast/Toad_Rhino.json",
-      "roles": [
-        "Toad_Rhino",
-        "Tamed_Toad_Rhino"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Toad_Rhino/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_toad_rhino_magma",
-      "source": "baseGame",
-      "model": "Beast/Toad_Rhino_Magma.json",
-      "roles": [
-        "Toad_Rhino_Magma",
-        "Tamed_Toad_Rhino_Magma"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Toad_Rhino_Magma/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_warthog",
-      "source": "baseGame",
-      "model": "Livestock/Warthog.json",
-      "roles": [
-        "Warthog",
-        "Tamed_Warthog"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Warthog/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_warthog_piglet",
-      "source": "baseGame",
-      "model": "Livestock/Warthog_Piglet.json",
-      "roles": [
-        "Warthog_Piglet",
-        "Tamed_Warthog_Piglet"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Warthog_Piglet/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_wolf_black",
-      "source": "baseGame",
-      "model": "Beast/Wolf_Black.json",
-      "roles": [
-        "Wolf_Black",
-        "Tamed_Wolf_Black"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Wolf_Black/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_wolf_white",
-      "source": "baseGame",
-      "model": "Beast/Wolf_White.json",
-      "roles": [
-        "Wolf_White",
-        "Tamed_Wolf_White"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Wolf_White/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_antelope",
-      "source": "baseGame",
-      "model": "Wildlife/Antelope.json",
-      "roles": [
-        "Antelope",
-        "Tamed_Antelope"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Antelope/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_armadillo",
-      "source": "baseGame",
-      "model": "Wildlife/Armadillo.json",
-      "roles": [
-        "Armadillo",
-        "Tamed_Armadillo"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Armadillo/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_deer_doe",
-      "source": "baseGame",
-      "model": "Wildlife/Deer_Doe.json",
-      "roles": [
-        "Deer_Doe",
-        "Tamed_Deer_Doe"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Doe/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_deer_stag",
-      "source": "baseGame",
-      "model": "Wildlife/Model_Deer_Stag.json",
-      "roles": [
-        "Deer_Stag",
-        "Tamed_Deer_Stag"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Deer_Stag/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_lizard_sand",
-      "source": "baseGame",
-      "model": "Beast/Lizard_Sand.json",
-      "roles": [
-        "Lizard_Sand",
-        "Tamed_Lizard_Sand"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lizard_Sand/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_lobster",
-      "source": "baseGame",
-      "model": "Swimming_Beast/Lobster.json",
-      "roles": [
-        "Lobster",
-        "Tamed_Lobster"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Lobster/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_moose_bull",
-      "source": "baseGame",
-      "model": "Wildlife/Moose_Bull.json",
-      "roles": [
-        "Moose_Bull",
-        "Tamed_Moose_Bull"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Bull/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_moose_cow",
-      "source": "baseGame",
-      "model": "Wildlife/Moose_Cow.json",
-      "roles": [
-        "Moose_Cow",
-        "Tamed_Moose_Cow"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Moose_Cow/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_penguin",
-      "source": "baseGame",
-      "model": "Wildlife/Penguin.json",
-      "roles": [
-        "Penguin",
-        "Tamed_Penguin"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Penguin/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_spark_living",
-      "source": "baseGame",
-      "model": "Beast/Spark_Living.json",
-      "roles": [
-        "Spark_Living",
-        "Tamed_Spark_Living"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Spark_Living/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_tortoise",
-      "source": "baseGame",
-      "model": "Wildlife/Tortoise.json",
-      "roles": [
-        "Tortoise",
-        "Tamed_Tortoise"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Tortoise/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_trillodon",
-      "source": "baseGame",
-      "model": "Wildlife/Trillodon.json",
-      "roles": [
-        "Trillodon",
-        "Tamed_Trillodon"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Trillodon/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_frog_blue",
-      "source": "baseGame",
-      "model": "Critter/Frog_Blue.json",
-      "roles": [
-        "Frog_Blue",
-        "Tamed_Frog_Blue"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Blue/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_frog_green",
-      "source": "baseGame",
-      "model": "Critter/Frog_Green.json",
-      "roles": [
-        "Frog_Green",
-        "Tamed_Frog_Green"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Green/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_frog_orange",
-      "source": "baseGame",
-      "model": "Critter/Frog_Orange.json",
-      "roles": [
-        "Frog_Orange",
-        "Tamed_Frog_Orange"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Frog_Orange/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_gecko",
-      "source": "baseGame",
-      "model": "Critter/Gecko.json",
-      "roles": [
-        "Gecko",
-        "Tamed_Gecko"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Gecko/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_meerkat",
-      "source": "baseGame",
-      "model": "Critter/Meerkat.json",
-      "roles": [
-        "Meerkat",
-        "Tamed_Meerkat"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Meerkat/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snail_frost",
-      "source": "baseGame",
-      "model": "Beast/Snail_Frost.json",
-      "roles": [
-        "Snail_Frost",
-        "Tamed_Snail_Frost"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snail_Frost/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_snail_magma",
-      "source": "baseGame",
-      "model": "Beast/Snail_Magma.json",
-      "roles": [
-        "Snail_Magma",
-        "Tamed_Snail_Magma"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Snail_Magma/{combo_slug}.png"
-    },
-    {
-      "id": "baseonly_cat",
-      "source": "baseGame",
-      "model": "Pets/Cat.json",
-      "roles": [
-        "Cat",
-        "Cat_Longhair",
-        "Cat_Shorthair",
-        "Cat_Bobtail",
-        "Cat_Pet",
-        "Cat_Longhair_Pet",
-        "Cat_Shorthair_Pet",
-        "Cat_Bobtail_Pet"
-      ],
-      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/SoulLantern/BaseGame/Cat/{combo_slug}.png"
+      "excludeAttachmentOptions": {
+        "Hat": [
+          "1",
+          "2",
+          "4",
+          "5",
+          "7",
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      "iconDefault": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/BaseGame/Hatworm/hat-3.png",
+      "iconTemplate": "Icons/ItemsGenerated/AnimalHusbandry/Portraits/BaseGame/Hatworm/{combo_slug}.png"
     }
   ]
 }
