@@ -36,3 +36,69 @@ Load `jobs.json` in Blockbench using **Run Tamework Dynamic Icon Batch (From Job
 - A base-game fallback entry follows more specific skin rules where one existed. Every generated asset carries its own `iconDefault` so unmatched appearances still have a portrait.
 
 Prepared model JSON is render-only data. The helper resolves whole-field ModelAsset inheritance, keeps static attachments as fixed rendering choices, and reads the exact attachment maps from the two declared upstream patches. It does not modify NPCs, apply patches to the game, or copy these temporary descriptors into the asset pack.
+
+## Current selection budget
+
+The September 11, 2026 inputs generate 2,410 images across 59 passes. The complete config set covers 219 supported role IDs plus existing optional aliases, in 115 appearance groups. The table includes vanilla fallback passes; all other supported appearances use a default portrait.
+
+| Source | Appearance | Mapped slots | Images |
+| --- | --- | --- | ---: |
+| Celly Baby Animals | Cow_Calf | BaseColor | 7 |
+| Aures Livestock | Camel | BaseColor, Shell | 42 |
+| Aures Livestock | Chicken | BaseColor | 14 |
+| Aures Livestock | Chicken_Desert | Desert_Base | 18 |
+| Aures Livestock | Cow | BaseColor | 8 |
+| Aures Livestock | Goat | BaseColor, Horns | 70 |
+| Aures Livestock | Mouflon | BaseColor, Fur | 48 |
+| Aures Livestock | Pig | BaseColor | 18 |
+| Aures Livestock | Rabbit | BaseColor | 29 |
+| Aures Livestock | Ram | BaseColor, Horn | 42 |
+| Aures Livestock | Sheep | BaseColor | 7 |
+| Aures Livestock | Skrill | Skrill_Base | 14 |
+| Aures Horses | Horse | 66BaseColor, Hair | 720 |
+| Aures Horses | Horse_Skeleton | Undead_Base, Undead_Armor | 232 |
+| Celly Baby Animals | Fox_Cub | Base, Paws | 48 |
+| Celly Baby Animals | Fox_Arctic_Cub | Base, Paws | 48 |
+| Celly Baby Animals | Flamingo_Chick | Base, Wings | 9 |
+| Celly Baby Animals | Tetrabird_Chick | Base, Wings | 77 |
+| Celly Beast Skins | Scorpion | Head, Base | 95 |
+| Celly Beast Skins | Fox | Base, Paws | 48 |
+| Celly Beast Skins | Fox_Arctic | Base, Paws | 48 |
+| Celly Beast Skins | Wolf_Black | BaseColor | 6 |
+| Celly Beast Skins | Wolf_White | BaseColor | 6 |
+| Celly Beast Skins | Bear_Grizzly | Base | 5 |
+| Celly Beast Skins | Bear_Polar | Base | 6 |
+| Celly Beast Skins | Hyena | Base, Darkspots | 28 |
+| Celly Beast Skins | Spider | Base, Feet | 30 |
+| Celly Beast Skins | Crocodile | Base, Belly | 64 |
+| Celly Critter Skins | Squirrel | Base | 6 |
+| Celly Critter Skins | Meerkat | Base, Stripes | 9 |
+| Celly Critter Skins | Mouse | Base, Tail | 36 |
+| Celly Elemental Skins | Emberwulf | Base, Cracks | 25 |
+| Celly Elemental Skins | Spark_Living | Base, Fire | 10 |
+| Celly Elemental Skins (AH patch) | Dragon_Frost | Base, Ice | 90 |
+| Celly Avian Skins | Owl_Brown | Base, Beakfeet | 36 |
+| Celly Avian Skins | Owl_Snow | Base, Beakfeet | 36 |
+| Celly Avian Skins | Bat | Base, Skin | 4 |
+| Celly Avian Skins | Bat_Ice | Base, Frost | 4 |
+| Celly Avian Skins | Crow | Base, Beakfeet | 16 |
+| Celly Avian Skins | Raven | Base, Beakfeet | 16 |
+| Celly Avian Skins | Hawk | Base, Fluff | 16 |
+| Celly Wildlife Skins | Lizard_Sand | Base, Stripes | 35 |
+| Celly Wildlife Skins | Flamingo | Base, Wings | 9 |
+| Celly Wildlife Skins | Moose_Bull | Base, Fluff | 16 |
+| Celly Wildlife Skins | Moose_Cow | Base, Fluff | 16 |
+| Celly Wildlife Skins | Deer_Stag | Base, Antlers | 32 |
+| Celly Wildlife Skins | Deer_Doe | Base, Antlers | 32 |
+| Celly Wildlife Skins | Tetrabird | Base, Wings | 77 |
+| Celly Wildlife Skins | Lobster | Base | 13 |
+| Celly Wildlife Skins | Crab | Base, Shell | 64 |
+| Base game | Camel | Shell | 6 |
+| Base game | Camel_Calf | Shell | 6 |
+| Base game | Cow | Fleece | 1 |
+| Base game | Horse | Hair | 2 |
+| Base game | Mosshorn_Plain | Flowers | 3 |
+| Base game | Pig_Wild | Fur | 1 |
+| Base game | Pig_Wild_Piglet | Fur | 4 |
+| Base game | Sheep | Fleece | 1 |
+| Base game | Hatworm | Hat | 1 |

@@ -325,3 +325,5 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <br />
 
 Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. These assets require the matching Tamework dynamic-icon development build; update both mods together.
+
+Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.
