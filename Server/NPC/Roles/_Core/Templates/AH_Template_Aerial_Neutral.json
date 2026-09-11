@@ -3748,6 +3748,120 @@
                       "State": "Flee.Switch"
                     }
                   ]
+                },
+                {
+                  "$Comment": "Keep flying while observing a target; close-threat reactions above retain priority.",
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Fly"
+                      },
+                      {
+                        "Type": "Target"
+                      }
+                    ]
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "Eval",
+                        "Expression": "blocked"
+                      },
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "MinHeadingChange": 150,
+                        "MaxHeadingChange": 180,
+                        "RelativeSpeed": 1
+                      }
+                    },
+                    {
+                      "Reference": "Component_Tamework_Instruction_Flight_Formation",
+                      "Modify": {
+                        "FlightFormation": {
+                          "Compute": "FlightFormation"
+                        },
+                        "FlightFormationSpacing": {
+                          "Compute": "FlightFormationSpacing"
+                        },
+                        "FlightFormationTightness": {
+                          "Compute": "FlightFormationTightness"
+                        }
+                      }
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": {
+                          "Compute": "WanderRadius"
+                        },
+                        "MaxHeadingChange": {
+                          "Compute": "FlightCruiseMaxHeadingChange"
+                        },
+                        "RelativeSpeed": {
+                          "Compute": "FlightCruiseRelativeSpeed"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$Comment": "Keep flying while observing a target; close-threat reactions above retain priority.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Target"
+                  }
+                ]
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Eval",
+                    "Expression": "blocked"
+                  },
+                  "BodyMotion": {
+                    "Type": "Wander",
+                    "MinHeadingChange": 150,
+                    "MaxHeadingChange": 180,
+                    "RelativeSpeed": 1
+                  }
+                },
+                {
+                  "Reference": "Component_Tamework_Instruction_Flight_Formation",
+                  "Modify": {
+                    "FlightFormation": {
+                      "Compute": "FlightFormation"
+                    },
+                    "FlightFormationSpacing": {
+                      "Compute": "FlightFormationSpacing"
+                    },
+                    "FlightFormationTightness": {
+                      "Compute": "FlightFormationTightness"
+                    }
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "WanderInCircle",
+                    "Radius": {
+                      "Compute": "WanderRadius"
+                    },
+                    "MaxHeadingChange": {
+                      "Compute": "FlightCruiseMaxHeadingChange"
+                    },
+                    "RelativeSpeed": {
+                      "Compute": "FlightCruiseRelativeSpeed"
+                    }
+                  }
                 }
               ]
             },

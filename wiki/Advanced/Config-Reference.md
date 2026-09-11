@@ -38,7 +38,10 @@ group with gentle drift and staggered heights above and below the leader;
 ease around turns. The formation flight controller caps turning at 90 degrees/second
 (or the configured limit if lower), including during landing and recovery.
 Wild formations apply during cruising and end when the leader starts landing.
-Tamed formations apply during airborne idle; individual commands keep their
+Tamed formations apply during airborne idle. Both also keep flying in formation
+while alerted to a target that has not triggered fleeing; leaders and lone birds
+continue cruising. Close-threat fleeing and obstacle recovery take priority.
+Grounded birds retain their watch behavior, and individual commands keep their
 existing movement. Both require a flying flock leader and the matching Tamework
 build with flight formation support. Formation-enabled species have a lower
 minimum airspeed, allowing followers to catch up or slow down into position.

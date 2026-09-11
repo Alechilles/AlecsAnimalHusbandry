@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Fixed wild and tamed birds nearly stopping in flight while alerted to a nearby target outside immediate flee reactions. Airborne alert waiting now keeps formation or cruise movement, with fleeing and obstacle recovery taking priority.
+
 - Restored duck formation cruise to about 4 blocks/second, with catch-up headroom and gentler wandering turns. Added role-level cruise speed and heading-change tuning.
 
 - Bluebirds now use loose flock formations during wild cruising and tamed airborne idle.
