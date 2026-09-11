@@ -16,12 +16,11 @@
     "cameraAutoFramePadding": 4,
     "cameraAutoFrameMaxAttempts": 6,
     "emptyValueToken": "none",
-    "iconOverrideMode": "group",
     "maxCombos": 10000
   },
   "notes": [
     "Entries are ordered from most-specific external attachment sets to more generic base-game attachment sets because Tamework matches authored attachment maps as subset criteria.",
-    "Base-game models without RandomAttachmentSets are listed as base-only entries and generate a single group IconDefault/base.png.",
+    "Base-game models without RandomAttachmentSets are listed as base-only entries and generate a single dynamic icon asset IconDefault/base.png.",
     "Source paths use APPDATA so this manifest works across normal Windows user profiles as long as the same upstream archives are installed in UserData/Mods."
   ],
   "sources": {

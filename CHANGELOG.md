@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Moved companion icon variants into shared dynamic icon assets used by capture items and both command panels. Requires the matching Tamework dynamic-icon development build.
+
 - Added a Butcher's Knife with a custom cleaver model and hand-painted texture.
   Craft it at a tier-1 Farmer's Workbench with 2 Iron Bars and 2 Light Leather.
   Hold primary use for 0.8 seconds to cull an owned, tamed animal.
