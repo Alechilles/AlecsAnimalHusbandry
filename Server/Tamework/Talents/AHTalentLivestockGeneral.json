@@ -36,7 +36,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "MaxHealthMultiplier",
@@ -52,7 +51,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 4,
       "RequiresTalentIds": [
         "AH_Livestock_Sturdy"
       ],
@@ -71,7 +69,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Livestock_Surefooted"
       ],
@@ -90,7 +87,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Livestock_Surefooted"
       ],
@@ -109,7 +105,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
-      "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Livestock_SteadyHeart",
         "AH_Livestock_CarefulGait"
@@ -129,7 +124,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "HappinessGainMultiplier",
@@ -145,7 +139,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
-      "MinLevel": 4,
       "RequiresTalentIds": [
         "AH_Livestock_GentleDisposition"
       ],
@@ -164,7 +157,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 9,
       "RequiresTalentIds": [
         "AH_Livestock_LightAppetite"
       ],
@@ -183,7 +175,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Livestock_LightAppetite"
       ],
@@ -202,7 +193,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Livestock_EfficientKeeper"
       ],
@@ -221,7 +211,6 @@
       "Tier": 5,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 21,
       "RequiresTalentIds": [
         "AH_Livestock_SteadyRoutine",
         "AH_Livestock_ShortRest"
@@ -245,7 +234,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "BreedCooldownMultiplier",
@@ -261,7 +249,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Livestock_PatientCourtship"
       ],
@@ -280,7 +267,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 14,
       "RequiresTalentIds": [
         "AH_Livestock_StrongLineage"
       ],
@@ -299,7 +285,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 17,
       "RequiresTalentIds": [
         "AH_Livestock_StrongLineage"
       ],
@@ -318,7 +303,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 17,
       "RequiresTalentIds": [
         "AH_Livestock_StrongLineage"
       ],

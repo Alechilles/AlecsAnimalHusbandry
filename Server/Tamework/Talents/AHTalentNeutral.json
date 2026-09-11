@@ -46,7 +46,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "MaxHealthMultiplier",
@@ -62,7 +61,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 4,
       "RequiresTalentIds": [
         "AH_Neutral_Hardy"
       ],
@@ -81,7 +79,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Neutral_Agile"
       ],
@@ -100,7 +97,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Neutral_Agile"
       ],
@@ -119,7 +115,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Neutral_Steady",
         "AH_Neutral_Trailwise"
@@ -139,7 +134,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Neutral_Steady",
         "AH_Neutral_Trailwise"
@@ -159,7 +153,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "HappinessGainMultiplier",
@@ -175,7 +168,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
-      "MinLevel": 4,
       "RequiresTalentIds": [
         "AH_Neutral_CalmTemper"
       ],
@@ -194,7 +186,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Neutral_LightStep"
       ],
@@ -213,7 +204,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Neutral_LightStep"
       ],
@@ -232,7 +222,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 15,
       "RequiresTalentIds": [
         "AH_Neutral_Forager"
       ],
@@ -251,7 +240,6 @@
       "Tier": 5,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 22,
       "RequiresTalentIds": [
         "AH_Neutral_QuietMetabolism",
         "AH_Neutral_FieldRest"
@@ -275,7 +263,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "BreedCooldownMultiplier",
@@ -291,7 +278,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Neutral_PatientPair"
       ],
@@ -310,7 +296,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 15,
       "RequiresTalentIds": [
         "AH_Neutral_FertileStock"
       ],
@@ -329,7 +314,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 22,
       "RequiresTalentIds": [
         "AH_Neutral_StrongFamily"
       ],
@@ -348,7 +332,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Neutral_FertileStock"
       ],
@@ -367,7 +350,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Neutral_FertileStock"
       ],
@@ -386,7 +368,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "DamageDealtMultiplier",
@@ -402,7 +383,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
-      "MinLevel": 9,
       "RequiresTalentIds": [
         "AH_Neutral_Watchful"
       ],

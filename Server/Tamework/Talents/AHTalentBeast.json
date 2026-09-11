@@ -41,7 +41,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "MaxHealthMultiplier",
@@ -57,7 +56,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 1,
-      "MinLevel": 4,
       "RequiresTalentIds": [
         "AH_Beast_Conditioned"
       ],
@@ -76,7 +74,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Beast_Quick"
       ],
@@ -95,7 +92,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Beast_Quick"
       ],
@@ -114,7 +110,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
-      "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Beast_Veteran"
       ],
@@ -133,7 +128,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Beast_Veteran",
         "AH_Beast_Pounce"
@@ -153,7 +147,6 @@
       "Tier": 5,
       "Branch": "animalhusbandry.talents.branch.conditioning",
       "PointCost": 4,
-      "MinLevel": 23,
       "RequiresTalentIds": [
         "AH_Beast_IronSinew",
         "AH_Beast_Chase"
@@ -173,7 +166,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 1,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "HappinessGainMultiplier",
@@ -189,7 +181,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 6,
       "RequiresTalentIds": [
         "AH_Beast_ControlledTemper"
       ],
@@ -208,7 +199,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 6,
       "RequiresTalentIds": [
         "AH_Beast_ControlledTemper"
       ],
@@ -227,7 +217,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 2,
-      "MinLevel": 10,
       "RequiresTalentIds": [
         "AH_Beast_WarAppetite"
       ],
@@ -246,7 +235,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 17,
       "RequiresTalentIds": [
         "AH_Beast_WarAppetite"
       ],
@@ -265,7 +253,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 3,
-      "MinLevel": 17,
       "RequiresTalentIds": [
         "AH_Beast_FieldDressing"
       ],
@@ -284,7 +271,6 @@
       "Tier": 5,
       "Branch": "animalhusbandry.talents.branch.care",
       "PointCost": 4,
-      "MinLevel": 24,
       "RequiresTalentIds": [
         "AH_Beast_HardMarch",
         "AH_Beast_VeteranRecovery"
@@ -304,7 +290,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "BreedCooldownMultiplier",
@@ -320,7 +305,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 2,
-      "MinLevel": 9,
       "RequiresTalentIds": [
         "AH_Beast_DenPairing"
       ],
@@ -339,7 +323,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Beast_StrongBlood"
       ],
@@ -362,7 +345,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 19,
       "RequiresTalentIds": [
         "AH_Beast_StrongBlood"
       ],
@@ -381,7 +363,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.breeding",
       "PointCost": 3,
-      "MinLevel": 19,
       "RequiresTalentIds": [
         "AH_Beast_StrongBlood"
       ],
@@ -400,7 +381,6 @@
       "Tier": 1,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
-      "MinLevel": 1,
       "Effects": [
         {
           "EffectKey": "DamageDealtMultiplier",
@@ -416,7 +396,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 3,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Beast_Trained"
       ],
@@ -435,7 +414,6 @@
       "Tier": 2,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 2,
-      "MinLevel": 8,
       "RequiresTalentIds": [
         "AH_Beast_Trained"
       ],
@@ -454,7 +432,6 @@
       "Tier": 3,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 4,
-      "MinLevel": 16,
       "RequiresTalentIds": [
         "AH_Beast_Apex",
         "AH_Beast_GuardedStance"
@@ -474,7 +451,6 @@
       "Tier": 4,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 3,
-      "MinLevel": 18,
       "RequiresTalentIds": [
         "AH_Beast_GuardedStance"
       ],
@@ -493,7 +469,6 @@
       "Tier": 5,
       "Branch": "animalhusbandry.talents.branch.combat",
       "PointCost": 4,
-      "MinLevel": 25,
       "RequiresTalentIds": [
         "AH_Beast_FocusedStrike",
         "AH_Beast_ThickHide"

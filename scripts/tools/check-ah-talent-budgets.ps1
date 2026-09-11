@@ -198,9 +198,6 @@ foreach ($config in $configs) {
 
     foreach ($talent in $talents) {
         $talentIndex = [array]::IndexOf($talents, $talent)
-        if ([int]$talent.Tier -eq 1 -and [int]$talent.MinLevel -ne 1) {
-            throw "$($config.Name) tier 1 talent $($talent.Id) must require level 1."
-        }
         foreach ($requiredId in @($talent.RequiresTalentIds)) {
             if ($null -eq $requiredId -or [string]::IsNullOrWhiteSpace([string]$requiredId)) {
                 continue
