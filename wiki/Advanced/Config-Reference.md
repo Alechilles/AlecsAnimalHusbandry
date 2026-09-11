@@ -26,7 +26,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `FlightFormation` | `None` | `None`, `Loose`, or `Chevron`. Ducks select `Chevron` and bluebirds select `Loose`; other species retain their existing flight behavior by default. |
+| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`, bluebirds select `Loose`, and pigeons, sparrows, and green finches select `Cluster`. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 | `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Ducks use about `0.667` with `MaxSpeed: 6`, targeting 4 blocks/second with catch-up room. |
@@ -34,7 +34,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 Set these values in the species role's `Modify` map. `Loose` produces a compact
 group with gentle drift and staggered heights above and below the leader;
-`Chevron` produces two level arms behind the flock leader. Formation positions
+`Cluster` produces a denser irregular group with gentle drift; `Chevron` produces two level arms behind the flock leader. Formation positions
 ease around turns. The formation flight controller caps turning at 90 degrees/second
 (or the configured limit if lower), including during landing and recovery.
 Wild formations apply during cruising and end when the leader starts landing.
@@ -49,6 +49,61 @@ Visual spacing and terrain behavior still need in-game tuning.
 
 See Tamework's [Flight Formation Guide](https://wiki.hytalemodding.dev/mod/alecs-tamework/flight-formation-guide)
 for integration details.
+
+## Thermal circling (Kettle)
+
+Wild and tamed hawks and vultures can enter daytime Kettle episodes during idle
+flight. The leader circles around its home point and nearby flock members join,
+using slightly different radii and heights while gradually climbing. Landing,
+threat responses, recovery, and companion commands retain priority.
+
+The aerial templates expose `KettleEnabled` (default `false`), `KettleRadius`
+(default `18` blocks), `KettleAltitudeRange` (default `[15, 28]` above the leader's
+home point), `KettleCooldownRange` (default `[60, 120]` seconds between episode
+starts), and `KettleDurationRange` (default `[20, 35]` seconds).
+
+## Wild bird flock sizes
+
+Natural world spawns use species-specific weighted flock assets under
+`Server/NPC/Flocks/AH_Flock_*.json`. These ranges include the leader. Small and
+medium groups are more common than the largest groups; hawks have an 85% chance
+of spawning alone or as a pair. Terrain and spawn limits can produce fewer birds.
+Existing birds are not resized, and tamed group limits are unchanged.
+
+| Bird | Initial group range |
+| --- | --- |
+| Sparrow | 4–12 |
+| Green finch, pigeon | 3–10 |
+| Crow | 2–7 |
+| Raven | 1–4 |
+| Bluebird, parrot | 2–6 |
+| Duck | 2–8 |
+| Flamingo | 4–12 |
+| Penguin | 5–14 |
+| Hawk | 1–4, usually 1–2 |
+| Vulture | 2–7 |
+| Brown owl, snowy owl | 1–2, usually 1 |
+| Woodpecker | 1–3, usually 1 |
+| Chicken | 3–8 |
+| Desert chicken | 3–7 |
+| Turkey | 3–9 |
+
+These are game-scale choices informed by bird social behavior, not literal
+wild flock measurements. Social birds receive larger ranges, while solitary
+and pair-oriented birds receive smaller ranges. See Cornell's
+[hawk flocking overview](https://www.allaboutbirds.org/news/do-hawks-flock-together/),
+[raven life history](https://www.allaboutbirds.org/guide/Common_Raven/lifehistory),
+and San Diego Zoo's [flamingo guide](https://animals.sandiegozoo.org/animals/flamingo).
+
+Archaeopteryx retains its parent-and-young spawning, Tetrabird retains 2–4,
+and Pterodactyl and Skrill retain singleton spawning. Bats are unchanged.
+
+`MinSize` sets the first size and successive `SizeWeights` entries weight each
+next size. For example, `MinSize: 1` with `SizeWeights: [55, 30, 10, 5]` means
+55% one bird, 30% two, 10% three, and 5% four. Natural spawn overrides change
+only the selected bird entries' `Flock` references; other spawn settings retain
+their release 0.6.3 values. Mods overriding the same world spawn assets may
+conflict with these assignments.
 
 ## Active Animal Husbandry Config Files
 

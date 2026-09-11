@@ -1,0 +1,18 @@
+{
+  "Environments": [
+    "Env_Zone1_Swamps"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Birds",
+      "Id": "Raven",
+      "Flock": "AH_Flock_Raven"
+    },
+    {
+      "Weight": 20,
+      "SpawnBlockSet": "Mud",
+      "Id": "Frog_Green"
+    }
+  ]
+}

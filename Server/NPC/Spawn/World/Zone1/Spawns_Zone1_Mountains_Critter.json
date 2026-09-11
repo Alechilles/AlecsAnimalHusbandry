@@ -1,0 +1,23 @@
+{
+  "Environments": [
+    "Env_Zone1_Mountains"
+  ],
+  "NPCs": [
+    {
+      "Weight": 10,
+      "SpawnBlockSet": "StoneAndSoil",
+      "Id": "Hawk",
+      "Flock": "AH_Flock_Hawk"
+    },
+    {
+      "Weight": 10,
+      "SpawnBlockSet": "Birds",
+      "Id": "Owl_Brown",
+      "Flock": "AH_Flock_Owl_Brown"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

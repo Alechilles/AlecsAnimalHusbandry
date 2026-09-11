@@ -1,0 +1,22 @@
+{
+  "Environments": [
+    "Env_Zone3_Glacial"
+  ],
+  "NPCs": [
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Owl_Snow",
+      "Flock": "AH_Flock_Owl_Snow"
+    },
+    {
+      "Weight": 1,
+      "SpawnBlockSet": "IceAndSnow",
+      "Id": "Snail_Frost"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "Environments": [
+    "Env_Zone3_Forests"
+  ],
+  "NPCs": [
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Crow",
+      "Flock": "AH_Flock_Crow"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Owl_Brown",
+      "Flock": "AH_Flock_Owl_Brown"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Rock",
+      "Id": "Hawk",
+      "Flock": "AH_Flock_Hawk"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Woodpecker",
+      "Flock": "AH_Flock_Woodpecker"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Soil_NoSnow",
+      "Id": "Mouse"
+    },
+    {
+      "Weight": 6,
+      "SpawnBlockSet": "Soil_NoSnow",
+      "Id": "Squirrel"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

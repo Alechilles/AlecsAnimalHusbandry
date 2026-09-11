@@ -1,0 +1,23 @@
+{
+  "Environments": [
+    "Env_Zone3_Tundra"
+  ],
+  "NPCs": [
+    {
+      "Weight": 6,
+      "SpawnBlockSet": "Birds",
+      "Id": "Crow",
+      "Flock": "AH_Flock_Crow"
+    },
+    {
+      "Weight": 6,
+      "SpawnBlockSet": "Birds",
+      "Id": "Owl_Brown",
+      "Flock": "AH_Flock_Owl_Brown"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

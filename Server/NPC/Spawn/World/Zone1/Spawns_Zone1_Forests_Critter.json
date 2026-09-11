@@ -1,0 +1,66 @@
+{
+  "Environments": [
+    "Env_Zone1_Forests",
+    "Env_Zone1_Autumn",
+    "Env_Zone1_Azure"
+  ],
+  "NPCs": [
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Crow",
+      "Flock": "AH_Flock_Crow"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Finch_Green",
+      "Flock": "AH_Flock_Finch_Green"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Bluebird",
+      "Flock": "AH_Flock_Bluebird"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Sparrow",
+      "Flock": "AH_Flock_Sparrow"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Woodpecker",
+      "Flock": "AH_Flock_Woodpecker"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Owl_Brown",
+      "Flock": "AH_Flock_Owl_Brown"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Pigeon",
+      "Flock": "AH_Flock_Pigeon"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Soil",
+      "Id": "Duck",
+      "Flock": "AH_Flock_Duck"
+    },
+    {
+      "Weight": 6,
+      "SpawnBlockSet": "Soil",
+      "Id": "Squirrel"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

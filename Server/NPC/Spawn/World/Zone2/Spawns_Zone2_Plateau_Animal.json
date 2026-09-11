@@ -1,0 +1,34 @@
+{
+  "Environments": [
+    "Env_Zone2_Plateaus"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Flamingo",
+      "Flock": "AH_Flock_Flamingo"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Tortoise"
+    },
+    {
+      "Weight": 10,
+      "SpawnBlockSet": "Soil",
+      "Id": "Chicken_Desert",
+      "Flock": "AH_Flock_Chicken_Desert"
+    },
+    {
+      "Weight": 10,
+      "SpawnBlockSet": "Soil",
+      "Id": "Ram",
+      "Flock": "Group_Small"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

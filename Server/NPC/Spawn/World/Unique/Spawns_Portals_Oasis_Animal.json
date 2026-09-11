@@ -1,0 +1,23 @@
+{
+  "Environments": [
+    "Env_Portals_Oasis"
+  ],
+  "NPCs": [
+    {
+      "Weight": 15,
+      "SpawnBlockSet": "Portals_Oasis_Soil",
+      "SpawnFluidTag": "Water",
+      "Id": "Flamingo",
+      "Flock": "AH_Flock_Flamingo"
+    },
+    {
+      "Weight": 10,
+      "SpawnBlockSet": "Portals_Oasis_Soil",
+      "Id": "Tortoise"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

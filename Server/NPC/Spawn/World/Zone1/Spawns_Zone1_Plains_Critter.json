@@ -1,0 +1,62 @@
+{
+  "Environments": [
+    "Env_Zone1_Plains"
+  ],
+  "NPCs": [
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Crow",
+      "Flock": "AH_Flock_Crow"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Finch_Green",
+      "Flock": "AH_Flock_Finch_Green"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Birds",
+      "Id": "Bluebird",
+      "Flock": "AH_Flock_Bluebird"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Sparrow",
+      "Flock": "AH_Flock_Sparrow"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Birds",
+      "Id": "Pigeon",
+      "Flock": "AH_Flock_Pigeon"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Soil",
+      "Id": "Duck",
+      "Flock": "AH_Flock_Duck"
+    },
+    {
+      "Weight": 2,
+      "SpawnBlockSet": "Mud",
+      "Id": "Frog_Blue"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Soil",
+      "Id": "Frog_Green"
+    },
+    {
+      "Weight": 4,
+      "SpawnBlockSet": "Soil",
+      "Id": "Mouse"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}
