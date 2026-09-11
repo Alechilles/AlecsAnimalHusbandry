@@ -598,23 +598,37 @@
             "Type": "And",
             "Sensors": [
               {
-                "Type": "Mob",
-                "Range": 20,
-                "ExcludeOwnType": false,
-                "LockOnTarget": false,
-                "Filters": [
+                "Type": "Or",
+                "Sensors": [
                   {
-                    "Type": "NPCGroup",
-                    "IncludeGroups": [
-                      "Self"
-                    ]
-                  },
-                  {
-                    "Type": "Or",
+                    "Type": "Mob",
+                    "Range": 20,
+                    "ExcludeOwnType": false,
+                    "LockOnTarget": false,
                     "Filters": [
+                      {
+                        "Type": "NPCGroup",
+                        "IncludeGroups": [
+                          "Self"
+                        ]
+                      },
                       {
                         "Type": "Flock",
                         "FlockStatus": "NotMember"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "Mob",
+                    "Range": 20,
+                    "ExcludeOwnType": false,
+                    "LockOnTarget": false,
+                    "Filters": [
+                      {
+                        "Type": "NPCGroup",
+                        "IncludeGroups": [
+                          "Self"
+                        ]
                       },
                       {
                         "Type": "Flock",
