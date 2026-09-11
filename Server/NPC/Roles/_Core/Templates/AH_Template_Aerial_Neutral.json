@@ -547,30 +547,6 @@
           "SetTo": false
         }
       ]
-    },
-    {
-      "$Comment": "Stop a peck interrupted by the scheduled takeoff.",
-      "States": [
-        {
-          "From": [
-            "Idle.Grounded"
-          ],
-          "To": [
-            "Idle.TakeOff"
-          ]
-        }
-      ],
-      "Actions": [
-        {
-          "Type": "PlayAnimation",
-          "Slot": "Status"
-        },
-        {
-          "Type": "SetFlag",
-          "Name": "AH_GroundPeckActive",
-          "SetTo": false
-        }
-      ]
     }
   ],
   "MaxHealth": {
@@ -2777,6 +2753,25 @@
                     "State": ".TakeOff"
                   },
                   "Instructions": [
+                    {
+                      "$Comment": "Clear an active ground peck before the scheduled takeoff.",
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Flag",
+                        "Name": "AH_GroundPeckActive"
+                      },
+                      "Actions": [
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status"
+                        },
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_GroundPeckActive",
+                          "SetTo": false
+                        }
+                      ]
+                    },
                     {
                       "$Comment": "Grounded flight resumes through the native takeoff motion.",
                       "Sensor": {
