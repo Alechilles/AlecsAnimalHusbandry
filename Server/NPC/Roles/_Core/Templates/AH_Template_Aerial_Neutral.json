@@ -305,6 +305,10 @@
     "FlightFormationTightness": {
       "Value": 0.6,
       "Description": "Flight formation position correction strength, greater than zero and at most one."
+    },
+    "GroundPeckEnabled": {
+      "Value": false,
+      "Description": "Pause idle ground wandering to play Eat every 5-15 seconds."
     }
   },
   "IsMemory": {
@@ -349,7 +353,9 @@
   "MotionControllerList": [
     {
       "Type": "TameworkFormationFly",
-      "Formation": { "Compute": "FlightFormation" },
+      "Formation": {
+        "Compute": "FlightFormation"
+      },
       "MaxHorizontalSpeed": {
         "Compute": "MaxSpeed"
       },
@@ -534,6 +540,35 @@
         {
           "Type": "PlayAnimation",
           "Slot": "Status"
+        },
+        {
+          "Type": "SetFlag",
+          "Name": "AH_GroundPeckActive",
+          "SetTo": false
+        }
+      ]
+    },
+    {
+      "$Comment": "Stop a peck interrupted by the scheduled takeoff.",
+      "States": [
+        {
+          "From": [
+            "Idle.Grounded"
+          ],
+          "To": [
+            "Idle.TakeOff"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        },
+        {
+          "Type": "SetFlag",
+          "Name": "AH_GroundPeckActive",
+          "SetTo": false
         }
       ]
     }
@@ -563,6 +598,73 @@
       "$Comment": "This is separate so it can run all the time regardless of the rest of the script",
       "Continue": true,
       "Instructions": [
+        {
+          "$Comment": "Initialize the cosmetic ground-peck timer once per role.",
+          "Enabled": {
+            "Compute": "GroundPeckEnabled"
+          },
+          "Continue": true,
+          "Sensor": {
+            "Type": "Any",
+            "Once": true
+          },
+          "Actions": [
+            {
+              "Type": "TimerStart",
+              "Name": "AH_GroundPeckCooldown",
+              "StartValueRange": [
+                5,
+                15
+              ],
+              "RestartValueRange": [
+                5,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Clear an interrupted peck when physical ground contact or the walking controller is lost without leaving Idle.",
+          "Enabled": {
+            "Compute": "GroundPeckEnabled"
+          },
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Flag",
+                "Name": "AH_GroundPeckActive"
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "And",
+                  "Sensors": [
+                    {
+                      "Type": "MotionController",
+                      "MotionController": "Walk"
+                    },
+                    {
+                      "Type": "OnGround"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Status"
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "AH_GroundPeckActive",
+              "SetTo": false
+            }
+          ]
+        },
         {
           "$Comment": "Track the live flock leader without replacing the threat or food target.",
           "Enabled": {
@@ -2486,6 +2588,80 @@
               },
               "Instructions": [
                 {
+                  "$Comment": "Pause ground wandering for a short cosmetic peck, then wait 5-15 seconds before pecking again.",
+                  "Enabled": {
+                    "Compute": "GroundPeckEnabled"
+                  },
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      {
+                        "Type": "OnGround"
+                      },
+                      {
+                        "Type": "Timer",
+                        "Name": "AH_GroundPeckCooldown",
+                        "State": "Stopped"
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Nothing"
+                  },
+                  "HeadMotion": {
+                    "Type": "Nothing"
+                  },
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "AH_GroundPeckActive",
+                      "SetTo": true
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": "Eat"
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [
+                        1.5,
+                        1.5
+                      ]
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status"
+                    },
+                    {
+                      "Type": "SetFlag",
+                      "Name": "AH_GroundPeckActive",
+                      "SetTo": false
+                    },
+                    {
+                      "Type": "TimerStart",
+                      "Name": "AH_GroundPeckCooldown",
+                      "StartValueRange": [
+                        5,
+                        15
+                      ],
+                      "RestartValueRange": [
+                        5,
+                        15
+                      ]
+                    },
+                    {
+                      "Type": "TimerRestart",
+                      "Name": "AH_GroundPeckCooldown"
+                    }
+                  ]
+                },
+                {
                   "Sensor": {
                     "Type": "And",
                     "Sensors": [
@@ -2627,20 +2803,101 @@
                     "Type": "State",
                     "State": ".Grounded"
                   },
-                  "BodyMotion": {
-                    "Type": "Wander",
-                    "RelativeSpeed": 0.25
-                  },
-                  "Actions": [
+                  "Instructions": [
                     {
-                      "Type": "Timeout",
-                      "Delay": [
-                        45,
-                        90
-                      ],
-                      "Action": {
-                        "Type": "State",
-                        "State": ".TakeOff"
+                      "Continue": true,
+                      "Actions": [
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            45,
+                            90
+                          ],
+                          "Action": {
+                            "Type": "State",
+                            "State": ".TakeOff"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "$Comment": "Pause ground wandering for a short cosmetic peck, then wait 5-15 seconds before pecking again.",
+                      "Enabled": {
+                        "Compute": "GroundPeckEnabled"
+                      },
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Walk"
+                          },
+                          {
+                            "Type": "OnGround"
+                          },
+                          {
+                            "Type": "Timer",
+                            "Name": "AH_GroundPeckCooldown",
+                            "State": "Stopped"
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "Nothing"
+                      },
+                      "HeadMotion": {
+                        "Type": "Nothing"
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_GroundPeckActive",
+                          "SetTo": true
+                        },
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status",
+                          "Animation": "Eat"
+                        },
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            1.5,
+                            1.5
+                          ]
+                        },
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status"
+                        },
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_GroundPeckActive",
+                          "SetTo": false
+                        },
+                        {
+                          "Type": "TimerStart",
+                          "Name": "AH_GroundPeckCooldown",
+                          "StartValueRange": [
+                            5,
+                            15
+                          ],
+                          "RestartValueRange": [
+                            5,
+                            15
+                          ]
+                        },
+                        {
+                          "Type": "TimerRestart",
+                          "Name": "AH_GroundPeckCooldown"
+                        }
+                      ]
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "Wander",
+                        "RelativeSpeed": 0.25
                       }
                     }
                   ]
@@ -2775,8 +3032,12 @@
                         "Radius": {
                           "Compute": "FlockLeaderLeashDistance"
                         },
-                        "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
-                        "RelativeSpeed": { "Compute": "FlightCruiseRelativeSpeed" }
+                        "MaxHeadingChange": {
+                          "Compute": "FlightCruiseMaxHeadingChange"
+                        },
+                        "RelativeSpeed": {
+                          "Compute": "FlightCruiseRelativeSpeed"
+                        }
                       }
                     },
                     {
@@ -2785,8 +3046,12 @@
                         "Radius": {
                           "Compute": "WanderRadius"
                         },
-                        "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
-                        "RelativeSpeed": { "Compute": "FlightCruiseRelativeSpeed" }
+                        "MaxHeadingChange": {
+                          "Compute": "FlightCruiseMaxHeadingChange"
+                        },
+                        "RelativeSpeed": {
+                          "Compute": "FlightCruiseRelativeSpeed"
+                        }
                       }
                     }
                   ]
