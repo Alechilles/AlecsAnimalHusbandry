@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Restored duck formation cruise to about 4 blocks/second, with catch-up headroom and gentler wandering turns. Added role-level cruise speed and heading-change tuning.
+
 - Bluebirds now use loose flock formations during wild cruising and tamed airborne idle.
 
 - Fixed aerial flock joining failing NPC validation when a flock filter appeared twice in one filter group.

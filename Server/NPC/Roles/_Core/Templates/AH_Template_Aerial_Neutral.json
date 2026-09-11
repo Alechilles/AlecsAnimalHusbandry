@@ -286,6 +286,14 @@
       "Value": 8,
       "Description": "Distance at which wild followers move back toward their flock leader, in blocks."
     },
+    "FlightCruiseRelativeSpeed": {
+      "Value": 0.25,
+      "Description": "Relative speed during ambient airborne wandering. Leave headroom for formation followers."
+    },
+    "FlightCruiseMaxHeadingChange": {
+      "Value": 60,
+      "Description": "Maximum heading change in degrees between ambient flight segments."
+    },
     "FlightFormation": {
       "Value": "None",
       "Description": "Ambient flock flight formation: None, Loose, or Chevron."
@@ -2767,8 +2775,8 @@
                         "Radius": {
                           "Compute": "FlockLeaderLeashDistance"
                         },
-                        "MaxHeadingChange": 60,
-                        "RelativeSpeed": 0.25
+                        "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
+                        "RelativeSpeed": { "Compute": "FlightCruiseRelativeSpeed" }
                       }
                     },
                     {
@@ -2777,8 +2785,8 @@
                         "Radius": {
                           "Compute": "WanderRadius"
                         },
-                        "MaxHeadingChange": 60,
-                        "RelativeSpeed": 0.25
+                        "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
+                        "RelativeSpeed": { "Compute": "FlightCruiseRelativeSpeed" }
                       }
                     }
                   ]

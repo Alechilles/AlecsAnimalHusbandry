@@ -466,6 +466,14 @@
       "Value": 14,
       "Description": "Maximum flight height over ground."
     },
+    "FlightCruiseRelativeSpeed": {
+      "Value": 0.3,
+      "Description": "Relative speed during ambient airborne wandering. Leave headroom for formation followers."
+    },
+    "FlightCruiseMaxHeadingChange": {
+      "Value": 90,
+      "Description": "Maximum heading change in degrees between ambient flight segments."
+    },
     "FlightFormation": {
       "Value": "None",
       "Description": "Ambient flock flight formation: None, Loose, or Chevron."
@@ -2183,7 +2191,8 @@
                             "Radius": {
                               "Compute": "WanderRadius"
                             },
-                            "RelativeSpeed": 0.3
+                            "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
+                            "RelativeSpeed": { "Compute": "FlightCruiseRelativeSpeed" }
                           }
                         }
                       ]

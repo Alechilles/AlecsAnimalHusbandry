@@ -29,9 +29,14 @@ role JSON, rather than through a `Tw*Config` asset.
 | `FlightFormation` | `None` | `None`, `Loose`, or `Chevron`. Ducks select `Chevron` and bluebirds select `Loose`; other species retain their existing flight behavior by default. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
+| `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Ducks use about `0.667` with `MaxSpeed: 6`, targeting 4 blocks/second with catch-up room. |
+| `FlightCruiseMaxHeadingChange` | `60` wild / `90` tamed | Maximum turn angle between ambient flight segments. Ducks use `30` for gentler routes. |
 
 Set these values in the species role's `Modify` map. `Loose` produces a compact
-group with gentle drift; `Chevron` produces two arms behind the flock leader.
+group with gentle drift and staggered heights above and below the leader;
+`Chevron` produces two level arms behind the flock leader. Formation positions
+ease around turns. The formation flight controller caps turning at 90 degrees/second
+(or the configured limit if lower), including during landing and recovery.
 Wild formations apply during cruising and end when the leader starts landing.
 Tamed formations apply during airborne idle; individual commands keep their
 existing movement. Both require a flying flock leader and the matching Tamework
