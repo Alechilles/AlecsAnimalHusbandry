@@ -296,7 +296,7 @@
     },
     "FlightFormation": {
       "Value": "None",
-      "Description": "Ambient flock flight formation: None, Loose, or Chevron."
+      "Description": "Ambient flock flight formation: None, Loose, Cluster, or Chevron."
     },
     "FlightFormationSpacing": {
       "Value": 3,
@@ -309,6 +309,35 @@
     "GroundPeckEnabled": {
       "Value": false,
       "Description": "Pause idle ground wandering to play Eat every 5-15 seconds."
+    },
+    "KettleEnabled": {
+      "Value": false,
+      "Description": "Allow occasional ambient thermal circling."
+    },
+    "KettleRadius": {
+      "Value": 18,
+      "Description": "Base thermal orbit radius in blocks."
+    },
+    "KettleAltitudeRange": {
+      "Value": [
+        15,
+        28
+      ],
+      "Description": "Altitude above the native flock leader home point."
+    },
+    "KettleCooldownRange": {
+      "Value": [
+        60,
+        120
+      ],
+      "Description": "Seconds between starts of leader thermal episodes."
+    },
+    "KettleDurationRange": {
+      "Value": [
+        20,
+        35
+      ],
+      "Description": "Seconds spent in a thermal episode."
     }
   },
   "IsMemory": {
@@ -2015,6 +2044,29 @@
                       }
                     },
                     {
+                      "Reference": "Component_Tamework_Instruction_Flight_Kettle",
+                      "Modify": {
+                        "KettleEnabled": {
+                          "Compute": "KettleEnabled"
+                        },
+                        "KettleRadius": {
+                          "Compute": "KettleRadius"
+                        },
+                        "KettleAltitudeRange": {
+                          "Compute": "KettleAltitudeRange"
+                        },
+                        "KettleCooldownRange": {
+                          "Compute": "KettleCooldownRange"
+                        },
+                        "KettleDurationRange": {
+                          "Compute": "KettleDurationRange"
+                        },
+                        "DayTimePeriod": {
+                          "Compute": "DayTimePeriod"
+                        }
+                      }
+                    },
+                    {
                       "Reference": "Component_Tamework_Instruction_Flight_Formation",
                       "Modify": {
                         "FlightFormation": {
@@ -3011,6 +3063,29 @@
                         "RelativeSpeed": 0.25
                       },
                       "$Comment": "Leash must provide the seek position before the self flock-status filter."
+                    },
+                    {
+                      "Reference": "Component_Tamework_Instruction_Flight_Kettle",
+                      "Modify": {
+                        "KettleEnabled": {
+                          "Compute": "KettleEnabled"
+                        },
+                        "KettleRadius": {
+                          "Compute": "KettleRadius"
+                        },
+                        "KettleAltitudeRange": {
+                          "Compute": "KettleAltitudeRange"
+                        },
+                        "KettleCooldownRange": {
+                          "Compute": "KettleCooldownRange"
+                        },
+                        "KettleDurationRange": {
+                          "Compute": "KettleDurationRange"
+                        },
+                        "DayTimePeriod": {
+                          "Compute": "DayTimePeriod"
+                        }
+                      }
                     },
                     {
                       "Sensor": {
