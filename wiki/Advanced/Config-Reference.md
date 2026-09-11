@@ -26,7 +26,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `FlightFormation` | `None` | `None`, `Loose`, or `Chevron`. Ducks select `Chevron`; other species retain their existing flight behavior by default. |
+| `FlightFormation` | `None` | `None`, `Loose`, or `Chevron`. Ducks select `Chevron` and bluebirds select `Loose`; other species retain their existing flight behavior by default. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 

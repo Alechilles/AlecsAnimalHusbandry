@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Bluebirds now use loose flock formations during wild cruising and tamed airborne idle.
+
 - Fixed aerial flock joining failing NPC validation when a flock filter appeared twice in one filter group.
 
 - Ducks use chevron formations during wild cruising and tamed airborne idle. Aerial roles can select None, Loose, or Chevron and tune spacing and tightness. Requires the matching Tamework flight-formation development build.
