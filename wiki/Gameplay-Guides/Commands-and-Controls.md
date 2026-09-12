@@ -19,6 +19,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 Item page: [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
 
 - Follow
+- Follow Close
 - Hold
 - Recall
 - Move To Ping
@@ -30,6 +31,7 @@ Item page: [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flu
 Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 
 - Follow
+- Follow Close
 - Hold
 - Recall
 - Move To Ping
@@ -37,6 +39,16 @@ Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 - Aggressive
 - Attack Target
 - Idle
+
+## Following distance
+
+**Follow** keeps companions in a compact formation that moves toward your location without rotating when you turn. Animals can exchange slots and spacing accounts for each animal's size.
+
+**Follow Close** uses the original direct follow behavior, including the species' previous distances, flying orbit, and catch-up/teleport behavior. Select it beside Follow in either flute menu. The direct interaction cycle and Recall still select ordinary Follow.
+
+**Defend** uses the formation while following between fights. Combat movement takes priority when a threat is engaged.
+
+These options require the matching Tamework development build.
 
 ## Limits and Gating
 - Membership mode is linked-only.
@@ -61,7 +73,7 @@ Use `To Me` on a nearby linked companion to place a supported animal on your sho
 Supported flying companions have a Ground/Flight button on their linked companion card.
 
 - **Ground mode:** the companion lands and uses its slower grounded movement.
-- **Flight mode:** `Idle` uses aerial wandering, `Follow` flies around its owner, and `Hold` hovers in place.
+- **Flight mode:** `Idle` uses aerial wandering, `Follow` uses a flying formation and `Follow Close` uses the original orbit, and `Hold` hovers in place.
 - Changing between `Idle`, `Follow`, `Hold`, `Move To Ping`, and home/recall orders does not change the selected Ground/Flight mode.
 - Food, water, sleep, and breeding require a safe landing. These activities temporarily take control, and the companion takes off again afterward if Flight mode remains selected.
 - These passive vanilla flyers do not receive combat commands.

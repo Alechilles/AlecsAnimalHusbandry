@@ -649,6 +649,7 @@
           "From": [
             "Idle",
             "Follow",
+            "FollowClose",
             "Hold",
             "HoldGrounded"
           ],
@@ -688,7 +689,8 @@
         {
           "From": [
             "Idle",
-            "Follow"
+            "Follow",
+            "FollowClose"
           ],
           "To": [
             "Sleep"
@@ -715,6 +717,7 @@
             "SleepWakeResolve",
             "Idle",
             "Follow",
+            "FollowClose",
             "Hold",
             "Defend",
             "CommandMove"
@@ -734,6 +737,7 @@
           ],
           "To": [
             "Follow",
+            "FollowClose",
             "Defend",
             "CommandMove"
           ]
@@ -1119,8 +1123,17 @@
                 "State": "Hold"
               },
               {
-                "Type": "State",
-                "State": "Follow"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowClose"
+                  }
+                ]
               }
             ]
           },
@@ -1186,8 +1199,17 @@
                 "State": "Hold"
               },
               {
-                "Type": "State",
-                "State": "Follow"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowClose"
+                  }
+                ]
               }
             ]
           },
@@ -1382,6 +1404,10 @@
         {
           "Type": "State",
           "State": "Follow"
+        },
+        {
+          "Type": "State",
+          "State": "FollowClose"
         },
         {
           "Type": "State",
@@ -2863,8 +2889,17 @@
             "Compute": "CanFollow || CanRecall"
           },
           "Sensor": {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           "Instructions": [
             {

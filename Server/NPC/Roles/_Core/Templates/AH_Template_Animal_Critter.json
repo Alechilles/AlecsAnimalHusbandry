@@ -173,6 +173,10 @@
             },
             {
               "Type": "State",
+              "State": "FollowClose"
+            },
+            {
+              "Type": "State",
               "State": "Hold"
             },
             {
@@ -587,8 +591,17 @@
           "$Comment": "Command follow state used by Tamework mode cycle.",
           "Enabled": { "Compute": "CanFollow || CanRecall" },
           "Sensor": {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           "Instructions": [
             {

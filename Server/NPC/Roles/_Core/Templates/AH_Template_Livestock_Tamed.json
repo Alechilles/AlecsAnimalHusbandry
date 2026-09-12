@@ -446,7 +446,12 @@
     {
       "States": [
         {
-          "From": [ "Idle", "Follow", "Hold" ],
+          "From": [
+            "Idle",
+            "Follow",
+            "FollowClose",
+            "Hold"
+          ],
           "To": [ "Sleep" ]
         }
       ],
@@ -474,7 +479,11 @@
       "$Comment": "Record sleep origin when entering sleep from Idle/Follow so wake returns to Idle.",
       "States": [
         {
-          "From": [ "Idle", "Follow" ],
+          "From": [
+            "Idle",
+            "Follow",
+            "FollowClose"
+          ],
           "To": [ "Sleep" ]
         }
       ],
@@ -490,7 +499,17 @@
       "States": [
         {
           "From": [ "Sleep" ],
-          "To": [ "Alerted", "Flee", "SleepWakeResolve", "Idle", "Follow", "Hold", "Defend", "CommandMove" ]
+          "To": [
+            "Alerted",
+            "Flee",
+            "SleepWakeResolve",
+            "Idle",
+            "Follow",
+            "FollowClose",
+            "Hold",
+            "Defend",
+            "CommandMove"
+          ]
         }
       ],
       "Actions": {
@@ -502,7 +521,12 @@
       "States": [
         {
           "From": [ "Idle" ],
-          "To": [ "Follow", "Defend", "CommandMove" ]
+          "To": [
+            "Follow",
+            "FollowClose",
+            "Defend",
+            "CommandMove"
+          ]
         }
       ],
       "Actions": [
@@ -631,8 +655,17 @@
                 "State": "Hold"
               },
               {
-                "Type": "State",
-                "State": "Follow"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowClose"
+                  }
+                ]
               }
             ]
           },
@@ -695,8 +728,17 @@
                 "State": "Hold"
               },
               {
-                "Type": "State",
-                "State": "Follow"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowClose"
+                  }
+                ]
               }
             ]
           },
@@ -756,8 +798,17 @@
             "State": "Hold"
           },
           {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           {
             "Type": "State",
@@ -894,6 +945,10 @@
         {
           "Type": "State",
           "State": "Follow"
+        },
+        {
+          "Type": "State",
+          "State": "FollowClose"
         },
         {
           "Type": "State",
@@ -1836,8 +1891,17 @@
           "$Comment": "Command follow state used by Tamework mode cycle.",
           "Enabled": { "Compute": "CanFollow || CanRecall" },
           "Sensor": {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           "Instructions": [
             {

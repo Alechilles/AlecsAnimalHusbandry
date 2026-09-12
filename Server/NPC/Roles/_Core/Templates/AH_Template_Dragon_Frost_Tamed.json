@@ -826,6 +826,7 @@
           "From": [
             "Idle",
             "Follow",
+            "FollowClose",
             "Hold"
           ],
           "To": [
@@ -878,7 +879,8 @@
         {
           "From": [
             "Idle",
-            "Follow"
+            "Follow",
+            "FollowClose"
           ],
           "To": [
             "Sleep"
@@ -903,6 +905,7 @@
             "SleepWakeResolve",
             "Idle",
             "Follow",
+            "FollowClose",
             "Hold",
             "Defend",
             "CommandMove",
@@ -938,6 +941,7 @@
           "To": [
             "Idle",
             "Follow",
+            "FollowClose",
             "Defend",
             "Aggressive",
             "CommandMove"
@@ -983,6 +987,7 @@
           "To": [
             "Idle",
             "Follow",
+            "FollowClose",
             "CommandMove"
           ]
         }
@@ -1049,6 +1054,10 @@
         {
           "Type": "State",
           "State": "Follow"
+        },
+        {
+          "Type": "State",
+          "State": "FollowClose"
         },
         {
           "Type": "State",
@@ -1390,8 +1399,17 @@
         {
           "$Comment": "Follow State: Cat follows the owner while staying nearby.",
           "Sensor": {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           "Instructions": [
             {

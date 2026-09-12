@@ -161,6 +161,30 @@
       ]
     },
     {
+      "Id": "FollowClose",
+      "DisplayName": "animalhusbandry.commands.followClose.name",
+      "Feedback": {
+        "HudMessage": "animalhusbandry.commands.followClose.hud",
+        "SoundEvent": "SFX_AnimalHusbandry_Shakuhachi_SE_03",
+        "ParticleSystem": "Follow"
+      },
+      "Steps": [
+        {
+          "Type": "ClearTarget",
+          "TargetSlot": "LockedTarget"
+        },
+        {
+          "Type": "SetState",
+          "State": "FollowClose"
+        },
+        {
+          "Type": "SetTarget",
+          "TargetSlot": "MasterTarget",
+          "Source": "OwnerPlayer"
+        }
+      ]
+    },
+    {
       "Id": "Hold",
       "DisplayName": "animalhusbandry.commands.hold.name",
       "Feedback": {

@@ -313,6 +313,10 @@
             },
             {
               "Type": "State",
+              "State": "FollowClose"
+            },
+            {
+              "Type": "State",
               "State": "Hold"
             },
             {
@@ -389,8 +393,17 @@
                     "State": "Hold"
                   },
                   {
-                    "Type": "State",
-                    "State": "Follow"
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "State",
+                        "State": "Follow"
+                      },
+                      {
+                        "Type": "State",
+                        "State": "FollowClose"
+                      }
+                    ]
                   }
                 ]
               },
@@ -453,8 +466,17 @@
                     "State": "Hold"
                   },
                   {
-                    "Type": "State",
-                    "State": "Follow"
+                    "Type": "Or",
+                    "Sensors": [
+                      {
+                        "Type": "State",
+                        "State": "Follow"
+                      },
+                      {
+                        "Type": "State",
+                        "State": "FollowClose"
+                      }
+                    ]
                   }
                 ]
               },
@@ -514,8 +536,17 @@
                 "State": "Hold"
               },
               {
-                "Type": "State",
-                "State": "Follow"
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Follow"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "FollowClose"
+                  }
+                ]
               },
               {
                 "Type": "State",
@@ -1159,8 +1190,17 @@
           "$Comment": "Command follow state used by Tamework mode cycle.",
           "Enabled": { "Compute": "CanFollow || CanRecall" },
           "Sensor": {
-            "Type": "State",
-            "State": "Follow"
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Follow"
+              },
+              {
+                "Type": "State",
+                "State": "FollowClose"
+              }
+            ]
           },
           "Instructions": [
             {
