@@ -835,10 +835,6 @@
                         {
                           "Type": "TimerRestart",
                           "Name": "AH_Herd_Rest"
-                        },
-                        {
-                          "Type": "SetLeashPosition",
-                          "ToCurrent": true
                         }
                       ]
                     },
@@ -908,6 +904,7 @@
                       "BodyMotion": {
                         "Type": "TameworkGroundFormation",
                         "Lead": true,
+                        "HomeRange": 200,
                         "RelativeSpeed": 0.18
                       }
                     }
@@ -995,29 +992,77 @@
                       }
                     },
                     {
-                      "BodyMotion": {
-                        "Type": "Sequence",
-                        "Looped": true,
-                        "Motions": [
-                          {
-                            "Type": "Timer",
-                            "Time": [ 1, 5 ],
-                            "Motion": {
-                              "Type": "WanderInCircle",
-                              "Radius": { "Compute": "WanderRadius" },
-                              "MaxHeadingChange": 60,
-                          "RelativeSpeed": 0.18
-                            }
+                      "Instructions": [
+                        {
+                          "Enabled": {
+                            "Compute": "HerdRoamingEnabled"
                           },
-                          {
-                            "Type": "Timer",
-                            "Time": [ 3, 8 ],
-                            "Motion": {
-                              "Type": "Nothing"
-                            }
+                          "BodyMotion": {
+                            "Type": "Sequence",
+                            "Looped": true,
+                            "Motions": [
+                              {
+                                "Type": "Timer",
+                                "Time": [
+                                  1,
+                                  5
+                                ],
+                                "Motion": {
+                                  "Type": "Wander",
+                                  "MaxHeadingChange": 60,
+                                  "RelativeSpeed": 0.18
+                                }
+                              },
+                              {
+                                "Type": "Timer",
+                                "Time": [
+                                  3,
+                                  8
+                                ],
+                                "Motion": {
+                                  "Type": "Nothing"
+                                }
+                              }
+                            ]
                           }
-                        ]
-                      }
+                        },
+                        {
+                          "Enabled": {
+                            "Compute": "!HerdRoamingEnabled"
+                          },
+                          "BodyMotion": {
+                            "Type": "Sequence",
+                            "Looped": true,
+                            "Motions": [
+                              {
+                                "Type": "Timer",
+                                "Time": [
+                                  1,
+                                  5
+                                ],
+                                "Motion": {
+                                  "Type": "WanderInCircle",
+                                  "Radius": {
+                                    "Compute": "WanderRadius"
+                                  },
+                                  "MaxHeadingChange": 60,
+                                  "RelativeSpeed": 0.18
+                                }
+                              },
+                              {
+                                "Type": "Timer",
+                                "Time": [
+                                  3,
+                                  8
+                                ],
+                                "Motion": {
+                                  "Type": "Nothing"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
