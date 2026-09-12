@@ -26,7 +26,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`, bluebirds select `Loose`, and pigeons, sparrows, and green finches select `Cluster`. |
+| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`; bluebirds, hawks, and vultures select `Loose`; pigeons, sparrows, and green finches select `Cluster`. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 | `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Ducks use about `0.667` with `MaxSpeed: 6`, targeting 4 blocks/second with catch-up room. |
@@ -45,6 +45,9 @@ Grounded birds retain their watch behavior, and individual commands keep their
 existing movement. Both require a flying flock leader and the matching Tamework
 build with flight formation support. Formation-enabled species have a lower
 minimum airspeed, allowing followers to catch up or slow down into position.
+Wild and tamed hawks and vultures use spacing `8` and tightness `0.2` during
+ordinary flock flight, giving them a wide spread and gentle position correction.
+Their Kettle episodes use the separate orbit settings.
 Visual spacing and terrain behavior still need in-game tuning.
 
 See Tamework's [Flight Formation Guide](https://wiki.hytalemodding.dev/mod/alecs-tamework/flight-formation-guide)
