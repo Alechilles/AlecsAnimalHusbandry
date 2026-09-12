@@ -482,6 +482,24 @@
       "Value": 90,
       "Description": "Maximum heading change in degrees between ambient flight segments."
     },
+    "IndependentFlightRoaming": {
+      "Value": false,
+      "Description": "Wander independently around the flock leader between kettle episodes instead of holding formation."
+    },
+    "IndependentFlightRoamRadiusRange": {
+      "Value": [
+        40,
+        70
+      ],
+      "Description": "Inner and outer radii for independent flight around the leader, in blocks."
+    },
+    "IndependentFlightRetargetTimeRange": {
+      "Value": [
+        10,
+        20
+      ],
+      "Description": "Seconds between independent flight waypoint selections."
+    },
     "FlightFormation": {
       "Value": "None",
       "Description": "Ambient flock flight formation: None, Loose, Cluster, or Chevron."
@@ -2147,6 +2165,60 @@
                 "DayTimePeriod": {
                   "Compute": "DayTimePeriod"
                 }
+              }
+            },
+            {
+              "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+              "Enabled": {
+                "Compute": "IndependentFlightRoaming"
+              },
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "FlockLeader"
+                  },
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Follower"
+                      }
+                    ]
+                  },
+                  {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "OnGround"
+                    }
+                  }
+                ]
+              },
+              "BodyMotion": {
+                "Type": "TameworkFlyingOrbit",
+                "Mode": "WANDER_TARGET",
+                "WanderRadiusRange": {
+                  "Compute": "IndependentFlightRoamRadiusRange"
+                },
+                "WanderRetargetTimeRange": {
+                  "Compute": "IndependentFlightRetargetTimeRange"
+                },
+                "RelativeSpeed": {
+                  "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
+                },
+                "DesiredAltitudeRange": [
+                  0,
+                  8
+                ],
+                "ClimbRelativeSpeed": 0.12,
+                "SinkRelativeSpeed": 0.12,
+                "WanderStopDistance": 5,
+                "AvoidObstacles": true
               }
             },
             {

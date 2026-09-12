@@ -26,7 +26,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`; bluebirds, hawks, and vultures select `Loose`; pigeons, sparrows, and green finches select `Cluster`. |
+| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`; bluebirds select `Loose`; hawks and vultures retain `Loose` as their alert-flight fallback; pigeons, sparrows, and green finches select `Cluster`. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 | `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Cruise steering uses `max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)` to preserve the original 4 blocks/second level-flight minimum when formation steering allows lower speeds. Faster species settings remain in effect. Ducks use about `0.667` with `MaxSpeed: 6`. |
@@ -46,9 +46,14 @@ Grounded birds retain their watch behavior, and individual commands keep their
 existing movement. Both require a flying flock leader and the matching Tamework
 build with flight formation support. Formation-enabled species have a lower
 minimum airspeed, allowing followers to catch up or slow down into position.
-Wild and tamed hawks and vultures use spacing `8` and tightness `0.2` during
-ordinary flock flight, giving them a wide spread and gentle position correction.
-Their Kettle episodes use the separate orbit settings.
+Wild and tamed hawks and vultures enable `IndependentFlightRoaming`. During idle
+flight, followers choose independent waypoints around the moving leader using
+`IndependentFlightRoamRadiusRange` (default `[40, 70]` blocks) and
+`IndependentFlightRetargetTimeRange` (default `[10, 20]` seconds). This takes
+priority over formation slots while retaining flock membership, normal flight
+pace, and obstacle avoidance. Other birds keep their configured formations.
+The leader keeps its normal idle route. Raptors gather around its home point
+specifically for Kettle episodes; alerts retain the existing Loose fallback.
 Visual spacing and terrain behavior still need in-game tuning.
 
 See Tamework's [Flight Formation Guide](https://wiki.hytalemodding.dev/mod/alecs-tamework/flight-formation-guide)
@@ -61,10 +66,14 @@ flight. Kettle uses a base pace of about 3.2 blocks/second on level flight,
 with each bird flying at 70–115% of that pace (capped at maximum flight speed).
 Hawks and vultures glide for 10.5 seconds, then flap for 1.5
 seconds, with flock members offset so they do not all flap together.
-The leader circles around its home point and nearby flock members join,
+The leader circles around its home point. Nearby flock members begin joining
+after individual 2–20 second delays,
 using individual radii of 65–150% of the configured radius and distinct height
 bands across the configured altitude range. Height differences persist for the
-whole episode instead of every bird eventually reaching the same ceiling. Landing,
+whole episode instead of every bird eventually reaching the same ceiling.
+During the final 30 seconds, followers depart after individual 2–25 second
+delays and resume roaming; they cannot rejoin the same ending episode. The
+leader continues circling until the episode ends. Landing,
 threat responses, recovery, and companion commands retain priority.
 
 The aerial templates expose `KettleEnabled` (default `false`),

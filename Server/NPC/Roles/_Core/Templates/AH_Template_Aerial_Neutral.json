@@ -302,6 +302,24 @@
       "Value": 60,
       "Description": "Maximum heading change in degrees between ambient flight segments."
     },
+    "IndependentFlightRoaming": {
+      "Value": false,
+      "Description": "Wander independently around the flock leader between kettle episodes instead of holding formation."
+    },
+    "IndependentFlightRoamRadiusRange": {
+      "Value": [
+        40,
+        70
+      ],
+      "Description": "Inner and outer radii for independent flight around the leader, in blocks."
+    },
+    "IndependentFlightRetargetTimeRange": {
+      "Value": [
+        10,
+        20
+      ],
+      "Description": "Seconds between independent flight waypoint selections."
+    },
     "FlightFormation": {
       "Value": "None",
       "Description": "Ambient flock flight formation: None, Loose, Cluster, or Chevron."
@@ -2082,6 +2100,60 @@
                       }
                     },
                     {
+                      "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+                      "Enabled": {
+                        "Compute": "IndependentFlightRoaming"
+                      },
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "FlockLeader"
+                          },
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "Follower"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Not",
+                            "Sensor": {
+                              "Type": "OnGround"
+                            }
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "TameworkFlyingOrbit",
+                        "Mode": "WANDER_TARGET",
+                        "WanderRadiusRange": {
+                          "Compute": "IndependentFlightRoamRadiusRange"
+                        },
+                        "WanderRetargetTimeRange": {
+                          "Compute": "IndependentFlightRetargetTimeRange"
+                        },
+                        "RelativeSpeed": {
+                          "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
+                        },
+                        "DesiredAltitudeRange": [
+                          0,
+                          8
+                        ],
+                        "ClimbRelativeSpeed": 0.12,
+                        "SinkRelativeSpeed": 0.12,
+                        "WanderStopDistance": 5,
+                        "AvoidObstacles": true
+                      }
+                    },
+                    {
                       "Reference": "Component_Tamework_Instruction_Flight_Formation",
                       "Modify": {
                         "FlightFormation": {
@@ -2987,6 +3059,24 @@
                               "Name": "Tw_Kettle_Duration",
                               "State": "Running"
                             }
+                          },
+                          {
+                            "Type": "Not",
+                            "Sensor": {
+                              "Type": "Or",
+                              "Sensors": [
+                                {
+                                  "Type": "Beacon",
+                                  "Message": "Tw_Kettle_Active",
+                                  "Range": 160
+                                },
+                                {
+                                  "Type": "Beacon",
+                                  "Message": "Tw_Kettle_Ending",
+                                  "Range": 160
+                                }
+                              ]
+                            }
                           }
                         ]
                       },
@@ -3116,6 +3206,60 @@
                         "KettleRelativeSpeed": {
                           "Compute": "KettleRelativeSpeed"
                         }
+                      }
+                    },
+                    {
+                      "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+                      "Enabled": {
+                        "Compute": "IndependentFlightRoaming"
+                      },
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "FlockLeader"
+                          },
+                          {
+                            "Type": "Self",
+                            "Filters": [
+                              {
+                                "Type": "Flock",
+                                "FlockStatus": "Follower"
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Fly"
+                          },
+                          {
+                            "Type": "Not",
+                            "Sensor": {
+                              "Type": "OnGround"
+                            }
+                          }
+                        ]
+                      },
+                      "BodyMotion": {
+                        "Type": "TameworkFlyingOrbit",
+                        "Mode": "WANDER_TARGET",
+                        "WanderRadiusRange": {
+                          "Compute": "IndependentFlightRoamRadiusRange"
+                        },
+                        "WanderRetargetTimeRange": {
+                          "Compute": "IndependentFlightRetargetTimeRange"
+                        },
+                        "RelativeSpeed": {
+                          "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
+                        },
+                        "DesiredAltitudeRange": [
+                          0,
+                          8
+                        ],
+                        "ClimbRelativeSpeed": 0.12,
+                        "SinkRelativeSpeed": 0.12,
+                        "WanderStopDistance": 5,
+                        "AvoidObstacles": true
                       }
                     },
                     {
