@@ -27,7 +27,9 @@
     },
     "IsMemory": true,
     "MemoriesNameOverride": "Cow_Calf",
-    "NameTranslationKey": "server.npcRoles.Cow_Calf.name"
+    "NameTranslationKey": "server.npcRoles.Cow_Calf.name",
+    "HerdRoamingEnabled": true,
+    "LeashDistance": 300
   },
   "Parameters": {
     "IsTameable": {
