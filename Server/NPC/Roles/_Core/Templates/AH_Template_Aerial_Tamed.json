@@ -468,7 +468,7 @@
     },
     "FlightCruiseRelativeSpeed": {
       "Value": 0.3,
-      "Description": "Relative speed during ambient airborne wandering. Leave headroom for formation followers."
+      "Description": "Relative speed during ambient airborne wandering, with the original 4 blocks/second minimum cruise pace."
     },
     "FlightCruiseMaxHeadingChange": {
       "Value": 90,
@@ -2407,7 +2407,7 @@
                               "Compute": "FlightCruiseMaxHeadingChange"
                             },
                             "RelativeSpeed": {
-                              "Compute": "FlightCruiseRelativeSpeed"
+                              "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                             }
                           }
                         }
@@ -3127,7 +3127,7 @@
                       "Compute": "FlightCruiseMaxHeadingChange"
                     },
                     "RelativeSpeed": {
-                      "Compute": "FlightCruiseRelativeSpeed"
+                      "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                     }
                   }
                 }

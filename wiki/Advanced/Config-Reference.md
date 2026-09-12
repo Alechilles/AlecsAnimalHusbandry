@@ -29,7 +29,7 @@ role JSON, rather than through a `Tw*Config` asset.
 | `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`; bluebirds, hawks, and vultures select `Loose`; pigeons, sparrows, and green finches select `Cluster`. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
-| `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Ducks use about `0.667` with `MaxSpeed: 6`, targeting 4 blocks/second with catch-up room. |
+| `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Cruise steering uses `max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)` to preserve the original 4 blocks/second level-flight minimum when formation steering allows lower speeds. Faster species settings remain in effect. Ducks use about `0.667` with `MaxSpeed: 6`. |
 | `FlightCruiseMaxHeadingChange` | `60` wild / `90` tamed | Maximum turn angle between ambient flight segments. Ducks use `30` for gentler routes. |
 
 Set these values in the species role's `Modify` map. `Loose` produces a compact
