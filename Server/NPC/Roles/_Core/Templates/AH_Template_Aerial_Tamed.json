@@ -1521,7 +1521,16 @@
               "Action": {
                 "Type": "SetLeashPosition",
                 "ToTarget": true
+              },
+              "Enabled": {
+                "Compute": "!IndependentFlightRoaming"
               }
+            },
+            {
+              "Enabled": {
+                "Compute": "IndependentFlightRoaming"
+              },
+              "Type": "TameworkSetLeashToTargetHome"
             }
           ]
         },
@@ -2168,7 +2177,7 @@
               }
             },
             {
-              "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+              "$Comment": "Independent raptors roam around the leader home point between shared thermal episodes.",
               "Enabled": {
                 "Compute": "IndependentFlightRoaming"
               },
@@ -2218,7 +2227,8 @@
                 "ClimbRelativeSpeed": 0.12,
                 "SinkRelativeSpeed": 0.12,
                 "WanderStopDistance": 5,
-                "AvoidObstacles": true
+                "AvoidObstacles": true,
+                "UseTargetLeashPoint": true
               }
             },
             {

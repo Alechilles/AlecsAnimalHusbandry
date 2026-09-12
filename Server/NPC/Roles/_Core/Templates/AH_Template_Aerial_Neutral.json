@@ -730,7 +730,16 @@
             },
             {
               "Type": "SetLeashPosition",
-              "ToTarget": true
+              "ToTarget": true,
+              "Enabled": {
+                "Compute": "!IndependentFlightRoaming"
+              }
+            },
+            {
+              "Enabled": {
+                "Compute": "IndependentFlightRoaming"
+              },
+              "Type": "TameworkSetLeashToTargetHome"
             }
           ]
         },
@@ -2100,7 +2109,7 @@
                       }
                     },
                     {
-                      "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+                      "$Comment": "Independent raptors roam around the leader home point between shared thermal episodes.",
                       "Enabled": {
                         "Compute": "IndependentFlightRoaming"
                       },
@@ -2150,7 +2159,8 @@
                         "ClimbRelativeSpeed": 0.12,
                         "SinkRelativeSpeed": 0.12,
                         "WanderStopDistance": 5,
-                        "AvoidObstacles": true
+                        "AvoidObstacles": true,
+                        "UseTargetLeashPoint": true
                       }
                     },
                     {
@@ -3068,11 +3078,13 @@
                                 {
                                   "Type": "Beacon",
                                   "Message": "Tw_Kettle_Active",
+                                  "ConsumeMessage": false,
                                   "Range": 160
                                 },
                                 {
                                   "Type": "Beacon",
                                   "Message": "Tw_Kettle_Ending",
+                                  "ConsumeMessage": false,
                                   "Range": 160
                                 }
                               ]
@@ -3209,7 +3221,7 @@
                       }
                     },
                     {
-                      "$Comment": "Independent raptors roam around the leader between shared thermal episodes.",
+                      "$Comment": "Independent raptors roam around the leader home point between shared thermal episodes.",
                       "Enabled": {
                         "Compute": "IndependentFlightRoaming"
                       },
@@ -3259,7 +3271,8 @@
                         "ClimbRelativeSpeed": 0.12,
                         "SinkRelativeSpeed": 0.12,
                         "WanderStopDistance": 5,
-                        "AvoidObstacles": true
+                        "AvoidObstacles": true,
+                        "UseTargetLeashPoint": true
                       }
                     },
                     {

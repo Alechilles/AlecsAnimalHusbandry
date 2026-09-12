@@ -48,12 +48,14 @@ existing movement. Both require a flying flock leader and the matching Tamework
 build with flight formation support. Formation-enabled species have a lower
 minimum airspeed, allowing followers to catch up or slow down into position.
 Wild and tamed hawks and vultures enable `IndependentFlightRoaming`. During idle
-flight, followers choose independent waypoints around the moving leader using
+flight, followers share the leader's home leash point and choose independent waypoints
+around that home using
 `IndependentFlightRoamRadiusRange` (default `[40, 70]` blocks) and
 `IndependentFlightRetargetTimeRange` (default `[10, 20]` seconds). This takes
 priority over formation slots while retaining flock membership, normal flight
 pace, and obstacle avoidance. Other birds keep their configured formations.
-The leader keeps its normal idle route. Raptors gather around its home point
+The leader keeps its normal idle route without dragging the followers' roaming
+area along. Raptors gather around the same shared home point
 specifically for Kettle episodes; alerts retain the existing Loose fallback.
 Visual spacing and terrain behavior still need in-game tuning.
 
@@ -76,7 +78,8 @@ Height differences persist for the
 whole episode instead of every bird eventually reaching the same ceiling.
 During the final 30 seconds, followers depart after individual 2–25 second
 delays and resume roaming; they cannot rejoin the same ending episode. The
-leader continues circling until the episode ends. Landing,
+leader continues circling until the episode ends. Kettle beacon checks are
+non-consuming so landing, join-delay, and orbit checks can read the same signal. Landing,
 threat responses, recovery, and companion commands retain priority.
 
 The aerial templates expose `KettleEnabled` (default `false`),
