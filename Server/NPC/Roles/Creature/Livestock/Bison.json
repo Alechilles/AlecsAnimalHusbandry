@@ -114,7 +114,12 @@
           }
         ]
       }
-    }
+    },
+    "HerdRoamingEnabled": true,
+    "WanderRadius": 64,
+    "LeashDistance": 80,
+    "WanderMoveTime": [12, 18],
+    "WanderPauseTime": [10, 18]
   },
   "Parameters": {
     "NameTranslationKey": {

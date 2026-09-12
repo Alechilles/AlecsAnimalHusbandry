@@ -14,6 +14,24 @@
       "Value": 7,
       "Description": "The wander radius of the NPC."
     },
+    "HerdRoamingEnabled": {
+      "Value": false,
+      "Description": "Keep followers close during all daytime idle choices."
+    },
+    "WanderMoveTime": {
+      "Value": [
+        1,
+        5
+      ],
+      "Description": "Duration of each native wandering leg in seconds."
+    },
+    "WanderPauseTime": {
+      "Value": [
+        3,
+        8
+      ],
+      "Description": "Duration of the pause between native wandering legs in seconds."
+    },
     "ViewRange": {
       "Value": 16,
       "Description": "The view distance of the NPC, in blocks."
@@ -732,6 +750,30 @@
               ]
             },
             {
+              "$Comment": "Regroup roaming-herd followers before choosing local wandering or grazing.",
+              "Enabled": {
+                "Compute": "HerdRoamingEnabled"
+              },
+              "TreeMode": true,
+              "Sensor": {
+                "Type": "Time",
+                "Period": {
+                  "Compute": "DayTimePeriod"
+                },
+                "CheckDay": true
+              },
+              "Instructions": [
+                {
+                  "Reference": "Component_Instruction_Leash_To_Flock_Leader",
+                  "Modify": {
+                    "WanderRadius": 8,
+                    "StopDistance": 5,
+                    "RelativeSpeed": 0.3
+                  }
+                }
+              ]
+            },
+            {
               "$Comment": "Execute daytime idle behaviors.",
               "Type": "Random",
               "ExecuteFor": [ 20, 30 ],
@@ -769,7 +811,7 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": [ 1, 5 ],
+                            "Time": { "Compute": "WanderMoveTime" },
                             "Motion": {
                               "Type": "WanderInCircle",
                               "Radius": { "Compute": "WanderRadius" },
@@ -779,7 +821,7 @@
                           },
                           {
                             "Type": "Timer",
-                            "Time": [ 3, 8 ],
+                            "Time": { "Compute": "WanderPauseTime" },
                             "Motion": {
                               "Type": "Nothing"
                             }
