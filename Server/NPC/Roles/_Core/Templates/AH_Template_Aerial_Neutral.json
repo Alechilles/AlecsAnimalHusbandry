@@ -290,6 +290,14 @@
       "Value": 0.25,
       "Description": "Relative speed during ambient airborne wandering, with the original 4 blocks/second minimum cruise pace."
     },
+    "FlightCruiseMinSegmentTime": {
+      "Value": 6,
+      "Description": "Minimum seconds per ambient flight segment before choosing a new direction."
+    },
+    "FlightCruiseMaxSegmentTime": {
+      "Value": 10,
+      "Description": "Maximum seconds per ambient flight segment; obstacles and wander bounds can shorten it."
+    },
     "FlightCruiseMaxHeadingChange": {
       "Value": 60,
       "Description": "Maximum heading change in degrees between ambient flight segments."
@@ -3128,6 +3136,8 @@
                         "MaxHeadingChange": {
                           "Compute": "FlightCruiseMaxHeadingChange"
                         },
+                        "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                        "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
                         "RelativeSpeed": {
                           "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                         }
@@ -3142,6 +3152,8 @@
                         "MaxHeadingChange": {
                           "Compute": "FlightCruiseMaxHeadingChange"
                         },
+                        "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                        "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
                         "RelativeSpeed": {
                           "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                         }
@@ -3897,6 +3909,8 @@
                         "MaxHeadingChange": {
                           "Compute": "FlightCruiseMaxHeadingChange"
                         },
+                        "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                        "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
                         "RelativeSpeed": {
                           "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                         }
@@ -3956,6 +3970,8 @@
                     "MaxHeadingChange": {
                       "Compute": "FlightCruiseMaxHeadingChange"
                     },
+                    "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                    "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
                     "RelativeSpeed": {
                       "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
                     }

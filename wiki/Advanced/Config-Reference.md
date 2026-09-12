@@ -31,6 +31,7 @@ role JSON, rather than through a `Tw*Config` asset.
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 | `FlightCruiseRelativeSpeed` | `0.25` wild / `0.3` tamed | Ambient flight speed as a fraction of `MaxSpeed`. Cruise steering uses `max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)` to preserve the original 4 blocks/second level-flight minimum when formation steering allows lower speeds. Faster species settings remain in effect. Ducks use about `0.667` with `MaxSpeed: 6`. |
 | `FlightCruiseMaxHeadingChange` | `60` wild / `90` tamed | Maximum turn angle between ambient flight segments. Ducks use `30` for gentler routes. |
+| `FlightCruiseMinSegmentTime` / `FlightCruiseMaxSegmentTime` | `6` / `10` seconds | Time per ambient flight segment before choosing another direction. Obstacles and the wander boundary can shorten a segment. |
 
 Set these values in the species role's `Modify` map. `Loose` produces a compact
 group with gentle drift and staggered heights above and below the leader;
