@@ -48,14 +48,14 @@ existing movement. Both require a flying flock leader and the matching Tamework
 build with flight formation support. Formation-enabled species have a lower
 minimum airspeed, allowing followers to catch up or slow down into position.
 Wild and tamed hawks and vultures enable `IndependentFlightRoaming`. During idle
-flight, followers share the leader's home leash point and choose independent waypoints
+flight, leaders and followers share the leader's home leash point and choose independent waypoints
 around that home using
 `IndependentFlightRoamRadiusRange` (default `[40, 70]` blocks) and
 `IndependentFlightRetargetTimeRange` (default `[10, 20]` seconds). This takes
 priority over formation slots while retaining flock membership, normal flight
 pace, and obstacle avoidance. Other birds keep their configured formations.
-The leader keeps its normal idle route without dragging the followers' roaming
-area along. Raptors gather around the same shared home point
+Leaders use the same roaming range and waypoint timing as followers; each bird
+chooses its own route around the shared home. Raptors gather around that home point
 specifically for Kettle episodes; alerts retain the existing Loose fallback.
 Visual spacing and terrain behavior still need in-game tuning.
 

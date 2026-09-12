@@ -2188,15 +2188,6 @@
                     "Type": "FlockLeader"
                   },
                   {
-                    "Type": "Self",
-                    "Filters": [
-                      {
-                        "Type": "Flock",
-                        "FlockStatus": "Follower"
-                      }
-                    ]
-                  },
-                  {
                     "Type": "MotionController",
                     "MotionController": "Fly"
                   },
