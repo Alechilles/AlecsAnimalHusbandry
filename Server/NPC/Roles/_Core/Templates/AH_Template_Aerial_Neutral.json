@@ -279,8 +279,8 @@
       "Description": "Maximum flight height over ground."
     },
     "FlockLeaderLeashDistance": {
-      "Value": 40,
-      "Description": "Home radius for a wild flock leader, in blocks."
+      "Value": 80,
+      "Description": "Home radius for a wild flock leader in flight and on the ground, in blocks."
     },
     "FlockFollowDistance": {
       "Value": 8,
@@ -4048,6 +4048,32 @@
                       "BodyMotion": {
                         "Type": "WanderInCircle",
                         "Radius": {
+                          "Compute": "FlockLeaderLeashDistance"
+                        },
+                        "MaxHeadingChange": {
+                          "Compute": "FlightCruiseMaxHeadingChange"
+                        },
+                        "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                        "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
+                        "RelativeSpeed": {
+                          "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
+                        }
+                      },
+                      "$Comment": "Use the flock leader home radius while watching a target, matching idle flight.",
+                      "Sensor": {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Leader"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": {
                           "Compute": "WanderRadius"
                         },
                         "MaxHeadingChange": {
@@ -4103,6 +4129,32 @@
                     "FlightFormationTightness": {
                       "Compute": "FlightFormationTightness"
                     }
+                  }
+                },
+                {
+                  "BodyMotion": {
+                    "Type": "WanderInCircle",
+                    "Radius": {
+                      "Compute": "FlockLeaderLeashDistance"
+                    },
+                    "MaxHeadingChange": {
+                      "Compute": "FlightCruiseMaxHeadingChange"
+                    },
+                    "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                    "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
+                    "RelativeSpeed": {
+                      "Compute": "max(FlightCruiseRelativeSpeed, 4 / MaxSpeed)"
+                    }
+                  },
+                  "$Comment": "Use the flock leader home radius while watching a target, matching idle flight.",
+                  "Sensor": {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
                   }
                 },
                 {
@@ -4383,7 +4435,7 @@
               }
             },
             {
-              "$Comment": "Grounded flock leaders use the same forty-unit home area as flight, rather than walking back to the lone-animal inner radius.",
+              "$Comment": "Grounded flock leaders retain their flight home radius instead of walking back to the lone-animal inner radius.",
               "Sensor": {
                 "Type": "Self",
                 "Filters": [

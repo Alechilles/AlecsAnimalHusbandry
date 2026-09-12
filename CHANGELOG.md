@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Expanded wild flock leaders' home radius from 40 to 80 blocks in flight and on the ground. Airborne target watching now uses that leader radius instead of the smaller ordinary wander radius, reducing frequent boundary turns.
+
 - Fixed wild and tamed birds nearly stopping in flight while alerted to a nearby target outside immediate flee reactions. Airborne alert waiting now keeps formation or cruise movement, with fleeing and obstacle recovery taking priority.
 
 - Restored duck formation cruise to about 4 blocks/second, with catch-up headroom and gentler wandering turns. Added role-level cruise speed and heading-change tuning.
