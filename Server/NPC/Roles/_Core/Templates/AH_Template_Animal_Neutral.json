@@ -16,21 +16,7 @@
     },
     "HerdRoamingEnabled": {
       "Value": false,
-      "Description": "Keep followers close during all daytime idle choices."
-    },
-    "WanderMoveTime": {
-      "Value": [
-        1,
-        5
-      ],
-      "Description": "Duration of each native wandering leg in seconds."
-    },
-    "WanderPauseTime": {
-      "Value": [
-        3,
-        8
-      ],
-      "Description": "Duration of the pause between native wandering legs in seconds."
+      "Description": "Travel with the native flock, using ground formation slots and shared rest breaks."
     },
     "ViewRange": {
       "Value": 16,
@@ -750,7 +736,7 @@
               ]
             },
             {
-              "$Comment": "Regroup roaming-herd followers before choosing local wandering or grazing.",
+              "$Comment": "Leaders travel steadily, then rest locally; followers share the travel phase in separate ground slots.",
               "Enabled": {
                 "Compute": "HerdRoamingEnabled"
               },
@@ -764,10 +750,220 @@
               },
               "Instructions": [
                 {
+                  "TreeMode": true,
+                  "Sensor": {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Flock",
+                        "FlockStatus": "Leader"
+                      }
+                    ]
+                  },
+                  "Instructions": [
+                    {
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "Flag",
+                        "Name": "AH_Herd_Initialized",
+                        "Set": false
+                      },
+                      "Actions": [
+                        {
+                          "Type": "TimerStart",
+                          "Name": "AH_Herd_Travel",
+                          "StartValueRange": [
+                            60,
+                            120
+                          ],
+                          "RestartValueRange": [
+                            60,
+                            120
+                          ]
+                        },
+                        {
+                          "Type": "TimerRestart",
+                          "Name": "AH_Herd_Travel"
+                        },
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_Herd_Travel",
+                          "SetTo": true
+                        },
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_Herd_Initialized",
+                          "SetTo": true
+                        }
+                      ]
+                    },
+                    {
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Timer",
+                            "Name": "AH_Herd_Travel",
+                            "State": "Stopped"
+                          },
+                          {
+                            "Type": "Flag",
+                            "Name": "AH_Herd_Travel",
+                            "Set": true
+                          }
+                        ]
+                      },
+                      "Actions": [
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_Herd_Travel",
+                          "SetTo": false
+                        },
+                        {
+                          "Type": "TimerStart",
+                          "Name": "AH_Herd_Rest",
+                          "StartValueRange": [
+                            25,
+                            40
+                          ],
+                          "RestartValueRange": [
+                            25,
+                            40
+                          ]
+                        },
+                        {
+                          "Type": "TimerRestart",
+                          "Name": "AH_Herd_Rest"
+                        },
+                        {
+                          "Type": "SetLeashPosition",
+                          "ToCurrent": true
+                        }
+                      ]
+                    },
+                    {
+                      "Continue": true,
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Timer",
+                            "Name": "AH_Herd_Rest",
+                            "State": "Stopped"
+                          },
+                          {
+                            "Type": "Flag",
+                            "Name": "AH_Herd_Travel",
+                            "Set": false
+                          }
+                        ]
+                      },
+                      "Actions": [
+                        {
+                          "Type": "TimerStart",
+                          "Name": "AH_Herd_Travel",
+                          "StartValueRange": [
+                            60,
+                            120
+                          ],
+                          "RestartValueRange": [
+                            60,
+                            120
+                          ]
+                        },
+                        {
+                          "Type": "TimerRestart",
+                          "Name": "AH_Herd_Travel"
+                        },
+                        {
+                          "Type": "SetFlag",
+                          "Name": "AH_Herd_Travel",
+                          "SetTo": true
+                        }
+                      ]
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "Flag",
+                        "Name": "AH_Herd_Travel",
+                        "Set": true
+                      },
+                      "Actions": [
+                        {
+                          "Type": "Crouch",
+                          "Crouch": false
+                        },
+                        {
+                          "Type": "PlayAnimation",
+                          "Slot": "Status"
+                        },
+                        {
+                          "Type": "FlockBeacon",
+                          "Message": "AH_Herd_Travel",
+                          "SendToSelf": false,
+                          "ExpirationTime": 1
+                        }
+                      ],
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": 256,
+                        "RelativeSpeed": 0.18,
+                        "MinWalkTime": 4,
+                        "MaxWalkTime": 8,
+                        "MinHeadingChange": 0,
+                        "MaxHeadingChange": 0,
+                        "RelaxHeadingChange": true,
+                        "TestsPerTick": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "FlockLeader"
+                      },
+                      {
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Flock",
+                            "FlockStatus": "Follower"
+                          }
+                        ]
+                      },
+                      {
+                        "Type": "Beacon",
+                        "Message": "AH_Herd_Travel",
+                        "Range": 128
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "Crouch",
+                      "Crouch": false
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status"
+                    }
+                  ],
+                  "BodyMotion": {
+                    "Type": "TameworkGroundFormation",
+                    "Spacing": 5,
+                    "Tightness": 0.35,
+                    "RelativeSpeed": 0.25
+                  }
+                },
+                {
                   "Reference": "Component_Instruction_Leash_To_Flock_Leader",
                   "Modify": {
-                    "WanderRadius": 8,
-                    "StopDistance": 5,
+                    "WanderRadius": 12,
+                    "StopDistance": 7,
                     "RelativeSpeed": 0.3
                   }
                 }
@@ -811,7 +1007,7 @@
                         "Motions": [
                           {
                             "Type": "Timer",
-                            "Time": { "Compute": "WanderMoveTime" },
+                            "Time": [ 1, 5 ],
                             "Motion": {
                               "Type": "WanderInCircle",
                               "Radius": { "Compute": "WanderRadius" },
@@ -821,7 +1017,7 @@
                           },
                           {
                             "Type": "Timer",
-                            "Time": { "Compute": "WanderPauseTime" },
+                            "Time": [ 3, 8 ],
                             "Motion": {
                               "Type": "Nothing"
                             }
