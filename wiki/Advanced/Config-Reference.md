@@ -59,8 +59,13 @@ threat responses, recovery, and companion commands retain priority.
 
 The aerial templates expose `KettleEnabled` (default `false`), `KettleRadius`
 (default `18` blocks), `KettleAltitudeRange` (default `[15, 28]` above the leader's
-home point), `KettleCooldownRange` (default `[60, 120]` seconds between episode
-starts), and `KettleDurationRange` (default `[20, 35]` seconds).
+home point), `KettleCooldownRange` (default `[120, 240]` seconds of cooldown after an episode), and `KettleDurationRange` (default `[180, 420]` seconds).
+
+The initial wait is 60–120 seconds. Later episodes last 3–7 minutes, with
+a 2–4 minute cooldown afterward. The cooldown is paused during circling and
+resumes when eligible idle flight next checks that the episode has ended. Wild birds defer their normal timed landing while
+a Kettle episode is running. Threats, recovery, nighttime, and companion
+commands can still interrupt an episode.
 
 ## Wild bird flock sizes
 

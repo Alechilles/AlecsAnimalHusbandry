@@ -327,15 +327,15 @@
     },
     "KettleCooldownRange": {
       "Value": [
-        60,
-        120
+        120,
+        240
       ],
-      "Description": "Seconds between starts of leader thermal episodes."
+      "Description": "Seconds of cooldown after a thermal episode finishes."
     },
     "KettleDurationRange": {
       "Value": [
-        20,
-        35
+        180,
+        420
       ],
       "Description": "Seconds spent in a thermal episode."
     }
@@ -2956,11 +2956,24 @@
                   },
                   "Instructions": [
                     {
-                      "$Comment": "An expired flight interval remains due while threats interrupt idle; land as soon as idle is safe again.",
+                      "$Comment": "Timed landing waits for an active thermal episode to finish; threats and recovery retain priority.",
                       "Sensor": {
-                        "Type": "Timer",
-                        "Name": "AH_WildFlightDuration",
-                        "State": "Stopped"
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Timer",
+                            "Name": "AH_WildFlightDuration",
+                            "State": "Stopped"
+                          },
+                          {
+                            "Type": "Not",
+                            "Sensor": {
+                              "Type": "Timer",
+                              "Name": "Tw_Kettle_Duration",
+                              "State": "Running"
+                            }
+                          }
+                        ]
                       },
                       "Actions": [
                         {

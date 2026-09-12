@@ -507,15 +507,15 @@
     },
     "KettleCooldownRange": {
       "Value": [
-        60,
-        120
+        120,
+        240
       ],
-      "Description": "Seconds between starts of leader thermal episodes."
+      "Description": "Seconds of cooldown after a thermal episode finishes."
     },
     "KettleDurationRange": {
       "Value": [
-        20,
-        35
+        180,
+        420
       ],
       "Description": "Seconds spent in a thermal episode."
     }
