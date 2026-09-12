@@ -490,6 +490,10 @@
       "Value": false,
       "Description": "Pause idle ground wandering to play Eat every 5-15 seconds."
     },
+    "KettleRelativeSpeed": {
+      "Value": 0.8,
+      "Description": "Flight speed during thermal circling as a fraction of maximum flight speed."
+    },
     "KettleEnabled": {
       "Value": false,
       "Description": "Allow occasional ambient thermal circling."
@@ -2114,6 +2118,9 @@
             {
               "Reference": "Component_Tamework_Instruction_Flight_Kettle",
               "Modify": {
+                "KettleRelativeSpeed": {
+                  "Compute": "KettleRelativeSpeed"
+                },
                 "KettleEnabled": {
                   "Compute": "KettleEnabled"
                 },

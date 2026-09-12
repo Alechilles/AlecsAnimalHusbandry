@@ -56,11 +56,15 @@ for integration details.
 ## Thermal circling (Kettle)
 
 Wild and tamed hawks and vultures can enter daytime Kettle episodes during idle
-flight. The leader circles around its home point and nearby flock members join,
+flight. Kettle uses about 3.2 blocks/second on level flight with the default
+maximum speed. Hawks and vultures glide for 10.5 seconds, then flap for 1.5
+seconds, with flock members offset so they do not all flap together.
+The leader circles around its home point and nearby flock members join,
 using slightly different radii and heights while gradually climbing. Landing,
 threat responses, recovery, and companion commands retain priority.
 
-The aerial templates expose `KettleEnabled` (default `false`), `KettleRadius`
+The aerial templates expose `KettleEnabled` (default `false`),
+`KettleRelativeSpeed` (default `0.8` of maximum flight speed), `KettleRadius`
 (default `18` blocks), `KettleAltitudeRange` (default `[15, 28]` above the leader's
 home point), `KettleCooldownRange` (default `[120, 240]` seconds of cooldown after an episode), and `KettleDurationRange` (default `[180, 420]` seconds).
 

@@ -338,6 +338,10 @@
         420
       ],
       "Description": "Seconds spent in a thermal episode."
+    },
+    "KettleRelativeSpeed": {
+      "Value": 0.8,
+      "Description": "Flight speed during thermal circling as a fraction of maximum flight speed."
     }
   },
   "IsMemory": {
@@ -2063,6 +2067,9 @@
                         },
                         "DayTimePeriod": {
                           "Compute": "DayTimePeriod"
+                        },
+                        "KettleRelativeSpeed": {
+                          "Compute": "KettleRelativeSpeed"
                         }
                       }
                     },
@@ -3097,6 +3104,9 @@
                         },
                         "DayTimePeriod": {
                           "Compute": "DayTimePeriod"
+                        },
+                        "KettleRelativeSpeed": {
+                          "Compute": "KettleRelativeSpeed"
                         }
                       }
                     },
