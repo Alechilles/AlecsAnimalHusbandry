@@ -1,0 +1,73 @@
+{
+  "Type": "Component",
+  "Class": "Instruction",
+  "Parameters": {
+    "AmbientHerdEnabled": {
+      "Value": false,
+      "Description": "Allow this role to consume ambient herd targets."
+    }
+  },
+  "Content": {
+    "Instructions": [
+      {
+        "Sensor": {
+          "Type": "TameworkAmbientHerd",
+          "Enabled": {
+            "Compute": "AmbientHerdEnabled"
+          },
+          "Phase": "MOVE"
+        },
+        "HeadMotion": {
+          "Type": "Watch"
+        },
+        "BodyMotion": {
+          "Type": "Seek",
+          "UsePathfinder": false,
+          "UseSteering": true,
+          "RelativeSpeed": 0.18,
+          "StopDistance": 0.6,
+          "SlowDownDistance": 1.5,
+          "RelaxedMoveConstraints": false
+        },
+        "Actions": [
+          {
+            "Type": "Crouch",
+            "Crouch": false
+          }
+        ]
+      },
+      {
+        "Sensor": {
+          "Type": "TameworkAmbientHerd",
+          "Enabled": {
+            "Compute": "AmbientHerdEnabled"
+          },
+          "Phase": "DRINK"
+        },
+        "HeadMotion": {
+          "Type": "Watch"
+        },
+        "BodyMotion": {
+          "Type": "Nothing"
+        },
+        "Actions": [
+          {
+            "Type": "Crouch",
+            "Crouch": true
+          }
+        ]
+      },
+      {
+        "BodyMotion": {
+          "Type": "Nothing"
+        },
+        "Actions": [
+          {
+            "Type": "Crouch",
+            "Crouch": false
+          }
+        ]
+      }
+    ]
+  }
+}

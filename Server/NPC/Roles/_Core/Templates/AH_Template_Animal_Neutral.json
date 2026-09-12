@@ -231,6 +231,14 @@
     "NameTranslationKey": {
       "Value": "server.npcRoles.Template.name",
       "Description": "The translation key for the NPC name display"
+    },
+    "AmbientHerdEnabled": {
+      "Value": false,
+      "Description": "Allow this wild role to join optional herd journeys."
+    },
+    "AmbientHerdCanLead": {
+      "Value": false,
+      "Description": "Allow an adult native flock leader to initiate a journey."
     }
   },
   "IsMemory": { "Compute": "IsMemory" },
@@ -270,6 +278,30 @@
     }
   ],
   "StateTransitions": [
+    {
+      "$Comment": "Release the ambient scene before native threat, sleep, or idle behavior resumes.",
+      "States": [
+        {
+          "From": [
+            "Ambient"
+          ],
+          "To": [ ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "TameworkAmbientHerdCancel"
+        },
+        {
+          "Type": "Crouch",
+          "Crouch": false
+        },
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Status"
+        }
+      ]
+    },
     {
       "States": [
         {
@@ -574,6 +606,32 @@
                 {
                   "Type": "State",
                   "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "$Comment": "Offer journeys only after native threat checks and during the day.",
+              "Enabled": { "Compute": "AmbientHerdEnabled" },
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Time",
+                    "Period": { "Compute": "DayTimePeriod" },
+                    "CheckDay": true
+                  },
+                  {
+                    "Type": "TameworkAmbientHerd",
+                    "Enabled": { "Compute": "AmbientHerdEnabled" },
+                    "CanLead": { "Compute": "AmbientHerdCanLead" },
+                    "Phase": "READY"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Ambient"
                 }
               ]
             },
@@ -941,6 +999,95 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Ambient"
+          },
+          "Instructions": [
+            {
+              "$Comment": "Switch to flee state if any flock member engages a target TODO switch to attack if you are very close and can attack? otherwise flee.",
+              "Enabled": { "Compute": "!isEmptyStringArray(FlockArray)" },
+              "Sensor": {
+                "Type": "Beacon",
+                "Message": "Flock_Attack",
+                "TargetSlot": "LockedTarget",
+                "Range": { "Compute": "HearingRange" }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "Reference": "Component_Instruction_Damage_Check",
+              "Modify": {
+                "_ExportStates": [ "Flee.Switch", "Panic" ],
+                "AlertedRange": { "Compute": "AlertedRange" }
+              }
+            },
+            {
+              "$Comment": "Check if there are any potential things that can alert the NPC",
+              "Sensor": {
+                "Reference": "Component_Sensor_Standard_Detection",
+                "Modify": {
+                  "ViewRange": { "Compute": "ViewRange" },
+                  "ViewSector": { "Compute": "ViewSector" },
+                  "HearingRange": { "Compute": "HearingRange" },
+                  "AbsoluteDetectionRange": { "Compute": "AbsoluteDetectionRange" },
+                  "Attitudes": [ "Hostile", "Neutral" ]
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Alerted"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "Time",
+                  "Period": { "Compute": "DayTimePeriod" },
+                  "CheckDay": true
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "TameworkAmbientHerd",
+                  "Enabled": { "Compute": "AmbientHerdEnabled" },
+                  "CanLead": { "Compute": "AmbientHerdCanLead" },
+                  "Phase": "ACTIVE"
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Idle"
+                }
+              ]
+            },
+            {
+              "Reference": "AH_Component_Instruction_Ambient_Herd",
+              "Modify": {
+                "AmbientHerdEnabled": { "Compute": "AmbientHerdEnabled" }
+              }
             }
           ]
         },
@@ -1740,6 +1887,9 @@
           {
             "Type": "LockOnInteractionTarget",
             "TargetSlot": "InteractionTarget"
+          },
+          {
+            "Type": "TameworkAmbientHerdCancel"
           },
           {
             "Type": "TameworkInteract",
