@@ -946,7 +946,8 @@
                   "BodyMotion": {
                     "Type": "TameworkGroundFormation",
                     "Spacing": 5,
-                    "Tightness": 0.35,
+                    "Tightness": 0.15,
+                    "SlotTolerance": 2.5,
                     "RelativeSpeed": 0.25
                   }
                 },
