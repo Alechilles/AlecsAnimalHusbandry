@@ -39,7 +39,8 @@ group with gentle drift and staggered heights above and below the leader;
 `Cluster` produces a denser irregular group with gentle drift; `Chevron` produces two level arms behind the flock leader. Formation positions
 ease around turns. The formation flight controller caps turning at 90 degrees/second
 (or the configured limit if lower), including during landing and recovery.
-Wild formations apply during cruising and end when the leader starts landing.
+Wild formations retain separate slots during cruising and the leader's descent;
+followers switch to touchdown landing after the leader lands.
 Tamed formations apply during airborne idle. Both also keep flying in formation
 while alerted to a target that has not triggered fleeing; leaders and lone birds
 continue cruising. Close-threat fleeing and obstacle recovery take priority.
@@ -57,6 +58,9 @@ pace, and obstacle avoidance. Other birds keep their configured formations.
 Leaders use the same roaming range and waypoint timing as followers; each bird
 chooses its own route around the shared home. Raptors gather around that home point
 specifically for Kettle episodes; alerts retain the existing Loose fallback.
+Follower catch-up leashes track the live leader, including on the ground.
+Independent roaming and Kettle read the leader's home directly, so home distance
+does not keep a nearby follower stuck in catch-up.
 Visual spacing and terrain behavior still need in-game tuning.
 
 See Tamework's [Flight Formation Guide](https://wiki.hytalemodding.dev/mod/alecs-tamework/flight-formation-guide)

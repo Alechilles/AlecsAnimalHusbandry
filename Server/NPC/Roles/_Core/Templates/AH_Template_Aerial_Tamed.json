@@ -1521,16 +1521,7 @@
               "Action": {
                 "Type": "SetLeashPosition",
                 "ToTarget": true
-              },
-              "Enabled": {
-                "Compute": "!IndependentFlightRoaming"
               }
-            },
-            {
-              "Enabled": {
-                "Compute": "IndependentFlightRoaming"
-              },
-              "Type": "TameworkSetLeashToTargetHome"
             }
           ]
         },

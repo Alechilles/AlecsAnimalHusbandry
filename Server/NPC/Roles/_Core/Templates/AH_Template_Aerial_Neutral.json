@@ -701,7 +701,7 @@
           ]
         },
         {
-          "$Comment": "Track the live flock leader without replacing the threat or food target.",
+          "$Comment": "Track the live leader and measure follower catch-up from that same target. Independent flight reads the leader home directly.",
           "Enabled": {
             "Compute": "!isEmptyStringArray(FlockArray)"
           },
@@ -730,16 +730,7 @@
             },
             {
               "Type": "SetLeashPosition",
-              "ToTarget": true,
-              "Enabled": {
-                "Compute": "!IndependentFlightRoaming"
-              }
-            },
-            {
-              "Enabled": {
-                "Compute": "IndependentFlightRoaming"
-              },
-              "Type": "TameworkSetLeashToTargetHome"
+              "ToTarget": true
             }
           ]
         },
@@ -2293,6 +2284,21 @@
                         "SlowDownDistance": 1,
                         "StopDistance": 0.5,
                         "UsePathfinder": true
+                      }
+                    },
+                    {
+                      "$Comment": "Keep separate formation slots while the leader descends; touchdown landing above takes priority.",
+                      "Reference": "Component_Tamework_Instruction_Flight_Formation",
+                      "Modify": {
+                        "FlightFormation": {
+                          "Compute": "FlightFormation"
+                        },
+                        "FlightFormationSpacing": {
+                          "Compute": "FlightFormationSpacing"
+                        },
+                        "FlightFormationTightness": {
+                          "Compute": "FlightFormationTightness"
+                        }
                       }
                     },
                     {

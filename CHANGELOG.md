@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Fixed raptor followers measuring catch-up from home while seeking their leader, which kept them tightly bunched after Kettle and on the ground. Wild followers now retain formation spacing during leader descent until touchdown.
+
 - Expanded wild flock leaders' home radius from 40 to 80 blocks in flight and on the ground. Airborne target watching now uses that leader radius instead of the smaller ordinary wander radius, reducing frequent boundary turns.
 
 - Fixed wild and tamed birds nearly stopping in flight while alerted to a nearby target outside immediate flee reactions. Airborne alert waiting now keeps formation or cruise movement, with fleeing and obstacle recovery taking priority.
