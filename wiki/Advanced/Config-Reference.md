@@ -70,7 +70,9 @@ seconds, with flock members offset so they do not all flap together.
 The leader circles around its home point. Nearby flock members begin joining
 after individual 2–20 second delays,
 using individual radii of 65–150% of the configured radius and distinct height
-bands across the configured altitude range. Height differences persist for the
+bands across the configured altitude range. Members alternate clockwise and
+counterclockwise orbit directions, keeping their direction while membership is stable.
+Height differences persist for the
 whole episode instead of every bird eventually reaching the same ceiling.
 During the final 30 seconds, followers depart after individual 2–25 second
 delays and resume roaming; they cannot rejoin the same ending episode. The
