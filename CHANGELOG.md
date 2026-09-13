@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-12
+## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-13
 
 ### New Tamework UI
 
@@ -29,9 +29,9 @@ are part of the new experience for Animal Husbandry players. Update both mods to
   Follow and non-combat Defend now use compact formations.
 - Added coordinated wild herd travel for bison, deer, and livestock, with
   travel and rest phases, local grazing, and bison watering routines.
-- Added larger, weighted herd sizes and species-specific bird flock sizes.
+- Added larger, weighted herd sizes and species-specific flying bird flock sizes.
 - Added species-specific flying formations, including duck chevrons, loose
-  bluebird flocks, and widely spaced hawks and vultures.
+  bluebird, crow, and raven flocks, and widely spaced hawks and vultures.
 - Added extended circling (Kettle) episodes for birds, with individual flight
   variation and mixed orbit directions. Raptors roam independently between
   episodes; hawks and vultures also have glide animations.
