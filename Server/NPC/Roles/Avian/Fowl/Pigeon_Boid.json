@@ -1,8 +1,44 @@
 {
-  "Type": "Variant",
-  "Reference": "Pigeon",
   "Modify": {
     "FlightFormation": "Boid",
-    "FlockArray": ["Pigeon_Boid"]
-  }
+    "Appearance": "Pigeon",
+    "AttractiveItemSet": [
+      "Plant_Crop_Corn_Item"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Corn",
+    "DropList": "Drop_Pigeon",
+    "FlockArray": [
+      "Pigeon_Boid"
+    ],
+    "IsMemory": true,
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "MaxHealth": 20,
+    "MemoriesCategory": "Avian",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
+    "WanderRadius": 15,
+    "GroundPeckEnabled": true
+  },
+  "Parameters": {
+    "IsTameable": {
+      "Description": "Whether this NPC can be tamed.",
+      "Value": true
+    },
+    "NameTranslationKey": {
+      "Description": "Translation key for NPC name display",
+      "Value": "server.npcRoles.Pigeon.name"
+    },
+    "TameRoleChange": {
+      "Description": "The role the NPC will change into when it's tamed.",
+      "Value": "Tamed_Pigeon"
+    }
+  },
+  "Reference": "AH_Template_Aerial_Neutral",
+  "Type": "Variant"
 }
