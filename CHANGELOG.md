@@ -43,18 +43,10 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 - Removed animal talent level gates; talent purchases still use talent points.
 - Expanded wild flock leaders' home radius from 40 to 80 blocks on the ground
   and in flight, reducing frequent boundary turns.
-- Restored duck formation cruise to about 4 blocks/second, with catch-up
-  headroom, gentler turns, and longer cruise segments.
-- Moved companion portrait mappings into shared dynamic icon assets.
 
 ### Fixed
 
-- Fixed striped or nearly invisible default portraits, including bison,
-  ravens, and frost dragons.
 - Fixed airborne birds nearly stopping while alerted to nearby targets.
-- Fixed raptor followers bunching up after circling and during descent.
-- Improved herd home anchors, travel headings, and follower spacing.
-- Fixed aerial flock filters that could prevent NPC validation.
 - Fixed wild Frost Dragons missing from Tamework HUD lookup.
 
 ## 2.2.0 - Wild Flying Flocks - 2026-09-09
