@@ -6,6 +6,14 @@ The dynamic icon assets cover supported roles by appearance. Every asset has an 
 
 ## Refreshing
 
+Prepare the base-game defaults before refreshing variant portraits (requires Pillow):
+
+```powershell
+python scripts/tools/spawner-icons/prepare_default_icons.py
+```
+
+This resamples the 46 model portraits to 64x64 item icons while preserving the original artwork and transparent margins. It updates the dynamic configs and batch defaults together. Use `--assets-zip` to select a different game archive. Do not point item portraits directly at 128x128 `Icons/ModelsGenerated` images: they display as truncated horizontal strips in the item-icon renderer.
+
 From the Animal Husbandry repository, first resolve parented models and the calf/frost-dragon skin patches into temporary renderer inputs:
 
 ```powershell

@@ -2,6 +2,8 @@
 
 ## Unreleased development changes
 
+- Fixed striped or nearly invisible default companion portraits, including bison, ravens, and frost dragons, by preparing all model-based defaults at the item renderer's required size.
+
 - Added Follow Close to both flutes for the original follow behavior. Follow and non-combat Defend use compact formations; requires the matching Tamework development build.
 
 - Fixed raptor followers measuring catch-up from home while seeking their leader, which kept them tightly bunched after Kettle and on the ground. Wild followers now retain formation spacing during leader descent until touchdown.
