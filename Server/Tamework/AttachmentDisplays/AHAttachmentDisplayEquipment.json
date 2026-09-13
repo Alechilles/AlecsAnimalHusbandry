@@ -1,0 +1,46 @@
+{
+  "Type": "TwAttachmentDisplayConfig",
+  "Enabled": true,
+  "Priority": 0,
+  "Entries": [
+    {
+      "Id": "animal-husbandry-equipment",
+      "Sets": {
+        "AH_Saddle": {
+          "Label": "server.animalhusbandry.attachments.saddle.label",
+          "Values": {
+            "None": "server.animalhusbandry.attachments.saddle.none",
+            "Yes": "server.animalhusbandry.attachments.saddle.yes"
+          }
+        },
+        "AH_SaddleBlanket": {
+          "Label": "server.animalhusbandry.attachments.blanket.label",
+          "Values": {
+            "None": "server.animalhusbandry.attachments.blanket.none",
+            "Canada": "server.animalhusbandry.attachments.blanket.canada",
+            "Black": "server.animalhusbandry.attachments.blanket.black",
+            "Blue": "server.animalhusbandry.attachments.blanket.blue",
+            "Green": "server.animalhusbandry.attachments.blanket.green",
+            "White": "server.animalhusbandry.attachments.blanket.white",
+            "LightBlue": "server.animalhusbandry.attachments.blanket.lightBlue",
+            "LightCyan": "server.animalhusbandry.attachments.blanket.lightCyan",
+            "Cyan": "server.animalhusbandry.attachments.blanket.cyan",
+            "LightGray": "server.animalhusbandry.attachments.blanket.lightGray",
+            "Gray": "server.animalhusbandry.attachments.blanket.gray",
+            "LightGreen": "server.animalhusbandry.attachments.blanket.lightGreen",
+            "LightOrange": "server.animalhusbandry.attachments.blanket.lightOrange",
+            "Orange": "server.animalhusbandry.attachments.blanket.orange",
+            "LightPink": "server.animalhusbandry.attachments.blanket.lightPink",
+            "Pink": "server.animalhusbandry.attachments.blanket.pink",
+            "LightPurple": "server.animalhusbandry.attachments.blanket.lightPurple",
+            "Purple": "server.animalhusbandry.attachments.blanket.purple",
+            "LightRed": "server.animalhusbandry.attachments.blanket.lightRed",
+            "Red": "server.animalhusbandry.attachments.blanket.red",
+            "LightYellow": "server.animalhusbandry.attachments.blanket.lightYellow",
+            "Yellow": "server.animalhusbandry.attachments.blanket.yellow"
+          }
+        }
+      }
+    }
+  ]
+}

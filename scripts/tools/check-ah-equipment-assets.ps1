@@ -96,7 +96,7 @@ Require-Condition (@(Compare-Object ($saddleRemoval.Effects.Custom[0].Values | S
 Require-Condition (@(Compare-Object ($blanketRemoval.Effects.Custom[0].Values | Sort-Object) ($blanketMappings | Sort-Object)).Count -eq 0) "Blanket equip and removal mappings must match."
 
 $languagePaths = @(Get-ChildItem -LiteralPath (Join-Path $Root "Server/Languages") -Filter "server.lang" -Recurse)
-Require-Condition ($languagePaths.Count -eq 5) "Expected five localized server.lang files."
+Require-Condition ($languagePaths.Count -eq 6) "Expected six localized server.lang files."
 $equipmentPromptKeys = @(
     "applySaddle",
     "applyBlanket",

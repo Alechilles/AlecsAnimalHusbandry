@@ -5,7 +5,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$requiredLanguages = @("en-US", "de-DE", "fr-FR", "fr-CA", "pt-BR")
+$requiredLanguages = @("en-US", "de-DE", "es-ES", "fr-FR", "fr-CA", "pt-BR")
 $vanillaAssetsZipPath = ""
 if ([string]::IsNullOrWhiteSpace($VanillaLanguagePath)) {
     $gameRoot = Join-Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData)) "Hytale\install\release\package\game\latest"
@@ -181,7 +181,7 @@ Get-ChildItem -LiteralPath $serverRoot -Recurse -File -Filter "*.json" |
     Sort-Object FullName |
     ForEach-Object {
         $json = Get-Content -Raw -LiteralPath $_.FullName | ConvertFrom-Json
-        $relativePath = [IO.Path]::GetRelativePath($Root, $_.FullName)
+        $relativePath = $_.FullName.Substring($Root.Length).TrimStart([char[]]@('\', '/'))
         $isTameworkConfig = $relativePath -like "Server\Tamework\*"
         Add-JsonLocalizationReferences -Node $json -JsonPath "$" -RelativePath $relativePath -IsTameworkConfig $isTameworkConfig
     }

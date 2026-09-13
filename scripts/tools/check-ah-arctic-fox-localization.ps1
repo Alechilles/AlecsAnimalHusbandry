@@ -9,7 +9,7 @@ $rolePaths = @(
     "Server/NPC/Roles/Creature/Mammal/Fox_Arctic.json",
     "Server/NPC/Roles/Creature/Mammal/Tamed/Tamed_Fox_Arctic.json"
 )
-$requiredLanguages = @("en-US", "de-DE", "fr-FR", "fr-CA", "pt-BR")
+$requiredLanguages = @("en-US", "de-DE", "es-ES", "fr-FR", "fr-CA", "pt-BR")
 
 foreach ($relativePath in $rolePaths) {
     $path = Join-Path $Root $relativePath
@@ -30,7 +30,7 @@ foreach ($language in $requiredLanguages) {
         throw "Required language file was not found: $languagePath"
     }
 
-    $keyPattern = "server.npcRoles.Fox_Arctic.name="
+    $keyPattern = "npcRoles.Fox_Arctic.name="
     $matchingLine = Get-Content -LiteralPath $languagePath |
         Where-Object { $_.StartsWith($keyPattern, [System.StringComparison]::Ordinal) } |
         Select-Object -First 1
