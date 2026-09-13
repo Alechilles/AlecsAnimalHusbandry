@@ -26,7 +26,7 @@ role JSON, rather than through a `Tw*Config` asset.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, or `Chevron`. Ducks select `Chevron`; bluebirds select `Loose`; hawks and vultures retain `Loose` as their alert-flight fallback; pigeons, sparrows, and green finches select `Cluster`. |
+| `FlightFormation` | `None` | `None`, `Loose`, `Cluster`, `Boid`, or `Chevron`. Ducks select `Chevron`; bluebirds select `Loose`; hawks and vultures retain `Loose` as their alert-flight fallback; pigeons, sparrows, and green finches select `Cluster`. |
 | `FlightFormationSpacing` | `3` | Distance between formation positions in blocks; must be positive. |
 | `FlightFormationTightness` | `0.6` | How strongly birds return to their positions; greater than zero and at most one. |
 | `FlockLeaderLeashDistance` | `80` blocks, wild only | Shared home radius for wild flock leaders during idle flight, airborne target watching, and grounded home checks. Ordinary `WanderRadius` still controls lone birds. A larger leader radius reduces forced boundary turns without making the flock walk back to a smaller home area after landing. |
@@ -185,3 +185,5 @@ Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were repl
 - Leveling too slow/fast: tune BaseXp, GrowthFactor, and each XpSources section.
 - Talents too strong/weak: tune TalentPoints and the multipliers in the active AHTalent config.
 - Overcrowding: lower MaxNearbySameType on sensitive species.
+
+`Pigeon_Boid` is an experimental spawnable pigeon variant using local Boid steering instead of Cluster slots. Its flock membership is restricted to other `Pigeon_Boid` birds; natural pigeon spawns remain unchanged.
