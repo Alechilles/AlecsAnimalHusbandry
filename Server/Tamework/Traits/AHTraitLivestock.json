@@ -48,6 +48,7 @@
     {
       "Id": "Trait_Disposition",
       "DisplayName": "animalhusbandry.traits.disposition.name",
+      "Description": "tamework.traits.description.happinessGain",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Disposition.png",
       "EffectKey": "HappinessGainMultiplier",
       "Weight": 1,
@@ -61,6 +62,7 @@
     {
       "Id": "Trait_Fertility",
       "DisplayName": "animalhusbandry.traits.fertility.name",
+      "Description": "tamework.traits.description.fertility",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Fertility.png",
       "EffectKey": "FertilityMultiplier",
       "Weight": 0.8,
@@ -74,6 +76,7 @@
     {
       "Id": "Trait_Health",
       "DisplayName": "animalhusbandry.traits.health.name",
+      "Description": "tamework.traits.description.maxHealth",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Health.png",
       "EffectKey": "MaxHealthMultiplier",
       "Weight": 0.9,
@@ -87,6 +90,7 @@
     {
       "Id": "Trait_Size",
       "DisplayName": "animalhusbandry.traits.size.name",
+      "Description": "tamework.traits.description.size",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Size.png",
       "EffectKey": "SizeMultiplier",
       "Weight": 0.8,
@@ -100,6 +104,7 @@
     {
       "Id": "Trait_Swiftness",
       "DisplayName": "animalhusbandry.traits.swiftness.name",
+      "Description": "tamework.traits.description.moveSpeed",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Swiftness.png",
       "EffectKey": "MoveSpeedMultiplier",
       "Weight": 0.75,
@@ -113,6 +118,7 @@
     {
       "Id": "Trait_Toughness",
       "DisplayName": "animalhusbandry.traits.toughness.name",
+      "Description": "tamework.traits.description.damageTaken",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Toughness.png",
       "EffectKey": "DamageTakenMultiplier",
       "Weight": 0.85,
@@ -126,6 +132,7 @@
     {
       "Id": "Trait_Strength",
       "DisplayName": "animalhusbandry.traits.strength.name",
+      "Description": "tamework.traits.description.damageDealt",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Strength.png",
       "EffectKey": "DamageDealtMultiplier",
       "Weight": 0.85,
@@ -139,6 +146,7 @@
     {
       "Id": "Trait_Bounty",
       "DisplayName": "animalhusbandry.traits.bounty.name",
+      "Description": "tamework.traits.description.harvest",
       "IconPath": "Tamework/LinkedPanelIcons/Trait_Bounty.png",
       "EffectKey": "HarvestDoubleDropChanceMultiplier",
       "Weight": 0.65,

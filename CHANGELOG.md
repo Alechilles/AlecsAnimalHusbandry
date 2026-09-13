@@ -4,6 +4,8 @@
 
 ### New Tamework UI
 
+- Added effect descriptions to every trait tooltip, including the direction and amount of each effect.
+
 These interface changes come from the accompanying Alec's Tamework update and
 are part of the new experience for Animal Husbandry players. Update both mods together.
 
