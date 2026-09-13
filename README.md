@@ -34,12 +34,15 @@
 
 --------------
 
-<H2>Butcher's Knife (development)</H2>
+<H2>New in v3.0.0</H2>
+<p>Manage animals through the redesigned Tamework command panel, with companion portraits, Linked/Nearby/Owned views, clearer care and cooldown meters, and color-coded group shortcuts. Wild herds travel and rest together, birds use species-specific formations and circling behavior, and both flutes offer Follow Close alongside formation following. Update Animal Husbandry and Tamework together.</p>
+
+<H2>Butcher's Knife</H2>
 <p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
 
 <H2>Required:</H2>
 <ul>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a></li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (4.0.0 or later in the 4.x series)</li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
@@ -324,6 +327,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
 
-Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. These assets require the matching Tamework dynamic-icon development build; update both mods together.
+Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. These assets require the Tamework 4.0.0 or later in the 4.x series; update both mods together.
 
 Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.

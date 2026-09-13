@@ -1,30 +1,61 @@
 # Changelog
 
-## Unreleased development changes
+## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-12
 
-- Fixed striped or nearly invisible default companion portraits, including bison, ravens, and frost dragons, by preparing all model-based defaults at the item renderer's required size.
+### New Tamework UI
 
-- Added Follow Close to both flutes for the original follow behavior. Follow and non-combat Defend use compact formations; requires the matching Tamework development build.
+These interface changes come from the accompanying Alec's Tamework update and
+are part of the new experience for Animal Husbandry players. Update both mods together.
 
-- Fixed raptor followers measuring catch-up from home while seeking their leader, which kept them tightly bunched after Kettle and on the ground. Wild followers now retain formation spacing during leader descent until touchdown.
+- Redesigned the command panel and target HUD with a charcoal theme, animal
+  portraits, clearer health and care meters, and labeled action buttons.
+- Added Linked, Nearby, and Owned views, including owned animals that are
+  unloaded or stored. Available saved details remain visible as last-known values.
+- Replaced the command wheel with a compact command-assignment sidebar, with
+  color-coded group shortcuts and group selection on companion cards.
+- Made breeding and harvest readiness easier to see, added care-based sorting,
+  and refreshed settings, talent trees, and companion removal confirmations.
 
-- Expanded wild flock leaders' home radius from 40 to 80 blocks in flight and on the ground. Airborne target watching now uses that leader radius instead of the smaller ordinary wander radius, reducing frequent boundary turns.
+### Added
 
-- Fixed wild and tamed birds nearly stopping in flight while alerted to a nearby target outside immediate flee reactions. Airborne alert waiting now keeps formation or cruise movement, with fleeing and obstacle recovery taking priority.
+- Added a Butcher's Knife with a custom cleaver model, hand-painted texture,
+  and matching inventory icon. Craft it at a tier-1 Farmer's Workbench with
+  2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull
+  an owned, tamed animal.
+- Added default portraits for all supported animals and refreshed Aures/Celly
+  skin variants with 2,410 curated icons. Capture items and companion panels
+  share portraits that reflect supported appearance variants.
+- Added Follow Close to both command flutes for the original follow behavior.
+  Follow and non-combat Defend now use compact formations.
+- Added coordinated wild herd travel for bison, deer, and livestock, with
+  travel and rest phases, local grazing, and bison watering routines.
+- Added larger, weighted herd sizes and species-specific bird flock sizes.
+- Added species-specific flying formations, including duck chevrons, loose
+  bluebird flocks, and widely spaced hawks and vultures.
+- Added extended circling (Kettle) episodes for birds, with individual flight
+  variation and mixed orbit directions. Raptors roam independently between
+  episodes; hawks and vultures also have glide animations.
+- Added idle ground pecking for crows, pigeons, and small songbirds.
 
-- Restored duck formation cruise to about 4 blocks/second, with catch-up headroom and gentler wandering turns. Added role-level cruise speed and heading-change tuning.
+### Changed
 
-- Bluebirds now use loose flock formations during wild cruising and tamed airborne idle.
+- Requires Alec's Tamework `>=4.0.0 <5.0`. Update both mods together.
+- Removed animal talent level gates; talent purchases still use talent points.
+- Expanded wild flock leaders' home radius from 40 to 80 blocks on the ground
+  and in flight, reducing frequent boundary turns.
+- Restored duck formation cruise to about 4 blocks/second, with catch-up
+  headroom, gentler turns, and longer cruise segments.
+- Moved companion portrait mappings into shared dynamic icon assets.
 
-- Fixed aerial flock joining failing NPC validation when a flock filter appeared twice in one filter group.
+### Fixed
 
-- Ducks use chevron formations during wild cruising and tamed airborne idle. Aerial roles can select None, Loose, or Chevron and tune spacing and tightness. Requires the matching Tamework flight-formation development build.
-
-- Moved companion icon variants into shared dynamic icon assets used by capture items and both command panels. Requires the matching Tamework dynamic-icon development build.
-
-- Added a Butcher's Knife with a custom cleaver model and hand-painted texture.
-  Craft it at a tier-1 Farmer's Workbench with 2 Iron Bars and 2 Light Leather.
-  Hold primary use for 0.8 seconds to cull an owned, tamed animal.
+- Fixed striped or nearly invisible default portraits, including bison,
+  ravens, and frost dragons.
+- Fixed airborne birds nearly stopping while alerted to nearby targets.
+- Fixed raptor followers bunching up after circling and during descent.
+- Improved herd home anchors, travel headings, and follower spacing.
+- Fixed aerial flock filters that could prevent NPC validation.
+- Fixed wild Frost Dragons missing from Tamework HUD lookup.
 
 ## 2.2.0 - Wild Flying Flocks - 2026-09-09
 
