@@ -208,7 +208,23 @@ if (Test-Path -LiteralPath $VanillaLanguagePath) {
 } else {
     throw "Base-game en-US language file was not found: $VanillaLanguagePath"
 }
-$modOwnedKeys = @($requiredKeys | Where-Object { -not $vanillaLanguageKeys.Contains($_) })
+# Shared trait descriptions are supplied by the required Tamework 4 dependency.
+# Keep this list explicit so misspelled or unknown dependency keys still fail.
+$tameworkOwnedKeys = @(
+    "tamework.traits.description.damageDealt",
+    "tamework.traits.description.damageTaken",
+    "tamework.traits.description.fertility",
+    "tamework.traits.description.happinessGain",
+    "tamework.traits.description.harvest",
+    "tamework.traits.description.maxHealth",
+    "tamework.traits.description.moveSpeed",
+    "tamework.traits.description.size"
+)
+$dependencyReferences = @($requiredKeys | Where-Object { $_ -in $tameworkOwnedKeys })
+$vanillaReferences = @($requiredKeys | Where-Object { $vanillaLanguageKeys.Contains($_) })
+$modOwnedKeys = @($requiredKeys | Where-Object {
+    -not $vanillaLanguageKeys.Contains($_) -and $_ -notin $tameworkOwnedKeys
+})
 
 $languageRoot = Join-Path $serverRoot "Languages"
 foreach ($language in $requiredLanguages) {
@@ -227,7 +243,7 @@ foreach ($language in $requiredLanguages) {
         throw "$language is missing $($missingKeys.Count) referenced localization keys."
     }
 
-    Write-Host "$language localization coverage: $($modOwnedKeys.Count) Animal Husbandry keys, $($languageKeys.Count) available keys, $($requiredKeys.Count - $modOwnedKeys.Count) base-game references."
+    Write-Host "$language localization coverage: $($modOwnedKeys.Count) Animal Husbandry keys, $($languageKeys.Count) available keys, $($vanillaReferences.Count) base-game references, $($dependencyReferences.Count) Tamework references."
 }
 
 Write-Host "Animal Husbandry localization coverage passed for $($modOwnedKeys.Count) Animal Husbandry keys across $($requiredLanguages.Count) languages."
