@@ -1,10 +1,8 @@
 # Changelog
 
-## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-13
+## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-14
 
 ### New Tamework UI
-
-- Added effect descriptions to every trait tooltip, including the direction and amount of each effect.
 
 These interface changes come from the accompanying Alec's Tamework update and
 are part of the new experience for Animal Husbandry players. Update both mods together.
@@ -19,6 +17,9 @@ are part of the new experience for Animal Husbandry players. Update both mods to
   and refreshed settings, talent trees, and companion removal confirmations.
 
 ### Added
+
+- Added effect descriptions to every Animal Husbandry trait tooltip, including
+  the direction and amount of each effect.
 
 - Added a Butcher's Knife with a custom cleaver model, hand-painted texture,
   and matching inventory icon. Craft it at a tier-1 Farmer's Workbench with
@@ -41,6 +42,8 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 
 ### Changed
 
+- Chickens and desert chickens now drop 1-2 Light Feathers alongside their meat.
+
 - Requires Alec's Tamework `>=4.0.0 <5.0`. Update both mods together.
 - Completed in-game localization coverage for English, German, Spanish (Spain), French (France), French (Canada), and Brazilian Portuguese. All Animal Husbandry items, roles, talents, traits, commands, interactions, happiness labels, and equipment attachment labels now use translated language keys.
 - Removed animal talent level gates; talent purchases still use talent points.
@@ -49,7 +52,8 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 
 ### Fixed
 
-- Flock followers land beneath their own approach positions instead of crowding the leader’s touchdown point.
+- Fixed flock followers crowding the leader's touchdown point. Followers now
+  land beneath their own approach positions.
 - Fixed airborne birds nearly stopping while alerted to nearby targets.
 - Fixed wild Frost Dragons missing from Tamework HUD lookup.
 
