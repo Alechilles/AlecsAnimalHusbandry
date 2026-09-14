@@ -47,7 +47,11 @@
     },
     "WanderRadius": {
       "Value": 7,
-      "Description": "The wander radius of the NPC."
+      "Description": "The ground wander radius of the NPC."
+    },
+    "FlightWanderRadius": {
+      "Value": 25,
+      "Description": "The airborne wander radius of the NPC."
     },
     "ViewRange": {
       "Value": 16,
@@ -488,8 +492,8 @@
     },
     "IndependentFlightRoamRadiusRange": {
       "Value": [
-        40,
-        70
+        10,
+        25
       ],
       "Description": "Inner and outer radii for independent flight around the leader, in blocks."
     },
@@ -2499,7 +2503,7 @@
                           "BodyMotion": {
                             "Type": "WanderInCircle",
                             "Radius": {
-                              "Compute": "WanderRadius"
+                              "Compute": "FlightWanderRadius"
                             },
                             "MaxHeadingChange": {
                               "Compute": "FlightCruiseMaxHeadingChange"
@@ -3230,7 +3234,7 @@
                   "BodyMotion": {
                     "Type": "WanderInCircle",
                     "Radius": {
-                      "Compute": "WanderRadius"
+                      "Compute": "FlightWanderRadius"
                     },
                     "MaxHeadingChange": {
                       "Compute": "FlightCruiseMaxHeadingChange"
