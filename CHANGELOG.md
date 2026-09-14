@@ -49,6 +49,7 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 
 ### Fixed
 
+- Flock followers land beneath their own approach positions instead of crowding the leader’s touchdown point.
 - Fixed airborne birds nearly stopping while alerted to nearby targets.
 - Fixed wild Frost Dragons missing from Tamework HUD lookup.
 

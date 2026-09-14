@@ -1655,6 +1655,36 @@
               "ExpirationTime": 1
             }
           ]
+        },
+        {
+          "$Comment": "Clear only the follower landing target while grounded so every flight chooses fresh terrain.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "MotionController",
+                "MotionController": "Walk"
+              },
+              {
+                "Type": "Self",
+                "Filters": [
+                  {
+                    "Type": "Flock",
+                    "FlockStatus": "Follower"
+                  }
+                ]
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "ResetSearchRays",
+              "Names": [
+                "AH_Flock_Landing"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2265,6 +2295,7 @@
                       }
                     },
                     {
+                      "$Comment": "After leader touchdown, land below each follower instead of converging on the leader.",
                       "Sensor": {
                         "Type": "And",
                         "Sensors": [
@@ -2274,17 +2305,37 @@
                           {
                             "Type": "Beacon",
                             "Message": "AH_Flock_Touchdown",
-                            "Range": 256
+                            "Range": 256,
+                            "ConsumeMessage": false
                           }
                         ]
                       },
-                      "BodyMotion": {
-                        "Type": "Land",
-                        "RelativeSpeed": 0.4,
-                        "SlowDownDistance": 1,
-                        "StopDistance": 0.5,
-                        "UsePathfinder": true
-                      }
+                      "Instructions": [
+                        {
+                          "Sensor": {
+                            "Type": "AdjustPosition",
+                            "Offset": [
+                              0,
+                              1,
+                              0
+                            ],
+                            "Sensor": {
+                              "Type": "SearchRay",
+                              "Name": "AH_Flock_Landing",
+                              "Range": 64,
+                              "Angle": 90,
+                              "Blocks": "StoneAndSoil"
+                            }
+                          },
+                          "BodyMotion": {
+                            "Type": "Land",
+                            "RelativeSpeed": 0.4,
+                            "SlowDownDistance": 1,
+                            "StopDistance": 0.5,
+                            "UsePathfinder": true
+                          }
+                        }
+                      ]
                     },
                     {
                       "$Comment": "Keep separate formation slots while the leader descends; touchdown landing above takes priority.",
