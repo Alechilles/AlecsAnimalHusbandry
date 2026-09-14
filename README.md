@@ -20,6 +20,7 @@
 
   <p style="font-size: 1.15em;"><strong>Turn all of Hytale's vanilla animals into interactive livestock and long-term companions, worth caring for.</strong></p>
   <p>Animal Husbandry gives every vanilla animal, from mice to dinosaurs, deeper gameplay built around taming, ownership, needs, happiness, traits, growth, commands, and progression.</p>
+  <p>It also adds animal behaviors that make the world feel more alive, from herds traveling and grazing together to ducks flying in V-shaped formations and small birds pecking at the ground.</p>
 
   <p>
     <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/" target="_blank" rel="noopener noreferrer"><strong>Open the Wiki</strong></a>
@@ -72,6 +73,14 @@ The demo instancing and tutorial system is an alpha project, so please expect to
 <p>&nbsp;</p>
 
 <ul>
+  <li>
+    <strong>Animals That Feel More Alive</strong>
+    <ul>
+      <li>Wild bison, deer, and livestock travel as herds, pausing to rest and graze. Bison also seek out water as part of their routines.</li>
+      <li>Ducks fly in V-shaped formations, while hawks and vultures glide and circle overhead.</li>
+      <li>Crows, pigeons, and small songbirds peck at the ground during idle moments.</li>
+    </ul>
+  </li>
   <li>
     <strong>Real Taming and Ownership</strong>
     <ul>
