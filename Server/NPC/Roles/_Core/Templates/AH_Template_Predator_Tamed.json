@@ -17,26 +17,23 @@
       "Description": "The offset of any spawned particle systems."
     },
     "HungerThoughtThresholdRatio": {
-      "Value": 0.25,
+      "Value": 0.1,
       "Description": "Normalized hunger ratio at or below which the NPC shows its food thought particles."
     },
-    "HungerThoughtCooldownRange": {
+    "NeedsThoughtCooldownRange": {
       "Value": [
-        30,
-        45
+        5,
+        5
       ],
-      "Description": "Cooldown range in seconds between low-hunger food thought particle cues."
+      "Description": "Shared cooldown in seconds between hunger or thirst reminders; both alternate on this cadence."
     },
     "ThirstThoughtThresholdRatio": {
-      "Value": 0.25,
+      "Value": 0.1,
       "Description": "Normalized thirst ratio at or below which the NPC shows its water thought particles."
     },
-    "ThirstThoughtCooldownRange": {
-      "Value": [
-        30,
-        45
-      ],
-      "Description": "Cooldown range in seconds between critical-thirst water thought particle cues."
+    "HungerThoughtParticles": {
+      "Value": "Want_Food_Generic",
+      "Description": "Generic hungry thought, independent of favorite or supported food items."
     },
     "WaterThoughtParticles": {
       "Value": "Want_Water",
@@ -1124,7 +1121,7 @@
           }
         },
         {
-          "$Comment": "Show food thought particles while hunger is critically low.",
+          "$Comment": "Show one hunger reminder per shared cooldown; alternate when both needs are critical.",
           "Continue": true,
           "Sensor": {
             "Type": "And",
@@ -1164,8 +1161,28 @@
               },
               {
                 "Type": "Timer",
-                "Name": "Hunger_FoodThought_Cooldown",
+                "Name": "Needs_Thought_Cooldown",
                 "State": "Stopped"
+              },
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Flag",
+                    "Name": "Needs_Thought_ThirstNext",
+                    "Set": false
+                  },
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "TameworkNeedBelow",
+                      "Need": "Thirst",
+                      "RatioBelow": {
+                        "Compute": "ThirstThoughtThresholdRatio"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -1173,7 +1190,7 @@
             {
               "Type": "SpawnParticles",
               "ParticleSystem": {
-                "Compute": "AttractiveItemSetParticles"
+                "Compute": "HungerThoughtParticles"
               },
               "Offset": {
                 "Compute": "ParticleOffset"
@@ -1182,22 +1199,27 @@
             },
             {
               "Type": "TimerStart",
-              "Name": "Hunger_FoodThought_Cooldown",
+              "Name": "Needs_Thought_Cooldown",
               "StartValueRange": {
-                "Compute": "HungerThoughtCooldownRange"
+                "Compute": "NeedsThoughtCooldownRange"
               },
               "RestartValueRange": {
-                "Compute": "HungerThoughtCooldownRange"
+                "Compute": "NeedsThoughtCooldownRange"
               }
             },
             {
               "Type": "TimerRestart",
-              "Name": "Hunger_FoodThought_Cooldown"
+              "Name": "Needs_Thought_Cooldown"
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "Needs_Thought_ThirstNext",
+              "SetTo": true
             }
           ]
         },
         {
-          "$Comment": "Show water thought particles while thirst is critically low.",
+          "$Comment": "Show one thirst reminder per shared cooldown; alternate when both needs are critical.",
           "Continue": true,
           "Sensor": {
             "Type": "And",
@@ -1237,8 +1259,28 @@
               },
               {
                 "Type": "Timer",
-                "Name": "Thirst_WaterThought_Cooldown",
+                "Name": "Needs_Thought_Cooldown",
                 "State": "Stopped"
+              },
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "Flag",
+                    "Name": "Needs_Thought_ThirstNext",
+                    "Set": true
+                  },
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "TameworkNeedBelow",
+                      "Need": "Hunger",
+                      "RatioBelow": {
+                        "Compute": "HungerThoughtThresholdRatio"
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -1255,17 +1297,62 @@
             },
             {
               "Type": "TimerStart",
-              "Name": "Thirst_WaterThought_Cooldown",
+              "Name": "Needs_Thought_Cooldown",
               "StartValueRange": {
-                "Compute": "ThirstThoughtCooldownRange"
+                "Compute": "NeedsThoughtCooldownRange"
               },
               "RestartValueRange": {
-                "Compute": "ThirstThoughtCooldownRange"
+                "Compute": "NeedsThoughtCooldownRange"
               }
             },
             {
               "Type": "TimerRestart",
-              "Name": "Thirst_WaterThought_Cooldown"
+              "Name": "Needs_Thought_Cooldown"
+            },
+            {
+              "Type": "SetFlag",
+              "Name": "Needs_Thought_ThirstNext",
+              "SetTo": false
+            }
+          ]
+        },
+        {
+          "$Comment": "Clear alternation after recovery; let the current cooldown expire to avoid overlapping reminders if needs change again.",
+          "Continue": true,
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Flag",
+                "Name": "Needs_Thought_ThirstNext"
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "TameworkNeedBelow",
+                  "Need": "Hunger",
+                  "RatioBelow": {
+                    "Compute": "HungerThoughtThresholdRatio"
+                  }
+                }
+              },
+              {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "TameworkNeedBelow",
+                  "Need": "Thirst",
+                  "RatioBelow": {
+                    "Compute": "ThirstThoughtThresholdRatio"
+                  }
+                }
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SetFlag",
+              "Name": "Needs_Thought_ThirstNext",
+              "SetTo": false
             }
           ]
         },
