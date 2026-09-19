@@ -14,8 +14,8 @@ This guide explains how to keep companions stable and breeding-ready.
 - Needs and happiness are core progression gates.
 - If needs drop too low, happiness suffers.
 - Low happiness blocks breeding and slows long-term line improvement.
-- In the near future, animals will be able to die from starvation and dehydration.
-    - But you will be able to turn that off if you wish.
+- Server settings can enable or disable starvation and dehydration damage,
+  including whether that damage can be lethal.
 
 ## Default Need Decay
 - Hunger: **1 per minute**
@@ -58,6 +58,20 @@ See breeding timings and cooldown behavior:
 2. Water available and reachable.
 3. No obvious enclosure/pathing block.
 4. Companion is tamed, adult, and not in combat/sleep when breeding is expected.
+
+## Server Experience Presets
+Server administrators can use `/tw settings` to choose `Simplified
+(Minecraft-like)`, `Easier`, `Full Experience`, `Hardcore`, or `Custom`.
+Selecting a preset fills the settings form immediately; review it, then use
+**Apply** to save it. Presets change experience, aging, revival, recall
+teleportation, and needs damage, while ownership, population, and claim rules
+stay as configured.
+
+`Hardcore` enables full adult aging and old-age death for supported animals,
+disables revives and recall teleportation, and sets starvation and dehydration
+damage to 10% and 15% of maximum health per minute. The standard presets
+restore revives and recall teleportation and turn off old-age death. Custom
+server settings can differ.
 
 > [Screenshot Placeholder: Companion panel with stable hunger, thirst, and happiness]
 > [Screenshot Placeholder: Food chest + water source layout that supports continuous care]

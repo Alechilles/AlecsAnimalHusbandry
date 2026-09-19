@@ -3,8 +3,6 @@ title: "Soul Lantern"
 order: 8
 published: true
 draft: false
-published: true
-draft: false
 ---
 # Soul Lantern
 
@@ -52,6 +50,17 @@ When an animal is captured, its ownership is cleared while it is stored inside t
 When that animal is released again, ownership is assigned to the player who places it.
 
 This makes the **Soul Lantern** useful for trading companions between players while still preserving the animal's saved data, appearance, and progression.
+
+## Companion Panel While Captured
+If the animal was already tracked by a command flute, its former owner's panel
+can keep a read-only `Captured` card while it is in the lantern. Compatible
+filled lanterns in that player's inventory can also appear as stored cards.
+
+The card does not grant ownership or command access. A successful release by
+another player removes the former owner's flute records when that player
+acquires the animal. Trading the lantern by itself, or attempting a release
+that fails, leaves the former owner's card in place. Releasing the lantern
+yourself restores your companion and its command links.
 
 ## Good Uses
 - Move a companion to a new pasture or enclosure.

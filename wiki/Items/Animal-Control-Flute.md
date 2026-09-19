@@ -3,8 +3,6 @@ title: "Animal Control Flute"
 order: 2
 published: true
 draft: false
-published: true
-draft: false
 ---
 # Animal Control Flute
 
@@ -13,13 +11,19 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 ![Animal Control Flute](https://github.com/user-attachments/assets/672b1772-b4c6-46ce-9a1e-d3b62f4abaf5)
 
 ## What It Does
-- Link and unlink tamed livestock, neutral, and critter companions.
-- Open command selection.
-- Issue commands to linked members.
-- Provide per-companion panel actions (`Recall`, `Set Home`, `Return Home`, `Unlink`, `Revive` when available).
+- Open an owned-companion panel and command selection.
+- Show your owned companions automatically; select the animals this physical
+  flute can command.
+- Issue commands to its selected companions.
+- Use shared, color-coded groups with other compatible flutes. Animals can be
+  in several groups; left-click a group to select it and right-click to add it
+  to the current selection.
+- Provide per-companion panel actions (`Recall`, `Set Home`, `Return Home`, and
+  `Revive` when available).
 - Call supported critters and flying companions onto your shoulder with `To Me`.
-- Toggle supported flying companions between Ground and Flight modes from their linked companion cards.
-- Provide nearby-only safety actions (`Release`, `Cull`) through confirm flow.
+- Toggle supported flying companions between Ground and Flight modes from their companion cards.
+- Provide `Release` for eligible owned companions and `Cull` for eligible
+  owned companions that are loaded and nearby, through a confirmation flow.
 
 ## Recipe
 - 12x any wood item

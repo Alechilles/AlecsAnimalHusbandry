@@ -26,10 +26,12 @@ Common causes:
 
 ## "Commands don't seem to work"
 Check:
-1. The companion is linked to the item.
+1. The companion is selected on the flute you are holding. Owned animals appear
+   in the panel automatically, but each flute has its own selection.
 2. You are the owner.
 3. The role is allowed by that command item config.
 4. For attack commands, your target is valid.
+5. The companion is not captured or in a coop. Release it from storage first.
 
 ## "Server fails on startup"
 - Read the first SEVERE asset validation line in server log.
@@ -55,5 +57,4 @@ Recipe details:
 4. Re-test with one species before scaling.
 
 > [Screenshot Placeholder: Example server error line and corrected config snippet]
-
 
