@@ -3,8 +3,6 @@ title: "Traits and Stats Guide"
 order: 6
 published: true
 draft: false
-published: true
-draft: false
 ---
 # Traits and Stats Guide
 
@@ -42,7 +40,15 @@ Beasts:
 | Toughness | Damage received | 0.9-1.1 | 0.6-1.4 | 1 | Lower is better |
 | Strength | Damage dealt | 0.95-1.1 | 0.85-1.3 | 1 | Higher is better |
 | Bounty | Chance of bonus harvest drops | 1-1.25 | 1-2 | 1 | Higher is better |
+| Appetite | Hunger depletion rate | 0.9-1.1 | 0.75-1.25 | 1 | Lower is better |
+| Thirst Efficiency | Thirst depletion rate | 0.9-1.1 | 0.75-1.25 | 1 | Lower is better |
+| Regrowth | Harvest recovery speed | 0.9-1.1 | 0.75-1.25 | 1 | Higher is better |
+| Productivity | Wool, egg, and milk yield | 0.9-1.1 | 0.75-1.25 | 1 | Higher is better |
 
+Appetite and Thirst Efficiency can roll on animals in either livestock group.
+Bounty, Regrowth, and Productivity are limited to the harvest livestock group:
+chickens (including desert chickens), cows, sheep, skrills, and tamed mosshorns.
+Their configured young and tamed variants share the same trait pool.
 
 ## Beast Trait Table
 | Trait | Effect | Natural Range | Bred Range | Default | Practical Direction |

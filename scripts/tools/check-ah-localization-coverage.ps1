@@ -216,8 +216,12 @@ $tameworkOwnedKeys = @(
     "tamework.traits.description.fertility",
     "tamework.traits.description.happinessGain",
     "tamework.traits.description.harvest",
+    "tamework.traits.description.harvestRecovery",
+    "tamework.traits.description.hungerDecay",
     "tamework.traits.description.maxHealth",
     "tamework.traits.description.moveSpeed",
+    "tamework.traits.description.productYield",
+    "tamework.traits.description.thirstDecay",
     "tamework.traits.description.size"
 )
 $dependencyReferences = @($requiredKeys | Where-Object { $_ -in $tameworkOwnedKeys })

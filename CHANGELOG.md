@@ -18,6 +18,9 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 
 ### Added
 
+- Added Appetite and Thirst Efficiency traits for livestock, plus Regrowth and
+  Productivity for harvest livestock, using Rune Husbandry’s trait ranges.
+
 - Added effect descriptions to every Animal Husbandry trait tooltip, including
   the direction and amount of each effect.
 

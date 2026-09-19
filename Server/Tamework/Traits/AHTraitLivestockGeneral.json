@@ -168,6 +168,36 @@
       "BreedingMin": 0.85,
       "BreedingMax": 1.3,
       "Default": 1
+    },
+    {
+      "Id": "Trait_Appetite",
+      "DisplayName": "animalhusbandry.traits.appetite.name",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_Appetite.png",
+      "EffectKey": "NeedsHungerDecayMultiplier",
+      "MutationPreference": "LOWER",
+      "Weight": 1,
+      "InheritanceWeight": 1,
+      "NaturalMin": 0.9,
+      "NaturalMax": 1.1,
+      "BreedingMin": 0.75,
+      "BreedingMax": 1.25,
+      "Default": 1,
+      "Description": "tamework.traits.description.hungerDecay"
+    },
+    {
+      "Id": "Trait_ThirstEfficiency",
+      "DisplayName": "animalhusbandry.traits.thirstEfficiency.name",
+      "IconPath": "Tamework/LinkedPanelIcons/Trait_ThirstEfficiency.png",
+      "EffectKey": "NeedsThirstDecayMultiplier",
+      "MutationPreference": "LOWER",
+      "Weight": 1,
+      "InheritanceWeight": 1,
+      "NaturalMin": 0.9,
+      "NaturalMax": 1.1,
+      "BreedingMin": 0.75,
+      "BreedingMax": 1.25,
+      "Default": 1,
+      "Description": "tamework.traits.description.thirstDecay"
     }
   ]
 }
