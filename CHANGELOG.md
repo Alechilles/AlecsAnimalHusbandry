@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.1.0 - Animal Aging, Traits, and Companion Controls - 2026-09-19
+
+Requires Alec's Tamework `>=4.1.0 <5.0`. Update both mods together.
+
+- Added adult aging for livestock, neutral animals, and beasts, using Rune
+  Husbandry's species timings where shared. Animals freeze at Prime by default;
+  full aging and optional old-age death follow `/tw settings`.
+
+- Added Appetite and Thirst Efficiency traits for livestock, plus Regrowth and
+  Productivity for harvest livestock, using Rune Husbandry’s trait ranges.
+
+- Both command flutes now use a 0.25-second command cooldown.
+- Critical hunger and thirst reminders alternate every five seconds.
+- Separated tame birds' ground and flight wander ranges and matched small-bird
+  flight speeds to bluebirds.
+- Centered the Butcher's Knife in its crafting preview.
+- Refreshed companion controls and server preset guides for Tamework 4.1.0:
+  owned animals appear automatically, selection is per flute, and groups are shared.
+  Hardcore disables revives and recall teleportation and enables old-age death.
+
 ## 3.0.0 - Companion UI, Wild Herds, and Bird Formations - 2026-09-14
 
 ### New Tamework UI
@@ -17,13 +37,6 @@ are part of the new experience for Animal Husbandry players. Update both mods to
   and refreshed settings, talent trees, and companion removal confirmations.
 
 ### Added
-
-- Added adult aging for livestock, neutral animals, and beasts, using Rune
-  Husbandry's species timings where shared. Animals freeze at Prime by default;
-  full aging and optional old-age death follow `/tw settings`.
-
-- Added Appetite and Thirst Efficiency traits for livestock, plus Regrowth and
-  Productivity for harvest livestock, using Rune Husbandry’s trait ranges.
 
 - Added effect descriptions to every Animal Husbandry trait tooltip, including
   the direction and amount of each effect.
