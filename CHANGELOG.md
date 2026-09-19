@@ -18,6 +18,10 @@ are part of the new experience for Animal Husbandry players. Update both mods to
 
 ### Added
 
+- Added adult aging for livestock, neutral animals, and beasts, using Rune
+  Husbandry's species timings where shared. Animals freeze at Prime by default;
+  full aging and optional old-age death follow `/tw settings`.
+
 - Added Appetite and Thirst Efficiency traits for livestock, plus Regrowth and
   Productivity for harvest livestock, using Rune Husbandry’s trait ranges.
 

@@ -53,6 +53,45 @@ Manual and passive breeding use the same birth-job and capacity rules:
 
 Example: with a maximum of eight matching animals, seven already nearby, and a rolled litter of four, only one child is admitted. Two pairs starting near the limit share the same reservations, so their combined result cannot exceed the cap.
 
+## Adult Aging
+
+Use these assets with the accompanying Tamework aging build. After juvenile
+growth, animals progress through Adult, Prime, and Senior. The command panel
+shows their stage and countdown. Wild-caught adults begin before Prime.
+
+The default Animal Progression setting in `/tw settings` freezes animals at
+Prime. Administrators can disable adult aging, enable the full lifecycle, and
+optionally allow old-age death. Prime gives full domestic slaughter yield;
+other adult stages give 50% of the otherwise calculated yield. Disabling aging
+restores full adult yield. Natural old-age death uses ordinary drops without
+the slaughter bonus.
+
+These initial timings match Rune Husbandry for shared species. All durations
+are eligible real time, independent of the world's day length. Senior lasts
+as long as Prime; both durations matter only with the full lifecycle enabled.
+
+| Animals | Adult to Prime | Prime duration | Senior duration |
+| --- | ---: | ---: | ---: |
+| Chicken, Desert Chicken, Bunny, Rabbit | 30 min | 6 h | 6 h |
+| Pig, Turkey, Skrill | 45 min | 12 h | 12 h |
+| Wild Pig | 60 min | 12 h | 12 h |
+| Goat | 45 min | 18 h | 18 h |
+| Sheep, Mouflon, Ram, Boar, Warthog | 60 min | 18 h | 18 h |
+| Cow | 60 min | 24 h | 24 h |
+| Bison, Camel, Horse | 75 min | 30 h | 30 h |
+| Mosshorn, Plain Mosshorn, Trillodon | 90 min | 36 h | 36 h |
+| Other neutral animals and beasts | 60 min | 18 h | 18 h |
+
+For loaded animals, low hunger or thirst slows progress toward Prime and speeds
+progress out of Prime. The lower need sets the rate; penalties do not stack.
+At 50% or above, aging runs normally. At 25%, progress toward Prime is 50%
+slower and progress out of Prime is 50% faster; at 0%, those changes are 75%.
+
+The shared offline policy pauses progress during owner-offline grace, then
+applies its configured multiplier. Unloaded animals age at the normal care
+rate during eligible time without consuming food or water. Server downtime
+and captured storage add no progress, and trading preserves age.
+
 ## Livestock Breeding and Growth Reference
 After breeding, animals will be unable to breed for the duration of their breeding cooldown.
 

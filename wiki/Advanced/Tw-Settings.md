@@ -19,6 +19,16 @@ This command is meant for server owners/admins who want to tune safety and progr
 
 ## What You Can Configure (Full Detail)
 
+### Animal Progression and Aging
+
+Animal Husbandry supplies aging profiles for livestock, neutral animals, and
+beasts. In Animal Progression, choose disabled adult aging, freeze at Prime
+(the default), or the full Adult, Prime, and Senior lifecycle. Old-age death
+is optional. These settings apply across Tamework-based mods; species timings
+remain in their breeding configs. See the
+[Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
+for timings and care effects.
+
 ### 1) Population Limits
 - **Population limit per player owned total**: max owned companions per player (`0` = unlimited).
 - **Population scope**: enforce that cap per world or globally across worlds.

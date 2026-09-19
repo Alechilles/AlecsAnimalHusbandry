@@ -182,6 +182,11 @@ Older `Tw*Config_AnimalHusbandry_*` asset ids/names are deprecated and were repl
 - Too much breeding: raise BaseCooldownMinutes.
 - Too little breeding: lower cooldown and improve care quality.
 - Growth too slow/fast: tune TimeToFullGrownMinutes per role.
+- Adult aging: tune `Aging.AdultToPrimeMinutes`, `PrimeMinutes`, and `SeniorMinutes`
+  in the breeding profiles or their exact-role `RoleOverrides`. These use eligible
+  real minutes. `NonPrimeYieldMultiplier` defaults to `0.5` in Animal Husbandry.
+  Lifecycle mode and old-age death are controlled through `/tw settings`.
+
 - Leveling too slow/fast: tune BaseXp, GrowthFactor, and each XpSources section.
 - Talents too strong/weak: tune TalentPoints and the multipliers in the active AHTalent config.
 - Overcrowding: lower MaxNearbySameType on sensitive species.

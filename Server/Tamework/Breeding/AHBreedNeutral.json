@@ -511,6 +511,11 @@
       },
       "OffspringLifecycle": {
         "TimeToFullGrownMinutes": 200
+      },
+      "Aging": {
+        "AdultToPrimeMinutes": 90,
+        "PrimeMinutes": 2160,
+        "SeniorMinutes": 2160
       }
     },
     "Tamed_Cactee": {
@@ -773,6 +778,12 @@
         "TimeToFullGrownMinutes": 90
       }
     }
+  },
+  "Aging": {
+    "Enabled": true,
+    "AdultToPrimeMinutes": 60,
+    "PrimeMinutes": 1080,
+    "SeniorMinutes": 1080,
+    "NonPrimeYieldMultiplier": 0.5
   }
 }
-
