@@ -158,6 +158,18 @@ These are the current (non-deprecated) `AH*` config assets in this repo.
 | Leveling | `Server/Tamework/Leveling/AHLevelLivestock.json`<br>`Server/Tamework/Leveling/AHLevelLivestockGeneral.json`<br>`Server/Tamework/Leveling/AHLevelNeutral.json`<br>`Server/Tamework/Leveling/AHLevelCritter.json`<br>`Server/Tamework/Leveling/AHLevelBeast.json` |
 | Talents | `Server/Tamework/Talents/AHTalentLivestock.json`<br>`Server/Tamework/Talents/AHTalentLivestockGeneral.json`<br>`Server/Tamework/Talents/AHTalentNeutral.json`<br>`Server/Tamework/Talents/AHTalentCritter.json`<br>`Server/Tamework/Talents/AHTalentBeast.json` |
 
+### Command Item Icon Options
+
+Each command item config can list icon choices for players to assign to individual flutes. Each `State` must match a key in that item asset's top-level `State` map, where the state overrides the icon. The `LabelKey` identifies a translated option name.
+
+```json
+"IconOptions": [
+  { "State": "RedCircle", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.redCircle" }
+]
+```
+
+The list can contain any number of options. Animal Husbandry currently provides eight color-and-shape choices for each flute. Add a matching state icon to each flute item asset and translations for every supported locale when adding choices.
+
 ### Group Mapping (including Beast)
 | Group | Interaction | Companion | Needs | Happiness | Breeding | Traits | Leveling | Talents | Command |
 |---|---|---|---|---|---|---|---|---|---|

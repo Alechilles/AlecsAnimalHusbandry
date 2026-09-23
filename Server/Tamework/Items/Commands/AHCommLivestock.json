@@ -3,6 +3,16 @@
   "ItemIds": [
     "AnimalHusbandry_Command_Item"
   ],
+  "IconOptions": [
+    {"State": "RedCircle", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.redCircle"},
+    {"State": "OrangeTriangle", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.orangeTriangle"},
+    {"State": "YellowStar", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.yellowStar"},
+    {"State": "GreenSquare", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.greenSquare"},
+    {"State": "TealDiamond", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.tealDiamond"},
+    {"State": "BlueChevron", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.blueChevron"},
+    {"State": "PurpleHexagon", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.purpleHexagon"},
+    {"State": "PinkHeart", "LabelKey": "server.items.AnimalHusbandry_Command_Item.icon.pinkHeart"}
+  ],
   "Radius": -1,
   "MembershipMode": "LinkedOnly",
   "LinkEnabled": true,

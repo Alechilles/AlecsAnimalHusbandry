@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added eight configurable color-and-shape icon badges for both command flutes.
+
 ## 3.1.0 - Animal Aging, Traits, and Companion Controls - 2026-09-19
 
 Requires Alec's Tamework `>=4.1.0 <5.0`. Update both mods together.
