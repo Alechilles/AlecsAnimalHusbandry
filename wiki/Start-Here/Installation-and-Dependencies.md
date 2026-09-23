@@ -12,7 +12,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 
 ## Required Mods
 - [Alec's Animal Husbandry!](https://www.curseforge.com/hytale/mods/alecs-animal-husbandry)
-- [Alec's Tamework!](https://www.curseforge.com/hytale/mods/alecs-tamework) `>=4.1.0 <5.0`
+- [Alec's Tamework!](https://www.curseforge.com/hytale/mods/alecs-tamework) `>=4.2.0 <5.0`
 
 Alec's Nametags and Alec's Coops are optional companion mods.
 

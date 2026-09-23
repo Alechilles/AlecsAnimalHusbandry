@@ -15,6 +15,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - Show your owned companions automatically; select the animals this physical
   flute can command.
 - Issue commands to its selected companions.
+- Choose from eight color-and-shape icon badges to distinguish this flute.
 - Use shared, color-coded groups with other compatible flutes. Animals can be
   in several groups; left-click a group to select it and right-click to add it
   to the current selection.

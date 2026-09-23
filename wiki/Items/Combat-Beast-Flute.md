@@ -14,6 +14,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - Shows your owned companions automatically and controls the selected Beasts
   this physical flute can command.
 - Unlocks Beast-focused commands (Defend, Aggressive, Attack Target).
+- Choose from eight color-and-shape icon badges to distinguish this flute.
 - Shares player groups with compatible flutes. Animals can belong to several
   groups; left-click a group to select it and right-click to add it to the
   current selection.
