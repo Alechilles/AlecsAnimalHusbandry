@@ -25,72 +25,12 @@
   "Instructions": [
     {
       "Sensor": {
-        "Type": "And",
-        "Sensors": [
-          {
-            "Type": "Not",
-            "Sensor": {
-              "Type": "State",
-              "State": "Spawn"
-            }
-          },
-          {
-            "Type": "Timer",
-            "Name": "Life",
-            "State": "Stopped",
-            "TimeRemainingRange": [
-              0,
-              0
-            ]
-          }
-        ]
-      },
-      "Actions": [
-        {
-          "Type": "Despawn",
-          "Force": false
-        }
-      ],
-      "HeadMotion": {
-        "Type": "Nothing"
-      },
-      "BodyMotion": {
-        "Type": "Nothing"
-      }
-    },
-    {
-      "Sensor": {
         "Type": "State",
         "State": "Spawn"
       },
       "Instructions": [
         {
           "Actions": [
-            {
-              "Type": "TimerStart",
-              "Name": "Life",
-              "StartValueRange": [
-                12,
-                12
-              ],
-              "RestartValueRange": [
-                12,
-                12
-              ]
-            },
-            {
-              "Type": "TimerRestart",
-              "Name": "Life"
-            },
-            {
-              "Type": "TimerModify",
-              "Name": "Life",
-              "MaxValue": [
-                12,
-                12
-              ],
-              "SetValue": 12
-            },
             {
               "Type": "State",
               "State": "Chase"

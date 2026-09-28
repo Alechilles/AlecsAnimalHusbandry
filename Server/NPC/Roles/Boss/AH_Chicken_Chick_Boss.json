@@ -182,9 +182,14 @@
                 {
                   "Sensor": {
                     "Type": "Target",
-                    "Range": 4.5
+                    "Range": 12
                   },
                   "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "LastAttackWasEgg",
+                      "SetTo": false
+                    },
                     {
                       "Type": "State",
                       "State": "Combat.Peck1Aim"
@@ -211,6 +216,11 @@
                   },
                   "Actions": [
                     {
+                      "Type": "SetFlag",
+                      "Name": "LastAttackWasEgg",
+                      "SetTo": false
+                    },
+                    {
                       "Type": "State",
                       "State": "Combat.Charge"
                     }
@@ -219,10 +229,25 @@
                 },
                 {
                   "Sensor": {
-                    "Type": "Target",
-                    "Range": 18
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Target",
+                        "Range": 18
+                      },
+                      {
+                        "Type": "Flag",
+                        "Name": "LastAttackWasEgg",
+                        "Set": false
+                      }
+                    ]
                   },
                   "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "LastAttackWasEgg",
+                      "SetTo": true
+                    },
                     {
                       "Type": "State",
                       "State": "Combat.Egg1Aim"
@@ -255,6 +280,11 @@
                     ]
                   },
                   "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "LastAttackWasEgg",
+                      "SetTo": false
+                    },
                     {
                       "Type": "State",
                       "State": "Combat.BassWindup"
@@ -358,8 +388,21 @@
           "Instructions": [
             {
               "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
                 "Type": "Target",
-                "Range": 40
+                "Range": 2.5
               },
               "Actions": [
                 {
@@ -400,7 +443,29 @@
                   "Type": "State",
                   "State": "Combat.Peck1Windup"
                 }
-              ]
+              ],
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "StopDistance": 2,
+                "SlowDownDistance": 3
+              }
             }
           ]
         },
@@ -525,8 +590,21 @@
           "Instructions": [
             {
               "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
                 "Type": "Target",
-                "Range": 40
+                "Range": 2.5
               },
               "Actions": [
                 {
@@ -567,7 +645,29 @@
                   "Type": "State",
                   "State": "Combat.Peck2Windup"
                 }
-              ]
+              ],
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "StopDistance": 2,
+                "SlowDownDistance": 3
+              }
             }
           ]
         },
@@ -692,8 +792,21 @@
           "Instructions": [
             {
               "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
                 "Type": "Target",
-                "Range": 40
+                "Range": 2.5
               },
               "Actions": [
                 {
@@ -734,7 +847,29 @@
                   "Type": "State",
                   "State": "Combat.Peck3Windup"
                 }
-              ]
+              ],
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "StopDistance": 2,
+                "SlowDownDistance": 3
+              }
             }
           ]
         },
@@ -1302,6 +1437,30 @@
           "Instructions": [
             {
               "Sensor": {
+                "Type": "Target",
+                "Range": 4.5
+              },
+              "Actions": [
+                {
+                  "Type": "Attack"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "SetFlag",
+                  "Name": "LastAttackWasEgg",
+                  "SetTo": false
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck1Aim"
+                }
+              ]
+            },
+            {
+              "Sensor": {
                 "Type": "Timer",
                 "Name": "Beat",
                 "State": "Stopped",
@@ -1464,6 +1623,30 @@
           "Instructions": [
             {
               "Sensor": {
+                "Type": "Target",
+                "Range": 4.5
+              },
+              "Actions": [
+                {
+                  "Type": "Attack"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "SetFlag",
+                  "Name": "LastAttackWasEgg",
+                  "SetTo": false
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck1Aim"
+                }
+              ]
+            },
+            {
+              "Sensor": {
                 "Type": "Timer",
                 "Name": "Beat",
                 "State": "Stopped",
@@ -1624,6 +1807,30 @@
             "State": "Combat.Egg3Recover"
           },
           "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 4.5
+              },
+              "Actions": [
+                {
+                  "Type": "Attack"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "SetFlag",
+                  "Name": "LastAttackWasEgg",
+                  "SetTo": false
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck1Aim"
+                }
+              ]
+            },
             {
               "Sensor": {
                 "Type": "Timer",
