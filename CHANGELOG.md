@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Lil Cluck unlocks his jump attack at 75% health and his laser at 50%.
+
 - Beasts and Frost Dragons, both wild and tamed, no longer naturally regenerate health while fighting. Normal regeneration resumes after disengaging.
 
 - Lil Cluck no longer naturally regenerates health during combat; regeneration resumes after disengaging.

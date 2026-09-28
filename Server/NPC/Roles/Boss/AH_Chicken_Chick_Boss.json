@@ -176,7 +176,7 @@
                         "RelativeToTarget": "Max",
                         "ValueRange": [
                           0,
-                          0.5
+                          0.75
                         ]
                       }
                     ]
@@ -324,9 +324,20 @@
                     "Type": "And",
                     "Sensors": [
                       {
-                        "Type": "Flag",
-                        "Name": "BassUnlocked",
-                        "Set": true
+                        "Type": "Self",
+                        "Filters": [
+                          {
+                            "Type": "Stat",
+                            "Stat": "Health",
+                            "StatTarget": "Value",
+                            "RelativeTo": "Health",
+                            "RelativeToTarget": "Max",
+                            "ValueRange": [
+                              0,
+                              0.5
+                            ]
+                          }
+                        ]
                       },
                       {
                         "Type": "Target",
