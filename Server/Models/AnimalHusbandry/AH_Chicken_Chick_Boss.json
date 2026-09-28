@@ -118,6 +118,34 @@
           "BlendingDuration": 0.05
         }
       ]
+    },
+    "Laser_Windup": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Laser_Windup.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05,
+          "SoundEventId": "SFX_Chick_Alerted"
+        }
+      ]
+    },
+    "Laser_Loop": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Laser_Loop.blockyanim",
+          "Looping": true,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Laser_Recovery": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Laser_Recovery.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
     }
   }
 }

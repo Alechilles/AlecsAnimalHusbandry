@@ -18,7 +18,8 @@
       "MaxRotationSpeed": 360,
       "MaxClimbHeight": 1,
       "MaxDropHeight": 4,
-      "RunThreshold": 0.5
+      "RunThreshold": 0.5,
+      "MaxHeadRotationSpeed": 360
     }
   ],
   "NameTranslationKey": "server.npcRoles.AH_Chicken_Chick_Boss.name",
@@ -288,6 +289,43 @@
                     {
                       "Type": "State",
                       "State": "Combat.BassWindup"
+                    }
+                  ],
+                  "Weight": 2
+                },
+                {
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Flag",
+                        "Name": "BassUnlocked",
+                        "Set": true
+                      },
+                      {
+                        "Type": "Target",
+                        "Range": 30
+                      },
+                      {
+                        "Type": "Timer",
+                        "Name": "LaserCooldown",
+                        "State": "Stopped",
+                        "TimeRemainingRange": [
+                          0,
+                          0
+                        ]
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "LastAttackWasEgg",
+                      "SetTo": false
+                    },
+                    {
+                      "Type": "State",
+                      "State": "Combat.LaserWindup"
                     }
                   ],
                   "Weight": 2
@@ -2145,6 +2183,291 @@
             {
               "BodyMotion": {
                 "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.LaserWindup"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Laser_Windup"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    1,
+                    1
+                  ],
+                  "RestartValueRange": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    1,
+                    1
+                  ],
+                  "SetValue": 1
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "LaserCooldown",
+                  "StartValueRange": [
+                    31,
+                    31
+                  ],
+                  "RestartValueRange": [
+                    31,
+                    31
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "LaserCooldown"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "LaserCooldown",
+                  "MaxValue": [
+                    31,
+                    31
+                  ],
+                  "SetValue": 31
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.LaserBeam"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false,
+                "RelativeTurnSpeed": 0.055555556
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              },
+              "Actions": [
+                {
+                  "Type": "TameworkBeam",
+                  "Range": 0.2,
+                  "Damage": 0,
+                  "DamageInterval": 0.25,
+                  "ParticleSystem": "AH_Chicken_Chick_Boss_Laser_Charge",
+                  "ParticleNativeLength": 0.2,
+                  "OriginHeight": 2.25,
+                  "OriginForward": 0.7,
+                  "BeamRadius": 0.2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.LaserBeam"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Laser_Loop"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    10,
+                    10
+                  ],
+                  "RestartValueRange": [
+                    10,
+                    10
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    10,
+                    10
+                  ],
+                  "SetValue": 10
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.LaserRecovery"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false,
+                "RelativeTurnSpeed": 0.055555556
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              },
+              "Actions": [
+                {
+                  "Type": "TameworkBeam",
+                  "Range": 30,
+                  "Damage": 8,
+                  "DamageInterval": 0.25,
+                  "ParticleSystem": "AH_Chicken_Chick_Boss_Laser",
+                  "ParticleNativeLength": 32,
+                  "OriginHeight": 2.25,
+                  "OriginForward": 0.7,
+                  "BeamRadius": 0.2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.LaserRecovery"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Laser_Recovery"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.8,
+                    0.8
+                  ],
+                  "RestartValueRange": [
+                    0.8,
+                    0.8
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.8,
+                    0.8
+                  ],
+                  "SetValue": 0.8
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Choose"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false,
+                "RelativeTurnSpeed": 0.055555556
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
               }
             }
           ]

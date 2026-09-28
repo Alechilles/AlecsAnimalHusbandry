@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added Lil Cluck's Peep Show: a slow-turning, 10-second eye laser below half health.
+
 - Lil Cluck now pursues his target before each peck. Hatchlings remain until killed.
 - Egg Drop no longer repeats back-to-back.
 

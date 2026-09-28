@@ -1,0 +1,56 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "None",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": true,
+  "MaxConcurrentParticles": 1,
+  "ParticleLifeSpan": {
+    "Min": 0.11,
+    "Max": 0.11
+  },
+  "TotalParticles": {
+    "Min": 1,
+    "Max": 1
+  },
+  "SpawnBurst": true,
+  "SpawnRate": {
+    "Min": 1,
+    "Max": 1
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Glow_Square.png",
+    "ScaleRatioConstraint": "None",
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 32,
+          "Max": 32
+        },
+        "Y": {
+          "Min": 0.4,
+          "Max": 0.4
+        }
+      },
+      "Rotation": {
+        "Y": {
+          "Min": 90,
+          "Max": 90
+        }
+      },
+      "Color": "#ffba19",
+      "Opacity": 0.7
+    },
+    "Animation": {
+      "0": {
+        "Opacity": 0.7
+      },
+      "90": {
+        "Opacity": 0.7
+      },
+      "100": {
+        "Opacity": 0
+      }
+    }
+  }
+}
