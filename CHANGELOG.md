@@ -1,46 +1,16 @@
 # Changelog
 
-## Unreleased
+## 3.3.0 - Lil Cluck - 2026-09-28
 
-- Lil Cluck reaches around his body when lowering and raising his sunglasses for the laser attack.
+Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=4.3.0 <5.0`. Update both mods together.
 
-- Lil Cluck unlocks his jump attack at 75% health and his laser at 50%.
-
-- Beasts and Frost Dragons, both wild and tamed, no longer naturally regenerate health while fighting. Normal regeneration resumes after disengaging.
-
-- Lil Cluck no longer naturally regenerates health during combat; regeneration resumes after disengaging.
-
-- Increased Lil Cluck's jump and laser frequency. The laser is red, aims during its windup, and sweeps at 30 degrees per second.
-
-- Added Lil Cluck's Peep Show: a slow-turning, 10-second eye laser below half health.
-
-- Lil Cluck now pursues his target before each peck. Hatchlings remain until killed.
-- Egg Drop no longer repeats back-to-back.
-
-- Fixed Lil Cluck's summon transformation and translated notification.
-- Added a native health bar for Lil Cluck and a hidden summon interaction: crouch
-  beside your own tamed chick and interact while holding a gold ingot.
-- Reworked Lil Cluck's shockwave into an expanding ring of feathers that follows
-  the damage wave.
-
-- Doubled Lil Cluck's attack damage, including exploding eggs and minion pecks.
-
-- Lil Cluck now lands on the player's position captured at takeoff, with solid
-  terrain blocking the arc. Its landing shockwave is brighter and has a glowing rim.
-  Requires the matching Tamework development build with targeted leap movement.
-
-- Fixed Lil Cluck's leap losing almost all forward movement to horizontal
-  resistance. Chicks now have longer peck reach and approach during the windup.
-
-- Lil Cluck now leaps toward the player before its landing shockwave, with a
-  13-second cooldown between leaps. Its chicks now animate their peck attacks.
-
-- Fixed temporary boss chicks crashing the world when their lifetime expired.
-
-- Added the manually spawned Lil Cluck boss, with sunglasses, a gold chain,
-  three-hit pecks, a charge that stuns on wall impact, lobbed egg projectiles,
-  temporary chasing chicks, and a jumpable shockwave below half health.
-  Requires the matching Tamework development build for egg markers and hatching.
+- Added Lil Cluck, an easter-egg boss wearing sunglasses and a gold chain. Crouch-interact with your own tamed chick while holding a gold ingot to summon him. The ingot is consumed and the chick becomes a hostile boss.
+- Fight pursuing peck combos, a charge that stuns him on wall impact, and marked egg volleys that burst or hatch attacking chicks. Hatchlings remain until killed, and egg volleys cannot repeat consecutively.
+- At 75% health, Lil Cluck unlocks a leap toward your position with a jumpable feather-ring shockwave. At 50%, he unlocks a 10-second red laser with a one-second warning and limited turning speed.
+- Nearby fighters see Lil Cluck's native boss health bar. He does not naturally regenerate health during combat.
+- Wild and tamed beasts and Frost Dragons also stop naturally regenerating health while fighting; normal regeneration resumes after disengaging.
+- Frost Dragons now spawn through distant Zone 3 mountain beacons, with one dragon per beacon, a 1-3 minute initial delay, and a 15-25 minute respawn cooldown.
+- Frost Dragons now react to distant arrow hits and drop 4-6 Ice Essence when killed. Added an icon for their Chilled effect.
 
 ## 3.2.0 - Command Flute Badges - 2026-09-23
 
