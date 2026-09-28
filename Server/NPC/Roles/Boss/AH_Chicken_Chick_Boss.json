@@ -172,7 +172,7 @@
             {
               "Sensor": {
                 "Type": "Target",
-                "Range": 18
+                "Range": 30
               },
               "Type": "Random",
               "ExecuteFor": [
@@ -291,7 +291,7 @@
                       "State": "Combat.BassWindup"
                     }
                   ],
-                  "Weight": 2
+                  "Weight": 4
                 },
                 {
                   "Sensor": {
@@ -328,7 +328,7 @@
                       "State": "Combat.LaserWindup"
                     }
                   ],
-                  "Weight": 2
+                  "Weight": 4
                 }
               ]
             },
@@ -1925,12 +1925,12 @@
                   "Type": "TimerStart",
                   "Name": "BassCooldown",
                   "StartValueRange": [
-                    13,
-                    13
+                    8,
+                    8
                   ],
                   "RestartValueRange": [
-                    13,
-                    13
+                    8,
+                    8
                   ]
                 },
                 {
@@ -1941,10 +1941,10 @@
                   "Type": "TimerModify",
                   "Name": "BassCooldown",
                   "MaxValue": [
-                    13,
-                    13
+                    8,
+                    8
                   ],
-                  "SetValue": 13
+                  "SetValue": 8
                 },
                 {
                   "Type": "TimerStart",
@@ -2233,12 +2233,12 @@
                   "Type": "TimerStart",
                   "Name": "LaserCooldown",
                   "StartValueRange": [
-                    31,
-                    31
+                    21,
+                    21
                   ],
                   "RestartValueRange": [
-                    31,
-                    31
+                    21,
+                    21
                   ]
                 },
                 {
@@ -2249,10 +2249,10 @@
                   "Type": "TimerModify",
                   "Name": "LaserCooldown",
                   "MaxValue": [
-                    31,
-                    31
+                    21,
+                    21
                   ],
-                  "SetValue": 31
+                  "SetValue": 21
                 }
               ],
               "Continue": true
@@ -2282,7 +2282,7 @@
               "HeadMotion": {
                 "Type": "Aim",
                 "Deflection": false,
-                "RelativeTurnSpeed": 0.055555556
+                "RelativeTurnSpeed": 1
               },
               "BodyMotion": {
                 "Type": "MatchLook"
@@ -2373,7 +2373,7 @@
               "HeadMotion": {
                 "Type": "Aim",
                 "Deflection": false,
-                "RelativeTurnSpeed": 0.055555556
+                "RelativeTurnSpeed": 0.08333333333333333
               },
               "BodyMotion": {
                 "Type": "MatchLook"
@@ -2464,7 +2464,7 @@
               "HeadMotion": {
                 "Type": "Aim",
                 "Deflection": false,
-                "RelativeTurnSpeed": 0.055555556
+                "RelativeTurnSpeed": 1
               },
               "BodyMotion": {
                 "Type": "MatchLook"
