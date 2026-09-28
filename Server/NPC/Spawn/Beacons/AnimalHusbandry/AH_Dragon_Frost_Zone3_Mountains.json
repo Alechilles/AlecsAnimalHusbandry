@@ -1,0 +1,39 @@
+{
+  "Environments": [
+    "Env_Zone3_Mountains"
+  ],
+  "MinDistanceFromPlayer": 40,
+  "MaxSpawnedNPCs": 1,
+  "ConcurrentSpawnsRange": [
+    1,
+    1
+  ],
+  "InitialSpawnDelayRange": [
+    60,
+    180
+  ],
+  "SpawnAfterRealTimeRange": [
+    "PT15M",
+    "PT25M"
+  ],
+  "BeaconVacantDespawnGameTime": "PT1H",
+  "BeaconRadius": 200,
+  "SpawnRadius": 145,
+  "TargetDistanceFromPlayer": 110,
+  "YRange": [
+    -32,
+    32
+  ],
+  "NPCs": [
+    {
+      "Id": "Dragon_Frost",
+      "Weight": 1,
+      "SpawnBlockSet": "Soil"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ],
+  "NPCIdleDespawnTime": 500
+}

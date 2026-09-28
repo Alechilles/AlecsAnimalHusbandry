@@ -17,20 +17,6 @@
         "SpawnBlockSet": "Soil",
         "Id": "Fox_Arctic"
       }
-    },
-    {
-      "Id": "append-frost-dragon",
-      "Op": "Insert",
-      "Path": "/NPCs",
-      "Position": "End",
-      "Existing": {
-        "Id": "Dragon_Frost"
-      },
-      "Value": {
-        "Weight": 1,
-        "SpawnBlockSet": "Soil",
-        "Id": "Dragon_Frost"
-      }
     }
   ]
 }
