@@ -2,6 +2,11 @@
   "Parent": "Chick",
   "Model": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Models/Model.blockymodel",
   "Texture": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Models/Texture.png",
-  "MinScale": 4,
-  "MaxScale": 4
+  "MinScale": 5,
+  "MaxScale": 5,
+  "IconProperties": {
+    "Scale": 0.2,
+    "Translation": [ 0, 0 ],
+    "Rotation": [ -0.8, -40, 0 ]
+  }
 }
