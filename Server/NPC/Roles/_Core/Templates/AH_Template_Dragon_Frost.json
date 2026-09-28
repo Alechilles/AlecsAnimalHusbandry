@@ -873,11 +873,49 @@
               ]
             },
             {
-              "Reference": "Component_Instruction_Damage_Check",
-              "Modify": {
-                "_ExportStates": [ "Combat", "Search.Confused" ],
-                "AlertedRange": { "Compute": "AlertedRange" }
-              }
+              "$Comment": "Retaliate against a known attacker even beyond normal detection range or outside line of sight.",
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Not",
+                    "Sensor": {
+                      "Type": "Damage",
+                      "Friendly": true
+                    }
+                  },
+                  {
+                    "Type": "Damage",
+                    "Combat": true,
+                    "TargetSlot": "LockedTarget"
+                  }
+                ]
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Target",
+                    "TargetSlot": "LockedTarget"
+                  },
+                  "Actions": [
+                    {
+                      "Type": "AddToHostileTargetMemory"
+                    },
+                    {
+                      "Type": "State",
+                      "State": "Combat"
+                    }
+                  ]
+                },
+                {
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Search.Confused"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "$Comment": "Check if there are any potential threats nearby",
@@ -2226,7 +2264,7 @@
                       "$Comment": "Loose patrol waypoint remains stable instead of following every player movement.",
                       "Sensor": {
                         "Type": "Target",
-                        "Range": { "Compute": "AlertedRange" }
+                        "TargetSlot": "LockedTarget"
                       },
                       "HeadMotion": {
                         "Type": "Watch"
