@@ -1437,30 +1437,6 @@
           "Instructions": [
             {
               "Sensor": {
-                "Type": "Target",
-                "Range": 4.5
-              },
-              "Actions": [
-                {
-                  "Type": "Attack"
-                },
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Action"
-                },
-                {
-                  "Type": "SetFlag",
-                  "Name": "LastAttackWasEgg",
-                  "SetTo": false
-                },
-                {
-                  "Type": "State",
-                  "State": "Combat.Peck1Aim"
-                }
-              ]
-            },
-            {
-              "Sensor": {
                 "Type": "Timer",
                 "Name": "Beat",
                 "State": "Stopped",
@@ -1623,30 +1599,6 @@
           "Instructions": [
             {
               "Sensor": {
-                "Type": "Target",
-                "Range": 4.5
-              },
-              "Actions": [
-                {
-                  "Type": "Attack"
-                },
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Action"
-                },
-                {
-                  "Type": "SetFlag",
-                  "Name": "LastAttackWasEgg",
-                  "SetTo": false
-                },
-                {
-                  "Type": "State",
-                  "State": "Combat.Peck1Aim"
-                }
-              ]
-            },
-            {
-              "Sensor": {
                 "Type": "Timer",
                 "Name": "Beat",
                 "State": "Stopped",
@@ -1807,30 +1759,6 @@
             "State": "Combat.Egg3Recover"
           },
           "Instructions": [
-            {
-              "Sensor": {
-                "Type": "Target",
-                "Range": 4.5
-              },
-              "Actions": [
-                {
-                  "Type": "Attack"
-                },
-                {
-                  "Type": "PlayAnimation",
-                  "Slot": "Action"
-                },
-                {
-                  "Type": "SetFlag",
-                  "Name": "LastAttackWasEgg",
-                  "SetTo": false
-                },
-                {
-                  "Type": "State",
-                  "State": "Combat.Peck1Aim"
-                }
-              ]
-            },
             {
               "Sensor": {
                 "Type": "Timer",

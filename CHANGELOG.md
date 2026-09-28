@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Lil Cluck now pursues his target before each peck. Hatchlings remain until killed.
-- Crowding Lil Cluck between egg throws triggers Pecking Order. Egg Drop no longer repeats back-to-back.
+- Egg Drop no longer repeats back-to-back.
 
 - Fixed Lil Cluck's summon transformation and translated notification.
 - Added a native health bar for Lil Cluck and a hidden summon interaction: crouch
