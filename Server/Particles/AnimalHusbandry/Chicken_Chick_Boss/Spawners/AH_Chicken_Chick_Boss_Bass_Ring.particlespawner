@@ -1,5 +1,5 @@
 {
-  "RenderMode": "BlendLinear",
+  "RenderMode": "BlendAdd",
   "ParticleRotationInfluence": "None",
   "LinearFiltering": true,
   "LightInfluence": 0,
@@ -20,12 +20,13 @@
   },
   "EmitOffset": {
     "Y": {
-      "Min": 0.07,
-      "Max": 0.07
+      "Min": 0.2,
+      "Max": 0.2
     }
   },
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ring4.png",
+    "SoftParticles": "Disable",
     "ScaleRatioConstraint": "OneToOne",
     "InitialAnimationFrame": {
       "Rotation": {
@@ -44,7 +45,7 @@
           "Max": 1
         }
       },
-      "Color": "#d6b274",
+      "Color": "#ffdc62",
       "Opacity": 1
     },
     "Animation": {
@@ -62,7 +63,17 @@
         "Opacity": 1
       },
       "95": {
-        "Opacity": 1
+        "Opacity": 1,
+        "Scale": {
+          "X": {
+            "Min": 5.725,
+            "Max": 5.725
+          },
+          "Y": {
+            "Min": 5.725,
+            "Max": 5.725
+          }
+        }
       },
       "100": {
         "Scale": {

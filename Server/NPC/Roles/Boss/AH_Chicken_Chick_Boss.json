@@ -1653,10 +1653,6 @@
               "Continue": true,
               "Actions": [
                 {
-                  "Type": "StorePosition",
-                  "Slot": "BassPosition"
-                },
-                {
                   "Type": "PlayAnimation",
                   "Slot": "Action",
                   "Animation": "Bass_Windup"
@@ -1690,30 +1686,57 @@
             },
             {
               "Sensor": {
-                "Type": "Timer",
-                "Name": "Beat",
-                "State": "Stopped",
-                "TimeRemainingRange": [
-                  0,
-                  0
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Timer",
+                    "Name": "Beat",
+                    "State": "Stopped",
+                    "TimeRemainingRange": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "Type": "Target",
+                    "Range": 40
+                  }
                 ]
               },
               "Actions": [
                 {
+                  "Type": "StorePosition",
+                  "Slot": "BassPosition"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "BassFlight",
+                  "StartValueRange": [
+                    1.2,
+                    1.2
+                  ],
+                  "RestartValueRange": [
+                    1.2,
+                    1.2
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "BassFlight"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "BassFlight",
+                  "MaxValue": [
+                    1.2,
+                    1.2
+                  ],
+                  "SetValue": 1.2
+                },
+                {
                   "Type": "PlayAnimation",
                   "Slot": "Action",
                   "Animation": "Bass_Air"
-                },
-                {
-                  "Type": "Attack",
-                  "Attack": "Root_AH_Chicken_Chick_Boss_BassLeap",
-                  "SkipAiming": true,
-                  "LineOfSight": false,
-                  "AvoidFriendlyFire": false,
-                  "AttackPauseRange": [
-                    0,
-                    0
-                  ]
                 },
                 {
                   "Type": "TimerStart",
@@ -1767,7 +1790,7 @@
                 },
                 {
                   "Type": "State",
-                  "State": "Combat.BassTakeoff"
+                  "State": "Combat.BassAirborne"
                 }
               ],
               "BodyMotion": {
@@ -1779,8 +1802,7 @@
             },
             {
               "Sensor": {
-                "Type": "ReadPosition",
-                "Slot": "BassPosition",
+                "Type": "Target",
                 "Range": 40
               },
               "HeadMotion": {
@@ -1796,74 +1818,26 @@
         {
           "Sensor": {
             "Type": "State",
-            "State": "Combat.BassTakeoff"
-          },
-          "Instructions": [
-            {
-              "Sensor": {
-                "Type": "Not",
-                "Sensor": {
-                  "Type": "OnGround"
-                }
-              },
-              "Actions": [
-                {
-                  "Type": "State",
-                  "State": "Combat.BassAirborne"
-                }
-              ],
-              "BodyMotion": {
-                "Type": "Nothing"
-              },
-              "HeadMotion": {
-                "Type": "Nothing"
-              }
-            },
-            {
-              "Sensor": {
-                "Type": "Timer",
-                "Name": "BassFlightLimit",
-                "State": "Stopped",
-                "TimeRemainingRange": [
-                  0,
-                  0
-                ]
-              },
-              "Actions": [
-                {
-                  "Type": "Attack"
-                },
-                {
-                  "Type": "State",
-                  "State": "Combat.Cooldown"
-                }
-              ],
-              "BodyMotion": {
-                "Type": "Nothing"
-              },
-              "HeadMotion": {
-                "Type": "Nothing"
-              }
-            },
-            {
-              "BodyMotion": {
-                "Type": "Nothing"
-              },
-              "HeadMotion": {
-                "Type": "Nothing"
-              }
-            }
-          ]
-        },
-        {
-          "Sensor": {
-            "Type": "State",
             "State": "Combat.BassAirborne"
           },
           "Instructions": [
             {
               "Sensor": {
-                "Type": "OnGround"
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Timer",
+                    "Name": "BassFlight",
+                    "State": "Stopped",
+                    "TimeRemainingRange": [
+                      0,
+                      0
+                    ]
+                  },
+                  {
+                    "Type": "OnGround"
+                  }
+                ]
               },
               "Actions": [
                 {
@@ -1905,8 +1879,16 @@
               }
             },
             {
+              "Sensor": {
+                "Type": "ReadPosition",
+                "Slot": "BassPosition",
+                "UseMarkedTarget": false,
+                "Range": 80
+              },
               "BodyMotion": {
-                "Type": "Nothing"
+                "Type": "TameworkLeap",
+                "Duration": 1.2,
+                "Height": 4
               },
               "HeadMotion": {
                 "Type": "Nothing"

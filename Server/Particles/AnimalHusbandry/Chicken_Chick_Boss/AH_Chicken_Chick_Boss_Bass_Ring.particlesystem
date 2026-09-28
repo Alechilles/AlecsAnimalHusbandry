@@ -2,6 +2,12 @@
   "Spawners": [
     {
       "SpawnerId": "AH_Chicken_Chick_Boss_Bass_Ring"
+    },
+    {
+      "SpawnerId": "AH_Chicken_Chick_Boss_Bass_Rim",
+      "PositionOffset": {
+        "Y": 0.3
+      }
     }
   ]
 }

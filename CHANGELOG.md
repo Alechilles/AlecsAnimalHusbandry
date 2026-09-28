@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Lil Cluck now lands on the player's position captured at takeoff, with solid
+  terrain blocking the arc. Its landing shockwave is brighter and has a glowing rim.
+  Requires the matching Tamework development build with targeted leap movement.
+
 - Fixed Lil Cluck's leap losing almost all forward movement to horizontal
   resistance. Chicks now have longer peck reach and approach during the windup.
 
