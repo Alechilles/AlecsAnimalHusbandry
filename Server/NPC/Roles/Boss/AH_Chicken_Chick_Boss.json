@@ -89,6 +89,16 @@
       },
       "Instructions": [
         {
+          "Continue": true,
+          "Actions": [
+            {
+              "Type": "TameworkBossBar",
+              "Range": 40,
+              "Name": "server.npcRoles.AH_Chicken_Chick_Boss.name"
+            }
+          ]
+        },
+        {
           "Sensor": {
             "Type": "Not",
             "Sensor": {

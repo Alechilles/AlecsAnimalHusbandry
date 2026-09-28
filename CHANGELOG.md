@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added a native health bar for Lil Cluck and a hidden summon interaction: crouch
+  beside a wild chick and interact while holding a gold ingot.
 - Reworked Lil Cluck's shockwave into an expanding ring of feathers that follows
   the damage wave.
 
