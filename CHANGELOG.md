@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Lil Cluck no longer naturally regenerates health during combat; regeneration resumes after disengaging.
+
 - Increased Lil Cluck's jump and laser frequency. The laser is red, aims during its windup, and sweeps at 30 degrees per second.
 
 - Added Lil Cluck's Peep Show: a slow-turning, 10-second eye laser below half health.

@@ -63,6 +63,19 @@
       "Instructions": [
         {
           "Sensor": {
+            "Type": "Any",
+            "Once": true
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": true
+            }
+          ],
+          "Continue": true
+        },
+        {
+          "Sensor": {
             "Type": "Mob",
             "GetPlayers": true,
             "GetNPCs": false,
@@ -89,6 +102,19 @@
         "State": "Combat"
       },
       "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Any",
+            "Once": true
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": false
+            }
+          ],
+          "Continue": true
+        },
         {
           "Continue": true,
           "Actions": [
