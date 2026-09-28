@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Fixed temporary boss chicks crashing the world when their lifetime expired.
+
 - Added the manually spawned Lil Cluck boss, with sunglasses, a gold chain,
   three-hit pecks, a charge that stuns on wall impact, lobbed egg projectiles,
   temporary chasing chicks, and a jumpable shockwave below half health.
