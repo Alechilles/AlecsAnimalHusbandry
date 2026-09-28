@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Doubled Lil Cluck's attack damage, including exploding eggs and minion pecks.
+
 - Lil Cluck now lands on the player's position captured at takeoff, with solid
   terrain blocking the arc. Its landing shockwave is brighter and has a glowing rim.
   Requires the matching Tamework development build with targeted leap movement.
