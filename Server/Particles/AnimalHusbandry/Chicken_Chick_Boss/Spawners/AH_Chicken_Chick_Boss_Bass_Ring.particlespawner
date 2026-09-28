@@ -1,8 +1,8 @@
 {
-  "RenderMode": "BlendAdd",
+  "RenderMode": "BlendLinear",
   "ParticleRotationInfluence": "None",
   "LinearFiltering": true,
-  "LightInfluence": 0,
+  "LightInfluence": 0.15,
   "ParticleRotateWithSpawner": false,
   "MaxConcurrentParticles": 1,
   "ParticleLifeSpan": {
@@ -25,7 +25,7 @@
     }
   },
   "Particle": {
-    "Texture": "Particles/Textures/Basic/Ring4.png",
+    "Texture": "Particles/Textures/Circles/Explosion_Shockwave.png",
     "SoftParticles": "Disable",
     "ScaleRatioConstraint": "OneToOne",
     "InitialAnimationFrame": {
@@ -45,45 +45,58 @@
           "Max": 1
         }
       },
-      "Color": "#ffdc62",
-      "Opacity": 1
+      "Color": "#eee8d9",
+      "Opacity": 0.85
     },
     "Animation": {
       "0": {
         "Scale": {
           "X": {
-            "Min": 0.5,
-            "Max": 0.5
+            "Min": 0.25,
+            "Max": 0.25
           },
           "Y": {
-            "Min": 0.5,
-            "Max": 0.5
+            "Min": 0.25,
+            "Max": 0.25
           }
         },
-        "Opacity": 1
+        "Opacity": 0.85
       },
-      "95": {
-        "Opacity": 1,
+      "60": {
         "Scale": {
           "X": {
-            "Min": 5.725,
-            "Max": 5.725
+            "Min": 1.9,
+            "Max": 1.9
           },
           "Y": {
-            "Min": 5.725,
-            "Max": 5.725
+            "Min": 1.9,
+            "Max": 1.9
           }
-        }
+        },
+        "Opacity": 0.7
+      },
+      "90": {
+        "Scale": {
+          "X": {
+            "Min": 2.725,
+            "Max": 2.725
+          },
+          "Y": {
+            "Min": 2.725,
+            "Max": 2.725
+          }
+        },
+        "Opacity": 0.45
       },
       "100": {
         "Scale": {
           "X": {
-            "Min": 6,
-            "Max": 6
+            "Min": 3.0,
+            "Max": 3.0
           },
           "Y": {
-            "Min": 6,
-            "Max": 6
+            "Min": 3.0,
+            "Max": 3.0
           }
         },
         "Opacity": 0

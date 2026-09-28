@@ -1,0 +1,126 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": true,
+  "LightInfluence": 0.4,
+  "ParticleRotateWithSpawner": false,
+  "Shape": "Sphere",
+  "EmitOffset": {
+    "X": {
+      "Min": 1,
+      "Max": 1
+    },
+    "Z": {
+      "Min": 1,
+      "Max": 1
+    }
+  },
+  "UseEmitDirection": true,
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 7.857143,
+      "Max": 7.857143
+    }
+  },
+  "MaxConcurrentParticles": 64,
+  "ParticleLifeSpan": {
+    "Min": 1.4,
+    "Max": 1.4
+  },
+  "TotalParticles": {
+    "Min": 64,
+    "Max": 64
+  },
+  "SpawnBurst": true,
+  "SpawnRate": {
+    "Min": 64,
+    "Max": 64
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Smoke/Smoke_Smooth.png",
+    "SoftParticles": "Disable",
+    "ScaleRatioConstraint": "OneToOne",
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.6,
+          "Max": 0.9
+        },
+        "Y": {
+          "Min": 0.6,
+          "Max": 0.9
+        }
+      },
+      "Rotation": {
+        "Z": {
+          "Min": 0,
+          "Max": 360
+        }
+      },
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 3
+      },
+      "Color": "#b9ae99",
+      "Opacity": 0.5
+    },
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 0.65,
+            "Max": 0.65
+          },
+          "Y": {
+            "Min": 0.65,
+            "Max": 0.65
+          }
+        },
+        "Opacity": 0.35
+      },
+      "20": {
+        "Scale": {
+          "X": {
+            "Min": 0.9,
+            "Max": 0.9
+          },
+          "Y": {
+            "Min": 0.9,
+            "Max": 0.9
+          }
+        },
+        "Opacity": 0.5
+      },
+      "70": {
+        "Scale": {
+          "X": {
+            "Min": 1.2,
+            "Max": 1.2
+          },
+          "Y": {
+            "Min": 1.2,
+            "Max": 1.2
+          }
+        },
+        "Opacity": 0.35
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 1.5,
+            "Max": 1.5
+          },
+          "Y": {
+            "Min": 1.5,
+            "Max": 1.5
+          }
+        },
+        "Opacity": 0
+      }
+    },
+    "FrameSize": {
+      "Width": 64,
+      "Height": 64
+    }
+  }
+}

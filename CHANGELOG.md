@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Reworked Lil Cluck's shockwave into a pale pressure ring with spreading dust,
+  replacing the glowing gold rim.
+
 - Doubled Lil Cluck's attack damage, including exploding eggs and minion pecks.
 
 - Lil Cluck now lands on the player's position captured at takeoff, with solid
