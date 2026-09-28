@@ -2,8 +2,8 @@
 
 ## Unreleased
 
-- Reworked Lil Cluck's shockwave into a pale pressure ring with spreading dust,
-  replacing the glowing gold rim.
+- Reworked Lil Cluck's shockwave into an expanding ring of feathers that follows
+  the damage wave.
 
 - Doubled Lil Cluck's attack damage, including exploding eggs and minion pecks.
 

@@ -1,0 +1,83 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": false,
+  "LightInfluence": 0.6,
+  "ParticleRotateWithSpawner": false,
+  "Shape": "Sphere",
+  "EmitOffset": {
+    "X": {
+      "Min": 1,
+      "Max": 1
+    },
+    "Z": {
+      "Min": 1,
+      "Max": 1
+    }
+  },
+  "UseEmitDirection": true,
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 7.857143,
+      "Max": 7.857143
+    }
+  },
+  "MaxConcurrentParticles": 80,
+  "ParticleLifeSpan": {
+    "Min": 1.4,
+    "Max": 1.4
+  },
+  "TotalParticles": {
+    "Min": 80,
+    "Max": 80
+  },
+  "SpawnBurst": true,
+  "SpawnRate": {
+    "Min": 80,
+    "Max": 80
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Rnd/Feather.png",
+    "SoftParticles": "Disable",
+    "ScaleRatioConstraint": "OneToOne",
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.7,
+          "Max": 1.0
+        },
+        "Y": {
+          "Min": 0.7,
+          "Max": 1.0
+        }
+      },
+      "Rotation": {
+        "Z": {
+          "Min": 0,
+          "Max": 360
+        }
+      },
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 0
+      },
+      "Color": "#fff0bd",
+      "Opacity": 1
+    },
+    "Animation": {
+      "0": {
+        "Opacity": 1
+      },
+      "85": {
+        "Opacity": 1
+      },
+      "100": {
+        "Opacity": 0
+      }
+    },
+    "FrameSize": {
+      "Width": 32,
+      "Height": 32
+    }
+  }
+}
