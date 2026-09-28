@@ -232,6 +232,15 @@
                       {
                         "Type": "Target",
                         "Range": 12
+                      },
+                      {
+                        "Type": "Timer",
+                        "Name": "BassCooldown",
+                        "State": "Stopped",
+                        "TimeRemainingRange": [
+                          0,
+                          0
+                        ]
                       }
                     ]
                   },
@@ -1637,10 +1646,16 @@
           "Instructions": [
             {
               "Sensor": {
-                "Type": "Any",
+                "Type": "Target",
+                "Range": 40,
                 "Once": true
               },
+              "Continue": true,
               "Actions": [
+                {
+                  "Type": "StorePosition",
+                  "Slot": "BassPosition"
+                },
                 {
                   "Type": "PlayAnimation",
                   "Slot": "Action",
@@ -1671,8 +1686,7 @@
                   ],
                   "SetValue": 1
                 }
-              ],
-              "Continue": true
+              ]
             },
             {
               "Sensor": {
@@ -1688,41 +1702,213 @@
                 {
                   "Type": "PlayAnimation",
                   "Slot": "Action",
-                  "Animation": "Bass_Land"
+                  "Animation": "Bass_Air"
+                },
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_BassLeap",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
                 },
                 {
                   "Type": "TimerStart",
-                  "Name": "Beat",
+                  "Name": "BassCooldown",
                   "StartValueRange": [
-                    0.1,
-                    0.1
+                    13,
+                    13
                   ],
                   "RestartValueRange": [
-                    0.1,
-                    0.1
+                    13,
+                    13
                   ]
                 },
                 {
                   "Type": "TimerRestart",
-                  "Name": "Beat"
+                  "Name": "BassCooldown"
                 },
                 {
                   "Type": "TimerModify",
-                  "Name": "Beat",
+                  "Name": "BassCooldown",
                   "MaxValue": [
-                    0.1,
-                    0.1
+                    13,
+                    13
                   ],
-                  "SetValue": 0.1
+                  "SetValue": 13
                 },
+                {
+                  "Type": "TimerStart",
+                  "Name": "BassFlightLimit",
+                  "StartValueRange": [
+                    5,
+                    5
+                  ],
+                  "RestartValueRange": [
+                    5,
+                    5
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "BassFlightLimit"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "BassFlightLimit",
+                  "MaxValue": [
+                    5,
+                    5
+                  ],
+                  "SetValue": 5
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.BassTakeoff"
+                }
+              ],
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "ReadPosition",
+                "Slot": "BassPosition",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.BassTakeoff"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Not",
+                "Sensor": {
+                  "Type": "OnGround"
+                }
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.BassAirborne"
+                }
+              ],
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "BassFlightLimit",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "Attack"
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ],
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.BassAirborne"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "OnGround"
+              },
+              "Actions": [
                 {
                   "Type": "State",
                   "State": "Combat.BassImpact"
                 }
-              ]
+              ],
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "BassFlightLimit",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "Attack"
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ],
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
             },
             {
               "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
                 "Type": "Nothing"
               }
             }
@@ -1736,24 +1922,15 @@
           "Instructions": [
             {
               "Sensor": {
-                "Type": "And",
-                "Sensors": [
-                  {
-                    "Type": "Self",
-                    "Filters": []
-                  },
-                  {
-                    "Type": "Timer",
-                    "Name": "Beat",
-                    "State": "Stopped",
-                    "TimeRemainingRange": [
-                      0,
-                      0
-                    ]
-                  }
-                ]
+                "Type": "Self",
+                "Filters": []
               },
               "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Bass_Land"
+                },
                 {
                   "Type": "SpawnParticles",
                   "ParticleSystem": "AH_Chicken_Chick_Boss_Bass_Ring",

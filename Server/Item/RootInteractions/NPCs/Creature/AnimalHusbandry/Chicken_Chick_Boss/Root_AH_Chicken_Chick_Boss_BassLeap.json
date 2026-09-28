@@ -1,0 +1,23 @@
+{
+  "Interactions": [
+    {
+      "Type": "ApplyForce",
+      "Direction": {
+        "X": 0,
+        "Y": 1,
+        "Z": -0.55
+      },
+      "AdjustVertical": false,
+      "Force": 120,
+      "Duration": 0,
+      "WaitForGround": false,
+      "WaitForCollision": false,
+      "ChangeVelocityType": "Set"
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}

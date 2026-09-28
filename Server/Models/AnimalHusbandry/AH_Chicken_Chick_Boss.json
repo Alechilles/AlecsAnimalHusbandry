@@ -109,6 +109,15 @@
           "SoundEventId": "SFX_Chick_Alerted"
         }
       ]
+    },
+    "Bass_Air": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Bass_Air.blockyanim",
+          "Looping": true,
+          "BlendingDuration": 0.05
+        }
+      ]
     }
   }
 }

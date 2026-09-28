@@ -42,7 +42,7 @@
 <p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
 
 <H2>Chick Boss (Development Build)</H2>
-<p>Spawn Lil Cluck with <code>/npc spawn AH_Chicken_Chick_Boss</code>. This oversized chick wears sunglasses and a gold chain. Dodge three heavy pecks, bait its charge into a wall, and avoid marked eggs that burst into feathers or hatch chasing chicks. At half health, it adds a bass-drop shockwave that you can jump over. Hatchlings disappear after 12 seconds. The boss does not spawn naturally.</p>
+<p>Spawn Lil Cluck with <code>/npc spawn AH_Chicken_Chick_Boss</code>. This oversized chick wears sunglasses and a gold chain. Dodge three heavy pecks, bait its charge into a wall, and avoid marked eggs that burst into feathers or hatch chasing chicks. At half health, it crouches before leaping toward your last position and releases a jumpable shockwave on landing. The leap has a 13-second cooldown. Hatchlings peck with a visible windup and disappear after 12 seconds. The boss does not spawn naturally.</p>
 <p>Use the matching Tamework development build with projectile landing markers and impact NPC spawning for the complete fight. Released Tamework 4.2.0 does not include those egg features.</p>
 
 <H2>Adult Aging</H2>

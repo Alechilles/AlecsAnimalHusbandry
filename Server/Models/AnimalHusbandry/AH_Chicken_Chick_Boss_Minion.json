@@ -1,0 +1,15 @@
+{
+  "Parent": "Chick",
+  "AnimationSets": {
+    "Minion_Peck": {
+      "Animations": [
+        {
+          "Animation": "NPC/Flying_Critter/Sparrow/Animations/Attacks/Peck.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.03,
+          "Speed": 0.5
+        }
+      ]
+    }
+  }
+}
