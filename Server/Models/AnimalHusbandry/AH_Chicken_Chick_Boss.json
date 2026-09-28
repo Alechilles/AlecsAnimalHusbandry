@@ -6,7 +6,109 @@
   "MaxScale": 5,
   "IconProperties": {
     "Scale": 0.2,
-    "Translation": [ 0, 0 ],
-    "Rotation": [ -0.8, -40, 0 ]
+    "Translation": [
+      0,
+      0
+    ],
+    "Rotation": [
+      -0.8,
+      -40,
+      0
+    ]
+  },
+  "AnimationSets": {
+    "Peck_Windup": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Peck_Windup.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05,
+          "SoundEventId": "SFX_Chick_Alerted"
+        }
+      ]
+    },
+    "Peck": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Peck.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Peck_Recovery": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Peck_Recovery.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Charge_Windup": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Charge_Windup.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05,
+          "SoundEventId": "SFX_Chick_Alerted"
+        }
+      ]
+    },
+    "Charge": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Charge.blockyanim",
+          "Looping": true,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Stunned": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Stunned.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Egg_Lob": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Egg_Lob.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Bass_Windup": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Bass_Windup.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Bass_Land": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Bass_Land.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05
+        }
+      ]
+    },
+    "Phase_Transition": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Chick_Boss/Animations/Phase_Transition.blockyanim",
+          "Looping": false,
+          "BlendingDuration": 0.05,
+          "SoundEventId": "SFX_Chick_Alerted"
+        }
+      ]
+    }
   }
 }
