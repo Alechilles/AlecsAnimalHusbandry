@@ -247,7 +247,8 @@
             "Type": "Aim"
           },
           "BodyMotion": {
-            "Type": "MatchLook"
+            "Type": "Seek",
+            "StopDistance": 0.8
           }
         },
         {

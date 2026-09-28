@@ -2,13 +2,26 @@
   "Interactions": [
     {
       "Type": "ApplyForce",
-      "Direction": {
-        "X": 0,
-        "Y": 1,
-        "Z": -0.55
-      },
-      "AdjustVertical": false,
-      "Force": 120,
+      "Forces": [
+        {
+          "Direction": {
+            "X": 0,
+            "Y": 1,
+            "Z": 0
+          },
+          "AdjustVertical": false,
+          "Force": 105
+        },
+        {
+          "Direction": {
+            "X": 0,
+            "Y": 0,
+            "Z": -1
+          },
+          "AdjustVertical": false,
+          "Force": 1500
+        }
+      ],
       "Duration": 0,
       "WaitForGround": false,
       "WaitForCollision": false,

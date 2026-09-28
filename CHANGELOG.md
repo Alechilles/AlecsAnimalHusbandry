@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Fixed Lil Cluck's leap losing almost all forward movement to horizontal
+  resistance. Chicks now have longer peck reach and approach during the windup.
+
 - Lil Cluck now leaps toward the player before its landing shockwave, with a
   13-second cooldown between leaps. Its chicks now animate their peck attacks.
 
