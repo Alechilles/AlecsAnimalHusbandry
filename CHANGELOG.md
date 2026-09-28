@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added the manually spawned Lil Cluck boss, with sunglasses, a gold chain,
+  three-hit pecks, a charge that stuns on wall impact, lobbed egg projectiles,
+  temporary chasing chicks, and a jumpable shockwave below half health.
+  Requires the matching Tamework development build for egg markers and hatching.
+
 ## 3.2.0 - Command Flute Badges - 2026-09-23
 
 Requires Alec's Tamework `>=4.2.0 <5.0`.

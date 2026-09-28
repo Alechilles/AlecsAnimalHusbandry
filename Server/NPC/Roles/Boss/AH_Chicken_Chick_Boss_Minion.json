@@ -1,0 +1,142 @@
+{
+  "Type": "Generic",
+  "Appearance": "Chick",
+  "MaxHealth": 7,
+  "StartState": "Spawn",
+  "DefaultPlayerAttitude": "Hostile",
+  "DefaultNPCAttitude": "Neutral",
+  "DisableDamageGroups": [
+    "AH_Chicken_Chick_Boss"
+  ],
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 4.5,
+      "Gravity": 10,
+      "MaxFallSpeed": 30,
+      "Acceleration": 18,
+      "MaxRotationSpeed": 360,
+      "MaxClimbHeight": 1,
+      "MaxDropHeight": 4,
+      "RunThreshold": 0.5
+    }
+  ],
+  "NameTranslationKey": "server.npcRoles.AH_Chicken_Chick_Boss_Minion.name",
+  "Instructions": [
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Spawn"
+      },
+      "Instructions": [
+        {
+          "Actions": [
+            {
+              "Type": "TimerStart",
+              "Name": "Life",
+              "StartValueRange": [
+                12,
+                12
+              ],
+              "RestartValueRange": [
+                12,
+                12
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Life"
+            },
+            {
+              "Type": "TimerModify",
+              "Name": "Life",
+              "MaxValue": [
+                12,
+                12
+              ],
+              "SetValue": 12
+            },
+            {
+              "Type": "State",
+              "State": "Chase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Chase"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Timer",
+            "Name": "Life",
+            "State": "Stopped",
+            "TimeRemainingRange": [
+              0,
+              0
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "Despawn",
+              "Force": true
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Mob",
+            "GetPlayers": true,
+            "GetNPCs": false,
+            "Range": 1.4,
+            "LockOnTarget": true
+          },
+          "Actions": [
+            {
+              "Type": "Attack",
+              "Attack": "Root_AH_Chicken_Chick_Boss_MinionPeck",
+              "AttackPauseRange": [
+                1,
+                1
+              ],
+              "SkipAiming": true,
+              "LineOfSight": false,
+              "AvoidFriendlyFire": false
+            }
+          ],
+          "HeadMotion": {
+            "Type": "Aim"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        },
+        {
+          "Sensor": {
+            "Type": "Mob",
+            "GetPlayers": true,
+            "GetNPCs": false,
+            "Range": 24,
+            "LockOnTarget": true
+          },
+          "HeadMotion": {
+            "Type": "Aim"
+          },
+          "BodyMotion": {
+            "Type": "Seek",
+            "StopDistance": 0.8
+          }
+        },
+        {
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        }
+      ]
+    }
+  ]
+}

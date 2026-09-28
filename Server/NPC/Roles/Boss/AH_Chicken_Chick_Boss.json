@@ -1,0 +1,1919 @@
+{
+  "Type": "Generic",
+  "Appearance": "AH_Chicken_Chick_Boss",
+  "MaxHealth": 500,
+  "StartState": "Idle",
+  "DefaultPlayerAttitude": "Hostile",
+  "DefaultNPCAttitude": "Neutral",
+  "DisableDamageGroups": [
+    "AH_Chicken_Chick_Boss"
+  ],
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 5,
+      "Gravity": 10,
+      "MaxFallSpeed": 30,
+      "Acceleration": 18,
+      "MaxRotationSpeed": 360,
+      "MaxClimbHeight": 1,
+      "MaxDropHeight": 4,
+      "RunThreshold": 0.5
+    }
+  ],
+  "NameTranslationKey": "server.npcRoles.AH_Chicken_Chick_Boss.name",
+  "KnockbackScale": 0.15,
+  "BusyStates": [
+    "Combat"
+  ],
+  "ApplySeparation": false,
+  "StateTransitions": [
+    {
+      "States": [
+        {
+          "From": [
+            "Combat"
+          ],
+          "To": [
+            "Idle"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "Attack"
+        },
+        {
+          "Type": "PlayAnimation",
+          "Slot": "Action"
+        },
+        {
+          "Type": "ReleaseTarget"
+        }
+      ]
+    }
+  ],
+  "Instructions": [
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Idle"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Mob",
+            "GetPlayers": true,
+            "GetNPCs": false,
+            "Range": 24,
+            "LockOnTarget": true
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Combat.Choose"
+            }
+          ]
+        },
+        {
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Combat"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Not",
+            "Sensor": {
+              "Type": "Target",
+              "Range": 40
+            }
+          },
+          "Actions": [
+            {
+              "Type": "Attack"
+            },
+            {
+              "Type": "PlayAnimation",
+              "Slot": "Action"
+            },
+            {
+              "Type": "State",
+              "State": "Idle"
+            }
+          ],
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Choose"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Flag",
+                    "Name": "BassUnlocked",
+                    "Set": false
+                  },
+                  {
+                    "Type": "Self",
+                    "Filters": [
+                      {
+                        "Type": "Stat",
+                        "Stat": "Health",
+                        "StatTarget": "Value",
+                        "RelativeTo": "Health",
+                        "RelativeToTarget": "Max",
+                        "ValueRange": [
+                          0,
+                          0.5
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "SetFlag",
+                  "Name": "BassUnlocked",
+                  "SetTo": true
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Phase"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 18
+              },
+              "Type": "Random",
+              "ExecuteFor": [
+                0.1,
+                0.1
+              ],
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Target",
+                    "Range": 4.5
+                  },
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Combat.Peck1Aim"
+                    }
+                  ],
+                  "Weight": 3
+                },
+                {
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Target",
+                        "Range": 18
+                      },
+                      {
+                        "Type": "Not",
+                        "Sensor": {
+                          "Type": "Target",
+                          "Range": 5
+                        }
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Combat.Charge"
+                    }
+                  ],
+                  "Weight": 2
+                },
+                {
+                  "Sensor": {
+                    "Type": "Target",
+                    "Range": 18
+                  },
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Combat.Egg1Aim"
+                    }
+                  ],
+                  "Weight": 2
+                },
+                {
+                  "Sensor": {
+                    "Type": "And",
+                    "Sensors": [
+                      {
+                        "Type": "Flag",
+                        "Name": "BassUnlocked",
+                        "Set": true
+                      },
+                      {
+                        "Type": "Target",
+                        "Range": 12
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": "Combat.BassWindup"
+                    }
+                  ],
+                  "Weight": 2
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "Seek",
+                "StopDistance": 12,
+                "SlowDownDistance": 14
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Phase"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Phase_Transition"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    1.4,
+                    1.4
+                  ],
+                  "RestartValueRange": [
+                    1.4,
+                    1.4
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    1.4,
+                    1.4
+                  ],
+                  "SetValue": 1.4
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.BassWindup"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck1Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "Actions": [
+                {
+                  "Type": "StorePosition",
+                  "Slot": "PeckPosition"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck_Windup"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.65,
+                    0.65
+                  ],
+                  "RestartValueRange": [
+                    0.65,
+                    0.65
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.65,
+                    0.65
+                  ],
+                  "SetValue": 0.65
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck1Windup"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck1Windup"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck"
+                },
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_Peck",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.25,
+                    0.25
+                  ],
+                  "RestartValueRange": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.25,
+                    0.25
+                  ],
+                  "SetValue": 0.25
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck1Hit"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "ReadPosition",
+                "Slot": "PeckPosition",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck1Hit"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck2Aim"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck2Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "Actions": [
+                {
+                  "Type": "StorePosition",
+                  "Slot": "PeckPosition"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck_Windup"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.65,
+                    0.65
+                  ],
+                  "RestartValueRange": [
+                    0.65,
+                    0.65
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.65,
+                    0.65
+                  ],
+                  "SetValue": 0.65
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck2Windup"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck2Windup"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck"
+                },
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_Peck",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.25,
+                    0.25
+                  ],
+                  "RestartValueRange": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.25,
+                    0.25
+                  ],
+                  "SetValue": 0.25
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck2Hit"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "ReadPosition",
+                "Slot": "PeckPosition",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck2Hit"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck3Aim"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck3Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "Actions": [
+                {
+                  "Type": "StorePosition",
+                  "Slot": "PeckPosition"
+                },
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck_Windup"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.65,
+                    0.65
+                  ],
+                  "RestartValueRange": [
+                    0.65,
+                    0.65
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.65,
+                    0.65
+                  ],
+                  "SetValue": 0.65
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck3Windup"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck3Windup"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck"
+                },
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_PeckHeavy",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.25,
+                    0.25
+                  ],
+                  "RestartValueRange": [
+                    0.25,
+                    0.25
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.25,
+                    0.25
+                  ],
+                  "SetValue": 0.25
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Peck3Hit"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "ReadPosition",
+                "Slot": "PeckPosition",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Peck3Hit"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.PeckRecovery"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              },
+              "HeadMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.PeckRecovery"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Peck_Recovery"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    1.6,
+                    1.6
+                  ],
+                  "RestartValueRange": [
+                    1.6,
+                    1.6
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    1.6,
+                    1.6
+                  ],
+                  "SetValue": 1.6
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Charge"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "TimerStart",
+                  "Name": "ChargeLimit",
+                  "StartValueRange": [
+                    6,
+                    6
+                  ],
+                  "RestartValueRange": [
+                    6,
+                    6
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "ChargeLimit"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "ChargeLimit",
+                  "MaxValue": [
+                    6,
+                    6
+                  ],
+                  "SetValue": 6
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "ChargeLimit",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "Continue": true,
+              "BodyMotion": {
+                "Type": "Charge",
+                "ClearOnceOnStateChange": true,
+                "RelativeTurnSpeed": 1,
+                "LockedOnToleranceAngle": 12,
+                "LockedOnDurationRange": [
+                  0.25,
+                  0.25
+                ],
+                "WindingUpDurationRange": [
+                  1.1,
+                  1.1
+                ],
+                "PostChargeDurationRange": [
+                  0.3,
+                  0.3
+                ],
+                "WindingUpUninterruptable": true,
+                "WindingUpRelativeTurnSpeed": 0,
+                "ChargeRelativeSpeed": 0,
+                "ChargeDistanceRange": [
+                  15,
+                  18
+                ],
+                "ChargeAbsoluteSpeed": 14,
+                "ChargeAcceleration": 80,
+                "EntityStopsCharge": false,
+                "RepeatCollisionIgnoreDuration": 2,
+                "PlayerCollisionInteraction": "Root_AH_Chicken_Chick_Boss_ChargeDamage",
+                "KnockbackThreshold": 12
+              }
+            },
+            {
+              "Sensor": {
+                "Type": "ChargeState",
+                "States": [
+                  "WindingUp"
+                ],
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Charge_Windup"
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "ChargeState",
+                "States": [
+                  "Charging"
+                ],
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Charge"
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "ChargeState",
+                "States": [
+                  "Obstructed"
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Stunned"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "ChargeState",
+                "States": [
+                  "Finished",
+                  "EntityHit",
+                  "Knockback"
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Stunned"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Stunned"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    2.2,
+                    2.2
+                  ],
+                  "RestartValueRange": [
+                    2.2,
+                    2.2
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    2.2,
+                    2.2
+                  ],
+                  "SetValue": 2.2
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg1Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 25
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Egg_Lob"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.4,
+                    0.4
+                  ],
+                  "RestartValueRange": [
+                    0.4,
+                    0.4
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.4,
+                    0.4
+                  ],
+                  "SetValue": 0.4
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg1Launch"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg1Launch"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_EggBurst",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.5,
+                    0.5
+                  ],
+                  "RestartValueRange": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.5,
+                    0.5
+                  ],
+                  "SetValue": 0.5
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg1Recover"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg1Recover"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg2Aim"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg2Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 25
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Egg_Lob"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.4,
+                    0.4
+                  ],
+                  "RestartValueRange": [
+                    0.4,
+                    0.4
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.4,
+                    0.4
+                  ],
+                  "SetValue": 0.4
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg2Launch"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg2Launch"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_EggHatch",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.5,
+                    0.5
+                  ],
+                  "RestartValueRange": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.5,
+                    0.5
+                  ],
+                  "SetValue": 0.5
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg2Recover"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg2Recover"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg3Aim"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg3Aim"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 25
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Egg_Lob"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.4,
+                    0.4
+                  ],
+                  "RestartValueRange": [
+                    0.4,
+                    0.4
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.4,
+                    0.4
+                  ],
+                  "SetValue": 0.4
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg3Launch"
+                }
+              ]
+            },
+            {
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg3Launch"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_EggBurst",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.5,
+                    0.5
+                  ],
+                  "RestartValueRange": [
+                    0.5,
+                    0.5
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.5,
+                    0.5
+                  ],
+                  "SetValue": 0.5
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.Egg3Recover"
+                }
+              ]
+            },
+            {
+              "Sensor": {
+                "Type": "Target",
+                "Range": 40
+              },
+              "HeadMotion": {
+                "Type": "Aim",
+                "Deflection": false
+              },
+              "BodyMotion": {
+                "Type": "MatchLook"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Egg3Recover"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.BassWindup"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Bass_Windup"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    1,
+                    1
+                  ],
+                  "RestartValueRange": [
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    1,
+                    1
+                  ],
+                  "SetValue": 1
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action",
+                  "Animation": "Bass_Land"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.1,
+                    0.1
+                  ],
+                  "RestartValueRange": [
+                    0.1,
+                    0.1
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.1,
+                    0.1
+                  ],
+                  "SetValue": 0.1
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.BassImpact"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.BassImpact"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "And",
+                "Sensors": [
+                  {
+                    "Type": "Self",
+                    "Filters": []
+                  },
+                  {
+                    "Type": "Timer",
+                    "Name": "Beat",
+                    "State": "Stopped",
+                    "TimeRemainingRange": [
+                      0,
+                      0
+                    ]
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "SpawnParticles",
+                  "ParticleSystem": "AH_Chicken_Chick_Boss_Bass_Ring",
+                  "PositionSource": "Sensor",
+                  "IsDetachedFromModel": true,
+                  "Scale": 1,
+                  "Offset": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "Attack",
+                  "Attack": "Root_AH_Chicken_Chick_Boss_BassDrop",
+                  "SkipAiming": true,
+                  "LineOfSight": false,
+                  "AvoidFriendlyFire": false,
+                  "AttackPauseRange": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    1.6,
+                    1.6
+                  ],
+                  "RestartValueRange": [
+                    1.6,
+                    1.6
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    1.6,
+                    1.6
+                  ],
+                  "SetValue": 1.6
+                },
+                {
+                  "Type": "State",
+                  "State": "Combat.BassRecovery"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.BassRecovery"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Cooldown"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "State",
+            "State": "Combat.Cooldown"
+          },
+          "Instructions": [
+            {
+              "Sensor": {
+                "Type": "Any",
+                "Once": true
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Action"
+                },
+                {
+                  "Type": "TimerStart",
+                  "Name": "Beat",
+                  "StartValueRange": [
+                    0.8,
+                    0.8
+                  ],
+                  "RestartValueRange": [
+                    0.8,
+                    0.8
+                  ]
+                },
+                {
+                  "Type": "TimerRestart",
+                  "Name": "Beat"
+                },
+                {
+                  "Type": "TimerModify",
+                  "Name": "Beat",
+                  "MaxValue": [
+                    0.8,
+                    0.8
+                  ],
+                  "SetValue": 0.8
+                }
+              ],
+              "Continue": true
+            },
+            {
+              "Sensor": {
+                "Type": "Timer",
+                "Name": "Beat",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": "Combat.Choose"
+                }
+              ]
+            },
+            {
+              "BodyMotion": {
+                "Type": "Nothing"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

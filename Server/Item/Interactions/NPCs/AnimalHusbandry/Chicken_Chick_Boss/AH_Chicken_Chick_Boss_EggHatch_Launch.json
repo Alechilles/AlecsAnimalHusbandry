@@ -1,0 +1,13 @@
+{
+  "Type": "TameworkLaunchProjectile",
+  "ProjectileId": "AH_Chicken_Chick_Boss_EggHatch",
+  "TargetSlot": "LockedTarget",
+  "LaunchPositionOffset": {
+    "X": 0,
+    "Y": 0,
+    "Z": -1
+  },
+  "TargetGroundOffset": 0.05,
+  "LandingMarkerParticleSystemId": "AH_Chicken_Chick_Boss_Egg_Marker",
+  "ImpactSpawnNpcRole": "AH_Chicken_Chick_Boss_Minion"
+}

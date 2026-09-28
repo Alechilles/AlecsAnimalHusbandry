@@ -1,0 +1,28 @@
+{
+  "Interactions": [
+    {
+      "Type": "Selector",
+      "RunTime": 1.4,
+      "Selector": {
+        "Id": "Donut",
+        "MinRadius": 1,
+        "MaxRadius": 12,
+        "Width": 0.9,
+        "Height": 0.55
+      },
+      "HitEntity": {
+        "Interactions": [
+          "AH_Chicken_Chick_Boss_Bass_Damage"
+        ]
+      },
+      "Effects": {
+        "WorldSoundEventId": "SFX_Golem_Earth_Stomp_Impact"
+      }
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}

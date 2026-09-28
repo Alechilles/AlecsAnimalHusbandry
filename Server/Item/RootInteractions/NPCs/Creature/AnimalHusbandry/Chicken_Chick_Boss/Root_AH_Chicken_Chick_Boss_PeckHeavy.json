@@ -1,0 +1,28 @@
+{
+  "Interactions": [
+    {
+      "Type": "Selector",
+      "RunTime": 0.12,
+      "Selector": {
+        "Id": "AOECylinder",
+        "Range": 1.2,
+        "Height": 2.5,
+        "Offset": {
+          "X": 0,
+          "Y": 0,
+          "Z": -2
+        }
+      },
+      "HitEntity": {
+        "Interactions": [
+          "AH_Chicken_Chick_Boss_PeckHeavy_Damage"
+        ]
+      }
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}

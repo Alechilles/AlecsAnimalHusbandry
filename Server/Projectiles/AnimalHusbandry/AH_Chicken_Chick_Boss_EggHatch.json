@@ -1,0 +1,26 @@
+{
+  "Appearance": "AH_Chicken_Chick_Boss_Egg",
+  "Radius": 0.2,
+  "Height": 0,
+  "HorizontalCenterShot": 0,
+  "VerticalCenterShot": 0,
+  "DepthShot": 0,
+  "PitchAdjustShot": false,
+  "MuzzleVelocity": 18,
+  "TerminalVelocity": 60,
+  "Gravity": 14,
+  "Damage": 0,
+  "DeathEffectsOnHit": true,
+  "TimeToLive": 6,
+  "DeadTime": 0,
+  "DeadTimeMiss": 0,
+  "SticksVertically": false,
+  "ImpactSlowdown": 0,
+  "DeathParticles": {
+    "SystemId": "AH_Chicken_Chick_Boss_Feathers"
+  },
+  "MissParticles": {
+    "SystemId": "AH_Chicken_Chick_Boss_Feathers"
+  },
+  "DeathSoundEventId": "SFX_Egg_Hit"
+}
