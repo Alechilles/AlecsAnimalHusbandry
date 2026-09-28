@@ -1040,6 +1040,53 @@
   },
   "Instructions": [
     {
+      "$Comment": "Disable natural health regeneration while engaged; restore it after disengaging.",
+      "Continue": true,
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Or",
+                "Sensors": [
+                  {
+                    "Type": "State",
+                    "State": "Defend"
+                  },
+                  {
+                    "Type": "State",
+                    "State": "Aggressive"
+                  }
+                ]
+              },
+              {
+                "Type": "Target",
+                "TargetSlot": "LockedTarget"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": false
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "$Comment": "Validation-only state setters (disabled).",
       "Enabled": false,
       "Actions": [

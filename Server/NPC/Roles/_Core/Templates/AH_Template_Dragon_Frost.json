@@ -740,6 +740,48 @@
   },
   "Instructions": [
     {
+      "$Comment": "Disable natural health regeneration while engaged; restore it after disengaging.",
+      "Continue": true,
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Or",
+            "Sensors": [
+              {
+                "Type": "State",
+                "State": "Combat"
+              },
+              {
+                "Type": "State",
+                "State": "Search"
+              },
+              {
+                "Type": "State",
+                "State": "Alerted"
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": false
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "Actions": [
+            {
+              "Type": "SetHealthRegen",
+              "EnableRegen": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Continue": true,
       "Sensor": {
         "Type": "Leash",
