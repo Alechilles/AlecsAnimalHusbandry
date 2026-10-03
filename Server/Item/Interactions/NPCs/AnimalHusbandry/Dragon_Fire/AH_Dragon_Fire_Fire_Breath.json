@@ -142,6 +142,45 @@
           }
         }
       ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "SpawnDeployableAtLocation",
+          "Config": {
+            "Type": "Aoe",
+            "Id": "AHDragonFireScorchedGround",
+            "Shape": "Cylinder",
+            "LiveDuration": 6,
+            "MaxLiveCount": 3,
+            "Model": "Deployable_Fire_Trap",
+            "ModelScale": 1,
+            "StartRadius": 2,
+            "EndRadius": 4,
+            "Height": 2,
+            "RadiusChangeTime": 3,
+            "DamageInterval": 1,
+            "DamageAmount": 4,
+            "DamageCause": "Fire",
+            "ApplyEffects": [
+              "AH_Dragon_Fire_Burning"
+            ],
+            "Invulnerable": true,
+            "AttackOwner": false,
+            "AttackTeam": false
+          },
+          "Offset": {
+            "X": 0,
+            "Y": 0,
+            "Z": -6
+          },
+          "OffsetRotationMode": "Yaw"
+        }
+      ]
     }
   ]
 }

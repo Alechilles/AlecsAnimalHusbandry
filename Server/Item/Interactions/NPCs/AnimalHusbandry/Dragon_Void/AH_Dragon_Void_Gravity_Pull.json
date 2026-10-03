@@ -1,0 +1,49 @@
+{
+  "Type": "Simple",
+  "$Comment": "Inhale: drags everything in a long cone toward the dragon's jaws.",
+  "Effects": {
+    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+    "ItemAnimationId": "VoidBolt",
+    "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar",
+    "Particles": [
+      {
+        "TargetEntityPart": "Entity",
+        "TargetNodeName": "Snout",
+        "SystemId": "AH_Dragon_Void_Void_Bolt_Charging",
+        "DetachedFromModel": false,
+        "PositionOffset": {
+          "Y": 0,
+          "Z": 0.35
+        },
+        "Scale": 1.2
+      }
+    ]
+  },
+  "RunTime": 0.45,
+  "Next": {
+    "Type": "Selector",
+    "RunTime": 0.15,
+    "Selector": {
+      "Id": "Horizontal",
+      "Direction": "ToLeft",
+      "TestLineOfSight": true,
+      "ExtendTop": 2.5,
+      "ExtendBottom": 2.5,
+      "StartDistance": 3,
+      "EndDistance": 16,
+      "Length": 70,
+      "RollOffset": 0.0,
+      "YawStartOffset": -35.0,
+      "PitchOffset": 0.0
+    },
+    "HitEntity": {
+      "Interactions": [
+        "AH_Dragon_Void_Gravity_Pull_Damage"
+      ]
+    },
+    "Next": {
+      "Type": "Simple",
+      "RunTime": 0.55
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "None",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 1,
+  "ParticleLifeSpan": {
+    "Min": 2.8,
+    "Max": 2.8
+  },
+  "TotalParticles": {
+    "Min": 1,
+    "Max": 1
+  },
+  "SpawnBurst": true,
+  "SpawnRate": {
+    "Min": 1,
+    "Max": 1
+  },
+  "EmitOffset": {
+    "Y": {
+      "Min": 0.07,
+      "Max": 0.07
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Ring4.png",
+    "ScaleRatioConstraint": "OneToOne",
+    "InitialAnimationFrame": {
+      "Rotation": {
+        "X": {
+          "Min": 90,
+          "Max": 90
+        }
+      },
+      "Scale": {
+        "X": {
+          "Min": 1,
+          "Max": 1
+        },
+        "Y": {
+          "Min": 1,
+          "Max": 1
+        }
+      },
+      "Color": "#ff5a1e",
+      "Opacity": 1
+    },
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 1.1,
+            "Max": 1.1
+          },
+          "Y": {
+            "Min": 1.1,
+            "Max": 1.1
+          }
+        },
+        "Opacity": 1
+      },
+      "95": {
+        "Opacity": 1
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 1.1,
+            "Max": 1.1
+          },
+          "Y": {
+            "Min": 1.1,
+            "Max": 1.1
+          }
+        },
+        "Opacity": 0
+      }
+    }
+  }
+}

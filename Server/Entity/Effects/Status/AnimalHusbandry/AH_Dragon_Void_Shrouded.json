@@ -1,0 +1,14 @@
+{
+  "Name": "Shrouded",
+  "StatusEffectIcon": "UI/Custom/AlecsAnimalHusbandry/AvatarFlightIcons/VoidBreath.png",
+  "ApplicationEffects": {
+    "ScreenEffect": "ScreenEffects/AH_Void_Shroud.png",
+    "EntityBottomTint": "#1a0033",
+    "EntityTopTint": "#5b2a8c"
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 4
+}

@@ -7,7 +7,10 @@
         "Type": "TimeSinceLastUsed",
         "Curve": {
           "ResponseCurve": "Linear",
-          "XRange": [ 0, 2 ]
+          "XRange": [
+            0,
+            2
+          ]
         }
       },
       {
@@ -18,7 +21,10 @@
     ],
     "MinRunUtility": 0.5,
     "MinActionUtility": 0.1,
-    "PredictabilityRange": [ 0.75, 0.95 ],
+    "PredictabilityRange": [
+      0.75,
+      0.95
+    ],
     "AvailableActions": {
       "SelectTarget": {
         "Type": "SelectBasicAttackTarget",
@@ -45,14 +51,20 @@
             "Type": "TargetDistance",
             "Curve": {
               "ResponseCurve": "SimpleDescendingLogistic",
-              "XRange": [ 0, 36 ]
+              "XRange": [
+                0,
+                36
+              ]
             }
           },
           {
             "Type": "TimeSinceLastUsed",
             "Curve": {
               "ResponseCurve": "Linear",
-              "XRange": [ 15, 30 ]
+              "XRange": [
+                15,
+                30
+              ]
             }
           },
           {
@@ -74,14 +86,20 @@
             "Type": "TargetDistance",
             "Curve": {
               "ResponseCurve": "SimpleDescendingLogistic",
-              "XRange": [ 0, 28 ]
+              "XRange": [
+                0,
+                28
+              ]
             }
           },
           {
             "Type": "TimeSinceLastUsed",
             "Curve": {
               "ResponseCurve": "Linear",
-              "XRange": [ 12, 20 ]
+              "XRange": [
+                12,
+                20
+              ]
             }
           },
           {
@@ -98,8 +116,14 @@
         "SubState": "Default",
         "Ability": "Root_NPC_AH_Dragon_Frost_Bite",
         "WeightCoefficient": 3,
-        "AttackDistanceRange": [ 2.5, 4.5 ],
-        "PostExecuteDistanceRange": [ 3.5, 3.5 ],
+        "AttackDistanceRange": [
+          2.5,
+          4.5
+        ],
+        "PostExecuteDistanceRange": [
+          3.5,
+          3.5
+        ],
         "FailureTimeout": 4,
         "RequireAiming": true,
         "Conditions": [
@@ -107,14 +131,20 @@
             "Type": "TargetDistance",
             "Curve": {
               "ResponseCurve": "SimpleLogistic",
-              "XRange": [ 0, 6 ]
+              "XRange": [
+                0,
+                6
+              ]
             }
           },
           {
             "Type": "TimeSinceLastUsed",
             "Curve": {
               "ResponseCurve": "Linear",
-              "XRange": [ 10, 20 ]
+              "XRange": [
+                10,
+                20
+              ]
             }
           }
         ]
@@ -126,8 +156,14 @@
         "SubState": "Default",
         "Ability": "Root_NPC_AH_Dragon_Frost_Freezing_Breath",
         "WeightCoefficient": 4,
-        "AttackDistanceRange": [ 3, 9 ],
-        "PostExecuteDistanceRange": [ 5, 5 ],
+        "AttackDistanceRange": [
+          3,
+          9
+        ],
+        "PostExecuteDistanceRange": [
+          5,
+          5
+        ],
         "FailureTimeout": 5,
         "RequireAiming": true,
         "Conditions": [
@@ -135,14 +171,60 @@
             "Type": "TargetDistance",
             "Curve": {
               "ResponseCurve": "SimpleLogistic",
-              "XRange": [ 0, 10 ]
+              "XRange": [
+                0,
+                10
+              ]
             }
           },
           {
             "Type": "TimeSinceLastUsed",
             "Curve": {
               "ResponseCurve": "Linear",
-              "XRange": [ 10, 20 ]
+              "XRange": [
+                10,
+                20
+              ]
+            }
+          }
+        ]
+      },
+      "GroundIcyWind": {
+        "Type": "Ability",
+        "Description": "Blast nearby targets away with a chilling wing gust.",
+        "Target": "Hostile",
+        "SubState": "Default",
+        "Ability": "Root_NPC_AH_Dragon_Frost_Icy_Wind",
+        "WeightCoefficient": 3,
+        "AttackDistanceRange": [
+          0,
+          7
+        ],
+        "PostExecuteDistanceRange": [
+          4,
+          4
+        ],
+        "FailureTimeout": 5,
+        "RequireAiming": true,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleLogistic",
+              "XRange": [
+                0,
+                8
+              ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [
+                12,
+                22
+              ]
             }
           }
         ]
@@ -151,25 +233,36 @@
     "ActionSets": {
       "Default": {
         "BasicAttacks": {
-          "Attacks": [ "Root_NPC_AH_Dragon_Frost_Attack" ],
+          "Attacks": [
+            "Root_NPC_AH_Dragon_Frost_Attack"
+          ],
           "Randomise": false,
           "MaxRange": 5.25,
           "Timeout": 2,
-          "CooldownRange": [ 1.5, 2.5 ]
+          "CooldownRange": [
+            1.5,
+            2.5
+          ]
         },
         "Actions": [
           "SelectTarget",
           "GroundFreezingBreath",
-          "GroundBite"
+          "GroundBite",
+          "GroundIcyWind"
         ]
       },
       "AirRanged": {
         "BasicAttacks": {
-          "Attacks": [ "Root_NPC_AH_Dragon_Frost_Frost_Bolt" ],
+          "Attacks": [
+            "Root_NPC_AH_Dragon_Frost_Frost_Bolt"
+          ],
           "Randomise": false,
           "MaxRange": 28,
           "Timeout": 2.5,
-          "CooldownRange": [ 1, 3 ]
+          "CooldownRange": [
+            1,
+            3
+          ]
         },
         "Actions": [
           "SelectTarget",

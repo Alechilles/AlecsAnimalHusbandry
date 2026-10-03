@@ -142,6 +142,45 @@
           }
         }
       ]
+    },
+    {
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "SpawnDeployableAtLocation",
+          "Config": {
+            "Type": "Aoe",
+            "Id": "AHDragonFrostFrozenGround",
+            "Shape": "Cylinder",
+            "LiveDuration": 6,
+            "MaxLiveCount": 3,
+            "Model": "AH_Dragon_Frost_Frozen_Ground",
+            "ModelScale": 1,
+            "StartRadius": 2.5,
+            "EndRadius": 4,
+            "Height": 2,
+            "RadiusChangeTime": 3,
+            "DamageInterval": 1,
+            "DamageAmount": 2,
+            "DamageCause": "Ice",
+            "ApplyEffects": [
+              "AH_Dragon_Frost_Chilled"
+            ],
+            "Invulnerable": true,
+            "AttackOwner": false,
+            "AttackTeam": false
+          },
+          "Offset": {
+            "X": 0,
+            "Y": 0,
+            "Z": -6
+          },
+          "OffsetRotationMode": "Yaw"
+        }
+      ]
     }
   ]
 }

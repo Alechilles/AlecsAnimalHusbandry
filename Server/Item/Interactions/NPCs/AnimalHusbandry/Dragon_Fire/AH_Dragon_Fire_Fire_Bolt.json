@@ -42,7 +42,15 @@
       "Effects": {
         "WorldSoundEventId": "SFX_AH_Dragon_Fire_Fire_Bolt_Launch"
       },
-      "Tags": {}
+      "Tags": {},
+      "LingeringHazard": {
+        "Radius": 3,
+        "DurationSeconds": 5,
+        "TickIntervalSeconds": 1,
+        "DamagePerTick": 4,
+        "ExcludeSource": true,
+        "EffectId": "AH_Dragon_Fire_Burning"
+      }
     },
     {
       "Type": "Simple",
