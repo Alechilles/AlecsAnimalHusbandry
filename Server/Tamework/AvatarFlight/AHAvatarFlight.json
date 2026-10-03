@@ -73,7 +73,9 @@
   },
   "AbilityAnimation": {
     "Slot": "Movement",
-    "UpwardBoostAnimation": "IcyWind",
+    "UpwardBoostAnimation": "BoostUp",
+    "ForwardBoostAnimation": "BoostForward",
+    "ForwardBoostDurationMs": 800.0,
     "AirbrakeAnimation": "IcyWind"
   },
   "RiderVisual": {
