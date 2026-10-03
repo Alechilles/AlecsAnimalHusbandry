@@ -1,0 +1,17 @@
+{
+  "ApplicationEffects": {
+    "EntityBottomTint": "#12022a",
+    "EntityTopTint": "#b455ff",
+    "ModelVFXId": "AH_Dragon_Void_Rift_Out",
+    "Particles": [
+      {
+        "SystemId": "VoidImpact"
+      }
+    ]
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": false,
+  "Duration": 0.8
+}

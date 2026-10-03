@@ -2206,6 +2206,35 @@
                       ]
                     },
                     {
+                      "$Comment": "AH signature attack: Void Spawn. Landing for the ground phase tears rifts that summon void creatures.",
+                      "Sensor": {
+                        "Type": "MotionController",
+                        "MotionController": "Walk"
+                      },
+                      "Actions": [
+                        {
+                          "Type": "Spawn",
+                          "Kind": "Spawn_Void",
+                          "CountRange": [
+                            2,
+                            3
+                          ],
+                          "DelayRange": [
+                            0,
+                            0
+                          ],
+                          "SpawnAngle": 360
+                        },
+                        {
+                          "Type": "ResetSearchRays"
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".Default"
+                        }
+                      ]
+                    },
+                    {
                       "Sensor": {
                         "Type": "MotionController",
                         "MotionController": "Walk"
@@ -2747,6 +2776,125 @@
                       "AttackPauseRange": [
                         1.5,
                         2.5
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "AH signature attack: Rift Step, part 1. Dissolve in place.",
+                  "ActionsBlocking": true,
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".RiftStepOut",
+                    "IgnoreMissingSetState": true
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "Any"
+                      },
+                      "BodyMotion": {
+                        "Type": "Nothing"
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "ApplyEntityEffect",
+                          "EntityEffect": "AH_Dragon_Void_Rift_Out",
+                          "UseTarget": false
+                        },
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            0.4,
+                            0.4
+                          ]
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".RiftStepIn"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "AH signature attack: Rift Step, part 2. Reappear beside the target and bite.",
+                  "ActionsBlocking": true,
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".RiftStepIn",
+                    "IgnoreMissingSetState": true
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "Target",
+                        "Range": {
+                          "Compute": "AlertedRange"
+                        }
+                      },
+                      "HeadMotion": {
+                        "Type": "Watch"
+                      },
+                      "BodyMotion": {
+                        "Type": "Teleport",
+                        "OffsetRange": [
+                          4,
+                          5
+                        ],
+                        "OffsetSector": 360,
+                        "Orientation": "TowardsTarget"
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            0.25,
+                            0.25
+                          ]
+                        },
+                        {
+                          "Type": "ApplyEntityEffect",
+                          "EntityEffect": "AH_Dragon_Void_Rift_In",
+                          "UseTarget": false
+                        },
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            0.35,
+                            0.35
+                          ]
+                        },
+                        {
+                          "Type": "Attack",
+                          "Attack": "Root_NPC_AH_Dragon_Void_Bite",
+                          "AttackPauseRange": [
+                            0.5,
+                            0.5
+                          ]
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".Default"
+                        }
+                      ]
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "Any"
+                      },
+                      "Actions": [
+                        {
+                          "Type": "ApplyEntityEffect",
+                          "EntityEffect": "AH_Dragon_Void_Rift_In",
+                          "UseTarget": false
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".Default"
+                        }
                       ]
                     }
                   ]

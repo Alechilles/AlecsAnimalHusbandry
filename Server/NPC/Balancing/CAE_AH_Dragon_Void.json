@@ -228,6 +228,36 @@
             }
           }
         ]
+      },
+      "GroundRiftStep": {
+        "Type": "State",
+        "Description": "Vanish and reappear beside a distant target, then bite.",
+        "Target": "Hostile",
+        "State": "Combat",
+        "SubState": "RiftStepOut",
+        "WeightCoefficient": 3,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleLogistic",
+              "XRange": [
+                0,
+                30
+              ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [
+                14,
+                24
+              ]
+            }
+          }
+        ]
       }
     },
     "ActionSets": {
@@ -248,7 +278,8 @@
           "SelectTarget",
           "GroundVoidBreath",
           "GroundBite",
-          "GroundGravityPull"
+          "GroundGravityPull",
+          "GroundRiftStep"
         ]
       },
       "AirRanged": {

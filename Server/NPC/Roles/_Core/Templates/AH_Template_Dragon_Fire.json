@@ -2206,6 +2206,42 @@
                       ]
                     },
                     {
+                      "$Comment": "AH signature attack: Dive Bomb. Landing for the ground phase slams down in a ring of fire.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "MotionController",
+                            "MotionController": "Walk"
+                          },
+                          {
+                            "Type": "Target",
+                            "Range": 40
+                          }
+                        ]
+                      },
+                      "Actions": [
+                        {
+                          "Type": "Attack",
+                          "Attack": "Root_NPC_AH_Dragon_Fire_Dive_Bomb",
+                          "SkipAiming": true,
+                          "LineOfSight": false,
+                          "AvoidFriendlyFire": false,
+                          "AttackPauseRange": [
+                            0,
+                            0
+                          ]
+                        },
+                        {
+                          "Type": "ResetSearchRays"
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".Default"
+                        }
+                      ]
+                    },
+                    {
                       "Sensor": {
                         "Type": "MotionController",
                         "MotionController": "Walk"
