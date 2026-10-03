@@ -2042,6 +2042,11 @@
                           },
                           {
                             "Type": "State",
+                            "State": ".AirIcyWind",
+                            "IgnoreMissingSetState": true
+                          },
+                          {
+                            "Type": "State",
                             "State": ".AirBreathIngress",
                             "IgnoreMissingSetState": true
                           },
@@ -2478,6 +2483,96 @@
                         {
                           "Type": "Timeout",
                           "Delay": [ 0.25, 0.5 ]
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".AirRecovery"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "AH signature attack: Icy Wind. Hover facing the target and blow a sustained gale.",
+                  "Enabled": {
+                    "Compute": "UseHealthPhaseFlight"
+                  },
+                  "ActionsBlocking": true,
+                  "Sensor": {
+                    "Type": "State",
+                    "State": ".AirIcyWind",
+                    "IgnoreMissingSetState": true
+                  },
+                  "Instructions": [
+                    {
+                      "Sensor": {
+                        "Type": "Target",
+                        "Range": {
+                          "Compute": "AlertedRange"
+                        }
+                      },
+                      "HeadMotion": {
+                        "Type": "Aim",
+                        "Spread": 0,
+                        "HitProbability": 1,
+                        "Deflection": true,
+                        "RelativeTurnSpeed": {
+                          "Compute": "CombatRelativeTurnSpeed"
+                        }
+                      },
+                      "BodyMotion": {
+                        "Type": "TameworkFlyingOrbit",
+                        "Mode": "FACE_TARGET",
+                        "DesiredAltitudeRange": {
+                          "Compute": "AirCombatAltitudeRange"
+                        },
+                        "ClimbRelativeSpeed": {
+                          "Compute": "AirCombatClimbRelativeSpeed"
+                        },
+                        "SinkRelativeSpeed": {
+                          "Compute": "AirCombatSinkRelativeSpeed"
+                        }
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "Attack",
+                          "Attack": "Root_NPC_AH_Dragon_Frost_Icy_Wind",
+                          "BallisticMode": "Short",
+                          "AimingTimeRange": [
+                            0.25,
+                            1
+                          ],
+                          "AttackPauseRange": [
+                            10,
+                            10
+                          ]
+                        },
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            4.5,
+                            4.5
+                          ]
+                        },
+                        {
+                          "Type": "State",
+                          "State": ".AirRecovery"
+                        }
+                      ]
+                    },
+                    {
+                      "Sensor": {
+                        "Type": "Any"
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "Timeout",
+                          "Delay": [
+                            0.25,
+                            0.5
+                          ]
                         },
                         {
                           "Type": "State",

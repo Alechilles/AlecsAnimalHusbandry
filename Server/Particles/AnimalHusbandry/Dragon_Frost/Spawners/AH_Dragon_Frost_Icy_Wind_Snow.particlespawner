@@ -1,0 +1,119 @@
+{
+  "RenderMode": "BlendAdd",
+  "EmitOffset": {
+    "X": {
+      "Min": -2.8,
+      "Max": 2.8
+    },
+    "Y": {
+      "Min": -2.8,
+      "Max": 2.8
+    },
+    "Z": {
+      "Min": 0,
+      "Max": 1
+    }
+  },
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": true,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 130,
+  "ParticleLifeSpan": {
+    "Min": 0.75,
+    "Max": 1.0
+  },
+  "SpawnRate": {
+    "Min": 90,
+    "Max": 120
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 26,
+      "Max": 34
+    },
+    "Yaw": {
+      "Min": -10,
+      "Max": 10
+    },
+    "Pitch": {
+      "Min": -10,
+      "Max": 10
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Ice/Snowflake.png",
+    "FrameSize": {
+      "Width": 32,
+      "Height": 32
+    },
+    "ScaleRatioConstraint": "OneToOne",
+    "UVOption": "RandomFlipU",
+    "Animation": {
+      "0": {
+        "FrameIndex": {
+          "Min": 0,
+          "Max": 2
+        },
+        "Opacity": 1,
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        }
+      },
+      "50": {
+        "Opacity": 1
+      },
+      "100": {
+        "Opacity": 0
+      }
+    },
+    "InitialAnimationFrame": {
+      "Rotation": {
+        "X": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Y": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Z": {
+          "Min": 0,
+          "Max": 90
+        }
+      },
+      "Scale": {
+        "X": {
+          "Min": 0.12,
+          "Max": 0.32
+        }
+      },
+      "Opacity": 1,
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 2
+      }
+    }
+  },
+  "SpawnBurst": false,
+  "UseEmitDirection": false
+}

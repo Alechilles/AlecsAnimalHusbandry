@@ -190,30 +190,20 @@
         ]
       },
       "AirIcyWind": {
-        "Type": "Ability",
-        "Description": "Hover and blast the target with a sustained freezing gale.",
+        "Type": "State",
+        "Description": "Hover in place and blast the target with a sustained freezing gale.",
         "Target": "Hostile",
-        "SubState": "AirRanged",
-        "Ability": "Root_NPC_AH_Dragon_Frost_Icy_Wind",
+        "State": "Combat",
+        "SubState": "AirIcyWind",
         "WeightCoefficient": 5,
-        "AttackDistanceRange": [
-          6,
-          28
-        ],
-        "PostExecuteDistanceRange": [
-          16,
-          16
-        ],
-        "FailureTimeout": 5,
-        "RequireAiming": true,
         "Conditions": [
           {
             "Type": "TargetDistance",
             "Curve": {
-              "ResponseCurve": "SimpleLogistic",
+              "ResponseCurve": "SimpleDescendingLogistic",
               "XRange": [
                 0,
-                30
+                34
               ]
             }
           },

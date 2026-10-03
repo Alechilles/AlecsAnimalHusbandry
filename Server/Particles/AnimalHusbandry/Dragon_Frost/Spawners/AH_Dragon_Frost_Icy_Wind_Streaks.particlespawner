@@ -1,0 +1,125 @@
+{
+  "RenderMode": "BlendAdd",
+  "EmitOffset": {
+    "X": {
+      "Min": -2.6,
+      "Max": 2.6
+    },
+    "Y": {
+      "Min": -2.6,
+      "Max": 2.6
+    },
+    "Z": {
+      "Min": 0,
+      "Max": 1
+    }
+  },
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": true,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 78,
+  "ParticleLifeSpan": {
+    "Min": 0.65,
+    "Max": 0.85
+  },
+  "SpawnRate": {
+    "Min": 60,
+    "Max": 80
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 30,
+      "Max": 38
+    },
+    "Yaw": {
+      "Min": -8,
+      "Max": 8
+    },
+    "Pitch": {
+      "Min": -8,
+      "Max": 8
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Smoke/Smoke_Wind2.png",
+    "ScaleRatioConstraint": "None",
+    "Animation": {
+      "0": {
+        "Opacity": 0.0,
+        "Scale": {
+          "Y": {
+            "Min": 0.8,
+            "Max": 0.8
+          },
+          "X": {
+            "Min": 1.0,
+            "Max": 1.0
+          }
+        },
+        "Color": "#DFF5FF"
+      },
+      "20": {
+        "Opacity": 0.55,
+        "Scale": {
+          "X": {
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "Y": {
+            "Min": 1.0,
+            "Max": 1.0
+          }
+        },
+        "Color": "#DFF5FF"
+      },
+      "80": {
+        "Opacity": 0.4,
+        "Scale": {
+          "X": {
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "Y": {
+            "Max": 1.0,
+            "Min": 1.0
+          }
+        },
+        "Color": "#DFF5FF"
+      },
+      "100": {
+        "Opacity": 0.0,
+        "Scale": {
+          "X": {
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "Y": {
+            "Max": 0.8,
+            "Min": 0.8
+          }
+        },
+        "Color": "#DFF5FF"
+      }
+    },
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.5,
+          "Max": 0.9
+        },
+        "Y": {
+          "Min": 3.0,
+          "Max": 5.5
+        }
+      },
+      "Opacity": 0,
+      "Color": "#E6F8FF"
+    },
+    "UVOption": "FlipV"
+  },
+  "SpawnBurst": false,
+  "UseEmitDirection": false
+}
