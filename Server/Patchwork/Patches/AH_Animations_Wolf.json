@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Wolf",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Wolf_Black model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Wolf_Black.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Wolf/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

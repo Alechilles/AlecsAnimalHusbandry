@@ -1,0 +1,53 @@
+{
+  "Id": "AH_Animations_Slug_Magma",
+  "$Comment": "Adds Animal Husbandry's Eat, Laydown, Sleep, Wake animation sets to the base-game Slug_Magma model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Slug_Magma.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Slug_Magma/Animations/Eat.blockyanim"
+              }
+            ]
+          },
+          "Laydown": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Slug_Magma/Animations/Laydown.blockyanim",
+                "Looping": false
+              }
+            ]
+          },
+          "Sleep": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Slug_Magma/Animations/Sleep.blockyanim"
+              }
+            ]
+          },
+          "Wake": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Slug_Magma/Animations/Wake.blockyanim",
+                "Looping": false
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

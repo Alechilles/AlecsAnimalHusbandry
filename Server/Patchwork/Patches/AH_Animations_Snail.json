@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Snail",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Snail_Magma model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Snail_Magma.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Snail/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Fox",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Fox model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Fox.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Fox/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

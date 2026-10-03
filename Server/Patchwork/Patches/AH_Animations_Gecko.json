@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Gecko",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Gecko model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Critter/Gecko.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

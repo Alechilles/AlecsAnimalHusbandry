@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Pterodactyl",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Pterodactyl model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Flying_Beast/Pterodactyl.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Pterodactyl/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

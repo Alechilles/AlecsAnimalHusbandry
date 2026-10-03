@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Hatworm",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Hatworm model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Hatworm.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Hatworm/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

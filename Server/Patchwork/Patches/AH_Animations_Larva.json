@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Larva",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Larva_Silk model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Beast/Larva_Silk.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Eat": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Larva/Animations/Eat.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
