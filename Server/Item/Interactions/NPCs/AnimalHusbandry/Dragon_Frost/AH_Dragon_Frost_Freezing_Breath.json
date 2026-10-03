@@ -159,15 +159,18 @@
             "MaxLiveCount": 3,
             "Model": "AH_Dragon_Frost_Frozen_Ground",
             "ModelScale": 1,
-            "StartRadius": 2.5,
-            "EndRadius": 4,
+            "StartRadius": 3.5,
             "Height": 2,
-            "RadiusChangeTime": 3,
             "DamageInterval": 1,
-            "DamageAmount": 2,
+            "DamageAmount": 1,
             "DamageCause": "Ice",
+            "SpawnParticles": [
+              {
+                "SystemId": "AH_Dragon_Frost_Ice_Spikes"
+              }
+            ],
             "ApplyEffects": [
-              "AH_Dragon_Frost_Chilled"
+              "AH_Dragon_Frost_Ice_Spikes"
             ],
             "Invulnerable": true,
             "AttackOwner": false,

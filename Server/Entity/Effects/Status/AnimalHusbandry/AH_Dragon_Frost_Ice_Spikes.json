@@ -1,0 +1,36 @@
+{
+  "Name": "Ice Spikes",
+  "StatusEffectIcon": "UI/Custom/AlecsAnimalHusbandry/AvatarFlightIcons/FrostBreath.png",
+  "ApplicationEffects": {
+    "HorizontalSpeedMultiplier": 0.7,
+    "EntityBottomTint": "#86CFF8",
+    "EntityTopTint": "#D9F3FF"
+  },
+  "DamageCalculatorCooldown": 1,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Ice": 3
+    }
+  },
+  "DamageEffects": {
+    "Knockback": {
+      "Type": "Force",
+      "Force": 7,
+      "Direction": {
+        "X": 0,
+        "Y": 1,
+        "Z": 0
+      }
+    },
+    "WorldParticles": [
+      {
+        "SystemId": "Impact_Ice"
+      }
+    ]
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 1.2
+}

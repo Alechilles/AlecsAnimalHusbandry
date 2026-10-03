@@ -1,0 +1,145 @@
+{
+  "RenderMode": "Erosion",
+  "EmitOffset": {
+    "X": {
+      "Min": -3.2,
+      "Max": 3.2
+    },
+    "Y": {
+      "Min": 0,
+      "Max": 0.1
+    },
+    "Z": {
+      "Min": -3.2,
+      "Max": 3.2
+    }
+  },
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": false,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": true,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 30,
+  "TotalParticles": {
+    "Min": 30,
+    "Max": 30
+  },
+  "ParticleLifeSpan": {
+    "Min": 5.4,
+    "Max": 6.0
+  },
+  "SpawnRate": {
+    "Min": 30,
+    "Max": 60
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0.01,
+      "Max": 0.01
+    },
+    "Yaw": {
+      "Min": -180.0,
+      "Max": 180.0
+    },
+    "Pitch": {
+      "Min": 30.0,
+      "Max": 60.0
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Ice/Iceshard_Spikes.png",
+    "FrameSize": {
+      "Width": 32,
+      "Height": 64
+    },
+    "ScaleRatioConstraint": "None",
+    "UVOption": "RandomFlipU",
+    "Animation": {
+      "0": {
+        "Opacity": 1,
+        "Color": "#ffffff",
+        "Scale": {
+          "X": {
+            "Min": 1.02,
+            "Max": 1.36
+          },
+          "Y": {
+            "Min": 0.68,
+            "Max": 1.02
+          }
+        },
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        },
+        "FrameIndex": {
+          "Min": 0,
+          "Max": 3
+        }
+      },
+      "100": {
+        "Opacity": 0.0
+      },
+      "4": {
+        "Scale": {
+          "X": {
+            "Min": 1.7,
+            "Max": 1.7
+          },
+          "Y": {
+            "Min": 1.7,
+            "Max": 1.7
+          }
+        }
+      },
+      "88": {
+        "Opacity": 1
+      }
+    },
+    "InitialAnimationFrame": {
+      "Rotation": {
+        "X": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Y": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Z": {
+          "Min": -10,
+          "Max": 10
+        }
+      },
+      "Scale": {
+        "X": {
+          "Min": 1.7,
+          "Max": 1.7
+        },
+        "Y": {
+          "Min": 1.7,
+          "Max": 1.7
+        }
+      },
+      "Opacity": 1,
+      "Color": "#ffffff",
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 3
+      }
+    }
+  },
+  "UseEmitDirection": false,
+  "SpawnBurst": true
+}
