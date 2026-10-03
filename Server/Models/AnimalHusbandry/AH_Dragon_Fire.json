@@ -1,0 +1,187 @@
+{
+  "Model": "NPC/AnimalHusbandry/Dragon_Fire/Models/Model.blockymodel",
+  "Texture": "NPC/Elemental/Dragon_Fire/Models/Texture.png",
+  "EyeHeight": 2.2,
+  "HitBox": {
+    "Max": {
+      "X": 2,
+      "Y": 2.8,
+      "Z": 2
+    },
+    "Min": {
+      "X": -2,
+      "Y": 0,
+      "Z": -2
+    }
+  },
+  "MinScale": 1.25,
+  "MaxScale": 1.25,
+  "Camera": {
+    "Pitch": {
+      "AngleRange": {
+        "Max": 45,
+        "Min": -30
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    },
+    "Yaw": {
+      "AngleRange": {
+        "Max": 30,
+        "Min": -30
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    }
+  },
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Idle.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Walk.blockyanim"
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Run.blockyanim"
+        }
+      ]
+    },
+    "Jump": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "Fall": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Fall.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Fly_Idle.blockyanim",
+          "BlendingDuration": 0.2,
+          "Speed": 1.5
+        }
+      ]
+    },
+    "Fly": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Fly.blockyanim",
+          "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Glide.blockyanim",
+          "BlendingDuration": 0.2
+        }
+      ]
+    },
+    "FlyFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Glide.blockyanim",
+          "BlendingDuration": 0.2
+        },
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Fly.blockyanim",
+          "BlendingDuration": 0.2
+        }
+      ]
+    },
+    "Hurt": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Hurt.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "Death": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Death.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Sleep": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Sleep.blockyanim",
+          "SoundEventId": "SFX_Dragon_Sleep",
+          "Looping": true
+        }
+      ]
+    },
+    "WalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/Walk_Backward.blockyanim"
+        }
+      ]
+    }
+  },
+  "Particles": [
+    {
+      "PositionOffset": {
+        "X": 0.18,
+        "Y": 0.1,
+        "Z": 0.48
+      },
+      "SystemId": "Smoke_Black",
+      "TargetNodeName": "Top Jaw"
+    },
+    {
+      "PositionOffset": {
+        "X": -0.18,
+        "Y": 0.1,
+        "Z": 0.48
+      },
+      "SystemId": "Smoke_Black",
+      "TargetNodeName": "Top Jaw"
+    }
+  ]
+}

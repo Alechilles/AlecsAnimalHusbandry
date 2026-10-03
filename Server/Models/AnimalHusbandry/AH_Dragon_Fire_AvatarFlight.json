@@ -1,0 +1,223 @@
+{
+  "Model": "NPC/AnimalHusbandry/Dragon_Fire/Models/Model_AvatarFlight.blockymodel",
+  "Texture": "NPC/Elemental/Dragon_Fire/Models/Texture.png",
+  "EyeHeight": 2.2,
+  "HitBox": {
+    "Max": {
+      "X": 2,
+      "Y": 2.8,
+      "Z": 2
+    },
+    "Min": {
+      "X": -2,
+      "Y": 0,
+      "Z": -2
+    }
+  },
+  "MinScale": 0.25,
+  "MaxScale": 1.0,
+  "Camera": {
+    "Pitch": {
+      "AngleRange": {
+        "Max": 45,
+        "Min": -30
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    },
+    "Yaw": {
+      "AngleRange": {
+        "Max": 30,
+        "Min": -30
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    }
+  },
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Idle.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Walk.blockyanim",
+          "SoundEventId": "SFX_Rex_Walk"
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Run.blockyanim",
+          "SoundEventId": "SFX_Rex_Walk"
+        }
+      ]
+    },
+    "Crouch": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Launch.blockyanim",
+          "BlendingDuration": 0.4,
+          "Looping": true
+        }
+      ]
+    },
+    "Jump": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "JumpRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Jump.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": false,
+          "Speed": 0.75
+        }
+      ]
+    },
+    "Fall": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Fall.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Fly_Idle.blockyanim",
+          "BlendingDuration": 0.2,
+          "Speed": 1.5
+        }
+      ]
+    },
+    "Fly": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Fly.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "FlyFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Glide.blockyanim",
+          "BlendingDuration": 0.4,
+          "SoundEventId": "SFX_Tamework_AvatarFlight_Fast_Flight_Loop"
+        }
+      ]
+    },
+    "BoostUp": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Boost_Up.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "BoostForward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Boost_Forward.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "Hurt": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Hurt.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "Death": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Death.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Sleep": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Sleep.blockyanim",
+          "SoundEventId": "SFX_Dragon_Sleep"
+        }
+      ]
+    },
+    "Swim": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Walk.blockyanim"
+        }
+      ]
+    },
+    "SwimIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Idle.blockyanim"
+        }
+      ]
+    },
+    "Sprint": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Fire/Animations/AvatarFlight/Run.blockyanim",
+          "Speed": 1.2
+        }
+      ]
+    }
+  },
+  "Particles": [
+    {
+      "PositionOffset": {
+        "X": 0.18,
+        "Y": 0.1,
+        "Z": 0.48
+      },
+      "SystemId": "Smoke_Black",
+      "TargetNodeName": "Top Jaw"
+    },
+    {
+      "PositionOffset": {
+        "X": -0.18,
+        "Y": 0.1,
+        "Z": 0.48
+      },
+      "SystemId": "Smoke_Black",
+      "TargetNodeName": "Top Jaw"
+    }
+  ]
+}
