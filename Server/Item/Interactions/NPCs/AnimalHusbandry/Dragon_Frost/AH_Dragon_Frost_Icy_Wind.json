@@ -1,54 +1,355 @@
 {
-  "Type": "Simple",
-  "$Comment": "Wing-beat gust: shoves everything in a wide cone away and chills it.",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
-    "ItemAnimationId": "IcyWind",
-    "WorldSoundEventId": "SFX_AH_Dragon_Frost_Breath_Roar",
-    "Particles": [
-      {
-        "TargetEntityPart": "Entity",
-        "TargetNodeName": "Top Jaw",
-        "SystemId": "AH_Dragon_Frost_Freezing_Breath",
-        "DetachedFromModel": false,
-        "PositionOffset": {
-          "Y": -0.4,
-          "Z": 0.35
-        },
-        "RotationOffset": {
-          "Pitch": 0,
-          "Roll": 0,
-          "Yaw": 180
-        },
-        "Scale": 2.4
-      }
-    ]
-  },
-  "RunTime": 0.3,
-  "Next": {
-    "Type": "Selector",
-    "RunTime": 0.15,
-    "Selector": {
-      "Id": "Horizontal",
-      "Direction": "ToLeft",
-      "TestLineOfSight": true,
-      "ExtendTop": 1.5,
-      "ExtendBottom": 1.5,
-      "StartDistance": 1,
-      "EndDistance": 10,
-      "Length": 110,
-      "RollOffset": 0.0,
-      "YawStartOffset": -55.0,
-      "PitchOffset": 0.0
-    },
-    "HitEntity": {
+  "Type": "Parallel",
+  "$Comment": "Four seconds of wing-beat wind from the air, pulsing twice a second.",
+  "Interactions": [
+    {
       "Interactions": [
-        "AH_Dragon_Frost_Icy_Wind_Damage"
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ],
+            "WorldSoundEventId": "SFX_AH_Dragon_Frost_Breath_Roar"
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.67,
+          "Effects": {
+            "ItemPlayerAnimationsId": "AH_Dragon_Frost_Default",
+            "ItemAnimationId": "IcyWind",
+            "Particles": [
+              {
+                "TargetEntityPart": "Entity",
+                "TargetNodeName": "Top Jaw",
+                "SystemId": "AH_Dragon_Frost_Freezing_Breath",
+                "DetachedFromModel": false,
+                "PositionOffset": {
+                  "Y": -0.4,
+                  "Z": 0.35
+                },
+                "RotationOffset": {
+                  "Pitch": 0,
+                  "Roll": 0,
+                  "Yaw": 180
+                },
+                "Scale": 3.2
+              }
+            ]
+          }
+        }
       ]
     },
-    "Next": {
-      "Type": "Simple",
-      "RunTime": 0.45
+    {
+      "Interactions": [
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        },
+        {
+          "Type": "Selector",
+          "RunTime": 0.05,
+          "Selector": {
+            "Id": "Stab",
+            "TestLineOfSight": true,
+            "ExtendTop": 3,
+            "ExtendLeft": 3,
+            "ExtendRight": 3,
+            "ExtendBottom": 3,
+            "StartDistance": 2,
+            "EndDistance": 30
+          },
+          "HitEntity": {
+            "Interactions": [
+              "AH_Dragon_Frost_Icy_Wind_Damage"
+            ]
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.45
+        }
+      ]
     }
-  }
+  ]
 }

@@ -2,15 +2,15 @@
   "Parent": "DamageEntityParent",
   "DamageCalculator": {
     "BaseDamage": {
-      "Ice": 8
+      "Ice": 4
     },
     "RandomPercentageModifier": 0.1
   },
   "DamageEffects": {
     "Knockback": {
       "Type": "Point",
-      "Force": 16,
-      "VelocityY": 5
+      "Force": 9,
+      "VelocityY": 2
     },
     "WorldParticles": [
       {

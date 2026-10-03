@@ -189,20 +189,20 @@
           }
         ]
       },
-      "GroundIcyWind": {
+      "AirIcyWind": {
         "Type": "Ability",
-        "Description": "Blast nearby targets away with a chilling wing gust.",
+        "Description": "Hover and blast the target with a sustained freezing gale.",
         "Target": "Hostile",
-        "SubState": "Default",
+        "SubState": "AirRanged",
         "Ability": "Root_NPC_AH_Dragon_Frost_Icy_Wind",
-        "WeightCoefficient": 6,
+        "WeightCoefficient": 5,
         "AttackDistanceRange": [
-          0,
-          7
+          6,
+          28
         ],
         "PostExecuteDistanceRange": [
-          4,
-          4
+          16,
+          16
         ],
         "FailureTimeout": 5,
         "RequireAiming": true,
@@ -210,10 +210,10 @@
           {
             "Type": "TargetDistance",
             "Curve": {
-              "ResponseCurve": "SimpleDescendingLogistic",
+              "ResponseCurve": "SimpleLogistic",
               "XRange": [
                 0,
-                10
+                30
               ]
             }
           },
@@ -222,8 +222,8 @@
             "Curve": {
               "ResponseCurve": "Linear",
               "XRange": [
-                8,
-                16
+                14,
+                24
               ]
             }
           }
@@ -247,8 +247,7 @@
         "Actions": [
           "SelectTarget",
           "GroundFreezingBreath",
-          "GroundBite",
-          "GroundIcyWind"
+          "GroundBite"
         ]
       },
       "AirRanged": {
@@ -267,7 +266,8 @@
         "Actions": [
           "SelectTarget",
           "AirBreathRun",
-          "AirFrostBoltVolley"
+          "AirFrostBoltVolley",
+          "AirIcyWind"
         ]
       }
     }
