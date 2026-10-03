@@ -1,0 +1,14 @@
+{
+  "Enabled": true,
+  "Parent": "AHCompMain",
+  "Priority": 100,
+  "RoleIds": [
+    "Tamed_Dragon_Fire"
+  ],
+  "Command": {
+    "FlightToggle": {
+      "Enabled": true,
+      "HookId": "AnimalHusbandry.Command.ToggleFireDragonAirborneMode"
+    }
+  }
+}

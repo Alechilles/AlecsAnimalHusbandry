@@ -1,0 +1,18 @@
+{
+  "Interactions": [
+    {
+      "Type": "Chaining",
+      "ChainId": "AHDragonFireAttacks",
+      "ChainingAllowance": 15,
+      "Next": [
+        "AH_Dragon_Fire_Bite",
+        "AH_Dragon_Fire_Swing_Left"
+      ]
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}

@@ -9,6 +9,8 @@
     "Crocodile",
     "Tamed_Crocodile",
     "Tamed_Dragon_Frost",
+    "Tamed_Dragon_Fire",
+    "Tamed_Dragon_Void",
     "Emberwulf",
     "Tamed_Emberwulf",
     "Fen_Stalker",
@@ -160,6 +162,32 @@
       }
     },
     "Tamed_Dragon_Frost": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 180,
+        "MinDelaySeconds": 540,
+        "MaxDelaySeconds": 1620
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 300
+      }
+    },
+    "Tamed_Dragon_Fire": {
+      "Pairing": {
+        "MaxNearbySameType": 4
+      },
+      "Cooldowns": {
+        "BaseCooldownMinutes": 180,
+        "MinDelaySeconds": 540,
+        "MaxDelaySeconds": 1620
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 300
+      }
+    },
+    "Tamed_Dragon_Void": {
       "Pairing": {
         "MaxNearbySameType": 4
       },

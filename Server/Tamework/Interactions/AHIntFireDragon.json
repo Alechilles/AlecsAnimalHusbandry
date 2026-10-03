@@ -1,0 +1,253 @@
+{
+  "Enabled": true,
+  "Priority": 201,
+  "RoleIds": [
+    "Tamed_Dragon_Fire"
+  ],
+  "Interactions": [
+    {
+      "Type": "Tame",
+      "ItemsParam": "AttractiveItemSet",
+      "RoleParam": "TameRoleChange",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "NpcState": [
+            {
+              "State": "Sleep",
+              "SubState": "Tranquilized"
+            }
+          ],
+          "NpcHealthPercent": [
+            {
+              "Operator": "LessThanOrEqual",
+              "Value": 20.0
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Entity"
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "IsNotTamed": true,
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet",
+              "Operator": "NoneOf"
+            }
+          ],
+          "NpcState": [
+            {
+              "State": "Sleep",
+              "SubState": "Tranquilized"
+            }
+          ],
+          "NpcHealthPercent": [
+            {
+              "Value": 20
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "SpawnParticles": {
+          "ParticleSystemParam": "AttractiveItemSetParticles",
+          "AttachTarget": "Node",
+          "AttachNode": "Head",
+          "OffsetParam": "ParticleOffset",
+          "PlayerOnly": false
+        }
+      },
+      "PromptHint": "server.interactionHints.tame"
+    },
+    {
+      "Type": "Breed",
+      "MinHappiness": 80,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "AttractiveItemSet"
+            }
+          ],
+          "PlayerMovementState": [
+            {
+              "State": "Crouching"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "RemoveItemsHand": {
+          "Quantity": 1,
+          "ItemsParam": "AttractiveItemSet"
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Hearts_Subtle",
+          "OffsetParam": "ParticleOffset",
+          "AttachTarget": "Node",
+          "AttachNode": "Head"
+        }
+      }
+    },
+    {
+      "Type": "Feed",
+      "Enabled": true,
+      "ItemsParam": "AttractiveItemSet",
+      "ItemsInHand": [
+        {
+          "Item": "Tw_Feed_Carnivore"
+        }
+      ],
+      "Heal": 25,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Fen_Stalker_Eat",
+          "Volume": 0.3,
+          "Pitch": 2
+        },
+        "SpawnParticles": {
+          "ParticleSystem": "Pet_Heal",
+          "Color": "#fe6969",
+          "Offset": [
+            0,
+            0.6,
+            0
+          ],
+          "AttachTarget": "Node",
+          "AttachNode": "Body",
+          "OffsetParam": "ParticleOffset"
+        }
+      }
+    },
+    {
+      "Type": "Harvest",
+      "Enabled": true,
+      "RequireHarvestInteractionContext": false,
+      "RequireHarvestAlarmReady": true,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "ItemsParam": "HarvestInteractionRequiredItems"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "ShowPrompt": false,
+      "Requires": {
+        "All": {
+          "IsTamed": true,
+          "PlayerIsOwner": true,
+          "PlayerMovementState": [
+            {
+              "State": "Crouching"
+            }
+          ],
+          "ItemsInHand": [
+            {
+              "Items": [
+                "Tamework_Flightmasters_Talisman"
+              ],
+              "Operator": "NoneOf"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "ShowFloatingText": {
+          "Message": "animalhusbandry.interactions.message.flightmastersTalismanRequired"
+        }
+      }
+    },
+    {
+      "Type": "Mount",
+      "Enabled": true,
+      "Requires": {
+        "All": {
+          "ItemsInHand": [
+            {
+              "Items": [
+                "Tamework_Flightmasters_Talisman"
+              ],
+              "Quantity": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Type": "Custom",
+      "Requires": {
+        "All": {
+          "AlarmState": [
+            {
+              "Name": "Pet_Ready",
+              "State": "unset"
+            }
+          ],
+          "PlayerHandEmpty": true,
+          "Parameter": [
+            {
+              "Name": "IsPettable",
+              "Value": "true",
+              "Operator": "Equals"
+            }
+          ]
+        }
+      },
+      "Effects": {
+        "TriggerNpcHook": {
+          "HookId": "TwHook_Pet",
+          "Consume": true
+        }
+      },
+      "PromptHint": "server.interactionHints.pet"
+    },
+    {
+      "Type": "ModeCycle",
+      "Enabled": true,
+      "Cycle": [
+        {
+          "State": "Follow",
+          "Message": "animalhusbandry.interactions.message.following"
+        },
+        {
+          "State": "Hold",
+          "Message": "animalhusbandry.interactions.message.staying"
+        },
+        {
+          "State": "Idle",
+          "Message": "animalhusbandry.interactions.message.wandering"
+        }
+      ],
+      "ShowFloatingText": true,
+      "Effects": {
+        "PlaySound": {
+          "SoundEvent": "SFX_Creative_Play_Selection_Widget"
+        }
+      }
+    }
+  ]
+}

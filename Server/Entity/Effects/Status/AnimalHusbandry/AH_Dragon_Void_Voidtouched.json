@@ -1,0 +1,14 @@
+{
+  "Name": "Void-Touched",
+  "StatusEffectIcon": "UI/Custom/AlecsAnimalHusbandry/AvatarFlightIcons/VoidBreath.png",
+  "ApplicationEffects": {
+    "HorizontalSpeedMultiplier": 0.7,
+    "EntityBottomTint": "#a216f8",
+    "EntityTopTint": "#c566ff"
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 3
+}

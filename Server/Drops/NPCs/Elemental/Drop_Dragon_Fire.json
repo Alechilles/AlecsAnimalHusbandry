@@ -1,0 +1,16 @@
+{
+  "Container": {
+    "Type": "Multiple",
+    "Containers": [
+      {
+        "Type": "Single",
+        "Weight": 100,
+        "Item": {
+          "ItemId": "Ingredient_Fire_Essence",
+          "QuantityMin": 4,
+          "QuantityMax": 6
+        }
+      }
+    ]
+  }
+}

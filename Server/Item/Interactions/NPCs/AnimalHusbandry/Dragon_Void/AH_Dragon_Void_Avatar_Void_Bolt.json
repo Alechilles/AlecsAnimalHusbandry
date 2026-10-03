@@ -1,0 +1,52 @@
+{
+  "Type": "Serial",
+  "$Comment": "Player-safe Void Dragon void bolt aimed from the AvatarFlight reticle.",
+  "Interactions": [
+    {
+      "Type": "Simple",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "VoidBoltMoving",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "SystemId": "AH_Dragon_Void_Void_Bolt_Charging",
+            "DetachedFromModel": false,
+            "PositionOffset": {
+              "Y": 0,
+              "Z": 0.35
+            },
+            "Scale": 0.6
+          }
+        ]
+      },
+      "RunTime": 0.6
+    },
+    {
+      "Type": "TameworkLaunchProjectile",
+      "RunTime": 0,
+      "ProjectileId": "AH_Dragon_Void_Void_Bolt",
+      "LaunchPositionOffset": {
+        "X": 0,
+        "Y": 0.5,
+        "Z": -3.0
+      },
+      "TrajectoryMode": "Direct",
+      "LookTargetDistance": 48.0,
+      "ImpactEffect": {
+        "EffectId": "AH_Dragon_Void_Voidtouched",
+        "Radius": 3,
+        "ExcludeSource": true
+      },
+      "Effects": {
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch"
+      },
+      "Tags": {}
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.35
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "Parent": "Tamework_Avatar_Flight_Default",
+  "Enabled": true,
+  "Priority": 100,
+  "Model": {
+    "ApplyModel": true,
+    "ModelId": "AH_Dragon_Void_AvatarFlight",
+    "Scale": 1.0,
+    "CameraPositionOffset": {
+      "X": 0.0,
+      "Y": 0.5,
+      "Z": 6.0
+    }
+  },
+  "Vfx": {
+    "LaunchChargeMinScale": 4.875,
+    "LaunchChargeMaxScale": 8.625,
+    "LaunchCancelScale": 5.25,
+    "LaunchReleasePartialScale": 5.625,
+    "LaunchReleaseMidScale": 7.5,
+    "LaunchReleaseFullScale": 9.0
+  },
+  "CombatAbilities": {
+    "Ability2": {
+      "RootInteraction": "Root_NPC_AH_Dragon_Void_Avatar_Void_Bolt",
+      "Glyph": "VOID",
+      "GlyphTexturePath": "AlecsAnimalHusbandry/AvatarFlightIcons/VoidBolt.png",
+      "CooldownSeconds": 10.0
+    },
+    "Ability3": {
+      "RootInteraction": "Root_NPC_AH_Dragon_Void_Avatar_Void_Breath",
+      "Glyph": "RIFT",
+      "GlyphTexturePath": "AlecsAnimalHusbandry/AvatarFlightIcons/VoidBreath.png",
+      "CooldownSeconds": 15.0
+    }
+  },
+  "Trails": {
+    "Enabled": true,
+    "LaunchRootInteraction": "Root_AH_Dragon_Void_AvatarFlight_Trails_Launch",
+    "FlapRootInteraction": "Root_AH_Dragon_Void_AvatarFlight_Trails_Flap",
+    "BoostRootInteraction": "Root_AH_Dragon_Void_AvatarFlight_Trails_Boost",
+    "FastGlideRootInteraction": "Root_AH_Dragon_Void_AvatarFlight_Trails_Fast_Glide",
+    "FastGlideStartSpeedRatio": 0.92,
+    "FastGlideStopSpeedRatio": 0.86
+  },
+  "Audio": {
+    "IdleFlightFlapSoundEvent": "SFX_Tamework_AvatarFlight_Wing_Flap_Footstep",
+    "IdleFlightFlapIntervalMs": 889.0,
+    "FlightFlapSoundEvent": "SFX_Tamework_AvatarFlight_Wing_Flap_Footstep",
+    "FlightFlapIntervalMs": 1333.0
+  },
+  "Animation": {
+    "IdleAnimation": "FlyIdle",
+    "FlightAnimation": "Fly",
+    "FastFlightAnimation": "FlyFast",
+    "ResendIntervalMs": 0.0,
+    "PoseAnimationsEnabled": true,
+    "PitchPoseSlot": "Status",
+    "RollPoseSlot": "Status",
+    "PitchUpPoseAnimation": "TameworkPitchUp",
+    "PitchDownPoseAnimation": "TameworkPitchDown",
+    "BankLeftPoseAnimation": "TameworkBankLeft",
+    "BankRightPoseAnimation": "TameworkBankRight",
+    "PitchUpBankLeftPoseAnimation": "TameworkPitchUpBankLeft",
+    "PitchUpBankRightPoseAnimation": "TameworkPitchUpBankRight",
+    "PitchDownBankLeftPoseAnimation": "TameworkPitchDownBankLeft",
+    "PitchDownBankRightPoseAnimation": "TameworkPitchDownBankRight",
+    "PitchPoseThresholdDegrees": 6.0,
+    "RollPoseThresholdDegrees": 4.0,
+    "PoseResendIntervalMs": 150.0,
+    "SuppressStatusAnimation": true,
+    "SuppressEmoteAnimation": true
+  },
+  "AbilityAnimation": {
+    "Slot": "Movement",
+    "UpwardBoostAnimation": "BoostUp",
+    "ForwardBoostAnimation": "BoostForward",
+    "ForwardBoostDurationMs": 800.0,
+    "AirbrakeAnimation": "FlyIdle"
+  },
+  "RiderVisual": {
+    "HideOwnerEquipment": true,
+    "HideOwnerArmor": true,
+    "HideOwnerHands": true,
+    "ShowRider": true,
+    "SeatOffsetX": 0.0,
+    "SeatOffsetY": 1.35,
+    "SeatOffsetZ": -0.25
+  }
+}

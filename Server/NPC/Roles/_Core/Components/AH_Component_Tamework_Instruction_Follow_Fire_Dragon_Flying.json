@@ -1,0 +1,26 @@
+{
+  "$Comment": "Fire Dragon flying follow wrapper with a 60-block teleport recovery threshold.",
+  "Type": "Component",
+  "Class": "Instruction",
+  "Interface": "Tamework.Instruction.Follow",
+  "Content": {
+    "Continue": true,
+    "Sensor": { "Type": "Any" },
+    "Instructions": [
+      {
+        "Reference": "Component_Tamework_Instruction_Follow_Flying",
+        "Modify": {
+          "MasterTargetSlot": "MasterTarget",
+          "FollowDesiredAltitudeRange": [4, 8],
+          "FollowTeleportThresholdRange": 60,
+          "FollowOrbitRadiusRange": [16, 24],
+          "FollowOrbitRetargetTimeRange": [3, 6],
+          "FollowOrbitStopDistance": 3,
+          "FollowOrbitRelativeSpeed": 0.65,
+          "FollowHoverRadius": 1.75,
+          "FollowHoverRelativeSpeed": 0.12
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "Type": "Variant",
+  "Reference": "AH_Template_Dragon_Fire",
+  "Modify": {
+    "Appearance": "AH_Dragon_Fire",
+    "MaxHealth": 400,
+    "AttractiveItemSet": [
+      "Ingredient_Fire_Essence"
+    ],
+    "AttractiveItemSetParticles": "AH_Dragon_Fire_Want_Food_Fire_Essence",
+    "IsMemory": true,
+    "MemoriesCategory": "Mythic",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.Dragon_Fire.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}
