@@ -195,7 +195,7 @@
         "Target": "Hostile",
         "SubState": "Default",
         "Ability": "Root_NPC_AH_Dragon_Frost_Icy_Wind",
-        "WeightCoefficient": 3,
+        "WeightCoefficient": 6,
         "AttackDistanceRange": [
           0,
           7
@@ -210,10 +210,10 @@
           {
             "Type": "TargetDistance",
             "Curve": {
-              "ResponseCurve": "SimpleLogistic",
+              "ResponseCurve": "SimpleDescendingLogistic",
               "XRange": [
                 0,
-                8
+                10
               ]
             }
           },
@@ -222,8 +222,8 @@
             "Curve": {
               "ResponseCurve": "Linear",
               "XRange": [
-                12,
-                22
+                8,
+                16
               ]
             }
           }
