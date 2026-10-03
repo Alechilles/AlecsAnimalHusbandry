@@ -35,8 +35,8 @@
 
 --------------
 
-<H2>New in v3.3.0</H2>
-<p>Meet Lil Cluck, a hidden chick boss with pursuing pecks, egg volleys, a leaping feather shockwave, and a sweeping red laser. Beasts and Frost Dragons no longer naturally heal during combat. Frost Dragons have rarer beacon encounters and guaranteed Ice Essence drops. Requires Hytale 0.6.7 or later in Update 6 and Tamework 4.3.0 or later in the 4.x series.</p>
+<H2>New in v3.3.1</H2>
+<p>Frost Dragon avatar flight has new upward-boost and forward-boost animations. Also new in 3.3: meet Lil Cluck, a hidden chick boss with pursuing pecks, egg volleys, a leaping feather shockwave, and a sweeping red laser. Beasts and Frost Dragons no longer naturally heal during combat. Frost Dragons have rarer beacon encounters and guaranteed Ice Essence drops. Requires Hytale 0.6.7 or later in Update 6 and Tamework 4.3.0 or later in the 4.x series.</p>
 
 <H2>Butcher's Knife</H2>
 <p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
@@ -343,6 +343,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
 
-Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 3.3.0 requires Tamework 4.3.0 or later in the 4.x series; update both mods together.
+Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 3.3.1 requires Tamework 4.3.0 or later in the 4.x series; update both mods together.
 
 Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.

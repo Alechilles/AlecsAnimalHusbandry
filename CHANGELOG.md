@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.3.1 - Frost Dragon Boost Animations - 2026-10-03
+
+Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=4.3.0 <5.0`.
+
+- Added a dedicated upward-boost animation for Frost Dragon avatar flight: the dragon rears upright and drives its wings down to launch upward. It replaces the reused Icy Wind animation.
+- Added a forward-boost animation for Frost Dragon avatar flight: one hard wing stroke lunges the dragon forward and settles into the glide.
+
 ## 3.3.0 - Lil Cluck - 2026-09-28
 
 Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=4.3.0 <5.0`. Update both mods together.
