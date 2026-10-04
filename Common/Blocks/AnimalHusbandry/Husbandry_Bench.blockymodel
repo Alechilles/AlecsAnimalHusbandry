@@ -1,7 +1,7 @@
 {
  "nodes": [
   {
-   "id": "63",
+   "id": "62",
    "name": "Bench",
    "position": {
     "x": 0,
@@ -2697,7 +2697,7 @@
        "id": "27",
        "name": "Board_Post_Left",
        "position": {
-        "x": -32.5,
+        "x": -28.5,
         "y": 49.0,
         "z": -12.5
        },
@@ -2806,7 +2806,7 @@
        "id": "28",
        "name": "Board_Post_Right",
        "position": {
-        "x": 4.5,
+        "x": 8.5,
         "y": 49.0,
         "z": -12.5
        },
@@ -2915,7 +2915,7 @@
        "id": "29",
        "name": "Board_Panel",
        "position": {
-        "x": -14.0,
+        "x": -10.0,
         "y": 49.0,
         "z": -13.0
        },
@@ -3024,7 +3024,7 @@
        "id": "30",
        "name": "Board_Header",
        "position": {
-        "x": -14.0,
+        "x": -10.0,
         "y": 62.0,
         "z": -12.5
        },
@@ -3133,7 +3133,7 @@
        "id": "31",
        "name": "Board_Peg_Rope",
        "position": {
-        "x": -24.0,
+        "x": -20.0,
         "y": 55.0,
         "z": -10.5
        },
@@ -3242,7 +3242,7 @@
        "id": "32",
        "name": "Board_Peg_Bridle",
        "position": {
-        "x": -13.0,
+        "x": -9.0,
         "y": 55.0,
         "z": -10.5
        },
@@ -3351,7 +3351,7 @@
        "id": "33",
        "name": "Board_Peg_Horseshoe",
        "position": {
-        "x": -3.0,
+        "x": 1.0,
         "y": 55.0,
         "z": -10.5
        },
@@ -3460,7 +3460,7 @@
        "id": "34",
        "name": "Board_Rope",
        "position": {
-        "x": -24,
+        "x": -20,
         "y": 50,
         "z": -10.5
        },
@@ -3514,7 +3514,7 @@
        "id": "35",
        "name": "Board_Bridle",
        "position": {
-        "x": -13,
+        "x": -9,
         "y": 47,
         "z": -10.3
        },
@@ -3568,7 +3568,7 @@
        "id": "36",
        "name": "Board_Horseshoe",
        "position": {
-        "x": -2.5,
+        "x": 1.5,
         "y": 51,
         "z": -10.5
        },
@@ -3621,7 +3621,7 @@
      ]
     },
     {
-     "id": "40",
+     "id": "39",
      "name": "BackRail",
      "position": {
       "x": 0,
@@ -3660,7 +3660,7 @@
        "id": "38",
        "name": "Rail_Beam",
        "position": {
-        "x": -12.5,
+        "x": -10.0,
         "y": 33.5,
         "z": -12.5
        },
@@ -3685,7 +3685,7 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 45,
+          "x": 50,
           "y": 9,
           "z": 5
          }
@@ -3764,120 +3764,11 @@
         "shadingMode": "standard"
        },
        "children": []
-      },
-      {
-       "id": "39",
-       "name": "Rail_Post_Right",
-       "position": {
-        "x": 12.5,
-        "y": 35.5,
-        "z": -12.5
-       },
-       "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-       },
-       "shape": {
-        "type": "box",
-        "offset": {
-         "x": 0,
-         "y": 0,
-         "z": 0
-        },
-        "stretch": {
-         "x": 1,
-         "y": 1,
-         "z": 1
-        },
-        "settings": {
-         "isPiece": false,
-         "size": {
-          "x": 5,
-          "y": 13,
-          "z": 5
-         }
-        },
-        "textureLayout": {
-         "front": {
-          "offset": {
-           "x": 119,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "back": {
-          "offset": {
-           "x": 119,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "left": {
-          "offset": {
-           "x": 119,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "right": {
-          "offset": {
-           "x": 119,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "top": {
-          "offset": {
-           "x": 119,
-           "y": 53
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "bottom": {
-          "offset": {
-           "x": 119,
-           "y": 53
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         }
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard"
-       },
-       "children": []
       }
      ]
     },
     {
-     "id": "42",
+     "id": "41",
      "name": "HayBale",
      "position": {
       "x": 0,
@@ -3913,7 +3804,7 @@
      },
      "children": [
       {
-       "id": "41",
+       "id": "40",
        "name": "Hay_Bale",
        "position": {
         "x": -10.0,
@@ -4024,7 +3915,7 @@
      ]
     },
     {
-     "id": "45",
+     "id": "44",
      "name": "Mallet",
      "position": {
       "x": -25,
@@ -4060,7 +3951,7 @@
      },
      "children": [
       {
-       "id": "43",
+       "id": "42",
        "name": "Mallet_Head",
        "position": {
         "x": -1.0,
@@ -4169,7 +4060,7 @@
        "children": []
       },
       {
-       "id": "44",
+       "id": "43",
        "name": "Mallet_Handle",
        "position": {
         "x": 8.0,
@@ -4280,7 +4171,7 @@
      ]
     },
     {
-     "id": "48",
+     "id": "47",
      "name": "Wool",
      "position": {
       "x": 0,
@@ -4316,7 +4207,7 @@
      },
      "children": [
       {
-       "id": "46",
+       "id": "45",
        "name": "Wool_Tuft",
        "position": {
         "x": -11.0,
@@ -4425,7 +4316,7 @@
        "children": []
       },
       {
-       "id": "47",
+       "id": "46",
        "name": "Wool_Tuft_Top",
        "position": {
         "x": -11.5,
@@ -4536,7 +4427,7 @@
      ]
     },
     {
-     "id": "50",
+     "id": "49",
      "name": "Grain",
      "position": {
       "x": 0,
@@ -4572,7 +4463,7 @@
      },
      "children": [
       {
-       "id": "49",
+       "id": "48",
        "name": "Grain_Spill",
        "position": {
         "x": -1,
@@ -4628,7 +4519,7 @@
      ]
     },
     {
-     "id": "58",
+     "id": "57",
      "name": "Feedbag",
      "position": {
       "x": 7,
@@ -4664,11 +4555,11 @@
      },
      "children": [
       {
-       "id": "51",
+       "id": "50",
        "name": "Bag",
        "children": [
         {
-         "id": "52",
+         "id": "51",
          "name": "Bag-Flaps",
          "children": [],
          "position": {
@@ -4721,7 +4612,7 @@
          }
         },
         {
-         "id": "53",
+         "id": "52",
          "name": "Bag-Flaps",
          "children": [],
          "position": {
@@ -4774,15 +4665,15 @@
          }
         },
         {
-         "id": "54",
+         "id": "53",
          "name": "Bag2",
          "children": [
           {
-           "id": "55",
+           "id": "54",
            "name": "Bag3",
            "children": [
             {
-             "id": "56",
+             "id": "55",
              "name": "Bag-Inner",
              "children": [],
              "position": {
@@ -4879,7 +4770,7 @@
              }
             },
             {
-             "id": "57",
+             "id": "56",
              "name": "Feed",
              "children": [],
              "position": {
@@ -5271,7 +5162,7 @@
      ]
     },
     {
-     "id": "62",
+     "id": "61",
      "name": "Shears",
      "position": {
       "x": -12,
@@ -5307,11 +5198,11 @@
      },
      "children": [
       {
-       "id": "59",
+       "id": "58",
        "name": "Handle",
        "children": [
         {
-         "id": "60",
+         "id": "59",
          "name": "Handle2",
          "children": [],
          "position": {
@@ -5364,7 +5255,7 @@
          }
         },
         {
-         "id": "61",
+         "id": "60",
          "name": "Pivot",
          "children": [],
          "position": {
