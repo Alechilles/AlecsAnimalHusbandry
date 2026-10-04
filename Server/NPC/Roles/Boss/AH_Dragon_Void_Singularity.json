@@ -1,0 +1,188 @@
+{
+  "Type": "Generic",
+  "Appearance": "AH_Dragon_Void_Singularity",
+  "MaxHealth": 9999,
+  "DropList": "Empty",
+  "StartState": "Spawn",
+  "DefaultPlayerAttitude": "Hostile",
+  "DefaultNPCAttitude": "Neutral",
+  "KnockbackScale": 0,
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 0.1,
+      "Gravity": 10,
+      "MaxFallSpeed": 30,
+      "Acceleration": 1,
+      "MaxRotationSpeed": 0,
+      "MaxClimbHeight": 1,
+      "MaxDropHeight": 4,
+      "RunThreshold": 0.5
+    }
+  ],
+  "NameTranslationKey": "server.npcRoles.AH_Dragon_Void_Singularity.name",
+  "Instructions": [
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Spawn"
+      },
+      "Instructions": [
+        {
+          "Actions": [
+            {
+              "Type": "TimerStart",
+              "Name": "Life",
+              "StartValueRange": [
+                4.5,
+                4.5
+              ],
+              "RestartValueRange": [
+                4.5,
+                4.5
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Life"
+            },
+            {
+              "Type": "TimerModify",
+              "Name": "Life",
+              "MaxValue": [
+                4.5,
+                4.5
+              ],
+              "SetValue": 4.5
+            },
+            {
+              "Type": "TimerStart",
+              "Name": "Pulse",
+              "StartValueRange": [
+                0.3,
+                0.3
+              ],
+              "RestartValueRange": [
+                0.3,
+                0.3
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Pulse"
+            },
+            {
+              "Type": "TimerModify",
+              "Name": "Pulse",
+              "MaxValue": [
+                0.3,
+                0.3
+              ],
+              "SetValue": 0.3
+            },
+            {
+              "Type": "State",
+              "State": "Pull"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Pull"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Timer",
+            "Name": "Life",
+            "State": "Stopped",
+            "TimeRemainingRange": [
+              0,
+              0
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "Despawn"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "And",
+            "Sensors": [
+              {
+                "Type": "Timer",
+                "Name": "Pulse",
+                "State": "Stopped",
+                "TimeRemainingRange": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "Type": "Mob",
+                "GetPlayers": true,
+                "GetNPCs": false,
+                "Range": 11,
+                "LockOnTarget": true
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Type": "Attack",
+              "Attack": "Root_NPC_AH_Dragon_Void_Singularity_Pull",
+              "AttackPauseRange": [
+                0,
+                0
+              ],
+              "SkipAiming": true,
+              "LineOfSight": false,
+              "AvoidFriendlyFire": false
+            },
+            {
+              "Type": "TimerStart",
+              "Name": "Pulse",
+              "StartValueRange": [
+                0.4,
+                0.4
+              ],
+              "RestartValueRange": [
+                0.4,
+                0.4
+              ]
+            },
+            {
+              "Type": "TimerRestart",
+              "Name": "Pulse"
+            },
+            {
+              "Type": "TimerModify",
+              "Name": "Pulse",
+              "MaxValue": [
+                0.4,
+                0.4
+              ],
+              "SetValue": 0.4
+            }
+          ],
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        },
+        {
+          "HeadMotion": {
+            "Type": "Nothing"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        }
+      ]
+    }
+  ]
+}

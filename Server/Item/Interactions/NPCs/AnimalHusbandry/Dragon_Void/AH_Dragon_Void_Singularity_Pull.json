@@ -1,0 +1,23 @@
+{
+  "Type": "Selector",
+  "RunTime": 0.15,
+  "Selector": {
+    "Id": "Horizontal",
+    "Direction": "ToLeft",
+    "TestLineOfSight": true,
+    "ExtendTop": 4,
+    "ExtendBottom": 4,
+    "StartDistance": 0,
+    "EndDistance": 9,
+    "Length": 360,
+    "RollOffset": 0.0,
+    "YawStartOffset": -180.0,
+    "PitchOffset": 0.0
+  },
+  "HitEntity": {
+    "Interactions": [
+      "AH_Dragon_Void_Singularity_Pull_Damage"
+    ]
+  },
+  "$Comment": "One inward pulse from a void singularity."
+}
