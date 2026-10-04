@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "34",
+      "id": "31",
       "name": "R-Attachment",
       "position": {
         "x": 0,
@@ -37,7 +37,7 @@
       },
       "children": [
         {
-          "id": "33",
+          "id": "30",
           "name": "Origin_Projectile",
           "position": {
             "x": 0,
@@ -73,7 +73,7 @@
           },
           "children": [
             {
-              "id": "32",
+              "id": "29",
               "name": "Origin_Item",
               "position": {
                 "x": 0,
@@ -1422,7 +1422,7 @@
                   ]
                 },
                 {
-                  "id": "22",
+                  "id": "19",
                   "name": "Hopper",
                   "position": {
                     "x": 0,
@@ -1892,338 +1892,11 @@
                         }
                       },
                       "children": []
-                    },
-                    {
-                      "id": "19",
-                      "name": "Egg_1",
-                      "position": {
-                        "x": -1.0,
-                        "y": 5.0,
-                        "z": -3.5
-                      },
-                      "orientation": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0,
-                        "w": 1
-                      },
-                      "shape": {
-                        "type": "box",
-                        "offset": {
-                          "x": 0,
-                          "y": 0,
-                          "z": 0
-                        },
-                        "stretch": {
-                          "x": 1,
-                          "y": 1,
-                          "z": 1
-                        },
-                        "settings": {
-                          "isPiece": false,
-                          "size": {
-                            "x": 4,
-                            "y": 6,
-                            "z": 3
-                          }
-                        },
-                        "visible": true,
-                        "doubleSided": false,
-                        "shadingMode": "flat",
-                        "unwrapMode": "custom",
-                        "textureLayout": {
-                          "front": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "back": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "right": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "left": {
-                            "offset": {
-                              "x": 41,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "top": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "bottom": {
-                            "offset": {
-                              "x": 40,
-                              "y": 15
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "20",
-                      "name": "Egg_2",
-                      "position": {
-                        "x": 1.0,
-                        "y": 5.0,
-                        "z": 0.5
-                      },
-                      "orientation": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0,
-                        "w": 1
-                      },
-                      "shape": {
-                        "type": "box",
-                        "offset": {
-                          "x": 0,
-                          "y": 0,
-                          "z": 0
-                        },
-                        "stretch": {
-                          "x": 1,
-                          "y": 1,
-                          "z": 1
-                        },
-                        "settings": {
-                          "isPiece": false,
-                          "size": {
-                            "x": 4,
-                            "y": 6,
-                            "z": 3
-                          }
-                        },
-                        "visible": true,
-                        "doubleSided": false,
-                        "shadingMode": "flat",
-                        "unwrapMode": "custom",
-                        "textureLayout": {
-                          "front": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "back": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "right": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "left": {
-                            "offset": {
-                              "x": 41,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "top": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "bottom": {
-                            "offset": {
-                              "x": 40,
-                              "y": 15
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "21",
-                      "name": "Egg_3",
-                      "position": {
-                        "x": 0.0,
-                        "y": 5.0,
-                        "z": 4.5
-                      },
-                      "orientation": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0,
-                        "w": 1
-                      },
-                      "shape": {
-                        "type": "box",
-                        "offset": {
-                          "x": 0,
-                          "y": 0,
-                          "z": 0
-                        },
-                        "stretch": {
-                          "x": 1,
-                          "y": 1,
-                          "z": 1
-                        },
-                        "settings": {
-                          "isPiece": false,
-                          "size": {
-                            "x": 4,
-                            "y": 6,
-                            "z": 3
-                          }
-                        },
-                        "visible": true,
-                        "doubleSided": false,
-                        "shadingMode": "flat",
-                        "unwrapMode": "custom",
-                        "textureLayout": {
-                          "front": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "back": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "right": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "left": {
-                            "offset": {
-                              "x": 41,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "top": {
-                            "offset": {
-                              "x": 40,
-                              "y": 12
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          },
-                          "bottom": {
-                            "offset": {
-                              "x": 40,
-                              "y": 15
-                            },
-                            "mirror": {
-                              "x": false,
-                              "y": false
-                            },
-                            "angle": 0
-                          }
-                        }
-                      },
-                      "children": []
                     }
                   ]
                 },
                 {
-                  "id": "25",
+                  "id": "22",
                   "name": "Trigger_Grip_Group",
                   "position": {
                     "x": 0,
@@ -2259,7 +1932,7 @@
                   },
                   "children": [
                     {
-                      "id": "23",
+                      "id": "20",
                       "name": "Trigger_Grip",
                       "position": {
                         "x": 0.0,
@@ -2368,7 +2041,7 @@
                       "children": []
                     },
                     {
-                      "id": "24",
+                      "id": "21",
                       "name": "Trigger",
                       "position": {
                         "x": 0.0,
@@ -2479,7 +2152,7 @@
                   ]
                 },
                 {
-                  "id": "28",
+                  "id": "25",
                   "name": "Fore_Grip_Group",
                   "position": {
                     "x": 6,
@@ -2515,7 +2188,7 @@
                   },
                   "children": [
                     {
-                      "id": "26",
+                      "id": "23",
                       "name": "Fore_Grip",
                       "position": {
                         "x": 5.0,
@@ -2624,7 +2297,7 @@
                       "children": []
                     },
                     {
-                      "id": "27",
+                      "id": "24",
                       "name": "Fore_Grip_Mount",
                       "position": {
                         "x": 0.5,
@@ -2735,7 +2408,7 @@
                   ]
                 },
                 {
-                  "id": "31",
+                  "id": "28",
                   "name": "Shoulder_Rest",
                   "position": {
                     "x": 0,
@@ -2771,7 +2444,7 @@
                   },
                   "children": [
                     {
-                      "id": "29",
+                      "id": "26",
                       "name": "Shoulder_Pad",
                       "position": {
                         "x": 0.0,
@@ -2880,7 +2553,7 @@
                       "children": []
                     },
                     {
-                      "id": "30",
+                      "id": "27",
                       "name": "Exhaust_Cap",
                       "position": {
                         "x": 0.0,

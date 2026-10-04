@@ -56,5 +56,33 @@
   "MaxStack": 1,
   "ClipsGeometry": false,
   "Consumable": false,
-  "ItemSoundSetId": "ISS_Weapons_Wood"
+  "ItemSoundSetId": "ISS_Weapons_Wood",
+  "ItemAppearanceConditions": {
+    "Ammo": [
+      {
+        "Condition": [
+          1,
+          1
+        ],
+        "Model": "Items/AnimalHusbandry/Eggzooka/Eggzooka_1.blockymodel",
+        "Texture": "Items/AnimalHusbandry/Eggzooka/Eggzooka_Texture.png"
+      },
+      {
+        "Condition": [
+          2,
+          2
+        ],
+        "Model": "Items/AnimalHusbandry/Eggzooka/Eggzooka_2.blockymodel",
+        "Texture": "Items/AnimalHusbandry/Eggzooka/Eggzooka_Texture.png"
+      },
+      {
+        "Condition": [
+          3,
+          3
+        ],
+        "Model": "Items/AnimalHusbandry/Eggzooka/Eggzooka_3.blockymodel",
+        "Texture": "Items/AnimalHusbandry/Eggzooka/Eggzooka_Texture.png"
+      }
+    ]
+  }
 }
