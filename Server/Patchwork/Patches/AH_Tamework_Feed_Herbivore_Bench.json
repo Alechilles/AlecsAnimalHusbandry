@@ -1,0 +1,26 @@
+{
+  "Id": "AH_Tamework_Feed_Herbivore_Bench",
+  "$Comment": "Moves Tamework's herbivore feed recipe from the Farming bench to the Animal Husbandry Workbench.",
+  "Target": "Server/Item/Items/Tw_Feed_Herbivore.json",
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 100,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "move-to-husbandry-bench",
+      "Op": "Replace",
+      "Path": "/Recipe/BenchRequirement",
+      "Value": [
+        {
+          "Type": "Crafting",
+          "Id": "AH_Husbandrybench",
+          "Categories": [
+            "Husbandry"
+          ]
+        }
+      ]
+    }
+  ]
+}

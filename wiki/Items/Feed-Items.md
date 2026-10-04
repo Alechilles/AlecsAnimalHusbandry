@@ -25,7 +25,7 @@ These care items are provided by **Alec's Tamework** and are used by Animal Husb
   - 5x Any Vegetables
   - 5x Any Fruits
 - Output: **10**
-- Crafting station: **Farming Bench (Farming category)**
+- Crafting station: **Animal Husbandry Workbench**
 - Craft time: **1 second**
 
 ![Carnivore Kibble](https://github.com/user-attachments/assets/afa4a3b6-fdf7-4a31-b856-161a8427c185)
@@ -35,7 +35,7 @@ These care items are provided by **Alec's Tamework** and are used by Animal Husb
 - Recipe:
   - 10x Any Meats
 - Output: **10**
-- Crafting station: **Farming Bench (Farming category)**
+- Crafting station: **Animal Husbandry Workbench**
 - Craft time: **1 second**
 
 ## Feed Trough

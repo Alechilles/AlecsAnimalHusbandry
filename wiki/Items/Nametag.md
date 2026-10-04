@@ -19,7 +19,7 @@ Use it to name your tamed livestock and Beasts so your stable and command panel 
 - Requires **Alec's Nametags!** to be installed alongside Animal Husbandry and Alec's Tamework.
 
 ## Crafting
-- Crafting station: **Farmer's Workbench**
+- Crafting station: **Animal Husbandry Workbench**
 - Recipe:
   - 2x **Light Leather**
   - 1x **Gold Bar**
