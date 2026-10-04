@@ -1,0 +1,111 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AH_Bench_Husbandry.name",
+    "Description": "server.items.AH_Bench_Husbandry.description"
+  },
+  "Icon": "Icons/ItemsGenerated/AH_Bench_Husbandry.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/AnimalHusbandry/Husbandry_Bench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/AnimalHusbandry/Husbandry_Bench_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Farming",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Type": "Crafting",
+      "Id": "AH_Husbandrybench",
+      "Categories": [
+        {
+          "Id": "Husbandry",
+          "Icon": "Icons/CraftingCategories/Farming/Farming.png",
+          "Name": "server.benchCategories.ahhusbandrybench.husbandry"
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Bench_Placeholder",
+      "LocalCloseSoundEventId": "SFX_Bench_Placeholder",
+      "CompletedSoundEventId": "SFX_Bench_Placeholder"
+    },
+    "BlockEntity": {
+      "Components": {
+        "BenchBlock": {}
+      }
+    },
+    "State": {
+      "Definitions": {
+        "CraftCompleted": {}
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#815c39",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood",
+    "PhysicalMaterialId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.35,
+    "Translation": [
+      11.4,
+      -19.8
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 3,
+    "Input": [
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 6
+      },
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 20
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Crafting"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 1,
+  "ItemLevel": 4,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}
