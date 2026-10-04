@@ -3660,7 +3660,7 @@
        "id": "38",
        "name": "Rail_Beam",
        "position": {
-        "x": -10.5,
+        "x": -13.0,
         "y": 33.5,
         "z": -12.5
        },
@@ -3685,7 +3685,7 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 51,
+          "x": 46,
           "y": 9,
           "z": 5
          }
@@ -3767,10 +3767,10 @@
       },
       {
        "id": "39",
-       "name": "Rail_Cap",
+       "name": "Rail_Post_Right",
        "position": {
-        "x": 14.0,
-        "y": 34.0,
+        "x": 12.5,
+        "y": 35.5,
         "z": -12.5
        },
        "orientation": {
@@ -3794,15 +3794,15 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 4,
-          "y": 10,
-          "z": 7
+          "x": 5,
+          "y": 13,
+          "z": 5
          }
         },
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 121,
+           "x": 116,
            "y": 43
           },
           "mirror": {
@@ -3813,7 +3813,7 @@
          },
          "back": {
           "offset": {
-           "x": 121,
+           "x": 116,
            "y": 43
           },
           "mirror": {
@@ -3824,7 +3824,7 @@
          },
          "left": {
           "offset": {
-           "x": 121,
+           "x": 116,
            "y": 43
           },
           "mirror": {
@@ -3835,7 +3835,7 @@
          },
          "right": {
           "offset": {
-           "x": 121,
+           "x": 116,
            "y": 43
           },
           "mirror": {
@@ -3846,8 +3846,8 @@
          },
          "top": {
           "offset": {
-           "x": 121,
-           "y": 43
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -3857,8 +3857,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 121,
-           "y": 43
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
