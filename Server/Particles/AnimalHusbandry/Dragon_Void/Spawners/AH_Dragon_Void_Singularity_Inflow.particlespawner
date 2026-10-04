@@ -2,16 +2,16 @@
   "RenderMode": "BlendAdd",
   "EmitOffset": {
     "X": {
-      "Min": 4.5,
-      "Max": 4.5
+      "Min": 3.5,
+      "Max": 3.5
     },
     "Y": {
-      "Min": 4.5,
-      "Max": 4.5
+      "Min": 3.5,
+      "Max": 3.5
     },
     "Z": {
-      "Min": 4.5,
-      "Max": 4.5
+      "Min": 3.5,
+      "Max": 3.5
     }
   },
   "ParticleRotationInfluence": "Billboard",
@@ -20,14 +20,14 @@
   "ParticleRotateWithSpawner": false,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 160,
+  "MaxConcurrentParticles": 100,
   "ParticleLifeSpan": {
-    "Min": 0.9166666666666666,
-    "Max": 0.9166666666666666
+    "Min": 0.8,
+    "Max": 0.9
   },
   "SpawnRate": {
-    "Min": 110,
-    "Max": 140
+    "Min": 70,
+    "Max": 90
   },
   "InitialVelocity": {
     "Speed": {
@@ -52,37 +52,12 @@
       },
       "RadialAxis": {
         "X": 0,
-        "Y": 0,
+        "Y": 1,
         "Z": 0
       },
       "Radius": 0,
-      "RadialAcceleration": -5.76,
-      "RadialTangentAcceleration": 0,
-      "LinearAcceleration": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      }
-    },
-    {
-      "Position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "RadialAxis": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "Radius": 0.5,
-      "RadialAcceleration": 7200,
-      "RadialTangentAcceleration": 0,
-      "DampingMultiplier": {
-        "X": 0.9414801494009999,
-        "Y": 1,
-        "Z": 1
-      },
+      "RadialAcceleration": -11,
+      "RadialTangentAcceleration": 7,
       "LinearAcceleration": {
         "X": 0,
         "Y": 0,
@@ -101,57 +76,33 @@
       "0": {
         "Scale": {
           "X": {
-            "Min": 1,
-            "Max": 1
+            "Min": 2.5,
+            "Max": 2.5
           },
           "Y": {
-            "Min": 1,
-            "Max": 1
+            "Min": 2.5,
+            "Max": 2.5
           }
         },
         "Opacity": 0,
-        "Color": "#ab23ff"
+        "Color": "#c45cff"
       },
       "30": {
-        "Scale": {
-          "X": {
-            "Min": 2,
-            "Max": 1.5
-          },
-          "Y": {
-            "Min": 2,
-            "Max": 1.5
-          }
-        },
-        "Opacity": 0.5
-      },
-      "50": {
-        "Scale": {
-          "X": {
-            "Min": 3,
-            "Max": 1.5
-          },
-          "Y": {
-            "Min": 3,
-            "Max": 1.5
-          }
-        },
-        "Opacity": 1,
-        "Color": "#9e00ff"
+        "Opacity": 1
       },
       "100": {
         "Scale": {
           "X": {
-            "Min": 5,
-            "Max": 2.5
+            "Min": 0.6,
+            "Max": 0.6
           },
           "Y": {
-            "Min": 5,
-            "Max": 2.5
+            "Min": 0.6,
+            "Max": 0.6
           }
         },
-        "Color": "#9e00ff",
-        "Opacity": 0
+        "Opacity": 0.7,
+        "Color": "#ff8cf5"
       }
     },
     "InitialAnimationFrame": {

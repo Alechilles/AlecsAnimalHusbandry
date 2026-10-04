@@ -1,12 +1,22 @@
 {
   "Spawners": [
     {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Halo"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Swirl"
+    },
+    {
       "SpawnerId": "AH_Dragon_Void_Singularity_Inflow"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Rim"
     },
     {
       "SpawnerId": "AH_Dragon_Void_Singularity_Core"
     }
   ],
   "BoundingRadius": 10,
+  "CullDistance": 120,
   "IsImportant": true
 }
