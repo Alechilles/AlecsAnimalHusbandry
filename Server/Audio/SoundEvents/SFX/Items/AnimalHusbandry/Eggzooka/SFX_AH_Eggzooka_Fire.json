@@ -1,0 +1,38 @@
+{
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Fire_01.ogg",
+        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Fire_02.ogg",
+        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Fire_03.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -1,
+        "MaxPitch": 1,
+        "MinVolume": -1,
+        "MaxVolume": 0
+      },
+      "Volume": 0
+    },
+    {
+      "Files": [
+        "Sounds/NPC/Livestock/Chicken/Chicken_Hurt_01.ogg",
+        "Sounds/NPC/Livestock/Chicken/Chicken_Hurt_02.ogg",
+        "Sounds/NPC/Livestock/Chicken/Chicken_Hurt_03.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": 0,
+        "MaxPitch": 4,
+        "MinVolume": -2,
+        "MaxVolume": 0
+      },
+      "StartDelay": 0.03,
+      "Volume": -5.0
+    }
+  ],
+  "Volume": 2.0,
+  "PreventSoundInterruption": true,
+  "MaxInstance": 6,
+  "AudioCategory": "AudioCat_Weapons",
+  "Parent": "SFX_Attn_Loud"
+}

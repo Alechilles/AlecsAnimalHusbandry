@@ -4,16 +4,9 @@
   "HorizontalSpeedMultiplier": 0.75,
   "Effects": {
     "ItemAnimationId": "Reload",
-    "WorldSoundEventId": "SFX_Blunderbuss_Load",
-    "LocalSoundEventId": "SFX_Blunderbuss_Load_Local",
+    "WorldSoundEventId": "SFX_AH_Eggzooka_Load",
+    "LocalSoundEventId": "SFX_AH_Eggzooka_Load",
     "ClearAnimationOnFinish": true
   },
-  "Next": {
-    "Type": "ApplyEffect",
-    "EffectId": {
-      "StatModifiers": {
-        "Ammo": 1
-      }
-    }
-  }
+  "Next": "Common_StatAmmoReload_StatModifier"
 }

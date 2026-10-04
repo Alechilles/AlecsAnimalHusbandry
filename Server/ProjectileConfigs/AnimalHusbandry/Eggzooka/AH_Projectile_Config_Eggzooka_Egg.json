@@ -3,7 +3,7 @@
   "LaunchForce": 26,
   "SpawnOffset": {
     "X": 0.15,
-    "Y": -0.1,
+    "Y": -0.3,
     "Z": 0.4
   },
   "Physics": {
@@ -15,8 +15,8 @@
     "Bounciness": 0.0,
     "SticksVertically": false
   },
-  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
-  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "LaunchLocalSoundEventId": "SFX_AH_Eggzooka_Fire",
+  "LaunchWorldSoundEventId": "SFX_AH_Eggzooka_Fire",
   "Interactions": {
     "ProjectileHit": {
       "Cooldown": {
@@ -25,7 +25,6 @@
       "Interactions": [
         {
           "Type": "DamageEntity",
-          "Entity": "Target",
           "DamageCalculator": {
             "Type": "Absolute",
             "BaseDamage": {
@@ -34,12 +33,7 @@
             "RandomPercentageModifier": 0.1
           },
           "DamageEffects": {
-            "WorldSoundEventId": "SFX_Egg_Hit",
-            "WorldParticles": [
-              {
-                "SystemId": "AH_Eggzooka_Yolk_Splat"
-              }
-            ]
+            "WorldSoundEventId": "SFX_Egg_Hit"
           }
         },
         {
@@ -48,9 +42,19 @@
           "EffectId": "AH_Eggzooka_Egged"
         },
         {
-          "Type": "RemoveEntity",
-          "Entity": "User"
-        }
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": false,
+            "DamageBlocks": false,
+            "Particles": [
+              {
+                "SystemId": "AH_Eggzooka_Yolk_Splat"
+              }
+            ],
+            "SoundEventId": "SFX_AH_Eggzooka_Splat"
+          }
+        },
+        "Common_Projectile_Despawn"
       ]
     },
     "ProjectileMiss": {
@@ -62,18 +66,23 @@
           "Type": "Simple",
           "RunTime": 0,
           "Effects": {
-            "WorldSoundEventId": "SFX_Egg_Miss",
-            "WorldParticles": [
-              {
-                "SystemId": "AH_Eggzooka_Yolk_Splat"
-              }
-            ]
+            "WorldSoundEventId": "SFX_Egg_Miss"
           }
         },
         {
-          "Type": "RemoveEntity",
-          "Entity": "User"
-        }
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": false,
+            "DamageBlocks": false,
+            "Particles": [
+              {
+                "SystemId": "AH_Eggzooka_Yolk_Splat"
+              }
+            ],
+            "SoundEventId": "SFX_AH_Eggzooka_Splat"
+          }
+        },
+        "Common_Projectile_Despawn"
       ]
     }
   }
