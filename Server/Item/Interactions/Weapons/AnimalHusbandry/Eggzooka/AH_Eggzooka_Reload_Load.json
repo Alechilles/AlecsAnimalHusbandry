@@ -1,0 +1,19 @@
+{
+  "Type": "Simple",
+  "RunTime": 0.7,
+  "HorizontalSpeedMultiplier": 0.75,
+  "Effects": {
+    "ItemAnimationId": "Reload",
+    "WorldSoundEventId": "SFX_Blunderbuss_Load",
+    "LocalSoundEventId": "SFX_Blunderbuss_Load_Local",
+    "ClearAnimationOnFinish": true
+  },
+  "Next": {
+    "Type": "ApplyEffect",
+    "EffectId": {
+      "StatModifiers": {
+        "Ammo": 1
+      }
+    }
+  }
+}

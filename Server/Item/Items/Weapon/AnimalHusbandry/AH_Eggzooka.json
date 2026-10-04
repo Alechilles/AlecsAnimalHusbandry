@@ -1,0 +1,60 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AH_Eggzooka.name",
+    "Description": "server.items.AH_Eggzooka.description"
+  },
+  "Categories": [
+    "Items.Weapons"
+  ],
+  "Quality": "Epic",
+  "PlayerAnimationsId": "AH_Eggzooka",
+  "Model": "Items/AnimalHusbandry/Eggzooka/Eggzooka.blockymodel",
+  "Texture": "Items/AnimalHusbandry/Eggzooka/Eggzooka_Texture.png",
+  "Icon": "Icons/ItemsGenerated/AH_Eggzooka.png",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Translation": [
+      -6,
+      -22
+    ],
+    "Rotation": [
+      330,
+      90,
+      45
+    ]
+  },
+  "Reticle": "DefaultMelee",
+  "Tags": {
+    "Type": [
+      "Weapon"
+    ],
+    "Family": [
+      "Eggzooka"
+    ]
+  },
+  "Interactions": {
+    "SwapFrom": "Root_AH_Eggzooka_Swap_From",
+    "Primary": "Root_AH_Eggzooka_Primary",
+    "Ability3": "Root_AH_Eggzooka_Reload"
+  },
+  "Weapon": {
+    "EntityStatsToClear": [
+      "Ammo"
+    ],
+    "StatModifiers": {
+      "Ammo": [
+        {
+          "Amount": 3,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "DisplayEntityStatsHUD": [
+    "Ammo"
+  ],
+  "MaxStack": 1,
+  "ClipsGeometry": false,
+  "Consumable": false,
+  "ItemSoundSetId": "ISS_Weapons_Wood"
+}

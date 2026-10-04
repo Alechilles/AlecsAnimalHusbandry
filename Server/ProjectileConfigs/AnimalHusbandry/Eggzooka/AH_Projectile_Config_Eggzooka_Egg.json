@@ -1,0 +1,80 @@
+{
+  "Model": "Egg",
+  "LaunchForce": 26,
+  "SpawnOffset": {
+    "X": 0.15,
+    "Y": -0.1,
+    "Z": 0.4
+  },
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 12,
+    "TerminalVelocityAir": 45,
+    "TerminalVelocityWater": 15,
+    "RotationMode": "VelocityDamped",
+    "Bounciness": 0.0,
+    "SticksVertically": false
+  },
+  "LaunchLocalSoundEventId": "SFX_Bow_T2_Shoot_Local",
+  "LaunchWorldSoundEventId": "SFX_Bow_T2_Shoot",
+  "Interactions": {
+    "ProjectileHit": {
+      "Cooldown": {
+        "Cooldown": 0
+      },
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "Entity": "Target",
+          "DamageCalculator": {
+            "Type": "Absolute",
+            "BaseDamage": {
+              "Projectile": 4
+            },
+            "RandomPercentageModifier": 0.1
+          },
+          "DamageEffects": {
+            "WorldSoundEventId": "SFX_Egg_Hit",
+            "WorldParticles": [
+              {
+                "SystemId": "AH_Eggzooka_Yolk_Splat"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "ApplyEffect",
+          "Entity": "Target",
+          "EffectId": "AH_Eggzooka_Egged"
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Cooldown": {
+        "Cooldown": 0
+      },
+      "Interactions": [
+        {
+          "Type": "Simple",
+          "RunTime": 0,
+          "Effects": {
+            "WorldSoundEventId": "SFX_Egg_Miss",
+            "WorldParticles": [
+              {
+                "SystemId": "AH_Eggzooka_Yolk_Splat"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "Name": "Egged",
+  "ApplicationEffects": {
+    "ScreenEffect": "ScreenEffects/AH_Egg_Yolk.png",
+    "EntityBottomTint": "#e08a12",
+    "EntityTopTint": "#ffd94a"
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "Duration": 5
+}

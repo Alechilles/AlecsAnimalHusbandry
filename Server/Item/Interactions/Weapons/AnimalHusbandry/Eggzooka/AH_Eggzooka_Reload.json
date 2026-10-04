@@ -1,0 +1,33 @@
+{
+  "$Comment": "Loads one Food_Egg per loop until the hopper is full, the eggs run out, or the player fires.",
+  "Type": "Repeat",
+  "Repeat": -1,
+  "Rules": {
+    "InterruptedBy": [
+      "Primary",
+      "Secondary"
+    ]
+  },
+  "ForkInteractions": {
+    "Interactions": [
+      {
+        "Type": "StatsCondition",
+        "LessThan": true,
+        "Costs": {
+          "Ammo": 100
+        },
+        "ValueType": "Percent",
+        "Next": {
+          "Type": "ModifyInventory",
+          "RequiredGameMode": "Adventure",
+          "ItemToRemove": {
+            "Id": "Food_Egg",
+            "Quantity": 1
+          },
+          "Next": "AH_Eggzooka_Reload_Load"
+        }
+      }
+    ]
+  },
+  "Failed": "Common_Bow_No_Ammo"
+}
