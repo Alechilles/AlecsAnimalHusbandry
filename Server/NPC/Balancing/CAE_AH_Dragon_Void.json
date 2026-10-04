@@ -117,12 +117,12 @@
         "Ability": "Root_NPC_AH_Dragon_Void_Bite",
         "WeightCoefficient": 3,
         "AttackDistanceRange": [
-          2.5,
-          4.5
+          6,
+          9
         ],
         "PostExecuteDistanceRange": [
-          3.5,
-          3.5
+          7.5,
+          7.5
         ],
         "FailureTimeout": 4,
         "RequireAiming": true,
@@ -133,7 +133,7 @@
               "ResponseCurve": "SimpleLogistic",
               "XRange": [
                 0,
-                6
+                11
               ]
             }
           },
@@ -157,12 +157,12 @@
         "Ability": "Root_NPC_AH_Dragon_Void_Void_Breath",
         "WeightCoefficient": 4,
         "AttackDistanceRange": [
-          3,
-          9
+          8,
+          15
         ],
         "PostExecuteDistanceRange": [
-          5,
-          5
+          10,
+          10
         ],
         "FailureTimeout": 5,
         "RequireAiming": true,
@@ -173,7 +173,7 @@
               "ResponseCurve": "SimpleLogistic",
               "XRange": [
                 0,
-                10
+                17
               ]
             }
           },
@@ -197,12 +197,12 @@
         "Ability": "Root_NPC_AH_Dragon_Void_Gravity_Pull",
         "WeightCoefficient": 3,
         "AttackDistanceRange": [
-          7,
-          15
+          12,
+          21
         ],
         "PostExecuteDistanceRange": [
-          5,
-          5
+          9,
+          9
         ],
         "FailureTimeout": 5,
         "RequireAiming": true,
@@ -213,7 +213,7 @@
               "ResponseCurve": "SimpleLogistic",
               "XRange": [
                 0,
-                17
+                23
               ]
             }
           },
@@ -267,7 +267,7 @@
             "Root_NPC_AH_Dragon_Void_Attack"
           ],
           "Randomise": false,
-          "MaxRange": 5.25,
+          "MaxRange": 10,
           "Timeout": 2,
           "CooldownRange": [
             1.5,
