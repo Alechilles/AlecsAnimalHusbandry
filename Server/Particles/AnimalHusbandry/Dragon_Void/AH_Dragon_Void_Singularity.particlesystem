@@ -1,21 +1,47 @@
 {
   "Spawners": [
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Halo"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Halo",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Swirl"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Swirl",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Inflow"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Inflow",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Rim"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Rim",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Core"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Core",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.3,
+        "Z": 0
+      }
     }
   ],
+  "LifeSpan": 2.5,
   "BoundingRadius": 10,
   "CullDistance": 120,
   "IsImportant": true
