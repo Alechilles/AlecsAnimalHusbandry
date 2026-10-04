@@ -2658,7 +2658,7 @@
      ]
     },
     {
-     "id": "36",
+     "id": "37",
      "name": "BackBoard",
      "position": {
       "x": 0,
@@ -2695,11 +2695,11 @@
      "children": [
       {
        "id": "27",
-       "name": "Board_Panel",
+       "name": "Board_Post_Left",
        "position": {
-        "x": -20.0,
-        "y": 45.5,
-        "z": -13.5
+        "x": -33.5,
+        "y": 49.0,
+        "z": -12.5
        },
        "orientation": {
         "x": 0,
@@ -2722,16 +2722,16 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 28,
-          "y": 33,
-          "z": 3
+          "x": 5,
+          "y": 22,
+          "z": 5
          }
         },
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2741,8 +2741,8 @@
          },
          "back": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2752,8 +2752,8 @@
          },
          "left": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2763,8 +2763,8 @@
          },
          "right": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2774,8 +2774,8 @@
          },
          "top": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -2785,8 +2785,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 63,
-           "y": 52
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -2804,11 +2804,11 @@
       },
       {
        "id": "28",
-       "name": "Board_Cap_Left",
+       "name": "Board_Post_Right",
        "position": {
-        "x": -32.5,
-        "y": 60.5,
-        "z": -13.5
+        "x": -2.5,
+        "y": 49.0,
+        "z": -12.5
        },
        "orientation": {
         "x": 0,
@@ -2832,15 +2832,15 @@
          "isPiece": false,
          "size": {
           "x": 5,
-          "y": 5,
+          "y": 22,
           "z": 5
          }
         },
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2850,8 +2850,8 @@
          },
          "back": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2861,8 +2861,8 @@
          },
          "left": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2872,8 +2872,8 @@
          },
          "right": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 43
           },
           "mirror": {
            "x": false,
@@ -2883,8 +2883,8 @@
          },
          "top": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -2894,8 +2894,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 116,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -2913,11 +2913,11 @@
       },
       {
        "id": "29",
-       "name": "Board_Cap_Right",
+       "name": "Board_Panel",
        "position": {
-        "x": -7.5,
-        "y": 60.5,
-        "z": -13.5
+        "x": -18.0,
+        "y": 49.0,
+        "z": -13.0
        },
        "orientation": {
         "x": 0,
@@ -2940,16 +2940,16 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 5,
-          "y": 5,
-          "z": 5
+          "x": 26,
+          "y": 22,
+          "z": 2
          }
         },
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -2959,8 +2959,8 @@
          },
          "back": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -2970,8 +2970,8 @@
          },
          "left": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -2981,8 +2981,8 @@
          },
          "right": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -2992,8 +2992,8 @@
          },
          "top": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -3003,8 +3003,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 123,
-           "y": 18
+           "x": 64,
+           "y": 57
           },
           "mirror": {
            "x": false,
@@ -3022,11 +3022,11 @@
       },
       {
        "id": "30",
-       "name": "Board_Peg_Rope",
+       "name": "Board_Header",
        "position": {
-        "x": -29.0,
-        "y": 55.0,
-        "z": -10.5
+        "x": -18.0,
+        "y": 62.0,
+        "z": -12.5
        },
        "orientation": {
         "x": 0,
@@ -3049,16 +3049,16 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 2,
-          "y": 2,
-          "z": 3
+          "x": 38,
+          "y": 4,
+          "z": 7
          }
         },
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 0,
+           "y": 74
           },
           "mirror": {
            "x": false,
@@ -3068,8 +3068,8 @@
          },
          "back": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 0,
+           "y": 74
           },
           "mirror": {
            "x": false,
@@ -3079,8 +3079,8 @@
          },
          "left": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 70,
+           "y": 1
           },
           "mirror": {
            "x": false,
@@ -3090,8 +3090,8 @@
          },
          "right": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 70,
+           "y": 1
           },
           "mirror": {
            "x": false,
@@ -3101,8 +3101,8 @@
          },
          "top": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 68,
+           "y": 12
           },
           "mirror": {
            "x": false,
@@ -3112,8 +3112,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 122,
-           "y": 46
+           "x": 68,
+           "y": 12
           },
           "mirror": {
            "x": false,
@@ -3131,9 +3131,9 @@
       },
       {
        "id": "31",
-       "name": "Board_Peg_Bridle",
+       "name": "Board_Peg_Rope",
        "position": {
-        "x": -19.0,
+        "x": -26.0,
         "y": 55.0,
         "z": -10.5
        },
@@ -3240,9 +3240,9 @@
       },
       {
        "id": "32",
-       "name": "Board_Peg_Horseshoe",
+       "name": "Board_Peg_Bridle",
        "position": {
-        "x": -11.0,
+        "x": -18.0,
         "y": 55.0,
         "z": -10.5
        },
@@ -3349,9 +3349,118 @@
       },
       {
        "id": "33",
+       "name": "Board_Peg_Horseshoe",
+       "position": {
+        "x": -10.0,
+        "y": 55.0,
+        "z": -10.5
+       },
+       "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+       },
+       "shape": {
+        "type": "box",
+        "offset": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        },
+        "stretch": {
+         "x": 1,
+         "y": 1,
+         "z": 1
+        },
+        "settings": {
+         "isPiece": false,
+         "size": {
+          "x": 2,
+          "y": 2,
+          "z": 3
+         }
+        },
+        "textureLayout": {
+         "front": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "back": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "left": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "right": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "top": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "bottom": {
+          "offset": {
+           "x": 122,
+           "y": 46
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         }
+        },
+        "unwrapMode": "custom",
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "standard"
+       },
+       "children": []
+      },
+      {
+       "id": "34",
        "name": "Board_Rope",
        "position": {
-        "x": -29,
+        "x": -26,
         "y": 50,
         "z": -10.5
        },
@@ -3402,10 +3511,10 @@
        "children": []
       },
       {
-       "id": "34",
+       "id": "35",
        "name": "Board_Bridle",
        "position": {
-        "x": -19,
+        "x": -18,
         "y": 47,
         "z": -10.3
        },
@@ -3456,10 +3565,10 @@
        "children": []
       },
       {
-       "id": "35",
+       "id": "36",
        "name": "Board_Horseshoe",
        "position": {
-        "x": -10.5,
+        "x": -9.5,
         "y": 51,
         "z": -10.5
        },
@@ -3548,10 +3657,10 @@
      },
      "children": [
       {
-       "id": "37",
+       "id": "38",
        "name": "Rail_Beam",
        "position": {
-        "x": -10.0,
+        "x": -10.5,
         "y": 33.5,
         "z": -12.5
        },
@@ -3576,7 +3685,7 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 50,
+          "x": 51,
           "y": 9,
           "z": 5
          }
@@ -3657,117 +3766,8 @@
        "children": []
       },
       {
-       "id": "38",
-       "name": "Rail_Cap_Left",
-       "position": {
-        "x": -34.0,
-        "y": 34.0,
-        "z": -12.5
-       },
-       "orientation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-       },
-       "shape": {
-        "type": "box",
-        "offset": {
-         "x": 0,
-         "y": 0,
-         "z": 0
-        },
-        "stretch": {
-         "x": 1,
-         "y": 1,
-         "z": 1
-        },
-        "settings": {
-         "isPiece": false,
-         "size": {
-          "x": 4,
-          "y": 10,
-          "z": 7
-         }
-        },
-        "textureLayout": {
-         "front": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "back": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "left": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "right": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "top": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         },
-         "bottom": {
-          "offset": {
-           "x": 121,
-           "y": 43
-          },
-          "mirror": {
-           "x": false,
-           "y": false
-          },
-          "angle": 0
-         }
-        },
-        "unwrapMode": "custom",
-        "visible": true,
-        "doubleSided": false,
-        "shadingMode": "standard"
-       },
-       "children": []
-      },
-      {
        "id": "39",
-       "name": "Rail_Cap_Right",
+       "name": "Rail_Cap",
        "position": {
         "x": 14.0,
         "y": 34.0,
@@ -4096,8 +4096,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 120,
-           "y": 76
+           "x": 121,
+           "y": 61
           },
           "mirror": {
            "x": false,
@@ -4107,8 +4107,8 @@
          },
          "back": {
           "offset": {
-           "x": 120,
-           "y": 76
+           "x": 121,
+           "y": 61
           },
           "mirror": {
            "x": false,
@@ -4140,8 +4140,8 @@
          },
          "top": {
           "offset": {
-           "x": 120,
-           "y": 76
+           "x": 121,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -4151,8 +4151,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 120,
-           "y": 76
+           "x": 121,
+           "y": 53
           },
           "mirror": {
            "x": false,
@@ -4205,8 +4205,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 39,
+           "y": 79
           },
           "mirror": {
            "x": false,
@@ -4216,8 +4216,8 @@
          },
          "back": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 39,
+           "y": 79
           },
           "mirror": {
            "x": false,
@@ -4227,8 +4227,8 @@
          },
          "left": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 124,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -4238,8 +4238,8 @@
          },
          "right": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 124,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -4249,8 +4249,8 @@
          },
          "top": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 39,
+           "y": 79
           },
           "mirror": {
            "x": false,
@@ -4260,8 +4260,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 30,
-           "y": 75
+           "x": 39,
+           "y": 79
           },
           "mirror": {
            "x": false,
@@ -4352,8 +4352,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4363,8 +4363,8 @@
          },
          "back": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4374,8 +4374,8 @@
          },
          "left": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4385,8 +4385,8 @@
          },
          "right": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4396,8 +4396,8 @@
          },
          "top": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4407,8 +4407,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 121,
-           "y": 53
+           "x": 46,
+           "y": 63
           },
           "mirror": {
            "x": false,
@@ -4461,8 +4461,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
@@ -4472,8 +4472,8 @@
          },
          "back": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
@@ -4483,8 +4483,8 @@
          },
          "left": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
@@ -4494,8 +4494,8 @@
          },
          "right": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
@@ -4505,8 +4505,8 @@
          },
          "top": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
@@ -4516,8 +4516,8 @@
          },
          "bottom": {
           "offset": {
-           "x": 122,
-           "y": 54
+           "x": 47,
+           "y": 64
           },
           "mirror": {
            "x": false,
