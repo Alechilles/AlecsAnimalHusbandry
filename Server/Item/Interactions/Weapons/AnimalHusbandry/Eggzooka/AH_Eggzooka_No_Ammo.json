@@ -1,0 +1,10 @@
+{
+  "$Comment": "Dry click when there are no eggs to load.",
+  "Type": "Simple",
+  "RunTime": 0.25,
+  "Effects": {
+    "ItemAnimationId": "Interact",
+    "WorldSoundEventId": "SFX_AH_Eggzooka_Empty",
+    "LocalSoundEventId": "SFX_AH_Eggzooka_Empty"
+  }
+}
