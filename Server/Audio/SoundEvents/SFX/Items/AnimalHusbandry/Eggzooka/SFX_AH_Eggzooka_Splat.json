@@ -4,8 +4,7 @@
       "Files": [
         "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Splat_01.ogg",
         "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Splat_02.ogg",
-        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Splat_03.ogg",
-        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Splat_04.ogg"
+        "Sounds/Items/AnimalHusbandry/Eggzooka/Eggzooka_Splat_03.ogg"
       ],
       "RandomSettings": {
         "MinPitch": -1.5,
@@ -16,9 +15,9 @@
       "Volume": 0
     }
   ],
-  "Volume": 3.0,
+  "Volume": 0.0,
   "PreventSoundInterruption": true,
   "MaxInstance": 6,
   "AudioCategory": "AudioCat_Weapons",
-  "Parent": "SFX_Attn_Loud"
+  "Parent": "SFX_Attn_Moderate"
 }
