@@ -2917,6 +2917,16 @@
                   },
                   "Instructions": [
                     {
+                      "$Comment": "AH signature attack: breath commit. No turning or repositioning while the breath wind-up and stream run.",
+                      "Sensor": {
+                        "Type": "TameworkEffectActive",
+                        "EffectId": "AH_Dragon_Void_Breath_Commit"
+                      },
+                      "BodyMotion": {
+                        "Type": "Nothing"
+                      }
+                    },
+                    {
                       "Sensor": {
                         "Type": "CombatActionEvaluator",
                         "TargetInRange": true

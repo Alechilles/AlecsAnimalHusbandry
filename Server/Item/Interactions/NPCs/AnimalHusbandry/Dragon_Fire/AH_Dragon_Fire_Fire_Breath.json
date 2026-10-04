@@ -1,10 +1,14 @@
 {
   "Type": "Serial",
-  "$Comment": "Ground breath: a one-second wind-up tell, then the stream.",
+  "$Comment": "Ground breath: commit to the current aim, wind up, then the stream.",
   "Interactions": [
     {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Fire_Breath_Commit"
+    },
+    {
       "Type": "Simple",
-      "RunTime": 1.0,
+      "RunTime": 1.4,
       "Effects": {
         "ItemPlayerAnimationsId": "AH_Dragon_Fire_Default",
         "ItemAnimationId": "BreathWindup",
