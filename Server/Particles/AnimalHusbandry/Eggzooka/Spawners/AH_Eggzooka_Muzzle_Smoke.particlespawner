@@ -2,16 +2,16 @@
   "RenderMode": "Erosion",
   "EmitOffset": {
     "X": {
-      "Min": -0.12,
-      "Max": 0.12
+      "Min": -0.04,
+      "Max": 0.04
     },
     "Y": {
-      "Min": -0.12,
-      "Max": 0.12
+      "Min": -0.04,
+      "Max": 0.04
     },
     "Z": {
-      "Min": -0.12,
-      "Max": 0.12
+      "Min": -0.04,
+      "Max": 0.04
     }
   },
   "ParticleRotationInfluence": "Billboard",
@@ -20,15 +20,15 @@
   "ParticleRotateWithSpawner": false,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 4,
+  "MaxConcurrentParticles": 3,
   "ParticleLifeSpan": {
-    "Min": 0.35,
-    "Max": 0.7
+    "Min": 0.3,
+    "Max": 0.5
   },
   "InitialVelocity": {
     "Speed": {
-      "Min": 0.6,
-      "Max": 1.6
+      "Min": 0.3,
+      "Max": 0.8
     },
     "Yaw": {
       "Min": -180,
@@ -78,12 +78,12 @@
     "InitialAnimationFrame": {
       "Scale": {
         "X": {
-          "Min": 0.22,
-          "Max": 0.32
+          "Min": 0.07,
+          "Max": 0.1
         },
         "Y": {
-          "Min": 0.22,
-          "Max": 0.32
+          "Min": 0.07,
+          "Max": 0.1
         }
       },
       "Opacity": 1,
@@ -109,7 +109,7 @@
     "Max": 90
   },
   "TotalParticles": {
-    "Min": 3,
-    "Max": 4
+    "Min": 2,
+    "Max": 3
   }
 }

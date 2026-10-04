@@ -2,16 +2,16 @@
   "RenderMode": "BlendLinear",
   "EmitOffset": {
     "X": {
-      "Min": -0.1,
-      "Max": 0.1
+      "Min": -0.04,
+      "Max": 0.04
     },
     "Y": {
-      "Min": -0.1,
-      "Max": 0.1
+      "Min": -0.04,
+      "Max": 0.04
     },
     "Z": {
-      "Min": -0.1,
-      "Max": 0.1
+      "Min": -0.04,
+      "Max": 0.04
     }
   },
   "ParticleRotationInfluence": "None",
@@ -20,23 +20,23 @@
   "ParticleRotateWithSpawner": false,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 10,
+  "MaxConcurrentParticles": 5,
   "ParticleLifeSpan": {
-    "Min": 0.6,
-    "Max": 1.1
+    "Min": 0.5,
+    "Max": 0.9
   },
   "SpawnRate": {
     "Min": 180,
     "Max": 360
   },
   "TotalParticles": {
-    "Min": 7,
-    "Max": 10
+    "Min": 3,
+    "Max": 5
   },
   "InitialVelocity": {
     "Speed": {
-      "Min": 4,
-      "Max": 9
+      "Min": 1.5,
+      "Max": 3.5
     },
     "Yaw": {
       "Min": -180,
@@ -156,12 +156,12 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.25,
-          "Max": 0.6
+          "Min": 0.06,
+          "Max": 0.13
         },
         "Y": {
-          "Min": 0.25,
-          "Max": 0.6
+          "Min": 0.06,
+          "Max": 0.13
         }
       },
       "Opacity": 1,
