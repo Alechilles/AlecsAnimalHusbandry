@@ -11,7 +11,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
 ## Quickstart Summary
 1. Livestock and neutral wildlife are tamed identically to base Hytale: **feed their [favorite food](/mod/alecs-animal-husbandry/animal-taming-reference).**<br /> Aggressive predators (Beasts) [require more steps](#beast-taming) to weaken and capture, akin to Pokemon or Monster Hunter.
 
-2. After taming, manage neutral animals with [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute), and predators with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute), to manage their health and happiness. Craft flutes at a Farming Bench.
+2. After taming, manage neutral animals with [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute), and predators with [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute), to manage their health and happiness. Craft flutes at an Animal Husbandry Workbench.
    - Right-click with a flute to open the [command interface](#animal-management).
    - Your owned companions appear automatically. Select the animals that this
      flute should command, then left-click to issue its selected command.
@@ -24,7 +24,7 @@ Parent: [Start Here](/mod/alecs-animal-husbandry/start-here) | [Home](/mod/alecs
    - The command HUD shows each animal's food options and happiness effects.
    - Passive breeding occurs with high happiness and is toggled per animal in the command flute interface.
 
-4. Safely transport animals with the Soul Lantern, crafted at a Farming Bench.
+4. Safely transport animals with the Soul Lantern, crafted at an Animal Husbandry Workbench.
    * **Do not use the base game Capture Create!** This resets your animal's data.
 
 > **Download [Voile](https://www.curseforge.com/hytale/mods/docs) (optional dependency) to view all documentation in game!**

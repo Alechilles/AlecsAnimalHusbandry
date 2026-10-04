@@ -39,7 +39,7 @@
 <p>Frost Dragon avatar flight has new upward-boost and forward-boost animations. Also new in 3.3: meet Lil Cluck, a hidden chick boss with pursuing pecks, egg volleys, a leaping feather shockwave, and a sweeping red laser. Beasts and Frost Dragons no longer naturally heal during combat. Frost Dragons have rarer beacon encounters and guaranteed Ice Essence drops. Requires Hytale 0.6.7 or later in Update 6 and Tamework 4.3.0 or later in the 4.x series.</p>
 
 <H2>Butcher's Knife</H2>
-<p>Craft a Butcher's Knife at a tier-1 Farmer's Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
+<p>Craft a Butcher's Knife at a tier-1 Animal Husbandry Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
 
 <H2>Lil Cluck</H2>
 <p>Summon Lil Cluck by crouch-interacting with your own tamed chick while holding a gold ingot. The chick consumes one ingot and becomes a hostile boss at full health, and is no longer your companion. You can also use <code>/npc spawn AH_Chicken_Chick_Boss</code>. This oversized chick wears sunglasses and a gold chain. During combat, players within 40 blocks see his native boss health bar. Natural health regeneration is disabled until he leaves combat. Dodge three pursuing pecks, bait its charge into a wall, and avoid marked eggs that burst into feathers or hatch chasing chicks. He cannot choose Egg Drop twice in a row. At 75% health, it crouches before leaping onto your position captured at takeoff and releases a jumpable, expanding ring of feathers on landing. Move after takeoff to dodge. Solid terrain can block the leap. The leap has an 8-second cooldown. At 50% health, Peep Show lowers his sunglasses for a one-second warning while turning to face you, then sweeps a red eye laser for 10 seconds. Run sideways to outrun its 30-degree-per-second turn or take cover behind terrain. The beam has a 10-second cooldown after firing. Hatchlings peck with a visible windup and remain until killed. The boss does not spawn naturally.</p>
@@ -162,7 +162,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
   </li>
   <br />
   <li>
-    After taming, link neutral animals with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/animal-control-flute" target="_blank" rel="noopener noreferrer">Animal Control Flute</a>, and predators with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/combat-beast-flute" target="_blank" rel="noopener noreferrer">Combat Beast Flute</a>, to manage their health and happiness. Craft flutes at a Farming Bench.
+    After taming, link neutral animals with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/animal-control-flute" target="_blank" rel="noopener noreferrer">Animal Control Flute</a>, and predators with <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/combat-beast-flute" target="_blank" rel="noopener noreferrer">Combat Beast Flute</a>, to manage their health and happiness. Craft flutes at an Animal Husbandry Workbench.
     <ul>
       <li>Right-click with a flute to open the command interface.</li>
       <li>Left-click with a flute to link animals and issue group commands.</li>
@@ -189,7 +189,7 @@ The demo instancing and tutorial system is an alpha project, so please expect to
     </ul>
   </li>
   <li>
-    Safely capture animals with the <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/soul-lantern" target="_blank" rel="noopener noreferrer">Soul Lantern</a>, crafted at a Farming Bench.
+    Safely capture animals with the <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/soul-lantern" target="_blank" rel="noopener noreferrer">Soul Lantern</a>, crafted at an Animal Husbandry Workbench.
     <ul>
       <li>This will save the animal's data like skins, name, traits, etc. so it's always respawned the same.</li>
       <li><strong>Do not use the base game Capture Create!</strong> This resets your animal's data.</li>

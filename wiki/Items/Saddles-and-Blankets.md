@@ -12,7 +12,7 @@ Owners can customize supported tamed animals directly from the interaction promp
 
 ## Saddle
 
-Craft an `AH_Saddle` at a Tier 1 Farming Bench using:
+Craft an `AH_Saddle` at a Tier 1 Animal Husbandry Workbench using:
 
 - 4 Light Leather
 - 2 Wool Bolts

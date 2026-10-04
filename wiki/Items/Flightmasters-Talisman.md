@@ -12,7 +12,7 @@ The Flightmaster's Talisman is a tool from Alec's Tamework. You must hold it to 
 
 ## Craft the Talisman
 
-Craft the Flightmaster's Talisman at a Tier 6 Farming Bench using:
+Craft the Flightmaster's Talisman at a Tier 6 Animal Husbandry Workbench using:
 
 - 10 Gold Ingots
 - 3 Zephyr gems
