@@ -1,0 +1,148 @@
+{
+  "RenderMode": "Erosion",
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LinearFiltering": false,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 260,
+  "ParticleLifeSpan": {
+    "Min": 0.75,
+    "Max": 1.25
+  },
+  "SpawnRate": {
+    "Min": 100,
+    "Max": 100
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 23.8,
+      "Max": 27.2
+    },
+    "Pitch": {
+      "Min": -30,
+      "Max": 10
+    },
+    "Yaw": {
+      "Min": -30,
+      "Max": 30
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Glow_Direction.png",
+    "ScaleRatioConstraint": "None",
+    "Animation": {
+      "0": {
+        "FrameIndex": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Scale": {
+          "X": {
+            "Min": 0.3,
+            "Max": 0.5
+          },
+          "Y": {
+            "Min": 0.4,
+            "Max": 0.5
+          }
+        },
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        },
+        "Color": "#ffdafe",
+        "Opacity": 1.0
+      },
+      "10": {
+        "Color": "#ffb2f7"
+      },
+      "20": {
+        "Opacity": 1.0,
+        "Scale": {
+          "X": {
+            "Min": 0.3,
+            "Max": 0.3
+          },
+          "Y": {
+            "Min": 1.0,
+            "Max": 1.0
+          }
+        }
+      },
+      "50": {
+        "Scale": {
+          "X": {
+            "Min": 0.3,
+            "Max": 0.3
+          },
+          "Y": {
+            "Min": 0.3,
+            "Max": 0.3
+          }
+        },
+        "Color": "#fb4de7",
+        "Opacity": 1.0
+      },
+      "100": {
+        "Color": "#9d2bfb",
+        "Opacity": 0.0
+      }
+    },
+    "UVOption": "RandomFlipU",
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.288,
+          "Max": 0.288
+        },
+        "Y": {
+          "Min": 0.22400000000000003,
+          "Max": 0.48
+        }
+      },
+      "Opacity": 1,
+      "Color": "#ffe3ff",
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 0
+      }
+    }
+  },
+  "SpawnBurst": false,
+  "Shape": "Sphere",
+  "EmitOffset": {
+    "X": {
+      "Max": 0.5
+    },
+    "Y": {
+      "Max": 0.5
+    },
+    "Z": {
+      "Max": 1.0
+    }
+  },
+  "Attractors": [
+    {
+      "LinearAcceleration": {
+        "Y": -3
+      },
+      "DampingMultiplier": {
+        "X": 0.7,
+        "Y": 0.7,
+        "Z": 0.7
+      }
+    }
+  ],
+  "TrailSpawnerPositionMultiplier": 1.0,
+  "TrailSpawnerRotationMultiplier": 1.0
+}

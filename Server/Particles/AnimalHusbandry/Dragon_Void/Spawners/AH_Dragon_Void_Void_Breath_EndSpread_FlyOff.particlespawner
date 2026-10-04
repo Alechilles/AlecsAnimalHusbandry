@@ -1,0 +1,135 @@
+{
+  "RenderMode": "Erosion",
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": false,
+  "LightInfluence": 0.0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 260,
+  "ParticleLifeSpan": {
+    "Min": 0.75,
+    "Max": 1.0
+  },
+  "SpawnRate": {
+    "Min": 10,
+    "Max": 30
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Fire/Fire_Ball.png",
+    "ScaleRatioConstraint": "None",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          },
+          "Y": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Opacity": 0.472
+      },
+      "10": {
+        "Opacity": 0.828,
+        "Color": "#ff52e7",
+        "Scale": {
+          "X": {
+            "Min": 2,
+            "Max": 2
+          },
+          "Y": {
+            "Max": 2,
+            "Min": 2
+          }
+        }
+      },
+      "50": {
+        "Color": "#fb4de7"
+      },
+      "70": {
+        "Scale": {
+          "X": {
+            "Min": 3,
+            "Max": 3
+          },
+          "Y": {
+            "Max": 3,
+            "Min": 3
+          }
+        },
+        "Opacity": 0.788
+      },
+      "80": {
+        "Opacity": 0.248
+      },
+      "100": {
+        "Opacity": 0,
+        "Scale": {
+          "X": {
+            "Min": 4,
+            "Max": 4
+          },
+          "Y": {
+            "Min": 4,
+            "Max": 4
+          }
+        },
+        "Color": "#7921cb"
+      }
+    },
+    "InitialAnimationFrame": {
+      "Opacity": 0.94,
+      "Scale": {
+        "X": {
+          "Min": 0.096,
+          "Max": 0.16000000000000003
+        },
+        "Y": {
+          "Min": 0.096,
+          "Max": 0.16000000000000003
+        }
+      }
+    },
+    "SoftParticles": "Disable",
+    "UVOption": "RandomFlipU"
+  },
+  "SpawnBurst": false,
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 13.6,
+      "Max": 17.0
+    },
+    "Yaw": {
+      "Min": -20,
+      "Max": 20
+    }
+  },
+  "UseEmitDirection": false,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "UVMotion": {
+    "Texture": "Particles/Textures/UVMotion/FlowMapThorus.png",
+    "Scale": 0.32,
+    "Strength": 3.8,
+    "SpeedY": 0.08,
+    "StrengthCurveType": "IncreaseLinear"
+  },
+  "EmitOffset": {
+    "Z": {
+      "Max": 0.5
+    }
+  },
+  "Attractors": [
+    {
+      "DampingMultiplier": {
+        "Z": 0.9,
+        "Y": 0.9,
+        "X": 0.9
+      },
+      "LinearImpulse": {
+        "Y": 4
+      }
+    }
+  ]
+}
