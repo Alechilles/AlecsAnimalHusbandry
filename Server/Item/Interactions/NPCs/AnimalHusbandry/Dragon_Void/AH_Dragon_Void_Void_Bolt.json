@@ -24,25 +24,14 @@
       "RunTime": 0.6
     },
     {
-      "Type": "TameworkLaunchProjectile",
-      "RunTime": 0,
-      "ProjectileId": "AH_Dragon_Void_Void_Bolt",
-      "LaunchPositionOffset": {
-        "X": 0,
-        "Y": 1.5,
-        "Z": -3.0
-      },
-      "TrajectoryMode": "Direct",
-      "TargetSlot": "LockedTarget",
-      "ImpactEffect": {
-        "EffectId": "AH_Dragon_Void_Voidtouched",
-        "Radius": 3,
-        "ExcludeSource": true
-      },
+      "Type": "Projectile",
+      "Config": "AH_Dragon_Void_Singularity_Bolt",
       "Effects": {
         "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch"
       },
-      "Tags": {}
+      "Tags": {
+        "AimingReference": []
+      }
     },
     {
       "Type": "Simple",

@@ -1,0 +1,1057 @@
+{
+  "Model": "AH_Dragon_Void_Singularity",
+  "Physics": {
+    "Type": "Standard",
+    "Gravity": 1.0,
+    "TerminalVelocityAir": 60,
+    "TerminalVelocityWater": 20,
+    "RotationMode": "None",
+    "Bounciness": 0,
+    "BounceCount": 0,
+    "SticksVertically": true
+  },
+  "LaunchForce": 30,
+  "SpawnOffset": {
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "Interactions": {
+    "ProjectileHit": {
+      "Cooldown": {
+        "Cooldown": 0
+      },
+      "Interactions": [
+        {
+          "Type": "DamageEntity",
+          "DamageCalculator": {
+            "BaseDamage": {
+              "Elemental": 16
+            }
+          }
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 3,
+            "EntityDamage": 16,
+            "Particles": [
+              {
+                "SystemId": "VoidImpact"
+              }
+            ]
+          },
+          "Effects": {
+            "WorldSoundEventId": "SFX_Fireball_Death"
+          }
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    },
+    "ProjectileMiss": {
+      "Cooldown": {
+        "Cooldown": 0
+      },
+      "Interactions": [
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 3,
+            "EntityDamage": 16,
+            "Particles": [
+              {
+                "SystemId": "VoidImpact"
+              }
+            ]
+          },
+          "Effects": {
+            "WorldSoundEventId": "SFX_Fireball_Death"
+          }
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 1,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "Explode",
+          "Config": {
+            "DamageEntities": true,
+            "DamageBlocks": false,
+            "EntityDamageRadius": 8,
+            "EntityDamage": 0,
+            "Knockback": {
+              "Type": "Point",
+              "Force": -2.5,
+              "VelocityY": 0.3,
+              "VelocityType": "Add",
+              "VelocityConfig": {
+                "AirResistance": 0.97,
+                "AirResistanceMax": 0.96,
+                "GroundResistance": 0.94,
+                "GroundResistanceMax": 0.3,
+                "Threshold": 3.0,
+                "Style": "Linear"
+              }
+            }
+          }
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 0.25
+        },
+        {
+          "Type": "RemoveEntity",
+          "Entity": "User"
+        }
+      ]
+    }
+  }
+}

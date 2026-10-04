@@ -14,33 +14,28 @@
   "TimeToLive": 6,
   "DeadTimeMiss": 0,
   "DeathParticles": {
-    "SystemId": "AH_Dragon_Void_Singularity"
+    "SystemId": "VoidImpact"
   },
   "MissParticles": {
-    "SystemId": "AH_Dragon_Void_Singularity"
+    "SystemId": "VoidImpact"
   },
   "ImpactSlowdown": 0,
   "VerticalCenterShot": 0,
   "HitParticles": {
-    "SystemId": "AH_Dragon_Void_Singularity"
+    "SystemId": "VoidImpact"
   },
   "DeathSoundEventId": "SFX_Fireball_Death",
   "ExplosionConfig": {
     "DamageEntities": true,
-    "EntityDamageRadius": 8,
-    "EntityDamage": 10,
+    "EntityDamageRadius": 3,
+    "EntityDamage": 16,
     "Knockback": {
-      "Type": "Point",
-      "Force": -13,
-      "VelocityY": 3.5,
-      "VelocityType": "Set",
-      "VelocityConfig": {
-        "AirResistance": 0.99,
-        "AirResistanceMax": 0.98,
-        "GroundResistance": 0.94,
-        "GroundResistanceMax": 0.3,
-        "Threshold": 3.0,
-        "Style": "Linear"
+      "Type": "Force",
+      "Force": 10,
+      "Direction": {
+        "Z": 0.5,
+        "Y": 2,
+        "X": 0.5
       }
     },
     "DamageBlocks": true
