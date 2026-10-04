@@ -1,0 +1,17 @@
+{
+  "Type": "Variant",
+  "Reference": "Template_Beasts_Passive_Critter",
+  "Modify": {
+    "Appearance": "AH_Raccoon",
+    "MaxHealth": 25,
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    }
+  },
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.AH_Raccoon.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

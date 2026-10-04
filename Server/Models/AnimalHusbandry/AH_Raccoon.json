@@ -1,0 +1,108 @@
+{
+  "Model": "NPC/AnimalHusbandry/Raccoon/Models/Model.blockymodel",
+  "Texture": "NPC/AnimalHusbandry/Raccoon/Models/Texture.png",
+  "EyeHeight": 0.5,
+  "CrouchOffset": -0.15,
+  "HitBox": {
+    "Max": {
+      "X": 0.25,
+      "Y": 0.7,
+      "Z": 0.25
+    },
+    "Min": {
+      "X": -0.25,
+      "Y": 0,
+      "Z": -0.25
+    }
+  },
+  "MinScale": 0.9,
+  "MaxScale": 1.15,
+  "Camera": {
+    "Pitch": {
+      "AngleRange": {
+        "Max": 35,
+        "Min": -35
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    },
+    "Yaw": {
+      "AngleRange": {
+        "Max": 35,
+        "Min": -35
+      },
+      "TargetNodes": [
+        "Head"
+      ]
+    }
+  },
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Idle.blockyanim"
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk.blockyanim",
+          "Speed": 1.4
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Run.blockyanim"
+        }
+      ]
+    },
+    "FluidIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Idle.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Run.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "Beg": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Beg.blockyanim",
+          "BlendingDuration": 0.3
+        }
+      ]
+    },
+    "IdlePassive": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Beg.blockyanim",
+          "BlendingDuration": 0.3
+        }
+      ],
+      "NextAnimationDelay": {
+        "Min": 4,
+        "Max": 10
+      }
+    }
+  }
+}
