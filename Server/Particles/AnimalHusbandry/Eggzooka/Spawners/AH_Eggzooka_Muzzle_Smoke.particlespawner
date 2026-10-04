@@ -1,0 +1,115 @@
+{
+  "RenderMode": "Erosion",
+  "EmitOffset": {
+    "X": {
+      "Min": -0.12,
+      "Max": 0.12
+    },
+    "Y": {
+      "Min": -0.12,
+      "Max": 0.12
+    },
+    "Z": {
+      "Min": -0.12,
+      "Max": 0.12
+    }
+  },
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": false,
+  "LightInfluence": 1.0,
+  "ParticleRotateWithSpawner": false,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 4,
+  "ParticleLifeSpan": {
+    "Min": 0.35,
+    "Max": 0.7
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0.6,
+      "Max": 1.6
+    },
+    "Yaw": {
+      "Min": -180,
+      "Max": 180
+    },
+    "Pitch": {
+      "Min": -180,
+      "Max": 180
+    }
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Smoke/Smoke.png",
+    "ScaleRatioConstraint": "OneToOne",
+    "UVOption": "RandomFlipU",
+    "Animation": {
+      "0": {
+        "Color": "#ffffff",
+        "Scale": {
+          "X": {
+            "Min": 0.5,
+            "Max": 0.5
+          },
+          "Y": {
+            "Min": 0.5,
+            "Max": 1
+          }
+        },
+        "Opacity": 1.0
+      },
+      "20": {
+        "Opacity": 0.336
+      },
+      "100": {
+        "Opacity": 0.0,
+        "Scale": {
+          "Y": {
+            "Min": 2.0,
+            "Max": 2.0
+          },
+          "X": {
+            "Min": 2.0,
+            "Max": 2.0
+          }
+        }
+      }
+    },
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.22,
+          "Max": 0.32
+        },
+        "Y": {
+          "Min": 0.22,
+          "Max": 0.32
+        }
+      },
+      "Opacity": 1,
+      "Color": "#f3e6b8",
+      "Rotation": {
+        "Z": {
+          "Min": 0.0,
+          "Max": 360.0
+        }
+      }
+    },
+    "UseSpriteBlending": false
+  },
+  "SpawnBurst": true,
+  "UVMotion": {
+    "Texture": "Particles/Textures/UVMotion/FlowMap.png",
+    "Strength": 2.68,
+    "Scale": 1.0,
+    "SpeedY": -0.192
+  },
+  "SpawnRate": {
+    "Min": 60,
+    "Max": 90
+  },
+  "TotalParticles": {
+    "Min": 3,
+    "Max": 4
+  }
+}

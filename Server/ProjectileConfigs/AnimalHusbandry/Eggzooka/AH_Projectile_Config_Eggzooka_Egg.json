@@ -44,14 +44,16 @@
         {
           "Type": "Explode",
           "Config": {
-            "DamageEntities": false,
+            "DamageEntities": true,
             "DamageBlocks": false,
             "Particles": [
               {
                 "SystemId": "AH_Eggzooka_Yolk_Splat"
               }
             ],
-            "SoundEventId": "SFX_AH_Eggzooka_Splat"
+            "SoundEventId": "SFX_AH_Eggzooka_Splat",
+            "EntityDamage": 0,
+            "EntityDamageRadius": 0.01
           }
         },
         "Common_Projectile_Despawn"
@@ -72,14 +74,16 @@
         {
           "Type": "Explode",
           "Config": {
-            "DamageEntities": false,
+            "DamageEntities": true,
             "DamageBlocks": false,
             "Particles": [
               {
                 "SystemId": "AH_Eggzooka_Yolk_Splat"
               }
             ],
-            "SoundEventId": "SFX_AH_Eggzooka_Splat"
+            "SoundEventId": "SFX_AH_Eggzooka_Splat",
+            "EntityDamage": 0,
+            "EntityDamageRadius": 0.01
           }
         },
         "Common_Projectile_Despawn"
