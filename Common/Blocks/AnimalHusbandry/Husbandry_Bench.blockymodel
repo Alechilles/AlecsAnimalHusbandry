@@ -1,7 +1,7 @@
 {
  "nodes": [
   {
-   "id": "62",
+   "id": "63",
    "name": "Bench",
    "position": {
     "x": 0,
@@ -3492,8 +3492,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 110,
-           "y": 76
+           "x": 52,
+           "y": 75
           },
           "mirror": {
            "x": false,
@@ -3512,7 +3512,7 @@
      ]
     },
     {
-     "id": "39",
+     "id": "40",
      "name": "BackRail",
      "position": {
       "x": 0,
@@ -3551,7 +3551,7 @@
        "id": "37",
        "name": "Rail_Beam",
        "position": {
-        "x": 4.5,
+        "x": -10.0,
         "y": 33.5,
         "z": -12.5
        },
@@ -3576,7 +3576,7 @@
         "settings": {
          "isPiece": false,
          "size": {
-          "x": 21,
+          "x": 50,
           "y": 9,
           "z": 5
          }
@@ -3584,8 +3584,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 39,
-           "y": 79
+           "x": 63,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -3595,8 +3595,8 @@
          },
          "back": {
           "offset": {
-           "x": 39,
-           "y": 79
+           "x": 63,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -3606,8 +3606,8 @@
          },
          "left": {
           "offset": {
-           "x": 47,
-           "y": 79
+           "x": 70,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -3617,8 +3617,8 @@
          },
          "right": {
           "offset": {
-           "x": 47,
-           "y": 79
+           "x": 70,
+           "y": 0
           },
           "mirror": {
            "x": false,
@@ -3628,7 +3628,7 @@
          },
          "top": {
           "offset": {
-           "x": 3,
+           "x": 0,
            "y": 74
           },
           "mirror": {
@@ -3639,7 +3639,7 @@
          },
          "bottom": {
           "offset": {
-           "x": 3,
+           "x": 0,
            "y": 74
           },
           "mirror": {
@@ -3658,7 +3658,116 @@
       },
       {
        "id": "38",
-       "name": "Rail_Cap",
+       "name": "Rail_Cap_Left",
+       "position": {
+        "x": -34.0,
+        "y": 34.0,
+        "z": -12.5
+       },
+       "orientation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+       },
+       "shape": {
+        "type": "box",
+        "offset": {
+         "x": 0,
+         "y": 0,
+         "z": 0
+        },
+        "stretch": {
+         "x": 1,
+         "y": 1,
+         "z": 1
+        },
+        "settings": {
+         "isPiece": false,
+         "size": {
+          "x": 4,
+          "y": 10,
+          "z": 7
+         }
+        },
+        "textureLayout": {
+         "front": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "back": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "left": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "right": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "top": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         },
+         "bottom": {
+          "offset": {
+           "x": 121,
+           "y": 43
+          },
+          "mirror": {
+           "x": false,
+           "y": false
+          },
+          "angle": 0
+         }
+        },
+        "unwrapMode": "custom",
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "standard"
+       },
+       "children": []
+      },
+      {
+       "id": "39",
+       "name": "Rail_Cap_Right",
        "position": {
         "x": 14.0,
         "y": 34.0,
@@ -3768,7 +3877,7 @@
      ]
     },
     {
-     "id": "41",
+     "id": "42",
      "name": "HayBale",
      "position": {
       "x": 0,
@@ -3804,7 +3913,7 @@
      },
      "children": [
       {
-       "id": "40",
+       "id": "41",
        "name": "Hay_Bale",
        "position": {
         "x": -10.0,
@@ -3915,7 +4024,7 @@
      ]
     },
     {
-     "id": "44",
+     "id": "45",
      "name": "Mallet",
      "position": {
       "x": -25,
@@ -3951,7 +4060,7 @@
      },
      "children": [
       {
-       "id": "42",
+       "id": "43",
        "name": "Mallet_Head",
        "position": {
         "x": -1.0,
@@ -3987,7 +4096,7 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -3998,7 +4107,7 @@
          },
          "back": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -4009,7 +4118,7 @@
          },
          "left": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -4020,7 +4129,7 @@
          },
          "right": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -4031,7 +4140,7 @@
          },
          "top": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -4042,7 +4151,7 @@
          },
          "bottom": {
           "offset": {
-           "x": 119,
+           "x": 120,
            "y": 76
           },
           "mirror": {
@@ -4060,7 +4169,7 @@
        "children": []
       },
       {
-       "id": "43",
+       "id": "44",
        "name": "Mallet_Handle",
        "position": {
         "x": 8.0,
@@ -4171,7 +4280,7 @@
      ]
     },
     {
-     "id": "47",
+     "id": "48",
      "name": "Wool",
      "position": {
       "x": 0,
@@ -4207,7 +4316,7 @@
      },
      "children": [
       {
-       "id": "45",
+       "id": "46",
        "name": "Wool_Tuft",
        "position": {
         "x": -11.0,
@@ -4316,7 +4425,7 @@
        "children": []
       },
       {
-       "id": "46",
+       "id": "47",
        "name": "Wool_Tuft_Top",
        "position": {
         "x": -11.5,
@@ -4427,7 +4536,7 @@
      ]
     },
     {
-     "id": "49",
+     "id": "50",
      "name": "Grain",
      "position": {
       "x": 0,
@@ -4463,7 +4572,7 @@
      },
      "children": [
       {
-       "id": "48",
+       "id": "49",
        "name": "Grain_Spill",
        "position": {
         "x": -1,
@@ -4499,8 +4608,8 @@
         "textureLayout": {
          "front": {
           "offset": {
-           "x": 92,
-           "y": 81
+           "x": 110,
+           "y": 76
           },
           "mirror": {
            "x": false,
@@ -4519,7 +4628,7 @@
      ]
     },
     {
-     "id": "57",
+     "id": "58",
      "name": "Feedbag",
      "position": {
       "x": 7,
@@ -4555,11 +4664,11 @@
      },
      "children": [
       {
-       "id": "50",
+       "id": "51",
        "name": "Bag",
        "children": [
         {
-         "id": "51",
+         "id": "52",
          "name": "Bag-Flaps",
          "children": [],
          "position": {
@@ -4612,7 +4721,7 @@
          }
         },
         {
-         "id": "52",
+         "id": "53",
          "name": "Bag-Flaps",
          "children": [],
          "position": {
@@ -4665,15 +4774,15 @@
          }
         },
         {
-         "id": "53",
+         "id": "54",
          "name": "Bag2",
          "children": [
           {
-           "id": "54",
+           "id": "55",
            "name": "Bag3",
            "children": [
             {
-             "id": "55",
+             "id": "56",
              "name": "Bag-Inner",
              "children": [],
              "position": {
@@ -4770,7 +4879,7 @@
              }
             },
             {
-             "id": "56",
+             "id": "57",
              "name": "Feed",
              "children": [],
              "position": {
@@ -5162,7 +5271,7 @@
      ]
     },
     {
-     "id": "61",
+     "id": "62",
      "name": "Shears",
      "position": {
       "x": -12,
@@ -5198,11 +5307,11 @@
      },
      "children": [
       {
-       "id": "58",
+       "id": "59",
        "name": "Handle",
        "children": [
         {
-         "id": "59",
+         "id": "60",
          "name": "Handle2",
          "children": [],
          "position": {
@@ -5255,7 +5364,7 @@
          }
         },
         {
-         "id": "60",
+         "id": "61",
          "name": "Pivot",
          "children": [],
          "position": {
