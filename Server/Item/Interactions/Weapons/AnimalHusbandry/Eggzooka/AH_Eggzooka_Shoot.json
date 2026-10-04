@@ -8,7 +8,12 @@
       {
         "SystemId": "AH_Eggzooka_Muzzle_Blast",
         "TargetEntityPart": "PrimaryItem",
-        "TargetNodeName": "Muzzle"
+        "TargetNodeName": "Muzzle",
+        "RotationOffset": {
+          "Yaw": 180,
+          "Pitch": 0,
+          "Roll": 0
+        }
       },
       {
         "SystemId": "AH_Eggzooka_Back_Blast",

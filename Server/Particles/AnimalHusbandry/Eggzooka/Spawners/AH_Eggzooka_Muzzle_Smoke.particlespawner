@@ -2,41 +2,41 @@
   "RenderMode": "Erosion",
   "EmitOffset": {
     "X": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     },
     "Y": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     },
     "Z": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     }
   },
   "ParticleRotationInfluence": "Billboard",
   "LinearFiltering": false,
   "LightInfluence": 1.0,
-  "ParticleRotateWithSpawner": false,
+  "ParticleRotateWithSpawner": true,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 3,
+  "MaxConcurrentParticles": 4,
   "ParticleLifeSpan": {
     "Min": 0.3,
-    "Max": 0.5
+    "Max": 0.55
   },
   "InitialVelocity": {
     "Speed": {
-      "Min": 0.3,
-      "Max": 0.8
+      "Min": 2.0,
+      "Max": 4.5
     },
     "Yaw": {
-      "Min": -180,
-      "Max": 180
+      "Min": -10,
+      "Max": 10
     },
     "Pitch": {
-      "Min": -180,
-      "Max": 180
+      "Min": -10,
+      "Max": 10
     }
   },
   "Particle": {
@@ -78,12 +78,12 @@
     "InitialAnimationFrame": {
       "Scale": {
         "X": {
-          "Min": 0.07,
-          "Max": 0.1
+          "Min": 0.1,
+          "Max": 0.15
         },
         "Y": {
-          "Min": 0.07,
-          "Max": 0.1
+          "Min": 0.1,
+          "Max": 0.15
         }
       },
       "Opacity": 1,
@@ -109,7 +109,8 @@
     "Max": 90
   },
   "TotalParticles": {
-    "Min": 2,
-    "Max": 3
-  }
+    "Min": 3,
+    "Max": 4
+  },
+  "UseEmitDirection": false
 }

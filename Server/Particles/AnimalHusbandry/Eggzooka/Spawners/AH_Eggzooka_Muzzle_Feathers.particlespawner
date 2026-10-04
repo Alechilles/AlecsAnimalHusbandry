@@ -2,49 +2,49 @@
   "RenderMode": "BlendLinear",
   "EmitOffset": {
     "X": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     },
     "Y": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     },
     "Z": {
-      "Min": -0.04,
-      "Max": 0.04
+      "Min": -0.03,
+      "Max": 0.03
     }
   },
   "ParticleRotationInfluence": "None",
   "LinearFiltering": false,
   "LightInfluence": 1,
-  "ParticleRotateWithSpawner": false,
+  "ParticleRotateWithSpawner": true,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 3,
+  "MaxConcurrentParticles": 6,
   "ParticleLifeSpan": {
     "Min": 0.5,
-    "Max": 0.8
+    "Max": 0.9
   },
   "SpawnRate": {
     "Min": 180,
     "Max": 360
   },
   "TotalParticles": {
-    "Min": 2,
-    "Max": 3
+    "Min": 4,
+    "Max": 6
   },
   "InitialVelocity": {
     "Speed": {
-      "Min": 1.0,
-      "Max": 2.5
+      "Min": 5.0,
+      "Max": 9.0
     },
     "Yaw": {
-      "Min": -180,
-      "Max": 180
+      "Min": -14,
+      "Max": 14
     },
     "Pitch": {
-      "Min": -180,
-      "Max": 180
+      "Min": -14,
+      "Max": 14
     }
   },
   "Attractors": [
@@ -156,12 +156,12 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.06,
-          "Max": 0.12
+          "Min": 0.08,
+          "Max": 0.16
         },
         "Y": {
-          "Min": 0.06,
-          "Max": 0.12
+          "Min": 0.08,
+          "Max": 0.16
         }
       },
       "Opacity": 1,
@@ -171,5 +171,6 @@
         "Max": 0
       }
     }
-  }
+  },
+  "UseEmitDirection": false
 }
