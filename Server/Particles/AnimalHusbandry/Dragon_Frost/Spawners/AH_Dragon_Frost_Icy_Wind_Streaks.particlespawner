@@ -1,13 +1,13 @@
 {
-  "RenderMode": "BlendAdd",
+  "RenderMode": "BlendLinear",
   "EmitOffset": {
     "X": {
-      "Min": -2.6,
-      "Max": 2.6
+      "Min": -3.0,
+      "Max": 3.0
     },
     "Y": {
-      "Min": -2.6,
-      "Max": 2.6
+      "Min": -3.0,
+      "Max": 3.0
     },
     "Z": {
       "Min": 0,
@@ -20,14 +20,14 @@
   "ParticleRotateWithSpawner": true,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 78,
+  "MaxConcurrentParticles": 171,
   "ParticleLifeSpan": {
     "Min": 0.65,
     "Max": 0.85
   },
   "SpawnRate": {
-    "Min": 60,
-    "Max": 80
+    "Min": 150,
+    "Max": 190
   },
   "InitialVelocity": {
     "Speed": {
@@ -62,7 +62,7 @@
         "Color": "#DFF5FF"
       },
       "20": {
-        "Opacity": 0.55,
+        "Opacity": 0.95,
         "Scale": {
           "X": {
             "Min": 1.0,
@@ -76,7 +76,7 @@
         "Color": "#DFF5FF"
       },
       "80": {
-        "Opacity": 0.4,
+        "Opacity": 0.8,
         "Scale": {
           "X": {
             "Min": 1.0,
@@ -107,12 +107,12 @@
     "InitialAnimationFrame": {
       "Scale": {
         "X": {
-          "Min": 0.5,
-          "Max": 0.9
+          "Min": 1.4,
+          "Max": 2.4
         },
         "Y": {
-          "Min": 3.0,
-          "Max": 5.5
+          "Min": 7.0,
+          "Max": 12.0
         }
       },
       "Opacity": 0,
