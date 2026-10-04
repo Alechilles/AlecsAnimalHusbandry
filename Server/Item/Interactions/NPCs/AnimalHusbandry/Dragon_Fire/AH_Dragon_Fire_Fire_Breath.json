@@ -176,7 +176,7 @@
           "Interactions": [
             {
               "Type": "Simple",
-              "RunTime": 0.45
+              "RunTime": 0.3
             },
             {
               "Type": "SpawnDeployableAtLocation",
@@ -185,16 +185,19 @@
                 "Id": "AHDragonFireScorchedGround",
                 "Shape": "Cylinder",
                 "LiveDuration": 6,
-                "MaxLiveCount": 3,
-                "Model": "Deployable_Fire_Trap",
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Fire_Scorched_Ground",
                 "ModelScale": 1,
-                "StartRadius": 2,
-                "EndRadius": 4,
+                "StartRadius": 1.5,
                 "Height": 2,
-                "RadiusChangeTime": 3,
                 "DamageInterval": 1,
                 "DamageAmount": 4,
                 "DamageCause": "Fire",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Fire_Scorched_Line"
+                  }
+                ],
                 "ApplyEffects": [
                   "AH_Dragon_Fire_Burning"
                 ],
@@ -205,9 +208,127 @@
               "Offset": {
                 "X": 0,
                 "Y": 0,
-                "Z": -6
+                "Z": -2.5
               },
               "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFireScorchedGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Fire_Scorched_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 4,
+                "DamageCause": "Fire",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Fire_Scorched_Line"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Fire_Burning"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -4.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFireScorchedGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Fire_Scorched_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 4,
+                "DamageCause": "Fire",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Fire_Scorched_Line"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Fire_Burning"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -6.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFireScorchedGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Fire_Scorched_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 4,
+                "DamageCause": "Fire",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Fire_Scorched_Line"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Fire_Burning"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -8.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
             }
           ]
         }

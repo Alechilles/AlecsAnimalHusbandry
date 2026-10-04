@@ -176,7 +176,7 @@
           "Interactions": [
             {
               "Type": "Simple",
-              "RunTime": 0.45
+              "RunTime": 0.3
             },
             {
               "Type": "SpawnDeployableAtLocation",
@@ -185,10 +185,10 @@
                 "Id": "AHDragonFrostFrozenGround",
                 "Shape": "Cylinder",
                 "LiveDuration": 6,
-                "MaxLiveCount": 3,
+                "MaxLiveCount": 12,
                 "Model": "AH_Dragon_Frost_Frozen_Ground",
                 "ModelScale": 1,
-                "StartRadius": 3.5,
+                "StartRadius": 1.5,
                 "Height": 2,
                 "DamageInterval": 1,
                 "DamageAmount": 1,
@@ -208,9 +208,127 @@
               "Offset": {
                 "X": 0,
                 "Y": 0,
-                "Z": -6
+                "Z": -2.5
               },
               "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFrostFrozenGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Frost_Frozen_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 1,
+                "DamageCause": "Ice",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Frost_Ice_Spikes"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Frost_Ice_Spikes"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -4.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFrostFrozenGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Frost_Frozen_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 1,
+                "DamageCause": "Ice",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Frost_Ice_Spikes"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Frost_Ice_Spikes"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -6.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFrostFrozenGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 12,
+                "Model": "AH_Dragon_Frost_Frozen_Ground",
+                "ModelScale": 1,
+                "StartRadius": 1.5,
+                "Height": 2,
+                "DamageInterval": 1,
+                "DamageAmount": 1,
+                "DamageCause": "Ice",
+                "SpawnParticles": [
+                  {
+                    "SystemId": "AH_Dragon_Frost_Ice_Spikes"
+                  }
+                ],
+                "ApplyEffects": [
+                  "AH_Dragon_Frost_Ice_Spikes"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -8.5
+              },
+              "OffsetRotationMode": "Yaw"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.12
             }
           ]
         }
