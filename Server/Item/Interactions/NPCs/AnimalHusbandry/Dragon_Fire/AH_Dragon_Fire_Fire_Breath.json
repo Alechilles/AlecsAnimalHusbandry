@@ -1,184 +1,211 @@
 {
-  "Type": "Parallel",
-  "$Comment": "Grounded fire breath using the Fire Dragon animation and an fire stream damage cadence.",
+  "Type": "Serial",
+  "$Comment": "Ground breath: a one-second wind-up tell, then the stream.",
   "Interactions": [
     {
-      "Interactions": [
-        {
-          "Type": "ApplyEffect",
-          "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
-        },
-        {
-          "Type": "Simple",
-          "Effects": {
-            "ItemPlayerAnimationsId": "AH_Dragon_Fire_Default",
-            "ItemAnimationId": "FireBreath",
-            "WorldSoundEventId": "SFX_AH_Dragon_Fire_Breath_Roar",
-            "Particles": [
-              {
-                "TargetEntityPart": "Entity",
-                "TargetNodeName": "Top Jaw",
-                "SystemId": "Flamethrower",
-                "DetachedFromModel": false,
-                "PositionOffset": {
-                  "Y": -0.1,
-                  "Z": 4.05
-                },
-                "RotationOffset": {
-                  "Pitch": 0,
-                  "Roll": 0,
-                  "Yaw": 180
-                },
-                "Scale": 1.5
-              }
-            ],
-            "ClearAnimationOnFinish": true
-          },
-          "RunTime": 1.2
-        }
-      ]
-    },
-    {
-      "Interactions": [
-        {
-          "Type": "Selector",
-          "RunTime": 0.05,
-          "Selector": {
-            "Id": "Stab",
-            "TestLineOfSight": true,
-            "ExtendTop": 0.75,
-            "ExtendLeft": 0.75,
-            "ExtendRight": 0.75,
-            "ExtendBottom": 0.75,
-            "StartDistance": 2,
-            "EndDistance": 9.5
-          },
-          "HitEntity": {
-            "Interactions": [
-              "AH_Dragon_Fire_Fire_Breath_Damage"
-            ]
-          },
-          "Next": {
-            "Type": "Serial",
-            "Interactions": [
-              {
-                "Type": "Simple",
-                "RunTime": 0.25
-              },
-              {
-                "Type": "Selector",
-                "RunTime": 0.05,
-                "Selector": {
-                  "Id": "Stab",
-                  "TestLineOfSight": true,
-                  "ExtendTop": 0.75,
-                  "ExtendLeft": 0.75,
-                  "ExtendRight": 0.75,
-                  "ExtendBottom": 0.75,
-                  "StartDistance": 1.5,
-                  "EndDistance": 9
-                },
-                "HitEntity": {
-                  "Interactions": [
-                    "AH_Dragon_Fire_Fire_Breath_Damage"
-                  ]
-                }
-              },
-              {
-                "Type": "ApplyEffect",
-                "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
-              },
-              {
-                "Type": "Simple",
-                "RunTime": 0.25
-              },
-              {
-                "Type": "Selector",
-                "RunTime": 0.05,
-                "Selector": {
-                  "Id": "Stab",
-                  "TestLineOfSight": true,
-                  "ExtendTop": 0.75,
-                  "ExtendLeft": 0.75,
-                  "ExtendRight": 0.75,
-                  "ExtendBottom": 0.75,
-                  "StartDistance": 1.5,
-                  "EndDistance": 9
-                },
-                "HitEntity": {
-                  "Interactions": [
-                    "AH_Dragon_Fire_Fire_Breath_Damage"
-                  ]
-                }
-              },
-              {
-                "Type": "ApplyEffect",
-                "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
-              },
-              {
-                "Type": "Simple",
-                "RunTime": 0.25
-              },
-              {
-                "Type": "Selector",
-                "RunTime": 0.05,
-                "Selector": {
-                  "Id": "Stab",
-                  "TestLineOfSight": true,
-                  "ExtendTop": 0.75,
-                  "ExtendLeft": 0.75,
-                  "ExtendRight": 0.75,
-                  "ExtendBottom": 0.75,
-                  "StartDistance": 1.5,
-                  "EndDistance": 9
-                },
-                "HitEntity": {
-                  "Interactions": [
-                    "AH_Dragon_Fire_Fire_Breath_Damage"
-                  ]
-                }
-              }
-            ]
+      "Type": "Simple",
+      "RunTime": 1.0,
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Fire_Default",
+        "ItemAnimationId": "BreathWindup",
+        "WorldSoundEventId": "SFX_AH_Dragon_Fire_Breath_Roar",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Top Jaw",
+            "SystemId": "AH_Dragon_Fire_Fire_Bolt_Charging",
+            "DetachedFromModel": false,
+            "PositionOffset": {
+              "Y": 0,
+              "Z": 0.35
+            },
+            "Scale": 1.0
           }
-        }
-      ]
+        ]
+      }
     },
     {
+      "Type": "Parallel",
+      "$Comment": "Grounded fire breath using the Fire Dragon animation and an fire stream damage cadence.",
       "Interactions": [
         {
-          "Type": "Simple",
-          "RunTime": 0.45
+          "Interactions": [
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "Effects": {
+                "ItemPlayerAnimationsId": "AH_Dragon_Fire_Default",
+                "ItemAnimationId": "FireBreath",
+                "Particles": [
+                  {
+                    "TargetEntityPart": "Entity",
+                    "TargetNodeName": "Top Jaw",
+                    "SystemId": "Flamethrower",
+                    "DetachedFromModel": false,
+                    "PositionOffset": {
+                      "Y": -0.1,
+                      "Z": 4.05
+                    },
+                    "RotationOffset": {
+                      "Pitch": 0,
+                      "Roll": 0,
+                      "Yaw": 180
+                    },
+                    "Scale": 1.5
+                  }
+                ],
+                "ClearAnimationOnFinish": true
+              },
+              "RunTime": 1.2
+            }
+          ]
         },
         {
-          "Type": "SpawnDeployableAtLocation",
-          "Config": {
-            "Type": "Aoe",
-            "Id": "AHDragonFireScorchedGround",
-            "Shape": "Cylinder",
-            "LiveDuration": 6,
-            "MaxLiveCount": 3,
-            "Model": "Deployable_Fire_Trap",
-            "ModelScale": 1,
-            "StartRadius": 2,
-            "EndRadius": 4,
-            "Height": 2,
-            "RadiusChangeTime": 3,
-            "DamageInterval": 1,
-            "DamageAmount": 4,
-            "DamageCause": "Fire",
-            "ApplyEffects": [
-              "AH_Dragon_Fire_Burning"
-            ],
-            "Invulnerable": true,
-            "AttackOwner": false,
-            "AttackTeam": false
-          },
-          "Offset": {
-            "X": 0,
-            "Y": 0,
-            "Z": -6
-          },
-          "OffsetRotationMode": "Yaw"
+          "Interactions": [
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "ExtendTop": 0.75,
+                "ExtendLeft": 0.75,
+                "ExtendRight": 0.75,
+                "ExtendBottom": 0.75,
+                "StartDistance": 2,
+                "EndDistance": 9.5
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Fire_Fire_Breath_Damage"
+                ]
+              },
+              "Next": {
+                "Type": "Serial",
+                "Interactions": [
+                  {
+                    "Type": "Simple",
+                    "RunTime": 0.25
+                  },
+                  {
+                    "Type": "Selector",
+                    "RunTime": 0.05,
+                    "Selector": {
+                      "Id": "Stab",
+                      "TestLineOfSight": true,
+                      "ExtendTop": 0.75,
+                      "ExtendLeft": 0.75,
+                      "ExtendRight": 0.75,
+                      "ExtendBottom": 0.75,
+                      "StartDistance": 1.5,
+                      "EndDistance": 9
+                    },
+                    "HitEntity": {
+                      "Interactions": [
+                        "AH_Dragon_Fire_Fire_Breath_Damage"
+                      ]
+                    }
+                  },
+                  {
+                    "Type": "ApplyEffect",
+                    "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
+                  },
+                  {
+                    "Type": "Simple",
+                    "RunTime": 0.25
+                  },
+                  {
+                    "Type": "Selector",
+                    "RunTime": 0.05,
+                    "Selector": {
+                      "Id": "Stab",
+                      "TestLineOfSight": true,
+                      "ExtendTop": 0.75,
+                      "ExtendLeft": 0.75,
+                      "ExtendRight": 0.75,
+                      "ExtendBottom": 0.75,
+                      "StartDistance": 1.5,
+                      "EndDistance": 9
+                    },
+                    "HitEntity": {
+                      "Interactions": [
+                        "AH_Dragon_Fire_Fire_Breath_Damage"
+                      ]
+                    }
+                  },
+                  {
+                    "Type": "ApplyEffect",
+                    "EffectId": "AH_Dragon_Fire_Fire_Breath_Source"
+                  },
+                  {
+                    "Type": "Simple",
+                    "RunTime": 0.25
+                  },
+                  {
+                    "Type": "Selector",
+                    "RunTime": 0.05,
+                    "Selector": {
+                      "Id": "Stab",
+                      "TestLineOfSight": true,
+                      "ExtendTop": 0.75,
+                      "ExtendLeft": 0.75,
+                      "ExtendRight": 0.75,
+                      "ExtendBottom": 0.75,
+                      "StartDistance": 1.5,
+                      "EndDistance": 9
+                    },
+                    "HitEntity": {
+                      "Interactions": [
+                        "AH_Dragon_Fire_Fire_Breath_Damage"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "Interactions": [
+            {
+              "Type": "Simple",
+              "RunTime": 0.45
+            },
+            {
+              "Type": "SpawnDeployableAtLocation",
+              "Config": {
+                "Type": "Aoe",
+                "Id": "AHDragonFireScorchedGround",
+                "Shape": "Cylinder",
+                "LiveDuration": 6,
+                "MaxLiveCount": 3,
+                "Model": "Deployable_Fire_Trap",
+                "ModelScale": 1,
+                "StartRadius": 2,
+                "EndRadius": 4,
+                "Height": 2,
+                "RadiusChangeTime": 3,
+                "DamageInterval": 1,
+                "DamageAmount": 4,
+                "DamageCause": "Fire",
+                "ApplyEffects": [
+                  "AH_Dragon_Fire_Burning"
+                ],
+                "Invulnerable": true,
+                "AttackOwner": false,
+                "AttackTeam": false
+              },
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": -6
+              },
+              "OffsetRotationMode": "Yaw"
+            }
+          ]
         }
       ]
     }
