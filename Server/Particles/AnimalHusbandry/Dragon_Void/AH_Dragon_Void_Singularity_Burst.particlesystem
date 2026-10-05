@@ -1,0 +1,40 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Burst_Flash",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.5,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Burst_Ring",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.3,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Burst_Ring_Dark",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.25,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Burst_Spray",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.2,
+        "Z": 0
+      }
+    }
+  ],
+  "LifeSpan": 1.2,
+  "BoundingRadius": 14,
+  "CullDistance": 120,
+  "IsImportant": true
+}

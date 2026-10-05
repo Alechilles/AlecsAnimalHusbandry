@@ -1,0 +1,117 @@
+{
+  "RenderMode": "BlendAdd",
+  "EmitOffset": {
+    "X": {
+      "Min": 0,
+      "Max": 0.6
+    },
+    "Y": {
+      "Min": 0,
+      "Max": 0.6
+    },
+    "Z": {
+      "Min": 0,
+      "Max": 0.6
+    }
+  },
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 120,
+  "ParticleLifeSpan": {
+    "Min": 0.5,
+    "Max": 0.9
+  },
+  "SpawnRate": {
+    "Min": 100,
+    "Max": 100
+  },
+  "TotalParticles": {
+    "Min": 90,
+    "Max": 110
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 9,
+      "Max": 17
+    },
+    "Yaw": {
+      "Min": -180,
+      "Max": 180
+    },
+    "Pitch": {
+      "Min": 5,
+      "Max": 70
+    }
+  },
+  "Attractors": [
+    {
+      "LinearAcceleration": {
+        "X": 0,
+        "Y": -9,
+        "Z": 0
+      },
+      "DampingMultiplier": {
+        "X": 0.93,
+        "Y": 0.97,
+        "Z": 0.93
+      }
+    }
+  ],
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Ball3.png",
+    "FrameSize": {
+      "Width": 32,
+      "Height": 32
+    },
+    "ScaleRatioConstraint": "OneToOne",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 5,
+            "Max": 5
+          },
+          "Y": {
+            "Min": 5,
+            "Max": 5
+          }
+        },
+        "Opacity": 1,
+        "Color": "#d070ff"
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          },
+          "Y": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Opacity": 0,
+        "Color": "#5a1ab8"
+      }
+    },
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.1,
+          "Max": 0.2
+        },
+        "Y": {
+          "Min": 0.1,
+          "Max": 0.2
+        }
+      },
+      "Opacity": 1,
+      "Color": "#ab23ff"
+    }
+  },
+  "SpawnBurst": true
+}

@@ -50,6 +50,36 @@
           }
         ]
       }
+    },
+    {
+      "Type": "Explode",
+      "Config": {
+        "DamageEntities": true,
+        "DamageBlocks": false,
+        "EntityDamageRadius": 6.5,
+        "EntityDamage": 18,
+        "Knockback": {
+          "Type": "Point",
+          "Force": 13,
+          "VelocityY": 11,
+          "VelocityType": "Set",
+          "VelocityConfig": {
+            "AirResistance": 0.97,
+            "AirResistanceMax": 0.96,
+            "GroundResistance": 0.94,
+            "GroundResistanceMax": 0.3,
+            "Threshold": 3.0
+          }
+        },
+        "Particles": [
+          {
+            "SystemId": "AH_Dragon_Void_Singularity_Burst"
+          }
+        ]
+      },
+      "Effects": {
+        "WorldSoundEventId": "SFX_Fireball_Death"
+      }
     }
   ]
 }
