@@ -48,7 +48,7 @@
       "Description": "Base soaring orbit radius in blocks."
     },
     "KettleAltitudeRange": {
-      "Value": [ 15, 28 ],
+      "Value": [ 19, 35 ],
       "Description": "Soaring altitude above the home point."
     },
     "KettleCooldownRange": {
@@ -64,7 +64,7 @@
       "Description": "Flight speed during soaring circles as a fraction of maximum flight speed."
     },
     "ViewRange": {
-      "Value": 36,
+      "Value": 42,
       "Description": "The range from which the target will be seen. If zero, sight will be disabled."
     },
     "ViewSector": {
@@ -72,7 +72,7 @@
       "Description": "The view sector within which the target needs to be to be seen."
     },
     "HearingRange": {
-      "Value": 24,
+      "Value": 30,
       "Description": "The range from which the target will be heard. If zero, hearing will be disabled."
     },
     "AbsoluteDetectionRange": {
@@ -620,8 +620,8 @@
       "MaxClimbSpeed": 10,
       "MinAirSpeed": 0,
       "Acceleration": 6,
-      "MinHeightOverGround": 8,
-      "MaxHeightOverGround": 25,
+      "MinHeightOverGround": 10,
+      "MaxHeightOverGround": 31,
       "MaxRollAngle": 70,
       "MaxTurnSpeed": 180,
       "DesiredAltitudeWeight": 0.8,
