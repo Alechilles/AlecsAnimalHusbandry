@@ -1,6 +1,6 @@
 {
   "Type": "Serial",
-  "$Comment": "Ground breath: commit to the current aim, wind up, then the stream.",
+  "$Comment": "Ground breath: commit to the current aim, charge, then the swept stream.",
   "Interactions": [
     {
       "Type": "ApplyEffect",
@@ -8,29 +8,28 @@
     },
     {
       "Type": "Simple",
-      "RunTime": 1.4,
+      "RunTime": 0.75,
       "Effects": {
         "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-        "ItemAnimationId": "BreathWindup",
+        "ItemAnimationId": "GroundBreathWindup",
         "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar",
         "Particles": [
           {
             "TargetEntityPart": "Entity",
             "TargetNodeName": "Snout",
-            "SystemId": "AH_Dragon_Void_Void_Bolt_Charging",
             "DetachedFromModel": false,
+            "SystemId": "AH_Dragon_Void_Breath_Charge",
             "PositionOffset": {
-              "Y": 0,
-              "Z": 0.35
+              "Y": -0.6,
+              "Z": 0.6
             },
-            "Scale": 1.0
+            "Scale": 0.8
           }
         ]
       }
     },
     {
       "Type": "Parallel",
-      "$Comment": "Grounded void breath using the Void Dragon animation and an void stream damage cadence.",
       "Interactions": [
         {
           "Interactions": [
@@ -40,15 +39,16 @@
             },
             {
               "Type": "Simple",
+              "RunTime": 2.5,
               "Effects": {
                 "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-                "ItemAnimationId": "VoidBreath",
+                "ItemAnimationId": "GroundBreath",
                 "Particles": [
                   {
                     "TargetEntityPart": "Entity",
                     "TargetNodeName": "Snout",
-                    "SystemId": "AH_Dragon_Void_Void_Breath",
                     "DetachedFromModel": false,
+                    "SystemId": "AH_Dragon_Void_Void_Breath",
                     "PositionOffset": {
                       "Y": -0.1,
                       "Z": 0.35
@@ -62,8 +62,7 @@
                   }
                 ],
                 "ClearAnimationOnFinish": true
-              },
-              "RunTime": 1.2
+              }
             }
           ]
         },
@@ -75,100 +74,239 @@
               "Selector": {
                 "Id": "Stab",
                 "TestLineOfSight": true,
-                "ExtendTop": 0.75,
-                "ExtendLeft": 0.75,
-                "ExtendRight": 0.75,
-                "ExtendBottom": 0.75,
-                "StartDistance": 7,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": 24,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
                 "EndDistance": 16
               },
               "HitEntity": {
                 "Interactions": [
                   "AH_Dragon_Void_Void_Breath_Damage"
                 ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": 12,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
               },
-              "Next": {
-                "Type": "Serial",
+              "HitEntity": {
                 "Interactions": [
-                  {
-                    "Type": "Simple",
-                    "RunTime": 0.25
-                  },
-                  {
-                    "Type": "Selector",
-                    "RunTime": 0.05,
-                    "Selector": {
-                      "Id": "Stab",
-                      "TestLineOfSight": true,
-                      "ExtendTop": 0.75,
-                      "ExtendLeft": 0.75,
-                      "ExtendRight": 0.75,
-                      "ExtendBottom": 0.75,
-                      "StartDistance": 7,
-                      "EndDistance": 16
-                    },
-                    "HitEntity": {
-                      "Interactions": [
-                        "AH_Dragon_Void_Void_Breath_Damage"
-                      ]
-                    }
-                  },
-                  {
-                    "Type": "ApplyEffect",
-                    "EffectId": "AH_Dragon_Void_Void_Breath_Source"
-                  },
-                  {
-                    "Type": "Simple",
-                    "RunTime": 0.25
-                  },
-                  {
-                    "Type": "Selector",
-                    "RunTime": 0.05,
-                    "Selector": {
-                      "Id": "Stab",
-                      "TestLineOfSight": true,
-                      "ExtendTop": 0.75,
-                      "ExtendLeft": 0.75,
-                      "ExtendRight": 0.75,
-                      "ExtendBottom": 0.75,
-                      "StartDistance": 7,
-                      "EndDistance": 16
-                    },
-                    "HitEntity": {
-                      "Interactions": [
-                        "AH_Dragon_Void_Void_Breath_Damage"
-                      ]
-                    }
-                  },
-                  {
-                    "Type": "ApplyEffect",
-                    "EffectId": "AH_Dragon_Void_Void_Breath_Source"
-                  },
-                  {
-                    "Type": "Simple",
-                    "RunTime": 0.25
-                  },
-                  {
-                    "Type": "Selector",
-                    "RunTime": 0.05,
-                    "Selector": {
-                      "Id": "Stab",
-                      "TestLineOfSight": true,
-                      "ExtendTop": 0.75,
-                      "ExtendLeft": 0.75,
-                      "ExtendRight": 0.75,
-                      "ExtendBottom": 0.75,
-                      "StartDistance": 7,
-                      "EndDistance": 16
-                    },
-                    "HitEntity": {
-                      "Interactions": [
-                        "AH_Dragon_Void_Void_Breath_Damage"
-                      ]
-                    }
-                  }
+                  "AH_Dragon_Void_Void_Breath_Damage"
                 ]
               }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": 1,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": -14,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": -24,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": -15,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": 0,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
+            },
+            {
+              "Type": "Selector",
+              "RunTime": 0.05,
+              "Selector": {
+                "Id": "Stab",
+                "TestLineOfSight": true,
+                "Anchor": "Feet",
+                "IgnorePitch": true,
+                "YawOffset": 11,
+                "ExtendTop": 3,
+                "ExtendBottom": 0.3,
+                "ExtendLeft": 1.6,
+                "ExtendRight": 1.6,
+                "StartDistance": 6.5,
+                "EndDistance": 16
+              },
+              "HitEntity": {
+                "Interactions": [
+                  "AH_Dragon_Void_Void_Breath_Damage"
+                ]
+              }
+            },
+            {
+              "Type": "ApplyEffect",
+              "EffectId": "AH_Dragon_Void_Void_Breath_Source"
+            },
+            {
+              "Type": "Simple",
+              "RunTime": 0.26
             }
           ]
         }

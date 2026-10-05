@@ -1,64 +1,74 @@
 {
-  "Type": "Simple",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-    "ItemAnimationId": "Bite"
-  },
-  "RunTime": 0.58,
-  "Next": {
-    "Type": "Parallel",
-    "Interactions": [
-      {
-        "Interactions": [
-          {
-            "Type": "Selector",
-            "RunTime": 0.167,
-            "Selector": {
-              "Id": "Horizontal",
-              "Direction": "ToLeft",
-              "TestLineOfSight": true,
-              "ExtendTop": 1.85,
-              "ExtendBottom": 1.85,
-              "StartDistance": 5.5,
-              "EndDistance": 10,
-              "Length": 53,
-              "RollOffset": 90.0,
-              "YawStartOffset": -23.94,
-              "PitchOffset": 0.0,
-              "Anchor": "Eyes"
-            },
-            "HitEntity": {
-              "Interactions": [
-                {
-                  "Type": "Replace",
-                  "DefaultOk": true,
-                  "Var": "Bite_Damage",
-                  "DefaultValue": {
-                    "Interactions": [
-                      "AH_Dragon_Void_Bite_Damage"
-                    ]
-                  }
-                }
-              ]
-            },
-            "Next": {
-              "Type": "Simple",
-              "RunTime": 0.25
-            }
-          }
-        ]
+  "Type": "Serial",
+  "$Comment": "Commit to the spot and the facing, then the attack.",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Void_Melee_Commit"
+    },
+    {
+      "Type": "Simple",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "Bite"
       },
-      {
+      "RunTime": 0.58,
+      "Next": {
+        "Type": "Parallel",
         "Interactions": [
           {
-            "Type": "Simple",
-            "RunTime": 0.167,
-            "Effects": {
-              "WorldSoundEventId": "SFX_Rex_Bite"
-            }
+            "Interactions": [
+              {
+                "Type": "Selector",
+                "RunTime": 0.167,
+                "Selector": {
+                  "Id": "Horizontal",
+                  "Direction": "ToLeft",
+                  "TestLineOfSight": true,
+                  "ExtendTop": 1.85,
+                  "ExtendBottom": 1.85,
+                  "StartDistance": 5.5,
+                  "EndDistance": 10,
+                  "Length": 53,
+                  "RollOffset": 90.0,
+                  "YawStartOffset": -23.94,
+                  "PitchOffset": 0.0,
+                  "Anchor": "Eyes"
+                },
+                "HitEntity": {
+                  "Interactions": [
+                    {
+                      "Type": "Replace",
+                      "DefaultOk": true,
+                      "Var": "Bite_Damage",
+                      "DefaultValue": {
+                        "Interactions": [
+                          "AH_Dragon_Void_Bite_Damage"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "Next": {
+                  "Type": "Simple",
+                  "RunTime": 0.25
+                }
+              }
+            ]
+          },
+          {
+            "Interactions": [
+              {
+                "Type": "Simple",
+                "RunTime": 0.167,
+                "Effects": {
+                  "WorldSoundEventId": "SFX_Rex_Bite"
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -1,38 +1,48 @@
 {
-  "Type": "Simple",
-  "$Comment": "Tail sweep: whips the tail across the ground behind and beside the dragon.",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-    "ItemAnimationId": "TailSweep"
-  },
-  "RunTime": 0.67,
-  "Next": {
-    "Type": "Selector",
-    "RunTime": 0.17,
-    "Selector": {
-      "Id": "Horizontal",
-      "Direction": "ToLeft",
-      "TestLineOfSight": true,
-      "ExtendTop": 4,
-      "ExtendBottom": 4,
-      "StartDistance": 2,
-      "EndDistance": 11,
-      "Length": 220,
-      "RollOffset": 0.0,
-      "YawStartOffset": 70.0,
-      "PitchOffset": 0.0
+  "Type": "Serial",
+  "$Comment": "Commit to the spot and the facing, then the attack.",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Void_Melee_Commit"
     },
-    "HitEntity": {
-      "Interactions": [
-        "AH_Dragon_Void_Tail_Sweep_Damage"
-      ]
-    },
-    "Effects": {
-      "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
-    },
-    "Next": {
+    {
       "Type": "Simple",
-      "RunTime": 0.66
+      "$Comment": "Tail sweep: whips the tail across the ground behind and beside the dragon.",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "TailSweep"
+      },
+      "RunTime": 0.67,
+      "Next": {
+        "Type": "Selector",
+        "RunTime": 0.17,
+        "Selector": {
+          "Id": "Horizontal",
+          "Direction": "ToLeft",
+          "TestLineOfSight": true,
+          "ExtendTop": 4,
+          "ExtendBottom": 4,
+          "StartDistance": 2,
+          "EndDistance": 11,
+          "Length": 220,
+          "RollOffset": 0.0,
+          "YawStartOffset": 70.0,
+          "PitchOffset": 0.0
+        },
+        "HitEntity": {
+          "Interactions": [
+            "AH_Dragon_Void_Tail_Sweep_Damage"
+          ]
+        },
+        "Effects": {
+          "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
+        },
+        "Next": {
+          "Type": "Simple",
+          "RunTime": 0.66
+        }
+      }
     }
-  }
+  ]
 }

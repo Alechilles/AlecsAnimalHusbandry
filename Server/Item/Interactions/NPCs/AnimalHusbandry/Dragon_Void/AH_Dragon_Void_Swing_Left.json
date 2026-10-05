@@ -1,63 +1,73 @@
 {
-  "Type": "Simple",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-    "ItemAnimationId": "SwingLeft"
-  },
-  "RunTime": 0.97,
-  "Next": {
-    "Type": "Parallel",
-    "Interactions": [
-      {
-        "Interactions": [
-          {
-            "Type": "Selector",
-            "RunTime": 0.14,
-            "Selector": {
-              "Id": "Horizontal",
-              "Direction": "ToRight",
-              "TestLineOfSight": true,
-              "Anchor": "Feet",
-              "IgnorePitch": true,
-              "ExtendTop": 3,
-              "ExtendBottom": 0.5,
-              "StartDistance": 3,
-              "EndDistance": 14,
-              "Length": 80,
-              "YawStartOffset": -55
-            },
-            "HitEntity": {
-              "Interactions": [
-                {
-                  "Type": "Replace",
-                  "DefaultOk": true,
-                  "Var": "Swing_Left_Damage",
-                  "DefaultValue": {
-                    "Interactions": [
-                      "AH_Dragon_Void_Swing_Left_Damage"
-                    ]
-                  }
-                }
-              ]
-            },
-            "Next": {
-              "Type": "Simple",
-              "RunTime": 0.88
-            }
-          }
-        ]
+  "Type": "Serial",
+  "$Comment": "Commit to the spot and the facing, then the attack.",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Void_Melee_Commit"
+    },
+    {
+      "Type": "Simple",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "SwingLeft"
       },
-      {
+      "RunTime": 0.97,
+      "Next": {
+        "Type": "Parallel",
         "Interactions": [
           {
-            "Type": "Simple",
-            "RunTime": 0.303,
-            "Effects": {
-              "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
-            }
+            "Interactions": [
+              {
+                "Type": "Selector",
+                "RunTime": 0.14,
+                "Selector": {
+                  "Id": "Horizontal",
+                  "Direction": "ToRight",
+                  "TestLineOfSight": true,
+                  "Anchor": "Feet",
+                  "IgnorePitch": true,
+                  "ExtendTop": 3,
+                  "ExtendBottom": 0.5,
+                  "StartDistance": 3,
+                  "EndDistance": 14,
+                  "Length": 80,
+                  "YawStartOffset": -55
+                },
+                "HitEntity": {
+                  "Interactions": [
+                    {
+                      "Type": "Replace",
+                      "DefaultOk": true,
+                      "Var": "Swing_Left_Damage",
+                      "DefaultValue": {
+                        "Interactions": [
+                          "AH_Dragon_Void_Swing_Left_Damage"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "Next": {
+                  "Type": "Simple",
+                  "RunTime": 0.88
+                }
+              }
+            ]
+          },
+          {
+            "Interactions": [
+              {
+                "Type": "Simple",
+                "RunTime": 0.303,
+                "Effects": {
+                  "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
+                }
+              }
+            ]
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Streaks"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Void_Bolt_Charge_Sphere"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Void_Bolt_Charge_Flake"
+    },
+    {
+      "SpawnerId": "Void_Lightning_Random",
+      "StartDelay": 0.3
+    }
+  ],
+  "LifeSpan": 0.8,
+  "BoundingRadius": 8,
+  "CullDistance": 120,
+  "IsImportant": true
+}

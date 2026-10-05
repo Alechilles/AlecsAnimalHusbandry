@@ -1,57 +1,67 @@
 {
-  "Type": "Simple",
-  "$Comment": "Wing gust: rears up and beats both wings once, shoving everything in front away.",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-    "ItemAnimationId": "WingGust",
-    "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar"
-  },
-  "RunTime": 0.83,
-  "Next": {
-    "Type": "Selector",
-    "RunTime": 0.2,
-    "Selector": {
-      "Id": "Horizontal",
-      "Direction": "ToLeft",
-      "TestLineOfSight": true,
-      "ExtendTop": 4,
-      "ExtendBottom": 4,
-      "StartDistance": 2,
-      "EndDistance": 14,
-      "Length": 130,
-      "RollOffset": 0.0,
-      "YawStartOffset": -65.0,
-      "PitchOffset": 0.0
+  "Type": "Serial",
+  "$Comment": "Commit to the spot and the facing, then the attack.",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Void_Melee_Commit"
     },
-    "HitEntity": {
-      "Interactions": [
-        "AH_Dragon_Void_Wing_Gust_Damage"
-      ]
-    },
-    "Effects": {
-      "WorldSoundEventId": "SFX_AH_Dragon_Frost_Breath_Roar",
-      "Particles": [
-        {
-          "TargetEntityPart": "Entity",
-          "TargetNodeName": "Snout",
-          "SystemId": "AH_Dragon_Frost_Icy_Wind",
-          "DetachedFromModel": false,
-          "PositionOffset": {
-            "Y": -1.0,
-            "Z": 0.35
-          },
-          "RotationOffset": {
-            "Pitch": 0,
-            "Roll": 0,
-            "Yaw": 180
-          },
-          "Scale": 1.2
-        }
-      ]
-    },
-    "Next": {
+    {
       "Type": "Simple",
-      "RunTime": 0.8
+      "$Comment": "Wing gust: rears up and beats both wings once, shoving everything in front away.",
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "WingGust",
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar"
+      },
+      "RunTime": 0.83,
+      "Next": {
+        "Type": "Selector",
+        "RunTime": 0.2,
+        "Selector": {
+          "Id": "Horizontal",
+          "Direction": "ToLeft",
+          "TestLineOfSight": true,
+          "ExtendTop": 4,
+          "ExtendBottom": 4,
+          "StartDistance": 2,
+          "EndDistance": 14,
+          "Length": 130,
+          "RollOffset": 0.0,
+          "YawStartOffset": -65.0,
+          "PitchOffset": 0.0
+        },
+        "HitEntity": {
+          "Interactions": [
+            "AH_Dragon_Void_Wing_Gust_Damage"
+          ]
+        },
+        "Effects": {
+          "WorldSoundEventId": "SFX_AH_Dragon_Frost_Breath_Roar",
+          "Particles": [
+            {
+              "TargetEntityPart": "Entity",
+              "TargetNodeName": "Snout",
+              "SystemId": "AH_Dragon_Frost_Icy_Wind",
+              "DetachedFromModel": false,
+              "PositionOffset": {
+                "Y": -1.0,
+                "Z": 0.35
+              },
+              "RotationOffset": {
+                "Pitch": 0,
+                "Roll": 0,
+                "Yaw": 180
+              },
+              "Scale": 1.2
+            }
+          ]
+        },
+        "Next": {
+          "Type": "Simple",
+          "RunTime": 0.8
+        }
+      }
     }
-  }
+  ]
 }

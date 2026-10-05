@@ -2927,6 +2927,16 @@
                       }
                     },
                     {
+                      "$Comment": "AH signature attack: melee commit. No turning or repositioning from the start of a melee wind-up until the strike is over.",
+                      "Sensor": {
+                        "Type": "TameworkEffectActive",
+                        "EffectId": "AH_Dragon_Void_Melee_Commit"
+                      },
+                      "BodyMotion": {
+                        "Type": "Nothing"
+                      }
+                    },
+                    {
                       "Sensor": {
                         "Type": "CombatActionEvaluator",
                         "TargetInRange": true
