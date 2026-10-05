@@ -2,13 +2,13 @@
   "Model": "AH_Dragon_Void_Singularity",
   "Physics": {
     "Type": "Standard",
-    "Gravity": 1.0,
     "TerminalVelocityAir": 60,
     "TerminalVelocityWater": 20,
     "RotationMode": "None",
     "Bounciness": 0,
     "BounceCount": 0,
-    "SticksVertically": true
+    "SticksVertically": true,
+    "Gravity": 1.0
   },
   "LaunchForce": 40,
   "SpawnOffset": {

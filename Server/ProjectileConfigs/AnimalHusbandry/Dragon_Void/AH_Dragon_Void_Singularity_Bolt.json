@@ -2,13 +2,13 @@
   "Model": "AH_Dragon_Void_Singularity",
   "Physics": {
     "Type": "Standard",
-    "Gravity": 1.0,
     "TerminalVelocityAir": 60,
     "TerminalVelocityWater": 20,
     "RotationMode": "None",
     "Bounciness": 0,
     "BounceCount": 0,
-    "SticksVertically": true
+    "SticksVertically": true,
+    "Gravity": 1.0
   },
   "LaunchForce": 40,
   "SpawnOffset": {
@@ -49,22 +49,11 @@
           }
         },
         {
-          "Type": "SpawnTriggerVolume",
-          "EffectAsset": "AH_Dragon_Void_Singularity",
-          "Shape": {
-            "Type": "Sphere",
-            "Center": {
-              "X": 0.0,
-              "Y": 1.0,
-              "Z": 0.0
-            },
-            "Radius": 9.0
-          },
-          "LifetimeS": 4.5
-        },
-        {
-          "Type": "Simple",
-          "RunTime": 4.5
+          "Type": "Projectile",
+          "Config": "AH_Dragon_Void_Singularity_Drop",
+          "IgnorePitch": true,
+          "IgnoreYaw": true,
+          "IgnoreRoll": true
         },
         {
           "Type": "RemoveEntity",
