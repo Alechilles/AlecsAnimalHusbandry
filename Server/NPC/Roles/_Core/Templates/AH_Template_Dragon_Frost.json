@@ -15,6 +15,54 @@
       "Value": 8,
       "Description": "General wander radius for idle wander and wander on the break."
     },
+    "IdleFlightWander": {
+      "Value": true,
+      "Description": "Cruise and soar while idle on the flight controller instead of running grounded idle behavior in the air."
+    },
+    "FlightWanderRadius": {
+      "Value": 40,
+      "Description": "Airborne wander radius around the home point."
+    },
+    "FlightCruiseRelativeSpeed": {
+      "Value": 0.35,
+      "Description": "Relative speed during ambient airborne wandering, with a 4 blocks/second minimum cruise pace."
+    },
+    "FlightCruiseMinSegmentTime": {
+      "Value": 6,
+      "Description": "Minimum seconds per ambient flight segment before choosing a new direction."
+    },
+    "FlightCruiseMaxSegmentTime": {
+      "Value": 10,
+      "Description": "Maximum seconds per ambient flight segment; obstacles and wander bounds can shorten it."
+    },
+    "FlightCruiseMaxHeadingChange": {
+      "Value": 60,
+      "Description": "Maximum heading change in degrees between ambient flight segments."
+    },
+    "KettleEnabled": {
+      "Value": true,
+      "Description": "Allow occasional daytime soaring circles while wandering in flight."
+    },
+    "KettleRadius": {
+      "Value": 24,
+      "Description": "Base soaring orbit radius in blocks."
+    },
+    "KettleAltitudeRange": {
+      "Value": [ 15, 28 ],
+      "Description": "Soaring altitude above the home point."
+    },
+    "KettleCooldownRange": {
+      "Value": [ 90, 180 ],
+      "Description": "Seconds of cooldown after a soaring episode finishes."
+    },
+    "KettleDurationRange": {
+      "Value": [ 45, 90 ],
+      "Description": "Seconds spent in a soaring episode."
+    },
+    "KettleRelativeSpeed": {
+      "Value": 0.5,
+      "Description": "Flight speed during soaring circles as a fraction of maximum flight speed."
+    },
     "ViewRange": {
       "Value": 36,
       "Description": "The range from which the target will be seen. If zero, sight will be disabled."
@@ -1030,6 +1078,37 @@
                       "Operation": "EquipHotbar",
                       "UseTarget": false,
                       "Slot": { "Compute": "DefaultHotbarSlot" }
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "Idle on the flight controller: cruise in long segments with occasional soaring circles, as wild birds and miniwyverns do, instead of running grounded idle behavior in the air.",
+                  "Enabled": { "Compute": "IdleFlightWander" },
+                  "Sensor": {
+                    "Type": "MotionController",
+                    "MotionController": "Fly"
+                  },
+                  "Instructions": [
+                    {
+                      "Reference": "Component_Tamework_Instruction_Flight_Kettle",
+                      "Modify": {
+                        "KettleEnabled": { "Compute": "KettleEnabled" },
+                        "KettleRadius": { "Compute": "KettleRadius" },
+                        "KettleAltitudeRange": { "Compute": "KettleAltitudeRange" },
+                        "KettleCooldownRange": { "Compute": "KettleCooldownRange" },
+                        "KettleDurationRange": { "Compute": "KettleDurationRange" },
+                        "KettleRelativeSpeed": { "Compute": "KettleRelativeSpeed" }
+                      }
+                    },
+                    {
+                      "BodyMotion": {
+                        "Type": "WanderInCircle",
+                        "Radius": { "Compute": "FlightWanderRadius" },
+                        "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
+                        "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
+                        "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
+                        "RelativeSpeed": { "Compute": "max(FlightCruiseRelativeSpeed, 4 / FlightSpeed)" }
+                      }
                     }
                   ]
                 },
