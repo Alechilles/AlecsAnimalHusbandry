@@ -18,23 +18,6 @@
       },
       "Interactions": [
         {
-          "Type": "Explode",
-          "Config": {
-            "DamageEntities": true,
-            "DamageBlocks": false,
-            "EntityDamageRadius": 4,
-            "EntityDamage": 20,
-            "Particles": [
-              {
-                "SystemId": "VoidImpact"
-              }
-            ]
-          },
-          "Effects": {
-            "WorldSoundEventId": "SFX_Fireball_Death"
-          }
-        },
-        {
           "Type": "SpawnTriggerVolume",
           "EffectAsset": "AH_Dragon_Void_Singularity",
           "Shape": {
@@ -63,23 +46,6 @@
         "Cooldown": 0
       },
       "Interactions": [
-        {
-          "Type": "Explode",
-          "Config": {
-            "DamageEntities": true,
-            "DamageBlocks": false,
-            "EntityDamageRadius": 4,
-            "EntityDamage": 20,
-            "Particles": [
-              {
-                "SystemId": "VoidImpact"
-              }
-            ]
-          },
-          "Effects": {
-            "WorldSoundEventId": "SFX_Fireball_Death"
-          }
-        },
         {
           "Type": "SpawnTriggerVolume",
           "EffectAsset": "AH_Dragon_Void_Singularity",

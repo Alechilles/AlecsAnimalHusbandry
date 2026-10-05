@@ -1,5 +1,27 @@
 {
-  "Type": "Projectile",
-  "Config": "AH_Dragon_Void_Singularity",
-  "RunTime": 0.2
+  "Type": "Serial",
+  "Interactions": [
+    {
+      "Type": "Explode",
+      "Config": {
+        "DamageEntities": true,
+        "DamageBlocks": false,
+        "EntityDamageRadius": 4,
+        "EntityDamage": 20,
+        "Particles": [
+          {
+            "SystemId": "VoidImpact"
+          }
+        ]
+      },
+      "Effects": {
+        "WorldSoundEventId": "SFX_Fireball_Death"
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AH_Dragon_Void_Singularity",
+      "RunTime": 0.2
+    }
+  ]
 }
