@@ -1,0 +1,38 @@
+{
+  "Parent": "SFX_Attn_VeryLoud",
+  "Volume": 0,
+  "PreventSoundInterruption": true,
+  "MaxInstance": 3,
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/Projectiles/Staff/Fire_Blast/Crystal_Fire_Blast_01.ogg"
+      ],
+      "Volume": 3,
+      "RandomSettings": {
+        "MinPitch": -7.5,
+        "MaxPitch": -6.5
+      }
+    },
+    {
+      "Files": [
+        "Sounds/NPC/Void/Eye_Void/Eye_Void_Death_01.ogg"
+      ],
+      "Volume": 1,
+      "RandomSettings": {
+        "MinPitch": -6.5,
+        "MaxPitch": -5.5
+      }
+    },
+    {
+      "Files": [
+        "Sounds/NPC/Void/Eye_Void/Eye_Void_Attack_Blast_01.ogg"
+      ],
+      "Volume": -2,
+      "RandomSettings": {
+        "MinPitch": -10.5,
+        "MaxPitch": -9.5
+      }
+    }
+  ]
+}

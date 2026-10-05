@@ -1,0 +1,38 @@
+{
+  "Parent": "SFX_Attn_Loud",
+  "Volume": 0,
+  "PreventSoundInterruption": true,
+  "MaxInstance": 3,
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/AnimalHusbandry/Dragon_Void/Singularity_Riser.ogg"
+      ],
+      "Volume": 0,
+      "RandomSettings": {
+        "MinPitch": -0.5,
+        "MaxPitch": 0.5
+      }
+    },
+    {
+      "Files": [
+        "Sounds/Weapons/Staff/Staff_Charging_01.ogg"
+      ],
+      "Volume": -4,
+      "RandomSettings": {
+        "MinPitch": -6.5,
+        "MaxPitch": -5.5
+      }
+    },
+    {
+      "Files": [
+        "Sounds/AnimalHusbandry/Dragon_Frost/Avatar_Flame_Breath_Roar.ogg"
+      ],
+      "Volume": -5,
+      "RandomSettings": {
+        "MinPitch": -3.5,
+        "MaxPitch": -2.5
+      }
+    }
+  ]
+}

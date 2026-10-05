@@ -15,7 +15,7 @@
         ]
       },
       "Effects": {
-        "WorldSoundEventId": "SFX_Fireball_Death"
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Form"
       }
     },
     {
@@ -36,6 +36,7 @@
       "Type": "Simple",
       "RunTime": 4.5,
       "Effects": {
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Loop",
         "Particles": [
           {
             "TargetEntityPart": "Entity",
@@ -78,7 +79,7 @@
         ]
       },
       "Effects": {
-        "WorldSoundEventId": "SFX_Fireball_Death"
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Collapse"
       }
     }
   ]

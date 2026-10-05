@@ -35,6 +35,10 @@
       },
       "Actions": [
         {
+          "Type": "PlaySound",
+          "SoundEventId": "SFX_AH_Dragon_Void_Singularity_Buildup"
+        },
+        {
           "Type": "Timeout",
           "Delay": [
             1.05,
