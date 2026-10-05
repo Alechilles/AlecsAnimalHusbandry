@@ -12,7 +12,7 @@
       "Description": "When set to false, NPCs wont try to avoid each other or player, it can lead to them stacking together, but can help to avoid jerky-like movemenet in enclosed space."
     },
     "WanderRadius": {
-      "Value": 8,
+      "Value": 20,
       "Description": "General wander radius for idle wander and wander on the break."
     },
     "IdleFlightWander": {
@@ -20,7 +20,7 @@
       "Description": "Cruise and soar while idle on the flight controller instead of running grounded idle behavior in the air."
     },
     "FlightWanderRadius": {
-      "Value": 40,
+      "Value": 80,
       "Description": "Airborne wander radius around the home point."
     },
     "FlightCruiseRelativeSpeed": {
@@ -171,7 +171,7 @@
       "Description": "The block set designating bedrolls for this NPC. If empty, will sleep anywhere."
     },
     "LeashDistance": {
-      "Value": 60,
+      "Value": 100,
       "Description": "The range after which an NPC will start to want to return to their spawn point."
     },
     "LeashMinPlayerDistance": {
@@ -183,7 +183,7 @@
       "Description": "How long the NPC must be more than the minimum distance form the player and too far from leash before giving up."
     },
     "HardLeashDistance": {
-      "Value": 100,
+      "Value": 140,
       "Description": "An absolute maximum from the the leash position the NPC can go before turning back."
     },
     "CombatMessageTargetGroups": {
