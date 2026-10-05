@@ -4,7 +4,7 @@
     "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
     "ItemAnimationId": "SwingLeft"
   },
-  "RunTime": 0.379,
+  "RunTime": 0.6,
   "Next": {
     "Type": "Parallel",
     "Interactions": [
@@ -18,13 +18,16 @@
               "Direction": "ToLeft",
               "TestLineOfSight": true,
               "ExtendTop": 0.75,
-              "ExtendBottom": 0.75,
+              "ExtendBottom": 2.2,
               "StartDistance": 5,
               "EndDistance": 10.5,
-              "Length": 88.67,
-              "RollOffset": 0.0,
-              "YawStartOffset": -36.35,
-              "PitchOffset": -4.43
+              "Length": 122,
+              "RollOffset": 33,
+              "YawStartOffset": -68,
+              "PitchOffset": -31,
+              "IgnorePitch": true,
+              "IgnoreYaw": true,
+              "Anchor": "Eyes"
             },
             "HitEntity": {
               "Interactions": [
@@ -42,7 +45,7 @@
             },
             "Next": {
               "Type": "Simple",
-              "RunTime": 0.53
+              "RunTime": 0.9
             }
           }
         ]

@@ -253,6 +253,86 @@
             }
           }
         ]
+      },
+      "GroundTailSweep": {
+        "Type": "Ability",
+        "Description": "Whip the tail at targets close behind or beside.",
+        "Target": "Hostile",
+        "SubState": "Default",
+        "Ability": "Root_NPC_AH_Dragon_Void_Tail_Sweep",
+        "WeightCoefficient": 3,
+        "AttackDistanceRange": [
+          0,
+          9
+        ],
+        "PostExecuteDistanceRange": [
+          6,
+          6
+        ],
+        "FailureTimeout": 5,
+        "RequireAiming": false,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleDescendingLogistic",
+              "XRange": [
+                0,
+                10
+              ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [
+                7,
+                13
+              ]
+            }
+          }
+        ]
+      },
+      "GroundWingGust": {
+        "Type": "Ability",
+        "Description": "Blast close targets away with a wing beat.",
+        "Target": "Hostile",
+        "SubState": "Default",
+        "Ability": "Root_NPC_AH_Dragon_Void_Wing_Gust",
+        "WeightCoefficient": 3,
+        "AttackDistanceRange": [
+          2,
+          10
+        ],
+        "PostExecuteDistanceRange": [
+          9,
+          9
+        ],
+        "FailureTimeout": 5,
+        "RequireAiming": true,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleDescendingLogistic",
+              "XRange": [
+                0,
+                12
+              ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [
+                10,
+                18
+              ]
+            }
+          }
+        ]
       }
     },
     "ActionSets": {
@@ -274,7 +354,9 @@
           "GroundVoidBreath",
           "GroundBite",
           "GroundGravityPull",
-          "GroundRiftStep"
+          "GroundRiftStep",
+          "GroundTailSweep",
+          "GroundWingGust"
         ]
       },
       "AirRanged": {
