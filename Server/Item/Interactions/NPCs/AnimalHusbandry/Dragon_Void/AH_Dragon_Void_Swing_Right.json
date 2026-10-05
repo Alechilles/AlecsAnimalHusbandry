@@ -1,0 +1,66 @@
+{
+  "Type": "Simple",
+  "Effects": {
+    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+    "ItemAnimationId": "SwingRight"
+  },
+  "RunTime": 0.6,
+  "Next": {
+    "Type": "Parallel",
+    "Interactions": [
+      {
+        "Interactions": [
+          {
+            "Type": "Selector",
+            "RunTime": 0.152,
+            "Selector": {
+              "Id": "Horizontal",
+              "Direction": "ToRight",
+              "TestLineOfSight": true,
+              "ExtendTop": 0.75,
+              "ExtendBottom": 2.2,
+              "StartDistance": 5,
+              "EndDistance": 10.5,
+              "Length": 122,
+              "RollOffset": -33,
+              "YawStartOffset": 68,
+              "PitchOffset": -31,
+              "IgnorePitch": true,
+              "IgnoreYaw": true,
+              "Anchor": "Eyes"
+            },
+            "HitEntity": {
+              "Interactions": [
+                {
+                  "Type": "Replace",
+                  "DefaultOk": true,
+                  "Var": "Swing_Left_Damage",
+                  "DefaultValue": {
+                    "Interactions": [
+                      "AH_Dragon_Void_Swing_Left_Damage"
+                    ]
+                  }
+                }
+              ]
+            },
+            "Next": {
+              "Type": "Simple",
+              "RunTime": 0.9
+            }
+          }
+        ]
+      },
+      {
+        "Interactions": [
+          {
+            "Type": "Simple",
+            "RunTime": 0.303,
+            "Effects": {
+              "WorldSoundEventId": "SFX_Bear_Grizzly_Attack"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
