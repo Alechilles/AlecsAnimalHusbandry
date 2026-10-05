@@ -1,0 +1,29 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Streaks"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Streaks_Late",
+      "StartDelay": 0.75
+    },
+    {
+      "SpawnerId": "Void_Lightning_Random",
+      "StartDelay": 0.52
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Rim"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Seed"
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Buildup_Pop",
+      "StartDelay": 1.42
+    }
+  ],
+  "LifeSpan": 1.7,
+  "BoundingRadius": 8,
+  "CullDistance": 120,
+  "IsImportant": true
+}
