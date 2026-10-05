@@ -4,7 +4,7 @@
     "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
     "ItemAnimationId": "Bite"
   },
-  "RunTime": 0.25,
+  "RunTime": 0.58,
   "Next": {
     "Type": "Parallel",
     "Interactions": [
@@ -17,14 +17,15 @@
               "Id": "Horizontal",
               "Direction": "ToLeft",
               "TestLineOfSight": true,
-              "ExtendTop": 0.75,
-              "ExtendBottom": 0.75,
+              "ExtendTop": 1.85,
+              "ExtendBottom": 1.85,
               "StartDistance": 5.5,
               "EndDistance": 10,
-              "Length": 44.55,
+              "Length": 53,
               "RollOffset": 90.0,
               "YawStartOffset": -23.94,
-              "PitchOffset": 0.0
+              "PitchOffset": 0.0,
+              "Anchor": "Eyes"
             },
             "HitEntity": {
               "Interactions": [
