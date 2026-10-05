@@ -4,14 +4,14 @@
   "LinearFiltering": false,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
-  "MaxConcurrentParticles": 6,
+  "MaxConcurrentParticles": 4,
   "ParticleLifeSpan": {
-    "Min": 1.0,
-    "Max": 1.0
+    "Min": 4.6,
+    "Max": 4.6
   },
   "SpawnRate": {
-    "Min": 4,
-    "Max": 4
+    "Min": 1,
+    "Max": 1
   },
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ball.png",
@@ -23,62 +23,42 @@
     "UVOption": "None",
     "Animation": {
       "0": {
-        "FrameIndex": {
-          "Min": 0,
-          "Max": 0
-        },
         "Scale": {
           "X": {
-            "Min": 1,
-            "Max": 1
+            "Min": 0.56,
+            "Max": 0.56
           }
         },
-        "Rotation": {
-          "X": {
-            "Min": 0,
-            "Max": 0
-          },
-          "Y": {
-            "Min": 0,
-            "Max": 0
-          },
-          "Z": {
-            "Min": 0,
-            "Max": 0
-          }
-        },
-        "Opacity": 1.0,
+        "Opacity": 1,
         "Color": "#000000"
       },
-      "30": {
-        "Opacity": 1.0
-      },
-      "70": {
-        "Opacity": 1.0
-      },
-      "100": {
-        "Rotation": {
-          "X": {
-            "Min": 0,
-            "Max": 0
-          },
-          "Y": {
-            "Min": 0,
-            "Max": 0
-          },
-          "Z": {
-            "Min": 0,
-            "Max": 0
-          }
-        },
-        "Opacity": 1.0,
-        "Color": "#000000",
+      "5": {
         "Scale": {
           "X": {
             "Min": 1,
             "Max": 1
           }
-        }
+        },
+        "Opacity": 1
+      },
+      "96": {
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Opacity": 1
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 0.2,
+            "Max": 0.2
+          }
+        },
+        "Opacity": 1,
+        "Color": "#000000"
       }
     },
     "InitialAnimationFrame": {
@@ -110,5 +90,10 @@
       }
     }
   },
-  "CameraOffset": -0.5
+  "CameraOffset": -0.5,
+  "TotalParticles": {
+    "Min": 4,
+    "Max": 4
+  },
+  "SpawnBurst": true
 }
