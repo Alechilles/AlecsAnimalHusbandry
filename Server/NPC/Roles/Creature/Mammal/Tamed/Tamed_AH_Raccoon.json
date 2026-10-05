@@ -1,0 +1,42 @@
+{
+  "Modify": {
+    "NeedsSeekConsumeStartDistance": 1.65,
+    "NeedsSeekConsumeMaintainMaxDistance": 1.4,
+    "NeedsSeekConsumeMaintainDistanceRange": [1, 1.4],
+    "Appearance": "AH_Raccoon",
+    "AttitudeGroup": "AH_Livestock_Tamed",
+    "FlockArray": [
+      "Tamed_AH_Raccoon"
+    ],
+    "MaxHealth": 25,
+    "MaxSpeed": 6,
+    "ViewRange": 16,
+    "HearingRange": 10,
+    "IsMemory": false,
+    "MemoriesCategory": "Critter",
+    "NameTranslationKey": {
+      "Compute": "NameTranslationKey"
+    },
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "CanFollow": true,
+    "CanHold": true,
+    "CanDefend": false,
+    "CanAttackTarget": false,
+    "CanMoveToLocation": true,
+    "CanReturnHome": true,
+    "CanRecall": true,
+    "CanSetHome": true,
+    "CanBreedPair": true
+  },
+  "Type": "Variant",
+  "Reference": "AH_Template_Livestock_Tamed",
+  "Parameters": {
+    "NameTranslationKey": {
+      "Value": "server.npcRoles.AH_Raccoon.name",
+      "Description": "Translation key for NPC name display"
+    }
+  }
+}

@@ -13,6 +13,12 @@
     "ViewRange": 16,
     "HearingRange": 10,
     "MemoriesCategory": "Critter",
+    "IsTameable": {
+      "Compute": "IsTameable"
+    },
+    "TameRoleChange": {
+      "Compute": "TameRoleChange"
+    },
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     }
@@ -21,6 +27,14 @@
     "NameTranslationKey": {
       "Value": "server.npcRoles.AH_Raccoon.name",
       "Description": "Translation key for NPC name display"
+    },
+    "IsTameable": {
+      "Value": true,
+      "Description": "Whether this NPC can be tamed."
+    },
+    "TameRoleChange": {
+      "Value": "Tamed_AH_Raccoon",
+      "Description": "The role the NPC will change into when it's tamed."
     }
   }
 }

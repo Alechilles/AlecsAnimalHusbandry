@@ -5,7 +5,9 @@
     "Antelope",
     "Tamed_Antelope",
     "Armadillo",
+    "AH_Raccoon",
     "Tamed_Armadillo",
+    "Tamed_AH_Raccoon",
     "Crab",
     "Tamed_Crab",
     "Deer_Doe",
@@ -169,6 +171,16 @@
       },
       "OffspringLifecycle": {
         "TimeToFullGrownMinutes": 80
+      }
+    },
+    "Tamed_AH_Raccoon": {
+      "Cooldowns": {
+        "BaseCooldownMinutes": 50,
+        "MinDelaySeconds": 150,
+        "MaxDelaySeconds": 450
+      },
+      "OffspringLifecycle": {
+        "TimeToFullGrownMinutes": 70
       }
     },
     "Tamed_Crab": {
