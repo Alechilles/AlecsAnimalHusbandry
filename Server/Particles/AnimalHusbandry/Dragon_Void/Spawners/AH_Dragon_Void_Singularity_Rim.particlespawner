@@ -6,12 +6,12 @@
   "ParticleRotateWithSpawner": false,
   "MaxConcurrentParticles": 5,
   "ParticleLifeSpan": {
-    "Min": 1.4,
-    "Max": 1.4
+    "Min": 1.0,
+    "Max": 1.0
   },
   "SpawnRate": {
-    "Min": 2.142857142857143,
-    "Max": 2.142857142857143
+    "Min": 3.0,
+    "Max": 3.0
   },
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ball6.png",
@@ -48,13 +48,13 @@
           }
         },
         "Opacity": 0,
-        "Color": "#5a1ab8"
+        "Color": "#8a2cff"
       },
       "30": {
-        "Opacity": 0.5
+        "Opacity": 0.7
       },
       "70": {
-        "Opacity": 0.5
+        "Opacity": 0.7
       },
       "100": {
         "Rotation": {
@@ -72,7 +72,7 @@
           }
         },
         "Opacity": 0,
-        "Color": "#5a1ab8",
+        "Color": "#8a2cff",
         "Scale": {
           "X": {
             "Min": 1,
@@ -98,12 +98,12 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.975,
-          "Max": 0.975
+          "Min": 0.775,
+          "Max": 0.775
         }
       },
-      "Opacity": 0.5,
-      "Color": "#5a1ab8",
+      "Opacity": 0.7,
+      "Color": "#8a2cff",
       "FrameIndex": {
         "Min": 0,
         "Max": 0

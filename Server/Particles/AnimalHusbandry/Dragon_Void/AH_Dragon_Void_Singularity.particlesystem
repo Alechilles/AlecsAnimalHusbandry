@@ -1,31 +1,31 @@
 {
   "Spawners": [
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Pool",
+      "SpawnerId": "AH_Dragon_Void_Singularity_Glow",
       "PositionOffset": {
         "X": 0,
-        "Y": 0.1,
+        "Y": 0.08,
         "Z": 0
       }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Dark",
+      "SpawnerId": "AH_Dragon_Void_Singularity_Whirl_Base",
       "PositionOffset": {
         "X": 0,
-        "Y": 0.14,
+        "Y": 0.12,
         "Z": 0
       }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Deep",
+      "SpawnerId": "AH_Dragon_Void_Singularity_Whirl_Arms",
       "PositionOffset": {
         "X": 0,
-        "Y": 0.18,
+        "Y": 0.17,
         "Z": 0
       }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Mid",
+      "SpawnerId": "AH_Dragon_Void_Singularity_Whirl_Crest",
       "PositionOffset": {
         "X": 0,
         "Y": 0.22,
@@ -33,18 +33,10 @@
       }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Crest",
+      "SpawnerId": "AH_Dragon_Void_Singularity_Whirl_Inner",
       "PositionOffset": {
         "X": 0,
-        "Y": 0.26,
-        "Z": 0
-      }
-    },
-    {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Inner",
-      "PositionOffset": {
-        "X": 0,
-        "Y": 0.3,
+        "Y": 0.27,
         "Z": 0
       }
     },
@@ -52,7 +44,7 @@
       "SpawnerId": "AH_Dragon_Void_Singularity_Rim",
       "PositionOffset": {
         "X": 0,
-        "Y": 1.6,
+        "Y": 1.25,
         "Z": 0
       }
     },
@@ -60,7 +52,7 @@
       "SpawnerId": "AH_Dragon_Void_Singularity_Core",
       "PositionOffset": {
         "X": 0,
-        "Y": 1.6,
+        "Y": 1.25,
         "Z": 0
       }
     },
@@ -69,6 +61,14 @@
       "PositionOffset": {
         "X": 0,
         "Y": 0.4,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "Void_Lightning_Random",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.2,
         "Z": 0
       }
     }

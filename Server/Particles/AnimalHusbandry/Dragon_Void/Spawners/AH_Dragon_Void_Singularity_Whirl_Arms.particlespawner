@@ -1,20 +1,20 @@
 {
-  "RenderMode": "BlendAdd",
+  "RenderMode": "BlendLinear",
   "ParticleRotationInfluence": "None",
   "LinearFiltering": false,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
-  "MaxConcurrentParticles": 5,
+  "MaxConcurrentParticles": 1,
   "ParticleLifeSpan": {
-    "Min": 1.9,
-    "Max": 1.9
+    "Min": 4.7,
+    "Max": 4.7
   },
   "SpawnRate": {
-    "Min": 1.5789473684210527,
-    "Max": 1.5789473684210527
+    "Min": 1,
+    "Max": 1
   },
   "Particle": {
-    "Texture": "Particles/Textures/Circles/Portal_Wind.png",
+    "Texture": "Particles/Textures/AnimalHusbandry/Void_Whirlpool_Arms.png",
     "FrameSize": {
       "Width": 128,
       "Height": 128
@@ -29,8 +29,8 @@
         },
         "Scale": {
           "X": {
-            "Min": 1,
-            "Max": 1
+            "Min": 0.15,
+            "Max": 0.15
           }
         },
         "Rotation": {
@@ -47,36 +47,46 @@
             "Max": 0
           }
         },
-        "Opacity": 0,
-        "Color": "#a02cff"
+        "Opacity": 0
       },
-      "30": {
-        "Opacity": 0.45
-      },
-      "70": {
-        "Opacity": 0.45
-      },
-      "100": {
-        "Rotation": {
-          "X": {
-            "Min": 0,
-            "Max": 0
-          },
-          "Y": {
-            "Min": -360,
-            "Max": -360
-          },
-          "Z": {
-            "Min": 0,
-            "Max": 0
-          }
-        },
-        "Opacity": 0,
-        "Color": "#d048ff",
+      "6": {
         "Scale": {
           "X": {
             "Min": 1,
             "Max": 1
+          }
+        },
+        "Opacity": 1.0
+      },
+      "92": {
+        "Scale": {
+          "X": {
+            "Min": 1,
+            "Max": 1
+          }
+        },
+        "Opacity": 1.0
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 0.1,
+            "Max": 0.1
+          }
+        },
+        "Opacity": 0,
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": -2160.0,
+            "Max": -2160.0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
           }
         }
       }
@@ -98,16 +108,21 @@
       },
       "Scale": {
         "X": {
-          "Min": 2.375,
-          "Max": 2.375
+          "Min": 3.375,
+          "Max": 3.375
         }
       },
-      "Opacity": 0.45,
-      "Color": "#a02cff",
+      "Opacity": 1.0,
+      "Color": "#ffffff",
       "FrameIndex": {
         "Min": 0,
         "Max": 0
       }
     }
-  }
+  },
+  "TotalParticles": {
+    "Min": 1,
+    "Max": 1
+  },
+  "SpawnBurst": true
 }
