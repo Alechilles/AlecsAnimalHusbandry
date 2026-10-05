@@ -1,9 +1,19 @@
 {
   "Type": "Variant",
-  "Reference": "Template_Beasts_Passive_Critter",
+  "Reference": "AH_Template_Animal_Neutral",
   "Modify": {
     "Appearance": "AH_Raccoon",
+    "AttractiveItemSet": [
+      "Food_Egg"
+    ],
+    "AttractiveItemSetParticles": "Want_Food_Egg",
+    "CuriousAnimation": "Beg",
+    "AlertedAnimation": "",
     "MaxHealth": 25,
+    "MaxSpeed": 6,
+    "ViewRange": 16,
+    "HearingRange": 10,
+    "MemoriesCategory": "Critter",
     "NameTranslationKey": {
       "Compute": "NameTranslationKey"
     }

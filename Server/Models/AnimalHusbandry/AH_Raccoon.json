@@ -48,8 +48,7 @@
     "Walk": {
       "Animations": [
         {
-          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk.blockyanim",
-          "Speed": 1.4
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk.blockyanim"
         }
       ]
     },
@@ -91,18 +90,6 @@
           "BlendingDuration": 0.3
         }
       ]
-    },
-    "IdlePassive": {
-      "Animations": [
-        {
-          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Beg.blockyanim",
-          "BlendingDuration": 0.3
-        }
-      ],
-      "NextAnimationDelay": {
-        "Min": 4,
-        "Max": 10
-      }
     }
   }
 }
