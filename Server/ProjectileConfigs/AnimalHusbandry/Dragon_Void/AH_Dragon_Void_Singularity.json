@@ -8,29 +8,15 @@
     "Bounciness": 0,
     "BounceCount": 0,
     "SticksVertically": true,
-    "Gravity": 1.0
+    "Gravity": 30.0
   },
-  "LaunchForce": 40,
-  "SpawnOffset": {
-    "X": 0,
-    "Y": 0,
-    "Z": 0
-  },
+  "LaunchForce": 15,
   "Interactions": {
     "ProjectileHit": {
       "Cooldown": {
         "Cooldown": 0
       },
       "Interactions": [
-        {
-          "Type": "DamageEntity",
-          "DamageCalculator": {
-            "BaseDamage": {
-              "Elemental": 20
-            }
-          },
-          "DamageEffects": {}
-        },
         {
           "Type": "Explode",
           "Config": {
@@ -49,11 +35,22 @@
           }
         },
         {
-          "Type": "Projectile",
-          "Config": "AH_Dragon_Void_Singularity_Drop",
-          "IgnorePitch": true,
-          "IgnoreYaw": true,
-          "IgnoreRoll": true
+          "Type": "SpawnTriggerVolume",
+          "EffectAsset": "AH_Dragon_Void_Singularity",
+          "Shape": {
+            "Type": "Sphere",
+            "Center": {
+              "X": 0.0,
+              "Y": 1.0,
+              "Z": 0.0
+            },
+            "Radius": 10.0
+          },
+          "LifetimeS": 4.5
+        },
+        {
+          "Type": "Simple",
+          "RunTime": 4.5
         },
         {
           "Type": "RemoveEntity",
@@ -93,7 +90,7 @@
               "Y": 1.0,
               "Z": 0.0
             },
-            "Radius": 9.0
+            "Radius": 10.0
           },
           "LifetimeS": 4.5
         },

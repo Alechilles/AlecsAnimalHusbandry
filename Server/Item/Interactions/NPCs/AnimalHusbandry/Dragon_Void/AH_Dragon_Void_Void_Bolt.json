@@ -1,10 +1,10 @@
 {
   "Type": "Serial",
-  "$Comment": "Charge up, then one large singularity.",
+  "$Comment": "Charge void magic in the mouth while the role marks the ground and forms the singularity.",
   "Interactions": [
     {
       "Type": "Simple",
-      "RunTime": 1.6,
+      "RunTime": 1.5,
       "Effects": {
         "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
         "ItemAnimationId": "VoidBoltCharge",
@@ -19,19 +19,16 @@
               "Y": 0,
               "Z": 0.35
             },
-            "Scale": 1.6
+            "Scale": 2.0
           }
         ]
       }
     },
     {
-      "Type": "Projectile",
-      "Config": "AH_Dragon_Void_Singularity_Bolt",
+      "Type": "Simple",
+      "RunTime": 0.1,
       "Effects": {
         "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch"
-      },
-      "Tags": {
-        "AimingReference": []
       }
     },
     {

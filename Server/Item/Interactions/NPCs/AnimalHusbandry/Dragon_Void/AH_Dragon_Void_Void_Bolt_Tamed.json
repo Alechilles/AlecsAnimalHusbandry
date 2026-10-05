@@ -1,10 +1,10 @@
 {
   "Type": "Serial",
-  "$Comment": "Charge up, then one large singularity.",
+  "$Comment": "Charge up, then one large void orb.",
   "Interactions": [
     {
       "Type": "Simple",
-      "RunTime": 1.6,
+      "RunTime": 1.5,
       "Effects": {
         "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
         "ItemAnimationId": "VoidBoltCharge",
@@ -19,7 +19,7 @@
               "Y": 0,
               "Z": 0.35
             },
-            "Scale": 1.6
+            "Scale": 2.0
           }
         ]
       }
