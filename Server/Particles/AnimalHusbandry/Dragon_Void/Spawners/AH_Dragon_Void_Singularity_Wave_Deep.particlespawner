@@ -1,19 +1,18 @@
 {
-  "RenderMode": "BlendAdd",
+  "RenderMode": "BlendLinear",
   "ParticleRotationInfluence": "None",
   "LinearFiltering": false,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
-  "MaxConcurrentParticles": 4,
+  "MaxConcurrentParticles": 5,
   "ParticleLifeSpan": {
-    "Min": 1.5,
-    "Max": 1.5
+    "Min": 2.2,
+    "Max": 2.2
   },
   "SpawnRate": {
-    "Min": 1.3333333333333333,
-    "Max": 1.3333333333333333
+    "Min": 1.3636363636363635,
+    "Max": 1.3636363636363635
   },
-  "CameraOffset": 0.0,
   "Particle": {
     "Texture": "Particles/Textures/Circles/Portal_Wind.png",
     "FrameSize": {
@@ -49,19 +48,13 @@
           }
         },
         "Opacity": 0,
-        "Color": "#ff6bf2"
+        "Color": "#3a0f7a"
       },
-      "25": {
-        "Opacity": 0.95,
-        "Scale": {
-          "X": {
-            "Min": 1,
-            "Max": 1
-          }
-        }
+      "30": {
+        "Opacity": 1.0
       },
-      "75": {
-        "Opacity": 0.95
+      "70": {
+        "Opacity": 1.0
       },
       "100": {
         "Rotation": {
@@ -79,7 +72,7 @@
           }
         },
         "Opacity": 0,
-        "Color": "#b23cff",
+        "Color": "#3a0f7a",
         "Scale": {
           "X": {
             "Min": 1,
@@ -105,12 +98,12 @@
       },
       "Scale": {
         "X": {
-          "Min": 1.5,
-          "Max": 1.5
+          "Min": 3.0,
+          "Max": 3.0
         }
       },
-      "Opacity": 0.95,
-      "Color": "#ff6bf2",
+      "Opacity": 1.0,
+      "Color": "#3a0f7a",
       "FrameIndex": {
         "Min": 0,
         "Max": 0

@@ -4,16 +4,15 @@
   "LinearFiltering": false,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
-  "MaxConcurrentParticles": 3,
+  "MaxConcurrentParticles": 6,
   "ParticleLifeSpan": {
     "Min": 1.0,
     "Max": 1.0
   },
   "SpawnRate": {
-    "Min": 2.0,
-    "Max": 2.0
+    "Min": 4,
+    "Max": 4
   },
-  "CameraOffset": -0.4,
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ball.png",
     "FrameSize": {
@@ -30,8 +29,8 @@
         },
         "Scale": {
           "X": {
-            "Min": 0.85,
-            "Max": 0.85
+            "Min": 1,
+            "Max": 1
           }
         },
         "Rotation": {
@@ -49,18 +48,12 @@
           }
         },
         "Opacity": 1.0,
-        "Color": "#020005"
+        "Color": "#000000"
       },
-      "25": {
-        "Opacity": 1.0,
-        "Scale": {
-          "X": {
-            "Min": 1,
-            "Max": 1
-          }
-        }
+      "30": {
+        "Opacity": 1.0
       },
-      "75": {
+      "70": {
         "Opacity": 1.0
       },
       "100": {
@@ -79,11 +72,11 @@
           }
         },
         "Opacity": 1.0,
-        "Color": "#020005",
+        "Color": "#000000",
         "Scale": {
           "X": {
-            "Min": 0.9,
-            "Max": 0.9
+            "Min": 1,
+            "Max": 1
           }
         }
       }
@@ -105,16 +98,17 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.75,
-          "Max": 0.75
+          "Min": 1.6,
+          "Max": 1.6
         }
       },
       "Opacity": 1.0,
-      "Color": "#020005",
+      "Color": "#000000",
       "FrameIndex": {
         "Min": 0,
         "Max": 0
       }
     }
-  }
+  },
+  "CameraOffset": -0.5
 }

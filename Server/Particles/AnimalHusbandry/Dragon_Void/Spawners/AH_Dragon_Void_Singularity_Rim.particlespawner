@@ -4,16 +4,15 @@
   "LinearFiltering": false,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
-  "MaxConcurrentParticles": 3,
+  "MaxConcurrentParticles": 5,
   "ParticleLifeSpan": {
-    "Min": 1.2,
-    "Max": 1.2
+    "Min": 1.4,
+    "Max": 1.4
   },
   "SpawnRate": {
-    "Min": 1.6666666666666667,
-    "Max": 1.6666666666666667
+    "Min": 2.142857142857143,
+    "Max": 2.142857142857143
   },
-  "CameraOffset": -0.2,
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ball6.png",
     "FrameSize": {
@@ -30,8 +29,8 @@
         },
         "Scale": {
           "X": {
-            "Min": 0.85,
-            "Max": 0.85
+            "Min": 1,
+            "Max": 1
           }
         },
         "Rotation": {
@@ -49,19 +48,13 @@
           }
         },
         "Opacity": 0,
-        "Color": "#ff7af2"
+        "Color": "#5a1ab8"
       },
-      "25": {
-        "Opacity": 0.95,
-        "Scale": {
-          "X": {
-            "Min": 1,
-            "Max": 1
-          }
-        }
+      "30": {
+        "Opacity": 0.5
       },
-      "75": {
-        "Opacity": 0.95
+      "70": {
+        "Opacity": 0.5
       },
       "100": {
         "Rotation": {
@@ -74,16 +67,16 @@
             "Max": 0
           },
           "Z": {
-            "Min": 540,
-            "Max": 540
+            "Min": 360,
+            "Max": 360
           }
         },
         "Opacity": 0,
-        "Color": "#a53cff",
+        "Color": "#5a1ab8",
         "Scale": {
           "X": {
-            "Min": 0.9,
-            "Max": 0.9
+            "Min": 1,
+            "Max": 1
           }
         }
       }
@@ -105,12 +98,12 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.575,
-          "Max": 0.575
+          "Min": 0.975,
+          "Max": 0.975
         }
       },
-      "Opacity": 0.95,
-      "Color": "#ff7af2",
+      "Opacity": 0.5,
+      "Color": "#5a1ab8",
       "FrameIndex": {
         "Min": 0,
         "Max": 0

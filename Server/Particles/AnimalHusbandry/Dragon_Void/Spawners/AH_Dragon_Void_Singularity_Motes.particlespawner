@@ -2,16 +2,16 @@
   "RenderMode": "BlendAdd",
   "EmitOffset": {
     "X": {
-      "Min": 3.5,
-      "Max": 3.5
+      "Min": 2.5,
+      "Max": 6.0
     },
     "Y": {
-      "Min": 3.5,
-      "Max": 3.5
+      "Min": 0,
+      "Max": 0.2
     },
     "Z": {
-      "Min": 3.5,
-      "Max": 3.5
+      "Min": 2.5,
+      "Max": 6.0
     }
   },
   "ParticleRotationInfluence": "Billboard",
@@ -20,14 +20,14 @@
   "ParticleRotateWithSpawner": false,
   "TrailSpawnerPositionMultiplier": 1,
   "TrailSpawnerRotationMultiplier": 1,
-  "MaxConcurrentParticles": 100,
+  "MaxConcurrentParticles": 260,
   "ParticleLifeSpan": {
-    "Min": 0.8,
-    "Max": 0.9
+    "Min": 1.0,
+    "Max": 1.4
   },
   "SpawnRate": {
-    "Min": 70,
-    "Max": 90
+    "Min": 150,
+    "Max": 190
   },
   "InitialVelocity": {
     "Speed": {
@@ -56,8 +56,13 @@
         "Z": 0
       },
       "Radius": 0,
-      "RadialAcceleration": -11,
-      "RadialTangentAcceleration": 7,
+      "RadialAcceleration": -9,
+      "RadialTangentAcceleration": 28,
+      "DampingMultiplier": {
+        "X": 0.96,
+        "Y": 0.8,
+        "Z": 0.96
+      },
       "LinearAcceleration": {
         "X": 0,
         "Y": 0,
@@ -76,33 +81,34 @@
       "0": {
         "Scale": {
           "X": {
-            "Min": 2.5,
-            "Max": 2.5
+            "Min": 3.0,
+            "Max": 3.0
           },
           "Y": {
-            "Min": 2.5,
-            "Max": 2.5
+            "Min": 3.0,
+            "Max": 3.0
           }
         },
         "Opacity": 0,
-        "Color": "#c45cff"
+        "Color": "#7a2be0"
       },
-      "30": {
-        "Opacity": 1
+      "25": {
+        "Opacity": 0.9,
+        "Color": "#a02cff"
       },
       "100": {
         "Scale": {
           "X": {
-            "Min": 0.6,
-            "Max": 0.6
+            "Min": 1.0,
+            "Max": 1.0
           },
           "Y": {
-            "Min": 0.6,
-            "Max": 0.6
+            "Min": 1.0,
+            "Max": 1.0
           }
         },
-        "Opacity": 0.7,
-        "Color": "#ff8cf5"
+        "Opacity": 0,
+        "Color": "#3a0f7a"
       }
     },
     "InitialAnimationFrame": {
@@ -119,5 +125,6 @@
       "Opacity": 1,
       "Color": "#ab23ff"
     }
-  }
+  },
+  "Shape": "Sphere"
 }

@@ -1,31 +1,79 @@
 {
   "Spawners": [
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Halo"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Pool",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.1,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Disc_Outer"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Dark",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.14,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Disc"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Deep",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.18,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Disc_Inner"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Mid",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.22,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Orbit"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Crest",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.26,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Inflow"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Wave_Inner",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.3,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Rim"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Rim",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.6,
+        "Z": 0
+      }
     },
     {
-      "SpawnerId": "AH_Dragon_Void_Singularity_Core"
+      "SpawnerId": "AH_Dragon_Void_Singularity_Core",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 1.6,
+        "Z": 0
+      }
+    },
+    {
+      "SpawnerId": "AH_Dragon_Void_Singularity_Motes",
+      "PositionOffset": {
+        "X": 0,
+        "Y": 0.4,
+        "Z": 0
+      }
     }
   ],
-  "BoundingRadius": 10,
+  "BoundingRadius": 12,
   "CullDistance": 120,
   "IsImportant": true
 }
