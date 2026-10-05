@@ -74,41 +74,6 @@
           }
         ]
       },
-      "AirVoidBoltVolley": {
-        "Type": "State",
-        "Description": "Stop and launch a bounded void-bolt volley.",
-        "Target": "Hostile",
-        "State": "Combat",
-        "SubState": "AirVolley",
-        "WeightCoefficient": 3,
-        "Conditions": [
-          {
-            "Type": "TargetDistance",
-            "Curve": {
-              "ResponseCurve": "SimpleDescendingLogistic",
-              "XRange": [
-                0,
-                28
-              ]
-            }
-          },
-          {
-            "Type": "TimeSinceLastUsed",
-            "Curve": {
-              "ResponseCurve": "Linear",
-              "XRange": [
-                12,
-                20
-              ]
-            }
-          },
-          {
-            "Type": "Randomiser",
-            "MinValue": 0.65,
-            "MaxValue": 1
-          }
-        ]
-      },
       "GroundBite": {
         "Type": "Ability",
         "Description": "Use the grounded lunge bite.",
@@ -289,16 +254,15 @@
           ],
           "Randomise": false,
           "MaxRange": 28,
-          "Timeout": 2.5,
+          "Timeout": 4,
           "CooldownRange": [
-            1,
-            3
+            5,
+            8
           ]
         },
         "Actions": [
           "SelectTarget",
-          "AirBreathRun",
-          "AirVoidBoltVolley"
+          "AirBreathRun"
         ]
       }
     }

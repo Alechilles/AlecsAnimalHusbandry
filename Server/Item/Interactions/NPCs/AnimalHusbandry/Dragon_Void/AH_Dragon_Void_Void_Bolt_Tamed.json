@@ -1,0 +1,42 @@
+{
+  "Type": "Serial",
+  "$Comment": "Charge up, then one large singularity.",
+  "Interactions": [
+    {
+      "Type": "Simple",
+      "RunTime": 1.6,
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "VoidBoltCharge",
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "SystemId": "AH_Dragon_Void_Void_Bolt_Charging",
+            "DetachedFromModel": false,
+            "PositionOffset": {
+              "Y": 0,
+              "Z": 0.35
+            },
+            "Scale": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Projectile",
+      "Config": "AH_Dragon_Void_Singularity_Bolt_Tamed",
+      "Effects": {
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch"
+      },
+      "Tags": {
+        "AimingReference": []
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.5
+    }
+  ]
+}
