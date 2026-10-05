@@ -35,22 +35,22 @@
 
 --------------
 
-<H2>New in v3.3.1</H2>
-<p>Frost Dragon avatar flight has new upward-boost and forward-boost animations. Also new in 3.3: meet Lil Cluck, a hidden chick boss with pursuing pecks, egg volleys, a leaping feather shockwave, and a sweeping red laser. Beasts and Frost Dragons no longer naturally heal during combat. Frost Dragons have rarer beacon encounters and guaranteed Ice Essence drops. Requires Hytale 0.6.7 or later in Update 6 and Tamework 4.3.0 or later in the 4.x series.</p>
+<H2>New in v4.0.0</H2>
+<p>Animal Husbandry now has its own crafting station. Build the Animal Husbandry Workbench at a basic Workbench, then craft flutes, the Soul Lantern, saddles, the Butcher's Knife, feed, and the Feed Trough there with no tier gates. Raccoons roam Zone 1 forests from evening to morning, beg for eggs, and can be tamed. Lil Cluck now drops the Eggzooka, an egg launcher that splatters yolk on whatever it hits. About 30 animals gained eating animations, and wild Frost Dragons learned Icy Wind and leave lingering ice spikes. Requires Hytale 0.6.7 or later in Update 6 and Tamework 5.0.0 or later in the 5.x series.</p>
 
 <H2>Butcher's Knife</H2>
 <p>Craft a Butcher's Knife at an Animal Husbandry Workbench using 2 Iron Bars and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
 
 <H2>Lil Cluck</H2>
 <p>Summon Lil Cluck by crouch-interacting with your own tamed chick while holding a gold ingot. The chick consumes one ingot and becomes a hostile boss at full health, and is no longer your companion. You can also use <code>/npc spawn AH_Chicken_Chick_Boss</code>. This oversized chick wears sunglasses and a gold chain. During combat, players within 40 blocks see his native boss health bar. Natural health regeneration is disabled until he leaves combat. Dodge three pursuing pecks, bait its charge into a wall, and avoid marked eggs that burst into feathers or hatch chasing chicks. He cannot choose Egg Drop twice in a row. At 75% health, it crouches before leaping onto your position captured at takeoff and releases a jumpable, expanding ring of feathers on landing. Move after takeoff to dodge. Solid terrain can block the leap. The leap has an 8-second cooldown. At 50% health, Peep Show lowers his sunglasses for a one-second warning while turning to face you, then sweeps a red eye laser for 10 seconds. Run sideways to outrun its 30-degree-per-second turn or take cover behind terrain. The beam has a 10-second cooldown after firing. Hatchlings peck with a visible windup and remain until killed. The boss does not spawn naturally.</p>
-<p>Update Animal Husbandry and Tamework together. The fight requires Tamework 4.3.0 or later in the 4.x series.</p>
+<p>Update Animal Husbandry and Tamework together. The fight requires Tamework 5.0.0 or later in the 5.x series.</p>
 
 <H2>Adult Aging</H2>
 <p>With the accompanying Tamework aging build, animals progress from Adult to Prime and freeze there by default. Administrators can enable the full Adult, Prime, and Senior lifecycle and optional old-age death in /tw settings. Prime animals give full domestic slaughter yield; other adult stages give 50%. See the <a href="https://wiki.hytalemodding.dev/mod/alecs-animal-husbandry/breeding-and-growth-guide">Breeding and Growth Guide</a> for species timings.</p>
 
 <H2>Required:</H2>
 <ul>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (4.3.0 or later in the 4.x series)</li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (5.0.0 or later in the 5.x series)</li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
@@ -343,6 +343,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
 
-Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 3.3.1 requires Tamework 4.3.0 or later in the 4.x series; update both mods together.
+Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 4.0.0 requires Tamework 5.0.0 or later in the 5.x series; update both mods together.
 
 Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.
