@@ -1,5 +1,5 @@
 {
-  "RenderMode": "BlendAdd",
+  "RenderMode": "BlendLinear",
   "ParticleRotationInfluence": "None",
   "LinearFiltering": true,
   "LightInfluence": 0,
@@ -14,7 +14,7 @@
     "Max": 1
   },
   "Particle": {
-    "Texture": "Particles/Textures/AnimalHusbandry/Void_Whirlpool_Crest.png",
+    "Texture": "Particles/Textures/AnimalHusbandry/Void_Whirlpool_Base.png",
     "FrameSize": {
       "Width": 512,
       "Height": 512
@@ -82,8 +82,8 @@
             "Max": 0
           },
           "Y": {
-            "Min": -684.0,
-            "Max": -684.0
+            "Min": -802.8,
+            "Max": -802.8
           },
           "Z": {
             "Min": 0,
@@ -109,8 +109,8 @@
       },
       "Scale": {
         "X": {
-          "Min": 0.75,
-          "Max": 0.75
+          "Min": 0.40625,
+          "Max": 0.40625
         }
       },
       "Opacity": 1.0,
