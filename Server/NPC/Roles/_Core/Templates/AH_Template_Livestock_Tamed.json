@@ -187,6 +187,14 @@
       "Value": [ 2, 2.5 ],
       "Description": "The minimum distance which the NPC will retain from a target holding an attractive item."
     },
+    "CuriousCloseAnimation": {
+      "Value": "",
+      "Description": "Optional animation to play instead of Curious once the NPC has stopped next to a player holding an attractive item."
+    },
+    "CuriousCloseRange": {
+      "Value": 2.75,
+      "Description": "Distance within which CuriousCloseAnimation replaces Curious. Keep it just above the far end of FollowItemDistance."
+    },
     "GreetAnimation": {
       "Value": "Alerted",
       "Description": "The flavor animation to play when greeting another NPC or player. Ignored if null or empty."
@@ -2360,6 +2368,41 @@
                       "State": "Idle"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet) && !isEmpty(CuriousCloseAnimation)" },
+              "$Comment": "Once stopped next to the item holder, play the close animation. Runs ahead of the shared follow component, which always plays Curious.",
+              "Sensor": {
+                "Type": "Target",
+                "TargetSlot": "LockedTarget",
+                "Range": { "Compute": "CuriousCloseRange" },
+                "Filters": [
+                  {
+                    "Type": "ItemInHand",
+                    "Items": { "Compute": "AttractiveItemSet" }
+                  },
+                  {
+                    "Type": "Attitude",
+                    "Attitudes": [ "Revered", "Friendly", "Ignore" ]
+                  }
+                ]
+              },
+              "HeadMotion": {
+                "Type": "Watch"
+              },
+              "BodyMotion": {
+                "Type": "MaintainDistance",
+                "DesiredDistanceRange": { "Compute": "FollowItemDistance" },
+                "RelativeForwardsSpeed": 0.3,
+                "RelativeBackwardsSpeed": 0.3
+              },
+              "Actions": [
+                {
+                  "Type": "PlayAnimation",
+                  "Slot": "Status",
+                  "Animation": { "Compute": "CuriousCloseAnimation" }
                 }
               ]
             },
