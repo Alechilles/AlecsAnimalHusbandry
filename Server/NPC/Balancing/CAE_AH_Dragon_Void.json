@@ -156,18 +156,18 @@
       },
       "GroundGravityPull": {
         "Type": "Ability",
-        "Description": "Drag distant targets into bite range.",
+        "Description": "Root and drag everything nearby in with a held singularity, then burst.",
         "Target": "Hostile",
         "SubState": "Default",
         "Ability": "Root_NPC_AH_Dragon_Void_Gravity_Pull",
         "WeightCoefficient": 3,
         "AttackDistanceRange": [
-          12,
-          21
+          3,
+          16
         ],
         "PostExecuteDistanceRange": [
-          9,
-          9
+          8,
+          8
         ],
         "FailureTimeout": 5,
         "RequireAiming": true,
@@ -187,8 +187,8 @@
             "Curve": {
               "ResponseCurve": "Linear",
               "XRange": [
-                12,
-                22
+                18,
+                28
               ]
             }
           }

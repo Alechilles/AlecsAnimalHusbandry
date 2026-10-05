@@ -2937,6 +2937,16 @@
                       }
                     },
                     {
+                      "$Comment": "AH signature attack: gravity maw commit. Rooted and facing one way from the wind-up until the blast.",
+                      "Sensor": {
+                        "Type": "TameworkEffectActive",
+                        "EffectId": "AH_Dragon_Void_Maw_Commit"
+                      },
+                      "BodyMotion": {
+                        "Type": "Nothing"
+                      }
+                    },
+                    {
                       "Sensor": {
                         "Type": "CombatActionEvaluator",
                         "TargetInRange": true

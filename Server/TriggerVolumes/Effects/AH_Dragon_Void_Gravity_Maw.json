@@ -1,0 +1,18 @@
+{
+  "Effects": [
+    {
+      "Type": "SetVelocity",
+      "Event": "TICK",
+      "Velocity": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 11.0
+      },
+      "Additive": true,
+      "RelativeMode": "VolumeOrigin"
+    }
+  ],
+  "TargetTypes": [
+    "Player"
+  ]
+}

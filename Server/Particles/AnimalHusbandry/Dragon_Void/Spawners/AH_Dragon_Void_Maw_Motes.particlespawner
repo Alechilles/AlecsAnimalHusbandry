@@ -1,0 +1,130 @@
+{
+  "RenderMode": "BlendAdd",
+  "EmitOffset": {
+    "X": {
+      "Min": 5,
+      "Max": 13
+    },
+    "Y": {
+      "Min": 0,
+      "Max": 5
+    },
+    "Z": {
+      "Min": 5,
+      "Max": 13
+    }
+  },
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 420,
+  "ParticleLifeSpan": {
+    "Min": 1.2,
+    "Max": 1.56
+  },
+  "SpawnRate": {
+    "Min": 260,
+    "Max": 299.0
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0,
+      "Max": 0
+    },
+    "Yaw": {
+      "Min": 0,
+      "Max": 0
+    },
+    "Pitch": {
+      "Min": 0,
+      "Max": 0
+    }
+  },
+  "Attractors": [
+    {
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RadialAxis": {
+        "X": 0,
+        "Y": 1,
+        "Z": 0
+      },
+      "Radius": 0,
+      "RadialAcceleration": -24,
+      "RadialTangentAcceleration": 11,
+      "DampingMultiplier": {
+        "X": 0.97,
+        "Y": 0.97,
+        "Z": 0.97
+      },
+      "LinearAcceleration": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    }
+  ],
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Ball3.png",
+    "FrameSize": {
+      "Width": 32,
+      "Height": 32
+    },
+    "ScaleRatioConstraint": "OneToOne",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 3.5,
+            "Max": 3.5
+          },
+          "Y": {
+            "Min": 3.5,
+            "Max": 3.5
+          }
+        },
+        "Opacity": 0,
+        "Color": "#7a22e0"
+      },
+      "25": {
+        "Opacity": 0.6,
+        "Color": "#9a2cff"
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 1.0,
+            "Max": 1.0
+          },
+          "Y": {
+            "Min": 1.0,
+            "Max": 1.0
+          }
+        },
+        "Opacity": 0,
+        "Color": "#3a0f7a"
+      }
+    },
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.22000000000000003,
+          "Max": 0.44000000000000006
+        },
+        "Y": {
+          "Min": 0.22000000000000003,
+          "Max": 0.44000000000000006
+        }
+      },
+      "Opacity": 1,
+      "Color": "#ab23ff"
+    }
+  },
+  "Shape": "Sphere"
+}

@@ -1,49 +1,116 @@
 {
-  "Type": "Simple",
-  "$Comment": "Inhale: drags everything in a long cone toward the dragon's jaws.",
-  "Effects": {
-    "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
-    "ItemAnimationId": "VoidBolt",
-    "WorldSoundEventId": "SFX_AH_Dragon_Void_Breath_Roar",
-    "Particles": [
-      {
-        "TargetEntityPart": "Entity",
-        "TargetNodeName": "Snout",
-        "SystemId": "AH_Dragon_Void_Void_Bolt_Charging",
-        "DetachedFromModel": false,
-        "PositionOffset": {
-          "Y": 0,
-          "Z": 0.35
-        },
-        "Scale": 1.2
-      }
-    ]
-  },
-  "RunTime": 0.45,
-  "Next": {
-    "Type": "Selector",
-    "RunTime": 0.15,
-    "Selector": {
-      "Id": "Horizontal",
-      "Direction": "ToLeft",
-      "TestLineOfSight": true,
-      "ExtendTop": 2.5,
-      "ExtendBottom": 2.5,
-      "StartDistance": 8,
-      "EndDistance": 22,
-      "Length": 70,
-      "RollOffset": 0.0,
-      "YawStartOffset": -35.0,
-      "PitchOffset": 0.0
+  "Type": "Serial",
+  "$Comment": "Gravity maw: root, charge a singularity in the jaws, drag everything in while it is held, then burst.",
+  "Interactions": [
+    {
+      "Type": "ApplyEffect",
+      "EffectId": "AH_Dragon_Void_Maw_Commit"
     },
-    "HitEntity": {
-      "Interactions": [
-        "AH_Dragon_Void_Gravity_Pull_Damage"
-      ]
-    },
-    "Next": {
+    {
       "Type": "Simple",
-      "RunTime": 0.55
+      "RunTime": 0.75,
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "GravityWindup",
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Charge",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "DetachedFromModel": false,
+            "SystemId": "AH_Dragon_Void_Breath_Charge",
+            "PositionOffset": {
+              "Y": -0.6,
+              "Z": 0.6
+            },
+            "Scale": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "Type": "SpawnTriggerVolume",
+      "EffectAsset": "AH_Dragon_Void_Gravity_Maw",
+      "Shape": {
+        "Type": "Sphere",
+        "Center": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "Radius": 18.0
+      },
+      "LifetimeS": 4.0
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 4.0,
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "GravityHold",
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Loop",
+        "ClearAnimationOnFinish": true,
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "DetachedFromModel": false,
+            "SystemId": "AH_Dragon_Void_Maw_Inflow",
+            "PositionOffset": {
+              "Y": -0.6,
+              "Z": 0.6
+            },
+            "Scale": 1.0
+          },
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "DetachedFromModel": false,
+            "SystemId": "AH_Dragon_Void_Maw_Core",
+            "PositionOffset": {
+              "Y": -0.6,
+              "Z": 0.6
+            },
+            "Scale": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Explode",
+      "Config": {
+        "DamageEntities": true,
+        "DamageBlocks": false,
+        "EntityDamageRadius": 9,
+        "EntityDamage": 16,
+        "Knockback": {
+          "Type": "Point",
+          "Force": 17,
+          "VelocityY": 8,
+          "VelocityType": "Set",
+          "VelocityConfig": {
+            "AirResistance": 0.97,
+            "AirResistanceMax": 0.96,
+            "GroundResistance": 0.94,
+            "GroundResistanceMax": 0.3,
+            "Threshold": 3.0
+          }
+        },
+        "Particles": [
+          {
+            "SystemId": "AH_Dragon_Void_Singularity_Burst"
+          }
+        ]
+      },
+      "Effects": {
+        "ItemPlayerAnimationsId": "AH_Dragon_Void_Default",
+        "ItemAnimationId": "GravityBlast",
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Singularity_Collapse"
+      }
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 0.7
     }
-  }
+  ]
 }
