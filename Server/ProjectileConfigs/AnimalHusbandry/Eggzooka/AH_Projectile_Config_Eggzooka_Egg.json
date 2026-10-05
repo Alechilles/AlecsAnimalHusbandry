@@ -28,7 +28,7 @@
           "DamageCalculator": {
             "Type": "Absolute",
             "BaseDamage": {
-              "Projectile": 4
+              "Projectile": 10
             },
             "RandomPercentageModifier": 0.1
           },
@@ -78,7 +78,7 @@
             "DamageBlocks": false,
             "Particles": [
               {
-                "SystemId": "AH_Eggzooka_Yolk_Splat"
+                "SystemId": "AH_Eggzooka_Yolk_Splat_Block"
               }
             ],
             "SoundEventId": "SFX_AH_Eggzooka_Splat",
