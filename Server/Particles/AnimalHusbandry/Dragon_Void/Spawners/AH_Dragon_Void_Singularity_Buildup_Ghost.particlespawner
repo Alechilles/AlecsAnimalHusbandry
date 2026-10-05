@@ -1,0 +1,116 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "None",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 1,
+  "ParticleLifeSpan": {
+    "Min": 1.5,
+    "Max": 1.5
+  },
+  "SpawnRate": {
+    "Min": 1,
+    "Max": 1
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/AnimalHusbandry/Void_Whirlpool_Base.png",
+    "FrameSize": {
+      "Width": 512,
+      "Height": 512
+    },
+    "ScaleRatioConstraint": "OneToOne",
+    "UVOption": "None",
+    "SoftParticles": "Disable",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 0.1,
+            "Max": 0.1
+          }
+        },
+        "Opacity": 0.0,
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        }
+      },
+      "95": {
+        "Scale": {
+          "X": {
+            "Min": 0.9,
+            "Max": 0.9
+          }
+        },
+        "Opacity": 0.55
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 0.9,
+            "Max": 0.9
+          }
+        },
+        "Opacity": 0,
+        "Rotation": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": -180,
+            "Max": -180
+          },
+          "Z": {
+            "Min": 0,
+            "Max": 0
+          }
+        }
+      }
+    },
+    "InitialAnimationFrame": {
+      "Rotation": {
+        "X": {
+          "Min": 90,
+          "Max": 90
+        },
+        "Y": {
+          "Min": 0,
+          "Max": 360
+        },
+        "Z": {
+          "Min": 0,
+          "Max": 0
+        }
+      },
+      "Scale": {
+        "X": {
+          "Min": 0.90625,
+          "Max": 0.90625
+        }
+      },
+      "Opacity": 1.0,
+      "Color": "#ffffff",
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 0
+      }
+    }
+  },
+  "TotalParticles": {
+    "Min": 1,
+    "Max": 1
+  },
+  "SpawnBurst": true
+}

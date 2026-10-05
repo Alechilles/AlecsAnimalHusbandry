@@ -1,0 +1,129 @@
+{
+  "RenderMode": "BlendAdd",
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 37,
+  "ParticleLifeSpan": {
+    "Min": 0.35,
+    "Max": 0.5
+  },
+  "SpawnRate": {
+    "Min": 45,
+    "Max": 45
+  },
+  "Shape": "Sphere",
+  "EmitOffset": {
+    "X": {
+      "Min": 3.2,
+      "Max": 5.0
+    },
+    "Y": {
+      "Min": 3.2,
+      "Max": 5.0
+    },
+    "Z": {
+      "Min": 3.2,
+      "Max": 5.0
+    }
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0,
+      "Max": 0
+    }
+  },
+  "Attractors": [
+    {
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RadialAxis": {
+        "X": 0,
+        "Y": 1,
+        "Z": 0
+      },
+      "Radius": 0,
+      "RadialAcceleration": -55,
+      "RadialTangentAcceleration": 19.25,
+      "LinearAcceleration": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    }
+  ],
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Glow_Direction.png",
+    "ScaleRatioConstraint": "None",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 0.25,
+            "Max": 0.25
+          },
+          "Y": {
+            "Min": 0.5,
+            "Max": 0.5
+          }
+        },
+        "Opacity": 0,
+        "Color": "#7a22e0"
+      },
+      "30": {
+        "Opacity": 1,
+        "Color": "#c050ff",
+        "Scale": {
+          "X": {
+            "Min": 0.25,
+            "Max": 0.25
+          },
+          "Y": {
+            "Min": 1.6,
+            "Max": 1.6
+          }
+        }
+      },
+      "100": {
+        "Opacity": 0,
+        "Color": "#3a0f7a",
+        "Scale": {
+          "X": {
+            "Min": 0.15,
+            "Max": 0.15
+          },
+          "Y": {
+            "Min": 0.6,
+            "Max": 0.6
+          }
+        }
+      }
+    },
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.3,
+          "Max": 0.3
+        },
+        "Y": {
+          "Min": 0.5,
+          "Max": 0.6
+        }
+      },
+      "Opacity": 1,
+      "Color": "#c050ff",
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 0
+      }
+    }
+  },
+  "TotalParticles": {
+    "Min": 67,
+    "Max": 67
+  }
+}
