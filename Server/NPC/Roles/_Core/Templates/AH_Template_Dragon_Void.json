@@ -2405,7 +2405,7 @@
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley2" },
-                              "SkipAiming": true,
+                              "SkipAiming": true, "LineOfSight": false, "AvoidFriendlyFire": false,
                               "AttackPauseRange": [ 10, 10 ]
                             },
                             {
@@ -2444,7 +2444,7 @@
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley3" },
-                              "SkipAiming": true,
+                              "SkipAiming": true, "LineOfSight": false, "AvoidFriendlyFire": false,
                               "AttackPauseRange": [ 10, 10 ]
                             },
                             {
@@ -2483,7 +2483,7 @@
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley4" },
-                              "SkipAiming": true,
+                              "SkipAiming": true, "LineOfSight": false, "AvoidFriendlyFire": false,
                               "AttackPauseRange": [ 10, 10 ]
                             },
                             {
