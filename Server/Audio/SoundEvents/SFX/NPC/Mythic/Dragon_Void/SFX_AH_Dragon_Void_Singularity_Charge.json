@@ -1,6 +1,7 @@
 {
   "Parent": "SFX_Attn_Loud",
   "Volume": 0,
+  "Pitch": -5,
   "PreventSoundInterruption": true,
   "MaxInstance": 3,
   "Layers": [
@@ -20,8 +21,8 @@
       ],
       "Volume": -4,
       "RandomSettings": {
-        "MinPitch": -6.5,
-        "MaxPitch": -5.5
+        "MinPitch": -0.5,
+        "MaxPitch": 0.5
       }
     },
     {
@@ -30,8 +31,8 @@
       ],
       "Volume": -5,
       "RandomSettings": {
-        "MinPitch": -3.5,
-        "MaxPitch": -2.5
+        "MinPitch": -0.5,
+        "MaxPitch": 0.5
       }
     }
   ]
