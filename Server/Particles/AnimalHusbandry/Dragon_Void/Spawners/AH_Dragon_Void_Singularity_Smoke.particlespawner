@@ -1,0 +1,151 @@
+{
+  "RenderMode": "BlendLinear",
+  "ParticleRotationInfluence": "Billboard",
+  "LinearFiltering": true,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": false,
+  "MaxConcurrentParticles": 140,
+  "ParticleLifeSpan": {
+    "Min": 1.3,
+    "Max": 1.9
+  },
+  "SpawnRate": {
+    "Min": 60,
+    "Max": 75
+  },
+  "Shape": "Sphere",
+  "EmitOffset": {
+    "X": {
+      "Min": 1.2,
+      "Max": 5.5
+    },
+    "Y": {
+      "Min": 0,
+      "Max": 0.9
+    },
+    "Z": {
+      "Min": 1.2,
+      "Max": 5.5
+    }
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0,
+      "Max": 0.3
+    },
+    "Yaw": {
+      "Min": -180,
+      "Max": 180
+    },
+    "Pitch": {
+      "Min": 0,
+      "Max": 60
+    }
+  },
+  "Attractors": [
+    {
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "RadialAxis": {
+        "X": 0,
+        "Y": 1,
+        "Z": 0
+      },
+      "Radius": 0,
+      "RadialAcceleration": -5,
+      "RadialTangentAcceleration": 9,
+      "DampingMultiplier": {
+        "X": 0.96,
+        "Y": 0.96,
+        "Z": 0.96
+      },
+      "LinearAcceleration": {
+        "X": 0,
+        "Y": 0.9,
+        "Z": 0
+      }
+    }
+  ],
+  "Particle": {
+    "Texture": "Particles/Textures/Smoke/Smoke_Smooth.png",
+    "FrameSize": {
+      "Width": 64,
+      "Height": 64
+    },
+    "ScaleRatioConstraint": "OneToOne",
+    "UVOption": "RandomFlipU",
+    "Animation": {
+      "0": {
+        "Scale": {
+          "X": {
+            "Min": 0.6,
+            "Max": 0.6
+          },
+          "Y": {
+            "Min": 0.6,
+            "Max": 0.6
+          }
+        },
+        "Opacity": 0,
+        "Color": "#2a0c52"
+      },
+      "25": {
+        "Opacity": 0.8,
+        "Color": "#1a0734"
+      },
+      "70": {
+        "Opacity": 0.7,
+        "Color": "#0c0318"
+      },
+      "100": {
+        "Scale": {
+          "X": {
+            "Min": 1.5,
+            "Max": 1.5
+          },
+          "Y": {
+            "Min": 1.5,
+            "Max": 1.5
+          }
+        },
+        "Opacity": 0,
+        "Color": "#050109"
+      }
+    },
+    "InitialAnimationFrame": {
+      "Rotation": {
+        "X": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Y": {
+          "Min": 0,
+          "Max": 0
+        },
+        "Z": {
+          "Min": 0,
+          "Max": 360
+        }
+      },
+      "Scale": {
+        "X": {
+          "Min": 1.3,
+          "Max": 1.3
+        },
+        "Y": {
+          "Min": 1.3,
+          "Max": 1.3
+        }
+      },
+      "Opacity": 0.8,
+      "Color": "#2a0c52",
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 3
+      }
+    }
+  }
+}
