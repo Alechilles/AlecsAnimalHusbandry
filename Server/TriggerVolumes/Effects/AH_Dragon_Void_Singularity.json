@@ -6,10 +6,20 @@
       "Velocity": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 4.0
+        "Z": 6.0
       },
       "Additive": true,
       "RelativeMode": "VolumeOrigin"
+    },
+    {
+      "Type": "SetVelocity",
+      "Event": "TICK",
+      "Velocity": {
+        "X": 0.0,
+        "Y": -6.0,
+        "Z": 0.0
+      },
+      "Additive": true
     },
     {
       "Type": "DamageEntity",
