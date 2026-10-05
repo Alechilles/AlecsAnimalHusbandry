@@ -1,7 +1,7 @@
 {
   "RenderMode": "BlendLinear",
   "ParticleRotationInfluence": "None",
-  "LinearFiltering": false,
+  "LinearFiltering": true,
   "LightInfluence": 0,
   "ParticleRotateWithSpawner": false,
   "MaxConcurrentParticles": 1,
@@ -16,11 +16,12 @@
   "Particle": {
     "Texture": "Particles/Textures/AnimalHusbandry/Void_Whirlpool_Base.png",
     "FrameSize": {
-      "Width": 128,
-      "Height": 128
+      "Width": 512,
+      "Height": 512
     },
     "ScaleRatioConstraint": "OneToOne",
     "UVOption": "None",
+    "SoftParticles": "Disable",
     "Animation": {
       "0": {
         "FrameIndex": {
@@ -108,8 +109,8 @@
       },
       "Scale": {
         "X": {
-          "Min": 3.625,
-          "Max": 3.625
+          "Min": 0.90625,
+          "Max": 0.90625
         }
       },
       "Opacity": 1.0,
