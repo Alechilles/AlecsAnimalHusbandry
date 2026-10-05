@@ -20,50 +20,6 @@
       "Value": 8,
       "Description": "General wander radius."
     },
-    "FlightWanderRadius": {
-      "Value": 40,
-      "Description": "Airborne wander radius around the home point."
-    },
-    "FlightCruiseRelativeSpeed": {
-      "Value": 0.35,
-      "Description": "Relative speed during ambient airborne wandering, with a 4 blocks/second minimum cruise pace."
-    },
-    "FlightCruiseMinSegmentTime": {
-      "Value": 6,
-      "Description": "Minimum seconds per ambient flight segment before choosing a new direction."
-    },
-    "FlightCruiseMaxSegmentTime": {
-      "Value": 10,
-      "Description": "Maximum seconds per ambient flight segment; obstacles and wander bounds can shorten it."
-    },
-    "FlightCruiseMaxHeadingChange": {
-      "Value": 60,
-      "Description": "Maximum heading change in degrees between ambient flight segments."
-    },
-    "KettleEnabled": {
-      "Value": true,
-      "Description": "Allow occasional ambient soaring circles while wandering in flight."
-    },
-    "KettleRadius": {
-      "Value": 24,
-      "Description": "Base soaring orbit radius in blocks."
-    },
-    "KettleAltitudeRange": {
-      "Value": [ 15, 28 ],
-      "Description": "Soaring altitude above the home point."
-    },
-    "KettleCooldownRange": {
-      "Value": [ 90, 180 ],
-      "Description": "Seconds of cooldown after a soaring episode finishes."
-    },
-    "KettleDurationRange": {
-      "Value": [ 45, 90 ],
-      "Description": "Seconds spent in a soaring episode."
-    },
-    "KettleRelativeSpeed": {
-      "Value": 0.5,
-      "Description": "Flight speed during soaring circles as a fraction of maximum flight speed."
-    },
     "ViewRange": {
       "Value": 24,
       "Description": "The range from which the target will be seen. If zero, sight will be disabled."
@@ -1534,33 +1490,11 @@
                   { "Type": "MotionController", "MotionController": "Fly" }
                 ]
               },
-              "Instructions": [
-                {
-                  "$Comment": "Occasional soaring circles between cruise segments, as wild birds and miniwyverns do.",
-                  "Reference": "Component_Tamework_Instruction_Flight_Kettle",
-                  "Modify": {
-                    "KettleEnabled": { "Compute": "KettleEnabled" },
-                    "KettleRadius": { "Compute": "KettleRadius" },
-                    "KettleAltitudeRange": { "Compute": "KettleAltitudeRange" },
-                    "KettleCooldownRange": { "Compute": "KettleCooldownRange" },
-                    "KettleDurationRange": { "Compute": "KettleDurationRange" },
-                    "DayTimePeriod": { "Compute": "DayTimePeriod" },
-                    "KettleRelativeSpeed": { "Compute": "KettleRelativeSpeed" }
-                  }
-                },
-                {
-                  "$Comment": "Long cruise segments with capped turns instead of short random hops.",
-                  "BodyMotion": {
-                    "Type": "WanderInCircle",
-                    "Radius": { "Compute": "FlightWanderRadius" },
-                    "MaxHeadingChange": { "Compute": "FlightCruiseMaxHeadingChange" },
-                    "MinWalkTime": { "Compute": "FlightCruiseMinSegmentTime" },
-                    "MaxWalkTime": { "Compute": "FlightCruiseMaxSegmentTime" },
-                    "RelativeSpeed": { "Compute": "max(FlightCruiseRelativeSpeed, 4 / FlightSpeed)" }
-                  }
-                }
-              ]
-
+              "BodyMotion": {
+                "Type": "WanderInCircle",
+                "Radius": { "Compute": "WanderRadius + 2" },
+                "RelativeSpeed": 0.3
+              }
             }
           ]
         },
