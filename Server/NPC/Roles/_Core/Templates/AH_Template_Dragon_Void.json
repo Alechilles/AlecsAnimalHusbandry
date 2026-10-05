@@ -252,7 +252,7 @@
       "Description": "Optional close ranged breath attack used during the flying high-health phase."
     },
     "AirRangedAttackDistance": {
-      "Value": 28,
+      "Value": 38,
       "Description": "Maximum distance for the flying phase ranged attack."
     },
     "AirRangedAttackMinimumDistance": {
@@ -280,7 +280,7 @@
       "Description": "Four-shot void-bolt volley interaction selected by the aerial combat evaluator."
     },
     "AirBreathAttackDistance": {
-      "Value": 13,
+      "Value": 17,
       "Description": "Distance at which the aerial breath pass commits, allowing the visible breath to begin before the drake reaches the target."
     },
     "AirBreathAttackViewSector": {
@@ -288,7 +288,7 @@
       "Description": "Forward-facing sector required before the flying phase breath attack can fire."
     },
     "AirBreathAttackAltitudeRange": {
-      "Value": [ 2, 4 ],
+      "Value": [ 5, 8 ],
       "Description": "Desired height-over-ground range while closing for a flying breath attack."
     },
     "AirBreathAttackRelativeSpeed": {
@@ -324,11 +324,11 @@
       "Description": "Upward steering strength during aerial attack recovery."
     },
     "AirCombatBehaviorDistance": {
-      "Value": 24,
+      "Value": 30,
       "Description": "Distance used for slowing and stopping during flying phase movement."
     },
     "AirCombatAltitudeRange": {
-      "Value": [ 8, 16 ],
+      "Value": [ 13, 22 ],
       "Description": "Desired vertical offset range above the target while using the flying combat phase."
     },
     "AirCombatClimbRelativeSpeed": {
@@ -360,7 +360,7 @@
       "Description": "Relative speed for flying combat repositioning."
     },
     "AirCombatWanderRadiusRange": {
-      "Value": [ 18, 36 ],
+      "Value": [ 26, 46 ],
       "Description": "Horizontal distance range used when choosing loose flying combat destinations around the target."
     },
     "AirCombatWanderRetargetTimeRange": {

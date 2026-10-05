@@ -223,6 +223,36 @@
             }
           }
         ]
+      },
+      "AirVoidBoltVolley": {
+        "Type": "State",
+        "Description": "Stop, aim and fire one charged singularity.",
+        "Target": "Hostile",
+        "State": "Combat",
+        "SubState": "AirVolley",
+        "WeightCoefficient": 3,
+        "Conditions": [
+          {
+            "Type": "TargetDistance",
+            "Curve": {
+              "ResponseCurve": "SimpleDescendingLogistic",
+              "XRange": [
+                0,
+                46
+              ]
+            }
+          },
+          {
+            "Type": "TimeSinceLastUsed",
+            "Curve": {
+              "ResponseCurve": "Linear",
+              "XRange": [
+                5,
+                9
+              ]
+            }
+          }
+        ]
       }
     },
     "ActionSets": {
@@ -248,21 +278,10 @@
         ]
       },
       "AirRanged": {
-        "BasicAttacks": {
-          "Attacks": [
-            "Root_NPC_AH_Dragon_Void_Void_Bolt"
-          ],
-          "Randomise": false,
-          "MaxRange": 28,
-          "Timeout": 4,
-          "CooldownRange": [
-            5,
-            8
-          ]
-        },
         "Actions": [
           "SelectTarget",
-          "AirBreathRun"
+          "AirBreathRun",
+          "AirVoidBoltVolley"
         ]
       }
     }
