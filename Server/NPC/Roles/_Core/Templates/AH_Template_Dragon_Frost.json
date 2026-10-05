@@ -2324,6 +2324,7 @@
                         "WanderStopDistance": { "Compute": "AirCombatWanderStopDistance" },
                         "RelativeSpeed": { "Compute": "AirCombatWanderRelativeSpeed" },
                         "DesiredAltitudeRange": { "Compute": "AirCombatAltitudeRange" },
+                        "AirborneTargetAltitudeRange": [ -3, 4 ],
                         "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                         "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                       }
@@ -2372,6 +2373,7 @@
                             "Type": "TameworkFlyingOrbit",
                             "Mode": "FACE_TARGET",
                             "DesiredAltitudeRange": { "Compute": "AirCombatAltitudeRange" },
+                            "AirborneTargetAltitudeRange": [ -3, 4 ],
                             "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                             "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                           },
@@ -2411,6 +2413,7 @@
                             "Type": "TameworkFlyingOrbit",
                             "Mode": "FACE_TARGET",
                             "DesiredAltitudeRange": { "Compute": "AirCombatAltitudeRange" },
+                            "AirborneTargetAltitudeRange": [ -3, 4 ],
                             "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                             "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                           },
@@ -2450,6 +2453,7 @@
                             "Type": "TameworkFlyingOrbit",
                             "Mode": "FACE_TARGET",
                             "DesiredAltitudeRange": { "Compute": "AirCombatAltitudeRange" },
+                            "AirborneTargetAltitudeRange": [ -3, 4 ],
                             "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                             "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                           },
@@ -2526,6 +2530,7 @@
                         "DesiredAltitudeRange": {
                           "Compute": "AirCombatAltitudeRange"
                         },
+                        "AirborneTargetAltitudeRange": [ -3, 4 ],
                         "ClimbRelativeSpeed": {
                           "Compute": "AirCombatClimbRelativeSpeed"
                         },
@@ -2633,6 +2638,7 @@
                         "ApproachSlowDownDistance": 12,
                         "RelativeSpeed": { "Compute": "AirBreathAttackRelativeSpeed" },
                         "DesiredAltitudeRange": { "Compute": "AirBreathAttackAltitudeRange" },
+                        "AirborneTargetAltitudeRange": [ -2, 3 ],
                         "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                         "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                       },
@@ -2710,6 +2716,7 @@
                         "PassThroughStopDistance": { "Compute": "AirBreathPassStopDistance" },
                         "RelativeSpeed": { "Compute": "AirBreathAttackRelativeSpeed" },
                         "DesiredAltitudeRange": { "Compute": "AirBreathAttackAltitudeRange" },
+                        "AirborneTargetAltitudeRange": [ -2, 3 ],
                         "ClimbRelativeSpeed": { "Compute": "AirCombatClimbRelativeSpeed" },
                         "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                       },
@@ -2769,6 +2776,7 @@
                         "WanderStopDistance": { "Compute": "AirCombatWanderStopDistance" },
                         "RelativeSpeed": { "Compute": "AirCombatRecoveryRelativeSpeed" },
                         "DesiredAltitudeRange": { "Compute": "AirCombatAltitudeRange" },
+                        "AirborneTargetAltitudeRange": [ -3, 4 ],
                         "ClimbRelativeSpeed": { "Compute": "AirCombatRecoveryClimbRelativeSpeed" },
                         "SinkRelativeSpeed": { "Compute": "AirCombatSinkRelativeSpeed" }
                       },
