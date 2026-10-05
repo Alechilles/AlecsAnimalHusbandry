@@ -152,6 +152,10 @@
       "Value": "Curious",
       "Description": "Optional animation to play while following a liked item."
     },
+    "CuriousCloseAnimation": {
+      "Value": "",
+      "Description": "Optional animation to play instead of CuriousAnimation once the NPC has stopped next to the liked item's holder."
+    },
     "IgnoreOverrideTime": {
       "Value": 20,
       "Description": "The duration of the ignore attitude override for the target."
@@ -1429,6 +1433,41 @@
                     {
                       "Type": "State",
                       "State": "Idle"
+                    }
+                  ]
+                },
+                {
+                  "Enabled": { "Compute": "!isEmptyStringArray(AttractiveItemSet) && !isEmpty(CuriousCloseAnimation)" },
+                  "$Comment": "Once stopped next to the liked item's holder, switch to the close animation",
+                  "Sensor": {
+                    "Type": "Target",
+                    "Range": 3.25,
+                    "Filters": [
+                      {
+                        "Type": "ItemInHand",
+                        "Items": { "Compute": "AttractiveItemSet" }
+                      },
+                      {
+                        "Type": "Not",
+                        "Filter": {
+                          "Type": "Attitude",
+                          "Attitudes": [ "Hostile", "Ignore" ]
+                        }
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 3.5,
+                    "StopDistance": 3,
+                    "RelativeSpeed": 0.4,
+                    "RelaxedMoveConstraints": false
+                  },
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status",
+                      "Animation": { "Compute": "CuriousCloseAnimation" }
                     }
                   ]
                 },
