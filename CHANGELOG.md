@@ -1,5 +1,23 @@
 # Changelog
 
+## 4.0.0 - Husbandry Workbench, Raccoons, and the Eggzooka - 2026-10-05
+
+Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=5.0.0 <6.0`. Update both mods together.
+
+- Added the Animal Husbandry Workbench. Craft it at a basic Workbench with 6 wood trunks, 2 Light Leather, and 20 Plant Fibre.
+- Moved every Animal Husbandry recipe from the Farming bench to the Animal Husbandry Workbench and removed their tier requirements. This covers both command flutes, the Soul Lantern, saddles, the Butcher's Knife, the Scarecrow, and the Flightmaster's Talisman.
+- Tamework's herbivore feed, carnivore feed, and Feed Trough are now crafted at the Animal Husbandry Workbench too.
+- Added the Raccoon. Raccoons spawn alone or in pairs in Zone 1 forests from evening to morning, sniff their way toward a player holding an egg, and beg once they get close.
+- Raccoons can be tamed with eggs and support the full companion suite: needs, happiness, breeding, leveling, traits, talents, flute commands, Soul Lantern capture, and a portrait icon.
+- Added the Eggzooka, an egg launcher dropped by Lil Cluck. Load it with eggs and fire. Eggs splat on walls, and a hit coats the target in yolk and drips yolk down a player's screen for five seconds.
+- Lil Cluck now also drops 6-10 eggs.
+- Added eating animations for about 30 animals that had none, including wolves, foxes, hyenas, sabertooth tigers, yetis, crocodiles, raptors, snakes, spiders, bats, ducks, and Frost Dragons.
+- Added lie-down, sleep, and wake animations for Magma Slugs, and filled in missing lie-down and wake animations for Cactees and Frost Dragons.
+- Wild Frost Dragons gained Icy Wind, a sustained gale they blow while hovering that pushes targets away.
+- Frost Dragon ground breath now has a wind-up tell, commits to its starting aim, and leaves a line of lingering ice spikes that knock targets up.
+- You can now pet a tamed Frost Dragon.
+- Removed the cat animation patch that replaced the Alec's Cats model.
+
 ## 3.3.1 - Frost Dragon Boost Animations - 2026-10-03
 
 Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=4.3.0 <5.0`.
