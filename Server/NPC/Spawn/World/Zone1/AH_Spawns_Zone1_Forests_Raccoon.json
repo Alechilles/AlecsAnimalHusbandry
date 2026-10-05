@@ -1,0 +1,19 @@
+{
+  "Environments": [
+    "Env_Zone1_Forests",
+    "Env_Zone1_Autumn",
+    "Env_Zone1_Azure"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "AH_Raccoon",
+      "Flock": "One_Or_Two"
+    }
+  ],
+  "DayTimeRange": [
+    18,
+    6
+  ]
+}
