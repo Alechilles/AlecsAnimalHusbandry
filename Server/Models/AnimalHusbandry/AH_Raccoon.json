@@ -52,10 +52,136 @@
         }
       ]
     },
+    "WalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk_Backward.blockyanim"
+        }
+      ]
+    },
     "Run": {
       "Animations": [
         {
           "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Run.blockyanim"
+        }
+      ]
+    },
+    "Crouch": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Crouch.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "CrouchWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Crouch_Walk.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "CrouchWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Crouch_Walk_Backward.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "Jump": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Jump.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "JumpWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Jump.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "JumpRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Jump_Far.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "Fall": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Fall.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "Alerted": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Alerted.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Hurt": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Damage/Hurt.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false
+        }
+      ]
+    },
+    "Death": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Damage/Death.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Laydown": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Laydown.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Sleep": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Sleep.blockyanim"
+        }
+      ]
+    },
+    "Wake": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Wake.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Spawn": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Spawn.blockyanim",
+          "BlendingDuration": 0,
+          "Looping": false
         }
       ]
     },
@@ -75,11 +201,26 @@
         }
       ]
     },
+    "FluidWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Walk_Backward.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
     "FluidRun": {
       "Animations": [
         {
           "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Run.blockyanim",
           "Speed": 0.6
+        }
+      ]
+    },
+    "Eat": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Eat.blockyanim"
         }
       ]
     },
@@ -90,6 +231,25 @@
           "BlendingDuration": 0.3
         }
       ]
+    },
+    "Curious": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Beg.blockyanim",
+          "BlendingDuration": 0.3
+        }
+      ]
+    },
+    "IdlePassive": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Flavor/Sniff.blockyanim"
+        }
+      ],
+      "NextAnimationDelay": {
+        "Min": 4,
+        "Max": 12
+      }
     }
   }
 }
