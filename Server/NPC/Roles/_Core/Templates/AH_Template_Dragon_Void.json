@@ -2401,7 +2401,7 @@
                           },
                           "ActionsBlocking": true,
                           "Actions": [
-                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "SpawnParticles", "PositionSource": "Sensor", "ParticleSystem": "AH_Dragon_Void_Singularity_Marker"}, {"Type": "AdjustPosition", "Offset": [0, 0.5, 0], "Actions": [{"Type": "SpawnInteraction", "PositionSource": "Sensor", "Interaction": "Root_NPC_AH_Dragon_Void_Singularity", "OrientationSource": "Absolute", "Pitch": -90, "Delay": [1.5, 1.5], "Ttl": 5}]}]},
+                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "Spawn", "Kind": "AH_Dragon_Void_Singularity", "PositionSource": "Sensor", "CountRange": [1, 1], "DistanceRange": [0.01, 0.01], "DelayRange": [0, 0]}]},
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley2" },
@@ -2440,7 +2440,7 @@
                           },
                           "ActionsBlocking": true,
                           "Actions": [
-                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "SpawnParticles", "PositionSource": "Sensor", "ParticleSystem": "AH_Dragon_Void_Singularity_Marker"}, {"Type": "AdjustPosition", "Offset": [0, 0.5, 0], "Actions": [{"Type": "SpawnInteraction", "PositionSource": "Sensor", "Interaction": "Root_NPC_AH_Dragon_Void_Singularity", "OrientationSource": "Absolute", "Pitch": -90, "Delay": [1.5, 1.5], "Ttl": 5}]}]},
+                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "Spawn", "Kind": "AH_Dragon_Void_Singularity", "PositionSource": "Sensor", "CountRange": [1, 1], "DistanceRange": [0.01, 0.01], "DelayRange": [0, 0]}]},
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley3" },
@@ -2479,7 +2479,7 @@
                           },
                           "ActionsBlocking": true,
                           "Actions": [
-                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "SpawnParticles", "PositionSource": "Sensor", "ParticleSystem": "AH_Dragon_Void_Singularity_Marker"}, {"Type": "AdjustPosition", "Offset": [0, 0.5, 0], "Actions": [{"Type": "SpawnInteraction", "PositionSource": "Sensor", "Interaction": "Root_NPC_AH_Dragon_Void_Singularity", "OrientationSource": "Absolute", "Pitch": -90, "Delay": [1.5, 1.5], "Ttl": 5}]}]},
+                            {"$Comment": "AH singularity telegraph", "Type": "ProjectToGround", "Actions": [{"Type": "Spawn", "Kind": "AH_Dragon_Void_Singularity", "PositionSource": "Sensor", "CountRange": [1, 1], "DistanceRange": [0.01, 0.01], "DelayRange": [0, 0]}]},
                             {
                               "Type": "Attack",
                               "Attack": { "Compute": "AirVoidBoltVolley4" },

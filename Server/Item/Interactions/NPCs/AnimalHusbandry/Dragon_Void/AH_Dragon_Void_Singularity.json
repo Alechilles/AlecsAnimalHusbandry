@@ -19,9 +19,37 @@
       }
     },
     {
-      "Type": "Projectile",
-      "Config": "AH_Dragon_Void_Singularity",
-      "RunTime": 0.2
+      "Type": "SpawnTriggerVolume",
+      "EffectAsset": "AH_Dragon_Void_Singularity",
+      "Shape": {
+        "Type": "Sphere",
+        "Center": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "Radius": 10.0
+      },
+      "LifetimeS": 4.5
+    },
+    {
+      "Type": "Simple",
+      "RunTime": 4.5,
+      "Effects": {
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "SystemId": "AH_Dragon_Void_Singularity",
+            "DetachedFromModel": false,
+            "PositionOffset": {
+              "X": 0,
+              "Y": 2.6,
+              "Z": 0
+            },
+            "Scale": 2.2
+          }
+        ]
+      }
     }
   ]
 }
