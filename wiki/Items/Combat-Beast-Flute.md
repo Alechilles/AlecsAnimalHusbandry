@@ -30,7 +30,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - 10x Fire Essence
 
 ## Bench Requirement
-- Animal Husbandry Workbench (Tier 6)
+- Animal Husbandry Workbench
 
 ## Wisteria Requirement
 - To obtain Wild Wisteria logs, first unlock Farming Bench Tier 6.

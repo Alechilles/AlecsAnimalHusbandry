@@ -32,7 +32,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - 1x Concentrated Life Essence
 
 ## Bench Requirement
-- Animal Husbandry Workbench (Tier 2)
+- Animal Husbandry Workbench
 
 ## Craft Time
 - 4 seconds

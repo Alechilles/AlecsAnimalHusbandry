@@ -15,7 +15,7 @@ Unlike a simple spawn item, it stores the animal's saved data so the companion i
 ![Soul Lantern](https://github.com/user-attachments/assets/7ed512b2-ecf1-450d-a9e7-43217630705a)
 
 ## Crafting
-- Crafting station: **Animal Husbandry Workbench (Tier 2)**
+- Crafting station: **Animal Husbandry Workbench**
 - Recipe:
   - 6x **Any Wood**
   - 2x **Void Essence**
