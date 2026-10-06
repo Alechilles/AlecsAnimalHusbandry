@@ -1,0 +1,33 @@
+{
+  "Id": "AH_Tamework_Tranquilizer_Rifle_Bench",
+  "$Comment": "Moves Tamework's Tranquilizer Dart Rifle recipe from the weapon bench to the Animal Husbandry Workbench. The Draconic Altar entry is kept.",
+  "Target": "Server/Item/Items/Weapon/Shortbow/Weapon_Shortbow_Tranquilizer.json",
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 100,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "move-to-husbandry-bench",
+      "Op": "Replace",
+      "Path": "/Recipe/BenchRequirement",
+      "Value": [
+        {
+          "Type": "Crafting",
+          "Id": "AH_Husbandrybench",
+          "Categories": [
+            "Husbandry"
+          ]
+        },
+        {
+          "Type": "Crafting",
+          "Id": "Draconic_Altar",
+          "Categories": [
+            "Draconic_Altar_Stones"
+          ]
+        }
+      ]
+    }
+  ]
+}
