@@ -2,6 +2,8 @@
   "Type": "Variant",
   "Reference": "AH_Template_Animal_Neutral",
   "Modify": {
+    "ProduceItem": "Food_Egg",
+    "ProduceTimeout": ["PT36H", "PT48H"],
     "Appearance": "Skrill",
     "FlockArray": [
       "Skrill",
