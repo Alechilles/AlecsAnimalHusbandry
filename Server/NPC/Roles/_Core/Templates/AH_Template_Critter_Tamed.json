@@ -2,6 +2,10 @@
   "Type": "Variant",
   "Reference": "AH_Template_Animal_Critter_Tamed",
   "Parameters": {
+    "DeathParticles": {
+      "Value": "Effect_Death",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
     "Appearance": {
       "Value": "Mouse",
       "Description": "Model to be used"
@@ -90,6 +94,7 @@
     }
   },
   "Modify": {
+    "DeathParticles": { "Compute": "DeathParticles" },
     "Appearance": { "Compute": "Appearance" },
     "FlockArray": { "Compute": "FlockArray" },
     "DropList": { "Compute": "DropList" },
