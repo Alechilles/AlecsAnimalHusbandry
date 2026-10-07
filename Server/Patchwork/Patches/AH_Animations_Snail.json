@@ -1,6 +1,6 @@
 {
   "Id": "AH_Animations_Snail",
-  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Snail_Magma model. Child models inherit it.",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Snail_Magma model, and a Curious set that plays the base-game Look_Around clip. Child models (Snail_Frost) inherit it.",
   "Targets": [
     "Server/Models/Beast/Snail_Magma.json"
   ],
@@ -20,6 +20,13 @@
             "Animations": [
               {
                 "Animation": "NPC/AnimalHusbandry/Snail/Animations/Eat.blockyanim"
+              }
+            ]
+          },
+          "Curious": {
+            "Animations": [
+              {
+                "Animation": "NPC/Beast/Snail/Animations/Flavor/Look_Around.blockyanim"
               }
             ]
           }

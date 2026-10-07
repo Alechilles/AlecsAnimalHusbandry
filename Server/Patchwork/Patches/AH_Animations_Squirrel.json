@@ -1,0 +1,30 @@
+{
+  "Id": "AH_Animations_Squirrel",
+  "$Comment": "Adds a Curious animation set that plays the base-game Look_Around clip to the base-game Squirrel model. Child models inherit it.",
+  "Targets": [
+    "Server/Models/Critter/Squirrel.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "Curious": {
+            "Animations": [
+              {
+                "Animation": "NPC/Critter/Squirrel/Animations/Flavor/Look_Around.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
