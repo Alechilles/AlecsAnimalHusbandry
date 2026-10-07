@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Added wild Fire Dragons. They spawn in Zone 4 volcanoes during the day, one dragon per beacon, with a 1-3 minute initial delay and a 15-25 minute respawn cooldown. They have 400 health and drop 4-6 Fire Essence.
+- Added wild Fire Dragons, named Ember Dragon in game. They spawn in Zone 4 volcanoes during the day, one dragon per beacon, with a 1-3 minute initial delay and a 15-25 minute respawn cooldown. They have 400 health and drop 4-6 Fire Essence.
 - Fire Dragons attack with a bite, a wing swing, Fire Breath on the ground and in flight, Fire Bolt volleys, Meteor Volley, and Dive Bomb.
 - Added wild Void Dragons. They spawn in Zone 4 wastes at night under the same beacon rules, have 400 health, and drop 4-6 Void Essence.
 - Void Dragons walk as wyverns and attack with a bite, left and right wing swipes, a tail sweep, a wing gust, Void Breath on the ground and in flight, Void Bolts, and a singularity held at the mouth that drags players in and then bursts. They can also summon Void Spawn.
