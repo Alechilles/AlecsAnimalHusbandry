@@ -125,6 +125,14 @@
     "NameTranslationKey": {
       "Value": "server.npcRoles.Spider_Cave.name",
       "Description": "Translation key for NPC name display"
+    },
+    "IdleWanderWeight": {
+      "Value": 10,
+      "Description": "Declared for base-game variants such as Spider_Cave_Ambush (Update 7) that modify it. The AH predator template does not read it."
+    },
+    "IdleNothingWeight": {
+      "Value": 0,
+      "Description": "Declared for base-game variants such as Spider_Cave_Ambush (Update 7) that modify it. The AH predator template does not read it."
     }
   }
 }
