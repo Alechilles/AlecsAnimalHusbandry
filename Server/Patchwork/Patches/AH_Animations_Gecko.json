@@ -1,6 +1,6 @@
 {
   "Id": "AH_Animations_Gecko",
-  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Gecko model. Child models inherit it.",
+  "$Comment": "Adds Animal Husbandry's Eat, Curious animation sets to the base-game Gecko model. Child models inherit it.",
   "Targets": [
     "Server/Models/Critter/Gecko.json"
   ],
@@ -20,6 +20,13 @@
             "Animations": [
               {
                 "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Eat.blockyanim"
+              }
+            ]
+          },
+          "Curious": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Curious.blockyanim"
               }
             ]
           }

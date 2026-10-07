@@ -1,6 +1,6 @@
 {
   "Id": "AH_Animations_Meerkat",
-  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Meerkat model. Child models inherit it.",
+  "$Comment": "Adds Animal Husbandry's Eat animation set to the base-game Meerkat model, and a Curious set that plays the base-game Idle_Stand clip. Child models inherit it.",
   "Targets": [
     "Server/Models/Critter/Meerkat.json"
   ],
@@ -20,6 +20,13 @@
             "Animations": [
               {
                 "Animation": "NPC/AnimalHusbandry/Meerkat/Animations/Eat.blockyanim"
+              }
+            ]
+          },
+          "Curious": {
+            "Animations": [
+              {
+                "Animation": "NPC/Critter/Meerkat/Animations/Flavor/Idle_Stand.blockyanim"
               }
             ]
           }

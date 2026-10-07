@@ -1,6 +1,6 @@
 {
   "Id": "AH_Animations_Cactee",
-  "$Comment": "Adds Animal Husbandry's Eat, Laydown animation sets to the base-game Cactee model. Child models inherit it.",
+  "$Comment": "Adds Animal Husbandry's Eat, Laydown, Curious animation sets to the base-game Cactee model. Child models inherit it.",
   "Targets": [
     "Server/Models/Beast/Cactee.json"
   ],
@@ -28,6 +28,13 @@
               {
                 "Animation": "NPC/AnimalHusbandry/Cactee/Animations/Laydown.blockyanim",
                 "Looping": false
+              }
+            ]
+          },
+          "Curious": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Cactee/Animations/Curious.blockyanim"
               }
             ]
           }
