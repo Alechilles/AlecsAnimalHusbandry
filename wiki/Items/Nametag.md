@@ -12,19 +12,19 @@ Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/ale
 
 ![Nametag](https://github.com/user-attachments/assets/70ad5a86-bd2f-4655-805e-85dc9fbef1a5)
 
-The **Nametag** is provided by **Alec's Nametags!** and is included in the Animal Husbandry dependency set.
+The **Nametag** is provided by **Alec's Nametags!**, an optional companion mod for Animal Husbandry.
 Use it to name your tamed livestock and Beasts so your stable and command panel are easier to manage.
 
 ## Mod Requirement
 - Requires **Alec's Nametags!** to be installed alongside Animal Husbandry and Alec's Tamework.
 
 ## Crafting
-- Crafting station: **Animal Husbandry Workbench**
+- Crafting station: **Animal Husbandry Workbench** (Alec's Nametags 1.3.0 or later with Animal Husbandry installed). Without Animal Husbandry, the Nametag is crafted at the Farmer's Workbench.
 - Recipe:
   - 2x **Light Leather**
-  - 1x **Gold Bar**
+  - 1x **Gold Ingot**
 - Craft time: **1 second**
-- Max stack: **1**
+- Max stack: **100**
 
 ## How To Use
 1. Hold a **Nametag**.

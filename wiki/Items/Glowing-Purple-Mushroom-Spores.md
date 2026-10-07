@@ -43,7 +43,7 @@ Parent: [Items Index](/mod/alecs-animal-husbandry/items-index) | [Home](/mod/ale
 
 ## Why They Matter
 - Each [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion) needs **2x Glowing Purple Mushroom**.
-- That potion then feeds into both [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows) and the [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
+- That potion then feeds into both [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows) and the [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow).
 
 ## Related Pages
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)

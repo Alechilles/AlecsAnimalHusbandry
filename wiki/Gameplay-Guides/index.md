@@ -19,6 +19,7 @@ This section contains practical play guides for day-to-day companion management.
 - [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
 - [Traits and Stats Guide](/mod/alecs-animal-husbandry/traits-and-stats-guide)
 - [Troubleshooting](/mod/alecs-animal-husbandry/troubleshooting)
+- [Lil Cluck](/mod/alecs-animal-husbandry/lil-cluck)
 
 ## Suggested Reading Path
 1. [Systems Overview](/mod/alecs-animal-husbandry/systems-overview)

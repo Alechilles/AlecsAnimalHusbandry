@@ -17,8 +17,8 @@ This page is a practical quick-reference for Beast taming.
 
 ## Required Items
 * [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
-* [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
-* [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+* [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+* [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 * [Preferred food](#beast-taming-and-feeding-table) (see table below)
 * [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute) (Recommended)
 
@@ -28,9 +28,9 @@ This page is a practical quick-reference for Beast taming.
 1. Brew [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion) at Alchemy bench.
     * Note: [Glowing Purple Mushrooms](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) can be cultivated via Farming Workbench.
 
-2. Craft [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow) and [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows) at Weapons bench.
+2. Craft the [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow) and [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows) at an [Animal Husbandry Workbench](/mod/alecs-animal-husbandry/animal-husbandry-workbench). Animal Husbandry 4.0.0 uses the Weapon Bench instead.
 3. Weaken beast by attacking until its health is 20% or less. 
-4. Shoot beast with tranquilizer arrows until it falls asleep. 
+4. Shoot beast with tranquilizer darts until it falls asleep. 
     - It doesn't matter if you build the tranquilizer stacks or get it below 20% first.
 
 5. Once asleep, feed its [preferred food](#beast-taming-and-feeding-table) to complete the taming process.
@@ -59,11 +59,15 @@ You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold
 ## Beast Taming and Feeding Table
 Once tamed, animals can be fed their preferred food listed below, or [Carnivore Kibble](/mod/alecs-animal-husbandry/feed-items#carnivore-kibble) via [Feed Trough](/mod/alecs-animal-husbandry/feed-trough). 
 
+The Frost Dragon uses the same tranquilizer flow. It spawns in Zone 3 mountains.
+
 | Beast | Preferred | Food | Threshold (seconds) | Shots Needed |
 |---|---:|:---|---:|---:|
 | Larva Silk | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/602b7010-3923-487f-8d30-9aa58ab94a74.png" alt="Egg" /> | Egg | 20 | 1 |
 | Rat | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/bc41d0a4-9fbd-4ecb-b764-59d753829645.png" alt="Raw Pork" /> | Raw Pork | 20 | 1 |
 | Fox | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/8ff8c654-3b8c-4cf5-bd9f-41fd8172fe4f.png" alt="Raw Chicken" /> | Raw Chicken | 50 | 2 |
+| Fox Arctic | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/8ff8c654-3b8c-4cf5-bd9f-41fd8172fe4f.png" alt="Raw Chicken" /> | Raw Chicken | 50 | 2 |
+| Frost Dragon | | Ice Essence | 50 | 2 |
 | Molerat | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/602b7010-3923-487f-8d30-9aa58ab94a74.png" alt="Egg" /> | Egg | 50 | 2 |
 | Slug Magma | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/1e97c2d0-7bcf-4409-9857-6e418d6b600d.png" alt="Raw Wildmeat" /> | Raw Wildmeat | 50 | 2 |
 | Snake Cobra | <img src="https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/602b7010-3923-487f-8d30-9aa58ab94a74.png" alt="Egg" /> | Egg | 50 | 2 |

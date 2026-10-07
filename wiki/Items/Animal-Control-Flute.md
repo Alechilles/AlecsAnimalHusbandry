@@ -28,7 +28,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ## Recipe
 - 12x any wood item
-- 8x Fibre
+- 8x Plant Fiber
 - 1x Concentrated Life Essence
 
 ## Bench Requirement

@@ -12,21 +12,27 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 
 ![Crafting a Tranquilizer Shortbow](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/b071b2e9-f243-4058-8000-0fe92c17460b.png)
 
+Tamework 5.1.0 renamed this item to **Tranquilizer Dart Rifle**. Tamework 5.0.x still calls it Tranquilizer Shortbow. The item id `Weapon_Shortbow_Tranquilizer` is unchanged.
+
 ## What It Is Used For
-- Applies tranquilizer effects with [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- Applies tranquilizer effects with [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows)
 - Used to set up Beast taming opportunities
 - Benefits from a renewable tranquilizer supply once you start growing [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
 ## Recipe
-- 1x Cobalt Shortbow
+- 6x any wood trunk
+- 4x Iron Ingot
 - 4x Cobalt Bars
 - 2x Heavy Leather
 - 2x Shadoweave Fabric Scrap
 - 2x Tranquilizer Potions
 
 ## Bench Requirement
-- Weapon Bench (Bow, Tier 2)
-- Armory (Bow Diagrams)
+- [Animal Husbandry Workbench](/mod/alecs-animal-husbandry/animal-husbandry-workbench)
+
+## Earlier Versions
+- Animal Husbandry 4.0.0 lists the Weapon Bench (Bow, Tier 2) and Armory (Bow Diagrams) for this item.
+- Tamework 5.1.1 and earlier use 1x Cobalt Shortbow, 4x Cobalt Bars, 2x Heavy Leather, 2x Shadoweave Fabric Scrap, and 2x Tranquilizer Potions.
 
 ## Craft Time
 - 4 seconds
@@ -38,7 +44,7 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 - [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 
-> [Screenshot Placeholder: Tranquilizer Shortbow recipe and crafted item]
+> [Screenshot Placeholder: Tranquilizer Dart Rifle recipe and crafted item]
 
 
 

@@ -46,7 +46,7 @@ See food preferences here:
 - [Beast Taming Reference](/mod/alecs-animal-husbandry/beast-taming-reference)
 
 ## Happiness and Breeding
-- Breeding checks include a happiness gate (commonly **70** in current configs).
+- Breeding checks include a happiness gate (**80** in the current configs).
 - Pair matching will fail if happiness is too low.
 - Stable care loops (food, water, safe enclosure, low stress) keep breeding cadence predictable.
 

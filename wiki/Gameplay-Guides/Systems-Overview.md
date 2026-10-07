@@ -18,7 +18,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 5. Use command tools to manage movement, safety, and utility.
 
 ### Beast variation:
-1. Craft tranquilizer potion, arrows, and bow first.
+1. Craft the Tranquilizer Potion, Tranquilizer Darts, and Tranquilizer Dart Rifle first.
 2. Apply tranquilizer pressure during combat.
 3. Trigger tranquilized sleep in the allowed health window.
 4. Complete taming flow.
@@ -29,7 +29,7 @@ Parent: [Gameplay Guides Index](/mod/alecs-animal-husbandry/gameplay-guides-inde
 - Owner restrictions and command permissions are respected.
 
 ## Beast Tranquilizer Flow
-- Core items come from Alec's Tamework: Tranquilizer Potion, Tranquilizer Arrows, and Tranquilizer Shortbow.
+- Core items come from Alec's Tamework: Tranquilizer Potion, Tranquilizer Darts, and Tranquilizer Dart Rifle.
 - Glowing Purple Mushrooms for the potion can be made renewable through [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores).
 - Animal Husbandry Beast roles use tranquilizer sleep parameters to determine when sleep can trigger.
 - This is why Beast taming feels more like a hunt-and-subdue loop than livestock taming.
