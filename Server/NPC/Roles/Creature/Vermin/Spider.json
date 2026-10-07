@@ -2,6 +2,14 @@
   "Type": "Variant",
   "Reference": "AH_Template_Predator",
   "Parameters": {
+    "IdleWanderWeight": {
+      "Value": 10,
+      "Description": "Above 0 enables the wander idle behaviors."
+    },
+    "IdleNothingWeight": {
+      "Value": 0,
+      "Description": "Weight of standing still while idle. 0 disables it."
+    },
     "Appearance": {
       "Value": "Spider",
       "Description": "Model to be used."
@@ -53,6 +61,12 @@
     }
   },
   "Modify": {
+    "IdleWanderWeight": {
+      "Compute": "IdleWanderWeight"
+    },
+    "IdleNothingWeight": {
+      "Compute": "IdleNothingWeight"
+    },
     "Appearance": {
       "Compute": "Appearance"
     },

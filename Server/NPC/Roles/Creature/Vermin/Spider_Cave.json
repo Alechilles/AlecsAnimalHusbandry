@@ -2,6 +2,12 @@
   "Type": "Variant",
   "Reference": "Spider",
   "Modify": {
+    "IdleWanderWeight": {
+      "Compute": "IdleWanderWeight"
+    },
+    "IdleNothingWeight": {
+      "Compute": "IdleNothingWeight"
+    },
     "Appearance": "Spider_Cave",
     "DropList": "Drop_Spider_Cave",
     "MaxHealth": 74,
@@ -128,11 +134,11 @@
     },
     "IdleWanderWeight": {
       "Value": 10,
-      "Description": "Declared for base-game variants such as Spider_Cave_Ambush (Update 7) that modify it. The AH predator template does not read it."
+      "Description": "Above 0 enables the wander idle behaviors."
     },
     "IdleNothingWeight": {
       "Value": 0,
-      "Description": "Declared for base-game variants such as Spider_Cave_Ambush (Update 7) that modify it. The AH predator template does not read it."
+      "Description": "Weight of standing still while idle. 0 disables it."
     }
   }
 }

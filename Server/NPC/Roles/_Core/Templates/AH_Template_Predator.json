@@ -9,6 +9,14 @@
       "Value": 8,
       "Description": "General wander radius."
     },
+    "IdleWanderWeight": {
+      "Value": 10,
+      "Description": "Above 0 enables the wander and prowl idle behaviors. Their relative weights are fixed by this template. Matches the base-game spider parameter so base variants such as Spider_Cave_Ambush keep working."
+    },
+    "IdleNothingWeight": {
+      "Value": 0,
+      "Description": "Weight of standing still while idle. 0 disables it."
+    },
     "ViewRange": {
       "Value": 24,
       "Description": "The range from which the target will be seen. If zero, sight will be disabled."
@@ -1076,7 +1084,22 @@
               },
               "Instructions": [
                 {
+                  "$Comment": "Stand still.",
+                  "Enabled": {
+                    "Compute": "IdleNothingWeight > 0"
+                  },
+                  "Weight": {
+                    "Compute": "IdleNothingWeight"
+                  },
+                  "BodyMotion": {
+                    "Type": "Nothing"
+                  }
+                },
+                {
                   "$Comment": "Regular wander.",
+                  "Enabled": {
+                    "Compute": "IdleWanderWeight > 0"
+                  },
                   "Weight": 20,
                   "Instructions": [
                     {
@@ -1222,7 +1245,22 @@
               ],
               "Instructions": [
                 {
+                  "$Comment": "Stand still.",
+                  "Enabled": {
+                    "Compute": "IdleNothingWeight > 0"
+                  },
+                  "Weight": {
+                    "Compute": "IdleNothingWeight"
+                  },
+                  "BodyMotion": {
+                    "Type": "Nothing"
+                  }
+                },
+                {
                   "$Comment": "Regular wander.",
+                  "Enabled": {
+                    "Compute": "IdleWanderWeight > 0"
+                  },
                   "Weight": 10,
                   "Instructions": [
                     {
@@ -1283,6 +1321,9 @@
                 },
                 {
                   "$Comment": "Prowling behavior (crouching).",
+                  "Enabled": {
+                    "Compute": "IdleWanderWeight > 0"
+                  },
                   "Weight": 10,
                   "Instructions": [
                     {
