@@ -255,6 +255,30 @@
       ],
       "Description": "How long to back off for after performing an attack."
     },
+    "CombatTurns": {
+      "Value": false,
+      "Description": "Whether this NPC's flock will take turns attacking a target."
+    },
+    "CombatTurnAttackWeight": {
+      "Value": 30,
+      "Description": "The likelihood an NPC will choose to attack when a new turn is triggered, in percentage."
+    },
+    "CombatTurnDuration": {
+      "Value": [ 4, 8 ],
+      "Description": "The timeout between attack turns."
+    },
+    "CombatTurnDistanceRange": {
+      "Value": [ 5, 8 ],
+      "Description": "The distance range inside which flock NPCs will wait their turn."
+    },
+    "CombatTurnStrafingDurationRange": {
+      "Value": [ 3, 5 ],
+      "Description": "The strafing duration range of flock NPCs waiting their turn."
+    },
+    "CombatTurnStrafingFrequencyRange": {
+      "Value": [ 3, 6 ],
+      "Description": "The strafing frequency range of flock NPCs waiting their turn."
+    },
     "TargetSwitchTimer": {
       "Value": [
         1,
@@ -2099,6 +2123,19 @@
                 "TargetRange": {
                   "Compute": "TargetRange"
                 }
+              }
+            },
+            {
+              "Reference": "Component_Instruction_Combat_Flock_Take_Turns",
+              "Modify": {
+                "Enabled": { "Compute": "CombatTurns" },
+                "AlertedRange": { "Compute": "AlertedRange" },
+                "CombatTurnAttackWeight": { "Compute": "CombatTurnAttackWeight" },
+                "CombatTurnDuration": { "Compute": "CombatTurnDuration" },
+                "CombatTurnDistanceRange": { "Compute": "CombatTurnDistanceRange" },
+                "CombatTurnStrafingDurationRange": { "Compute": "CombatTurnStrafingDurationRange" },
+                "CombatTurnStrafingFrequencyRange": { "Compute": "CombatTurnStrafingFrequencyRange" },
+                "CombatMovingRelativeSpeed": { "Compute": "CombatMovingRelativeSpeed" }
               }
             },
             {
