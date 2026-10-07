@@ -1,10 +1,23 @@
 # Changelog
 
+## Unreleased
+
+- Added wild Fire Dragons. They spawn in Zone 4 volcanoes during the day, one dragon per beacon, with a 1-3 minute initial delay and a 15-25 minute respawn cooldown. They have 400 health and drop 4-6 Fire Essence.
+- Fire Dragons attack with a bite, a wing swing, Fire Breath on the ground and in flight, Fire Bolt volleys, Meteor Volley, and Dive Bomb.
+- Added wild Void Dragons. They spawn in Zone 4 wastes at night under the same beacon rules, have 400 health, and drop 4-6 Void Essence.
+- Void Dragons walk as wyverns and attack with a bite, left and right wing swipes, a tail sweep, a wing gust, Void Breath on the ground and in flight, Void Bolts, and a singularity held at the mouth that drags players in and then bursts. They can also summon Void Spawn.
+- Fire and Void Dragons can be tamed like Frost Dragons: weaken one to 20% health, tranquilize it, then feed it Fire Essence or Void Essence. Tamed dragons have 200 health and accept Combat Beast Flute commands and Soul Lantern capture.
+- Tamed Fire and Void Dragons can be ridden with the Flightmaster's Talisman. Each has two flight abilities: Fire Bolt and Fire Breath, or Void Bolt and Void Breath, with 10-second and 15-second cooldowns.
+- Wild dragons, including Frost Dragons, now cruise and soar while idle in flight and keep a level height against flying targets. In flight they wander up to 80 blocks from their home point, or 100 blocks for Void Dragons.
+- Raised Eggzooka egg damage from 4 to 15.
+- Tamework's Tranquilizer Dart Rifle and Tranquilizer Darts are now crafted at the Animal Husbandry Workbench instead of the Weapon Bench.
+- Raccoons now keep walking while they sniff their way toward a held egg.
+
 ## 4.0.0 - Husbandry Workbench, Raccoons, and the Eggzooka - 2026-10-05
 
 Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=5.0.0 <6.0`. Update both mods together.
 
-- Added the Animal Husbandry Workbench. Craft it at a basic Workbench with 6 wood trunks, 2 Light Leather, and 20 Plant Fibre.
+- Added the Animal Husbandry Workbench. Craft it at a basic Workbench with 6 wood trunks, 2 Light Leather, and 20 Plant Fiber.
 - Moved every Animal Husbandry recipe from the Farming bench to the Animal Husbandry Workbench and removed their tier requirements. This covers both command flutes, the Soul Lantern, saddles, the Butcher's Knife, the Scarecrow, and the Flightmaster's Talisman.
 - Tamework's herbivore feed, carnivore feed, and Feed Trough are now crafted at the Animal Husbandry Workbench too.
 - Added the Raccoon. Raccoons spawn alone or in pairs in Zone 1 forests from evening to morning, sniff their way toward a player holding an egg, and beg once they get close.
