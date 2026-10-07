@@ -70,17 +70,17 @@ for integration details.
 
 Wild and tamed hawks and vultures can enter daytime Kettle episodes during idle
 flight. Kettle uses a base pace of about 3.2 blocks/second on level flight,
-with each bird flying at 70–115% of that pace (capped at maximum flight speed).
+with each bird flying at 70-115% of that pace (capped at maximum flight speed).
 Hawks and vultures glide for 10.5 seconds, then flap for 1.5
 seconds, with flock members offset so they do not all flap together.
 The leader circles around its home point. Nearby flock members begin joining
-after individual 2–20 second delays,
-using individual radii of 65–150% of the configured radius and distinct height
+after individual 2-20 second delays,
+using individual radii of 65-150% of the configured radius and distinct height
 bands across the configured altitude range. Members alternate clockwise and
 counterclockwise orbit directions, keeping their direction while membership is stable.
 Height differences persist for the
 whole episode instead of every bird eventually reaching the same ceiling.
-During the final 30 seconds, followers depart after individual 2–25 second
+During the final 30 seconds, followers depart after individual 2-25 second
 delays and resume roaming; they cannot rejoin the same ending episode. The
 leader continues circling until the episode ends. Kettle beacon checks are
 non-consuming so landing, join-delay, and orbit checks can read the same signal. Landing,
@@ -91,8 +91,8 @@ The aerial templates expose `KettleEnabled` (default `false`),
 (default `18` blocks), `KettleAltitudeRange` (default `[15, 28]` above the leader's
 home point), `KettleCooldownRange` (default `[120, 240]` seconds of cooldown after an episode), and `KettleDurationRange` (default `[180, 420]` seconds).
 
-The initial wait is 60–120 seconds. Later episodes last 3–7 minutes, with
-a 2–4 minute cooldown afterward. The cooldown is paused during circling and
+The initial wait is 60-120 seconds. Later episodes last 3-7 minutes, with
+a 2-4 minute cooldown afterward. The cooldown is paused during circling and
 resumes when eligible idle flight next checks that the episode has ended. Wild birds defer their normal timed landing while
 a Kettle episode is running. Threats, recovery, nighttime, and companion
 commands can still interrupt an episode.
@@ -107,21 +107,21 @@ Existing birds are not resized, and tamed group limits are unchanged.
 
 | Bird | Initial group range |
 | --- | --- |
-| Sparrow | 4–12 |
-| Green finch, pigeon | 3–10 |
-| Crow | 2–7 |
-| Raven | 1–4 |
-| Bluebird, parrot | 2–6 |
-| Duck | 2–8 |
-| Flamingo | 4–12 |
-| Penguin | 5–14 |
-| Hawk | 1–4, usually 1–2 |
-| Vulture | 2–7 |
-| Brown owl, snowy owl | 1–2, usually 1 |
-| Woodpecker | 1–3, usually 1 |
-| Chicken | 3–8 |
-| Desert chicken | 3–7 |
-| Turkey | 3–9 |
+| Sparrow | 4-12 |
+| Green finch, pigeon | 3-10 |
+| Crow | 2-7 |
+| Raven | 1-4 |
+| Bluebird, parrot | 2-6 |
+| Duck | 2-8 |
+| Flamingo | 4-12 |
+| Penguin | 5-14 |
+| Hawk | 1-4, usually 1-2 |
+| Vulture | 2-7 |
+| Brown owl, snowy owl | 1-2, usually 1 |
+| Woodpecker | 1-3, usually 1 |
+| Chicken | 3-8 |
+| Desert chicken | 3-7 |
+| Turkey | 3-9 |
 
 These are game-scale choices informed by bird social behavior, not literal
 wild flock measurements. Social birds receive larger ranges, while solitary
@@ -130,7 +130,7 @@ and pair-oriented birds receive smaller ranges. See Cornell's
 [raven life history](https://www.allaboutbirds.org/guide/Common_Raven/lifehistory),
 and San Diego Zoo's [flamingo guide](https://animals.sandiegozoo.org/animals/flamingo).
 
-Archaeopteryx retains its parent-and-young spawning, Tetrabird retains 2–4,
+Archaeopteryx retains its parent-and-young spawning, Tetrabird retains 2-4,
 and Pterodactyl and Skrill retain singleton spawning. Bats are unchanged.
 
 `MinSize` sets the first size and successive `SizeWeights` entries weight each
@@ -148,10 +148,12 @@ These are the current (non-deprecated) `AH*` config assets in this repo.
 | Family | Active File(s) |
 |---|---|
 | Global | `Server/Tamework/Global/AHGlobal.json` |
-| Companion | `Server/Tamework/Companion/AHCompMain.json`<br>`Server/Tamework/Companion/AHCompNeutral.json` |
-| Interactions | `Server/Tamework/Interactions/AHIntLivestock.json`<br>`Server/Tamework/Interactions/AHIntNeutral.json`<br>`Server/Tamework/Interactions/AHIntBeast.json`<br>`Server/Tamework/Interactions/AhIntCritter.json` |
+| Companion | `Server/Tamework/Companion/AHCompMain.json`<br>`Server/Tamework/Companion/AHCompNeutral.json`<br>`Server/Tamework/Companion/AHCompAerial.json`<br>`Server/Tamework/Companion/AHCompAerialLarge.json`<br>`Server/Tamework/Companion/AHCompCritterShoulderRide.json`<br>`Server/Tamework/Companion/AHCompDragonFrost.json` |
+| Interactions | `Server/Tamework/Interactions/AHIntLivestock.json`<br>`Server/Tamework/Interactions/AHIntNeutral.json`<br>`Server/Tamework/Interactions/AHIntBeast.json`<br>`Server/Tamework/Interactions/AhIntCritter.json`<br>`Server/Tamework/Interactions/AHIntFrostDragon.json` |
 | Command Items | `Server/Tamework/Items/Commands/AHCommLivestock.json`<br>`Server/Tamework/Items/Commands/AHCommBeast.json` |
-| Needs | `Server/Tamework/Needs/AHNeedsMain.json`<br>`Server/Tamework/Needs/AHNeedsBeast.json` |
+| Capture Items | `Server/Tamework/Items/Spawners/AHSpawnSoulLantern.json` |
+| Food | `Server/Tamework/Food/AHFoodNeutral.json`<br>`Server/Tamework/Food/AHFoodCritter.json`<br>`Server/Tamework/Food/AHFoodBeast.json` |
+| Needs | `Server/Tamework/Needs/AHNeedsMain.json`<br>`Server/Tamework/Needs/AHNeedsOmnivore.json`<br>`Server/Tamework/Needs/AHNeedsCarnivore.json`<br>`Server/Tamework/Needs/AHNeedsBeast.json` |
 | Happiness | `Server/Tamework/Happiness/AHHappMain.json`<br>`Server/Tamework/Happiness/AHHappNeutral.json`<br>`Server/Tamework/Happiness/AHHappBeast.json` |
 | Breeding | `Server/Tamework/Breeding/AHBreedLivestock.json`<br>`Server/Tamework/Breeding/AHBreedNeutral.json`<br>`Server/Tamework/Breeding/AHBreedBeast.json` |
 | Traits | `Server/Tamework/Traits/AHTraitLivestock.json`<br>`Server/Tamework/Traits/AHTraitLivestockGeneral.json`<br>`Server/Tamework/Traits/AHTraitNeutral.json`<br>`Server/Tamework/Traits/AHTraitBeast.json` |

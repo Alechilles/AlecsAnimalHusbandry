@@ -37,18 +37,18 @@ Check:
 - Read the first SEVERE asset validation line in server log.
 - Most common causes are bad internal references, invalid JSON types, or missing dependency mods.
 
-## "I can't craft tranquilizer bow/arrows/potion"
+## "I can't craft the tranquilizer rifle, darts, or potion"
 Check:
 1. Alec's Tamework is installed and enabled.
-2. The active Tamework global config enables the tranquilizer item sets (shortbow, arrows, and potion).
-3. You are using the right benches: Alchemy Bench Tier 2 for potion, Weapon Bench Tier 2 for arrows, and Weapon Bench Tier 2 + Armory for bow.
+2. The active Tamework global config enables the tranquilizer item sets (dart rifle, darts, and potion).
+3. You are using the right benches: Alchemy Bench Tier 2 for the potion, and the Animal Husbandry Workbench for the dart rifle and darts. In Animal Husbandry 4.0.0, the dart rifle and darts use Weapon Bench Tier 2 instead.
 4. Your server/client has been restarted after config edits.
 5. Logs do not show missing-asset validation errors.
 
 Recipe details:
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
-- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
-- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+- [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 
 ## Recovery Workflow
 1. Revert last config edit.

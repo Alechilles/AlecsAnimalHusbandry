@@ -23,20 +23,25 @@ is_index: true
 - [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
 - [Traits and Stats Guide](/mod/alecs-animal-husbandry/traits-and-stats-guide)
 - [Troubleshooting](/mod/alecs-animal-husbandry/troubleshooting)
+- [Lil Cluck](/mod/alecs-animal-husbandry/lil-cluck)
 
 ## 3) Items and Crafting
 - [Items Index](/mod/alecs-animal-husbandry/items-index)
 - [Animal Control Flute](/mod/alecs-animal-husbandry/animal-control-flute)
 - [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores)
 - [Tranquilizer Potion](/mod/alecs-animal-husbandry/tranquilizer-potion)
-- [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
-- [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+- [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 - [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 - [Feed Items](/mod/alecs-animal-husbandry/feed-items)
 - [Feed Trough](/mod/alecs-animal-husbandry/feed-trough)
 - [Soul Lantern](/mod/alecs-animal-husbandry/soul-lantern)
 - [Nametag](/mod/alecs-animal-husbandry/nametag)
+- [Saddles and Blankets](/mod/alecs-animal-husbandry/saddles-and-blankets)
 - [Flightmaster's Talisman](/mod/alecs-animal-husbandry/flightmasters-talisman)
+- [Animal Husbandry Workbench](/mod/alecs-animal-husbandry/animal-husbandry-workbench)
+- [Butcher's Knife](/mod/alecs-animal-husbandry/butchers-knife)
+- [Eggzooka](/mod/alecs-animal-husbandry/eggzooka)
 
 ## 4) Reference Library
 - [Reference Library Index](/mod/alecs-animal-husbandry/reference-library-index)

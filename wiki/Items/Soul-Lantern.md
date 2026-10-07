@@ -29,11 +29,11 @@ Unlike a simple spawn item, it stores the animal's saved data so the companion i
 4. Use the filled lantern to release it back into the world.
 
 ## Default Rules
-- Only works on supported **tamed livestock** and **tamed Beasts**.
+- Works on supported tamed animals: livestock, neutral wildlife, critters, flying companions, and Beasts.
 - You can only capture companions that are already tamed.
 - Ownership rules apply, so this is intended for **your own animals**.
 - The lantern stores **one animal at a time**.
-- Capture and release range is **short**, so stand fairly close when using it.
+- Capture and release range is **5 blocks**, so stand fairly close when using it.
 
 ## Preserved Data
 The **Soul Lantern** preserves the stored animal's metadata instead of turning it into a fresh default copy.

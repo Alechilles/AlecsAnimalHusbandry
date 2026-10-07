@@ -13,8 +13,8 @@ Back to: [Items Index](/mod/alecs-animal-husbandry/items-index)
 ![Crafting a Tranquilizer Potion](https://wiki.hytalemodding.dev/storage/mods/019ce94e-972f-717d-8881-7a3d542de0c3/files/aabb4269-f9da-4735-ac50-2aa7d69e580e.png)
 
 ## Used For
-- Crafting [Tranquilizer Arrows](/mod/alecs-animal-husbandry/tranquilizer-arrows)
-- Crafting [Tranquilizer Shortbow](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
+- Crafting [Tranquilizer Darts](/mod/alecs-animal-husbandry/tranquilizer-arrows)
+- Crafting the [Tranquilizer Dart Rifle](/mod/alecs-animal-husbandry/tranquilizer-shortbow)
 
 ## Renewable Ingredient Path
 - Glowing Purple Mushrooms can now be cultivated by crafting [Glowing Purple Mushroom Spores](/mod/alecs-animal-husbandry/glowing-purple-mushroom-spores) at the Farming Bench.

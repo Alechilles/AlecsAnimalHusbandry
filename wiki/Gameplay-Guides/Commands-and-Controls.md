@@ -67,6 +67,8 @@ Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 - Aggressive
 - Attack Target
 - Idle
+- Set Home
+- Return Home
 
 ## Following distance
 
@@ -76,13 +78,11 @@ Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 
 **Defend** uses the formation while following between fights. Combat movement takes priority when a threat is engaged.
 
-These options require the matching Tamework development build.
-
 ## Limits and Gating
 - Owned companions appear in the panel automatically; each flute's selection
   determines which compatible companions receive its commands.
 - Commands require tame + ownership checks.
-- Combat Beast Flute has stricter active/cooldown settings than the Animal Control Flute.
+- The Combat Beast Flute commands up to 3 active Beasts at a time. Both flutes use a 0.25-second command cooldown.
 
 ## Companion Panel Actions
 - You can manage companions one-by-one with `Recall`, `Set Home`, `Return Home`, and `Revive`.
