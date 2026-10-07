@@ -10,7 +10,11 @@
     },
     "Appearance": "Spider_Cave",
     "DropList": "Drop_Spider_Cave",
-    "MaxHealth": 74,
+    "MaxHealth": 120,
+    "ViewRange": 10,
+    "HearingRange": 6,
+    "AlertedTime": [0.5, 1],
+    "KnockbackScale": 0.3,
     "BlockStepDetectionBlockSet": "Web",
     "BlockStepDetectionRange": 20,
     "_InteractionVars": {
@@ -69,7 +73,7 @@
                   "DamageCalculator": {
                     "Type": "Absolute",
                     "BaseDamage": {
-                      "Physical": 29
+                      "Physical": 22
                     },
                     "RandomPercentageModifier": 0.1
                   },
@@ -104,7 +108,7 @@
               "DamageCalculator": {
                 "Type": "Absolute",
                 "BaseDamage": {
-                  "Physical": 29
+                  "Physical": 22
                 },
                 "RandomPercentageModifier": 0.1
               },
