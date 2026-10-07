@@ -71,6 +71,10 @@
       "Value": [ 20, 40 ],
       "Description": "The duration of the follow item behaviour, after which the NPC will give up on the target. Requires FollowItemAlways to be set to false."
     },
+    "DeathParticles": {
+      "Value": "Effect_Death",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
     "DropList": {
       "Value": "Empty",
       "Description": "The NPC's drop list."
@@ -244,6 +248,7 @@
   "IsMemory": { "Compute": "IsMemory" },
   "MemoriesCategory": { "Compute": "MemoriesCategory" },
   "MemoriesNameOverride": { "Compute": "MemoriesNameOverride" },
+  "DeathParticles": { "Compute": "DeathParticles" },
   "DropList": { "Compute": "DropList" },
   "FlockSpawnTypes": { "Compute": "FlockArray" },
   "FlockSpawnTypesRandom": true,
