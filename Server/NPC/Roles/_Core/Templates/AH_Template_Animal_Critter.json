@@ -84,6 +84,10 @@
       "Value": [ 1, 2 ],
       "Description": "How long the NPC will stop for between wandering motions, in seconds"
     },
+    "DeathParticles": {
+      "Value": "Effect_Death",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
     "DropList": {
       "Value": "Empty",
       "Description": "Drop items"
@@ -134,6 +138,7 @@
   "MemoriesCategory": { "Compute": "MemoriesCategory" },
   "MemoriesNameOverride": { "Compute": "MemoriesNameOverride" },
   "FlockSpawnTypes": { "Compute": "FlockArray" },
+  "DeathParticles": { "Compute": "DeathParticles" },
   "DropList": { "Compute": "DropList" },
   "Appearance": { "Compute": "Appearance" },
   "DisableDamageGroups": [ "Self" ],

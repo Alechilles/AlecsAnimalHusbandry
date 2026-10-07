@@ -69,6 +69,10 @@
       "Value": 6,
       "Description": "The range at which an NPC will react to other NPCs and players, depending on the attitude towards them, in blocks. Should be higher than AbsoluteDetectionRange to make the NPC befriendable."
     },
+    "DeathParticles": {
+      "Value": "Effect_Death",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
     "DropList": {
       "Value": "Empty",
       "Description": "The NPC's drop list."
@@ -412,6 +416,7 @@
   "IsMemory": { "Compute": "IsMemory" },
   "MemoriesCategory": { "Compute": "MemoriesCategory" },
   "MemoriesNameOverride": { "Compute": "MemoriesNameOverride" },
+  "DeathParticles": { "Compute": "DeathParticles" },
   "DropList": { "Compute": "DropList" },
   "FlockSpawnTypes": { "Compute": "FlockArray" },
   "FlockAllowedNPC": { "Compute": "FlockArray" },

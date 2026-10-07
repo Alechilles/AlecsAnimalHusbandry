@@ -78,6 +78,10 @@
       ],
       "Description": "Delay before the threaten animation is played."
     },
+    "DeathParticles": {
+      "Value": "Effect_Death_Medium",
+      "Description": "The particle system that spawns when the NPC's corpse disappears."
+    },
     "DropList": {
       "Value": "Empty",
       "Description": "Drop Items."
@@ -654,6 +658,7 @@
   "Appearance": {
     "Compute": "Appearance"
   },
+  "DeathParticles": { "Compute": "DeathParticles" },
   "DropList": {
     "Compute": "DropList"
   },
