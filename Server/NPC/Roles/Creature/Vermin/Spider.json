@@ -2,6 +2,27 @@
   "Type": "Variant",
   "Reference": "AH_Template_Predator",
   "Parameters": {
+    "ViewRange": {
+      "Value": 16,
+      "Description": "The range from which the target will be seen."
+    },
+    "HearingRange": {
+      "Value": 8,
+      "Description": "The range from which the target will be heard."
+    },
+    "AlertedTime": {
+      "Value": [2, 2],
+      "Description": "How long the NPC stays alerted before it attacks."
+    },
+    "KnockbackScale": {
+      "Value": 0.5,
+      "Description": "Scale factor for knockback."
+    },
+    "AfraidItems": {
+      "Value": ["*Torch*", "Flamethrower*"],
+      "TypeHint": "String",
+      "Description": "Items the spider is afraid of."
+    },
     "IdleWanderWeight": {
       "Value": 10,
       "Description": "Above 0 enables the wander idle behaviors."
@@ -19,7 +40,7 @@
       "Description": "Drop Items."
     },
     "MaxHealth": {
-      "Value": 45,
+      "Value": 60,
       "Description": "Max Health."
     },
     "BlockStepDetectionBlockSet": {
@@ -61,6 +82,12 @@
     }
   },
   "Modify": {
+    "KnockbackScale": {
+      "Compute": "KnockbackScale"
+    },
+    "AfraidItems": {
+      "Compute": "AfraidItems"
+    },
     "IdleWanderWeight": {
       "Compute": "IdleWanderWeight"
     },
@@ -73,17 +100,22 @@
     "DropList": {
       "Compute": "DropList"
     },
-    "MaxHealth": 61,
+    "MaxHealth": {
+      "Compute": "MaxHealth"
+    },
     "AttitudeGroup": "Vermin",
-    "MaxSpeed": 8,
+    "MaxSpeed": 10,
     "WanderRadius": 20,
-    "ViewRange": 6,
-    "HearingRange": 8,
-    "AlertedRange": 10,
-    "AlertedTime": [
-      2,
-      2
-    ],
+    "ViewRange": {
+      "Compute": "ViewRange"
+    },
+    "HearingRange": {
+      "Compute": "HearingRange"
+    },
+    "AlertedRange": 28,
+    "AlertedTime": {
+      "Compute": "AlertedTime"
+    },
     "FleeIfNotThreatened": false,
     "LeashDistance": 30,
     "LeashMinPlayerDistance": 5,

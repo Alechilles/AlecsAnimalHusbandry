@@ -9,6 +9,25 @@
       "Value": 8,
       "Description": "General wander radius."
     },
+    "AfraidItems": {
+      "Value": [],
+      "TypeHint": "String",
+      "Description": "Items this NPC is afraid of. While its target holds one and is looking at it, the NPC keeps its distance. Empty disables the behavior."
+    },
+    "AfraidDistanceRange": {
+      "Value": [
+        4,
+        6
+      ],
+      "Description": "The distance the NPC keeps from targets holding items it is afraid of."
+    },
+    "AfraidAnimationFrequency": {
+      "Value": [
+        2,
+        4
+      ],
+      "Description": "The delay between animations while afraid."
+    },
     "IdleWanderWeight": {
       "Value": 10,
       "Description": "Above 0 enables the wander and prowl idle behaviors. Their relative weights are fixed by this template. Matches the base-game spider parameter so base variants such as Spider_Cave_Ambush keep working."
@@ -2201,6 +2220,216 @@
                       "Compute": "ChaseRelativeSpeed"
                     }
                   }
+                }
+              ]
+            },
+            {
+              "$Comment": "Keep distance from targets holding items this NPC is afraid of. Ported from the base-game spider template (Update 7).",
+              "Enabled": {
+                "Compute": "!isEmptyStringArray(AfraidItems)"
+              },
+              "Sensor": {
+                "Type": "State",
+                "State": ".Afraid"
+              },
+              "Instructions": [
+                {
+                  "$Comment": "Start a timer to periodically play an animation.",
+                  "Sensor": {
+                    "Type": "Any",
+                    "Once": true
+                  },
+                  "Actions": [
+                    {
+                      "Type": "TimerStart",
+                      "Name": "Afraid_Animation",
+                      "RestartValueRange": {
+                        "Compute": "AfraidAnimationFrequency"
+                      },
+                      "StartValueRange": {
+                        "Compute": "AfraidAnimationFrequency"
+                      }
+                    },
+                    {
+                      "Type": "TimerRestart",
+                      "Name": "Afraid_Animation"
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "If the target no longer holds a feared item or looks away, go back to combat.",
+                  "Sensor": {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "LineOfSight"
+                      },
+                      {
+                        "Type": "Or",
+                        "Filters": [
+                          {
+                            "Type": "Not",
+                            "Filter": {
+                              "Type": "ItemInHand",
+                              "Items": {
+                                "Compute": "AfraidItems"
+                              }
+                            }
+                          },
+                          {
+                            "Type": "Not",
+                            "Filter": {
+                              "Type": "SpotsMe",
+                              "ViewAngle": 120
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status"
+                    },
+                    {
+                      "Type": "State",
+                      "State": ".Default"
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "Play an animation.",
+                  "Continue": true,
+                  "Sensor": {
+                    "Type": "Timer",
+                    "Name": "Afraid_Animation",
+                    "State": "Stopped"
+                  },
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "PlayAnimation",
+                      "Animation": "Alerted",
+                      "Slot": "Status"
+                    },
+                    {
+                      "Type": "Timeout",
+                      "Delay": [
+                        2,
+                        2
+                      ]
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Slot": "Status"
+                    },
+                    {
+                      "Type": "TimerRestart",
+                      "Name": "Afraid_Animation"
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "Attack the target when within attack range.",
+                  "Continue": true,
+                  "Sensor": {
+                    "Type": "Target",
+                    "Range": {
+                      "Compute": "AttackDistance"
+                    },
+                    "Filters": [
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  "Actions": [
+                    {
+                      "Type": "Attack",
+                      "Attack": {
+                        "Compute": "Attack"
+                      },
+                      "AttackPauseRange": {
+                        "Compute": "AttackPauseRange"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "Else, strafe and stalk the target.",
+                  "Sensor": {
+                    "Type": "Target",
+                    "Filters": [
+                      {
+                        "Type": "LineOfSight"
+                      }
+                    ]
+                  },
+                  "BodyMotion": {
+                    "Type": "MaintainDistance",
+                    "DesiredDistanceRange": {
+                      "Compute": "AfraidDistanceRange"
+                    },
+                    "StrafingDurationRange": {
+                      "Compute": "CombatStrafingDurationRange"
+                    },
+                    "StrafingFrequencyRange": {
+                      "Compute": "CombatStrafingFrequencyRange"
+                    }
+                  },
+                  "ActionsBlocking": true,
+                  "Actions": [
+                    {
+                      "Type": "Timeout",
+                      "Delay": {
+                        "Compute": "AfraidAnimationFrequency"
+                      }
+                    },
+                    {
+                      "Type": "PlayAnimation",
+                      "Animation": "Alerted",
+                      "Slot": "Status"
+                    }
+                  ]
+                },
+                {
+                  "$Comment": "Fall back to default.",
+                  "Actions": [
+                    {
+                      "Type": "State",
+                      "State": ".Default"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$Comment": "If the target is holding an item this NPC is afraid of, back up a bit.",
+              "Enabled": {
+                "Compute": "!isEmptyStringArray(AfraidItems)"
+              },
+              "Sensor": {
+                "Type": "Target",
+                "Filters": [
+                  {
+                    "Type": "LineOfSight"
+                  },
+                  {
+                    "Type": "ItemInHand",
+                    "Items": {
+                      "Compute": "AfraidItems"
+                    }
+                  },
+                  {
+                    "Type": "SpotsMe"
+                  }
+                ]
+              },
+              "Actions": [
+                {
+                  "Type": "State",
+                  "State": ".Afraid"
                 }
               ]
             },
