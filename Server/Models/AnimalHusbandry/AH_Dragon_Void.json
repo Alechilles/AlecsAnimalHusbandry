@@ -158,6 +158,54 @@
           "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Walk_Backward.blockyanim"
         }
       ]
+    },
+    "Alerted": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Alerted.blockyanim",
+          "Looping": true
+        }
+      ]
+    },
+    "Eat": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Eat.blockyanim"
+        }
+      ]
+    },
+    "Laydown": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Laydown.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Wake": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Wake.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Tw_Kettle_Glide": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Kettle_Glide.blockyanim",
+          "Looping": true
+        }
+      ]
+    },
+    "Tw_Kettle_Flap": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Dragon_Void/Animations/Fly.blockyanim",
+          "BlendingDuration": 0.2,
+          "Looping": true
+        }
+      ]
     }
   },
   "Icon": "Icons/ModelsGenerated/Dragon_Frost.png",
