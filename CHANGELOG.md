@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1 - Flute Shortcuts on Update 7 - 2026-10-09
+
+- On Hytale Update 7, the E and R shortcuts on the Animal Control Flute and Combat Beast Flute keep working. The Update 7 client only sends those keys with a weapon in hand, so both flutes count as weapons there. Nothing changes on Update 6.
+
 ## 4.0.0 - Husbandry Workbench, Raccoons, and the Eggzooka - 2026-10-05
 
 Requires Hytale 0.6.7 or later in Update 6 and Alec's Tamework `>=5.0.0 <6.0`. Update both mods together.
