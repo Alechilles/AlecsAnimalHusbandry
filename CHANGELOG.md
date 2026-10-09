@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- On Hytale Update 7, the E and R shortcuts on the Animal Control Flute and Combat Beast Flute keep working. Both flutes count as weapons there, because the Update 7 client only sends those keys with a weapon in hand.
 - Added wild Fire Dragons, named Ember Dragon in game. They spawn in Zone 4 volcanoes during the day, one dragon per beacon, with a 1-3 minute initial delay and a 15-25 minute respawn cooldown. They have 400 health and drop 4-6 Fire Essence.
 - Fire Dragons attack with a bite, a wing swing, Fire Breath on the ground and in flight, Fire Bolt volleys, Meteor Volley, and Dive Bomb.
 - Added wild Void Dragons. They spawn in Zone 4 wastes at night under the same beacon rules, have 400 health, and drop 4-6 Void Essence.
