@@ -1,5 +1,22 @@
 # Changelog
 
+## 4.0.2 - Hytale 0.7.0 Support and Creature Fixes - 2026-10-13
+
+Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7.0. On Hytale 0.7.0, use Alec's Tamework 5.2.1 or later.
+
+- Fixed servers on Hytale 0.7.0 shutting down at startup with a failed NPC validation for `Spider_Cave_Ambush`.
+- Ambush Cave Spiders stand still while idle, as in the base game.
+- Spiders and Cave Spiders now match their Update 7 stats and are afraid of torches. A spider keeps its distance while its target holds a torch and looks at it.
+- Wild wolf packs take turns attacking again, as in the base game.
+- Raised Eggzooka egg damage from 4 to 15.
+- Tamework's Tranquilizer Dart Rifle and Tranquilizer Darts are now crafted at the Animal Husbandry Workbench instead of the Weapon Bench.
+- Raccoons now keep walking while they sniff their way toward a held egg.
+- Added Curious animations for Cactees, Geckos, Meerkats, Snails, Squirrels, and Magma Slugs, plus Idle and Alerted animations for Magma Slugs.
+- Magma Rhino Toads and Magma Slugs are immune to fire again.
+- Wild and tamed Skrill lay eggs again, as in the base game.
+- Wild snails pause 8-12 seconds between wanders again, as in the base game.
+- Restored base-game death particles: a medium burst for predators, flames for magma creatures, and bones for skeleton horses.
+
 ## 4.0.1 - Flute Shortcuts on Update 7 - 2026-10-09
 
 - On Hytale Update 7, the E and R shortcuts on the Animal Control Flute and Combat Beast Flute keep working. The Update 7 client only sends those keys with a weapon in hand, so both flutes count as weapons there. Nothing changes on Update 6.
