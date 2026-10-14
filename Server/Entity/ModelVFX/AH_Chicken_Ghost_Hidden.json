@@ -1,23 +1,18 @@
 {
   "SwitchTo": "Disappear",
   "EffectDirection": "ToCenter",
-  "HighlightColor": "#9ff6ff",
-  "HighlightThickness": 0,
+  "AnimationDuration": 0.05,
+  "AnimationRange": {
+    "X": 1.0,
+    "Y": 1.0
+  },
   "UseBloomOnHighlight": false,
-  "UseProgessiveHighlight": false,
   "NoiseScale": {
     "X": 29.0,
     "Y": 25.0
   },
-  "NoiseScrollSpeed": {
-    "X": 0.0,
-    "Y": 0.0
-  },
-  "LoopOption": "PlayOnce",
-  "CurveType": "Linear",
-  "AnimationDuration": 0.05,
-  "AnimationRange": {
-    "X": 1.1,
-    "Y": 1.1
-  }
+  "UseProgessiveHighlight": false,
+  "HighlightColor": "#55D9FF",
+  "HighlightThickness": 0,
+  "CurveType": "Linear"
 }
