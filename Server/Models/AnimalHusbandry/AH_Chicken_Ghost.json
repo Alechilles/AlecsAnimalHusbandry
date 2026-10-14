@@ -13,5 +13,156 @@
       },
       "Scale": 0.5
     }
-  ]
+  ],
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim"
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim"
+        }
+      ]
+    },
+    "WalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim"
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "Speed": 1.5
+        }
+      ]
+    },
+    "RunBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim",
+          "Speed": 1.5
+        }
+      ]
+    },
+    "Sprint": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "Speed": 1.8
+        }
+      ]
+    },
+    "Flee": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "Speed": 1.8
+        }
+      ]
+    },
+    "Crouch": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "CrouchWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "CrouchWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim",
+          "BlendingDuration": 0.1
+        }
+      ]
+    },
+    "FluidIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Idle.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "IdlePassive": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Look.blockyanim"
+        }
+      ],
+      "NextAnimationDelay": {
+        "Min": 6,
+        "Max": 14
+      }
+    },
+    "Eat": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Look.blockyanim"
+        }
+      ]
+    },
+    "RunPassive": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim"
+        }
+      ]
+    },
+    "FleePAssive": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Glide.blockyanim"
+        }
+      ]
+    },
+    "GreetAnimation": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Chicken_Ghost/Animations/Float_Look.blockyanim",
+          "Looping": false
+        }
+      ]
+    }
+  }
 }
