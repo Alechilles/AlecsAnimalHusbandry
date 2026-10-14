@@ -386,11 +386,47 @@
       ]
     },
     {
+      "$Comment": "Keep staring at the nearest player while he dissolves.",
       "Sensor": {
         "Type": "State",
         "State": "Vanish"
       },
       "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Player",
+            "Range": 16
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Vanish",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                1.45,
+                1.45
+              ]
+            },
+            {
+              "Type": "Appearance",
+              "Appearance": "AH_Chicken_Ghost"
+            },
+            {
+              "Type": "State",
+              "State": "Hidden"
+            }
+          ]
+        },
         {
           "Sensor": {
             "Type": "Any"
