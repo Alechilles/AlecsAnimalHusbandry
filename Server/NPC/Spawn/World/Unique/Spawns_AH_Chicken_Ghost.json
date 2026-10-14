@@ -1,0 +1,43 @@
+{
+  "Environments": [
+    "Env_Zone1_Autumn",
+    "Env_Zone1_Azure",
+    "Env_Zone1_Forests",
+    "Env_Zone1_Mountains",
+    "Env_Zone1_Plains",
+    "Env_Zone1_Shores",
+    "Env_Zone1_Swamps",
+    "Env_Zone2_Deserts",
+    "Env_Zone2_Oasis",
+    "Env_Zone2_Plateaus",
+    "Env_Zone2_Savanna",
+    "Env_Zone2_Scrub",
+    "Env_Zone2_Shores",
+    "Env_Zone3_Forests",
+    "Env_Zone3_Glacial",
+    "Env_Zone3_Mountains",
+    "Env_Zone3_Shores",
+    "Env_Zone3_Tundra",
+    "Env_Zone4_Forests",
+    "Env_Zone4_Jungles",
+    "Env_Zone4_Shores",
+    "Env_Zone4_Wastes"
+  ],
+  "NPCs": [
+    {
+      "Id": "AH_Chicken_Ghost",
+      "Weight": 1,
+      "SpawnBlockSet": "Soil"
+    }
+  ],
+  "DayTimeRange": [
+    20,
+    4
+  ],
+  "Despawn": {
+    "DayTimeRange": [
+      5,
+      19
+    ]
+  }
+}

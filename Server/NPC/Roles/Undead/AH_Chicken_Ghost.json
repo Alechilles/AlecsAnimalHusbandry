@@ -1,0 +1,453 @@
+{
+  "Type": "Generic",
+  "Appearance": "AH_Chicken_Ghost",
+  "MaxHealth": 29,
+  "StartState": "Spawn",
+  "DefaultPlayerAttitude": "Neutral",
+  "DefaultNPCAttitude": "Ignore",
+  "MotionControllerList": [
+    {
+      "Type": "Walk",
+      "MaxWalkSpeed": 2.5,
+      "Gravity": 10,
+      "MaxFallSpeed": 30,
+      "Acceleration": 8,
+      "MaxRotationSpeed": 180,
+      "MaxClimbHeight": 1,
+      "MaxDropHeight": 4,
+      "RunThreshold": 0.8
+    }
+  ],
+  "NameTranslationKey": "server.npcRoles.AH_Chicken_Ghost.name",
+  "Instructions": [
+    {
+      "$Comment": "Haunt a chicken coop near where the night spawn placed it; with no coop nearby, leave unseen.",
+      "Sensor": {
+        "Type": "State",
+        "State": "Spawn"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Time",
+            "Period": [
+              5,
+              19
+            ],
+            "CheckDay": true
+          },
+          "Actions": [
+            {
+              "Type": "Despawn"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Block",
+            "Range": 48,
+            "MaxHeight": 12,
+            "Blocks": "AH_Chicken_Coops"
+          },
+          "BodyMotion": {
+            "Type": "Teleport",
+            "OffsetRange": [
+              2,
+              7
+            ],
+            "OffsetSector": 360,
+            "Orientation": "Unchanged"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "SetInvulnerable",
+              "Invulnerable": true
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Hidden",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Appear",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.65,
+                0.65
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Shimmer",
+              "UseTarget": false
+            },
+            {
+              "Type": "State",
+              "State": "Haunt"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "Actions": [
+            {
+              "Type": "Despawn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Haunt"
+      },
+      "Instructions": [
+        {
+          "$Comment": "Fade away at dawn.",
+          "Sensor": {
+            "Type": "Time",
+            "Period": [
+              5,
+              19
+            ],
+            "CheckDay": true
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Dawn"
+            }
+          ]
+        },
+        {
+          "$Comment": "A player came too close: vanish.",
+          "Sensor": {
+            "Type": "Player",
+            "Range": 5
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Vanish"
+            }
+          ]
+        },
+        {
+          "$Comment": "Blink out every so often.",
+          "Sensor": {
+            "Type": "Alarm",
+            "Name": "GhostBlink",
+            "State": "Passed",
+            "Clear": true
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Vanish"
+            }
+          ]
+        },
+        {
+          "Continue": true,
+          "Sensor": {
+            "Type": "Alarm",
+            "Name": "GhostBlink",
+            "State": "Unset"
+          },
+          "Actions": [
+            {
+              "Type": "SetAlarm",
+              "Name": "GhostBlink",
+              "DurationRange": [
+                "PT10S",
+                "PT30S"
+              ]
+            }
+          ]
+        },
+        {
+          "$Comment": "Stand and stare at a player who keeps their distance.",
+          "Sensor": {
+            "Type": "Player",
+            "Range": 12
+          },
+          "HeadMotion": {
+            "Type": "Watch"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          }
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "BodyMotion": {
+            "Type": "Wander",
+            "MaxHeadingChange": 60,
+            "RelativeSpeed": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Vanish"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Vanish",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.55,
+                0.55
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Hidden",
+              "UseTarget": false
+            },
+            {
+              "Type": "State",
+              "State": "Hidden"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Stay unseen while a player is close, then come back somewhere else around the coop.",
+      "Sensor": {
+        "Type": "State",
+        "State": "Hidden"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Time",
+            "Period": [
+              5,
+              19
+            ],
+            "CheckDay": true
+          },
+          "Actions": [
+            {
+              "Type": "Despawn"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Player",
+            "Range": 7
+          },
+          "Actions": [
+            {
+              "Type": "State",
+              "State": "Lurk"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Hidden",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                2,
+                4
+              ]
+            },
+            {
+              "Type": "State",
+              "State": "Return"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$Comment": "Refresh the hidden effect, then check for the player again from Hidden.",
+      "Sensor": {
+        "Type": "State",
+        "State": "Lurk"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Hidden",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                1,
+                1
+              ]
+            },
+            {
+              "Type": "State",
+              "State": "Hidden"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Return"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Block",
+            "Range": 48,
+            "MaxHeight": 12,
+            "Blocks": "AH_Chicken_Coops"
+          },
+          "BodyMotion": {
+            "Type": "Teleport",
+            "OffsetRange": [
+              2,
+              7
+            ],
+            "OffsetSector": 360,
+            "Orientation": "Unchanged"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.25,
+                0.25
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Appear",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.65,
+                0.65
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Shimmer",
+              "UseTarget": false
+            },
+            {
+              "Type": "State",
+              "State": "Haunt"
+            }
+          ]
+        },
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "Actions": [
+            {
+              "Type": "Despawn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Sensor": {
+        "Type": "State",
+        "State": "Dawn"
+      },
+      "Instructions": [
+        {
+          "Sensor": {
+            "Type": "Any"
+          },
+          "BodyMotion": {
+            "Type": "Nothing"
+          },
+          "ActionsBlocking": true,
+          "Actions": [
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Vanish",
+              "UseTarget": false
+            },
+            {
+              "Type": "Timeout",
+              "Delay": [
+                0.55,
+                0.55
+              ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Hidden",
+              "UseTarget": false
+            },
+            {
+              "Type": "Despawn"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
