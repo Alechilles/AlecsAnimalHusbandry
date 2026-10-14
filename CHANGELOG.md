@@ -13,7 +13,7 @@
 - Raised Eggzooka egg damage from 4 to 15.
 - Tamework's Tranquilizer Dart Rifle and Tranquilizer Darts are now crafted at the Animal Husbandry Workbench instead of the Weapon Bench.
 - Raccoons now keep walking while they sniff their way toward a held egg.
-- Added the Ghost Chicken, an easter egg. On rare nights it haunts a chicken coop: it drifts around the coop, blinks out of sight every so often, and vanishes when a player comes within 5 blocks. It fades away at dawn and cannot be hurt.
+- Added the Ghost Chicken, an easter egg. On one night of each moon cycle it can appear on top of a chicken coop: it floats about, blinks out of sight every so often, and vanishes when a player comes within 5 blocks. It is see-through and glows, fades away at dawn, and cannot be hurt.
 
 ## 4.0.0 - Husbandry Workbench, Raccoons, and the Eggzooka - 2026-10-05
 
