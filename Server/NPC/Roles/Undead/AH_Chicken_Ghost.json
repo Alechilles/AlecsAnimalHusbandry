@@ -145,6 +145,7 @@
       ]
     },
     {
+      "$Comment": "First appearance after spawning: crow once as he fades in.",
       "Sensor": {
         "Type": "State",
         "State": "Arrive"
@@ -159,6 +160,10 @@
           },
           "ActionsBlocking": true,
           "Actions": [
+            {
+              "Type": "PlaySound",
+              "SoundEventId": "SFX_AH_Chicken_Ghost_Crow"
+            },
             {
               "Type": "Appearance",
               "Appearance": "AH_Chicken_Ghost_Wisps"

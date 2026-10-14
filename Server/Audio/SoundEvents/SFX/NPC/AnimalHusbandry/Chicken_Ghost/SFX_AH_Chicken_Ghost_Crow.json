@@ -1,0 +1,21 @@
+{
+  "Parent": "SFX_Attn_Loud",
+  "AudioCategory": "AudioCat_NPC_Chicken",
+  "Volume": 0,
+  "MaxInstance": 1,
+  "PreventSoundInterruption": true,
+  "Layers": [
+    {
+      "Files": [
+        "Sounds/AnimalHusbandry/Chicken_Ghost/Ghost_Crow_01.ogg",
+        "Sounds/AnimalHusbandry/Chicken_Ghost/Ghost_Crow_02.ogg"
+      ],
+      "RandomSettings": {
+        "MinPitch": -1,
+        "MaxPitch": 0,
+        "MinVolume": -1,
+        "MaxVolume": 0
+      }
+    }
+  ]
+}
