@@ -1,13 +1,13 @@
 {
   "SwitchTo": "Disappear",
-  "EffectDirection": "None",
+  "EffectDirection": "BottomUp",
   "HighlightColor": "#9ff6ff",
-  "HighlightThickness": 2,
+  "HighlightThickness": 3,
   "UseBloomOnHighlight": true,
-  "UseProgessiveHighlight": false,
+  "UseProgessiveHighlight": true,
   "NoiseScale": {
-    "X": 30.0,
-    "Y": 30.0
+    "X": 20.0,
+    "Y": 20.0
   },
   "NoiseScrollSpeed": {
     "X": 0.0,
@@ -18,6 +18,6 @@
   "AnimationDuration": 1.4,
   "AnimationRange": {
     "X": 0.0,
-    "Y": 1.0
+    "Y": 1.1
   }
 }
