@@ -21,7 +21,7 @@
   "NameTranslationKey": "server.npcRoles.AH_Chicken_Ghost.name",
   "Instructions": [
     {
-      "$Comment": "He spawns on a coop. Hide him straight away, make him see-through, then roll.",
+      "$Comment": "He spawns on a coop. Hide him straight away, then roll.",
       "Sensor": {
         "Type": "State",
         "State": "Spawn"
@@ -63,11 +63,6 @@
             {
               "Type": "ApplyEntityEffect",
               "EntityEffect": "AH_Chicken_Ghost_Hidden",
-              "UseTarget": false
-            },
-            {
-              "Type": "ApplyEntityEffect",
-              "EntityEffect": "AH_Chicken_Ghost_Shimmer",
               "UseTarget": false
             },
             {
@@ -174,6 +169,11 @@
                 0.1,
                 0.1
               ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Shimmer",
+              "UseTarget": false
             },
             {
               "Type": "ApplyEntityEffect",
@@ -604,6 +604,11 @@
                 0.1,
                 0.1
               ]
+            },
+            {
+              "Type": "ApplyEntityEffect",
+              "EntityEffect": "AH_Chicken_Ghost_Shimmer",
+              "UseTarget": false
             },
             {
               "Type": "ApplyEntityEffect",
