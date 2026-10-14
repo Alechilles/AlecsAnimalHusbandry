@@ -1,16 +1,5 @@
 {
-  "SwitchTo": "PostColor",
-  "EffectDirection": "BottomUp",
-  "AnimationDuration": 0.6,
-  "NoiseScale": {
-    "X": 20.0,
-    "Y": 20.0
-  },
-  "PostColorOpacity": 0.3,
-  "CurveType": "QuartOut",
-  "HighlightThickness": 0.0,
-  "UseBloomOnHighlight": false,
-  "HighlightColor": "#8ef6ff",
-  "PostColor": "#a7f0ff",
+  "SwitchTo": "AlphaTransparency",
+  "AnimationDuration": 0,
   "Opacity": 0.7
 }

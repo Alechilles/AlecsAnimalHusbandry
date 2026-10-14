@@ -4,16 +4,7 @@
   "Texture": "NPC/AnimalHusbandry/Chicken_Ghost/Models/Texture.png",
   "MinScale": 0.95,
   "MaxScale": 1.05,
-  "Particles": [
-    {
-      "SystemId": "Eye_Void_Smoke_Teal",
-      "TargetNodeName": "Pelvis",
-      "PositionOffset": {
-        "Y": -0.3
-      },
-      "Scale": 0.5
-    }
-  ],
+  "Particles": [],
   "AnimationSets": {
     "Idle": {
       "Animations": [
