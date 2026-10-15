@@ -1,6 +1,13 @@
 {
   "Model": "AH_Dragon_Void_Bolt",
   "UseModelScale": true,
+  "$Comment": "Spawn at the snout, where the charge effect plays: the snout is about 1.75 above the eye (7.2) and 6 ahead at launch. The body never pitches, so only yaw turns the offset.",
+  "SpawnOffset": {
+    "X": 0,
+    "Y": 1.75,
+    "Z": -6.0
+  },
+  "RotateSpawnOffsetByPitch": false,
   "Physics": {
     "Type": "Standard",
     "TerminalVelocityAir": 60,
