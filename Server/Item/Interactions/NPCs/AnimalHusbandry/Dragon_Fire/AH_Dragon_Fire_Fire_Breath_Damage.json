@@ -8,7 +8,9 @@
   },
   "DamageEffects": {
     "Knockback": {
-      "Force": 4,
+      "Type": "Point",
+      "Force": 2,
+      "VelocityY": 1,
       "VelocityType": "Add"
     },
     "WorldParticles": [
