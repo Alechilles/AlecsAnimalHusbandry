@@ -7,6 +7,17 @@
     "RandomPercentageModifier": 0
   },
   "DamageEffects": {
-    "WorldSoundEventId": "SFX_Unarmed_Impact"
+    "WorldSoundEventId": "SFX_Unarmed_Impact",
+    "Knockback": {
+      "Force": 6,
+      "RelativeX": 0,
+      "RelativeZ": 1,
+      "VelocityY": 5
+    },
+    "WorldParticles": [
+      {
+        "SystemId": "Impact_Sword_Basic"
+      }
+    ]
   }
 }
