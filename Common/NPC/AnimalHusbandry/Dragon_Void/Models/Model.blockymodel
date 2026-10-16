@@ -473,192 +473,6 @@
                      }
                     },
                     {
-                     "id": "179",
-                     "name": "Mouth-Cheek--V",
-                     "children": [],
-                     "position": {
-                      "x": -5e-05,
-                      "y": 26.34059,
-                      "z": -21.45612
-                     },
-                     "orientation": {
-                      "x": -0.08716,
-                      "y": 0.0,
-                      "z": -0.0,
-                      "w": 0.996194
-                     },
-                     "shape": {
-                      "type": "box",
-                      "offset": {
-                       "x": 0.0,
-                       "y": 0.0,
-                       "z": 0.0
-                      },
-                      "stretch": {
-                       "x": 1.0,
-                       "y": 0.99785,
-                       "z": 0.92825
-                      },
-                      "settings": {
-                       "isPiece": false,
-                       "size": {
-                        "x": 30,
-                        "y": 39,
-                        "z": 24
-                       }
-                      },
-                      "textureLayout": {
-                       "front": {
-                        "offset": {
-                         "x": 494,
-                         "y": 460
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": false
-                        },
-                        "angle": 0
-                       },
-                       "back": {
-                        "offset": {
-                         "x": 494,
-                         "y": 460
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": false
-                        },
-                        "angle": 0
-                       },
-                       "right": {
-                        "offset": {
-                         "x": 40,
-                         "y": 58
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": false
-                        },
-                        "angle": 0
-                       },
-                       "left": {
-                        "offset": {
-                         "x": 64,
-                         "y": 58
-                        },
-                        "mirror": {
-                         "x": true,
-                         "y": false
-                        },
-                        "angle": 0
-                       }
-                      },
-                      "unwrapMode": "custom",
-                      "visible": true,
-                      "doubleSided": false,
-                      "shadingMode": "flat"
-                     }
-                    },
-                    {
-                     "id": "180",
-                     "name": "Mouth-Inner--C1--V",
-                     "children": [],
-                     "position": {
-                      "x": -4e-05,
-                      "y": 26.34059,
-                      "z": -27.45612
-                     },
-                     "orientation": {
-                      "x": -0.08716,
-                      "y": 0.0,
-                      "z": -0.0,
-                      "w": 0.996194
-                     },
-                     "shape": {
-                      "type": "box",
-                      "offset": {
-                       "x": 0.0,
-                       "y": 0.0,
-                       "z": 0.0
-                      },
-                      "stretch": {
-                       "x": 1.0,
-                       "y": 1.19742,
-                       "z": 0.92825
-                      },
-                      "settings": {
-                       "isPiece": false,
-                       "size": {
-                        "x": 22,
-                        "y": 41,
-                        "z": 27
-                       },
-                       "isStaticBox": true
-                      },
-                      "textureLayout": {
-                       "right": {
-                        "offset": {
-                         "x": 429,
-                         "y": 566
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": true
-                        },
-                        "angle": 90
-                       },
-                       "front": {
-                        "offset": {
-                         "x": 470,
-                         "y": 544
-                        },
-                        "mirror": {
-                         "x": true,
-                         "y": true
-                        },
-                        "angle": 270
-                       },
-                       "left": {
-                        "offset": {
-                         "x": 429,
-                         "y": 593
-                        },
-                        "mirror": {
-                         "x": true,
-                         "y": true
-                        },
-                        "angle": 90
-                       },
-                       "top": {
-                        "offset": {
-                         "x": 470,
-                         "y": 593
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": false
-                        },
-                        "angle": 0
-                       },
-                       "bottom": {
-                        "offset": {
-                         "x": 470,
-                         "y": 566
-                        },
-                        "mirror": {
-                         "x": false,
-                         "y": false
-                        },
-                        "angle": 0
-                       }
-                      },
-                      "unwrapMode": "custom",
-                      "visible": false,
-                      "doubleSided": true,
-                      "shadingMode": "fullbright"
-                     }
-                    },
-                    {
                      "id": "181",
                      "name": "Teeth-Bot--C5--V",
                      "children": [],
@@ -1803,6 +1617,192 @@
                     "visible": true,
                     "doubleSided": false,
                     "shadingMode": "flat"
+                   }
+                  },
+                  {
+                   "id": "179",
+                   "name": "Mouth-Cheek--V",
+                   "children": [],
+                   "position": {
+                    "x": 0.0,
+                    "y": -32.0,
+                    "z": -11.9
+                   },
+                   "orientation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                   },
+                   "shape": {
+                    "type": "box",
+                    "offset": {
+                     "x": 0.0,
+                     "y": 0.0,
+                     "z": 0.0
+                    },
+                    "stretch": {
+                     "x": 1.06667,
+                     "y": 2.05128,
+                     "z": 0.08333
+                    },
+                    "settings": {
+                     "isPiece": false,
+                     "size": {
+                      "x": 30,
+                      "y": 39,
+                      "z": 24
+                     }
+                    },
+                    "textureLayout": {
+                     "front": {
+                      "offset": {
+                       "x": 494,
+                       "y": 460
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 0
+                     },
+                     "back": {
+                      "offset": {
+                       "x": 494,
+                       "y": 460
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 0
+                     },
+                     "right": {
+                      "offset": {
+                       "x": 40,
+                       "y": 58
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 0
+                     },
+                     "left": {
+                      "offset": {
+                       "x": 64,
+                       "y": 58
+                      },
+                      "mirror": {
+                       "x": true,
+                       "y": false
+                      },
+                      "angle": 0
+                     }
+                    },
+                    "unwrapMode": "custom",
+                    "visible": true,
+                    "doubleSided": false,
+                    "shadingMode": "flat"
+                   }
+                  },
+                  {
+                   "id": "180",
+                   "name": "Mouth-Inner--C1--V",
+                   "children": [],
+                   "position": {
+                    "x": 0.0,
+                    "y": -20.0,
+                    "z": -17.9
+                   },
+                   "orientation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                   },
+                   "shape": {
+                    "type": "box",
+                    "offset": {
+                     "x": 0.0,
+                     "y": 0.0,
+                     "z": 0.0
+                    },
+                    "stretch": {
+                     "x": 1.18182,
+                     "y": 1.26829,
+                     "z": 0.37037
+                    },
+                    "settings": {
+                     "isPiece": false,
+                     "size": {
+                      "x": 22,
+                      "y": 41,
+                      "z": 27
+                     },
+                     "isStaticBox": true
+                    },
+                    "textureLayout": {
+                     "right": {
+                      "offset": {
+                       "x": 429,
+                       "y": 566
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": true
+                      },
+                      "angle": 90
+                     },
+                     "front": {
+                      "offset": {
+                       "x": 470,
+                       "y": 544
+                      },
+                      "mirror": {
+                       "x": true,
+                       "y": true
+                      },
+                      "angle": 270
+                     },
+                     "left": {
+                      "offset": {
+                       "x": 429,
+                       "y": 593
+                      },
+                      "mirror": {
+                       "x": true,
+                       "y": true
+                      },
+                      "angle": 90
+                     },
+                     "top": {
+                      "offset": {
+                       "x": 470,
+                       "y": 593
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 0
+                     },
+                     "bottom": {
+                      "offset": {
+                       "x": 470,
+                       "y": 566
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 0
+                     }
+                    },
+                    "unwrapMode": "custom",
+                    "visible": false,
+                    "doubleSided": true,
+                    "shadingMode": "fullbright"
                    }
                   }
                  ],
