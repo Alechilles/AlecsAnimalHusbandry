@@ -6,8 +6,8 @@
   "ParticleRotateWithSpawner": false,
   "MaxConcurrentParticles": 4,
   "ParticleLifeSpan": {
-    "Min": 2.3,
-    "Max": 2.3
+    "Min": 1.5,
+    "Max": 1.5
   },
   "SpawnRate": {
     "Min": 1,
@@ -27,24 +27,6 @@
           "X": {
             "Min": 0.1,
             "Max": 0.1
-          }
-        },
-        "Opacity": 1.0
-      },
-      "65": {
-        "Scale": {
-          "X": {
-            "Min": 1.0,
-            "Max": 1.0
-          }
-        },
-        "Opacity": 1.0
-      },
-      "90": {
-        "Scale": {
-          "X": {
-            "Min": 1.0,
-            "Max": 1.0
           }
         },
         "Opacity": 1.0

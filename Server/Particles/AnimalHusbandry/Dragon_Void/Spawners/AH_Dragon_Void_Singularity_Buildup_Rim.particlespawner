@@ -6,12 +6,12 @@
   "ParticleRotateWithSpawner": false,
   "MaxConcurrentParticles": 5,
   "ParticleLifeSpan": {
-    "Min": 0.5,
-    "Max": 0.5
+    "Min": 0.3,
+    "Max": 0.3
   },
   "SpawnRate": {
-    "Min": 6.0,
-    "Max": 6.0
+    "Min": 10.0,
+    "Max": 10.0
   },
   "Particle": {
     "Texture": "Particles/Textures/Basic/Ball6.png",
@@ -111,7 +111,7 @@
     }
   },
   "TotalParticles": {
-    "Min": 9,
-    "Max": 9
+    "Min": 15,
+    "Max": 15
   }
 }
