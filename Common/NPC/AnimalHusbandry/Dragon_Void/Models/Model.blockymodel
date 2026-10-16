@@ -478,7 +478,7 @@
                      "children": [],
                      "position": {
                       "x": -5e-05,
-                      "y": 18.34059,
+                      "y": 26.34059,
                       "z": -27.45612
                      },
                      "orientation": {
@@ -508,6 +508,28 @@
                        }
                       },
                       "textureLayout": {
+                       "front": {
+                        "offset": {
+                         "x": 494,
+                         "y": 460
+                        },
+                        "mirror": {
+                         "x": false,
+                         "y": false
+                        },
+                        "angle": 0
+                       },
+                       "back": {
+                        "offset": {
+                         "x": 494,
+                         "y": 460
+                        },
+                        "mirror": {
+                         "x": false,
+                         "y": false
+                        },
+                        "angle": 0
+                       },
                        "right": {
                         "offset": {
                          "x": 40,
@@ -543,7 +565,7 @@
                      "children": [],
                      "position": {
                       "x": -4e-05,
-                      "y": 18.34059,
+                      "y": 26.34059,
                       "z": -27.45612
                      },
                      "orientation": {
@@ -631,7 +653,7 @@
                        }
                       },
                       "unwrapMode": "custom",
-                      "visible": true,
+                      "visible": false,
                       "doubleSided": true,
                       "shadingMode": "fullbright"
                      }
@@ -2484,7 +2506,7 @@
                  }
                 },
                 "unwrapMode": "custom",
-                "visible": true,
+                "visible": false,
                 "doubleSided": true,
                 "shadingMode": "fullbright"
                }
