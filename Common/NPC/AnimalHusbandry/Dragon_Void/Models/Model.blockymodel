@@ -1676,28 +1676,6 @@
                        "y": false
                       },
                       "angle": 0
-                     },
-                     "right": {
-                      "offset": {
-                       "x": 40,
-                       "y": 58
-                      },
-                      "mirror": {
-                       "x": false,
-                       "y": false
-                      },
-                      "angle": 0
-                     },
-                     "left": {
-                      "offset": {
-                       "x": 64,
-                       "y": 58
-                      },
-                      "mirror": {
-                       "x": true,
-                       "y": false
-                      },
-                      "angle": 0
                      }
                     },
                     "unwrapMode": "custom",
@@ -2162,6 +2140,116 @@
                    "y": false
                   },
                   "angle": 0
+                 }
+                },
+                "unwrapMode": "custom",
+                "visible": true,
+                "doubleSided": false,
+                "shadingMode": "flat"
+               }
+              },
+              {
+               "id": "225",
+               "name": "Head-Top--C3a--V",
+               "children": [],
+               "position": {
+                "x": -4e-05,
+                "y": 29.75582,
+                "z": 2.18241
+               },
+               "orientation": {
+                "x": -0.642476,
+                "y": 0.327098,
+                "z": -0.611651,
+                "w": 0.325751
+               },
+               "shape": {
+                "type": "box",
+                "offset": {
+                 "x": 6.36644,
+                 "y": -4.16637,
+                 "z": 24.6685
+                },
+                "stretch": {
+                 "x": 1.0,
+                 "y": 1.0,
+                 "z": 1.0
+                },
+                "settings": {
+                 "isPiece": false,
+                 "size": {
+                  "x": 48,
+                  "y": 48,
+                  "z": 17
+                 },
+                 "isStaticBox": true
+                },
+                "textureLayout": {
+                 "bottom": {
+                  "offset": {
+                   "x": 238,
+                   "y": 256
+                  },
+                  "mirror": {
+                   "x": false,
+                   "y": false
+                  },
+                  "angle": 180
+                 }
+                },
+                "unwrapMode": "custom",
+                "visible": true,
+                "doubleSided": false,
+                "shadingMode": "flat"
+               }
+              },
+              {
+               "id": "226",
+               "name": "Head-Top--C3b--V",
+               "children": [],
+               "position": {
+                "x": -4e-05,
+                "y": 29.75582,
+                "z": 2.18241
+               },
+               "orientation": {
+                "x": -0.642476,
+                "y": 0.327098,
+                "z": -0.611651,
+                "w": 0.325751
+               },
+               "shape": {
+                "type": "box",
+                "offset": {
+                 "x": 6.36644,
+                 "y": -4.16637,
+                 "z": -25.3315
+                },
+                "stretch": {
+                 "x": 1.0,
+                 "y": 1.0,
+                 "z": 1.0
+                },
+                "settings": {
+                 "isPiece": false,
+                 "size": {
+                  "x": 48,
+                  "y": 48,
+                  "z": 17
+                 },
+                 "isStaticBox": true
+                },
+                "textureLayout": {
+                 "bottom": {
+                  "offset": {
+                   "x": 238,
+                   "y": 206
+                  },
+                  "mirror": {
+                   "x": false,
+                   "y": false
+                  },
+                  "angle": 180
                  }
                 },
                 "unwrapMode": "custom",
