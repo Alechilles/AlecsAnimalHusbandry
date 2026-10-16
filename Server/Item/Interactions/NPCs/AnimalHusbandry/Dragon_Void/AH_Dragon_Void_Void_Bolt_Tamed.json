@@ -1,6 +1,6 @@
 {
   "Type": "Serial",
-  "$Comment": "Charge up, then one large void orb.",
+  "$Comment": "Charge up, then one large void orb. The launch burst replaces the charge orb, so the orb seems to become the bolt.",
   "Interactions": [
     {
       "Type": "Simple",
@@ -28,7 +28,20 @@
       "Type": "Projectile",
       "Config": "AH_Dragon_Void_Singularity_Bolt_Tamed",
       "Effects": {
-        "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch"
+        "WorldSoundEventId": "SFX_AH_Dragon_Void_Void_Bolt_Launch",
+        "Particles": [
+          {
+            "TargetEntityPart": "Entity",
+            "TargetNodeName": "Snout",
+            "SystemId": "VoidImpact",
+            "DetachedFromModel": true,
+            "PositionOffset": {
+              "Y": -0.6,
+              "Z": 0.6
+            },
+            "Scale": 0.7
+          }
+        ]
       },
       "Tags": {
         "AimingReference": []
