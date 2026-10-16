@@ -784,6 +784,20 @@
           }
         }
       ]
+    },
+    "Swing_Right_Damage": {
+      "Interactions": [
+        {
+          "Parent": "AH_Dragon_Void_Swing_Right_Damage",
+          "DamageCalculator": {
+            "Type": "Absolute",
+            "BaseDamage": {
+              "Physical": 68
+            },
+            "RandomPercentageModifier": 0.1
+          }
+        }
+      ]
     }
   },
   "Instructions": [
