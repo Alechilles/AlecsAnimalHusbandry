@@ -3047,6 +3047,51 @@
                       }
                     },
                     {
+                      "$Comment": "Tail sweep only at a target behind, like the vanilla cow's kick: the locked target is close and outside the front 270 degrees. No aiming, so the dragon whips its tail without turning first.",
+                      "Sensor": {
+                        "Type": "And",
+                        "Sensors": [
+                          {
+                            "Type": "Target",
+                            "TargetSlot": "LockedTarget",
+                            "Range": 9,
+                            "Filters": [
+                              {
+                                "Type": "Not",
+                                "Filter": {
+                                  "Type": "ViewSector",
+                                  "ViewSector": 270
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "Type": "Timer",
+                            "Name": "AH_Dragon_Void_Tail_Sweep",
+                            "State": "Stopped"
+                          }
+                        ]
+                      },
+                      "ActionsBlocking": true,
+                      "Actions": [
+                        {
+                          "Type": "Attack",
+                          "Attack": "Root_NPC_AH_Dragon_Void_Tail_Sweep",
+                          "SkipAiming": true
+                        },
+                        {
+                          "Type": "TimerStart",
+                          "Name": "AH_Dragon_Void_Tail_Sweep",
+                          "StartValueRange": [ 7, 13 ],
+                          "RestartValueRange": [ 7, 13 ]
+                        },
+                        {
+                          "Type": "TimerRestart",
+                          "Name": "AH_Dragon_Void_Tail_Sweep"
+                        }
+                      ]
+                    },
+                    {
                       "Sensor": {
                         "Type": "CombatActionEvaluator",
                         "TargetInRange": true
