@@ -171,26 +171,39 @@ def lowest(model, clip, t):
     return min(ys) if ys else 0.0
 
 
-def ground_fix(doc, walk, model, root):
-    """Raise or lower `root` per sample so the turn's lowest point matches the walk's (planted feet)."""
+def ground_fix(doc, walk, model, root, harmonics=2, keep=85):
+    """Keep the feet on the walk's ground without jerking the body.
+
+    Straighter legs reach lower than the walk's angled ones, by an amount that changes over the cycle.
+    The needed lift is fitted with a smooth periodic curve of at most `harmonics` bobs per cycle and
+    added to `root`, baked as linear keys every 2 frames so no key eases the body to a stop. A constant
+    is added so the feet do not sink on `keep` percent of frames."""
     dur = doc.get("duration", 1)
     cw, ct = Clip(walk), Clip(doc)
-    times = sorted({int(round(dur * i / 8)) % dur for i in range(8)})
+    frames = np.arange(dur)
+    ground = float(np.median([lowest(model, cw, t) for t in frames]))
+    need = np.array([ground - lowest(model, ct, t) for t in frames])
+    if np.max(np.abs(need)) < 0.05:
+        return 0.0
+    ph = 2 * np.pi * frames / dur
+    cols = [np.ones(dur)]
+    for h in range(1, harmonics + 1):
+        cols += [np.cos(h * ph), np.sin(h * ph)]
+    A = np.stack(cols, 1)
+    coef, *_ = np.linalg.lstsq(A, need, rcond=None)
+    fit = A @ coef
+    fit += float(np.percentile(need - fit, keep))
     ch = doc["nodeAnimations"].setdefault(root, {})
     for c in ("orientation", "position", "shapeStretch", "shapeVisible", "shapeUvOffset"):
         ch.setdefault(c, [])
     old = ch["position"]
-    fixes = []
     keys = []
-    for t in times:
-        d = lowest(model, cw, t) - lowest(model, ct, t)
-        fixes.append(d)
+    for t in range(0, dur, 2):
         base = ct._sample(old, t, "v") if old else (0, 0, 0)
-        keys.append({"time": t, "delta": {"x": round(base[0], 6), "y": round(base[1] + d, 6), "z": round(base[2], 6)},
-                     "interpolationType": "smooth"})
-    if max(abs(x) for x in fixes) > 0.05:
-        ch["position"] = keys
-    return max(fixes) if fixes else 0.0
+        keys.append({"time": t, "delta": {"x": round(base[0], 4), "y": round(base[1] + float(fit[t]), 4), "z": round(base[2], 4)},
+                     "interpolationType": "linear"})
+    ch["position"] = keys
+    return float(np.max(need - fit))
 
 
 def is_root_handle(nodes, name):
@@ -287,7 +300,7 @@ def build(walk, model, lean, swing=0.25):
             continue
         ch = anims.setdefault(nm, {})
         old = ch.get("orientation") or []
-        times = sorted({k["time"] for k in old} | {int(round(tl + dur * f)) % dur for f in (0, 0.25, 0.5, 0.75)})
+        times = list(range(0, dur, 2))
         pb = bind_world(nodes, nm)
         fwd_local = qrot(qconj(pb), (0, 0, 1))
         keys = []
@@ -295,7 +308,7 @@ def build(walk, model, lean, swing=0.25):
             base = clip._sample(old, t, "q") if old else (0, 0, 0, 1)
             bump = max(0.0, math.cos(2 * math.pi * (t - tl) / dur))
             keys.append({"time": t, "delta": dq(qmul(qaxis(fwd_local, amp * bump), np.array(base, float))),
-                         "interpolationType": "smooth"})
+                         "interpolationType": "linear"})
         ch["orientation"] = keys
         for c in ("position", "shapeStretch", "shapeVisible", "shapeUvOffset"):
             ch.setdefault(c, [])
