@@ -1775,6 +1775,114 @@
                      "children": []
                     },
                     {
+                     "id": "232",
+                     "name": "Mouth-Snout-R--V",
+                     "position": {
+                      "x": -16.9995,
+                      "y": 9.0929,
+                      "z": -4.6402
+                     },
+                     "orientation": {
+                      "x": -0.087151,
+                      "y": 8e-06,
+                      "z": 3e-06,
+                      "w": 0.996195
+                     },
+                     "shape": {
+                      "type": "box",
+                      "offset": {
+                       "x": 0.0,
+                       "y": 0.0,
+                       "z": 0.0
+                      },
+                      "stretch": {
+                       "x": 1.0,
+                       "y": 1.0,
+                       "z": 1.0
+                      },
+                      "settings": {
+                       "isPiece": false,
+                       "size": {
+                        "x": 2,
+                        "y": 27,
+                        "z": 61
+                       }
+                      },
+                      "textureLayout": {
+                       "right": {
+                        "offset": {
+                         "x": 0,
+                         "y": 343
+                        },
+                        "mirror": {
+                         "x": false,
+                         "y": false
+                        },
+                        "angle": 0
+                       }
+                      },
+                      "unwrapMode": "custom",
+                      "visible": true,
+                      "doubleSided": false,
+                      "shadingMode": "flat"
+                     },
+                     "children": []
+                    },
+                    {
+                     "id": "231",
+                     "name": "Mouth-Snout-L--V",
+                     "position": {
+                      "x": 17.0005,
+                      "y": 9.093,
+                      "z": -4.6408
+                     },
+                     "orientation": {
+                      "x": -0.087151,
+                      "y": 8e-06,
+                      "z": 3e-06,
+                      "w": 0.996195
+                     },
+                     "shape": {
+                      "type": "box",
+                      "offset": {
+                       "x": 0.0,
+                       "y": 0.0,
+                       "z": 0.0
+                      },
+                      "stretch": {
+                       "x": 1.0,
+                       "y": 1.0,
+                       "z": 1.0
+                      },
+                      "settings": {
+                       "isPiece": false,
+                       "size": {
+                        "x": 2,
+                        "y": 27,
+                        "z": 61
+                       }
+                      },
+                      "textureLayout": {
+                       "left": {
+                        "offset": {
+                         "x": 0,
+                         "y": 343
+                        },
+                        "mirror": {
+                         "x": false,
+                         "y": false
+                        },
+                        "angle": 0
+                       }
+                      },
+                      "unwrapMode": "custom",
+                      "visible": true,
+                      "doubleSided": false,
+                      "shadingMode": "flat"
+                     },
+                     "children": []
+                    },
+                    {
                      "id": "181",
                      "name": "Mouth-Inner--C1--V",
                      "children": [],
@@ -2719,6 +2827,61 @@
                   "visible": false,
                   "doubleSided": true,
                   "shadingMode": "fullbright"
+                 }
+                },
+                {
+                 "id": "230",
+                 "name": "Mouth-Roof--V",
+                 "children": [],
+                 "position": {
+                  "x": 2e-05,
+                  "y": 74.17168,
+                  "z": 29.52453
+                 },
+                 "orientation": {
+                  "x": -0.953716,
+                  "y": -1e-06,
+                  "z": 3e-06,
+                  "w": 0.30071
+                 },
+                 "shape": {
+                  "type": "quad",
+                  "offset": {
+                   "x": 5e-05,
+                   "y": 4.51723,
+                   "z": -7.84234
+                  },
+                  "stretch": {
+                   "x": 1.1,
+                   "y": 1.025,
+                   "z": 1.0
+                  },
+                  "settings": {
+                   "isPiece": false,
+                   "size": {
+                    "x": 29,
+                    "y": 69
+                   },
+                   "normal": "+Z",
+                   "isStaticBox": true
+                  },
+                  "textureLayout": {
+                   "front": {
+                    "offset": {
+                     "x": 773,
+                     "y": 89
+                    },
+                    "mirror": {
+                     "x": false,
+                     "y": false
+                    },
+                    "angle": 0
+                   }
+                  },
+                  "unwrapMode": "custom",
+                  "visible": true,
+                  "doubleSided": true,
+                  "shadingMode": "flat"
                  }
                 },
                 {
