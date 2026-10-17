@@ -171,6 +171,59 @@ def lowest(model, clip, t):
     return min(ys) if ys else 0.0
 
 
+def qlog(q):
+    """Rotation vector (degrees) of a unit quaternion."""
+    q = qnorm(q)
+    if q[3] < 0:
+        q = -q
+    v = q[:3]; n = np.linalg.norm(v)
+    if n < 1e-9:
+        return np.zeros(3)
+    return v / n * math.degrees(2 * math.atan2(n, q[3]))
+
+
+def reduce_to_extremes(doc, max_keys=6, min_rot=1.5, min_pos=0.15):
+    """Keys belong at the extremes. Any channel with more than `max_keys` keys (a dense source clip)
+    keeps only the keys where one of its components turns round, dropping wiggles below the thresholds."""
+    for ch in doc.get("nodeAnimations", {}).values():
+        for c, conv, thr in (("orientation", None, min_rot), ("position", None, min_pos)):
+            ks = ch.get(c) or []
+            if len(ks) <= max_keys:
+                continue
+            if c == "orientation":
+                ref = qmean([qd(k["delta"]) for k in ks])
+                vals = np.array([qlog(qmul(qconj(ref), qd(k["delta"]))) for k in ks])
+            else:
+                vals = np.array([[k["delta"][a] for a in "xyz"] for k in ks])
+            keep = set()
+            for axis in range(3):
+                for i in extremes(vals[:, axis], thr):
+                    if np.ptp(vals[:, axis]) >= thr:
+                        keep.add(i)
+            if len(keep) < 2:
+                keep = {int(np.argmax(np.linalg.norm(vals - vals.mean(0), axis=1))), 0}
+            ch[c] = [ks[i] for i in sorted(keep)]
+
+
+def extremes(y, min_step=0.15):
+    """Frames of the highs and lows of a looping curve, dropping wiggles smaller than `min_step`."""
+    n = len(y)
+    idx = [i for i in range(n) if (y[i] >= y[i - 1] and y[i] > y[(i + 1) % n]) or (y[i] <= y[i - 1] and y[i] < y[(i + 1) % n])]
+    if len(idx) < 2:
+        return [int(np.argmax(y)), int(np.argmin(y))] if np.ptp(y) > 0 else [0]
+    changed = True
+    while changed and len(idx) > 2:
+        changed = False
+        for j in range(len(idx)):
+            a, b = idx[j], idx[(j + 1) % len(idx)]
+            if abs(y[a] - y[b]) < min_step:
+                # drop the pair member that is the weaker extreme
+                idx.remove(b if abs(y[b] - np.mean(y)) < abs(y[a] - np.mean(y)) else a)
+                changed = True
+                break
+    return sorted(set(idx))
+
+
 def ground_fix(doc, walk, model, root, harmonics=2, keep=85):
     """Keep the feet on the walk's ground without jerking the body.
 
@@ -197,11 +250,12 @@ def ground_fix(doc, walk, model, root, harmonics=2, keep=85):
     for c in ("orientation", "position", "shapeStretch", "shapeVisible", "shapeUvOffset"):
         ch.setdefault(c, [])
     old = ch["position"]
+    base = [ct._sample(old, t, "v") if old else (0, 0, 0) for t in frames]
+    y = np.array([b[1] for b in base]) + fit
     keys = []
-    for t in range(0, dur, 2):
-        base = ct._sample(old, t, "v") if old else (0, 0, 0)
-        keys.append({"time": t, "delta": {"x": round(base[0], 4), "y": round(base[1] + float(fit[t]), 4), "z": round(base[2], 4)},
-                     "interpolationType": "linear"})
+    for t in extremes(y):
+        keys.append({"time": int(t), "delta": {"x": round(base[t][0], 4), "y": round(float(y[t]), 4), "z": round(base[t][2], 4)},
+                     "interpolationType": "smooth"})
     ch["position"] = keys
     return float(np.max(need - fit))
 
@@ -300,16 +354,25 @@ def build(walk, model, lean, swing=0.25):
             continue
         ch = anims.setdefault(nm, {})
         old = ch.get("orientation") or []
-        times = list(range(0, dur, 2))
         pb = bind_world(nodes, nm)
         fwd_local = qrot(qconj(pb), (0, 0, 1))
-        keys = []
-        for t in times:
-            base = clip._sample(old, t, "q") if old else (0, 0, 0, 1)
-            bump = max(0.0, math.cos(2 * math.pi * (t - tl) / dur))
-            keys.append({"time": t, "delta": dq(qmul(qaxis(fwd_local, amp * bump), np.array(base, float))),
-                         "interpolationType": "linear"})
-        ch["orientation"] = keys
+        if len(old) >= 2:
+            # keys stay at the walk's own extremes: the step peaks on the key nearest the lift
+            # and reverses on the one opposite it, so no in-between key is added
+            def phase(t):
+                d = abs((t - tl) % dur)
+                return min(d, dur - d)
+            near = min(old, key=lambda k: phase(k["time"]))["time"]
+            for k in old:
+                w = 1.0 if k["time"] == near else max(-0.5, math.cos(2 * math.pi * phase(k["time"]) / dur))
+                k["delta"] = dq(qmul(qaxis(fwd_local, amp * w), qd(k["delta"])))
+        else:
+            # no swing keys to ride on: key the step's two extremes only
+            base = qd(old[0]["delta"]) if old else np.array([0, 0, 0, 1.0])
+            ch["orientation"] = [{"time": int(round(t)) % dur, "delta": dq(qmul(qaxis(fwd_local, amp * w), base)),
+                                  "interpolationType": "smooth"}
+                                 for t, w in ((tl, 1.0), (tl + dur / 2.0, -0.5))]
+            ch["orientation"].sort(key=lambda k: k["time"])
         for c in ("position", "shapeStretch", "shapeVisible", "shapeUvOffset"):
             ch.setdefault(c, [])
     # 2. curve the spine into the turn, about each node's own up axis
@@ -337,6 +400,7 @@ def build(walk, model, lean, swing=0.25):
         spine_root = chain[0] if chain else None
     if spine_root:
         ground_fix(doc, walk, model, spine_root)
+    reduce_to_extremes(doc)
     return doc, sorted(offs.items()), limb_roots(nodes)
 
 

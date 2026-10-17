@@ -176,76 +176,13 @@
     "Pelvis": {
       "position": [
         {
-          "time": 0,
+          "time": 1,
           "delta": {
             "x": 0.0,
-            "y": 2.3633,
+            "y": 2.2424,
             "z": 0.0
           },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 2,
-          "delta": {
-            "x": 0.0,
-            "y": 2.4494,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 4,
-          "delta": {
-            "x": 0.0,
-            "y": 3.7566,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 6,
-          "delta": {
-            "x": 0.0,
-            "y": 5.7667,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 8,
-          "delta": {
-            "x": 0.0,
-            "y": 7.9152,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 10,
-          "delta": {
-            "x": 0.0,
-            "y": 10.0204,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 12,
-          "delta": {
-            "x": 0.0,
-            "y": 12.1576,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 14,
-          "delta": {
-            "x": 0.0,
-            "y": 14.352,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
+          "interpolationType": "smooth"
         },
         {
           "time": 16,
@@ -254,61 +191,7 @@
             "y": 15.7614,
             "z": 0.0
           },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 18,
-          "delta": {
-            "x": 0.0,
-            "y": 15.1503,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 20,
-          "delta": {
-            "x": 0.0,
-            "y": 12.986,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 22,
-          "delta": {
-            "x": 0.0,
-            "y": 10.0446,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 24,
-          "delta": {
-            "x": 0.0,
-            "y": 7.074,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 26,
-          "delta": {
-            "x": 0.0,
-            "y": 4.5175,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 28,
-          "delta": {
-            "x": 0.0,
-            "y": 2.6128,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
+          "interpolationType": "smooth"
         },
         {
           "time": 30,
@@ -317,34 +200,7 @@
             "y": 1.5313,
             "z": 0.0
           },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 32,
-          "delta": {
-            "x": 0.0,
-            "y": 1.7928,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 34,
-          "delta": {
-            "x": 0.0,
-            "y": 2.2452,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
-        },
-        {
-          "time": 36,
-          "delta": {
-            "x": 0.0,
-            "y": 2.6706,
-            "z": 0.0
-          },
-          "interpolationType": "linear"
+          "interpolationType": "smooth"
         },
         {
           "time": 38,
@@ -353,7 +209,7 @@
             "y": 2.7862,
             "z": 0.0
           },
-          "interpolationType": "linear"
+          "interpolationType": "smooth"
         }
       ],
       "orientation": [
