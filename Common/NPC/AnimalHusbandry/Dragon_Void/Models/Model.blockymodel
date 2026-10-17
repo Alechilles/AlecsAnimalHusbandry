@@ -1685,6 +1685,114 @@
                    }
                   },
                   {
+                   "id": "228",
+                   "name": "Mouth-Side-R--V",
+                   "children": [],
+                   "position": {
+                    "x": -17.9998,
+                    "y": -12.6844,
+                    "z": -30.2478
+                   },
+                   "orientation": {
+                    "x": -0.087151,
+                    "y": 8e-06,
+                    "z": 3e-06,
+                    "w": 0.996195
+                   },
+                   "shape": {
+                    "type": "box",
+                    "offset": {
+                     "x": 0.0,
+                     "y": 0.0,
+                     "z": 0.0
+                    },
+                    "stretch": {
+                     "x": 1.0,
+                     "y": 1.0,
+                     "z": 1.0
+                    },
+                    "settings": {
+                     "isPiece": false,
+                     "size": {
+                      "x": 2,
+                      "y": 51,
+                      "z": 18
+                     }
+                    },
+                    "textureLayout": {
+                     "right": {
+                      "offset": {
+                       "x": 105,
+                       "y": 210
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 90
+                     }
+                    },
+                    "unwrapMode": "custom",
+                    "visible": true,
+                    "doubleSided": false,
+                    "shadingMode": "flat"
+                   }
+                  },
+                  {
+                   "id": "227",
+                   "name": "Mouth-Side-L--V",
+                   "children": [],
+                   "position": {
+                    "x": 18.0002,
+                    "y": -12.6843,
+                    "z": -30.2484
+                   },
+                   "orientation": {
+                    "x": -0.087151,
+                    "y": 8e-06,
+                    "z": 3e-06,
+                    "w": 0.996195
+                   },
+                   "shape": {
+                    "type": "box",
+                    "offset": {
+                     "x": 0.0,
+                     "y": 0.0,
+                     "z": 0.0
+                    },
+                    "stretch": {
+                     "x": 1.0,
+                     "y": 1.0,
+                     "z": 1.0
+                    },
+                    "settings": {
+                     "isPiece": false,
+                     "size": {
+                      "x": 2,
+                      "y": 51,
+                      "z": 18
+                     }
+                    },
+                    "textureLayout": {
+                     "left": {
+                      "offset": {
+                       "x": 105,
+                       "y": 210
+                      },
+                      "mirror": {
+                       "x": false,
+                       "y": false
+                      },
+                      "angle": 90
+                     }
+                    },
+                    "unwrapMode": "custom",
+                    "visible": true,
+                    "doubleSided": false,
+                    "shadingMode": "flat"
+                   }
+                  },
+                  {
                    "id": "180",
                    "name": "Mouth-Inner--C1--V",
                    "children": [],
