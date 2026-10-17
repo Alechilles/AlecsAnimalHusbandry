@@ -1,0 +1,39 @@
+{
+  "Id": "AH_Animations_Warthog_Piglet",
+  "$Comment": "Adds generated turn-in-place clips as TurnLeft and TurnRight. Tamework plays them while an idle NPC's body turns. Child models inherit them.",
+  "Targets": [
+    "Server/Models/Livestock/Warthog_Piglet.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Warthog_Piglet/Animations/Turn_Left.blockyanim",
+                "Speed": 1.6
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Warthog_Piglet/Animations/Turn_Right.blockyanim",
+                "Speed": 1.6
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

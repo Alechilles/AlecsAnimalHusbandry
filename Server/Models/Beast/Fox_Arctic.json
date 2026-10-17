@@ -36,6 +36,22 @@
     }
   },
   "AnimationSets": {
+    "TurnLeft": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Fox_Arctic/Animations/Turn_Left.blockyanim",
+          "Speed": 1.4
+        }
+      ]
+    },
+    "TurnRight": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Fox_Arctic/Animations/Turn_Right.blockyanim",
+          "Speed": 1.4
+        }
+      ]
+    },
     "Idle": {
       "Animations": [
         {

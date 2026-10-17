@@ -29,6 +29,22 @@
                 "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Curious.blockyanim"
               }
             ]
+          },
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Turn_Left.blockyanim",
+                "Speed": 2
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Gecko/Animations/Turn_Right.blockyanim",
+                "Speed": 2
+              }
+            ]
           }
         }
       }

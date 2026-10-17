@@ -22,6 +22,22 @@
                 "Animation": "NPC/AnimalHusbandry/Tiger_Sabertooth/Animations/Eat.blockyanim"
               }
             ]
+          },
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Tiger_Sabertooth/Animations/Turn_Left.blockyanim",
+                "Speed": 0.8
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Tiger_Sabertooth/Animations/Turn_Right.blockyanim",
+                "Speed": 0.8
+              }
+            ]
           }
         }
       }

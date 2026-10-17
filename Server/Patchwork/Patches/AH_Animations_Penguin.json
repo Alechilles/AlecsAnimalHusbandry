@@ -1,0 +1,37 @@
+{
+  "Id": "AH_Animations_Penguin",
+  "$Comment": "Adds generated turn-in-place clips as TurnLeft and TurnRight. Tamework plays them while an idle NPC's body turns. Child models inherit them.",
+  "Targets": [
+    "Server/Models/Wildlife/Penguin.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Penguin/Animations/Turn_Left.blockyanim"
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Penguin/Animations/Turn_Right.blockyanim"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

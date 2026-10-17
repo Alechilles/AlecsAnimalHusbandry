@@ -1,0 +1,39 @@
+{
+  "Id": "AH_Animations_Moose_Cow",
+  "$Comment": "Adds generated turn-in-place clips as TurnLeft and TurnRight. Tamework plays them while an idle NPC's body turns. Child models inherit them.",
+  "Targets": [
+    "Server/Models/Wildlife/Moose_Cow.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Moose_Cow/Animations/Turn_Left.blockyanim",
+                "Speed": 0.8
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Moose_Cow/Animations/Turn_Right.blockyanim",
+                "Speed": 0.8
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

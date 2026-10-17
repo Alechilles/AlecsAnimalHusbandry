@@ -22,6 +22,22 @@
                 "Animation": "NPC/AnimalHusbandry/Larva/Animations/Eat.blockyanim"
               }
             ]
+          },
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Larva/Animations/Turn_Left.blockyanim",
+                "Speed": 2.5
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Larva/Animations/Turn_Right.blockyanim",
+                "Speed": 2.5
+              }
+            ]
           }
         }
       }

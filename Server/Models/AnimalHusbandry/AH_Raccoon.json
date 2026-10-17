@@ -38,6 +38,20 @@
     }
   },
   "AnimationSets": {
+    "TurnLeft": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Turn_Left.blockyanim"
+        }
+      ]
+    },
+    "TurnRight": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Raccoon/Animations/Default/Turn_Right.blockyanim"
+        }
+      ]
+    },
     "Idle": {
       "Animations": [
         {

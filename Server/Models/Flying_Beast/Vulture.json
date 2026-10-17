@@ -36,6 +36,20 @@
     }
   },
   "AnimationSets": {
+    "TurnLeft": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Vulture/Animations/Turn_Left.blockyanim"
+        }
+      ]
+    },
+    "TurnRight": {
+      "Animations": [
+        {
+          "Animation": "NPC/AnimalHusbandry/Vulture/Animations/Turn_Right.blockyanim"
+        }
+      ]
+    },
     "Idle": {
       "Animations": [
         {

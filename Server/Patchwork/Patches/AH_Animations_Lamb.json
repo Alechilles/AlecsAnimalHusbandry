@@ -1,0 +1,39 @@
+{
+  "Id": "AH_Animations_Lamb",
+  "$Comment": "Adds generated turn-in-place clips as TurnLeft and TurnRight. Tamework plays them while an idle NPC's body turns. Child models inherit them.",
+  "Targets": [
+    "Server/Models/Livestock/Lamb.json"
+  ],
+  "When": {
+    "TargetExists": true
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "add-animation-sets",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "AnimationSets": {
+          "TurnLeft": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Lamb/Animations/Turn_Left.blockyanim",
+                "Speed": 1.4
+              }
+            ]
+          },
+          "TurnRight": {
+            "Animations": [
+              {
+                "Animation": "NPC/AnimalHusbandry/Lamb/Animations/Turn_Right.blockyanim",
+                "Speed": 1.4
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
