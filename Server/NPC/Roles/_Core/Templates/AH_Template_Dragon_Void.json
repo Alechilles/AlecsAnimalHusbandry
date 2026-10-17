@@ -3077,7 +3077,9 @@
                         {
                           "Type": "Attack",
                           "Attack": "Root_NPC_AH_Dragon_Void_Tail_Sweep",
-                          "SkipAiming": true
+                          "SkipAiming": true,
+                          "LineOfSight": false,
+                          "AvoidFriendlyFire": false
                         },
                         {
                           "Type": "TimerStart",
