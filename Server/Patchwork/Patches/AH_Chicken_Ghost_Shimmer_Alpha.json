@@ -1,0 +1,22 @@
+{
+  "Id": "AH_Chicken_Ghost_Shimmer_Alpha",
+  "$Comment": "Hytale 0.7 added AlphaTransparency, which 0.6.x cannot decode. The shimmer ships with Transparency so it loads on 0.6.x, and this patch switches it to the smoother AlphaTransparency on 0.7 and later.",
+  "Target": "Server/Entity/ModelVFX/AH_Chicken_Ghost_Shimmer.json",
+  "When": {
+    "ServerVersion": {
+      "AtLeast": "0.7"
+    }
+  },
+  "Priority": 0,
+  "Enabled": true,
+  "Operations": [
+    {
+      "Id": "use-alpha-transparency",
+      "Op": "Merge",
+      "Path": "",
+      "Value": {
+        "SwitchTo": "AlphaTransparency"
+      }
+    }
+  ]
+}
