@@ -1,7 +1,6 @@
 {
-  "Environments": [
-    "Env_Zone4_Wastes"
-  ],
+  "$Comment": "Disabled: no environments, so this beacon never spawns. Restore Environments to Env_Zone4_Wastes to re-enable.",
+  "Environments": [],
   "MinDistanceFromPlayer": 40,
   "MaxSpawnedNPCs": 1,
   "ConcurrentSpawnsRange": [

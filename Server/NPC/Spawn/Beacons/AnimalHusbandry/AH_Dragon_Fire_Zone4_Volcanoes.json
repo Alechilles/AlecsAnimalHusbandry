@@ -1,7 +1,6 @@
 {
-  "Environments": [
-    "Env_Zone4_Volcanoes"
-  ],
+  "$Comment": "Disabled: no environments, so this beacon never spawns. Restore Environments to Env_Zone4_Volcanoes to re-enable.",
+  "Environments": [],
   "MinDistanceFromPlayer": 40,
   "MaxSpawnedNPCs": 1,
   "ConcurrentSpawnsRange": [
