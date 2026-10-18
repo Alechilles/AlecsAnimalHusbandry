@@ -1,7 +1,7 @@
 {
   "Group": "Alechilles",
   "Name": "Alec's Animal Husbandry!",
-  "Version": "4.0.0",
+  "Version": "4.1.0",
   "Description": "Player-facing livestock taming, breeding, and husbandry systems powered by Alec's Tamework.",
   "Authors": [
     {
@@ -12,9 +12,9 @@
     }
   ],
   "Website": "",
-  "ServerVersion": ">=0.6.7 <0.7.0",
+  "ServerVersion": ">=0.6.7 <0.8.0",
   "Dependencies": {
-    "Alechilles:Alec's Tamework!": ">=5.0.0 <6.0"
+    "Alechilles:Alec's Tamework!": ">=5.4.0 <6.0"
   },
   "OptionalDependencies": {
     "Alechilles:Alec's Coops!": "*",

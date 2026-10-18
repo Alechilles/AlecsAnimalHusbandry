@@ -1,20 +1,33 @@
 # Changelog
 
-## Unreleased
+## 4.1.0 - Turning Animations and the Ghost Chicken - 2026-10-17
 
-- On Hytale Update 7, the E and R shortcuts on the Animal Control Flute and Combat Beast Flute keep working. Both flutes count as weapons there, because the Update 7 client only sends those keys with a weapon in hand.
-- Added wild Fire Dragons, named Ember Dragon in game. They spawn in Zone 4 volcanoes during the day, one dragon per beacon, with a 1-3 minute initial delay and a 15-25 minute respawn cooldown. They have 400 health and drop 4-6 Fire Essence.
-- Fire Dragons attack with a bite, a wing swing, Fire Breath on the ground and in flight, Fire Bolt volleys, Meteor Volley, and Dive Bomb.
-- Added wild Void Dragons. They spawn in Zone 4 wastes at night under the same beacon rules, have 400 health, and drop 4-6 Void Essence.
-- Void Dragons walk as wyverns and attack with a bite, left and right wing swipes, a tail sweep, a wing gust, Void Breath on the ground and in flight, Void Bolts, and a singularity held at the mouth that drags players in and then bursts. They can also summon Void Spawn.
-- Fire and Void Dragons can be tamed like Frost Dragons: weaken one to 20% health, tranquilize it, then feed it Fire Essence or Void Essence. Tamed dragons have 200 health and accept Combat Beast Flute commands and Soul Lantern capture.
-- Tamed Fire and Void Dragons can be ridden with the Flightmaster's Talisman. Each has two flight abilities: Fire Bolt and Fire Breath, or Void Bolt and Void Breath, with 10-second and 15-second cooldowns.
-- Wild dragons, including Frost Dragons, now cruise and soar while idle in flight and keep a level height against flying targets. In flight they wander up to 80 blocks from their home point, or 100 blocks for Void Dragons.
+Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7. Requires Alec's Tamework `>=5.4.0 <6.0`. Update both mods together.
+
+- Animals now step around when they turn on the spot, instead of spinning in place. Cows, calves, and pigs use the base game's unused turning animations, and every other tameable animal and the Frost Dragon get a new turning animation built from their own walk.
+- Added the Ghost Chicken, an easter egg. On about one new moon in three it appears on top of a chicken coop: it floats about, blinks out of sight every so often, and vanishes when a player comes within 5 blocks. It is see-through and glows, fades away at dawn, and cannot be hurt.
+- Wild Frost Dragons now cruise and soar while idle in flight and keep a level height against flying targets. In flight they wander up to 80 blocks from their home point.
+
+## 4.0.2 - Hytale 0.7.0 Support and Creature Fixes - 2026-10-13
+
+Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7.0. On Hytale 0.7.0, use Alec's Tamework 5.2.1 or later.
+
+- Fixed servers on Hytale 0.7.0 shutting down at startup with a failed NPC validation for `Spider_Cave_Ambush`.
+- Ambush Cave Spiders stand still while idle, as in the base game.
+- Spiders and Cave Spiders now match their Update 7 stats and are afraid of torches. A spider keeps its distance while its target holds a torch and looks at it.
+- Wild wolf packs take turns attacking again, as in the base game.
 - Raised Eggzooka egg damage from 4 to 15.
 - Tamework's Tranquilizer Dart Rifle and Tranquilizer Darts are now crafted at the Animal Husbandry Workbench instead of the Weapon Bench.
 - Raccoons now keep walking while they sniff their way toward a held egg.
-- Animals now step around when they turn on the spot, instead of spinning in place. Cows, calves, and pigs use the base game's unused turning animations, and every other tameable animal and dragon gets a new turning animation built from its own walk. This needs the next Tamework update.
-- Added the Ghost Chicken, an easter egg. On about one new moon in three it appears on top of a chicken coop: it floats about, blinks out of sight every so often, and vanishes when a player comes within 5 blocks. It is see-through and glows, fades away at dawn, and cannot be hurt.
+- Added Curious animations for Cactees, Geckos, Meerkats, Snails, Squirrels, and Magma Slugs, plus Idle and Alerted animations for Magma Slugs.
+- Magma Rhino Toads and Magma Slugs are immune to fire again.
+- Wild and tamed Skrill lay eggs again, as in the base game.
+- Wild snails pause 8-12 seconds between wanders again, as in the base game.
+- Restored base-game death particles: a medium burst for predators, flames for magma creatures, and bones for skeleton horses.
+
+## 4.0.1 - Flute Shortcuts on Update 7 - 2026-10-09
+
+- On Hytale Update 7, the E and R shortcuts on the Animal Control Flute and Combat Beast Flute keep working. The Update 7 client only sends those keys with a weapon in hand, so both flutes count as weapons there. Nothing changes on Update 6.
 
 ## 4.0.0 - Husbandry Workbench, Raccoons, and the Eggzooka - 2026-10-05
 
