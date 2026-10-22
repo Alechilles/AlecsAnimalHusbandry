@@ -4,6 +4,7 @@
 
 - Tamed animals no longer drift away while wandering. Their wander area now moves only when you take them out of Follow, Hold, or a move command, not every time they nap, eat, drink, flee, or fight, so they stay near where you told them to wander.
 - When you tell a following animal to wander, its wander area now centers on where you stand, as long as you are within 16 blocks, instead of on the spot where it stopped.
+- Tamed dragons now keep a wander area the same way: it moves to where they leave Follow, Hold, a move command, or being ridden, and to where you stand when they stop following you. Before, they always wandered back to where they were tamed or spawned.
 - Tamed dragons that end up in water while idle, for example after landing in it, now walk back out toward their wander area instead of wading around in it.
 - Tamed predators and small critters that wander into water walk back toward their wander area and no longer settle or sleep underwater. They can still breathe underwater, so they can reach water to drink and follow you through it.
 - Tamed livestock and birds now follow you through water. They only run out of water when they are wandering, so stepping into water no longer drops them out of Follow, Hold, or a move command, or interrupts a trip to drink.

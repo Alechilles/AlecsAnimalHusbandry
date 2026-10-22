@@ -832,6 +832,57 @@
   ],
   "StateTransitions": [
     {
+      "$Comment": "Move the wander center to where the dragon leaves Follow, Hold, a move command or being ridden, so it wanders where it was told to and not where it last napped, ate, drank or fought.",
+      "States": [
+        {
+          "From": [
+            "Follow",
+            "FollowClose",
+            "Hold",
+            "CommandMove",
+            "Ridden"
+          ],
+          "To": [
+            "Aggressive",
+            "BreedPair",
+            "Defend",
+            "Idle",
+            "NeedsSeekFood",
+            "NeedsSeekWater",
+            "Sleep",
+            "SleepWakeResolve"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetLeashPosition",
+          "ToCurrent": true
+        }
+      ]
+    },
+    {
+      "$Comment": "Leaving Follow for Idle asks the Idle state to center the wander area on the owner.",
+      "States": [
+        {
+          "From": [
+            "Follow",
+            "FollowClose"
+          ],
+          "To": [
+            "Idle"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "Leash_ToOwner",
+          "SetTo": true
+        }
+      ]
+    },
+    {
       "States": [
         {
           "From": [
@@ -1385,6 +1436,62 @@
             "State": "Idle"
           },
           "Instructions": [
+            {
+              "$Comment": "Anchor the wander center once, where the dragon first settles into Idle as a tamed pet. After that only leaving Follow, Hold, a move command or being ridden moves it (see StateTransitions), so naps, meals, drinks and fights do not drag the wander area away.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Alarm",
+                "Name": "Tamed_Leash_Anchored",
+                "State": "Unset"
+              },
+              "Actions": [
+                {
+                  "Type": "SetLeashPosition",
+                  "ToCurrent": true
+                },
+                {
+                  "Type": "SetAlarm",
+                  "Name": "Tamed_Leash_Anchored",
+                  "DurationRange": [
+                    "PT1S",
+                    "PT1S"
+                  ]
+                }
+              ]
+            },
+            {
+              "$Comment": "After Follow ends in Idle, center the wander area on the owner when they are within 16 blocks. Otherwise the dragon keeps the spot where it stopped following.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Flag",
+                "Name": "Leash_ToOwner"
+              },
+              "Instructions": [
+                {
+                  "Continue": true,
+                  "Sensor": {
+                    "Type": "Target",
+                    "TargetSlot": "MasterTarget",
+                    "Range": 16
+                  },
+                  "Actions": [
+                    {
+                      "Type": "SetLeashPosition",
+                      "ToTarget": true
+                    }
+                  ]
+                },
+                {
+                  "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "Leash_ToOwner",
+                      "SetTo": false
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "$Comment": "An idle dragon that ends up in water, for example after landing in it, walks back toward its wander center instead of wading or settling there.",
               "Sensor": {
