@@ -645,6 +645,27 @@
   ],
   "StateTransitions": [
     {
+      "$Comment": "Leaving Follow for Idle asks the Idle state to center the wander area on the owner.",
+      "States": [
+        {
+          "From": [
+            "Follow",
+            "FollowClose"
+          ],
+          "To": [
+            "Idle"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetFlag",
+          "Name": "Leash_ToOwner",
+          "SetTo": true
+        }
+      ]
+    },
+    {
       "$Comment": "Move the wander center to where the pet leaves a Follow, Hold or move command, so it wanders where it was told to and not where it last napped, ate, drank or fought.",
       "States": [
         {
@@ -1962,6 +1983,39 @@
                   "DurationRange": [
                     "PT1S",
                     "PT1S"
+                  ]
+                }
+              ]
+            },
+            {
+              "$Comment": "After Follow ends in Idle, center the wander area on the owner when they are within 16 blocks. Otherwise the pet keeps the spot where it stopped following.",
+              "Continue": true,
+              "Sensor": {
+                "Type": "Flag",
+                "Name": "Leash_ToOwner"
+              },
+              "Instructions": [
+                {
+                  "Continue": true,
+                  "Sensor": {
+                    "Type": "Target",
+                    "TargetSlot": "MasterTarget",
+                    "Range": 16
+                  },
+                  "Actions": [
+                    {
+                      "Type": "SetLeashPosition",
+                      "ToTarget": true
+                    }
+                  ]
+                },
+                {
+                  "Actions": [
+                    {
+                      "Type": "SetFlag",
+                      "Name": "Leash_ToOwner",
+                      "SetTo": false
+                    }
                   ]
                 }
               ]
