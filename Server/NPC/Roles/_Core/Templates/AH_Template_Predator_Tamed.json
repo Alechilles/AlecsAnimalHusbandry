@@ -1642,30 +1642,12 @@
               "Sensor": {
                 "Type": "InWater"
               },
-              "Instructions": [
-                {
-                  "Sensor": {
-                    "Type": "Leash",
-                    "Range": 2
-                  },
-                  "BodyMotion": {
-                    "Type": "Seek",
-                    "SlowDownDistance": 3,
-                    "StopDistance": 1,
-                    "RelativeSpeed": 0.5
-                  }
-                },
-                {
-                  "$Comment": "The wander center itself is in water: keep moving instead of settling.",
-                  "BodyMotion": {
-                    "Type": "WanderInCircle",
-                    "Radius": {
-                      "Compute": "WanderRadius"
-                    },
-                    "RelativeSpeed": 0.5
-                  }
-                }
-              ]
+              "BodyMotion": {
+                "$Comment": "Outside this small circle WanderInCircle only accepts moves that bring the pet closer to its wander center.",
+                "Type": "WanderInCircle",
+                "Radius": 1,
+                "RelativeSpeed": 0.5
+              }
             },
             {
               "$Comment": "Keep flock followers near their leader before regular idle wander.",
