@@ -1386,6 +1386,18 @@
           },
           "Instructions": [
             {
+              "$Comment": "An idle dragon that ends up in water, for example after landing in it, walks back toward its wander center instead of wading or settling there.",
+              "Sensor": {
+                "Type": "InWater"
+              },
+              "BodyMotion": {
+                "$Comment": "Outside this small circle WanderInCircle only accepts moves that bring the dragon closer to its wander center.",
+                "Type": "WanderInCircle",
+                "Radius": 1,
+                "RelativeSpeed": 0.5
+              }
+            },
+            {
               "Sensor": {
                 "Type": "And",
                 "Sensors": [
