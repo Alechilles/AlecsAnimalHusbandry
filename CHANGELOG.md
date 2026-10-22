@@ -4,6 +4,7 @@
 
 - Tamed animals no longer drift away while wandering. Their wander area now moves only when you take them out of Follow, Hold, or a move command, not every time they nap, eat, drink, flee, or fight, so they stay near where you told them to wander.
 - Tamed predators and small critters that wander into water walk back toward their wander area and no longer settle or sleep underwater. They can still breathe underwater, so they can reach water to drink and follow you through it.
+- Tamed livestock and birds now follow you through water. They only run out of water when they are wandering, so stepping into water no longer drops them out of Follow, Hold, or a move command, or interrupts a trip to drink.
 
 ## 4.1.0 - Turning Animations and the Ghost Chicken - 2026-10-17
 

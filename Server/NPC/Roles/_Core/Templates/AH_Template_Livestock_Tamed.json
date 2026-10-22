@@ -1178,7 +1178,7 @@
     },
     {
       "Continue": true,
-      "$Comment": "This is separate so it can run all the time regardless of the rest of the script, when in water go straight to panic to get out",
+      "$Comment": "Idle pets that wander into water panic to get out. Other states, such as Follow, Hold, a move command or a drink trip, may enter water, so the pet keeps doing what it was told.",
       "Instructions": [
         {
           "Sensor": {
@@ -1188,11 +1188,8 @@
                 "Type": "InWater"
               },
               {
-                "Type": "Not",
-                "Sensor": {
-                  "Type": "State",
-                  "State": "Panic"
-                }
+                "Type": "State",
+                "State": "Idle"
               }
             ]
           },
