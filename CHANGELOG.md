@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Tamed animals no longer drift away while wandering. Their wander area now moves only when you take them out of Follow, Hold, or a move command, not every time they nap, eat, drink, flee, or fight, so they stay near where you told them to wander.
+- Tamed predators and small critters that wander into water walk back toward their wander area and no longer settle or sleep underwater. They can still breathe underwater, so they can reach water to drink and follow you through it.
+
 ## 4.1.0 - Turning Animations and the Ghost Chicken - 2026-10-17
 
 Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7. Requires Alec's Tamework `>=5.4.0 <6.0`. Update both mods together.

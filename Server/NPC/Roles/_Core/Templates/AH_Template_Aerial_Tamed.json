@@ -645,6 +645,40 @@
   ],
   "StateTransitions": [
     {
+      "$Comment": "Move the wander center to where the pet leaves a Follow, Hold or move command, so it wanders where it was told to and not where it last napped, ate, drank or fought.",
+      "States": [
+        {
+          "From": [
+            "Follow",
+            "FollowClose",
+            "Hold",
+            "HoldGrounded",
+            "CommandMove"
+          ],
+          "To": [
+            "Alerted",
+            "BreedPair",
+            "Defend",
+            "Flee",
+            "Greet",
+            "Idle",
+            "NeedsSeekFood",
+            "NeedsSeekWater",
+            "Panic",
+            "SeekFood",
+            "Sleep",
+            "SleepWakeResolve"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetLeashPosition",
+          "ToCurrent": true
+        }
+      ]
+    },
+    {
       "States": [
         {
           "From": [
@@ -1913,16 +1947,25 @@
           },
           "Instructions": [
             {
-              "$Comment": "Refresh the base leash point when tamed livestock settles into Idle so leash and wander behavior use the current area.",
+              "$Comment": "Anchor the wander center once, where the pet first settles into Idle as a tamed pet. After that only leaving a Follow, Hold or move command moves it (see StateTransitions), so naps, meals, drinks and fights do not drag the wander area away.",
               "Continue": true,
               "Sensor": {
-                "Type": "Any",
-                "Once": true
+                "Type": "Alarm",
+                "Name": "Tamed_Leash_Anchored",
+                "State": "Unset"
               },
               "Actions": [
                 {
                   "Type": "SetLeashPosition",
                   "ToCurrent": true
+                },
+                {
+                  "Type": "SetAlarm",
+                  "Name": "Tamed_Leash_Anchored",
+                  "DurationRange": [
+                    "PT1S",
+                    "PT1S"
+                  ]
                 }
               ]
             },

@@ -736,6 +736,35 @@
   ],
   "StateTransitions": [
     {
+      "$Comment": "Move the wander center to where the pet leaves a Follow, Hold or move command, so it wanders where it was told to and not where it last napped, ate, drank or fought.",
+      "States": [
+        {
+          "From": [
+            "Follow",
+            "FollowClose",
+            "Hold",
+            "CommandMove"
+          ],
+          "To": [
+            "Aggressive",
+            "BreedPair",
+            "Defend",
+            "Idle",
+            "NeedsSeekFood",
+            "NeedsSeekWater",
+            "Sleep",
+            "SleepWakeResolve"
+          ]
+        }
+      ],
+      "Actions": [
+        {
+          "Type": "SetLeashPosition",
+          "ToCurrent": true
+        }
+      ]
+    },
+    {
       "States": [
         {
           "From": [
@@ -1409,7 +1438,7 @@
           ]
         },
         {
-          "$Comment": "Refresh the base leash point when tamed predators settle into Idle so leash and wander behavior use the current area.",
+          "$Comment": "Anchor the wander center once, where the pet first settles into Idle as a tamed pet. After that only leaving a Follow, Hold or move command moves it (see StateTransitions), so naps, meals, drinks and fights do not drag the wander area away.",
           "Continue": true,
           "Sensor": {
             "Type": "State",
@@ -1419,13 +1448,22 @@
             {
               "Continue": true,
               "Sensor": {
-                "Type": "Any",
-                "Once": true
+                "Type": "Alarm",
+                "Name": "Tamed_Leash_Anchored",
+                "State": "Unset"
               },
               "Actions": [
                 {
                   "Type": "SetLeashPosition",
                   "ToCurrent": true
+                },
+                {
+                  "Type": "SetAlarm",
+                  "Name": "Tamed_Leash_Anchored",
+                  "DurationRange": [
+                    "PT1S",
+                    "PT1S"
+                  ]
                 }
               ]
             }
@@ -1599,6 +1637,36 @@
             "State": "Idle"
           },
           "Instructions": [
+            {
+              "$Comment": "Tamed pets breathe underwater so they can reach water to drink, which also lets wander walk them into it. A pet standing in water walks back toward its wander center and does not settle or nap there.",
+              "Sensor": {
+                "Type": "InWater"
+              },
+              "Instructions": [
+                {
+                  "Sensor": {
+                    "Type": "Leash",
+                    "Range": 2
+                  },
+                  "BodyMotion": {
+                    "Type": "Seek",
+                    "SlowDownDistance": 3,
+                    "StopDistance": 1,
+                    "RelativeSpeed": 0.5
+                  }
+                },
+                {
+                  "$Comment": "The wander center itself is in water: keep moving instead of settling.",
+                  "BodyMotion": {
+                    "Type": "WanderInCircle",
+                    "Radius": {
+                      "Compute": "WanderRadius"
+                    },
+                    "RelativeSpeed": 0.5
+                  }
+                }
+              ]
+            },
             {
               "$Comment": "Keep flock followers near their leader before regular idle wander.",
               "Reference": "Component_Tamework_Instruction_Flock_Follow_Wander",
