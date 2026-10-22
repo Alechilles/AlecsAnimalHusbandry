@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 4.1.1 - Wander and Water Fixes - 2026-10-22
+
+Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7. Requires Alec's Tamework `>=5.4.0 <6.0`.
 
 - Tamed animals no longer drift away while wandering. Their wander area now moves only when you take them out of Follow, Hold, or a move command, not every time they nap, eat, drink, flee, or fight, so they stay near where you told them to wander.
 - When you tell a following animal to wander, its wander area now centers on where you stand, as long as you are within 16 blocks, instead of on the spot where it stopped.
