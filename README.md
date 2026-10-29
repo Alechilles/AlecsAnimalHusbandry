@@ -35,8 +35,12 @@
 
 --------------
 
+<H2>New in v4.2.0</H2>
+<p>Server admins can turn wild dragon spawns on or off in game: open <code>/tw settings</code>, go to <strong>Mod Settings</strong> > <strong>Alec's Animal Husbandry!</strong> > <strong>Mob Spawning</strong>, and toggle <strong>Wild dragons</strong>. The change applies without a restart, and dragons already in the world stay until they despawn normally. Requires Tamework 5.7.0 or later in the 5.x series.</p>
+<p><strong>Have the standalone Patchwork mod installed?</strong> Update it to 1.5.0 or later, or remove it, since Tamework already includes Patchwork. Patchwork 1.4.x makes this version fail to load.</p>
+
 <H2>New in v4.1.0</H2>
-<p>Animals now step around when they turn on the spot instead of spinning in place, with a turning animation for every tameable animal and the Frost Dragon. Wild Frost Dragons cruise and soar while idle in flight. Keep an eye on your chicken coops around the new moon for a rare, see-through visitor. Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7. Requires Tamework 5.4.0 or later in the 5.x series.</p>
+<p>Animals now step around when they turn on the spot instead of spinning in place, with a turning animation for every tameable animal and the Frost Dragon. Wild Frost Dragons cruise and soar while idle in flight. Keep an eye on your chicken coops around the new moon for a rare, see-through visitor. Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7.</p>
 
 <H2>Butcher's Knife</H2>
 <p>Craft a Butcher's Knife at an Animal Husbandry Workbench using 2 Iron Ingots and 2 Light Leather. Hold primary use for 0.8 seconds to cull an owned, tamed animal. The knife uses a custom cleaver model, hand-painted texture, and matching inventory icon.</p>
@@ -50,7 +54,7 @@
 
 <H2>Required:</H2>
 <ul>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (5.4.0 or later in the 5.x series)</li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (5.7.0 or later in the 5.x series)</li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
@@ -343,6 +347,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
 
-Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 4.1.0 requires Tamework 5.4.0 or later in the 5.x series; update both mods together.
+Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 4.2.0 requires Tamework 5.7.0 or later in the 5.x series; update both mods together.
 
 Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.
