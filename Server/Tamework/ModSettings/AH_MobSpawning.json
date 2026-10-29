@@ -1,0 +1,14 @@
+{
+  "$Comment": "Mob Spawning settings for the Mod Settings tab of /tw settings. Patches read these values by Id; see Server/Patchwork/Patches/AH_Settings_*.json.",
+  "Label": "server.animalhusbandry.settings.group.mobSpawning",
+  "Order": 10,
+  "Settings": [
+    {
+      "Type": "Boolean",
+      "Id": "AH_WildDragons",
+      "Label": "server.animalhusbandry.settings.wildDragons",
+      "Description": "server.animalhusbandry.settings.wildDragons.description",
+      "Default": true
+    }
+  ]
+}

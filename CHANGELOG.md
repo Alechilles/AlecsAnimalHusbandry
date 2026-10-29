@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added a Wild dragons setting under Mod Settings > Alec's Animal Husbandry > Mob Spawning in `/tw settings`, also available as `/tw modsetting set AH_WildDragons false`. Turning it off stops wild Frost Dragons from spawning; dragons already in the world stay until they despawn normally. Needs a Tamework version with mod settings.
+
 ## 4.1.1 - Wander and Water Fixes - 2026-10-22
 
 Supports Hytale 0.6.7 and later in Update 6, and Hytale 0.7. Requires Alec's Tamework `>=5.4.0 <6.0`.

@@ -1,0 +1,21 @@
+{
+  "Id": "AH_Settings_WildDragons",
+  "$Comment": "When the AH_WildDragons setting is off, empty the wild dragon beacons' environments so they never spawn. Only the Frost beacon is listed; add the Fire and Void beacons here when they ship.",
+  "Targets": [
+    "Server/NPC/Spawn/Beacons/AnimalHusbandry/AH_Dragon_Frost_Zone3_Mountains.json"
+  ],
+  "When": {
+    "Setting": {
+      "Id": "AH_WildDragons",
+      "Is": false
+    }
+  },
+  "Operations": [
+    {
+      "Id": "disable-beacon",
+      "Op": "Replace",
+      "Path": "/Environments",
+      "Value": []
+    }
+  ]
+}

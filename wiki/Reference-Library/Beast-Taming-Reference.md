@@ -59,7 +59,7 @@ You can press `F` on a tamed Beast to quick-toggle simple modes (`Follow`, `Hold
 ## Beast Taming and Feeding Table
 Once tamed, animals can be fed their preferred food listed below, or [Carnivore Kibble](/mod/alecs-animal-husbandry/feed-items#carnivore-kibble) via [Feed Trough](/mod/alecs-animal-husbandry/feed-trough). 
 
-The Frost Dragon uses the same tranquilizer flow. It spawns in Zone 3 mountains.
+The Frost Dragon uses the same tranquilizer flow. It spawns in Zone 3 mountains. Server admins can turn wild dragon spawns off with the Wild dragons setting under Mod Settings in `/tw settings`, or `/tw modsetting set AH_WildDragons false`.
 
 | Beast | Preferred | Food | Threshold (seconds) | Shots Needed |
 |---|---:|:---|---:|---:|
