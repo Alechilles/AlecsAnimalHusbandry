@@ -54,7 +54,12 @@
     "BlockOwnerDamage": false
   },
   "Command": {
-    "DeadRespawnCooldownMins": 10
+    "Revive": {
+      "GameplayCooldownMs": 600000,
+      "Costs": [
+        { "ItemId": "Ingredient_Life_Essence", "Quantity": 50 }
+      ]
+    }
   }
 }
 

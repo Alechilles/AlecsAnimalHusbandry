@@ -7,6 +7,11 @@
     "Tamed_Vulture"
   ],
   "Command": {
+    "Revive": {
+      "Costs": [
+        { "ItemId": "Ingredient_Life_Essence", "Quantity": 50 }
+      ]
+    },
     "FlightToggle": {
       "Enabled": true,
       "HookId": "AnimalHusbandry.Command.ToggleAirborneMode"

@@ -86,6 +86,8 @@ Item page: [Combat Beast Flute](/mod/alecs-animal-husbandry/combat-beast-flute)
 
 ## Companion Panel Actions
 - You can manage companions one-by-one with `Recall`, `Set Home`, `Return Home`, and `Revive`.
+- `Revive` brings back a dead companion after a 10-minute wait and costs 50
+  Life Essence. You get the essence back if the revive fails.
 - `Release` can be offered for an eligible owned companion. `Cull` requires an
   owned, loaded companion nearby.
 - If a companion shows `LOST`, use respawn/recovery instead of recall/return-home.
