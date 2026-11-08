@@ -241,6 +241,7 @@
     },
     {
       "Type": "Mount",
+      "Card": { "Order": 10 },
       "Enabled": true
     },
     {
@@ -269,7 +270,8 @@
           "Consume": true
         }
       },
-      "PromptHint": "server.interactionHints.pet"
+      "PromptHint": "server.interactionHints.pet",
+      "Card": { "Label": "tamework.ui.companionCard.action.pet", "Order": 20, "OnInteract": false }
     },
     {
       "Type": "ModeCycle",
