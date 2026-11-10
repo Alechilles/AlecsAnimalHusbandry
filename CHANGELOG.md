@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## 4.3.0 - Companion Inspect - 2026-11-10
 
-- Tamed animals support Tamework's companion card: **Ride** and **Pet** are buttons on the card. Riding from the card does not need crouching. With the card on, F with an empty hand opens the card instead of petting.
+- Requires Alec's Tamework! 5.10.0 or newer.
+- Tamed animals support Tamework's Companion Inspect: **Ride** and **Pet** are buttons on the panel. Riding from it does not need crouching. With Inspect chosen for F, F with an empty hand opens Companion Inspect instead of petting; use its **Pet** button.
 - Reviving a dead tamed animal from the companion panel now costs 50 Life Essence. The essence is taken when you confirm the revive and given back if the revive fails. The 10-minute wait after death is unchanged.
 
 ## 4.2.0 - Wild Dragons Setting - 2026-10-29
