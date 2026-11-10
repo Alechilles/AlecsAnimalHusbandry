@@ -54,7 +54,7 @@
 
 <H2>Required:</H2>
 <ul>
-<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (5.7.0 or later in the 5.x series)</li>
+<li><a href="https://www.curseforge.com/hytale/mods/alecs-tamework">Alec's Tamework!</a> (5.10.0 or later in the 5.x series)</li>
 </ul>
 <H2>Recommended:</H2>
 <ul>
@@ -347,6 +347,6 @@ Note: When you have a Glowing Purple Mushroom to spare, craft <a href="https://w
 <p>When telemetry stats are enabled, Alec's Tamework also reports anonymized active user numbers to <a href="https://hstats.dev/">HStats</a> to track active user count summaries.</p>
 <br />
 
-Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 4.2.0 requires Tamework 5.7.0 or later in the 5.x series; update both mods together.
+Companion icon mappings live in `Server/Tamework/DynamicIcons/` and are shared by capture items and both command panels. Animal Husbandry 4.3.0 requires Tamework 5.10.0 or later in the 5.x series; update both mods together.
 
 Default portraits cover every supported animal. Current Aures Livestock/Horse and Celly skin variants use selected coat and major-feature mappings; small details can differ to keep the icon set manageable.
