@@ -222,7 +222,9 @@ $tameworkOwnedKeys = @(
     "tamework.traits.description.moveSpeed",
     "tamework.traits.description.productYield",
     "tamework.traits.description.thirstDecay",
-    "tamework.traits.description.size"
+    "tamework.traits.description.size",
+    # The Pet button label on Companion Inspect (Tamework 5.10.0).
+    "tamework.ui.companionCard.action.pet"
 )
 $dependencyReferences = @($requiredKeys | Where-Object { $_ -in $tameworkOwnedKeys })
 $vanillaReferences = @($requiredKeys | Where-Object { $vanillaLanguageKeys.Contains($_) })
