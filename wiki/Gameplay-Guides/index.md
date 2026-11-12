@@ -16,6 +16,7 @@ This section contains practical play guides for day-to-day companion management.
 - [Systems Overview](/mod/alecs-animal-husbandry/systems-overview)
 - [Happiness and Needs Guide](/mod/alecs-animal-husbandry/happiness-and-needs-guide)
 - [Commands and Controls](/mod/alecs-animal-husbandry/commands-and-controls)
+- [Sharing Your Animals](/mod/alecs-animal-husbandry/sharing-your-animals)
 - [Breeding and Growth Guide](/mod/alecs-animal-husbandry/breeding-and-growth-guide)
 - [Traits and Stats Guide](/mod/alecs-animal-husbandry/traits-and-stats-guide)
 - [Troubleshooting](/mod/alecs-animal-husbandry/troubleshooting)

@@ -1,6 +1,6 @@
 ---
 title: "Breeding and Growth Guide"
-order: 5
+order: 6
 published: true
 draft: false
 published: true

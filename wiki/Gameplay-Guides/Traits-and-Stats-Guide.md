@@ -1,6 +1,6 @@
 ---
 title: "Traits and Stats Guide"
-order: 6
+order: 7
 published: true
 draft: false
 ---
